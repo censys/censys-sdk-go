@@ -1,0 +1,11 @@
+# Mssql
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `EncryptMode`                                                                       | **string*                                                                           | :heavy_minus_sign:                                                                  | The negotiated ENCRYPT_MODE with the server                                         |
+| `InstanceName`                                                                      | **string*                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `PreloginOptions`                                                                   | [*components.MssqlPreloginOptions](../../models/components/mssqlpreloginoptions.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Version`                                                                           | **string*                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |

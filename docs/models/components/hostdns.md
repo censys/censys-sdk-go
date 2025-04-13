@@ -1,0 +1,10 @@
+# HostDNS
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `ForwardDNS`                                                                                          | map[string][components.HostDNSForwardResolution](../../models/components/hostdnsforwardresolution.md) | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `Names`                                                                                               | []*string*                                                                                            | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `ReverseDNS`                                                                                          | [*components.HostDNSReverseResolution](../../models/components/hostdnsreverseresolution.md)           | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |

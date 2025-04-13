@@ -1,0 +1,13 @@
+# MediaCapabilities
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `Osd`                                                                   | **bool*                                                                 | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `Profile`                                                               | [*components.MediaProfile](../../models/components/mediaprofile.md)     | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `Rotation`                                                              | **bool*                                                                 | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `SnapshotURI`                                                           | **bool*                                                                 | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `Streaming`                                                             | [*components.MediaStreaming](../../models/components/mediastreaming.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `VideoSourceMode`                                                       | **bool*                                                                 | :heavy_minus_sign:                                                      | N/A                                                                     |

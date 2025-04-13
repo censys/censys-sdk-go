@@ -1,0 +1,15 @@
+# Cpe
+
+
+## Fields
+
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `Cpe`                                                               | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Edition`                                                           | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `LifeCycle`                                                         | [*components.CPELifeCycle](../../models/components/cpelifecycle.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Part`                                                              | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Product`                                                           | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Update`                                                            | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Vendor`                                                            | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Version`                                                           | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |

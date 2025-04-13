@@ -1,0 +1,12 @@
+# Ipmi
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `Capabilities`                                                                  | [*components.IpmiCapabilities](../../models/components/ipmicapabilities.md)     | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `CommandPayload`                                                                | [*components.IpmiCommandPayload](../../models/components/ipmicommandpayload.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `Raw`                                                                           | **string*                                                                       | :heavy_minus_sign:                                                              | The raw data returned by the server                                             |
+| `RmcpHeader`                                                                    | [*components.IpmiRMCPHeader](../../models/components/ipmirmcpheader.md)         | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `SessionHeader`                                                                 | [*components.IpmiSessionHeader](../../models/components/ipmisessionheader.md)   | :heavy_minus_sign:                                                              | N/A                                                                             |
