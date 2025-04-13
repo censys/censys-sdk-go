@@ -1,0 +1,16 @@
+# Threat
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `Actors`                                                              | [][components.ThreatActor](../../models/components/threatactor.md)    | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Confidence`                                                          | **float64*                                                            | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Details`                                                             | [*components.ThreatDetails](../../models/components/threatdetails.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Evidence`                                                            | [][components.Evidence](../../models/components/evidence.md)          | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `ID`                                                                  | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Malware`                                                             | [*components.ThreatMalware](../../models/components/threatmalware.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Source`                                                              | [*components.ThreatSource](../../models/components/threatsource.md)   | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Tactic`                                                              | []*string*                                                            | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Type`                                                                | []*string*                                                            | :heavy_minus_sign:                                                    | N/A                                                                   |

@@ -1,0 +1,10 @@
+# KubernetesEndpoint
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `Name`                                                                                       | **string*                                                                                    | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `SelfLink`                                                                                   | **string*                                                                                    | :heavy_minus_sign:                                                                           | N/A                                                                                          |
+| `Subsets`                                                                                    | [][components.KubernetesEndpointSubset](../../models/components/kubernetesendpointsubset.md) | :heavy_minus_sign:                                                                           | N/A                                                                                          |

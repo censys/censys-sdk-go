@@ -1,0 +1,12 @@
+# AnyConnect
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `AggregateAuthVersion`                                                           | **int*                                                                           | :heavy_minus_sign:                                                               | Version number indicated by the response for config-auth exchange                |
+| `AuthMethods`                                                                    | []*string*                                                                       | :heavy_minus_sign:                                                               | Supported methods for users to enter credentials for this VPN                    |
+| `Groups`                                                                         | []*string*                                                                       | :heavy_minus_sign:                                                               | List of groups a user can authenticate with to use this VPN                      |
+| `Raw`                                                                            | **string*                                                                        | :heavy_minus_sign:                                                               | XML content of the config-auth response                                          |
+| `ResponseType`                                                                   | **string*                                                                        | :heavy_minus_sign:                                                               | Type of the response packet received after initializing the config-auth exchange |

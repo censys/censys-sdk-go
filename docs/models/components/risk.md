@@ -1,0 +1,16 @@
+# Risk
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `Confidence`                                                      | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `Cvss`                                                            | [*components.Cvss](../../models/components/cvss.md)               | :heavy_minus_sign:                                                | N/A                                                               |
+| `Evidence`                                                        | [][components.Evidence](../../models/components/evidence.md)      | :heavy_minus_sign:                                                | N/A                                                               |
+| `ID`                                                              | **string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `Metrics`                                                         | [*components.Metrics](../../models/components/metrics.md)         | :heavy_minus_sign:                                                | N/A                                                               |
+| `RiskSource`                                                      | [*components.RiskSource](../../models/components/risksource.md)   | :heavy_minus_sign:                                                | N/A                                                               |
+| `Severity`                                                        | [*components.Severity](../../models/components/severity.md)       | :heavy_minus_sign:                                                | N/A                                                               |
+| `Source`                                                          | [*components.RiskSource1](../../models/components/risksource1.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `Year`                                                            | **int*                                                            | :heavy_minus_sign:                                                | N/A                                                               |

@@ -1,0 +1,9 @@
+# ElasticSearch
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `ResultsNodeInfo`                                                                                   | [*components.ElasticSearchResultsNodeInfo](../../models/components/elasticsearchresultsnodeinfo.md) | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `SystemInfo`                                                                                        | [*components.ElasticSearchSystemInfo](../../models/components/elasticsearchsysteminfo.md)           | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |

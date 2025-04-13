@@ -1,0 +1,9 @@
+# CertificateRevocation
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `Crl`                                                                                                             | [*components.CertificateRevocationRevocationInfo](../../models/components/certificaterevocationrevocationinfo.md) | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |
+| `Ocsp`                                                                                                            | [*components.CertificateRevocationRevocationInfo](../../models/components/certificaterevocationrevocationinfo.md) | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |

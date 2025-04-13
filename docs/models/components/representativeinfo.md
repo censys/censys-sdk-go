@@ -1,0 +1,11 @@
+# RepresentativeInfo
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `ExcludedPorts`                                                                             | []*int*                                                                                     | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `Reason`                                                                                    | [*components.RepresentativeInfoReason](../../models/components/representativeinforeason.md) | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `RepresentedPorts`                                                                          | []*int*                                                                                     | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `SampledPort`                                                                               | **int*                                                                                      | :heavy_minus_sign:                                                                          | N/A                                                                                         |

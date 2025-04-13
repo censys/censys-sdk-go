@@ -1,0 +1,18 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    converge-source:
+        inputs:
+            - location: https://raw.githubusercontent.com/censys/censys-sdk-openapi/refs/heads/main/openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/censys/censys/converge-source
+targets:
+    censys-sdk-go:
+        target: go
+        source: converge-source
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/censys/censys/converge-source-go-code-samples
+            labelOverride:
+                fixedValue: Go (SDK)
+            blocking: false

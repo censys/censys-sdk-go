@@ -1,0 +1,16 @@
+# L2Tp
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `HelloReceived`                                                   | **bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `OrderedMessagesRaw`                                              | []*string*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `SccnReceived`                                                    | **bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `Sccrp`                                                           | [*components.L2TpSccrp](../../models/components/l2tpsccrp.md)     | :heavy_minus_sign:                                                | N/A                                                               |
+| `SccrpReceived`                                                   | **bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `SccrqReceived`                                                   | **bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `StopSccn`                                                        | [*components.L2TpStopCcn](../../models/components/l2tpstopccn.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `StopSccnReceived`                                                | **bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `ZlbReceived`                                                     | **bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |

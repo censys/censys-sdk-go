@@ -1,0 +1,10 @@
+# Mqtt
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `ConnectionAckRaw`                                                                            | **string*                                                                                     | :heavy_minus_sign:                                                                            | Raw CONNACK response packet                                                                   |
+| `ConnectionAckReturn`                                                                         | [*components.MqttConnectionAckReturn](../../models/components/mqttconnectionackreturn.md)     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `SubscriptionAckReturn`                                                                       | [*components.MqttSubscriptionAckReturn](../../models/components/mqttsubscriptionackreturn.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |

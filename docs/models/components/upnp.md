@@ -1,0 +1,11 @@
+# Upnp
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `Devices`                                                                                   | [][components.UpnpDevice](../../models/components/upnpdevice.md)                            | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `Endpoint`                                                                                  | **string*                                                                                   | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `Headers`                                                                                   | map[string][components.HTTPRepeatedHeaders](../../models/components/httprepeatedheaders.md) | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `Spec`                                                                                      | [*components.UpnpSpecVersion](../../models/components/upnpspecversion.md)                   | :heavy_minus_sign:                                                                          | N/A                                                                                         |

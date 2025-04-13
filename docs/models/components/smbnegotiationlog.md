@@ -1,0 +1,15 @@
+# SmbNegotiationLog
+
+
+## Fields
+
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `AuthenticationTypes`                                               | []*string*                                                          | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `Capabilities`                                                      | **int*                                                              | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `DialectRevision`                                                   | **int*                                                              | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `HeaderLog`                                                         | [*components.SmbHeaderLog](../../models/components/smbheaderlog.md) | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `SecurityMode`                                                      | **int*                                                              | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `ServerGUID`                                                        | **string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `ServerStartTime`                                                   | **int*                                                              | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `SystemTime`                                                        | **int*                                                              | :heavy_minus_sign:                                                  | N/A                                                                 |

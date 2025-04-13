@@ -1,0 +1,12 @@
+# SSH
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `AlgorithmSelection`                                                                  | [*components.SSHAlgorithmSelection](../../models/components/sshalgorithmselection.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `EndpointID`                                                                          | [*components.SSHEndpointID](../../models/components/sshendpointid.md)                 | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `HasshFingerprint`                                                                    | **string*                                                                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `KexInitMessage`                                                                      | [*components.SSHKexInitMessage](../../models/components/sshkexinitmessage.md)         | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `ServerHostKey`                                                                       | [*components.SSHServerHostKey](../../models/components/sshserverhostkey.md)           | :heavy_minus_sign:                                                                    | N/A                                                                                   |
