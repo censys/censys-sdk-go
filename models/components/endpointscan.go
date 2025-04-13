@@ -65,6 +65,7 @@ type EndpointScan struct {
 	Prometheus        *Prometheus                    `json:"prometheus,omitempty"`
 	PrometheusTarget  *PrometheusTarget              `json:"prometheus_target,omitempty"`
 	RedlionWeb        *RedlionWeb                    `json:"redlion_web,omitempty"`
+	ScadaView         *ScadaView                     `json:"scada_view,omitempty"`
 	ScanTime          *string                        `json:"scan_time,omitempty"`
 	Screenshots       []Screenshot                   `json:"screenshots,omitempty"`
 	TLS               *TLS                           `json:"tls,omitempty"`
@@ -223,6 +224,13 @@ func (o *EndpointScan) GetRedlionWeb() *RedlionWeb {
 		return nil
 	}
 	return o.RedlionWeb
+}
+
+func (o *EndpointScan) GetScadaView() *ScadaView {
+	if o == nil {
+		return nil
+	}
+	return o.ScadaView
 }
 
 func (o *EndpointScan) GetScanTime() *string {

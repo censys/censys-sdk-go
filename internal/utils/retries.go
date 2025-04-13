@@ -6,7 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/censys/censys-sdk-go-internal/retry"
+	"github.com/censys/censys-sdk-go/retry"
 	"math"
 	"math/rand"
 	"net/http"

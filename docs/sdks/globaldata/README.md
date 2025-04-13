@@ -28,20 +28,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetCertificates(ctx, operations.V3GlobaldataAssetCertificateListRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CertificateIds: []string{
             "<value>",
         },
@@ -85,20 +85,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetCertificate(ctx, operations.V3GlobaldataAssetCertificateRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CertificateID: "<id>",
     })
     if err != nil {
@@ -140,20 +140,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHosts(ctx, operations.V3GlobaldataAssetHostListRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         HostIds: []string{
 
         },
@@ -197,20 +197,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHost(ctx, operations.V3GlobaldataAssetHostRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         HostID: "<id>",
     })
     if err != nil {
@@ -252,21 +252,21 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/types"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHostTimeline(ctx, operations.V3GlobaldataAssetHostTimelineRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         HostID: "<id>",
         StartTime: types.MustTimeFromString("2024-04-27T09:30:08.024Z"),
         EndTime: types.MustTimeFromString("2023-04-13T10:41:42.221Z"),
@@ -310,20 +310,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetWebProperties(ctx, operations.V3GlobaldataAssetWebpropertyListRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         WebpropertyIds: []string{
             "<value>",
         },
@@ -367,20 +367,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetWebProperty(ctx, operations.V3GlobaldataAssetWebpropertyRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         WebpropertyID: "<id>",
     })
     if err != nil {
@@ -422,21 +422,21 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/components"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.Aggregate(ctx, operations.V3GlobaldataSearchAggregateRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         SearchAggregateInputBody: components.SearchAggregateInputBody{
             Field: "<value>",
             NumberOfBuckets: 590414,
@@ -482,21 +482,21 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/components"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         SearchQueryInputBody: components.SearchQueryInputBody{
             Query: "<value>",
         },

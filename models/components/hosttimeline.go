@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/censys/censys-sdk-go-internal/internal/utils"
+	"github.com/censys/censys-sdk-go/internal/utils"
 	"time"
 )
 
