@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/censys/censys-sdk-go-internal/types"
+	"github.com/censys/censys-sdk-go/types"
 
 	"github.com/ericlagergren/decimal"
 )

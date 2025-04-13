@@ -27,20 +27,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
     })
     if err != nil {
         log.Fatal(err)
@@ -81,20 +81,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Create(ctx, operations.V3CollectionsCrudCreateRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
     })
     if err != nil {
         log.Fatal(err)
@@ -135,20 +135,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Delete(ctx, operations.V3CollectionsCrudDeleteRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
     })
     if err != nil {
@@ -190,20 +190,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Get(ctx, operations.V3CollectionsCrudGetRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
     })
     if err != nil {
@@ -245,20 +245,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Update(ctx, operations.V3CollectionsCrudUpdateRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
     })
     if err != nil {
@@ -300,20 +300,20 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.ListEvents(ctx, operations.V3CollectionsListEventsRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
     })
     if err != nil {
@@ -355,21 +355,21 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/components"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Aggregate(ctx, operations.V3CollectionsSearchAggregateRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
         SearchAggregateInputBody: components.SearchAggregateInputBody{
             Field: "<value>",
@@ -416,21 +416,21 @@ package main
 
 import(
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/components"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := censyssdkgointernal.New(
-        censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Search(ctx, operations.V3CollectionsSearchQueryRequest{
-        OrganizationID: censyssdkgointernal.String("<id>"),
+        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
         SearchQueryInputBody: components.SearchQueryInputBody{
             Query: "<value>",

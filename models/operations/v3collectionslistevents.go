@@ -5,8 +5,8 @@ package operations
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/censys/censys-sdk-go-internal/internal/utils"
-	"github.com/censys/censys-sdk-go-internal/models/components"
+	"github.com/censys/censys-sdk-go/internal/utils"
+	"github.com/censys/censys-sdk-go/models/components"
 	"time"
 )
 

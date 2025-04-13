@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/censys/censys-sdk-go-internal/models/components"
+	"github.com/censys/censys-sdk-go/models/components"
 )
 
 type V3GlobaldataSearchAggregateGlobals struct {

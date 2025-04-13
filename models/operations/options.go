@@ -4,8 +4,8 @@ package operations
 
 import (
 	"errors"
-	"github.com/censys/censys-sdk-go-internal/internal/utils"
-	"github.com/censys/censys-sdk-go-internal/retry"
+	"github.com/censys/censys-sdk-go/internal/utils"
+	"github.com/censys/censys-sdk-go/retry"
 	"time"
 )
 

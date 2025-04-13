@@ -64,6 +64,7 @@ type EndpointScanState struct {
 	Prometheus        *Prometheus        `json:"prometheus,omitempty"`
 	PrometheusTarget  *PrometheusTarget  `json:"prometheus_target,omitempty"`
 	RedlionWeb        *RedlionWeb        `json:"redlion_web,omitempty"`
+	ScadaView         *ScadaView         `json:"scada_view,omitempty"`
 	ScanTime          *string            `json:"scan_time,omitempty"`
 	TransportProtocol *TransportProtocol `json:"transport_protocol,omitempty"`
 }
@@ -213,6 +214,13 @@ func (o *EndpointScanState) GetRedlionWeb() *RedlionWeb {
 		return nil
 	}
 	return o.RedlionWeb
+}
+
+func (o *EndpointScanState) GetScadaView() *ScadaView {
+	if o == nil {
+		return nil
+	}
+	return o.ScadaView
 }
 
 func (o *EndpointScanState) GetScanTime() *string {

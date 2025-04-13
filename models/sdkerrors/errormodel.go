@@ -4,7 +4,7 @@ package sdkerrors
 
 import (
 	"encoding/json"
-	"github.com/censys/censys-sdk-go-internal/models/components"
+	"github.com/censys/censys-sdk-go/models/components"
 )
 
 type ErrorModel struct {

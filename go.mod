@@ -1,4 +1,4 @@
-module github.com/censys/censys-sdk-go-internal
+module github.com/censys/censys-sdk-go
 
 go 1.20
 

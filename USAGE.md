@@ -4,21 +4,21 @@ package main
 
 import (
 	"context"
-	censyssdkgointernal "github.com/censys/censys-sdk-go-internal"
-	"github.com/censys/censys-sdk-go-internal/models/components"
-	"github.com/censys/censys-sdk-go-internal/models/operations"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := censyssdkgointernal.New(
-		censyssdkgointernal.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+	s := censyssdkgo.New(
+		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
-		OrganizationID: censyssdkgointernal.String("<id>"),
+		OrganizationID: censyssdkgo.String("<id>"),
 		SearchQueryInputBody: components.SearchQueryInputBody{
 			Query: "<value>",
 		},
