@@ -1,0 +1,13 @@
+# Rdp
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `CertificateInfo`                                                                 | [*components.RdpCertificateInfo](../../models/components/rdpcertificateinfo.md)   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `ConnectResponse`                                                                 | [*components.RdpConnectResponse](../../models/components/rdpconnectresponse.md)   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `ProtocolFlags`                                                                   | [*components.RdpProtocolFlags](../../models/components/rdpprotocolflags.md)       | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `SelectedSecurityProtocol`                                                        | [*components.RdpSecurityProtocol](../../models/components/rdpsecurityprotocol.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Version`                                                                         | [*components.RdpVersion](../../models/components/rdpversion.md)                   | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `X224CcPduSrcref`                                                                 | **int*                                                                            | :heavy_minus_sign:                                                                | N/A                                                                               |

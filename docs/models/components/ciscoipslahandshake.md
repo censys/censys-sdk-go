@@ -1,0 +1,9 @@
+# CiscoIpslaHandshake
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `Header`                                                                                        | [*components.CiscoIpslaHandshakeHeader](../../models/components/ciscoipslahandshakeheader.md)   | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `Message`                                                                                       | [*components.CiscoIpslaHandshakeMessage](../../models/components/ciscoipslahandshakemessage.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |

@@ -1,0 +1,37 @@
+speakeasyVersion: 1.531.1
+sources:
+    converge-source:
+        sourceNamespace: converge-source
+        sourceRevisionDigest: sha256:afa229f1fc9a6f50a12d5134a2394874b864a9e926a0037e56d97241c62ed899
+        sourceBlobDigest: sha256:f0c938f6ae6fad9813dca4011fbfc614dea39eff2a92c865a5fc3e99e5bb6b45
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1744238093
+            - 1.0.0
+targets:
+    censys-sdk-go:
+        source: converge-source
+        sourceNamespace: converge-source
+        sourceRevisionDigest: sha256:afa229f1fc9a6f50a12d5134a2394874b864a9e926a0037e56d97241c62ed899
+        sourceBlobDigest: sha256:f0c938f6ae6fad9813dca4011fbfc614dea39eff2a92c865a5fc3e99e5bb6b45
+        codeSamplesNamespace: converge-source-go-code-samples
+        codeSamplesRevisionDigest: sha256:18a2c0bf996d282886aa84d106fec3b1302acb67cd49785a4364da97a577bc61
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        converge-source:
+            inputs:
+                - location: https://raw.githubusercontent.com/censys/censys-sdk-openapi/refs/heads/main/openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/censys/censys/converge-source
+    targets:
+        censys-sdk-go:
+            target: go
+            source: converge-source
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/censys/censys/converge-source-go-code-samples
+                labelOverride:
+                    fixedValue: Go (SDK)
+                blocking: false

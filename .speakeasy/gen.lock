@@ -1,0 +1,1306 @@
+lockVersion: 2.0.0
+id: dd356d71-a925-4f66-b592-b02d88cf4bdc
+management:
+  docChecksum: aef8f9aef732a78054f5060b10a33017
+  docVersion: 1.0.0
+  speakeasyVersion: 1.531.1
+  generationVersion: 2.568.5
+  releaseVersion: 0.17.3
+  configChecksum: af8a5ebefcb7d82a66e7ebad5f59e9c3
+  repoURL: https://github.com/censys/censys-sdk-go-internal.git
+  installationURL: https://github.com/censys/censys-sdk-go-internal
+features:
+  go:
+    additionalDependencies: 0.1.0
+    constsAndDefaults: 0.1.12
+    core: 3.7.3
+    defaultEnabledRetries: 0.2.0
+    envVarSecurityUsage: 0.3.2
+    examples: 2.81.4
+    globalSecurity: 2.82.11
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.2
+    globals: 2.82.2
+    ignores: 2.81.1
+    intellisenseMarkdownSupport: 0.1.0
+    nameOverrides: 2.81.2
+    nullables: 0.1.1
+    responseFormat: 0.1.2
+    retries: 2.83.2
+    sdkHooks: 0.1.0
+generatedFiles:
+  - .gitattributes
+  - /models/components/activemq.go
+  - /models/components/amqp.go
+  - /models/components/amqpprotocol.go
+  - /models/components/amqpversion.go
+  - /models/components/analyticscapabilities.go
+  - /models/components/anyconnect.go
+  - /models/components/attribute.go
+  - /models/components/auth.go
+  - /models/components/authorityinfoaccess.go
+  - /models/components/autonomoussystem.go
+  - /models/components/bacnet.go
+  - /models/components/basicconstraints.go
+  - /models/components/cabforganizationid.go
+  - /models/components/capabilities.go
+  - /models/components/certificate.go
+  - /models/components/certificateasset.go
+  - /models/components/certificateextensions.go
+  - /models/components/certificateparsed.go
+  - /models/components/certificatepolicy.go
+  - /models/components/certificaterevocation.go
+  - /models/components/certificaterevocationrevocationinfo.go
+  - /models/components/checkpointtopology.go
+  - /models/components/chromecast.go
+  - /models/components/chromecastapplication.go
+  - /models/components/chromecastnamespace.go
+  - /models/components/chromecastvolume.go
+  - /models/components/chromedevtools.go
+  - /models/components/chromedevtoolstarget.go
+  - /models/components/ciscoipsla.go
+  - /models/components/ciscoipslahandshake.go
+  - /models/components/ciscoipslahandshakeheader.go
+  - /models/components/ciscoipslahandshakemessage.go
+  - /models/components/ciscoipslameasureresponse.go
+  - /models/components/cmore.go
+  - /models/components/coap.go
+  - /models/components/cobaltstrike.go
+  - /models/components/cobaltstrikeconfig.go
+  - /models/components/cobaltstrikehttpconfig.go
+  - /models/components/cobaltstrikepostex.go
+  - /models/components/collection.go
+  - /models/components/collectionevent.go
+  - /models/components/collectioneventsresponse.go
+  - /models/components/connection.go
+  - /models/components/contact.go
+  - /models/components/coordinates.go
+  - /models/components/cpe.go
+  - /models/components/cpelifecycle.go
+  - /models/components/crestroncp3.go
+  - /models/components/crudcreateinputbody.go
+  - /models/components/crudupdateinputbody.go
+  - /models/components/cryptsetup.go
+  - /models/components/ct.go
+  - /models/components/ctrecord.go
+  - /models/components/cvss.go
+  - /models/components/cvsscomponents.go
+  - /models/components/cvssv4.go
+  - /models/components/cvssv4components.go
+  - /models/components/cwe.go
+  - /models/components/cwmp.go
+  - /models/components/darkcomet.go
+  - /models/components/darkgate.go
+  - /models/components/darkgatefile.go
+  - /models/components/dcerpc.go
+  - /models/components/dcerpcendpoint.go
+  - /models/components/desktopinfo.go
+  - /models/components/devicecapabilities.go
+  - /models/components/deviceiocapabilities.go
+  - /models/components/dhcpdiscover.go
+  - /models/components/dhcpdiscoverdeviceinfo.go
+  - /models/components/dhcpdiscoveripaddress.go
+  - /models/components/dhcpdiscoverresponseparams.go
+  - /models/components/distinguishedname.go
+  - /models/components/dnp3.go
+  - /models/components/dns.go
+  - /models/components/dnsedns.go
+  - /models/components/dnsresourcerecord.go
+  - /models/components/dsacryptographickey.go
+  - /models/components/dsapublickey.go
+  - /models/components/dtls.go
+  - /models/components/dvrip.go
+  - /models/components/dvrippartitioncapability.go
+  - /models/components/ecdsacryptographickey.go
+  - /models/components/ecdsapublickey.go
+  - /models/components/ed25519cryptographickey.go
+  - /models/components/edipartyname.go
+  - /models/components/eip.go
+  - /models/components/eipidentity.go
+  - /models/components/eipinterface.go
+  - /models/components/eipservice.go
+  - /models/components/elasticsearch.go
+  - /models/components/elasticsearchresultsnodeinfo.go
+  - /models/components/elasticsearchresultsnodeinfoclustercombinedinfo.go
+  - /models/components/elasticsearchresultsnodeinfoclustercombinedinfofilesystem.go
+  - /models/components/elasticsearchresultsnodeinfoclustercombinedinfoindices.go
+  - /models/components/elasticsearchresultsnodeinfoclustercombinedinfoindicesdocs.go
+  - /models/components/elasticsearchresultsnodeinfoclustercombinedinfoindicesstore.go
+  - /models/components/elasticsearchresultsnodeinfonodes.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedata.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedatajvm.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedatamodules.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedatanodesettings.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedatanodesettingsnode.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedatanodesettingsnodeattr.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedatanodesettingsnodeattrml.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedataos.go
+  - /models/components/elasticsearchresultsnodeinfonodesnodedatathreadpool.go
+  - /models/components/elasticsearchsysteminfo.go
+  - /models/components/elasticsearchsysteminfover.go
+  - /models/components/elffile.go
+  - /models/components/endpointscan.go
+  - /models/components/endpointscanned.go
+  - /models/components/endpointscanstate.go
+  - /models/components/epmd.go
+  - /models/components/epss.go
+  - /models/components/errordetail.go
+  - /models/components/etcd.go
+  - /models/components/etcdv2.go
+  - /models/components/etcdv3.go
+  - /models/components/etcdversion.go
+  - /models/components/ethereum.go
+  - /models/components/ethereumversion.go
+  - /models/components/eventassetchange.go
+  - /models/components/eventscapabilities.go
+  - /models/components/eventstatuschange.go
+  - /models/components/evidence.go
+  - /models/components/export.go
+  - /models/components/exportlist.go
+  - /models/components/extendedkeyusage.go
+  - /models/components/extension.go
+  - /models/components/fielddiff.go
+  - /models/components/floatvalue.go
+  - /models/components/fortigate.go
+  - /models/components/forwarddnsresolved.go
+  - /models/components/fox.go
+  - /models/components/ftp.go
+  - /models/components/gearman.go
+  - /models/components/generalnames.go
+  - /models/components/generalsubtreeip.go
+  - /models/components/graphql.go
+  - /models/components/hidvertx.go
+  - /models/components/hikvision.go
+  - /models/components/hikvisionplatform.go
+  - /models/components/hikvisionplatformlibrary.go
+  - /models/components/host.go
+  - /models/components/hostasset.go
+  - /models/components/hostdns.go
+  - /models/components/hostdnsforwardresolution.go
+  - /models/components/hostdnsreverseresolution.go
+  - /models/components/hosttimeline.go
+  - /models/components/hosttimelineevent.go
+  - /models/components/hosttimelineeventasset.go
+  - /models/components/http.go
+  - /models/components/httpfavicon.go
+  - /models/components/httpmetadata.go
+  - /models/components/httprepeatedheaders.go
+  - /models/components/ibmnje.go
+  - /models/components/ike.go
+  - /models/components/ikev1.go
+  - /models/components/ikev2.go
+  - /models/components/imagecapabilities.go
+  - /models/components/imap.go
+  - /models/components/iota.go
+  - /models/components/ipmi.go
+  - /models/components/ipmicapabilities.go
+  - /models/components/ipmicapabilitiesauthstatus.go
+  - /models/components/ipmicapabilitiescompletioncode.go
+  - /models/components/ipmicapabilitiesextendedcapabilities.go
+  - /models/components/ipmicapabilitiessupportedauthtypes.go
+  - /models/components/ipmicommandpayload.go
+  - /models/components/ipmicommandpayloadcommandnumber.go
+  - /models/components/ipmicommandpayloadpackednetfn.go
+  - /models/components/ipmicommandpayloadpackednetfnlogicalunitnumber.go
+  - /models/components/ipmicommandpayloadpackednetfnnetfn.go
+  - /models/components/ipmirmcpheader.go
+  - /models/components/ipmirmcpheadermessageclass.go
+  - /models/components/ipmisessionheader.go
+  - /models/components/ipmisessionheaderauthtype.go
+  - /models/components/ipp.go
+  - /models/components/ippattribute.go
+  - /models/components/iscsi.go
+  - /models/components/ivantiavalanche.go
+  - /models/components/ja4tscanscan.go
+  - /models/components/jarmscan.go
+  - /models/components/jarmscanned.go
+  - /models/components/kev.go
+  - /models/components/keyalgorithm.go
+  - /models/components/keyusage.go
+  - /models/components/krpc.go
+  - /models/components/kubernetes.go
+  - /models/components/kubernetesendpoint.go
+  - /models/components/kubernetesendpointsubset.go
+  - /models/components/kubernetesendpointsubsetendpointaddress.go
+  - /models/components/kubernetesendpointsubsetport.go
+  - /models/components/kubernetesnode.go
+  - /models/components/kubernetesnodenodeaddress.go
+  - /models/components/kubernetesrole.go
+  - /models/components/kubernetesrolerule.go
+  - /models/components/kubernetesversioninfo.go
+  - /models/components/l2tp.go
+  - /models/components/l2tpattributevalues.go
+  - /models/components/l2tpsccrp.go
+  - /models/components/l2tpstopccn.go
+  - /models/components/label.go
+  - /models/components/ldap.go
+  - /models/components/ldapattribute.go
+  - /models/components/listcollectionsresponsev1.go
+  - /models/components/location.go
+  - /models/components/locationupdated.go
+  - /models/components/lpd.go
+  - /models/components/lpdmessage.go
+  - /models/components/mdns.go
+  - /models/components/mdnsresult.go
+  - /models/components/mediacapabilities.go
+  - /models/components/mediaprofile.go
+  - /models/components/mediastreaming.go
+  - /models/components/members.go
+  - /models/components/memcached.go
+  - /models/components/metrics.go
+  - /models/components/minecraft.go
+  - /models/components/mms.go
+  - /models/components/modbus.go
+  - /models/components/modbusexceptionresponse.go
+  - /models/components/modbusmeiresponse.go
+  - /models/components/monerop2p.go
+  - /models/components/monerop2pentry.go
+  - /models/components/monerop2ppayload.go
+  - /models/components/monerop2ppingresponse.go
+  - /models/components/monerop2presponseheader.go
+  - /models/components/mongodb.go
+  - /models/components/mongodbbuildinfo.go
+  - /models/components/mongodbbuildinfobuildenvironment.go
+  - /models/components/mongodbismaster.go
+  - /models/components/mqtt.go
+  - /models/components/mqttconnectionackreturn.go
+  - /models/components/mqttsubscriptionackreturn.go
+  - /models/components/mssql.go
+  - /models/components/mssqlpreloginoptions.go
+  - /models/components/mssqlpreloginoptionsserverversion.go
+  - /models/components/murmur.go
+  - /models/components/murmurmessage.go
+  - /models/components/murmurmessagemurmurheader.go
+  - /models/components/murmurmurmurversion.go
+  - /models/components/mysql.go
+  - /models/components/nameconstraints.go
+  - /models/components/natsio.go
+  - /models/components/nbd.go
+  - /models/components/network.go
+  - /models/components/networkcapabilities.go
+  - /models/components/nfsmountd.go
+  - /models/components/nmea.go
+  - /models/components/nmeanmeamessage.go
+  - /models/components/nodeinfov0.go
+  - /models/components/nodeinfov1.go
+  - /models/components/nodeinfov2.go
+  - /models/components/noticereference.go
+  - /models/components/ntlminfo.go
+  - /models/components/ntp.go
+  - /models/components/ntpntpheader.go
+  - /models/components/ntrip.go
+  - /models/components/ollama.go
+  - /models/components/ollamamodel.go
+  - /models/components/onc.go
+  - /models/components/onvif.go
+  - /models/components/onvifhostname.go
+  - /models/components/onvifservice.go
+  - /models/components/opcua.go
+  - /models/components/opcuadescription.go
+  - /models/components/opcuaendpoint.go
+  - /models/components/opcualocalizedtext.go
+  - /models/components/opcuausertokenpolicy.go
+  - /models/components/openvpn.go
+  - /models/components/oracle.go
+  - /models/components/oracledescriptor.go
+  - /models/components/organization.go
+  - /models/components/othername.go
+  - /models/components/pantiltzoomcapabilities.go
+  - /models/components/pcanywhere.go
+  - /models/components/pcanywherestatus.go
+  - /models/components/peer.go
+  - /models/components/pgbouncer.go
+  - /models/components/pgbouncerstartupcapabilities.go
+  - /models/components/pixelformat.go
+  - /models/components/plexmediaserver.go
+  - /models/components/pop3.go
+  - /models/components/port.go
+  - /models/components/portmap.go
+  - /models/components/portmapv2entry.go
+  - /models/components/portmapv3entry.go
+  - /models/components/postgres.go
+  - /models/components/pprof.go
+  - /models/components/pptp.go
+  - /models/components/pptpresponseinfo.go
+  - /models/components/pptpversion.go
+  - /models/components/prometheus.go
+  - /models/components/prometheusmetricfamily.go
+  - /models/components/prometheusresponse.go
+  - /models/components/prometheusresponseactivetarget.go
+  - /models/components/prometheusresponseactivetargetdiscoveredlabels.go
+  - /models/components/prometheusresponseactivetargetlabels.go
+  - /models/components/prometheusresponsedroppedtarget.go
+  - /models/components/prometheusresponseprometheusversion.go
+  - /models/components/prometheustarget.go
+  - /models/components/qcstatements.go
+  - /models/components/qcstatementsmonetaryvalue.go
+  - /models/components/qcstatementsparsedstatements.go
+  - /models/components/qcstatementspdslocation.go
+  - /models/components/qcstatementsqclegislation.go
+  - /models/components/qcstatementsqctype.go
+  - /models/components/rdate.go
+  - /models/components/rdp.go
+  - /models/components/rdpcertificateinfo.go
+  - /models/components/rdpconnectresponse.go
+  - /models/components/rdpdomainparameters.go
+  - /models/components/rdpembeddedrsacert.go
+  - /models/components/rdpprotocolflags.go
+  - /models/components/rdpsecurityprotocol.go
+  - /models/components/rdpversion.go
+  - /models/components/realport.go
+  - /models/components/recordingcapabilities.go
+  - /models/components/redis.go
+  - /models/components/redisrawoutput.go
+  - /models/components/redlioncrimson.go
+  - /models/components/redlionweb.go
+  - /models/components/reject.go
+  - /models/components/replaycapabilities.go
+  - /models/components/representativeinfo.go
+  - /models/components/responseenvelopecertificateasset.go
+  - /models/components/responseenvelopecollection.go
+  - /models/components/responseenvelopecollectioneventsresponse.go
+  - /models/components/responseenvelopehostasset.go
+  - /models/components/responseenvelopehosttimeline.go
+  - /models/components/responseenvelopelistcertificateasset.go
+  - /models/components/responseenvelopelistcollectionsresponsev1.go
+  - /models/components/responseenvelopelisthostasset.go
+  - /models/components/responseenvelopelistwebpropertyasset.go
+  - /models/components/responseenvelopesearchaggregateresponse.go
+  - /models/components/responseenvelopesearchqueryresponse.go
+  - /models/components/responseenvelopewebpropertyasset.go
+  - /models/components/reversednsresolved.go
+  - /models/components/rifatron.go
+  - /models/components/ripple.go
+  - /models/components/rippleclioresults.go
+  - /models/components/rippledpublicresults.go
+  - /models/components/ripplepeerresults.go
+  - /models/components/risk.go
+  - /models/components/rlogin.go
+  - /models/components/rocketmq.go
+  - /models/components/rocketmqclusterinfo.go
+  - /models/components/rocketmqresponseheader.go
+  - /models/components/rocketmqtopiclist.go
+  - /models/components/rootstore.go
+  - /models/components/rootstorechain.go
+  - /models/components/routeupdated.go
+  - /models/components/routing.go
+  - /models/components/rsacryptographickey.go
+  - /models/components/rsapublickey.go
+  - /models/components/rtsp.go
+  - /models/components/s7.go
+  - /models/components/saprouter.go
+  - /models/components/saprouterclientinfo.go
+  - /models/components/saprouterrouterinfo.go
+  - /models/components/saprouterrouterversioninfo.go
+  - /models/components/scpi.go
+  - /models/components/screenshot.go
+  - /models/components/searchaggregateinputbody.go
+  - /models/components/searchaggregateresponse.go
+  - /models/components/searchaggregateresponsebucket.go
+  - /models/components/searchcapabilities.go
+  - /models/components/searchqueryhit.go
+  - /models/components/searchqueryinputbody.go
+  - /models/components/searchqueryresponse.go
+  - /models/components/security.go
+  - /models/components/securitycapabilities.go
+  - /models/components/ser2net.go
+  - /models/components/ser2netserialparameters.go
+  - /models/components/serverconfig.go
+  - /models/components/serversync.go
+  - /models/components/service.go
+  - /models/components/servicescan.go
+  - /models/components/servicescanned.go
+  - /models/components/sevendaystodie.go
+  - /models/components/signature.go
+  - /models/components/signedcertificatetimestamp.go
+  - /models/components/signedcertificatetimestampsignature.go
+  - /models/components/sip.go
+  - /models/components/skinny.go
+  - /models/components/smb.go
+  - /models/components/smbheaderlog.go
+  - /models/components/smbnegotiationlog.go
+  - /models/components/smbsessionsetuplog.go
+  - /models/components/smbsmbcapabilities.go
+  - /models/components/smbsmbversions.go
+  - /models/components/smtp.go
+  - /models/components/snmp.go
+  - /models/components/snmpengine.go
+  - /models/components/snmpinterfaces.go
+  - /models/components/snmpphysical.go
+  - /models/components/snmpsystem.go
+  - /models/components/snmpsystemservices.go
+  - /models/components/socks.go
+  - /models/components/spice.go
+  - /models/components/ssdp.go
+  - /models/components/ssh.go
+  - /models/components/sshalgorithmselection.go
+  - /models/components/sshalgorithmselectiondirectionalgorithms.go
+  - /models/components/sshendpointid.go
+  - /models/components/sshkexinitmessage.go
+  - /models/components/sshserverhostkey.go
+  - /models/components/status.go
+  - /models/components/steam.go
+  - /models/components/subjectkeyinfo.go
+  - /models/components/systemcapabilities.go
+  - /models/components/tacacsplus.go
+  - /models/components/target.go
+  - /models/components/teamviewer.go
+  - /models/components/telnet.go
+  - /models/components/textmessage.go
+  - /models/components/threat.go
+  - /models/components/threatactor.go
+  - /models/components/threatdetails.go
+  - /models/components/threatmalware.go
+  - /models/components/tibia.go
+  - /models/components/tls.go
+  - /models/components/tlschain.go
+  - /models/components/tlsversiondata.go
+  - /models/components/torservicedescriptor.go
+  - /models/components/tplinkkasa.go
+  - /models/components/unitronicspcom.go
+  - /models/components/unrecognizedpublickey.go
+  - /models/components/upnp.go
+  - /models/components/upnpdevice.go
+  - /models/components/upnpservice.go
+  - /models/components/upnpspecversion.go
+  - /models/components/user.go
+  - /models/components/usernotice.go
+  - /models/components/validation.go
+  - /models/components/validityperiod.go
+  - /models/components/ventrilo.go
+  - /models/components/ventriloheader.go
+  - /models/components/ventrilomessage.go
+  - /models/components/vnc.go
+  - /models/components/vnckeyvalue.go
+  - /models/components/vuln.go
+  - /models/components/weblogict3.go
+  - /models/components/webproperty.go
+  - /models/components/webpropertyasset.go
+  - /models/components/whois.go
+  - /models/components/whoisupdated.go
+  - /models/components/winrm.go
+  - /models/components/worker.go
+  - /models/components/wsdiscovery.go
+  - /models/components/x11.go
+  - /models/components/zeromq.go
+  - /models/components/zeromqgreeting.go
+  - /models/components/zeromqhandshake.go
+  - /models/components/zlint.go
+  - /models/operations/v3collectionscrudcreate.go
+  - /models/operations/v3collectionscruddelete.go
+  - /models/operations/v3collectionscrudget.go
+  - /models/operations/v3collectionscrudlist.go
+  - /models/operations/v3collectionscrudupdate.go
+  - /models/operations/v3collectionslistevents.go
+  - /models/operations/v3collectionssearchaggregate.go
+  - /models/operations/v3collectionssearchquery.go
+  - /models/operations/v3globaldataassetcertificate.go
+  - /models/operations/v3globaldataassetcertificatelist.go
+  - /models/operations/v3globaldataassethost.go
+  - /models/operations/v3globaldataassethostlist.go
+  - /models/operations/v3globaldataassethosttimeline.go
+  - /models/operations/v3globaldataassetwebproperty.go
+  - /models/operations/v3globaldataassetwebpropertylist.go
+  - /models/operations/v3globaldatasearchaggregate.go
+  - /models/operations/v3globaldatasearchquery.go
+  - /models/sdkerrors/errormodel.go
+  - USAGE.md
+  - collections.go
+  - docs/models/components/activemq.md
+  - docs/models/components/amqp.md
+  - docs/models/components/amqpprotocol.md
+  - docs/models/components/amqpversion.md
+  - docs/models/components/analyticscapabilities.md
+  - docs/models/components/anyconnect.md
+  - docs/models/components/attackcomplexity.md
+  - docs/models/components/attackrequirements.md
+  - docs/models/components/attackvector.md
+  - docs/models/components/attribute.md
+  - docs/models/components/auth.md
+  - docs/models/components/authorityinfoaccess.md
+  - docs/models/components/automatable.md
+  - docs/models/components/autonomoussystem.md
+  - docs/models/components/availability.md
+  - docs/models/components/bacnet.md
+  - docs/models/components/basicconstraints.md
+  - docs/models/components/cabforganizationid.md
+  - docs/models/components/capabilities.md
+  - docs/models/components/certificate.md
+  - docs/models/components/certificateasset.md
+  - docs/models/components/certificateextensions.md
+  - docs/models/components/certificateparsed.md
+  - docs/models/components/certificatepolicy.md
+  - docs/models/components/certificaterevocation.md
+  - docs/models/components/certificaterevocationrevocationinfo.md
+  - docs/models/components/changetype.md
+  - docs/models/components/checkpointtopology.md
+  - docs/models/components/chromecast.md
+  - docs/models/components/chromecastapplication.md
+  - docs/models/components/chromecastnamespace.md
+  - docs/models/components/chromecastvolume.md
+  - docs/models/components/chromedevtools.md
+  - docs/models/components/chromedevtoolstarget.md
+  - docs/models/components/ciscoipsla.md
+  - docs/models/components/ciscoipslahandshake.md
+  - docs/models/components/ciscoipslahandshakeheader.md
+  - docs/models/components/ciscoipslahandshakemessage.md
+  - docs/models/components/ciscoipslameasureresponse.md
+  - docs/models/components/cmore.md
+  - docs/models/components/coap.md
+  - docs/models/components/cobaltstrike.md
+  - docs/models/components/cobaltstrikeconfig.md
+  - docs/models/components/cobaltstrikehttpconfig.md
+  - docs/models/components/cobaltstrikepostex.md
+  - docs/models/components/collection.md
+  - docs/models/components/collectionevent.md
+  - docs/models/components/collectioneventsresponse.md
+  - docs/models/components/collectionstatus.md
+  - docs/models/components/confidentiality.md
+  - docs/models/components/connection.md
+  - docs/models/components/contact.md
+  - docs/models/components/coordinates.md
+  - docs/models/components/cpe.md
+  - docs/models/components/cpelifecycle.md
+  - docs/models/components/crestroncp3.md
+  - docs/models/components/crudcreateinputbody.md
+  - docs/models/components/crudupdateinputbody.md
+  - docs/models/components/cryptsetup.md
+  - docs/models/components/ct.md
+  - docs/models/components/ctrecord.md
+  - docs/models/components/cvss.md
+  - docs/models/components/cvsscomponents.md
+  - docs/models/components/cvssv4.md
+  - docs/models/components/cvssv4components.md
+  - docs/models/components/cvssv4componentsattackcomplexity.md
+  - docs/models/components/cvssv4componentsattackvector.md
+  - docs/models/components/cvssv4componentsavailability.md
+  - docs/models/components/cvssv4componentsconfidentiality.md
+  - docs/models/components/cvssv4componentsintegrity.md
+  - docs/models/components/cvssv4componentsprivilegesrequired.md
+  - docs/models/components/cvssv4componentsuserinteraction.md
+  - docs/models/components/cwe.md
+  - docs/models/components/cwmp.md
+  - docs/models/components/darkcomet.md
+  - docs/models/components/darkgate.md
+  - docs/models/components/darkgatefile.md
+  - docs/models/components/dcerpc.md
+  - docs/models/components/dcerpcendpoint.md
+  - docs/models/components/desktopinfo.md
+  - docs/models/components/devicecapabilities.md
+  - docs/models/components/deviceiocapabilities.md
+  - docs/models/components/dhcpdiscover.md
+  - docs/models/components/dhcpdiscoverdeviceinfo.md
+  - docs/models/components/dhcpdiscoveripaddress.md
+  - docs/models/components/dhcpdiscoverresponseparams.md
+  - docs/models/components/distinguishedname.md
+  - docs/models/components/dnp3.md
+  - docs/models/components/dns.md
+  - docs/models/components/dnsedns.md
+  - docs/models/components/dnsresourcerecord.md
+  - docs/models/components/dnsresourcerecordtype.md
+  - docs/models/components/dsacryptographickey.md
+  - docs/models/components/dsapublickey.md
+  - docs/models/components/dtls.md
+  - docs/models/components/dvrip.md
+  - docs/models/components/dvrippartitioncapability.md
+  - docs/models/components/ecdsacryptographickey.md
+  - docs/models/components/ecdsapublickey.md
+  - docs/models/components/ed25519cryptographickey.md
+  - docs/models/components/edipartyname.md
+  - docs/models/components/eip.md
+  - docs/models/components/eipidentity.md
+  - docs/models/components/eipinterface.md
+  - docs/models/components/eipservice.md
+  - docs/models/components/elasticsearch.md
+  - docs/models/components/elasticsearchresultsnodeinfo.md
+  - docs/models/components/elasticsearchresultsnodeinfoclustercombinedinfo.md
+  - docs/models/components/elasticsearchresultsnodeinfoclustercombinedinfofilesystem.md
+  - docs/models/components/elasticsearchresultsnodeinfoclustercombinedinfoindices.md
+  - docs/models/components/elasticsearchresultsnodeinfoclustercombinedinfoindicesdocs.md
+  - docs/models/components/elasticsearchresultsnodeinfoclustercombinedinfoindicesstore.md
+  - docs/models/components/elasticsearchresultsnodeinfonodes.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedata.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedatajvm.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedatamodules.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedatanodesettings.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedatanodesettingsnode.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedatanodesettingsnodeattr.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedatanodesettingsnodeattrml.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedataos.md
+  - docs/models/components/elasticsearchresultsnodeinfonodesnodedatathreadpool.md
+  - docs/models/components/elasticsearchsysteminfo.md
+  - docs/models/components/elasticsearchsysteminfover.md
+  - docs/models/components/elffile.md
+  - docs/models/components/endpointscan.md
+  - docs/models/components/endpointscanned.md
+  - docs/models/components/endpointscanstate.md
+  - docs/models/components/endpointscantransportprotocol.md
+  - docs/models/components/epmd.md
+  - docs/models/components/epss.md
+  - docs/models/components/errordetail.md
+  - docs/models/components/etcd.md
+  - docs/models/components/etcdv2.md
+  - docs/models/components/etcdv3.md
+  - docs/models/components/etcdversion.md
+  - docs/models/components/ethereum.md
+  - docs/models/components/ethereumversion.md
+  - docs/models/components/eventassetchange.md
+  - docs/models/components/eventscapabilities.md
+  - docs/models/components/eventstatuschange.md
+  - docs/models/components/evidence.md
+  - docs/models/components/export.md
+  - docs/models/components/exportlist.md
+  - docs/models/components/extendedkeyusage.md
+  - docs/models/components/extension.md
+  - docs/models/components/fielddiff.md
+  - docs/models/components/floatvalue.md
+  - docs/models/components/fortigate.md
+  - docs/models/components/forwarddnsresolved.md
+  - docs/models/components/fox.md
+  - docs/models/components/ftp.md
+  - docs/models/components/gearman.md
+  - docs/models/components/generalnames.md
+  - docs/models/components/generalsubtreeip.md
+  - docs/models/components/graphql.md
+  - docs/models/components/hidvertx.md
+  - docs/models/components/hikvision.md
+  - docs/models/components/hikvisionplatform.md
+  - docs/models/components/hikvisionplatformlibrary.md
+  - docs/models/components/host.md
+  - docs/models/components/hostasset.md
+  - docs/models/components/hostdns.md
+  - docs/models/components/hostdnsforwardresolution.md
+  - docs/models/components/hostdnsreverseresolution.md
+  - docs/models/components/hosttimeline.md
+  - docs/models/components/hosttimelineevent.md
+  - docs/models/components/hosttimelineeventasset.md
+  - docs/models/components/http.md
+  - docs/models/components/httpfavicon.md
+  - docs/models/components/httpmetadata.md
+  - docs/models/components/httprepeatedheaders.md
+  - docs/models/components/ibmnje.md
+  - docs/models/components/ike.md
+  - docs/models/components/ikev1.md
+  - docs/models/components/ikev2.md
+  - docs/models/components/imagecapabilities.md
+  - docs/models/components/imap.md
+  - docs/models/components/integrity.md
+  - docs/models/components/iota.md
+  - docs/models/components/ipmi.md
+  - docs/models/components/ipmicapabilities.md
+  - docs/models/components/ipmicapabilitiesauthstatus.md
+  - docs/models/components/ipmicapabilitiescompletioncode.md
+  - docs/models/components/ipmicapabilitiesextendedcapabilities.md
+  - docs/models/components/ipmicapabilitiessupportedauthtypes.md
+  - docs/models/components/ipmicommandpayload.md
+  - docs/models/components/ipmicommandpayloadcommandnumber.md
+  - docs/models/components/ipmicommandpayloadpackednetfn.md
+  - docs/models/components/ipmicommandpayloadpackednetfnlogicalunitnumber.md
+  - docs/models/components/ipmicommandpayloadpackednetfnnetfn.md
+  - docs/models/components/ipmirmcpheader.md
+  - docs/models/components/ipmirmcpheadermessageclass.md
+  - docs/models/components/ipmisessionheader.md
+  - docs/models/components/ipmisessionheaderauthtype.md
+  - docs/models/components/ipp.md
+  - docs/models/components/ippattribute.md
+  - docs/models/components/iscsi.md
+  - docs/models/components/ivantiavalanche.md
+  - docs/models/components/ja4tscanscan.md
+  - docs/models/components/jarmscan.md
+  - docs/models/components/jarmscanned.md
+  - docs/models/components/jarmscantransportprotocol.md
+  - docs/models/components/kev.md
+  - docs/models/components/kevsource.md
+  - docs/models/components/keyalgorithm.md
+  - docs/models/components/keyusage.md
+  - docs/models/components/krpc.md
+  - docs/models/components/kubernetes.md
+  - docs/models/components/kubernetesendpoint.md
+  - docs/models/components/kubernetesendpointsubset.md
+  - docs/models/components/kubernetesendpointsubsetendpointaddress.md
+  - docs/models/components/kubernetesendpointsubsetport.md
+  - docs/models/components/kubernetesnode.md
+  - docs/models/components/kubernetesnodenodeaddress.md
+  - docs/models/components/kubernetesrole.md
+  - docs/models/components/kubernetesrolerule.md
+  - docs/models/components/kubernetesversioninfo.md
+  - docs/models/components/l2tp.md
+  - docs/models/components/l2tpattributevalues.md
+  - docs/models/components/l2tpsccrp.md
+  - docs/models/components/l2tpstopccn.md
+  - docs/models/components/label.md
+  - docs/models/components/labelsource.md
+  - docs/models/components/ldap.md
+  - docs/models/components/ldapattribute.md
+  - docs/models/components/listcollectionsresponsev1.md
+  - docs/models/components/location.md
+  - docs/models/components/locationupdated.md
+  - docs/models/components/lpd.md
+  - docs/models/components/lpdmessage.md
+  - docs/models/components/mdns.md
+  - docs/models/components/mdnsresult.md
+  - docs/models/components/mediacapabilities.md
+  - docs/models/components/mediaprofile.md
+  - docs/models/components/mediastreaming.md
+  - docs/models/components/members.md
+  - docs/models/components/memcached.md
+  - docs/models/components/metrics.md
+  - docs/models/components/minecraft.md
+  - docs/models/components/mms.md
+  - docs/models/components/modbus.md
+  - docs/models/components/modbusexceptionresponse.md
+  - docs/models/components/modbusmeiresponse.md
+  - docs/models/components/monerop2p.md
+  - docs/models/components/monerop2pentry.md
+  - docs/models/components/monerop2ppayload.md
+  - docs/models/components/monerop2ppingresponse.md
+  - docs/models/components/monerop2presponseheader.md
+  - docs/models/components/mongodb.md
+  - docs/models/components/mongodbbuildinfo.md
+  - docs/models/components/mongodbbuildinfobuildenvironment.md
+  - docs/models/components/mongodbismaster.md
+  - docs/models/components/mqtt.md
+  - docs/models/components/mqttconnectionackreturn.md
+  - docs/models/components/mqttsubscriptionackreturn.md
+  - docs/models/components/mssql.md
+  - docs/models/components/mssqlpreloginoptions.md
+  - docs/models/components/mssqlpreloginoptionsserverversion.md
+  - docs/models/components/murmur.md
+  - docs/models/components/murmurmessage.md
+  - docs/models/components/murmurmessagemurmurheader.md
+  - docs/models/components/murmurmurmurversion.md
+  - docs/models/components/mysql.md
+  - docs/models/components/nameconstraints.md
+  - docs/models/components/natsio.md
+  - docs/models/components/nbd.md
+  - docs/models/components/network.md
+  - docs/models/components/networkcapabilities.md
+  - docs/models/components/newstatus.md
+  - docs/models/components/nfsmountd.md
+  - docs/models/components/nmea.md
+  - docs/models/components/nmeanmeamessage.md
+  - docs/models/components/nodeinfov0.md
+  - docs/models/components/nodeinfov1.md
+  - docs/models/components/nodeinfov2.md
+  - docs/models/components/noticereference.md
+  - docs/models/components/ntlminfo.md
+  - docs/models/components/ntp.md
+  - docs/models/components/ntpntpheader.md
+  - docs/models/components/ntrip.md
+  - docs/models/components/oldstatus.md
+  - docs/models/components/ollama.md
+  - docs/models/components/ollamamodel.md
+  - docs/models/components/onc.md
+  - docs/models/components/onvif.md
+  - docs/models/components/onvifhostname.md
+  - docs/models/components/onvifservice.md
+  - docs/models/components/opcua.md
+  - docs/models/components/opcuadescription.md
+  - docs/models/components/opcuaendpoint.md
+  - docs/models/components/opcualocalizedtext.md
+  - docs/models/components/opcuausertokenpolicy.md
+  - docs/models/components/openvpn.md
+  - docs/models/components/oracle.md
+  - docs/models/components/oracledescriptor.md
+  - docs/models/components/organization.md
+  - docs/models/components/othername.md
+  - docs/models/components/pantiltzoomcapabilities.md
+  - docs/models/components/parsestatus.md
+  - docs/models/components/pcanywhere.md
+  - docs/models/components/pcanywherestatus.md
+  - docs/models/components/peer.md
+  - docs/models/components/pgbouncer.md
+  - docs/models/components/pgbouncerstartupcapabilities.md
+  - docs/models/components/pixelformat.md
+  - docs/models/components/plexmediaserver.md
+  - docs/models/components/pop3.md
+  - docs/models/components/port.md
+  - docs/models/components/portmap.md
+  - docs/models/components/portmapv2entry.md
+  - docs/models/components/portmapv3entry.md
+  - docs/models/components/postgres.md
+  - docs/models/components/pprof.md
+  - docs/models/components/pptp.md
+  - docs/models/components/pptpresponseinfo.md
+  - docs/models/components/pptpversion.md
+  - docs/models/components/privilegesrequired.md
+  - docs/models/components/prometheus.md
+  - docs/models/components/prometheusmetricfamily.md
+  - docs/models/components/prometheusresponse.md
+  - docs/models/components/prometheusresponseactivetarget.md
+  - docs/models/components/prometheusresponseactivetargetdiscoveredlabels.md
+  - docs/models/components/prometheusresponseactivetargetlabels.md
+  - docs/models/components/prometheusresponsedroppedtarget.md
+  - docs/models/components/prometheusresponseprometheusversion.md
+  - docs/models/components/prometheustarget.md
+  - docs/models/components/providerurgency.md
+  - docs/models/components/qcstatements.md
+  - docs/models/components/qcstatementsmonetaryvalue.md
+  - docs/models/components/qcstatementsparsedstatements.md
+  - docs/models/components/qcstatementspdslocation.md
+  - docs/models/components/qcstatementsqclegislation.md
+  - docs/models/components/qcstatementsqctype.md
+  - docs/models/components/rcode.md
+  - docs/models/components/rdate.md
+  - docs/models/components/rdp.md
+  - docs/models/components/rdpcertificateinfo.md
+  - docs/models/components/rdpconnectresponse.md
+  - docs/models/components/rdpdomainparameters.md
+  - docs/models/components/rdpembeddedrsacert.md
+  - docs/models/components/rdpprotocolflags.md
+  - docs/models/components/rdpsecurityprotocol.md
+  - docs/models/components/rdpversion.md
+  - docs/models/components/realport.md
+  - docs/models/components/reason.md
+  - docs/models/components/recordingcapabilities.md
+  - docs/models/components/recordtype.md
+  - docs/models/components/recovery.md
+  - docs/models/components/redis.md
+  - docs/models/components/redisrawoutput.md
+  - docs/models/components/redlioncrimson.md
+  - docs/models/components/redlionweb.md
+  - docs/models/components/reject.md
+  - docs/models/components/rejecttype.md
+  - docs/models/components/replaycapabilities.md
+  - docs/models/components/representativeinfo.md
+  - docs/models/components/representativeinforeason.md
+  - docs/models/components/responseenvelopecertificateasset.md
+  - docs/models/components/responseenvelopecollection.md
+  - docs/models/components/responseenvelopecollectioneventsresponse.md
+  - docs/models/components/responseenvelopehostasset.md
+  - docs/models/components/responseenvelopehosttimeline.md
+  - docs/models/components/responseenvelopelistcertificateasset.md
+  - docs/models/components/responseenvelopelistcollectionsresponsev1.md
+  - docs/models/components/responseenvelopelisthostasset.md
+  - docs/models/components/responseenvelopelistwebpropertyasset.md
+  - docs/models/components/responseenvelopesearchaggregateresponse.md
+  - docs/models/components/responseenvelopesearchqueryresponse.md
+  - docs/models/components/responseenvelopewebpropertyasset.md
+  - docs/models/components/reversednsresolved.md
+  - docs/models/components/rifatron.md
+  - docs/models/components/ripple.md
+  - docs/models/components/rippleclioresults.md
+  - docs/models/components/rippledpublicresults.md
+  - docs/models/components/ripplepeerresults.md
+  - docs/models/components/risk.md
+  - docs/models/components/risksource.md
+  - docs/models/components/risksource1.md
+  - docs/models/components/rlogin.md
+  - docs/models/components/rocketmq.md
+  - docs/models/components/rocketmqclusterinfo.md
+  - docs/models/components/rocketmqresponseheader.md
+  - docs/models/components/rocketmqtopiclist.md
+  - docs/models/components/rootstore.md
+  - docs/models/components/rootstorechain.md
+  - docs/models/components/routeupdated.md
+  - docs/models/components/routing.md
+  - docs/models/components/rsacryptographickey.md
+  - docs/models/components/rsapublickey.md
+  - docs/models/components/rtsp.md
+  - docs/models/components/s7.md
+  - docs/models/components/safety.md
+  - docs/models/components/saprouter.md
+  - docs/models/components/saprouterclientinfo.md
+  - docs/models/components/saprouterrouterinfo.md
+  - docs/models/components/saprouterrouterversioninfo.md
+  - docs/models/components/scope.md
+  - docs/models/components/scpi.md
+  - docs/models/components/screenshot.md
+  - docs/models/components/searchaggregateinputbody.md
+  - docs/models/components/searchaggregateresponse.md
+  - docs/models/components/searchaggregateresponsebucket.md
+  - docs/models/components/searchcapabilities.md
+  - docs/models/components/searchqueryhit.md
+  - docs/models/components/searchqueryinputbody.md
+  - docs/models/components/searchqueryresponse.md
+  - docs/models/components/security.md
+  - docs/models/components/securitycapabilities.md
+  - docs/models/components/ser2net.md
+  - docs/models/components/ser2netserialparameters.md
+  - docs/models/components/serverconfig.md
+  - docs/models/components/serversync.md
+  - docs/models/components/servertype.md
+  - docs/models/components/service.md
+  - docs/models/components/servicescan.md
+  - docs/models/components/servicescanned.md
+  - docs/models/components/servicescantransportprotocol.md
+  - docs/models/components/servicetransportprotocol.md
+  - docs/models/components/sevendaystodie.md
+  - docs/models/components/severity.md
+  - docs/models/components/signature.md
+  - docs/models/components/signedcertificatetimestamp.md
+  - docs/models/components/signedcertificatetimestampsignature.md
+  - docs/models/components/sip.md
+  - docs/models/components/skinny.md
+  - docs/models/components/smb.md
+  - docs/models/components/smbheaderlog.md
+  - docs/models/components/smbnegotiationlog.md
+  - docs/models/components/smbsessionsetuplog.md
+  - docs/models/components/smbsmbcapabilities.md
+  - docs/models/components/smbsmbversions.md
+  - docs/models/components/smtp.md
+  - docs/models/components/snmp.md
+  - docs/models/components/snmpengine.md
+  - docs/models/components/snmpinterfaces.md
+  - docs/models/components/snmpphysical.md
+  - docs/models/components/snmpsystem.md
+  - docs/models/components/snmpsystemservices.md
+  - docs/models/components/socks.md
+  - docs/models/components/source.md
+  - docs/models/components/spice.md
+  - docs/models/components/ssdp.md
+  - docs/models/components/ssh.md
+  - docs/models/components/sshalgorithmselection.md
+  - docs/models/components/sshalgorithmselectiondirectionalgorithms.md
+  - docs/models/components/sshendpointid.md
+  - docs/models/components/sshkexinitmessage.md
+  - docs/models/components/sshserverhostkey.md
+  - docs/models/components/status.md
+  - docs/models/components/statusreason.md
+  - docs/models/components/steam.md
+  - docs/models/components/subjectkeyinfo.md
+  - docs/models/components/systemcapabilities.md
+  - docs/models/components/tacacsplus.md
+  - docs/models/components/target.md
+  - docs/models/components/teamviewer.md
+  - docs/models/components/telnet.md
+  - docs/models/components/textmessage.md
+  - docs/models/components/threat.md
+  - docs/models/components/threatactor.md
+  - docs/models/components/threatdetails.md
+  - docs/models/components/threatmalware.md
+  - docs/models/components/threatsource.md
+  - docs/models/components/tibia.md
+  - docs/models/components/tls.md
+  - docs/models/components/tlschain.md
+  - docs/models/components/tlsversiondata.md
+  - docs/models/components/torservicedescriptor.md
+  - docs/models/components/tplinkkasa.md
+  - docs/models/components/transportprotocol.md
+  - docs/models/components/type.md
+  - docs/models/components/unitronicspcom.md
+  - docs/models/components/unrecognizedpublickey.md
+  - docs/models/components/upnp.md
+  - docs/models/components/upnpdevice.md
+  - docs/models/components/upnpservice.md
+  - docs/models/components/upnpspecversion.md
+  - docs/models/components/user.md
+  - docs/models/components/userinteraction.md
+  - docs/models/components/usernotice.md
+  - docs/models/components/validation.md
+  - docs/models/components/validationlevel.md
+  - docs/models/components/validityperiod.md
+  - docs/models/components/valuedensity.md
+  - docs/models/components/ventrilo.md
+  - docs/models/components/ventriloheader.md
+  - docs/models/components/ventrilomessage.md
+  - docs/models/components/version.md
+  - docs/models/components/versionselected.md
+  - docs/models/components/vnc.md
+  - docs/models/components/vnckeyvalue.md
+  - docs/models/components/vuln.md
+  - docs/models/components/vulnerabilityresponseeffort.md
+  - docs/models/components/vulnrisksource.md
+  - docs/models/components/vulnseverity.md
+  - docs/models/components/vulnsource.md
+  - docs/models/components/weblogict3.md
+  - docs/models/components/webproperty.md
+  - docs/models/components/webpropertyasset.md
+  - docs/models/components/whois.md
+  - docs/models/components/whoisupdated.md
+  - docs/models/components/winrm.md
+  - docs/models/components/worker.md
+  - docs/models/components/wsdiscovery.md
+  - docs/models/components/x11.md
+  - docs/models/components/zeromq.md
+  - docs/models/components/zeromqgreeting.md
+  - docs/models/components/zeromqhandshake.md
+  - docs/models/components/zlint.md
+  - docs/models/operations/assetchangetypes.md
+  - docs/models/operations/changetypes.md
+  - docs/models/operations/option.md
+  - docs/models/operations/statuschangetypes.md
+  - docs/models/operations/v3collectionscrudcreateglobals.md
+  - docs/models/operations/v3collectionscrudcreaterequest.md
+  - docs/models/operations/v3collectionscrudcreateresponse.md
+  - docs/models/operations/v3collectionscruddeleteglobals.md
+  - docs/models/operations/v3collectionscruddeleterequest.md
+  - docs/models/operations/v3collectionscruddeleteresponse.md
+  - docs/models/operations/v3collectionscrudgetglobals.md
+  - docs/models/operations/v3collectionscrudgetrequest.md
+  - docs/models/operations/v3collectionscrudgetresponse.md
+  - docs/models/operations/v3collectionscrudlistglobals.md
+  - docs/models/operations/v3collectionscrudlistrequest.md
+  - docs/models/operations/v3collectionscrudlistresponse.md
+  - docs/models/operations/v3collectionscrudupdateglobals.md
+  - docs/models/operations/v3collectionscrudupdaterequest.md
+  - docs/models/operations/v3collectionscrudupdateresponse.md
+  - docs/models/operations/v3collectionslisteventsglobals.md
+  - docs/models/operations/v3collectionslisteventsrequest.md
+  - docs/models/operations/v3collectionslisteventsresponse.md
+  - docs/models/operations/v3collectionssearchaggregateglobals.md
+  - docs/models/operations/v3collectionssearchaggregaterequest.md
+  - docs/models/operations/v3collectionssearchaggregateresponse.md
+  - docs/models/operations/v3collectionssearchqueryglobals.md
+  - docs/models/operations/v3collectionssearchqueryrequest.md
+  - docs/models/operations/v3collectionssearchqueryresponse.md
+  - docs/models/operations/v3globaldataassetcertificateglobals.md
+  - docs/models/operations/v3globaldataassetcertificatelistglobals.md
+  - docs/models/operations/v3globaldataassetcertificatelistrequest.md
+  - docs/models/operations/v3globaldataassetcertificatelistresponse.md
+  - docs/models/operations/v3globaldataassetcertificaterequest.md
+  - docs/models/operations/v3globaldataassetcertificateresponse.md
+  - docs/models/operations/v3globaldataassethostglobals.md
+  - docs/models/operations/v3globaldataassethostlistglobals.md
+  - docs/models/operations/v3globaldataassethostlistrequest.md
+  - docs/models/operations/v3globaldataassethostlistresponse.md
+  - docs/models/operations/v3globaldataassethostrequest.md
+  - docs/models/operations/v3globaldataassethostresponse.md
+  - docs/models/operations/v3globaldataassethosttimelineglobals.md
+  - docs/models/operations/v3globaldataassethosttimelinerequest.md
+  - docs/models/operations/v3globaldataassethosttimelineresponse.md
+  - docs/models/operations/v3globaldataassetwebpropertyglobals.md
+  - docs/models/operations/v3globaldataassetwebpropertylistglobals.md
+  - docs/models/operations/v3globaldataassetwebpropertylistrequest.md
+  - docs/models/operations/v3globaldataassetwebpropertylistresponse.md
+  - docs/models/operations/v3globaldataassetwebpropertyrequest.md
+  - docs/models/operations/v3globaldataassetwebpropertyresponse.md
+  - docs/models/operations/v3globaldatasearchaggregateglobals.md
+  - docs/models/operations/v3globaldatasearchaggregaterequest.md
+  - docs/models/operations/v3globaldatasearchaggregateresponse.md
+  - docs/models/operations/v3globaldatasearchqueryglobals.md
+  - docs/models/operations/v3globaldatasearchqueryrequest.md
+  - docs/models/operations/v3globaldatasearchqueryresponse.md
+  - docs/models/sdkerrors/errormodel.md
+  - docs/sdks/collections/README.md
+  - docs/sdks/globaldata/README.md
+  - docs/sdks/sdk/README.md
+  - globaldata.go
+  - go.mod
+  - internal/globals/globals.go
+  - internal/hooks/hooks.go
+  - internal/utils/contenttype.go
+  - internal/utils/env.go
+  - internal/utils/form.go
+  - internal/utils/headers.go
+  - internal/utils/json.go
+  - internal/utils/pathparams.go
+  - internal/utils/queryparams.go
+  - internal/utils/requestbody.go
+  - internal/utils/retries.go
+  - internal/utils/security.go
+  - internal/utils/utils.go
+  - models/operations/options.go
+  - models/sdkerrors/sdkerror.go
+  - retry/config.go
+  - sdk.go
+  - types/bigint.go
+  - types/date.go
+  - types/datetime.go
+  - types/decimal.go
+  - types/pointers.go
+examples:
+  v3-collections-crud-list:
+    speakeasy-default-v3-collections-crud-list:
+      parameters:
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-collections-crud-create:
+    speakeasy-default-v3-collections-crud-create:
+      parameters:
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-collections-crud-delete:
+    speakeasy-default-v3-collections-crud-delete:
+      parameters:
+        path:
+          collection_uid: "<id>"
+        query:
+          organization_id: "<id>"
+      responses:
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-collections-crud-get:
+    speakeasy-default-v3-collections-crud-get:
+      parameters:
+        path:
+          collection_uid: "<id>"
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-collections-crud-update:
+    speakeasy-default-v3-collections-crud-update:
+      parameters:
+        path:
+          collection_uid: "<id>"
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-collections-list-events:
+    speakeasy-default-v3-collections-list-events:
+      parameters:
+        path:
+          collection_uid: "<id>"
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-collections-search-aggregate:
+    speakeasy-default-v3-collections-search-aggregate:
+      parameters:
+        path:
+          collection_uid: "<id>"
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"field": "<value>", "number_of_buckets": 590414, "query": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-collections-search-query:
+    speakeasy-default-v3-collections-search-query:
+      parameters:
+        path:
+          collection_uid: "<id>"
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"query": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-certificate-list:
+    speakeasy-default-v3-globaldata-asset-certificate-list:
+      parameters:
+        query:
+          organization_id: "<id>"
+          certificate_ids: ["<value>"]
+      responses:
+        "200":
+          application/vnd.censys.api.v3.certificate.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-certificate:
+    speakeasy-default-v3-globaldata-asset-certificate:
+      parameters:
+        path:
+          certificate_id: "<id>"
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/vnd.censys.api.v3.certificate.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-host-list:
+    speakeasy-default-v3-globaldata-asset-host-list:
+      parameters:
+        query:
+          organization_id: "<id>"
+          host_ids: []
+      responses:
+        "200":
+          application/vnd.censys.api.v3.host.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-host:
+    speakeasy-default-v3-globaldata-asset-host:
+      parameters:
+        path:
+          host_id: "<id>"
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/vnd.censys.api.v3.host.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-host-timeline:
+    speakeasy-default-v3-globaldata-asset-host-timeline:
+      parameters:
+        path:
+          host_id: "<id>"
+        query:
+          organization_id: "<id>"
+          start_time: "2024-04-27T09:30:08.024Z"
+          end_time: "2023-04-13T10:41:42.221Z"
+      responses:
+        "200":
+          application/vnd.censys.api.v3.host_timeline_event.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-webproperty-list:
+    speakeasy-default-v3-globaldata-asset-webproperty-list:
+      parameters:
+        query:
+          organization_id: "<id>"
+          webproperty_ids: ["<value>"]
+      responses:
+        "200":
+          application/vnd.censys.api.v3.webproperty.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-webproperty:
+    speakeasy-default-v3-globaldata-asset-webproperty:
+      parameters:
+        path:
+          webproperty_id: "<id>"
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/vnd.censys.api.v3.webproperty.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-search-aggregate:
+    speakeasy-default-v3-globaldata-search-aggregate:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"field": "<value>", "number_of_buckets": 590414, "query": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-search-query:
+    speakeasy-default-v3-globaldata-search-query:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"query": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+examplesVersion: 1.0.1
+generatedTests: {}

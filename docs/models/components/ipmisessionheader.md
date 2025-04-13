@@ -1,0 +1,11 @@
+# IpmiSessionHeader
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `AuthCode`                                                                                    | **string*                                                                                     | :heavy_minus_sign:                                                                            | The 16-byte authentication code; not present if auth_type is None.                            |
+| `AuthType`                                                                                    | [*components.IpmiSessionHeaderAuthType](../../models/components/ipmisessionheaderauthtype.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `SessionID`                                                                                   | **int64*                                                                                      | :heavy_minus_sign:                                                                            | The ID of this sessiod.                                                                       |
+| `SessionSequenceNumber`                                                                       | **int64*                                                                                      | :heavy_minus_sign:                                                                            | The session sequence number of this packet in the session                                     |

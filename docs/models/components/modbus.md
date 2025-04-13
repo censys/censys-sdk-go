@@ -1,0 +1,11 @@
+# Modbus
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `ExceptionResponse`                                                                       | [*components.ModbusExceptionResponse](../../models/components/modbusexceptionresponse.md) | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Function`                                                                                | **int*                                                                                    | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `MeiResponse`                                                                             | [*components.ModbusMEIResponse](../../models/components/modbusmeiresponse.md)             | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `UnitID`                                                                                  | **int64*                                                                                  | :heavy_minus_sign:                                                                        | N/A                                                                                       |
