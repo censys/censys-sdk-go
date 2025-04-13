@@ -18,7 +18,7 @@ func (o *V3GlobaldataAssetWebpropertyListGlobals) GetOrganizationID() *string {
 }
 
 type V3GlobaldataAssetWebpropertyListRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#/set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// A web property host identifier, the format is hostname:port.
 	WebpropertyIds []string `queryParam:"style=form,explode=false,name=webproperty_ids"`

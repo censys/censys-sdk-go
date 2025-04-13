@@ -18,7 +18,7 @@ func (o *V3GlobaldataAssetHostListGlobals) GetOrganizationID() *string {
 }
 
 type V3GlobaldataAssetHostListRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#/set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// A list of host IP addresses.
 	HostIds []string `queryParam:"style=form,explode=false,name=host_ids"`

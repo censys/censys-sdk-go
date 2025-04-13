@@ -20,7 +20,7 @@ func (o *V3GlobaldataAssetHostTimelineGlobals) GetOrganizationID() *string {
 }
 
 type V3GlobaldataAssetHostTimelineRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#/set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The IP address of a host.
 	HostID string `pathParam:"style=simple,explode=false,name=host_id"`

@@ -18,7 +18,7 @@ func (o *V3CollectionsCrudListGlobals) GetOrganizationID() *string {
 }
 
 type V3CollectionsCrudListRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#/set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// page token for the requested page of collection results
 	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`

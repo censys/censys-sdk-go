@@ -18,7 +18,7 @@ func (o *V3GlobaldataAssetCertificateListGlobals) GetOrganizationID() *string {
 }
 
 type V3GlobaldataAssetCertificateListRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#/set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// A list of SHA-256 certificate fingerprints.
 	CertificateIds []string `queryParam:"style=form,explode=false,name=certificate_ids"`

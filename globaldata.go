@@ -1432,7 +1432,7 @@ func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3
 }
 
 // GetWebProperty - Asset / WebProperty
-// Get a Webproperty
+// Get a WebProperty
 func (s *GlobalData) GetWebProperty(ctx context.Context, request operations.V3GlobaldataAssetWebpropertyRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetWebpropertyResponse, error) {
 	globals := operations.V3GlobaldataAssetWebpropertyGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

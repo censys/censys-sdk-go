@@ -358,7 +358,7 @@ func main() {
 
 ## GetWebProperty
 
-Get a Webproperty
+Get a WebProperty
 
 ### Example Usage
 
