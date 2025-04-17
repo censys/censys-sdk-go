@@ -113,6 +113,7 @@ type Vuln struct {
 	ID         *string         `json:"id,omitempty"`
 	Kev        []Kev           `json:"kev,omitempty"`
 	Metrics    *Metrics        `json:"metrics,omitempty"`
+	Name       *string         `json:"name,omitempty"`
 	RiskSource *VulnRiskSource `json:"risk_source,omitempty"`
 	Severity   *VulnSeverity   `json:"severity,omitempty"`
 	Source     *VulnSource     `json:"source,omitempty"`
@@ -159,6 +160,13 @@ func (o *Vuln) GetMetrics() *Metrics {
 		return nil
 	}
 	return o.Metrics
+}
+
+func (o *Vuln) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
 }
 
 func (o *Vuln) GetRiskSource() *VulnRiskSource {

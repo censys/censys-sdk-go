@@ -49,6 +49,7 @@ type Threat struct {
 	Evidence   []Evidence     `json:"evidence,omitempty"`
 	ID         *string        `json:"id,omitempty"`
 	Malware    *ThreatMalware `json:"malware,omitempty"`
+	Name       *string        `json:"name,omitempty"`
 	Source     *ThreatSource  `json:"source,omitempty"`
 	Tactic     []string       `json:"tactic,omitempty"`
 	Type       []string       `json:"type,omitempty"`
@@ -94,6 +95,13 @@ func (o *Threat) GetMalware() *ThreatMalware {
 		return nil
 	}
 	return o.Malware
+}
+
+func (o *Threat) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
 }
 
 func (o *Threat) GetSource() *ThreatSource {

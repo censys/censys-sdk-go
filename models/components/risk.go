@@ -112,6 +112,7 @@ type Risk struct {
 	Evidence   []Evidence   `json:"evidence,omitempty"`
 	ID         *string      `json:"id,omitempty"`
 	Metrics    *Metrics     `json:"metrics,omitempty"`
+	Name       *string      `json:"name,omitempty"`
 	RiskSource *RiskSource  `json:"risk_source,omitempty"`
 	Severity   *Severity    `json:"severity,omitempty"`
 	Source     *RiskSource1 `json:"source,omitempty"`
@@ -151,6 +152,13 @@ func (o *Risk) GetMetrics() *Metrics {
 		return nil
 	}
 	return o.Metrics
+}
+
+func (o *Risk) GetName() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Name
 }
 
 func (o *Risk) GetRiskSource() *RiskSource {

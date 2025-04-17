@@ -19,7 +19,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *openapi*
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [openapi](#openapi)
+* [github.com/censys/censys-sdk-go](#githubcomcensyscensys-sdk-go)
   * [SDK Installation](#sdk-installation)
   * [SDK Example Usage](#sdk-example-usage)
   * [Available Resources and Operations](#available-resources-and-operations)
