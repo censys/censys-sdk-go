@@ -10,9 +10,9 @@ import (
 type RecordType string
 
 const (
-	RecordTypeUnspecified RecordType = "unspecified"
-	RecordTypeA           RecordType = "a"
-	RecordTypeAaaa        RecordType = "aaaa"
+	RecordTypeUnknown RecordType = ""
+	RecordTypeA       RecordType = "a"
+	RecordTypeAaaa    RecordType = "aaaa"
 )
 
 func (e RecordType) ToPointer() *RecordType {
@@ -24,7 +24,7 @@ func (e *RecordType) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "a":
 		fallthrough

@@ -5,7 +5,7 @@
 
 | Name               | Value              |
 | ------------------ | ------------------ |
-| `SourceUndefined`  | undefined          |
+| `SourceUnknown`    |                    |
 | `SourceCensys`     | censys             |
 | `SourceRecog`      | recog              |
 | `SourceWappalyzer` | wappalyzer         |

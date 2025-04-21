@@ -5,9 +5,9 @@ Describes the level of privileges or access an attacker must have before success
 
 ## Values
 
-| Name                                            | Value                                           |
-| ----------------------------------------------- | ----------------------------------------------- |
-| `CVSSv4ComponentsPrivilegesRequiredUnspecified` | unspecified                                     |
-| `CVSSv4ComponentsPrivilegesRequiredNone`        | none                                            |
-| `CVSSv4ComponentsPrivilegesRequiredLow`         | low                                             |
-| `CVSSv4ComponentsPrivilegesRequiredHigh`        | high                                            |
+| Name                                        | Value                                       |
+| ------------------------------------------- | ------------------------------------------- |
+| `CVSSv4ComponentsPrivilegesRequiredUnknown` |                                             |
+| `CVSSv4ComponentsPrivilegesRequiredNone`    | none                                        |
+| `CVSSv4ComponentsPrivilegesRequiredLow`     | low                                         |
+| `CVSSv4ComponentsPrivilegesRequiredHigh`    | high                                        |

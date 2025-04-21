@@ -10,7 +10,7 @@ import (
 type RepresentativeInfoReason string
 
 const (
-	RepresentativeInfoReasonUnknown           RepresentativeInfoReason = "unknown"
+	RepresentativeInfoReasonUnknown           RepresentativeInfoReason = ""
 	RepresentativeInfoReasonProtocolPortCount RepresentativeInfoReason = "protocol_port_count"
 	RepresentativeInfoReasonIncapsula         RepresentativeInfoReason = "incapsula"
 	RepresentativeInfoReasonZscaler           RepresentativeInfoReason = "zscaler"
@@ -25,7 +25,7 @@ func (e *RepresentativeInfoReason) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "protocol_port_count":
 		fallthrough

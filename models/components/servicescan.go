@@ -10,7 +10,7 @@ import (
 type ServiceScanTransportProtocol string
 
 const (
-	ServiceScanTransportProtocolUnknown ServiceScanTransportProtocol = "unknown"
+	ServiceScanTransportProtocolUnknown ServiceScanTransportProtocol = ""
 	ServiceScanTransportProtocolTCP     ServiceScanTransportProtocol = "tcp"
 	ServiceScanTransportProtocolUDP     ServiceScanTransportProtocol = "udp"
 	ServiceScanTransportProtocolIcmp    ServiceScanTransportProtocol = "icmp"
@@ -26,7 +26,7 @@ func (e *ServiceScanTransportProtocol) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "tcp":
 		fallthrough

@@ -5,6 +5,6 @@
 
 | Name                       | Value                      |
 | -------------------------- | -------------------------- |
-| `ValueDensityNotDefined`   | not_defined                |
+| `ValueDensityUnknown`      |                            |
 | `ValueDensityDiffuse`      | diffuse                    |
 | `ValueDensityConcentrated` | concentrated               |

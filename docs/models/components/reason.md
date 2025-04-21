@@ -7,7 +7,7 @@ An enumerated value indicating the issuer-supplied reason for the revocation.
 
 | Name                         | Value                        |
 | ---------------------------- | ---------------------------- |
-| `ReasonUnknown`              | unknown                      |
+| `ReasonUnknown`              |                              |
 | `ReasonUnspecified`          | unspecified                  |
 | `ReasonKeyCompromise`        | key_compromise               |
 | `ReasonCaCompromise`         | ca_compromise                |

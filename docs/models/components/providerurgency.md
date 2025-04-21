@@ -3,10 +3,10 @@
 
 ## Values
 
-| Name                        | Value                       |
-| --------------------------- | --------------------------- |
-| `ProviderUrgencyNotDefined` | not_defined                 |
-| `ProviderUrgencyClear`      | clear                       |
-| `ProviderUrgencyGreen`      | green                       |
-| `ProviderUrgencyAmber`      | amber                       |
-| `ProviderUrgencyRed`        | red                         |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `ProviderUrgencyUnknown` |                          |
+| `ProviderUrgencyClear`   | clear                    |
+| `ProviderUrgencyGreen`   | green                    |
+| `ProviderUrgencyAmber`   | amber                    |
+| `ProviderUrgencyRed`     | red                      |

@@ -11,7 +11,7 @@ import (
 type DNSResourceRecordType string
 
 const (
-	DNSResourceRecordTypeUnknown DNSResourceRecordType = "unknown"
+	DNSResourceRecordTypeUnknown DNSResourceRecordType = ""
 	DNSResourceRecordTypeA       DNSResourceRecordType = "a"
 	DNSResourceRecordTypeTxt     DNSResourceRecordType = "txt"
 	DNSResourceRecordTypeNs      DNSResourceRecordType = "ns"
@@ -26,7 +26,7 @@ func (e *DNSResourceRecordType) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "a":
 		fallthrough

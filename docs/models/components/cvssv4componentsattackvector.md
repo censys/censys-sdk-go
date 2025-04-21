@@ -5,10 +5,10 @@ Indicates the level of access required for an attacker to exploit the vulnerabil
 
 ## Values
 
-| Name                                      | Value                                     |
-| ----------------------------------------- | ----------------------------------------- |
-| `CVSSv4ComponentsAttackVectorUnspecified` | unspecified                               |
-| `CVSSv4ComponentsAttackVectorNetwork`     | network                                   |
-| `CVSSv4ComponentsAttackVectorAdjacent`    | adjacent                                  |
-| `CVSSv4ComponentsAttackVectorLocal`       | local                                     |
-| `CVSSv4ComponentsAttackVectorPhysical`    | physical                                  |
+| Name                                   | Value                                  |
+| -------------------------------------- | -------------------------------------- |
+| `CVSSv4ComponentsAttackVectorUnknown`  |                                        |
+| `CVSSv4ComponentsAttackVectorNetwork`  | network                                |
+| `CVSSv4ComponentsAttackVectorAdjacent` | adjacent                               |
+| `CVSSv4ComponentsAttackVectorLocal`    | local                                  |
+| `CVSSv4ComponentsAttackVectorPhysical` | physical                               |

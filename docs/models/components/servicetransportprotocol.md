@@ -5,7 +5,7 @@
 
 | Name                              | Value                             |
 | --------------------------------- | --------------------------------- |
-| `ServiceTransportProtocolUnknown` | unknown                           |
+| `ServiceTransportProtocolUnknown` |                                   |
 | `ServiceTransportProtocolTCP`     | tcp                               |
 | `ServiceTransportProtocolUDP`     | udp                               |
 | `ServiceTransportProtocolIcmp`    | icmp                              |

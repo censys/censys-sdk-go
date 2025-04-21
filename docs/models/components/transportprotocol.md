@@ -5,7 +5,7 @@
 
 | Name                       | Value                      |
 | -------------------------- | -------------------------- |
-| `TransportProtocolUnknown` | unknown                    |
+| `TransportProtocolUnknown` |                            |
 | `TransportProtocolTCP`     | tcp                        |
 | `TransportProtocolUDP`     | udp                        |
 | `TransportProtocolIcmp`    | icmp                       |

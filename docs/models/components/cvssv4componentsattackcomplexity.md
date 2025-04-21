@@ -5,8 +5,8 @@ Indicates conditions beyond the attacker’s control that must exist in order to
 
 ## Values
 
-| Name                                          | Value                                         |
-| --------------------------------------------- | --------------------------------------------- |
-| `CVSSv4ComponentsAttackComplexityUnspecified` | unspecified                                   |
-| `CVSSv4ComponentsAttackComplexityLow`         | low                                           |
-| `CVSSv4ComponentsAttackComplexityHigh`        | high                                          |
+| Name                                      | Value                                     |
+| ----------------------------------------- | ----------------------------------------- |
+| `CVSSv4ComponentsAttackComplexityUnknown` |                                           |
+| `CVSSv4ComponentsAttackComplexityLow`     | low                                       |
+| `CVSSv4ComponentsAttackComplexityHigh`    | high                                      |

@@ -5,7 +5,7 @@
 
 | Name                    | Value                   |
 | ----------------------- | ----------------------- |
-| `RecoveryNotDefined`    | not_defined             |
+| `RecoveryUnknown`       |                         |
 | `RecoveryAutomatic`     | automatic               |
 | `RecoveryUser`          | user                    |
 | `RecoveryIrrecoverable` | irrecoverable           |

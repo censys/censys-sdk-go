@@ -11,7 +11,7 @@ import (
 type Type string
 
 const (
-	TypeUnknown      Type = "unknown"
+	TypeUnknown      Type = ""
 	TypeRoot         Type = "root"
 	TypeIntermediate Type = "intermediate"
 	TypeLeaf         Type = "leaf"
@@ -26,7 +26,7 @@ func (e *Type) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "root":
 		fallthrough

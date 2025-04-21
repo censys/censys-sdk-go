@@ -5,7 +5,7 @@
 
 | Name                                   | Value                                  |
 | -------------------------------------- | -------------------------------------- |
-| `EndpointScanTransportProtocolUnknown` | unknown                                |
+| `EndpointScanTransportProtocolUnknown` |                                        |
 | `EndpointScanTransportProtocolTCP`     | tcp                                    |
 | `EndpointScanTransportProtocolUDP`     | udp                                    |
 | `EndpointScanTransportProtocolIcmp`    | icmp                                   |

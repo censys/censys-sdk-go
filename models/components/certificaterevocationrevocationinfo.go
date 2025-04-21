@@ -11,7 +11,7 @@ import (
 type Reason string
 
 const (
-	ReasonUnknown              Reason = "unknown"
+	ReasonUnknown              Reason = ""
 	ReasonUnspecified          Reason = "unspecified"
 	ReasonKeyCompromise        Reason = "key_compromise"
 	ReasonCaCompromise         Reason = "ca_compromise"
@@ -33,7 +33,7 @@ func (e *Reason) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "unspecified":
 		fallthrough

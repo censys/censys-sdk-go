@@ -10,7 +10,7 @@ import (
 type LabelSource string
 
 const (
-	LabelSourceUndefined  LabelSource = "undefined"
+	LabelSourceUnknown    LabelSource = ""
 	LabelSourceCensys     LabelSource = "censys"
 	LabelSourceRecog      LabelSource = "recog"
 	LabelSourceWappalyzer LabelSource = "wappalyzer"
@@ -26,7 +26,7 @@ func (e *LabelSource) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "undefined":
+	case "":
 		fallthrough
 	case "censys":
 		fallthrough

@@ -7,7 +7,7 @@ A enumerated field indicating the result of the request. The most common values 
 
 | Name                  | Value                 |
 | --------------------- | --------------------- |
-| `RCodeUnknownCode`    | unknown_code          |
+| `RCodeUnknown`        |                       |
 | `RCodeSuccess`        | success               |
 | `RCodeFormatError`    | format_error          |
 | `RCodeServerFailure`  | server_failure        |

@@ -5,7 +5,7 @@
 
 | Name                                        | Value                                       |
 | ------------------------------------------- | ------------------------------------------- |
-| `RepresentativeInfoReasonUnknown`           | unknown                                     |
+| `RepresentativeInfoReasonUnknown`           |                                             |
 | `RepresentativeInfoReasonProtocolPortCount` | protocol_port_count                         |
 | `RepresentativeInfoReasonIncapsula`         | incapsula                                   |
 | `RepresentativeInfoReasonZscaler`           | zscaler                                     |

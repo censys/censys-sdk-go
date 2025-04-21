@@ -3,8 +3,8 @@
 
 ## Values
 
-| Name                        | Value                       |
-| --------------------------- | --------------------------- |
-| `VulnRiskSourceUnspecified` | unspecified                 |
-| `VulnRiskSourceCensys`      | censys                      |
-| `VulnRiskSourceCve`         | cve                         |
+| Name                    | Value                   |
+| ----------------------- | ----------------------- |
+| `VulnRiskSourceUnknown` |                         |
+| `VulnRiskSourceCensys`  | censys                  |
+| `VulnRiskSourceCve`     | cve                     |

@@ -159,10 +159,10 @@ func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
-			OpenAPIDocVersion: "1.0.1",
-			SDKVersion:        "0.17.6",
-			GenVersion:        "2.578.0",
-			UserAgent:         "speakeasy-sdk/go 0.17.6 2.578.0 1.0.1 github.com/censys/censys-sdk-go",
+			OpenAPIDocVersion: "1.0.2",
+			SDKVersion:        "0.17.7",
+			GenVersion:        "2.585.2",
+			UserAgent:         "speakeasy-sdk/go 0.17.7 2.585.2 1.0.2 github.com/censys/censys-sdk-go",
 			Globals:           globals.Globals{},
 			Hooks:             hooks.New(),
 		},

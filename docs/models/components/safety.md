@@ -5,6 +5,6 @@
 
 | Name               | Value              |
 | ------------------ | ------------------ |
-| `SafetyNotDefined` | not_defined        |
+| `SafetyUnknown`    |                    |
 | `SafetyNegligible` | negligible         |
 | `SafetyPresent`    | present            |

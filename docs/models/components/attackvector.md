@@ -5,10 +5,10 @@ Indicates the level of access required for an attacker to exploit the vulnerabil
 
 ## Values
 
-| Name                      | Value                     |
-| ------------------------- | ------------------------- |
-| `AttackVectorUnspecified` | unspecified               |
-| `AttackVectorNetwork`     | network                   |
-| `AttackVectorAdjacent`    | adjacent                  |
-| `AttackVectorLocal`       | local                     |
-| `AttackVectorPhysical`    | physical                  |
+| Name                   | Value                  |
+| ---------------------- | ---------------------- |
+| `AttackVectorUnknown`  |                        |
+| `AttackVectorNetwork`  | network                |
+| `AttackVectorAdjacent` | adjacent               |
+| `AttackVectorLocal`    | local                  |
+| `AttackVectorPhysical` | physical               |

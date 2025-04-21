@@ -5,7 +5,7 @@
 
 | Name                          | Value                         |
 | ----------------------------- | ----------------------------- |
-| `RejectTypeUnrecognized`      | unrecognized                  |
+| `RejectTypeUnknown`           |                               |
 | `RejectTypeWrongVersion`      | wrong_version                 |
 | `RejectTypeInvalidUsername`   | invalid_username              |
 | `RejectTypeWrongUserPw`       | wrong_user_pw                 |

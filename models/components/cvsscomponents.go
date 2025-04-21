@@ -11,9 +11,9 @@ import (
 type AttackComplexity string
 
 const (
-	AttackComplexityUnspecified AttackComplexity = "unspecified"
-	AttackComplexityLow         AttackComplexity = "low"
-	AttackComplexityHigh        AttackComplexity = "high"
+	AttackComplexityUnknown AttackComplexity = ""
+	AttackComplexityLow     AttackComplexity = "low"
+	AttackComplexityHigh    AttackComplexity = "high"
 )
 
 func (e AttackComplexity) ToPointer() *AttackComplexity {
@@ -25,7 +25,7 @@ func (e *AttackComplexity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "low":
 		fallthrough
@@ -41,11 +41,11 @@ func (e *AttackComplexity) UnmarshalJSON(data []byte) error {
 type AttackVector string
 
 const (
-	AttackVectorUnspecified AttackVector = "unspecified"
-	AttackVectorNetwork     AttackVector = "network"
-	AttackVectorAdjacent    AttackVector = "adjacent"
-	AttackVectorLocal       AttackVector = "local"
-	AttackVectorPhysical    AttackVector = "physical"
+	AttackVectorUnknown  AttackVector = ""
+	AttackVectorNetwork  AttackVector = "network"
+	AttackVectorAdjacent AttackVector = "adjacent"
+	AttackVectorLocal    AttackVector = "local"
+	AttackVectorPhysical AttackVector = "physical"
 )
 
 func (e AttackVector) ToPointer() *AttackVector {
@@ -57,7 +57,7 @@ func (e *AttackVector) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "network":
 		fallthrough
@@ -77,10 +77,10 @@ func (e *AttackVector) UnmarshalJSON(data []byte) error {
 type Availability string
 
 const (
-	AvailabilityUnspecified Availability = "unspecified"
-	AvailabilityNone        Availability = "none"
-	AvailabilityLow         Availability = "low"
-	AvailabilityHigh        Availability = "high"
+	AvailabilityUnknown Availability = ""
+	AvailabilityNone    Availability = "none"
+	AvailabilityLow     Availability = "low"
+	AvailabilityHigh    Availability = "high"
 )
 
 func (e Availability) ToPointer() *Availability {
@@ -92,7 +92,7 @@ func (e *Availability) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -110,10 +110,10 @@ func (e *Availability) UnmarshalJSON(data []byte) error {
 type Confidentiality string
 
 const (
-	ConfidentialityUnspecified Confidentiality = "unspecified"
-	ConfidentialityNone        Confidentiality = "none"
-	ConfidentialityLow         Confidentiality = "low"
-	ConfidentialityHigh        Confidentiality = "high"
+	ConfidentialityUnknown Confidentiality = ""
+	ConfidentialityNone    Confidentiality = "none"
+	ConfidentialityLow     Confidentiality = "low"
+	ConfidentialityHigh    Confidentiality = "high"
 )
 
 func (e Confidentiality) ToPointer() *Confidentiality {
@@ -125,7 +125,7 @@ func (e *Confidentiality) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -143,10 +143,10 @@ func (e *Confidentiality) UnmarshalJSON(data []byte) error {
 type Integrity string
 
 const (
-	IntegrityUnspecified Integrity = "unspecified"
-	IntegrityNone        Integrity = "none"
-	IntegrityLow         Integrity = "low"
-	IntegrityHigh        Integrity = "high"
+	IntegrityUnknown Integrity = ""
+	IntegrityNone    Integrity = "none"
+	IntegrityLow     Integrity = "low"
+	IntegrityHigh    Integrity = "high"
 )
 
 func (e Integrity) ToPointer() *Integrity {
@@ -158,7 +158,7 @@ func (e *Integrity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -176,10 +176,10 @@ func (e *Integrity) UnmarshalJSON(data []byte) error {
 type PrivilegesRequired string
 
 const (
-	PrivilegesRequiredUnspecified PrivilegesRequired = "unspecified"
-	PrivilegesRequiredNone        PrivilegesRequired = "none"
-	PrivilegesRequiredLow         PrivilegesRequired = "low"
-	PrivilegesRequiredHigh        PrivilegesRequired = "high"
+	PrivilegesRequiredUnknown PrivilegesRequired = ""
+	PrivilegesRequiredNone    PrivilegesRequired = "none"
+	PrivilegesRequiredLow     PrivilegesRequired = "low"
+	PrivilegesRequiredHigh    PrivilegesRequired = "high"
 )
 
 func (e PrivilegesRequired) ToPointer() *PrivilegesRequired {
@@ -191,7 +191,7 @@ func (e *PrivilegesRequired) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -209,9 +209,9 @@ func (e *PrivilegesRequired) UnmarshalJSON(data []byte) error {
 type Scope string
 
 const (
-	ScopeUnspecified Scope = "unspecified"
-	ScopeUnchanged   Scope = "unchanged"
-	ScopeChanged     Scope = "changed"
+	ScopeUnknown   Scope = ""
+	ScopeUnchanged Scope = "unchanged"
+	ScopeChanged   Scope = "changed"
 )
 
 func (e Scope) ToPointer() *Scope {
@@ -223,7 +223,7 @@ func (e *Scope) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "unchanged":
 		fallthrough
@@ -239,9 +239,9 @@ func (e *Scope) UnmarshalJSON(data []byte) error {
 type UserInteraction string
 
 const (
-	UserInteractionUnspecified UserInteraction = "unspecified"
-	UserInteractionNone        UserInteraction = "none"
-	UserInteractionRequired    UserInteraction = "required"
+	UserInteractionUnknown  UserInteraction = ""
+	UserInteractionNone     UserInteraction = "none"
+	UserInteractionRequired UserInteraction = "required"
 )
 
 func (e UserInteraction) ToPointer() *UserInteraction {
@@ -253,7 +253,7 @@ func (e *UserInteraction) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough

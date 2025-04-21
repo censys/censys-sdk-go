@@ -10,7 +10,7 @@ import (
 type JarmScanTransportProtocol string
 
 const (
-	JarmScanTransportProtocolUnknown JarmScanTransportProtocol = "unknown"
+	JarmScanTransportProtocolUnknown JarmScanTransportProtocol = ""
 	JarmScanTransportProtocolTCP     JarmScanTransportProtocol = "tcp"
 	JarmScanTransportProtocolUDP     JarmScanTransportProtocol = "udp"
 	JarmScanTransportProtocolIcmp    JarmScanTransportProtocol = "icmp"
@@ -26,7 +26,7 @@ func (e *JarmScanTransportProtocol) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "tcp":
 		fallthrough
