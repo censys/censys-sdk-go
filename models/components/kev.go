@@ -11,9 +11,9 @@ import (
 type KEVSource string
 
 const (
-	KEVSourceUnspecified KEVSource = "unspecified"
-	KEVSourceCisa        KEVSource = "cisa"
-	KEVSourceThirdParty  KEVSource = "third_party"
+	KEVSourceUnknown    KEVSource = ""
+	KEVSourceCisa       KEVSource = "cisa"
+	KEVSourceThirdParty KEVSource = "third_party"
 )
 
 func (e KEVSource) ToPointer() *KEVSource {
@@ -25,7 +25,7 @@ func (e *KEVSource) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "cisa":
 		fallthrough

@@ -5,7 +5,7 @@
 
 | Name                   | Value                  |
 | ---------------------- | ---------------------- |
-| `ParseStatusUnknown`   | unknown                |
+| `ParseStatusUnknown`   |                        |
 | `ParseStatusSuccess`   | success                |
 | `ParseStatusFail`      | fail                   |
 | `ParseStatusCorrupted` | corrupted              |

@@ -5,9 +5,9 @@ Describes the level of privileges or access an attacker must have before success
 
 ## Values
 
-| Name                            | Value                           |
-| ------------------------------- | ------------------------------- |
-| `PrivilegesRequiredUnspecified` | unspecified                     |
-| `PrivilegesRequiredNone`        | none                            |
-| `PrivilegesRequiredLow`         | low                             |
-| `PrivilegesRequiredHigh`        | high                            |
+| Name                        | Value                       |
+| --------------------------- | --------------------------- |
+| `PrivilegesRequiredUnknown` |                             |
+| `PrivilegesRequiredNone`    | none                        |
+| `PrivilegesRequiredLow`     | low                         |
+| `PrivilegesRequiredHigh`    | high                        |

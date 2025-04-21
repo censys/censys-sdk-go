@@ -5,7 +5,7 @@
 
 | Name                     | Value                    |
 | ------------------------ | ------------------------ |
-| `ThreatSourceUndefined`  | undefined                |
+| `ThreatSourceUnknown`    |                          |
 | `ThreatSourceCensys`     | censys                   |
 | `ThreatSourceRecog`      | recog                    |
 | `ThreatSourceWappalyzer` | wappalyzer               |

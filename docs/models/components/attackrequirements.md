@@ -3,8 +3,8 @@
 
 ## Values
 
-| Name                            | Value                           |
-| ------------------------------- | ------------------------------- |
-| `AttackRequirementsUnspecified` | unspecified                     |
-| `AttackRequirementsNone`        | none                            |
-| `AttackRequirementsPresent`     | present                         |
+| Name                        | Value                       |
+| --------------------------- | --------------------------- |
+| `AttackRequirementsUnknown` |                             |
+| `AttackRequirementsNone`    | none                        |
+| `AttackRequirementsPresent` | present                     |

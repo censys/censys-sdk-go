@@ -10,9 +10,9 @@ import (
 type RiskSource string
 
 const (
-	RiskSourceUnspecified RiskSource = "unspecified"
-	RiskSourceCensys      RiskSource = "censys"
-	RiskSourceCve         RiskSource = "cve"
+	RiskSourceUnknown RiskSource = ""
+	RiskSourceCensys  RiskSource = "censys"
+	RiskSourceCve     RiskSource = "cve"
 )
 
 func (e RiskSource) ToPointer() *RiskSource {
@@ -24,7 +24,7 @@ func (e *RiskSource) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "censys":
 		fallthrough
@@ -39,11 +39,11 @@ func (e *RiskSource) UnmarshalJSON(data []byte) error {
 type Severity string
 
 const (
-	SeverityUnspecified Severity = "unspecified"
-	SeverityLow         Severity = "low"
-	SeverityMedium      Severity = "medium"
-	SeverityHigh        Severity = "high"
-	SeverityCritical    Severity = "critical"
+	SeverityUnknown  Severity = ""
+	SeverityLow      Severity = "low"
+	SeverityMedium   Severity = "medium"
+	SeverityHigh     Severity = "high"
+	SeverityCritical Severity = "critical"
 )
 
 func (e Severity) ToPointer() *Severity {
@@ -55,7 +55,7 @@ func (e *Severity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "low":
 		fallthrough
@@ -74,7 +74,7 @@ func (e *Severity) UnmarshalJSON(data []byte) error {
 type RiskSource1 string
 
 const (
-	RiskSource1Undefined  RiskSource1 = "undefined"
+	RiskSource1Unknown    RiskSource1 = ""
 	RiskSource1Censys     RiskSource1 = "censys"
 	RiskSource1Recog      RiskSource1 = "recog"
 	RiskSource1Wappalyzer RiskSource1 = "wappalyzer"
@@ -90,7 +90,7 @@ func (e *RiskSource1) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "undefined":
+	case "":
 		fallthrough
 	case "censys":
 		fallthrough

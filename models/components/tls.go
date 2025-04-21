@@ -11,7 +11,7 @@ import (
 type VersionSelected string
 
 const (
-	VersionSelectedUnknown VersionSelected = "unknown"
+	VersionSelectedUnknown VersionSelected = ""
 	VersionSelectedSsLv2   VersionSelected = "ss_lv_2"
 	VersionSelectedSsLv3   VersionSelected = "ss_lv_3"
 	VersionSelectedTlsv10  VersionSelected = "tlsv1_0"
@@ -32,7 +32,7 @@ func (e *VersionSelected) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "ss_lv_2":
 		fallthrough

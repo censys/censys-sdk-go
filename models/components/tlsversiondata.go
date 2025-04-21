@@ -10,7 +10,7 @@ import (
 type Version string
 
 const (
-	VersionUnknown Version = "unknown"
+	VersionUnknown Version = ""
 	VersionSsLv2   Version = "ss_lv_2"
 	VersionSsLv3   Version = "ss_lv_3"
 	VersionTlsv10  Version = "tlsv1_0"
@@ -31,7 +31,7 @@ func (e *Version) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "ss_lv_2":
 		fallthrough

@@ -5,8 +5,8 @@ Describes whether a user, other than the attacker, is required to do anything or
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `CVSSv4ComponentsUserInteractionUnspecified` | unspecified                                  |
-| `CVSSv4ComponentsUserInteractionNone`        | none                                         |
-| `CVSSv4ComponentsUserInteractionRequired`    | required                                     |
+| Name                                      | Value                                     |
+| ----------------------------------------- | ----------------------------------------- |
+| `CVSSv4ComponentsUserInteractionUnknown`  |                                           |
+| `CVSSv4ComponentsUserInteractionNone`     | none                                      |
+| `CVSSv4ComponentsUserInteractionRequired` | required                                  |

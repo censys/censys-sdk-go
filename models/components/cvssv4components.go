@@ -11,9 +11,9 @@ import (
 type CVSSv4ComponentsAttackComplexity string
 
 const (
-	CVSSv4ComponentsAttackComplexityUnspecified CVSSv4ComponentsAttackComplexity = "unspecified"
-	CVSSv4ComponentsAttackComplexityLow         CVSSv4ComponentsAttackComplexity = "low"
-	CVSSv4ComponentsAttackComplexityHigh        CVSSv4ComponentsAttackComplexity = "high"
+	CVSSv4ComponentsAttackComplexityUnknown CVSSv4ComponentsAttackComplexity = ""
+	CVSSv4ComponentsAttackComplexityLow     CVSSv4ComponentsAttackComplexity = "low"
+	CVSSv4ComponentsAttackComplexityHigh    CVSSv4ComponentsAttackComplexity = "high"
 )
 
 func (e CVSSv4ComponentsAttackComplexity) ToPointer() *CVSSv4ComponentsAttackComplexity {
@@ -25,7 +25,7 @@ func (e *CVSSv4ComponentsAttackComplexity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "low":
 		fallthrough
@@ -40,9 +40,9 @@ func (e *CVSSv4ComponentsAttackComplexity) UnmarshalJSON(data []byte) error {
 type AttackRequirements string
 
 const (
-	AttackRequirementsUnspecified AttackRequirements = "unspecified"
-	AttackRequirementsNone        AttackRequirements = "none"
-	AttackRequirementsPresent     AttackRequirements = "present"
+	AttackRequirementsUnknown AttackRequirements = ""
+	AttackRequirementsNone    AttackRequirements = "none"
+	AttackRequirementsPresent AttackRequirements = "present"
 )
 
 func (e AttackRequirements) ToPointer() *AttackRequirements {
@@ -54,7 +54,7 @@ func (e *AttackRequirements) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -70,11 +70,11 @@ func (e *AttackRequirements) UnmarshalJSON(data []byte) error {
 type CVSSv4ComponentsAttackVector string
 
 const (
-	CVSSv4ComponentsAttackVectorUnspecified CVSSv4ComponentsAttackVector = "unspecified"
-	CVSSv4ComponentsAttackVectorNetwork     CVSSv4ComponentsAttackVector = "network"
-	CVSSv4ComponentsAttackVectorAdjacent    CVSSv4ComponentsAttackVector = "adjacent"
-	CVSSv4ComponentsAttackVectorLocal       CVSSv4ComponentsAttackVector = "local"
-	CVSSv4ComponentsAttackVectorPhysical    CVSSv4ComponentsAttackVector = "physical"
+	CVSSv4ComponentsAttackVectorUnknown  CVSSv4ComponentsAttackVector = ""
+	CVSSv4ComponentsAttackVectorNetwork  CVSSv4ComponentsAttackVector = "network"
+	CVSSv4ComponentsAttackVectorAdjacent CVSSv4ComponentsAttackVector = "adjacent"
+	CVSSv4ComponentsAttackVectorLocal    CVSSv4ComponentsAttackVector = "local"
+	CVSSv4ComponentsAttackVectorPhysical CVSSv4ComponentsAttackVector = "physical"
 )
 
 func (e CVSSv4ComponentsAttackVector) ToPointer() *CVSSv4ComponentsAttackVector {
@@ -86,7 +86,7 @@ func (e *CVSSv4ComponentsAttackVector) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "network":
 		fallthrough
@@ -105,9 +105,9 @@ func (e *CVSSv4ComponentsAttackVector) UnmarshalJSON(data []byte) error {
 type Automatable string
 
 const (
-	AutomatableNotDefined Automatable = "not_defined"
-	AutomatableNo         Automatable = "no"
-	AutomatableYes        Automatable = "yes"
+	AutomatableUnknown Automatable = ""
+	AutomatableNo      Automatable = "no"
+	AutomatableYes     Automatable = "yes"
 )
 
 func (e Automatable) ToPointer() *Automatable {
@@ -119,7 +119,7 @@ func (e *Automatable) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "not_defined":
+	case "":
 		fallthrough
 	case "no":
 		fallthrough
@@ -135,10 +135,10 @@ func (e *Automatable) UnmarshalJSON(data []byte) error {
 type CVSSv4ComponentsAvailability string
 
 const (
-	CVSSv4ComponentsAvailabilityUnspecified CVSSv4ComponentsAvailability = "unspecified"
-	CVSSv4ComponentsAvailabilityNone        CVSSv4ComponentsAvailability = "none"
-	CVSSv4ComponentsAvailabilityLow         CVSSv4ComponentsAvailability = "low"
-	CVSSv4ComponentsAvailabilityHigh        CVSSv4ComponentsAvailability = "high"
+	CVSSv4ComponentsAvailabilityUnknown CVSSv4ComponentsAvailability = ""
+	CVSSv4ComponentsAvailabilityNone    CVSSv4ComponentsAvailability = "none"
+	CVSSv4ComponentsAvailabilityLow     CVSSv4ComponentsAvailability = "low"
+	CVSSv4ComponentsAvailabilityHigh    CVSSv4ComponentsAvailability = "high"
 )
 
 func (e CVSSv4ComponentsAvailability) ToPointer() *CVSSv4ComponentsAvailability {
@@ -150,7 +150,7 @@ func (e *CVSSv4ComponentsAvailability) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -168,10 +168,10 @@ func (e *CVSSv4ComponentsAvailability) UnmarshalJSON(data []byte) error {
 type CVSSv4ComponentsConfidentiality string
 
 const (
-	CVSSv4ComponentsConfidentialityUnspecified CVSSv4ComponentsConfidentiality = "unspecified"
-	CVSSv4ComponentsConfidentialityNone        CVSSv4ComponentsConfidentiality = "none"
-	CVSSv4ComponentsConfidentialityLow         CVSSv4ComponentsConfidentiality = "low"
-	CVSSv4ComponentsConfidentialityHigh        CVSSv4ComponentsConfidentiality = "high"
+	CVSSv4ComponentsConfidentialityUnknown CVSSv4ComponentsConfidentiality = ""
+	CVSSv4ComponentsConfidentialityNone    CVSSv4ComponentsConfidentiality = "none"
+	CVSSv4ComponentsConfidentialityLow     CVSSv4ComponentsConfidentiality = "low"
+	CVSSv4ComponentsConfidentialityHigh    CVSSv4ComponentsConfidentiality = "high"
 )
 
 func (e CVSSv4ComponentsConfidentiality) ToPointer() *CVSSv4ComponentsConfidentiality {
@@ -183,7 +183,7 @@ func (e *CVSSv4ComponentsConfidentiality) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -201,10 +201,10 @@ func (e *CVSSv4ComponentsConfidentiality) UnmarshalJSON(data []byte) error {
 type CVSSv4ComponentsIntegrity string
 
 const (
-	CVSSv4ComponentsIntegrityUnspecified CVSSv4ComponentsIntegrity = "unspecified"
-	CVSSv4ComponentsIntegrityNone        CVSSv4ComponentsIntegrity = "none"
-	CVSSv4ComponentsIntegrityLow         CVSSv4ComponentsIntegrity = "low"
-	CVSSv4ComponentsIntegrityHigh        CVSSv4ComponentsIntegrity = "high"
+	CVSSv4ComponentsIntegrityUnknown CVSSv4ComponentsIntegrity = ""
+	CVSSv4ComponentsIntegrityNone    CVSSv4ComponentsIntegrity = "none"
+	CVSSv4ComponentsIntegrityLow     CVSSv4ComponentsIntegrity = "low"
+	CVSSv4ComponentsIntegrityHigh    CVSSv4ComponentsIntegrity = "high"
 )
 
 func (e CVSSv4ComponentsIntegrity) ToPointer() *CVSSv4ComponentsIntegrity {
@@ -216,7 +216,7 @@ func (e *CVSSv4ComponentsIntegrity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -234,10 +234,10 @@ func (e *CVSSv4ComponentsIntegrity) UnmarshalJSON(data []byte) error {
 type CVSSv4ComponentsPrivilegesRequired string
 
 const (
-	CVSSv4ComponentsPrivilegesRequiredUnspecified CVSSv4ComponentsPrivilegesRequired = "unspecified"
-	CVSSv4ComponentsPrivilegesRequiredNone        CVSSv4ComponentsPrivilegesRequired = "none"
-	CVSSv4ComponentsPrivilegesRequiredLow         CVSSv4ComponentsPrivilegesRequired = "low"
-	CVSSv4ComponentsPrivilegesRequiredHigh        CVSSv4ComponentsPrivilegesRequired = "high"
+	CVSSv4ComponentsPrivilegesRequiredUnknown CVSSv4ComponentsPrivilegesRequired = ""
+	CVSSv4ComponentsPrivilegesRequiredNone    CVSSv4ComponentsPrivilegesRequired = "none"
+	CVSSv4ComponentsPrivilegesRequiredLow     CVSSv4ComponentsPrivilegesRequired = "low"
+	CVSSv4ComponentsPrivilegesRequiredHigh    CVSSv4ComponentsPrivilegesRequired = "high"
 )
 
 func (e CVSSv4ComponentsPrivilegesRequired) ToPointer() *CVSSv4ComponentsPrivilegesRequired {
@@ -249,7 +249,7 @@ func (e *CVSSv4ComponentsPrivilegesRequired) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -266,11 +266,11 @@ func (e *CVSSv4ComponentsPrivilegesRequired) UnmarshalJSON(data []byte) error {
 type ProviderUrgency string
 
 const (
-	ProviderUrgencyNotDefined ProviderUrgency = "not_defined"
-	ProviderUrgencyClear      ProviderUrgency = "clear"
-	ProviderUrgencyGreen      ProviderUrgency = "green"
-	ProviderUrgencyAmber      ProviderUrgency = "amber"
-	ProviderUrgencyRed        ProviderUrgency = "red"
+	ProviderUrgencyUnknown ProviderUrgency = ""
+	ProviderUrgencyClear   ProviderUrgency = "clear"
+	ProviderUrgencyGreen   ProviderUrgency = "green"
+	ProviderUrgencyAmber   ProviderUrgency = "amber"
+	ProviderUrgencyRed     ProviderUrgency = "red"
 )
 
 func (e ProviderUrgency) ToPointer() *ProviderUrgency {
@@ -282,7 +282,7 @@ func (e *ProviderUrgency) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "not_defined":
+	case "":
 		fallthrough
 	case "clear":
 		fallthrough
@@ -301,7 +301,7 @@ func (e *ProviderUrgency) UnmarshalJSON(data []byte) error {
 type Recovery string
 
 const (
-	RecoveryNotDefined    Recovery = "not_defined"
+	RecoveryUnknown       Recovery = ""
 	RecoveryAutomatic     Recovery = "automatic"
 	RecoveryUser          Recovery = "user"
 	RecoveryIrrecoverable Recovery = "irrecoverable"
@@ -316,7 +316,7 @@ func (e *Recovery) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "not_defined":
+	case "":
 		fallthrough
 	case "automatic":
 		fallthrough
@@ -333,7 +333,7 @@ func (e *Recovery) UnmarshalJSON(data []byte) error {
 type Safety string
 
 const (
-	SafetyNotDefined Safety = "not_defined"
+	SafetyUnknown    Safety = ""
 	SafetyNegligible Safety = "negligible"
 	SafetyPresent    Safety = "present"
 )
@@ -347,7 +347,7 @@ func (e *Safety) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "not_defined":
+	case "":
 		fallthrough
 	case "negligible":
 		fallthrough
@@ -363,9 +363,9 @@ func (e *Safety) UnmarshalJSON(data []byte) error {
 type CVSSv4ComponentsUserInteraction string
 
 const (
-	CVSSv4ComponentsUserInteractionUnspecified CVSSv4ComponentsUserInteraction = "unspecified"
-	CVSSv4ComponentsUserInteractionNone        CVSSv4ComponentsUserInteraction = "none"
-	CVSSv4ComponentsUserInteractionRequired    CVSSv4ComponentsUserInteraction = "required"
+	CVSSv4ComponentsUserInteractionUnknown  CVSSv4ComponentsUserInteraction = ""
+	CVSSv4ComponentsUserInteractionNone     CVSSv4ComponentsUserInteraction = "none"
+	CVSSv4ComponentsUserInteractionRequired CVSSv4ComponentsUserInteraction = "required"
 )
 
 func (e CVSSv4ComponentsUserInteraction) ToPointer() *CVSSv4ComponentsUserInteraction {
@@ -377,7 +377,7 @@ func (e *CVSSv4ComponentsUserInteraction) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "none":
 		fallthrough
@@ -392,7 +392,7 @@ func (e *CVSSv4ComponentsUserInteraction) UnmarshalJSON(data []byte) error {
 type ValueDensity string
 
 const (
-	ValueDensityNotDefined   ValueDensity = "not_defined"
+	ValueDensityUnknown      ValueDensity = ""
 	ValueDensityDiffuse      ValueDensity = "diffuse"
 	ValueDensityConcentrated ValueDensity = "concentrated"
 )
@@ -406,7 +406,7 @@ func (e *ValueDensity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "not_defined":
+	case "":
 		fallthrough
 	case "diffuse":
 		fallthrough
@@ -421,10 +421,10 @@ func (e *ValueDensity) UnmarshalJSON(data []byte) error {
 type VulnerabilityResponseEffort string
 
 const (
-	VulnerabilityResponseEffortNotDefined VulnerabilityResponseEffort = "not_defined"
-	VulnerabilityResponseEffortLow        VulnerabilityResponseEffort = "low"
-	VulnerabilityResponseEffortModerate   VulnerabilityResponseEffort = "moderate"
-	VulnerabilityResponseEffortHigh       VulnerabilityResponseEffort = "high"
+	VulnerabilityResponseEffortUnknown  VulnerabilityResponseEffort = ""
+	VulnerabilityResponseEffortLow      VulnerabilityResponseEffort = "low"
+	VulnerabilityResponseEffortModerate VulnerabilityResponseEffort = "moderate"
+	VulnerabilityResponseEffortHigh     VulnerabilityResponseEffort = "high"
 )
 
 func (e VulnerabilityResponseEffort) ToPointer() *VulnerabilityResponseEffort {
@@ -436,7 +436,7 @@ func (e *VulnerabilityResponseEffort) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "not_defined":
+	case "":
 		fallthrough
 	case "low":
 		fallthrough

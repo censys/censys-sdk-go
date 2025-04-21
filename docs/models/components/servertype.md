@@ -7,7 +7,7 @@ An enumerated value indicating the behavior of the server. An AUTHORITATIVE serv
 
 | Name                          | Value                         |
 | ----------------------------- | ----------------------------- |
-| `ServerTypeUnknown`           | unknown                       |
+| `ServerTypeUnknown`           |                               |
 | `ServerTypeRecursiveResolver` | recursive_resolver            |
 | `ServerTypeAuthoritative`     | authoritative                 |
 | `ServerTypeForwarding`        | forwarding                    |

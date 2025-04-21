@@ -11,7 +11,7 @@ import (
 type RCode string
 
 const (
-	RCodeUnknownCode    RCode = "unknown_code"
+	RCodeUnknown        RCode = ""
 	RCodeSuccess        RCode = "success"
 	RCodeFormatError    RCode = "format_error"
 	RCodeServerFailure  RCode = "server_failure"
@@ -42,7 +42,7 @@ func (e *RCode) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown_code":
+	case "":
 		fallthrough
 	case "success":
 		fallthrough
@@ -92,7 +92,7 @@ func (e *RCode) UnmarshalJSON(data []byte) error {
 type ServerType string
 
 const (
-	ServerTypeUnknown           ServerType = "unknown"
+	ServerTypeUnknown           ServerType = ""
 	ServerTypeRecursiveResolver ServerType = "recursive_resolver"
 	ServerTypeAuthoritative     ServerType = "authoritative"
 	ServerTypeForwarding        ServerType = "forwarding"
@@ -108,7 +108,7 @@ func (e *ServerType) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "recursive_resolver":
 		fallthrough

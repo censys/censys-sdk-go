@@ -10,7 +10,7 @@ import (
 type RejectType string
 
 const (
-	RejectTypeUnrecognized      RejectType = "unrecognized"
+	RejectTypeUnknown           RejectType = ""
 	RejectTypeWrongVersion      RejectType = "wrong_version"
 	RejectTypeInvalidUsername   RejectType = "invalid_username"
 	RejectTypeWrongUserPw       RejectType = "wrong_user_pw"
@@ -30,7 +30,7 @@ func (e *RejectType) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unrecognized":
+	case "":
 		fallthrough
 	case "wrong_version":
 		fallthrough

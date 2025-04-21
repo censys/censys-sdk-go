@@ -10,9 +10,9 @@ import (
 type VulnRiskSource string
 
 const (
-	VulnRiskSourceUnspecified VulnRiskSource = "unspecified"
-	VulnRiskSourceCensys      VulnRiskSource = "censys"
-	VulnRiskSourceCve         VulnRiskSource = "cve"
+	VulnRiskSourceUnknown VulnRiskSource = ""
+	VulnRiskSourceCensys  VulnRiskSource = "censys"
+	VulnRiskSourceCve     VulnRiskSource = "cve"
 )
 
 func (e VulnRiskSource) ToPointer() *VulnRiskSource {
@@ -24,7 +24,7 @@ func (e *VulnRiskSource) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "censys":
 		fallthrough
@@ -39,11 +39,11 @@ func (e *VulnRiskSource) UnmarshalJSON(data []byte) error {
 type VulnSeverity string
 
 const (
-	VulnSeverityUnspecified VulnSeverity = "unspecified"
-	VulnSeverityLow         VulnSeverity = "low"
-	VulnSeverityMedium      VulnSeverity = "medium"
-	VulnSeverityHigh        VulnSeverity = "high"
-	VulnSeverityCritical    VulnSeverity = "critical"
+	VulnSeverityUnknown  VulnSeverity = ""
+	VulnSeverityLow      VulnSeverity = "low"
+	VulnSeverityMedium   VulnSeverity = "medium"
+	VulnSeverityHigh     VulnSeverity = "high"
+	VulnSeverityCritical VulnSeverity = "critical"
 )
 
 func (e VulnSeverity) ToPointer() *VulnSeverity {
@@ -55,7 +55,7 @@ func (e *VulnSeverity) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unspecified":
+	case "":
 		fallthrough
 	case "low":
 		fallthrough
@@ -74,7 +74,7 @@ func (e *VulnSeverity) UnmarshalJSON(data []byte) error {
 type VulnSource string
 
 const (
-	VulnSourceUndefined  VulnSource = "undefined"
+	VulnSourceUnknown    VulnSource = ""
 	VulnSourceCensys     VulnSource = "censys"
 	VulnSourceRecog      VulnSource = "recog"
 	VulnSourceWappalyzer VulnSource = "wappalyzer"
@@ -90,7 +90,7 @@ func (e *VulnSource) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "undefined":
+	case "":
 		fallthrough
 	case "censys":
 		fallthrough

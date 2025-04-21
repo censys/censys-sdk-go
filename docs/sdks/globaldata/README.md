@@ -154,9 +154,7 @@ func main() {
 
     res, err := s.GlobalData.GetHosts(ctx, operations.V3GlobaldataAssetHostListRequest{
         OrganizationID: censyssdkgo.String("<id>"),
-        HostIds: []string{
-
-        },
+        HostIds: []string{},
     })
     if err != nil {
         log.Fatal(err)

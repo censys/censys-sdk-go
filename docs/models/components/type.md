@@ -7,7 +7,7 @@ The certificate's type. Options include root, intermediate, or leaf.
 
 | Name               | Value              |
 | ------------------ | ------------------ |
-| `TypeUnknown`      | unknown            |
+| `TypeUnknown`      |                    |
 | `TypeRoot`         | root               |
 | `TypeIntermediate` | intermediate       |
 | `TypeLeaf`         | leaf               |

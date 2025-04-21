@@ -5,7 +5,7 @@
 
 | Name                               | Value                              |
 | ---------------------------------- | ---------------------------------- |
-| `JarmScanTransportProtocolUnknown` | unknown                            |
+| `JarmScanTransportProtocolUnknown` |                                    |
 | `JarmScanTransportProtocolTCP`     | tcp                                |
 | `JarmScanTransportProtocolUDP`     | udp                                |
 | `JarmScanTransportProtocolIcmp`    | icmp                               |

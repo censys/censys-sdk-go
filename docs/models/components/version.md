@@ -5,7 +5,7 @@
 
 | Name             | Value            |
 | ---------------- | ---------------- |
-| `VersionUnknown` | unknown          |
+| `VersionUnknown` |                  |
 | `VersionSsLv2`   | ss_lv_2          |
 | `VersionSsLv3`   | ss_lv_3          |
 | `VersionTlsv10`  | tlsv1_0          |

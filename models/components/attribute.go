@@ -10,7 +10,7 @@ import (
 type Source string
 
 const (
-	SourceUndefined  Source = "undefined"
+	SourceUnknown    Source = ""
 	SourceCensys     Source = "censys"
 	SourceRecog      Source = "recog"
 	SourceWappalyzer Source = "wappalyzer"
@@ -26,7 +26,7 @@ func (e *Source) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "undefined":
+	case "":
 		fallthrough
 	case "censys":
 		fallthrough

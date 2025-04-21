@@ -3,10 +3,10 @@
 
 ## Values
 
-| Name                  | Value                 |
-| --------------------- | --------------------- |
-| `SeverityUnspecified` | unspecified           |
-| `SeverityLow`         | low                   |
-| `SeverityMedium`      | medium                |
-| `SeverityHigh`        | high                  |
-| `SeverityCritical`    | critical              |
+| Name               | Value              |
+| ------------------ | ------------------ |
+| `SeverityUnknown`  |                    |
+| `SeverityLow`      | low                |
+| `SeverityMedium`   | medium             |
+| `SeverityHigh`     | high               |
+| `SeverityCritical` | critical           |

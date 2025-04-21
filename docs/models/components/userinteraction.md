@@ -5,8 +5,8 @@ Describes whether a user, other than the attacker, is required to do anything or
 
 ## Values
 
-| Name                         | Value                        |
-| ---------------------------- | ---------------------------- |
-| `UserInteractionUnspecified` | unspecified                  |
-| `UserInteractionNone`        | none                         |
-| `UserInteractionRequired`    | required                     |
+| Name                      | Value                     |
+| ------------------------- | ------------------------- |
+| `UserInteractionUnknown`  |                           |
+| `UserInteractionNone`     | none                      |
+| `UserInteractionRequired` | required                  |

@@ -5,7 +5,7 @@
 
 | Name                    | Value                   |
 | ----------------------- | ----------------------- |
-| `RiskSource1Undefined`  | undefined               |
+| `RiskSource1Unknown`    |                         |
 | `RiskSource1Censys`     | censys                  |
 | `RiskSource1Recog`      | recog                   |
 | `RiskSource1Wappalyzer` | wappalyzer              |

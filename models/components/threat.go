@@ -10,7 +10,7 @@ import (
 type ThreatSource string
 
 const (
-	ThreatSourceUndefined  ThreatSource = "undefined"
+	ThreatSourceUnknown    ThreatSource = ""
 	ThreatSourceCensys     ThreatSource = "censys"
 	ThreatSourceRecog      ThreatSource = "recog"
 	ThreatSourceWappalyzer ThreatSource = "wappalyzer"
@@ -26,7 +26,7 @@ func (e *ThreatSource) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "undefined":
+	case "":
 		fallthrough
 	case "censys":
 		fallthrough

@@ -5,7 +5,7 @@
 
 | Name                   | Value                  |
 | ---------------------- | ---------------------- |
-| `VulnSourceUndefined`  | undefined              |
+| `VulnSourceUnknown`    |                        |
 | `VulnSourceCensys`     | censys                 |
 | `VulnSourceRecog`      | recog                  |
 | `VulnSourceWappalyzer` | wappalyzer             |

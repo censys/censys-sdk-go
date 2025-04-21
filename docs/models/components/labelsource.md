@@ -5,7 +5,7 @@
 
 | Name                    | Value                   |
 | ----------------------- | ----------------------- |
-| `LabelSourceUndefined`  | undefined               |
+| `LabelSourceUnknown`    |                         |
 | `LabelSourceCensys`     | censys                  |
 | `LabelSourceRecog`      | recog                   |
 | `LabelSourceWappalyzer` | wappalyzer              |

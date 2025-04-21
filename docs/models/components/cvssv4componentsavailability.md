@@ -5,9 +5,9 @@ If an attack renders information unavailable, such as when a system crashes or t
 
 ## Values
 
-| Name                                      | Value                                     |
-| ----------------------------------------- | ----------------------------------------- |
-| `CVSSv4ComponentsAvailabilityUnspecified` | unspecified                               |
-| `CVSSv4ComponentsAvailabilityNone`        | none                                      |
-| `CVSSv4ComponentsAvailabilityLow`         | low                                       |
-| `CVSSv4ComponentsAvailabilityHigh`        | high                                      |
+| Name                                  | Value                                 |
+| ------------------------------------- | ------------------------------------- |
+| `CVSSv4ComponentsAvailabilityUnknown` |                                       |
+| `CVSSv4ComponentsAvailabilityNone`    | none                                  |
+| `CVSSv4ComponentsAvailabilityLow`     | low                                   |
+| `CVSSv4ComponentsAvailabilityHigh`    | high                                  |

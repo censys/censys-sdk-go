@@ -5,9 +5,9 @@ Refers to whether the protected information has been tampered with or changed in
 
 ## Values
 
-| Name                                   | Value                                  |
-| -------------------------------------- | -------------------------------------- |
-| `CVSSv4ComponentsIntegrityUnspecified` | unspecified                            |
-| `CVSSv4ComponentsIntegrityNone`        | none                                   |
-| `CVSSv4ComponentsIntegrityLow`         | low                                    |
-| `CVSSv4ComponentsIntegrityHigh`        | high                                   |
+| Name                               | Value                              |
+| ---------------------------------- | ---------------------------------- |
+| `CVSSv4ComponentsIntegrityUnknown` |                                    |
+| `CVSSv4ComponentsIntegrityNone`    | none                               |
+| `CVSSv4ComponentsIntegrityLow`     | low                                |
+| `CVSSv4ComponentsIntegrityHigh`    | high                               |

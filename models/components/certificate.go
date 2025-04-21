@@ -10,7 +10,7 @@ import (
 type ParseStatus string
 
 const (
-	ParseStatusUnknown   ParseStatus = "unknown"
+	ParseStatusUnknown   ParseStatus = ""
 	ParseStatusSuccess   ParseStatus = "success"
 	ParseStatusFail      ParseStatus = "fail"
 	ParseStatusCorrupted ParseStatus = "corrupted"
@@ -25,7 +25,7 @@ func (e *ParseStatus) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "success":
 		fallthrough
@@ -43,7 +43,7 @@ func (e *ParseStatus) UnmarshalJSON(data []byte) error {
 type ValidationLevel string
 
 const (
-	ValidationLevelUnknown ValidationLevel = "unknown"
+	ValidationLevelUnknown ValidationLevel = ""
 	ValidationLevelDv      ValidationLevel = "dv"
 	ValidationLevelOv      ValidationLevel = "ov"
 	ValidationLevelEv      ValidationLevel = "ev"
@@ -58,7 +58,7 @@ func (e *ValidationLevel) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "dv":
 		fallthrough

@@ -5,9 +5,9 @@ If an attack renders information unavailable, such as when a system crashes or t
 
 ## Values
 
-| Name                      | Value                     |
-| ------------------------- | ------------------------- |
-| `AvailabilityUnspecified` | unspecified               |
-| `AvailabilityNone`        | none                      |
-| `AvailabilityLow`         | low                       |
-| `AvailabilityHigh`        | high                      |
+| Name                  | Value                 |
+| --------------------- | --------------------- |
+| `AvailabilityUnknown` |                       |
+| `AvailabilityNone`    | none                  |
+| `AvailabilityLow`     | low                   |
+| `AvailabilityHigh`    | high                  |

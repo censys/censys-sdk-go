@@ -3,8 +3,8 @@
 
 ## Values
 
-| Name                    | Value                   |
-| ----------------------- | ----------------------- |
-| `RecordTypeUnspecified` | unspecified             |
-| `RecordTypeA`           | a                       |
-| `RecordTypeAaaa`        | aaaa                    |
+| Name                | Value               |
+| ------------------- | ------------------- |
+| `RecordTypeUnknown` |                     |
+| `RecordTypeA`       | a                   |
+| `RecordTypeAaaa`    | aaaa                |

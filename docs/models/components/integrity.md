@@ -5,9 +5,9 @@ Refers to whether the protected information has been tampered with or changed in
 
 ## Values
 
-| Name                   | Value                  |
-| ---------------------- | ---------------------- |
-| `IntegrityUnspecified` | unspecified            |
-| `IntegrityNone`        | none                   |
-| `IntegrityLow`         | low                    |
-| `IntegrityHigh`        | high                   |
+| Name               | Value              |
+| ------------------ | ------------------ |
+| `IntegrityUnknown` |                    |
+| `IntegrityNone`    | none               |
+| `IntegrityLow`     | low                |
+| `IntegrityHigh`    | high               |

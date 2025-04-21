@@ -5,9 +5,9 @@ Refers to the disclosure of sensitive information to authorized and unauthorized
 
 ## Values
 
-| Name                                         | Value                                        |
-| -------------------------------------------- | -------------------------------------------- |
-| `CVSSv4ComponentsConfidentialityUnspecified` | unspecified                                  |
-| `CVSSv4ComponentsConfidentialityNone`        | none                                         |
-| `CVSSv4ComponentsConfidentialityLow`         | low                                          |
-| `CVSSv4ComponentsConfidentialityHigh`        | high                                         |
+| Name                                     | Value                                    |
+| ---------------------------------------- | ---------------------------------------- |
+| `CVSSv4ComponentsConfidentialityUnknown` |                                          |
+| `CVSSv4ComponentsConfidentialityNone`    | none                                     |
+| `CVSSv4ComponentsConfidentialityLow`     | low                                      |
+| `CVSSv4ComponentsConfidentialityHigh`    | high                                     |

@@ -5,8 +5,8 @@ Indicates conditions beyond the attacker’s control that must exist in order to
 
 ## Values
 
-| Name                          | Value                         |
-| ----------------------------- | ----------------------------- |
-| `AttackComplexityUnspecified` | unspecified                   |
-| `AttackComplexityLow`         | low                           |
-| `AttackComplexityHigh`        | high                          |
+| Name                      | Value                     |
+| ------------------------- | ------------------------- |
+| `AttackComplexityUnknown` |                           |
+| `AttackComplexityLow`     | low                       |
+| `AttackComplexityHigh`    | high                      |

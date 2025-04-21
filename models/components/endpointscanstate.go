@@ -10,7 +10,7 @@ import (
 type TransportProtocol string
 
 const (
-	TransportProtocolUnknown TransportProtocol = "unknown"
+	TransportProtocolUnknown TransportProtocol = ""
 	TransportProtocolTCP     TransportProtocol = "tcp"
 	TransportProtocolUDP     TransportProtocol = "udp"
 	TransportProtocolIcmp    TransportProtocol = "icmp"
@@ -26,7 +26,7 @@ func (e *TransportProtocol) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch v {
-	case "unknown":
+	case "":
 		fallthrough
 	case "tcp":
 		fallthrough

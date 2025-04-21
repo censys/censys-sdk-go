@@ -5,9 +5,9 @@ Refers to the disclosure of sensitive information to authorized and unauthorized
 
 ## Values
 
-| Name                         | Value                        |
-| ---------------------------- | ---------------------------- |
-| `ConfidentialityUnspecified` | unspecified                  |
-| `ConfidentialityNone`        | none                         |
-| `ConfidentialityLow`         | low                          |
-| `ConfidentialityHigh`        | high                         |
+| Name                     | Value                    |
+| ------------------------ | ------------------------ |
+| `ConfidentialityUnknown` |                          |
+| `ConfidentialityNone`    | none                     |
+| `ConfidentialityLow`     | low                      |
+| `ConfidentialityHigh`    | high                     |

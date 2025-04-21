@@ -3,8 +3,8 @@
 
 ## Values
 
-| Name                    | Value                   |
-| ----------------------- | ----------------------- |
-| `AutomatableNotDefined` | not_defined             |
-| `AutomatableNo`         | no                      |
-| `AutomatableYes`        | yes                     |
+| Name                 | Value                |
+| -------------------- | -------------------- |
+| `AutomatableUnknown` |                      |
+| `AutomatableNo`      | no                   |
+| `AutomatableYes`     | yes                  |
