@@ -58,6 +58,7 @@ type EndpointScan struct {
 	IvantiAvalanche   *IvantiAvalanche               `json:"ivanti_avalanche,omitempty"`
 	Kubernetes        *Kubernetes                    `json:"kubernetes,omitempty"`
 	Ollama            *Ollama                        `json:"ollama,omitempty"`
+	OpenDirectory     *OpenDirectory                 `json:"open_directory,omitempty"`
 	Path              *string                        `json:"path,omitempty"`
 	PlexMediaServer   *PlexMediaServer               `json:"plex_media_server,omitempty"`
 	Port              *int                           `json:"port,omitempty"`
@@ -175,6 +176,13 @@ func (o *EndpointScan) GetOllama() *Ollama {
 		return nil
 	}
 	return o.Ollama
+}
+
+func (o *EndpointScan) GetOpenDirectory() *OpenDirectory {
+	if o == nil {
+		return nil
+	}
+	return o.OpenDirectory
 }
 
 func (o *EndpointScan) GetPath() *string {

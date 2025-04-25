@@ -57,6 +57,7 @@ type EndpointScanState struct {
 	IvantiAvalanche   *IvantiAvalanche   `json:"ivanti_avalanche,omitempty"`
 	Kubernetes        *Kubernetes        `json:"kubernetes,omitempty"`
 	Ollama            *Ollama            `json:"ollama,omitempty"`
+	OpenDirectory     *OpenDirectory     `json:"open_directory,omitempty"`
 	Path              *string            `json:"path,omitempty"`
 	PlexMediaServer   *PlexMediaServer   `json:"plex_media_server,omitempty"`
 	Port              *int               `json:"port,omitempty"`
@@ -66,6 +67,7 @@ type EndpointScanState struct {
 	RedlionWeb        *RedlionWeb        `json:"redlion_web,omitempty"`
 	ScadaView         *ScadaView         `json:"scada_view,omitempty"`
 	ScanTime          *string            `json:"scan_time,omitempty"`
+	Screenshots       []Screenshot       `json:"screenshots,omitempty"`
 	TransportProtocol *TransportProtocol `json:"transport_protocol,omitempty"`
 }
 
@@ -167,6 +169,13 @@ func (o *EndpointScanState) GetOllama() *Ollama {
 	return o.Ollama
 }
 
+func (o *EndpointScanState) GetOpenDirectory() *OpenDirectory {
+	if o == nil {
+		return nil
+	}
+	return o.OpenDirectory
+}
+
 func (o *EndpointScanState) GetPath() *string {
 	if o == nil {
 		return nil
@@ -228,6 +237,13 @@ func (o *EndpointScanState) GetScanTime() *string {
 		return nil
 	}
 	return o.ScanTime
+}
+
+func (o *EndpointScanState) GetScreenshots() []Screenshot {
+	if o == nil {
+		return nil
+	}
+	return o.Screenshots
 }
 
 func (o *EndpointScanState) GetTransportProtocol() *TransportProtocol {
