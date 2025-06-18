@@ -125,6 +125,7 @@ type Service struct {
 	Portmap            *Portmap                  `json:"portmap,omitempty"`
 	Postgres           *Postgres                 `json:"postgres,omitempty"`
 	Pptp               *Pptp                     `json:"pptp,omitempty"`
+	ProfinetCm         *ProfinetCm               `json:"profinet_cm,omitempty"`
 	Protocol           *string                   `json:"protocol,omitempty"`
 	Rdate              *Rdate                    `json:"rdate,omitempty"`
 	Rdp                *Rdp                      `json:"rdp,omitempty"`
@@ -747,6 +748,13 @@ func (o *Service) GetPptp() *Pptp {
 		return nil
 	}
 	return o.Pptp
+}
+
+func (o *Service) GetProfinetCm() *ProfinetCm {
+	if o == nil {
+		return nil
+	}
+	return o.ProfinetCm
 }
 
 func (o *Service) GetProtocol() *string {

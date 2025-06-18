@@ -36,12 +36,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-    })
+    res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -90,12 +89,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.Collections.Create(ctx, operations.V3CollectionsCrudCreateRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-    })
+    res, err := s.Collections.Create(ctx, operations.V3CollectionsCrudCreateRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -144,12 +142,12 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Delete(ctx, operations.V3CollectionsCrudDeleteRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-        CollectionUID: "<id>",
+        CollectionUID: "d9ed2825-23bc-46db-bc4b-b4ac6c48f664",
     })
     if err != nil {
         log.Fatal(err)
@@ -199,12 +197,12 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Get(ctx, operations.V3CollectionsCrudGetRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-        CollectionUID: "<id>",
+        CollectionUID: "4d6d3f55-e4ae-405b-8d0f-4207b74028ab",
     })
     if err != nil {
         log.Fatal(err)
@@ -254,11 +252,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Update(ctx, operations.V3CollectionsCrudUpdateRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
     })
     if err != nil {
@@ -309,12 +307,12 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.ListEvents(ctx, operations.V3CollectionsListEventsRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-        CollectionUID: "<id>",
+        CollectionUID: "ddc110c4-03da-472a-98af-be013b92eff5",
     })
     if err != nil {
         log.Fatal(err)
@@ -365,15 +363,15 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Aggregate(ctx, operations.V3CollectionsSearchAggregateRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-        CollectionUID: "<id>",
+        CollectionUID: "ee98f78d-a47d-44fb-89f4-0626ceaf34d7",
         SearchAggregateInputBody: components.SearchAggregateInputBody{
             Field: "<value>",
-            NumberOfBuckets: 590414,
+            NumberOfBuckets: 829469,
             Query: "<value>",
         },
     })
@@ -426,11 +424,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Search(ctx, operations.V3CollectionsSearchQueryRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         CollectionUID: "<id>",
         SearchQueryInputBody: components.SearchQueryInputBody{
             Query: "<value>",

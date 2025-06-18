@@ -14,11 +14,11 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
+		censyssdkgo.WithOrganizationID("<id>"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
 		SearchQueryInputBody: components.SearchQueryInputBody{
 			Query: "<value>",
 		},
