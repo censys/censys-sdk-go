@@ -2,9 +2,12 @@
 
 package censyssdkgo
 
+// Generated from OpenAPI doc version 1.0.4 and generator version 2.630.9
+
 import (
 	"context"
 	"fmt"
+	"github.com/censys/censys-sdk-go/internal/config"
 	"github.com/censys/censys-sdk-go/internal/globals"
 	"github.com/censys/censys-sdk-go/internal/hooks"
 	"github.com/censys/censys-sdk-go/internal/utils"
@@ -20,7 +23,7 @@ var ServerList = []string{
 	"https://api.platform.censys.io",
 }
 
-// HTTPClient provides an interface for suplying the SDK with a custom HTTP client
+// HTTPClient provides an interface for supplying the SDK with a custom HTTP client
 type HTTPClient interface {
 	Do(req *http.Request) (*http.Response, error)
 }
@@ -46,37 +49,15 @@ func Float64(f float64) *float64 { return &f }
 // Pointer provides a helper function to return a pointer to a type
 func Pointer[T any](v T) *T { return &v }
 
-type sdkConfiguration struct {
-	Client            HTTPClient
-	Security          func(context.Context) (interface{}, error)
-	ServerURL         string
-	ServerIndex       int
-	Language          string
-	OpenAPIDocVersion string
-	SDKVersion        string
-	GenVersion        string
-	UserAgent         string
-	Globals           globals.Globals
-	RetryConfig       *retry.Config
-	Hooks             *hooks.Hooks
-	Timeout           *time.Duration
-}
-
-func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
-	if c.ServerURL != "" {
-		return c.ServerURL, nil
-	}
-
-	return ServerList[c.ServerIndex], nil
-}
-
 type SDK struct {
+	SDKVersion string
 	// Endpoints related to the Collections product
 	Collections *Collections
 	// Endpoints related to the Global Data product
 	GlobalData *GlobalData
 
-	sdkConfiguration sdkConfiguration
+	sdkConfiguration config.SDKConfiguration
+	hooks            *hooks.Hooks
 }
 
 type SDKOption func(*SDK)
@@ -157,15 +138,13 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		sdkConfiguration: sdkConfiguration{
-			Language:          "go",
-			OpenAPIDocVersion: "1.0.3",
-			SDKVersion:        "0.17.8",
-			GenVersion:        "2.591.1",
-			UserAgent:         "speakeasy-sdk/go 0.17.8 2.591.1 1.0.3 github.com/censys/censys-sdk-go",
-			Globals:           globals.Globals{},
-			Hooks:             hooks.New(),
+		SDKVersion: "0.18.0",
+		sdkConfiguration: config.SDKConfiguration{
+			UserAgent:  "speakeasy-sdk/go 0.18.0 2.630.9 1.0.4 github.com/censys/censys-sdk-go",
+			Globals:    globals.Globals{},
+			ServerList: ServerList,
 		},
+		hooks: hooks.New(),
 	}
 	for _, opt := range opts {
 		opt(sdk)
@@ -178,14 +157,13 @@ func New(opts ...SDKOption) *SDK {
 
 	currentServerURL, _ := sdk.sdkConfiguration.GetServerDetails()
 	serverURL := currentServerURL
-	serverURL, sdk.sdkConfiguration.Client = sdk.sdkConfiguration.Hooks.SDKInit(currentServerURL, sdk.sdkConfiguration.Client)
-	if serverURL != currentServerURL {
+	serverURL, sdk.sdkConfiguration.Client = sdk.hooks.SDKInit(currentServerURL, sdk.sdkConfiguration.Client)
+	if currentServerURL != serverURL {
 		sdk.sdkConfiguration.ServerURL = serverURL
 	}
 
-	sdk.Collections = newCollections(sdk.sdkConfiguration)
-
-	sdk.GlobalData = newGlobalData(sdk.sdkConfiguration)
+	sdk.Collections = newCollections(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.GlobalData = newGlobalData(sdk, sdk.sdkConfiguration, sdk.hooks)
 
 	return sdk
 }

@@ -1,34 +1,34 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: f52d49f9323bde4c8ee98858ed509473
-  docVersion: 1.0.3
-  speakeasyVersion: 1.539.2
-  generationVersion: 2.591.1
-  releaseVersion: 0.17.8
-  configChecksum: f6292ba44a3b198c5d65bf6eb464876a
+  docChecksum: 9fbfa7d2bf4a65db10589651868bb8f0
+  docVersion: 1.0.4
+  speakeasyVersion: 1.566.1
+  generationVersion: 2.630.9
+  releaseVersion: 0.18.0
+  configChecksum: 74a649e776a776b790cc84a5a54c7ccc
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.7.4
+    core: 3.8.1
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.2
     examples: 2.81.4
     globalSecurity: 2.82.11
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
-    globalServerURLs: 2.82.2
+    globalServerURLs: 2.82.3
     globals: 2.82.2
     ignores: 2.81.1
     intellisenseMarkdownSupport: 0.1.0
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.1.2
-    retries: 2.83.2
-    sdkHooks: 0.1.0
+    retries: 2.83.3
+    sdkHooks: 0.2.0
 generatedFiles:
   - .gitattributes
   - /models/components/activemq.go
@@ -326,6 +326,7 @@ generatedFiles:
   - /models/components/pptp.go
   - /models/components/pptpresponseinfo.go
   - /models/components/pptpversion.go
+  - /models/components/profinetcm.go
   - /models/components/prometheus.go
   - /models/components/prometheusmetricfamily.go
   - /models/components/prometheusresponse.go
@@ -830,6 +831,7 @@ generatedFiles:
   - docs/models/components/pptpresponseinfo.md
   - docs/models/components/pptpversion.md
   - docs/models/components/privilegesrequired.md
+  - docs/models/components/profinetcm.md
   - docs/models/components/prometheus.md
   - docs/models/components/prometheusmetricfamily.md
   - docs/models/components/prometheusresponse.md
@@ -1084,6 +1086,7 @@ generatedFiles:
   - docs/sdks/sdk/README.md
   - globaldata.go
   - go.mod
+  - internal/config/sdkconfiguration.go
   - internal/globals/globals.go
   - internal/hooks/hooks.go
   - internal/utils/contenttype.go
@@ -1131,7 +1134,7 @@ examples:
     speakeasy-default-v3-collections-crud-delete:
       parameters:
         path:
-          collection_uid: "<id>"
+          collection_uid: "d9ed2825-23bc-46db-bc4b-b4ac6c48f664"
         query:
           organization_id: "<id>"
       responses:
@@ -1141,7 +1144,7 @@ examples:
     speakeasy-default-v3-collections-crud-get:
       parameters:
         path:
-          collection_uid: "<id>"
+          collection_uid: "4d6d3f55-e4ae-405b-8d0f-4207b74028ab"
         query:
           organization_id: "<id>"
       responses:
@@ -1165,7 +1168,7 @@ examples:
     speakeasy-default-v3-collections-list-events:
       parameters:
         path:
-          collection_uid: "<id>"
+          collection_uid: "ddc110c4-03da-472a-98af-be013b92eff5"
         query:
           organization_id: "<id>"
       responses:
@@ -1177,11 +1180,11 @@ examples:
     speakeasy-default-v3-collections-search-aggregate:
       parameters:
         path:
-          collection_uid: "<id>"
+          collection_uid: "ee98f78d-a47d-44fb-89f4-0626ceaf34d7"
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"field": "<value>", "number_of_buckets": 590414, "query": "<value>"}
+        application/json: {"field": "<value>", "number_of_buckets": 829469, "query": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1206,7 +1209,7 @@ examples:
       parameters:
         query:
           organization_id: "<id>"
-          certificate_ids: ["<value>"]
+          certificate_ids: []
       responses:
         "200":
           application/vnd.censys.api.v3.certificate.v1+json: {}
@@ -1229,7 +1232,7 @@ examples:
       parameters:
         query:
           organization_id: "<id>"
-          host_ids: []
+          host_ids: ["<value 1>"]
       responses:
         "200":
           application/vnd.censys.api.v3.host.v1+json: {}
@@ -1254,8 +1257,8 @@ examples:
           host_id: "<id>"
         query:
           organization_id: "<id>"
-          start_time: "2024-04-27T09:30:08.024Z"
-          end_time: "2023-04-13T10:41:42.221Z"
+          start_time: "2024-10-02T01:32:37.490Z"
+          end_time: "2025-02-08T13:31:28.844Z"
       responses:
         "200":
           application/vnd.censys.api.v3.host_timeline_event.v1+json: {}
@@ -1266,7 +1269,7 @@ examples:
       parameters:
         query:
           organization_id: "<id>"
-          webproperty_ids: ["<value>"]
+          webproperty_ids: ["<value 1>"]
       responses:
         "200":
           application/vnd.censys.api.v3.webproperty.v1+json: {}
@@ -1290,7 +1293,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"field": "<value>", "number_of_buckets": 590414, "query": "<value>"}
+        application/json: {"field": "<value>", "number_of_buckets": 309828, "query": "<value>"}
       responses:
         "200":
           application/json: {}
@@ -1308,5 +1311,5 @@ examples:
           application/json: {}
         "401":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
-examplesVersion: 1.0.1
+examplesVersion: 1.0.2
 generatedTests: {}

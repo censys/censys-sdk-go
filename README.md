@@ -64,11 +64,11 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
+		censyssdkgo.WithOrganizationID("<id>"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
 		SearchQueryInputBody: components.SearchQueryInputBody{
 			Query: "<value>",
 		},
@@ -149,12 +149,11 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
+		censyssdkgo.WithOrganizationID("<id>"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
-	})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -188,12 +187,11 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
+		censyssdkgo.WithOrganizationID("<id>"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
-	}, operations.WithRetries(
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{}, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
 			Backoff: &retry.BackoffStrategy{
@@ -241,12 +239,11 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
+		censyssdkgo.WithOrganizationID("<id>"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
-	})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -290,12 +287,11 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
+		censyssdkgo.WithOrganizationID("<id>"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
-	})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
 	if err != nil {
 
 		var e *sdkerrors.ErrorModel
@@ -336,12 +332,11 @@ func main() {
 
 	s := censyssdkgo.New(
 		censyssdkgo.WithServerURL("https://api.platform.censys.io"),
+		censyssdkgo.WithOrganizationID("<id>"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
-	})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -409,11 +404,10 @@ func main() {
 
 	s := censyssdkgo.New(
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+		censyssdkgo.WithOrganizationID("<id>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		OrganizationID: censyssdkgo.String("<id>"),
-	})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
 	if err != nil {
 		log.Fatal(err)
 	}

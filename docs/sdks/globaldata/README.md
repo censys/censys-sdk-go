@@ -37,14 +37,12 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetCertificates(ctx, operations.V3GlobaldataAssetCertificateListRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-        CertificateIds: []string{
-            "<value>",
-        },
+        CertificateIds: []string{},
     })
     if err != nil {
         log.Fatal(err)
@@ -94,11 +92,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetCertificate(ctx, operations.V3GlobaldataAssetCertificateRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         CertificateID: "<id>",
     })
     if err != nil {
@@ -149,12 +147,14 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHosts(ctx, operations.V3GlobaldataAssetHostListRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
-        HostIds: []string{},
+        HostIds: []string{
+            "<value 1>",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -204,11 +204,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHost(ctx, operations.V3GlobaldataAssetHostRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         HostID: "<id>",
     })
     if err != nil {
@@ -260,14 +260,14 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHostTimeline(ctx, operations.V3GlobaldataAssetHostTimelineRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         HostID: "<id>",
-        StartTime: types.MustTimeFromString("2024-04-27T09:30:08.024Z"),
-        EndTime: types.MustTimeFromString("2023-04-13T10:41:42.221Z"),
+        StartTime: types.MustTimeFromString("2024-10-02T01:32:37.490Z"),
+        EndTime: types.MustTimeFromString("2025-02-08T13:31:28.844Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -317,13 +317,13 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetWebProperties(ctx, operations.V3GlobaldataAssetWebpropertyListRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         WebpropertyIds: []string{
-            "<value>",
+            "<value 1>",
         },
     })
     if err != nil {
@@ -374,11 +374,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetWebProperty(ctx, operations.V3GlobaldataAssetWebpropertyRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         WebpropertyID: "<id>",
     })
     if err != nil {
@@ -430,14 +430,14 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.Aggregate(ctx, operations.V3GlobaldataSearchAggregateRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         SearchAggregateInputBody: components.SearchAggregateInputBody{
             Field: "<value>",
-            NumberOfBuckets: 590414,
+            NumberOfBuckets: 309828,
             Query: "<value>",
         },
     })
@@ -490,11 +490,11 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
-        OrganizationID: censyssdkgo.String("<id>"),
         SearchQueryInputBody: components.SearchQueryInputBody{
             Query: "<value>",
         },
