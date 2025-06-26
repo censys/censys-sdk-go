@@ -32,8 +32,8 @@ func newCollections(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hook
 	}
 }
 
-// List Collections
-// List Collections
+// List collections
+// List all collections for an organization. Retrieved information includes collection ID, name, query, description, status, and asset count.
 func (s *Collections) List(ctx context.Context, request operations.V3CollectionsCrudListRequest, opts ...operations.Option) (*operations.V3CollectionsCrudListResponse, error) {
 	globals := operations.V3CollectionsCrudListGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -270,8 +270,8 @@ func (s *Collections) List(ctx context.Context, request operations.V3Collections
 
 }
 
-// Create a Collection
-// Create a Collection
+// Create a collection
+// Create a new collection.
 func (s *Collections) Create(ctx context.Context, request operations.V3CollectionsCrudCreateRequest, opts ...operations.Option) (*operations.V3CollectionsCrudCreateResponse, error) {
 	globals := operations.V3CollectionsCrudCreateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -515,8 +515,8 @@ func (s *Collections) Create(ctx context.Context, request operations.V3Collectio
 
 }
 
-// Delete a Collection
-// Delete a Collection
+// Delete a collection
+// Delete a collection.
 func (s *Collections) Delete(ctx context.Context, request operations.V3CollectionsCrudDeleteRequest, opts ...operations.Option) (*operations.V3CollectionsCrudDeleteResponse, error) {
 	globals := operations.V3CollectionsCrudDeleteGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -733,8 +733,8 @@ func (s *Collections) Delete(ctx context.Context, request operations.V3Collectio
 
 }
 
-// Get a Collection
-// Get a Collection
+// Get a collection
+// Retrieve information about a collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console. Retrieved information includes its name, query, description, status, and asset count.
 func (s *Collections) Get(ctx context.Context, request operations.V3CollectionsCrudGetRequest, opts ...operations.Option) (*operations.V3CollectionsCrudGetResponse, error) {
 	globals := operations.V3CollectionsCrudGetGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -971,8 +971,8 @@ func (s *Collections) Get(ctx context.Context, request operations.V3CollectionsC
 
 }
 
-// Update a Collection
-// Update a Collection
+// Update a collection
+// Update a collection's name, description, and/or query.
 func (s *Collections) Update(ctx context.Context, request operations.V3CollectionsCrudUpdateRequest, opts ...operations.Option) (*operations.V3CollectionsCrudUpdateResponse, error) {
 	globals := operations.V3CollectionsCrudUpdateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1216,8 +1216,8 @@ func (s *Collections) Update(ctx context.Context, request operations.V3Collectio
 
 }
 
-// ListEvents - List a Collection's events
-// List a Collection's events
+// ListEvents - Get a collection's events
+// Retrieve the event history for a collection. This includes the addition or removal of assets as well as collection status changes.
 func (s *Collections) ListEvents(ctx context.Context, request operations.V3CollectionsListEventsRequest, opts ...operations.Option) (*operations.V3CollectionsListEventsResponse, error) {
 	globals := operations.V3CollectionsListEventsGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1454,8 +1454,8 @@ func (s *Collections) ListEvents(ctx context.Context, request operations.V3Colle
 
 }
 
-// Aggregate - Search / Aggregate
-// Run an aggregation via a Collection data set
+// Aggregate results for a search query within a collection
+// Aggregate results for a Platform search query that targets a collection's assets. This functionality is equivalent to the [Report Builder](https://docs.censys.com/docs/platform-report-builder#/) in the Platform web UI.
 func (s *Collections) Aggregate(ctx context.Context, request operations.V3CollectionsSearchAggregateRequest, opts ...operations.Option) (*operations.V3CollectionsSearchAggregateResponse, error) {
 	globals := operations.V3CollectionsSearchAggregateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1699,8 +1699,8 @@ func (s *Collections) Aggregate(ctx context.Context, request operations.V3Collec
 
 }
 
-// Search / Query
-// Run a query via a Collection data set
+// Search - Run a search query within a collection
+// Run a search query across a collection's assets. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax.
 func (s *Collections) Search(ctx context.Context, request operations.V3CollectionsSearchQueryRequest, opts ...operations.Option) (*operations.V3CollectionsSearchQueryResponse, error) {
 	globals := operations.V3CollectionsSearchQueryGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

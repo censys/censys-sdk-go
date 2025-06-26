@@ -1,21 +1,21 @@
-speakeasyVersion: 1.566.1
+speakeasyVersion: 1.570.0
 sources:
     converge-source:
         sourceNamespace: converge-source
-        sourceRevisionDigest: sha256:bbb718429b7516dd50db4464e3e0d44aeafffc18063260527feeb38b3d69d75d
-        sourceBlobDigest: sha256:a9664ae68a2ea9f946f5bb48825e81ea437e2161450782d9b2d3251894dc7cae
+        sourceRevisionDigest: sha256:150637127cfa8240705baf7e5b0fa902fe7e7d00d73ef5685710d8ba6f22d7a2
+        sourceBlobDigest: sha256:eff591666aa7f6dc5d2b19a6d858a06ee3dec9ba802ef9ee294e25202c841df2
         tags:
             - latest
-            - speakeasy-sdk-regen-1750276925
-            - 1.0.4
+            - speakeasy-sdk-regen-1750896928
+            - 1.0.7
 targets:
     censys-sdk-go:
         source: converge-source
         sourceNamespace: converge-source
-        sourceRevisionDigest: sha256:bbb718429b7516dd50db4464e3e0d44aeafffc18063260527feeb38b3d69d75d
-        sourceBlobDigest: sha256:a9664ae68a2ea9f946f5bb48825e81ea437e2161450782d9b2d3251894dc7cae
+        sourceRevisionDigest: sha256:150637127cfa8240705baf7e5b0fa902fe7e7d00d73ef5685710d8ba6f22d7a2
+        sourceBlobDigest: sha256:eff591666aa7f6dc5d2b19a6d858a06ee3dec9ba802ef9ee294e25202c841df2
         codeSamplesNamespace: converge-source-go-code-samples
-        codeSamplesRevisionDigest: sha256:86e8337d439c5258c0a3042ece41e8b127466029b4bd3cc3d5f5edd18aed8f28
+        codeSamplesRevisionDigest: sha256:899b3b11595835a944a28de4c49a463435c4dc4980d62b3b7d6846f588f7dee4
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

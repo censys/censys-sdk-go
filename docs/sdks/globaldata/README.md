@@ -7,19 +7,19 @@ Endpoints related to the Global Data product
 
 ### Available Operations
 
-* [GetCertificates](#getcertificates) - Asset / Certificate Bulk
-* [GetCertificate](#getcertificate) - Asset / Certificate
-* [GetHosts](#gethosts) - Asset / Host Bulk
-* [GetHost](#gethost) - Asset / Host
-* [GetHostTimeline](#gethosttimeline) - Asset / Host Timeline
-* [GetWebProperties](#getwebproperties) - Asset / WebProperty Bulk
-* [GetWebProperty](#getwebproperty) - Asset / WebProperty
-* [Aggregate](#aggregate) - Search / Aggregate
-* [Search](#search) - Search / Query
+* [GetCertificates](#getcertificates) - Get multiple certificates
+* [GetCertificate](#getcertificate) - Get a certificate
+* [GetHosts](#gethosts) - Get multiple hosts
+* [GetHost](#gethost) - Get a host
+* [GetHostTimeline](#gethosttimeline) - Get host event history
+* [GetWebProperties](#getwebproperties) - Get multiple web properties
+* [GetWebProperty](#getwebproperty) - Get a web property
+* [Aggregate](#aggregate) - Aggregate results for a search query
+* [Search](#search) - Run a search query
 
 ## GetCertificates
 
-Get multiple Certificates
+Retrieve information about multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 
 ### Example Usage
 
@@ -74,7 +74,7 @@ func main() {
 
 ## GetCertificate
 
-Get a Certificate
+Retrieve information about a single certificate. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ func main() {
 
 ## GetHosts
 
-Get multiple Hosts
+Retrieve information about multiple hosts. A host ID is its IP address.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ func main() {
 
 ## GetHost
 
-Get a Host
+Retrieve information about a single host. A host ID is its IP address.
 
 ### Example Usage
 
@@ -241,7 +241,7 @@ func main() {
 
 ## GetHostTimeline
 
-Get the timeline of events for a Host
+Retrieve event history for a host. A host ID is its IP address.
 
 ### Example Usage
 
@@ -299,7 +299,7 @@ func main() {
 
 ## GetWebProperties
 
-Get multiple WebProperties
+Retrieve information about multiple web properties. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ func main() {
 
 ## GetWebProperty
 
-Get a WebProperty
+Retrieve information about a single web property. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
 
 ### Example Usage
 
@@ -411,7 +411,7 @@ func main() {
 
 ## Aggregate
 
-Run an aggregation via the Global data set
+Aggregate results for a Platform search query. This functionality is equivalent to the [Report Builder](https://docs.censys.com/docs/platform-report-builder#/) in the Platform web UI.
 
 ### Example Usage
 
@@ -471,7 +471,7 @@ func main() {
 
 ## Search
 
-Search the Global data set
+Run a search query across Censys data. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax.
 
 ### Example Usage
 

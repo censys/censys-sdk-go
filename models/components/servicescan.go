@@ -122,6 +122,7 @@ type ServiceScan struct {
 	Rdp                *Rdp                          `json:"rdp,omitempty"`
 	Realport           *Realport                     `json:"realport,omitempty"`
 	Redis              *Redis                        `json:"redis,omitempty"`
+	Redline            *Redline                      `json:"redline,omitempty"`
 	RedlionCrimson     *RedlionCrimson               `json:"redlion_crimson,omitempty"`
 	RepresentativeInfo *RepresentativeInfo           `json:"representative_info,omitempty"`
 	Rifatron           *Rifatron                     `json:"rifatron,omitempty"`
@@ -715,6 +716,13 @@ func (o *ServiceScan) GetRedis() *Redis {
 		return nil
 	}
 	return o.Redis
+}
+
+func (o *ServiceScan) GetRedline() *Redline {
+	if o == nil {
+		return nil
+	}
+	return o.Redline
 }
 
 func (o *ServiceScan) GetRedlionCrimson() *RedlionCrimson {
