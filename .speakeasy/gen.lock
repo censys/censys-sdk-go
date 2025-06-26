@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 9fbfa7d2bf4a65db10589651868bb8f0
-  docVersion: 1.0.4
-  speakeasyVersion: 1.566.1
-  generationVersion: 2.630.9
-  releaseVersion: 0.18.0
-  configChecksum: 74a649e776a776b790cc84a5a54c7ccc
+  docChecksum: 3995af55f68b9e021ea909072c09386c
+  docVersion: 1.0.7
+  speakeasyVersion: 1.570.0
+  generationVersion: 2.638.0
+  releaseVersion: 0.18.1
+  configChecksum: df69047ea58fcec451ef9a40ba63224e
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -355,6 +355,7 @@ generatedFiles:
   - /models/components/recordingcapabilities.go
   - /models/components/redis.go
   - /models/components/redisrawoutput.go
+  - /models/components/redline.go
   - /models/components/redlioncrimson.go
   - /models/components/redlionweb.go
   - /models/components/reject.go
@@ -865,6 +866,7 @@ generatedFiles:
   - docs/models/components/recovery.md
   - docs/models/components/redis.md
   - docs/models/components/redisrawoutput.md
+  - docs/models/components/redline.md
   - docs/models/components/redlioncrimson.md
   - docs/models/components/redlionweb.md
   - docs/models/components/reject.md

@@ -7,18 +7,18 @@ Endpoints related to the Collections product
 
 ### Available Operations
 
-* [List](#list) - List Collections
-* [Create](#create) - Create a Collection
-* [Delete](#delete) - Delete a Collection
-* [Get](#get) - Get a Collection
-* [Update](#update) - Update a Collection
-* [ListEvents](#listevents) - List a Collection's events
-* [Aggregate](#aggregate) - Search / Aggregate
-* [Search](#search) - Search / Query
+* [List](#list) - List collections
+* [Create](#create) - Create a collection
+* [Delete](#delete) - Delete a collection
+* [Get](#get) - Get a collection
+* [Update](#update) - Update a collection
+* [ListEvents](#listevents) - Get a collection's events
+* [Aggregate](#aggregate) - Aggregate results for a search query within a collection
+* [Search](#search) - Run a search query within a collection
 
 ## List
 
-List Collections
+List all collections for an organization. Retrieved information includes collection ID, name, query, description, status, and asset count.
 
 ### Example Usage
 
@@ -71,7 +71,7 @@ func main() {
 
 ## Create
 
-Create a Collection
+Create a new collection.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ func main() {
 
 ## Delete
 
-Delete a Collection
+Delete a collection.
 
 ### Example Usage
 
@@ -179,7 +179,7 @@ func main() {
 
 ## Get
 
-Get a Collection
+Retrieve information about a collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console. Retrieved information includes its name, query, description, status, and asset count.
 
 ### Example Usage
 
@@ -234,7 +234,7 @@ func main() {
 
 ## Update
 
-Update a Collection
+Update a collection's name, description, and/or query.
 
 ### Example Usage
 
@@ -289,7 +289,7 @@ func main() {
 
 ## ListEvents
 
-List a Collection's events
+Retrieve the event history for a collection. This includes the addition or removal of assets as well as collection status changes.
 
 ### Example Usage
 
@@ -344,7 +344,7 @@ func main() {
 
 ## Aggregate
 
-Run an aggregation via a Collection data set
+Aggregate results for a Platform search query that targets a collection's assets. This functionality is equivalent to the [Report Builder](https://docs.censys.com/docs/platform-report-builder#/) in the Platform web UI.
 
 ### Example Usage
 
@@ -405,7 +405,7 @@ func main() {
 
 ## Search
 
-Run a query via a Collection data set
+Run a search query across a collection's assets. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax.
 
 ### Example Usage
 

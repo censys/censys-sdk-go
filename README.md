@@ -92,26 +92,26 @@ func main() {
 
 ### [Collections](docs/sdks/collections/README.md)
 
-* [List](docs/sdks/collections/README.md#list) - List Collections
-* [Create](docs/sdks/collections/README.md#create) - Create a Collection
-* [Delete](docs/sdks/collections/README.md#delete) - Delete a Collection
-* [Get](docs/sdks/collections/README.md#get) - Get a Collection
-* [Update](docs/sdks/collections/README.md#update) - Update a Collection
-* [ListEvents](docs/sdks/collections/README.md#listevents) - List a Collection's events
-* [Aggregate](docs/sdks/collections/README.md#aggregate) - Search / Aggregate
-* [Search](docs/sdks/collections/README.md#search) - Search / Query
+* [List](docs/sdks/collections/README.md#list) - List collections
+* [Create](docs/sdks/collections/README.md#create) - Create a collection
+* [Delete](docs/sdks/collections/README.md#delete) - Delete a collection
+* [Get](docs/sdks/collections/README.md#get) - Get a collection
+* [Update](docs/sdks/collections/README.md#update) - Update a collection
+* [ListEvents](docs/sdks/collections/README.md#listevents) - Get a collection's events
+* [Aggregate](docs/sdks/collections/README.md#aggregate) - Aggregate results for a search query within a collection
+* [Search](docs/sdks/collections/README.md#search) - Run a search query within a collection
 
 ### [GlobalData](docs/sdks/globaldata/README.md)
 
-* [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Asset / Certificate Bulk
-* [GetCertificate](docs/sdks/globaldata/README.md#getcertificate) - Asset / Certificate
-* [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Asset / Host Bulk
-* [GetHost](docs/sdks/globaldata/README.md#gethost) - Asset / Host
-* [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Asset / Host Timeline
-* [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Asset / WebProperty Bulk
-* [GetWebProperty](docs/sdks/globaldata/README.md#getwebproperty) - Asset / WebProperty
-* [Aggregate](docs/sdks/globaldata/README.md#aggregate) - Search / Aggregate
-* [Search](docs/sdks/globaldata/README.md#search) - Search / Query
+* [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Get multiple certificates
+* [GetCertificate](docs/sdks/globaldata/README.md#getcertificate) - Get a certificate
+* [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Get multiple hosts
+* [GetHost](docs/sdks/globaldata/README.md#gethost) - Get a host
+* [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
+* [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Get multiple web properties
+* [GetWebProperty](docs/sdks/globaldata/README.md#getwebproperty) - Get a web property
+* [Aggregate](docs/sdks/globaldata/README.md#aggregate) - Aggregate results for a search query
+* [Search](docs/sdks/globaldata/README.md#search) - Run a search query
 
 
 </details>

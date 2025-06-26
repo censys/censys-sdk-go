@@ -32,8 +32,8 @@ func newGlobalData(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks
 	}
 }
 
-// GetCertificates - Asset / Certificate Bulk
-// Get multiple Certificates
+// GetCertificates - Get multiple certificates
+// Retrieve information about multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3GlobaldataAssetCertificateListRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetCertificateListResponse, error) {
 	globals := operations.V3GlobaldataAssetCertificateListGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -270,8 +270,8 @@ func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3G
 
 }
 
-// GetCertificate - Asset / Certificate
-// Get a Certificate
+// GetCertificate - Get a certificate
+// Retrieve information about a single certificate. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 func (s *GlobalData) GetCertificate(ctx context.Context, request operations.V3GlobaldataAssetCertificateRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetCertificateResponse, error) {
 	globals := operations.V3GlobaldataAssetCertificateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -508,8 +508,8 @@ func (s *GlobalData) GetCertificate(ctx context.Context, request operations.V3Gl
 
 }
 
-// GetHosts - Asset / Host Bulk
-// Get multiple Hosts
+// GetHosts - Get multiple hosts
+// Retrieve information about multiple hosts. A host ID is its IP address.
 func (s *GlobalData) GetHosts(ctx context.Context, request operations.V3GlobaldataAssetHostListRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetHostListResponse, error) {
 	globals := operations.V3GlobaldataAssetHostListGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -746,8 +746,8 @@ func (s *GlobalData) GetHosts(ctx context.Context, request operations.V3Globalda
 
 }
 
-// GetHost - Asset / Host
-// Get a Host
+// GetHost - Get a host
+// Retrieve information about a single host. A host ID is its IP address.
 func (s *GlobalData) GetHost(ctx context.Context, request operations.V3GlobaldataAssetHostRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetHostResponse, error) {
 	globals := operations.V3GlobaldataAssetHostGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -984,8 +984,8 @@ func (s *GlobalData) GetHost(ctx context.Context, request operations.V3Globaldat
 
 }
 
-// GetHostTimeline - Asset / Host Timeline
-// Get the timeline of events for a Host
+// GetHostTimeline - Get host event history
+// Retrieve event history for a host. A host ID is its IP address.
 func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3GlobaldataAssetHostTimelineRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetHostTimelineResponse, error) {
 	globals := operations.V3GlobaldataAssetHostTimelineGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1222,8 +1222,8 @@ func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3G
 
 }
 
-// GetWebProperties - Asset / WebProperty Bulk
-// Get multiple WebProperties
+// GetWebProperties - Get multiple web properties
+// Retrieve information about multiple web properties. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
 func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3GlobaldataAssetWebpropertyListRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetWebpropertyListResponse, error) {
 	globals := operations.V3GlobaldataAssetWebpropertyListGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1460,8 +1460,8 @@ func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3
 
 }
 
-// GetWebProperty - Asset / WebProperty
-// Get a WebProperty
+// GetWebProperty - Get a web property
+// Retrieve information about a single web property. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
 func (s *GlobalData) GetWebProperty(ctx context.Context, request operations.V3GlobaldataAssetWebpropertyRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetWebpropertyResponse, error) {
 	globals := operations.V3GlobaldataAssetWebpropertyGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1698,8 +1698,8 @@ func (s *GlobalData) GetWebProperty(ctx context.Context, request operations.V3Gl
 
 }
 
-// Aggregate - Search / Aggregate
-// Run an aggregation via the Global data set
+// Aggregate results for a search query
+// Aggregate results for a Platform search query. This functionality is equivalent to the [Report Builder](https://docs.censys.com/docs/platform-report-builder#/) in the Platform web UI.
 func (s *GlobalData) Aggregate(ctx context.Context, request operations.V3GlobaldataSearchAggregateRequest, opts ...operations.Option) (*operations.V3GlobaldataSearchAggregateResponse, error) {
 	globals := operations.V3GlobaldataSearchAggregateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1943,8 +1943,8 @@ func (s *GlobalData) Aggregate(ctx context.Context, request operations.V3Globald
 
 }
 
-// Search / Query
-// Search the Global data set
+// Search - Run a search query
+// Run a search query across Censys data. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax.
 func (s *GlobalData) Search(ctx context.Context, request operations.V3GlobaldataSearchQueryRequest, opts ...operations.Option) (*operations.V3GlobaldataSearchQueryResponse, error) {
 	globals := operations.V3GlobaldataSearchQueryGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
