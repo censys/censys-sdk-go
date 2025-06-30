@@ -2,7 +2,7 @@
 
 package censyssdkgo
 
-// Generated from OpenAPI doc version 1.0.7 and generator version 2.638.0
+// Generated from OpenAPI doc version 1.0.8 and generator version 2.643.0
 
 import (
 	"context"
@@ -55,6 +55,8 @@ type SDK struct {
 	Collections *Collections
 	// Endpoints related to the Global Data product
 	GlobalData *GlobalData
+	// Endpoints related to the Threat Hunting product
+	ThreatHunting *ThreatHunting
 
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
@@ -138,9 +140,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.18.1",
+		SDKVersion: "0.18.2",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.18.1 2.638.0 1.0.7 github.com/censys/censys-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 0.18.2 2.643.0 1.0.8 github.com/censys/censys-sdk-go",
 			Globals:    globals.Globals{},
 			ServerList: ServerList,
 		},
@@ -164,6 +166,7 @@ func New(opts ...SDKOption) *SDK {
 
 	sdk.Collections = newCollections(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.GlobalData = newGlobalData(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.ThreatHunting = newThreatHunting(sdk, sdk.sdkConfiguration, sdk.hooks)
 
 	return sdk
 }

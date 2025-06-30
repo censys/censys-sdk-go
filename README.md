@@ -114,6 +114,10 @@ func main() {
 * [Search](docs/sdks/globaldata/README.md#search) - Run a search query
 
 
+### [ThreatHunting](docs/sdks/threathunting/README.md)
+
+* [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - Value Counts
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
