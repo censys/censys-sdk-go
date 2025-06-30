@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 3995af55f68b9e021ea909072c09386c
-  docVersion: 1.0.7
-  speakeasyVersion: 1.570.0
-  generationVersion: 2.638.0
-  releaseVersion: 0.18.1
-  configChecksum: df69047ea58fcec451ef9a40ba63224e
+  docChecksum: 84086bbf6887036c2326b4e056c5e8be
+  docVersion: 1.0.8
+  speakeasyVersion: 1.572.0
+  generationVersion: 2.643.0
+  releaseVersion: 0.18.2
+  configChecksum: 1d9f490bfa28f1ae0c2e99eb53e8b9d2
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -161,6 +161,7 @@ generatedFiles:
   - /models/components/extendedkeyusage.go
   - /models/components/extension.go
   - /models/components/fielddiff.go
+  - /models/components/fieldvaluepair.go
   - /models/components/floatvalue.go
   - /models/components/fortigate.go
   - /models/components/forwarddnsresolved.go
@@ -372,6 +373,7 @@ generatedFiles:
   - /models/components/responseenvelopelistwebpropertyasset.go
   - /models/components/responseenvelopesearchaggregateresponse.go
   - /models/components/responseenvelopesearchqueryresponse.go
+  - /models/components/responseenvelopevaluecountsresponse.go
   - /models/components/responseenvelopewebpropertyasset.go
   - /models/components/reversednsresolved.go
   - /models/components/rifatron.go
@@ -407,6 +409,7 @@ generatedFiles:
   - /models/components/searchqueryhit.go
   - /models/components/searchqueryinputbody.go
   - /models/components/searchqueryresponse.go
+  - /models/components/searchvaluecountsinputbody.go
   - /models/components/security.go
   - /models/components/securitycapabilities.go
   - /models/components/ser2net.go
@@ -473,6 +476,7 @@ generatedFiles:
   - /models/components/usernotice.go
   - /models/components/validation.go
   - /models/components/validityperiod.go
+  - /models/components/valuecountsresponse.go
   - /models/components/ventrilo.go
   - /models/components/ventriloheader.go
   - /models/components/ventrilomessage.go
@@ -509,6 +513,7 @@ generatedFiles:
   - /models/operations/v3globaldataassetwebpropertylist.go
   - /models/operations/v3globaldatasearchaggregate.go
   - /models/operations/v3globaldatasearchquery.go
+  - /models/operations/v3threathuntingvaluecounts.go
   - /models/sdkerrors/errormodel.go
   - USAGE.md
   - collections.go
@@ -659,6 +664,7 @@ generatedFiles:
   - docs/models/components/extendedkeyusage.md
   - docs/models/components/extension.md
   - docs/models/components/fielddiff.md
+  - docs/models/components/fieldvaluepair.md
   - docs/models/components/floatvalue.md
   - docs/models/components/fortigate.md
   - docs/models/components/forwarddnsresolved.md
@@ -885,6 +891,7 @@ generatedFiles:
   - docs/models/components/responseenvelopelistwebpropertyasset.md
   - docs/models/components/responseenvelopesearchaggregateresponse.md
   - docs/models/components/responseenvelopesearchqueryresponse.md
+  - docs/models/components/responseenvelopevaluecountsresponse.md
   - docs/models/components/responseenvelopewebpropertyasset.md
   - docs/models/components/reversednsresolved.md
   - docs/models/components/rifatron.md
@@ -924,6 +931,7 @@ generatedFiles:
   - docs/models/components/searchqueryhit.md
   - docs/models/components/searchqueryinputbody.md
   - docs/models/components/searchqueryresponse.md
+  - docs/models/components/searchvaluecountsinputbody.md
   - docs/models/components/security.md
   - docs/models/components/securitycapabilities.md
   - docs/models/components/ser2net.md
@@ -1001,6 +1009,7 @@ generatedFiles:
   - docs/models/components/validation.md
   - docs/models/components/validationlevel.md
   - docs/models/components/validityperiod.md
+  - docs/models/components/valuecountsresponse.md
   - docs/models/components/valuedensity.md
   - docs/models/components/ventrilo.md
   - docs/models/components/ventriloheader.md
@@ -1082,10 +1091,14 @@ generatedFiles:
   - docs/models/operations/v3globaldatasearchqueryglobals.md
   - docs/models/operations/v3globaldatasearchqueryrequest.md
   - docs/models/operations/v3globaldatasearchqueryresponse.md
+  - docs/models/operations/v3threathuntingvaluecountsglobals.md
+  - docs/models/operations/v3threathuntingvaluecountsrequest.md
+  - docs/models/operations/v3threathuntingvaluecountsresponse.md
   - docs/models/sdkerrors/errormodel.md
   - docs/sdks/collections/README.md
   - docs/sdks/globaldata/README.md
   - docs/sdks/sdk/README.md
+  - docs/sdks/threathunting/README.md
   - globaldata.go
   - go.mod
   - internal/config/sdkconfiguration.go
@@ -1106,6 +1119,7 @@ generatedFiles:
   - models/sdkerrors/sdkerror.go
   - retry/config.go
   - sdk.go
+  - threathunting.go
   - types/bigint.go
   - types/date.go
   - types/datetime.go
@@ -1308,6 +1322,18 @@ examples:
           organization_id: "<id>"
       requestBody:
         application/json: {"query": "<value>"}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-threathunting-value-counts:
+    speakeasy-default-v3-threathunting-value-counts:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"and_count_conditions": [[{"field": "<value>", "value": "<value>"}], []]}
       responses:
         "200":
           application/json: {}
