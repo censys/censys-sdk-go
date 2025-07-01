@@ -57,7 +57,7 @@ func (s *ThreatHunting) ValueCounts(ctx context.Context, request operations.V3Th
 	} else {
 		baseURL = *o.ServerURL
 	}
-	opURL, err := url.JoinPath(baseURL, "/v3/threat-hunting/value_counts")
+	opURL, err := url.JoinPath(baseURL, "/v3/threat-hunting/value-counts")
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
