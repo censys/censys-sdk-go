@@ -3,7 +3,7 @@
 package components
 
 type SearchValueCountsInputBody struct {
-	// Conditions that are AND-ed together to determine what to count
+	// Groups of field-value pairs to count matches for. Each group must target fields from the same nested object.
 	AndCountConditions [][]FieldValuePair `json:"and_count_conditions"`
 }
 
