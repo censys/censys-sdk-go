@@ -116,7 +116,7 @@ func main() {
 
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
-* [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - Value Counts
+* [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - CensEye: Retrieve value counts to discover pivots
 
 </details>
 <!-- End Available Resources and Operations [operations] -->

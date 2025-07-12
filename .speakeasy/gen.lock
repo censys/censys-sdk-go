@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 7050f640c452e32f83ec760b39a1d63d
-  docVersion: 1.0.9
-  speakeasyVersion: 1.573.0
-  generationVersion: 2.644.1
-  releaseVersion: 0.18.3
-  configChecksum: 6793b188df28e4241b0beba69de094d7
+  docChecksum: 18022b15fdeb5e4f5a74ba4dab489c59
+  docVersion: 1.0.11
+  speakeasyVersion: 1.581.0
+  generationVersion: 2.656.5
+  releaseVersion: 0.18.4
+  configChecksum: 0556b3eac10158f264d8a7ad4b641387
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -16,7 +16,7 @@ features:
     core: 3.8.1
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.2
-    examples: 2.81.4
+    examples: 2.81.5
     globalSecurity: 2.82.11
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
