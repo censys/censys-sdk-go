@@ -4,16 +4,16 @@ package components
 
 type CrudCreateInputBody struct {
 	// description of the collection
-	Description string `json:"description"`
+	Description *string `json:"description,omitempty"`
 	// name of the collection
 	Name string `json:"name"`
 	// query string to search upon to build the collection
 	Query string `json:"query"`
 }
 
-func (o *CrudCreateInputBody) GetDescription() string {
+func (o *CrudCreateInputBody) GetDescription() *string {
 	if o == nil {
-		return ""
+		return nil
 	}
 	return o.Description
 }

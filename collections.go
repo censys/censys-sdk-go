@@ -734,7 +734,7 @@ func (s *Collections) Delete(ctx context.Context, request operations.V3Collectio
 }
 
 // Get a collection
-// Retrieve information about a collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console. Retrieved information includes its name, query, description, status, and asset count.
+// Retrieve information about a collection. Retrieved information includes its name, query, description, status, and asset count.
 func (s *Collections) Get(ctx context.Context, request operations.V3CollectionsCrudGetRequest, opts ...operations.Option) (*operations.V3CollectionsCrudGetResponse, error) {
 	globals := operations.V3CollectionsCrudGetGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

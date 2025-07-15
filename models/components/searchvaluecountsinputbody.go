@@ -3,11 +3,11 @@
 package components
 
 type SearchValueCountsInputBody struct {
-	// Conditions that are AND-ed together to determine what to count
-	AndCountConditions [][]FieldValuePair `json:"and_count_conditions"`
+	// Groups of field-value pairs to count matches for.
+	AndCountConditions []CountCondition `json:"and_count_conditions"`
 }
 
-func (o *SearchValueCountsInputBody) GetAndCountConditions() [][]FieldValuePair {
+func (o *SearchValueCountsInputBody) GetAndCountConditions() []CountCondition {
 	if o == nil {
 		return nil
 	}

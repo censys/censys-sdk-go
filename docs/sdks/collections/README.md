@@ -36,11 +36,14 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
+    res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
+        PageToken: censyssdkgo.String("<next_page_token>"),
+        PageSize: censyssdkgo.Int64(1),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -81,6 +84,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -89,11 +93,17 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.Collections.Create(ctx, operations.V3CollectionsCrudCreateRequest{})
+    res, err := s.Collections.Create(ctx, operations.V3CollectionsCrudCreateRequest{
+        CrudCreateInputBody: &components.CrudCreateInputBody{
+            Description: censyssdkgo.String("Hosts with services with AsyncRAT indicator in cert subject DN"),
+            Name: "Hosts services with AsyncRAT indicator",
+            Query: "host.services.cert.parsed.subject_dn: \"asyncrat\"",
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -142,12 +152,12 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Delete(ctx, operations.V3CollectionsCrudDeleteRequest{
-        CollectionUID: "d9ed2825-23bc-46db-bc4b-b4ac6c48f664",
+        CollectionUID: "11111111-2222-3333-4444-555555555555",
     })
     if err != nil {
         log.Fatal(err)
@@ -179,7 +189,7 @@ func main() {
 
 ## Get
 
-Retrieve information about a collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console. Retrieved information includes its name, query, description, status, and asset count.
+Retrieve information about a collection. Retrieved information includes its name, query, description, status, and asset count.
 
 ### Example Usage
 
@@ -197,12 +207,12 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Get(ctx, operations.V3CollectionsCrudGetRequest{
-        CollectionUID: "4d6d3f55-e4ae-405b-8d0f-4207b74028ab",
+        CollectionUID: "11111111-2222-3333-4444-555555555555",
     })
     if err != nil {
         log.Fatal(err)
@@ -244,6 +254,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -252,12 +263,17 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Update(ctx, operations.V3CollectionsCrudUpdateRequest{
-        CollectionUID: "<id>",
+        CollectionUID: "11111111-2222-3333-4444-555555555555",
+        CrudUpdateInputBody: &components.CrudUpdateInputBody{
+            Description: censyssdkgo.String("Hosts with services with AsyncRAT indicator in cert subject DN"),
+            Name: "Hosts services with AsyncRAT indicator",
+            Query: "host.services.cert.parsed.subject_dn: \"asyncrat\"",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -299,6 +315,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -307,12 +324,16 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.ListEvents(ctx, operations.V3CollectionsListEventsRequest{
-        CollectionUID: "ddc110c4-03da-472a-98af-be013b92eff5",
+        CollectionUID: "11111111-2222-3333-4444-555555555555",
+        PageSize: censyssdkgo.Int(1),
+        PageToken: censyssdkgo.String("<next_page_token>"),
+        StartTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
+        EndTime: types.MustNewTimeFromString("2025-01-02T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -363,16 +384,16 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Aggregate(ctx, operations.V3CollectionsSearchAggregateRequest{
-        CollectionUID: "ee98f78d-a47d-44fb-89f4-0626ceaf34d7",
+        CollectionUID: "11111111-2222-3333-4444-555555555555",
         SearchAggregateInputBody: components.SearchAggregateInputBody{
-            Field: "<value>",
-            NumberOfBuckets: 829469,
-            Query: "<value>",
+            Field: "web.endpoints.http.html_title",
+            NumberOfBuckets: 100,
+            Query: "web: *",
         },
     })
     if err != nil {
@@ -424,14 +445,19 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.Collections.Search(ctx, operations.V3CollectionsSearchQueryRequest{
         CollectionUID: "<id>",
         SearchQueryInputBody: components.SearchQueryInputBody{
-            Query: "<value>",
+            Fields: []string{
+                "host.ip",
+            },
+            PageSize: censyssdkgo.Int64(1),
+            PageToken: censyssdkgo.String("<next_page_token>"),
+            Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })
     if err != nil {
