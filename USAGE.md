@@ -14,13 +14,18 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
 		SearchQueryInputBody: components.SearchQueryInputBody{
-			Query: "<value>",
+			Fields: []string{
+				"host.ip",
+			},
+			PageSize:  censyssdkgo.Int64(1),
+			PageToken: censyssdkgo.String("<next_page_token>"),
+			Query:     "host.services: (protocol=SSH and not port: 22)",
 		},
 	})
 	if err != nil {

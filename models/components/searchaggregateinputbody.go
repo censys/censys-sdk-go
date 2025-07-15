@@ -3,11 +3,11 @@
 package components
 
 type SearchAggregateInputBody struct {
-	// Specify field to aggregate by.
+	// field to aggregate by
 	Field string `json:"field"`
-	// Number of buckets to split results into.
+	// number of buckets to split results into
 	NumberOfBuckets int64 `json:"number_of_buckets"`
-	// CenQL query string to search upon.
+	// CenQL query string to search upon
 	Query string `json:"query"`
 }
 

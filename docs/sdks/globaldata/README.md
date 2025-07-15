@@ -37,12 +37,14 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetCertificates(ctx, operations.V3GlobaldataAssetCertificateListRequest{
-        CertificateIds: []string{},
+        CertificateIds: []string{
+            "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+        },
     })
     if err != nil {
         log.Fatal(err)
@@ -92,12 +94,12 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetCertificate(ctx, operations.V3GlobaldataAssetCertificateRequest{
-        CertificateID: "<id>",
+        CertificateID: "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
     })
     if err != nil {
         log.Fatal(err)
@@ -147,13 +149,13 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHosts(ctx, operations.V3GlobaldataAssetHostListRequest{
         HostIds: []string{
-            "<value 1>",
+            "8.8.8.8",
         },
     })
     if err != nil {
@@ -196,6 +198,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -204,12 +207,13 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHost(ctx, operations.V3GlobaldataAssetHostRequest{
-        HostID: "<id>",
+        HostID: "8.8.8.8",
+        AtTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -260,14 +264,14 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetHostTimeline(ctx, operations.V3GlobaldataAssetHostTimelineRequest{
-        HostID: "<id>",
-        StartTime: types.MustTimeFromString("2024-10-02T01:32:37.490Z"),
-        EndTime: types.MustTimeFromString("2025-02-08T13:31:28.844Z"),
+        HostID: "8.8.8.8",
+        StartTime: types.MustTimeFromString("2025-01-01T00:00:00Z"),
+        EndTime: types.MustTimeFromString("2025-01-02T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -317,13 +321,13 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetWebProperties(ctx, operations.V3GlobaldataAssetWebpropertyListRequest{
         WebpropertyIds: []string{
-            "<value 1>",
+            "platform.censys.io:80",
         },
     })
     if err != nil {
@@ -366,6 +370,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -374,12 +379,13 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.GetWebProperty(ctx, operations.V3GlobaldataAssetWebpropertyRequest{
-        WebpropertyID: "<id>",
+        WebpropertyID: "platform.censys.io:80",
+        AtTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -430,15 +436,15 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.Aggregate(ctx, operations.V3GlobaldataSearchAggregateRequest{
         SearchAggregateInputBody: components.SearchAggregateInputBody{
-            Field: "<value>",
-            NumberOfBuckets: 309828,
-            Query: "<value>",
+            Field: "web.endpoints.http.html_title",
+            NumberOfBuckets: 100,
+            Query: "web: *",
         },
     })
     if err != nil {
@@ -490,13 +496,18 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("<id>"),
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
     res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
         SearchQueryInputBody: components.SearchQueryInputBody{
-            Query: "<value>",
+            Fields: []string{
+                "host.ip",
+            },
+            PageSize: censyssdkgo.Int64(1),
+            PageToken: censyssdkgo.String("<next_page_token>"),
+            Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })
     if err != nil {

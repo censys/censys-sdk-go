@@ -32,8 +32,8 @@ func newThreatHunting(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *ho
 	}
 }
 
-// ValueCounts - Value Counts
-// Get counts for specific field-value combinations for threat hunting analysis (requires api-censeye feature flag)
+// ValueCounts - CensEye: Retrieve value counts to discover pivots
+// Get counts of web assets for specific field-value pairs and combinations of field-value pairs. This is similar to the [CensEye functionality](https://docs.censys.com/docs/platform-threat-hunting-use-censeye-to-build-detections#/) available in the Platform web UI, but it allows you to define specific fields of interest rather than the [default fields](https://docs.censys.com/docs/platform-threat-hunting-use-censeye-to-build-detections#default-pivot-fields) leveraged by the tool in the UI.<br><br>Each array can only target fields within the same nested object. For example, you can combine `host.services.port=80` and `host.services.protocol=SSH` in the same array, but you cannot combine `host.services.port=80` and `host.location.country=”United States”` in the same array. You can input multiple arrays of objects in each API call.<br><br>To use this endpoint, your organization must have access to the Threat Hunting Module. This endpoint costs 1 credit per count condition (array of objects) included in the API call.
 func (s *ThreatHunting) ValueCounts(ctx context.Context, request operations.V3ThreathuntingValueCountsRequest, opts ...operations.Option) (*operations.V3ThreathuntingValueCountsResponse, error) {
 	globals := operations.V3ThreathuntingValueCountsGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

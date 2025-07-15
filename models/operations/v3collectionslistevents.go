@@ -108,10 +108,12 @@ func (e *StatusChangeTypes) UnmarshalJSON(data []byte) error {
 type V3CollectionsListEventsRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
-	// The UID for the collection
-	CollectionUID string  `pathParam:"style=simple,explode=false,name=collection_uid"`
-	PageSize      *int    `queryParam:"style=form,explode=false,name=page_size"`
-	PageToken     *string `queryParam:"style=form,explode=false,name=page_token"`
+	// The UID for the collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console.
+	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
+	// Amount of results to return per page.
+	PageSize *int `queryParam:"style=form,explode=false,name=page_size"`
+	// Page token for the requested page of collection results.
+	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`
 	// Change types
 	ChangeTypes []ChangeTypes `queryParam:"style=form,explode=false,name=change_types"`
 	// Asset change types

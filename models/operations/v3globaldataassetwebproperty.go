@@ -22,7 +22,7 @@ func (o *V3GlobaldataAssetWebpropertyGlobals) GetOrganizationID() *string {
 type V3GlobaldataAssetWebpropertyRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
-	// A web property host identifier, the format is hostname:port.
+	// A web property identifier.
 	WebpropertyID string `pathParam:"style=simple,explode=false,name=webproperty_id"`
 	// RFC3339 Timestamp to view a webproperty at a specific point in time. Must be a valid RFC3339 string. Ensure that you suffix the date with T00:00:00Z or a specific time
 	AtTime *time.Time `queryParam:"style=form,explode=false,name=at_time"`

@@ -20,7 +20,7 @@ func (o *V3CollectionsCrudDeleteGlobals) GetOrganizationID() *string {
 type V3CollectionsCrudDeleteRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
-	// The UID for the collection
+	// The UID for the collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console.
 	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
 }
 

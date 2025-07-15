@@ -64,13 +64,18 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
 	res, err := s.GlobalData.Search(ctx, operations.V3GlobaldataSearchQueryRequest{
 		SearchQueryInputBody: components.SearchQueryInputBody{
-			Query: "<value>",
+			Fields: []string{
+				"host.ip",
+			},
+			PageSize:  censyssdkgo.Int64(1),
+			PageToken: censyssdkgo.String("<next_page_token>"),
+			Query:     "host.services: (protocol=SSH and not port: 22)",
 		},
 	})
 	if err != nil {
@@ -116,7 +121,7 @@ func main() {
 
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
-* [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - Value Counts
+* [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - CensEye: Retrieve value counts to discover pivots
 
 </details>
 <!-- End Available Resources and Operations [operations] -->
@@ -153,11 +158,14 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
+		PageToken: censyssdkgo.String("<next_page_token>"),
+		PageSize:  censyssdkgo.Int64(1),
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -191,11 +199,14 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{}, operations.WithRetries(
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
+		PageToken: censyssdkgo.String("<next_page_token>"),
+		PageSize:  censyssdkgo.Int64(1),
+	}, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
 			Backoff: &retry.BackoffStrategy{
@@ -243,11 +254,14 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
+		PageToken: censyssdkgo.String("<next_page_token>"),
+		PageSize:  censyssdkgo.Int64(1),
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -291,11 +305,14 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
+		PageToken: censyssdkgo.String("<next_page_token>"),
+		PageSize:  censyssdkgo.Int64(1),
+	})
 	if err != nil {
 
 		var e *sdkerrors.ErrorModel
@@ -336,11 +353,14 @@ func main() {
 
 	s := censyssdkgo.New(
 		censyssdkgo.WithServerURL("https://api.platform.censys.io"),
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
+		PageToken: censyssdkgo.String("<next_page_token>"),
+		PageSize:  censyssdkgo.Int64(1),
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -408,10 +428,13 @@ func main() {
 
 	s := censyssdkgo.New(
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
-		censyssdkgo.WithOrganizationID("<id>"),
+		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{})
+	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
+		PageToken: censyssdkgo.String("<next_page_token>"),
+		PageSize:  censyssdkgo.Int64(1),
+	})
 	if err != nil {
 		log.Fatal(err)
 	}

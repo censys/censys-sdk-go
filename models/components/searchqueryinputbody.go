@@ -3,13 +3,13 @@
 package components
 
 type SearchQueryInputBody struct {
-	// Specify fields to return in response and ignore others.
+	// specify fields to return in response and ignore others
 	Fields []string `json:"fields,omitempty"`
-	// Amount of results to return per page.
+	// amount of results to return per page
 	PageSize *int64 `json:"page_size,omitempty"`
-	// Page token for the requested page of search results.
+	// page token for the requested page of search results
 	PageToken *string `json:"page_token,omitempty"`
-	// CenQL query string to search upon.
+	// CenQL query string to search upon
 	Query string `json:"query"`
 }
 
