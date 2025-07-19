@@ -2,13 +2,30 @@
 
 package components
 
+import (
+	"github.com/censys/censys-sdk-go/internal/utils"
+)
+
 type SearchAggregateInputBody struct {
 	// field to aggregate by
 	Field string `json:"field"`
+	// Controls whether aggregation results are limited to values that match the query. When true, only field values that satisfy the query constraints are included in aggregation counts. When false, aggregation includes all field values from records that match the query, even if those specific field values don't match the query constraints. For example, if the query is 'host.services.protocol=SSH' and you are aggregating by 'host.services.port' - when true, only shows SSH ports; when false, shows all ports on hosts that have SSH services.
+	FilterByQuery *bool `default:"false" json:"filter_by_query"`
 	// number of buckets to split results into
 	NumberOfBuckets int64 `json:"number_of_buckets"`
 	// CenQL query string to search upon
 	Query string `json:"query"`
+}
+
+func (s SearchAggregateInputBody) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(s, "", false)
+}
+
+func (s *SearchAggregateInputBody) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &s, "", false, false); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *SearchAggregateInputBody) GetField() string {
@@ -16,6 +33,13 @@ func (o *SearchAggregateInputBody) GetField() string {
 		return ""
 	}
 	return o.Field
+}
+
+func (o *SearchAggregateInputBody) GetFilterByQuery() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.FilterByQuery
 }
 
 func (o *SearchAggregateInputBody) GetNumberOfBuckets() int64 {
