@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: da764aca16cefa712b9f73e3ac4916f7
-  docVersion: 1.0.12
-  speakeasyVersion: 1.581.2
-  generationVersion: 2.656.9
-  releaseVersion: 0.18.4
-  configChecksum: 0556b3eac10158f264d8a7ad4b641387
+  docChecksum: 3c398bac678d6a7c9b412318e55bf2c0
+  docVersion: 1.0.16
+  speakeasyVersion: 1.586.0
+  generationVersion: 2.661.4
+  releaseVersion: 0.18.5
+  configChecksum: 73c3922b72b644fca9f172905bac3d4a
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -80,6 +80,7 @@ generatedFiles:
   - /models/components/cpe.go
   - /models/components/cpelifecycle.go
   - /models/components/crestroncp3.go
+  - /models/components/crestrondinap2.go
   - /models/components/crudcreateinputbody.go
   - /models/components/crudupdateinputbody.go
   - /models/components/cryptsetup.go
@@ -575,6 +576,7 @@ generatedFiles:
   - docs/models/components/cpe.md
   - docs/models/components/cpelifecycle.md
   - docs/models/components/crestroncp3.md
+  - docs/models/components/crestrondinap2.md
   - docs/models/components/crudcreateinputbody.md
   - docs/models/components/crudupdateinputbody.md
   - docs/models/components/cryptsetup.md
@@ -1212,7 +1214,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"field": "web.endpoints.http.html_title", "number_of_buckets": 100, "query": "web: *"}
+        application/json: {"field": "web.endpoints.http.html_title", "filter_by_query": false, "number_of_buckets": 100, "query": "web: *"}
       responses:
         "200":
           application/json: {}
@@ -1323,7 +1325,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"field": "web.endpoints.http.html_title", "number_of_buckets": 100, "query": "web: *"}
+        application/json: {"field": "web.endpoints.http.html_title", "filter_by_query": false, "number_of_buckets": 100, "query": "web: *"}
       responses:
         "200":
           application/json: {}
