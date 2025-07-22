@@ -55,6 +55,7 @@ type ServiceScan struct {
 	Cmore              *Cmore                        `json:"cmore,omitempty"`
 	Coap               *Coap                         `json:"coap,omitempty"`
 	CrestronCp3        *CrestronCp3                  `json:"crestron_cp3,omitempty"`
+	CrestronDinAp2     *CrestronDinAp2               `json:"crestron_din_ap2,omitempty"`
 	Cwmp               *Cwmp                         `json:"cwmp,omitempty"`
 	Darkcomet          *Darkcomet                    `json:"darkcomet,omitempty"`
 	Darkgate           *Darkgate                     `json:"darkgate,omitempty"`
@@ -247,6 +248,13 @@ func (o *ServiceScan) GetCrestronCp3() *CrestronCp3 {
 		return nil
 	}
 	return o.CrestronCp3
+}
+
+func (o *ServiceScan) GetCrestronDinAp2() *CrestronDinAp2 {
+	if o == nil {
+		return nil
+	}
+	return o.CrestronDinAp2
 }
 
 func (o *ServiceScan) GetCwmp() *Cwmp {
