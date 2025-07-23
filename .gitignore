@@ -3,6 +3,4 @@
 **/.speakeasy/logs/
 .speakeasy/temp/
 .speakeasy/reports
-# .gitignore
-# DELETE THIS
-regen.sh
+.env
