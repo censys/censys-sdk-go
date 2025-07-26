@@ -391,9 +391,9 @@ func main() {
     res, err := s.Collections.Aggregate(ctx, operations.V3CollectionsSearchAggregateRequest{
         CollectionUID: "11111111-2222-3333-4444-555555555555",
         SearchAggregateInputBody: components.SearchAggregateInputBody{
-            Field: "web.endpoints.http.html_title",
+            Field: "host.services.port",
             NumberOfBuckets: 100,
-            Query: "web: *",
+            Query: "host.services.protocol=SSH",
         },
     })
     if err != nil {
@@ -456,7 +456,6 @@ func main() {
                 "host.ip",
             },
             PageSize: censyssdkgo.Int64(1),
-            PageToken: censyssdkgo.String("<next_page_token>"),
             Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })

@@ -23,9 +23,8 @@ func main() {
 			Fields: []string{
 				"host.ip",
 			},
-			PageSize:  censyssdkgo.Int64(1),
-			PageToken: censyssdkgo.String("<next_page_token>"),
-			Query:     "host.services: (protocol=SSH and not port: 22)",
+			PageSize: censyssdkgo.Int64(1),
+			Query:    "host.services: (protocol=SSH and not port: 22)",
 		},
 	})
 	if err != nil {
