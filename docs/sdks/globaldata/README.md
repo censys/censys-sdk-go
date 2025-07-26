@@ -442,9 +442,9 @@ func main() {
 
     res, err := s.GlobalData.Aggregate(ctx, operations.V3GlobaldataSearchAggregateRequest{
         SearchAggregateInputBody: components.SearchAggregateInputBody{
-            Field: "web.endpoints.http.html_title",
+            Field: "host.services.port",
             NumberOfBuckets: 100,
-            Query: "web: *",
+            Query: "host.services.protocol=SSH",
         },
     })
     if err != nil {
@@ -506,7 +506,6 @@ func main() {
                 "host.ip",
             },
             PageSize: censyssdkgo.Int64(1),
-            PageToken: censyssdkgo.String("<next_page_token>"),
             Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })

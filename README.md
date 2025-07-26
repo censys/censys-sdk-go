@@ -73,9 +73,8 @@ func main() {
 			Fields: []string{
 				"host.ip",
 			},
-			PageSize:  censyssdkgo.Int64(1),
-			PageToken: censyssdkgo.String("<next_page_token>"),
-			Query:     "host.services: (protocol=SSH and not port: 22)",
+			PageSize: censyssdkgo.Int64(1),
+			Query:    "host.services: (protocol=SSH and not port: 22)",
 		},
 	})
 	if err != nil {
@@ -389,12 +388,13 @@ The built-in `net/http` client satisfies this interface and a default client bas
 import (
 	"net/http"
 	"time"
-	"github.com/myorg/your-go-sdk"
+
+	"github.com/censys/censys-sdk-go"
 )
 
 var (
 	httpClient = &http.Client{Timeout: 30 * time.Second}
-	sdkClient  = sdk.New(sdk.WithClient(httpClient))
+	sdkClient  = censyssdkgo.New(censyssdkgo.WithClient(httpClient))
 )
 ```
 
