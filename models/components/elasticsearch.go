@@ -3,8 +3,16 @@
 package components
 
 type ElasticSearch struct {
+	ErrorMessage    *ElasticSearchErrorMessage    `json:"error_message,omitempty"`
 	ResultsNodeInfo *ElasticSearchResultsNodeInfo `json:"results_node_info,omitempty"`
 	SystemInfo      *ElasticSearchSystemInfo      `json:"system_info,omitempty"`
+}
+
+func (o *ElasticSearch) GetErrorMessage() *ElasticSearchErrorMessage {
+	if o == nil {
+		return nil
+	}
+	return o.ErrorMessage
 }
 
 func (o *ElasticSearch) GetResultsNodeInfo() *ElasticSearchResultsNodeInfo {

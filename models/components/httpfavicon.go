@@ -3,7 +3,9 @@
 package components
 
 type HTTPFavicon struct {
-	HashMd5    *string `json:"hash_md5,omitempty"`
+	HashMd5 *string `json:"hash_md5,omitempty"`
+	// A 64-bit 'perceptual' hash of the favicon
+	HashPhash  *string `json:"hash_phash,omitempty"`
 	HashSha256 *string `json:"hash_sha256,omitempty"`
 	// A hash expressed as a signed decimal integer, provided for compatability with Shodan search.
 	HashShodan *int `json:"hash_shodan,omitempty"`
@@ -18,6 +20,13 @@ func (o *HTTPFavicon) GetHashMd5() *string {
 		return nil
 	}
 	return o.HashMd5
+}
+
+func (o *HTTPFavicon) GetHashPhash() *string {
+	if o == nil {
+		return nil
+	}
+	return o.HashPhash
 }
 
 func (o *HTTPFavicon) GetHashSha256() *string {
