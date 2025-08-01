@@ -22,6 +22,7 @@ List all collections for an organization. Retrieved information includes collect
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-crud-list" method="get" path="/v3/collections" -->
 ```go
 package main
 
@@ -78,6 +79,7 @@ Create a new collection.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-crud-create" method="post" path="/v3/collections" -->
 ```go
 package main
 
@@ -138,6 +140,7 @@ Delete a collection.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-crud-delete" method="delete" path="/v3/collections/{collection_uid}" -->
 ```go
 package main
 
@@ -193,6 +196,7 @@ Retrieve information about a collection. Retrieved information includes its name
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-crud-get" method="get" path="/v3/collections/{collection_uid}" -->
 ```go
 package main
 
@@ -248,6 +252,7 @@ Update a collection's name, description, and/or query.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-crud-update" method="put" path="/v3/collections/{collection_uid}" -->
 ```go
 package main
 
@@ -309,6 +314,7 @@ Retrieve the event history for a collection. This includes the addition or remov
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-list-events" method="get" path="/v3/collections/{collection_uid}/events" -->
 ```go
 package main
 
@@ -369,6 +375,7 @@ Aggregate results for a Platform search query that targets a collection's assets
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-search-aggregate" method="post" path="/v3/collections/{collection_uid}/search/aggregate" -->
 ```go
 package main
 
@@ -391,9 +398,9 @@ func main() {
     res, err := s.Collections.Aggregate(ctx, operations.V3CollectionsSearchAggregateRequest{
         CollectionUID: "11111111-2222-3333-4444-555555555555",
         SearchAggregateInputBody: components.SearchAggregateInputBody{
-            Field: "web.endpoints.http.html_title",
+            Field: "host.services.port",
             NumberOfBuckets: 100,
-            Query: "web: *",
+            Query: "host.services.protocol=SSH",
         },
     })
     if err != nil {
@@ -430,6 +437,7 @@ Run a search query across a collection's assets. Reference the [documentation on
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-collections-search-query" method="post" path="/v3/collections/{collection_uid}/search/query" -->
 ```go
 package main
 
@@ -456,7 +464,6 @@ func main() {
                 "host.ip",
             },
             PageSize: censyssdkgo.Int64(1),
-            PageToken: censyssdkgo.String("<next_page_token>"),
             Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })

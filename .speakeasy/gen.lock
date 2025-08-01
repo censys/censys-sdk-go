@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 3c398bac678d6a7c9b412318e55bf2c0
-  docVersion: 1.0.16
-  speakeasyVersion: 1.586.0
-  generationVersion: 2.661.4
-  releaseVersion: 0.18.5
-  configChecksum: 73c3922b72b644fca9f172905bac3d4a
+  docChecksum: cb7af6a8b59467147462c2165f521017
+  docVersion: 1.0.22
+  speakeasyVersion: 1.595.0
+  generationVersion: 2.670.1
+  releaseVersion: 0.19.0
+  configChecksum: 1025b819eaa889ec2582996fa8517c7a
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.8.1
+    core: 3.9.3
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.2
     examples: 2.81.5
@@ -27,7 +27,7 @@ features:
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.1.2
-    retries: 2.83.3
+    retries: 2.84.0
     sdkHooks: 0.2.0
 generatedFiles:
   - .gitattributes
@@ -182,6 +182,8 @@ generatedFiles:
   - /models/components/hostdns.go
   - /models/components/hostdnsforwardresolution.go
   - /models/components/hostdnsreverseresolution.go
+  - /models/components/hostobservationrange.go
+  - /models/components/hostobservationresponse.go
   - /models/components/hosttimeline.go
   - /models/components/hosttimelineevent.go
   - /models/components/hosttimelineeventasset.go
@@ -368,6 +370,7 @@ generatedFiles:
   - /models/components/responseenvelopecollection.go
   - /models/components/responseenvelopecollectioneventsresponse.go
   - /models/components/responseenvelopehostasset.go
+  - /models/components/responseenvelopehostobservationresponse.go
   - /models/components/responseenvelopehosttimeline.go
   - /models/components/responseenvelopelistcertificateasset.go
   - /models/components/responseenvelopelistcollectionsresponsev1.go
@@ -513,6 +516,7 @@ generatedFiles:
   - /models/operations/v3globaldataassethosttimeline.go
   - /models/operations/v3globaldataassetwebproperty.go
   - /models/operations/v3globaldataassetwebpropertylist.go
+  - /models/operations/v3globaldatagethostobservationswithcertificate.go
   - /models/operations/v3globaldatasearchaggregate.go
   - /models/operations/v3globaldatasearchquery.go
   - /models/operations/v3threathuntingvaluecounts.go
@@ -687,6 +691,8 @@ generatedFiles:
   - docs/models/components/hostdns.md
   - docs/models/components/hostdnsforwardresolution.md
   - docs/models/components/hostdnsreverseresolution.md
+  - docs/models/components/hostobservationrange.md
+  - docs/models/components/hostobservationresponse.md
   - docs/models/components/hosttimeline.md
   - docs/models/components/hosttimelineevent.md
   - docs/models/components/hosttimelineeventasset.md
@@ -888,6 +894,7 @@ generatedFiles:
   - docs/models/components/responseenvelopecollection.md
   - docs/models/components/responseenvelopecollectioneventsresponse.md
   - docs/models/components/responseenvelopehostasset.md
+  - docs/models/components/responseenvelopehostobservationresponse.md
   - docs/models/components/responseenvelopehosttimeline.md
   - docs/models/components/responseenvelopelistcertificateasset.md
   - docs/models/components/responseenvelopelistcollectionsresponsev1.md
@@ -1089,6 +1096,9 @@ generatedFiles:
   - docs/models/operations/v3globaldataassetwebpropertylistresponse.md
   - docs/models/operations/v3globaldataassetwebpropertyrequest.md
   - docs/models/operations/v3globaldataassetwebpropertyresponse.md
+  - docs/models/operations/v3globaldatagethostobservationswithcertificateglobals.md
+  - docs/models/operations/v3globaldatagethostobservationswithcertificaterequest.md
+  - docs/models/operations/v3globaldatagethostobservationswithcertificateresponse.md
   - docs/models/operations/v3globaldatasearchaggregateglobals.md
   - docs/models/operations/v3globaldatasearchaggregaterequest.md
   - docs/models/operations/v3globaldatasearchaggregateresponse.md
@@ -1214,7 +1224,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"field": "web.endpoints.http.html_title", "filter_by_query": false, "number_of_buckets": 100, "query": "web: *"}
+        application/json: {"field": "host.services.port", "filter_by_query": false, "number_of_buckets": 100, "query": "host.services.protocol=SSH"}
       responses:
         "200":
           application/json: {}
@@ -1228,7 +1238,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"fields": ["host.ip"], "page_size": 1, "page_token": "<next_page_token>", "query": "host.services: (protocol=SSH and not port: 22)"}
+        application/json: {"fields": ["host.ip"], "page_size": 1, "query": "host.services: (protocol=SSH and not port: 22)"}
       responses:
         "200":
           application/json: {}
@@ -1325,7 +1335,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"field": "web.endpoints.http.html_title", "filter_by_query": false, "number_of_buckets": 100, "query": "web: *"}
+        application/json: {"field": "host.services.port", "filter_by_query": false, "number_of_buckets": 100, "query": "host.services.protocol=SSH"}
       responses:
         "200":
           application/json: {}
@@ -1337,7 +1347,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"fields": ["host.ip"], "page_size": 1, "page_token": "<next_page_token>", "query": "host.services: (protocol=SSH and not port: 22)"}
+        application/json: {"fields": ["host.ip"], "page_size": 1, "query": "host.services: (protocol=SSH and not port: 22)"}
       responses:
         "200":
           application/json: {}
@@ -1350,6 +1360,23 @@ examples:
           organization_id: "<id>"
       requestBody:
         application/json: {"and_count_conditions": [{"field_value_pairs": [{"field": "host.services.port", "value": "80"}]}, {"field_value_pairs": []}]}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-get-host-observations-with-certificate:
+    speakeasy-default-v3-globaldata-get-host-observations-with-certificate:
+      parameters:
+        path:
+          certificate_id: "55af8a301eb51abdaf7c31bec951638fe5a99d5d92117eca2be493026613fa46"
+        query:
+          organization_id: "<id>"
+          start_time: "2023-01-01T00:00:00Z"
+          end_time: "2023-12-31T23:59:59Z"
+          port: 443
+          protocol: "TCP"
+          page_size: 50
       responses:
         "200":
           application/json: {}

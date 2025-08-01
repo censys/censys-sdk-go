@@ -9,6 +9,7 @@ Endpoints related to the Global Data product
 
 * [GetCertificates](#getcertificates) - Get multiple certificates
 * [GetCertificate](#getcertificate) - Get a certificate
+* [GetHostObservationsWithCertificate](#gethostobservationswithcertificate) - Get Host Observations With Certificate
 * [GetHosts](#gethosts) - Get multiple hosts
 * [GetHost](#gethost) - Get a host
 * [GetHostTimeline](#gethosttimeline) - Get host event history
@@ -23,6 +24,7 @@ Retrieve information about multiple certificates. A certificate ID is its SHA-25
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate-list" method="get" path="/v3/global/asset/certificate" -->
 ```go
 package main
 
@@ -80,6 +82,7 @@ Retrieve information about a single certificate. A certificate ID is its SHA-256
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate" method="get" path="/v3/global/asset/certificate/{certificate_id}" -->
 ```go
 package main
 
@@ -129,12 +132,74 @@ func main() {
 | sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
 | sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
 
+## GetHostObservationsWithCertificate
+
+Retrieve historical observations of hosts associated with a certificate fingerprint. Useful for threat hunting, detection engineering, and timeline generation.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-get-host-observations-with-certificate" method="get" path="/v3/global/asset/certificate/{certificate_id}/observations/hosts" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.GetHostObservationsWithCertificate(ctx, operations.V3GlobaldataGetHostObservationsWithCertificateRequest{
+        CertificateID: "55af8a301eb51abdaf7c31bec951638fe5a99d5d92117eca2be493026613fa46",
+        StartTime: censyssdkgo.String("2023-01-01T00:00:00Z"),
+        EndTime: censyssdkgo.String("2023-12-31T23:59:59Z"),
+        Port: censyssdkgo.Int(443),
+        Protocol: censyssdkgo.String("TCP"),
+        PageSize: censyssdkgo.Int(50),
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeHostObservationResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                                | :heavy_check_mark:                                                                                                                                   | The context to use for the request.                                                                                                                  |
+| `request`                                                                                                                                            | [operations.V3GlobaldataGetHostObservationsWithCertificateRequest](../../models/operations/v3globaldatagethostobservationswithcertificaterequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `opts`                                                                                                                                               | [][operations.Option](../../models/operations/option.md)                                                                                             | :heavy_minus_sign:                                                                                                                                   | The options for this request.                                                                                                                        |
+
+### Response
+
+**[*operations.V3GlobaldataGetHostObservationsWithCertificateResponse](../../models/operations/v3globaldatagethostobservationswithcertificateresponse.md), error**
+
+### Errors
+
+| Error Type               | Status Code              | Content Type             |
+| ------------------------ | ------------------------ | ------------------------ |
+| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
+| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+
 ## GetHosts
 
 Retrieve information about multiple hosts. A host ID is its IP address.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-host-list" method="get" path="/v3/global/asset/host" -->
 ```go
 package main
 
@@ -192,6 +257,7 @@ Retrieve information about a single host. A host ID is its IP address.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-host" method="get" path="/v3/global/asset/host/{host_id}" -->
 ```go
 package main
 
@@ -249,6 +315,7 @@ Retrieve event history for a host. A host ID is its IP address.
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-host-timeline" method="get" path="/v3/global/asset/host/{host_id}/timeline" -->
 ```go
 package main
 
@@ -307,6 +374,7 @@ Retrieve information about multiple web properties. Web properties are identifie
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-webproperty-list" method="get" path="/v3/global/asset/webproperty" -->
 ```go
 package main
 
@@ -364,6 +432,7 @@ Retrieve information about a single web property. Web properties are identified 
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-webproperty" method="get" path="/v3/global/asset/webproperty/{webproperty_id}" -->
 ```go
 package main
 
@@ -421,6 +490,7 @@ Aggregate results for a Platform search query. This functionality is equivalent 
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-search-aggregate" method="post" path="/v3/global/search/aggregate" -->
 ```go
 package main
 
@@ -442,9 +512,9 @@ func main() {
 
     res, err := s.GlobalData.Aggregate(ctx, operations.V3GlobaldataSearchAggregateRequest{
         SearchAggregateInputBody: components.SearchAggregateInputBody{
-            Field: "web.endpoints.http.html_title",
+            Field: "host.services.port",
             NumberOfBuckets: 100,
-            Query: "web: *",
+            Query: "host.services.protocol=SSH",
         },
     })
     if err != nil {
@@ -481,6 +551,7 @@ Run a search query across Censys data. Reference the [documentation on Censys Qu
 
 ### Example Usage
 
+<!-- UsageSnippet language="go" operationID="v3-globaldata-search-query" method="post" path="/v3/global/search/query" -->
 ```go
 package main
 
@@ -506,7 +577,6 @@ func main() {
                 "host.ip",
             },
             PageSize: censyssdkgo.Int64(1),
-            PageToken: censyssdkgo.String("<next_page_token>"),
             Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })

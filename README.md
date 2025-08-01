@@ -73,9 +73,8 @@ func main() {
 			Fields: []string{
 				"host.ip",
 			},
-			PageSize:  censyssdkgo.Int64(1),
-			PageToken: censyssdkgo.String("<next_page_token>"),
-			Query:     "host.services: (protocol=SSH and not port: 22)",
+			PageSize: censyssdkgo.Int64(1),
+			Query:    "host.services: (protocol=SSH and not port: 22)",
 		},
 	})
 	if err != nil {
@@ -110,6 +109,7 @@ func main() {
 
 * [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Get multiple certificates
 * [GetCertificate](docs/sdks/globaldata/README.md#getcertificate) - Get a certificate
+* [GetHostObservationsWithCertificate](docs/sdks/globaldata/README.md#gethostobservationswithcertificate) - Get Host Observations With Certificate
 * [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Get multiple hosts
 * [GetHost](docs/sdks/globaldata/README.md#gethost) - Get a host
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
@@ -389,12 +389,13 @@ The built-in `net/http` client satisfies this interface and a default client bas
 import (
 	"net/http"
 	"time"
-	"github.com/myorg/your-go-sdk"
+
+	"github.com/censys/censys-sdk-go"
 )
 
 var (
 	httpClient = &http.Client{Timeout: 30 * time.Second}
-	sdkClient  = sdk.New(sdk.WithClient(httpClient))
+	sdkClient  = censyssdkgo.New(censyssdkgo.WithClient(httpClient))
 )
 ```
 
