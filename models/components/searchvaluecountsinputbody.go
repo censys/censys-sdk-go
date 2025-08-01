@@ -5,6 +5,8 @@ package components
 type SearchValueCountsInputBody struct {
 	// Groups of field-value pairs to count matches for.
 	AndCountConditions []CountCondition `json:"and_count_conditions"`
+	// CenQL query string to filter documents
+	Query *string `json:"query,omitempty"`
 }
 
 func (o *SearchValueCountsInputBody) GetAndCountConditions() []CountCondition {
@@ -12,4 +14,11 @@ func (o *SearchValueCountsInputBody) GetAndCountConditions() []CountCondition {
 		return nil
 	}
 	return o.AndCountConditions
+}
+
+func (o *SearchValueCountsInputBody) GetQuery() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Query
 }

@@ -3,7 +3,15 @@
 package components
 
 type Screenshot struct {
-	Handle *string `json:"handle,omitempty"`
+	ExtractedText *string `json:"extracted_text,omitempty"`
+	Handle        *string `json:"handle,omitempty"`
+}
+
+func (o *Screenshot) GetExtractedText() *string {
+	if o == nil {
+		return nil
+	}
+	return o.ExtractedText
 }
 
 func (o *Screenshot) GetHandle() *string {

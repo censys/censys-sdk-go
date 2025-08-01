@@ -1,0 +1,10 @@
+# V3ThreathuntingScansGetResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `ResponseEnvelopeTrackedScan`                                                                     | [*components.ResponseEnvelopeTrackedScan](../../models/components/responseenvelopetrackedscan.md) | :heavy_minus_sign:                                                                                | OK                                                                                                |
+| `Headers`                                                                                         | map[string][]*string*                                                                             | :heavy_check_mark:                                                                                | N/A                                                                                               |

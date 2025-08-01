@@ -27,6 +27,7 @@ const (
 	AcceptHeaderEnumApplicationVndCensysApiV3HostV1PlusJson              AcceptHeaderEnum = "application/vnd.censys.api.v3.host.v1+json"
 	AcceptHeaderEnumApplicationVndCensysApiV3HostTimelineEventV1PlusJson AcceptHeaderEnum = "application/vnd.censys.api.v3.host_timeline_event.v1+json"
 	AcceptHeaderEnumApplicationVndCensysApiV3WebpropertyV1PlusJson       AcceptHeaderEnum = "application/vnd.censys.api.v3.webproperty.v1+json"
+	AcceptHeaderEnumApplicationVndCensysApiV3TrackedscanV1PlusJson       AcceptHeaderEnum = "application/vnd.censys.api.v3.trackedscan.v1+json"
 )
 
 func (e AcceptHeaderEnum) ToPointer() *AcceptHeaderEnum {

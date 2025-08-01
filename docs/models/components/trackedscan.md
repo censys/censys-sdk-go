@@ -1,0 +1,12 @@
+# TrackedScan
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `Completed`                                                                           | **bool*                                                                               | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `CreateTime`                                                                          | **string*                                                                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `Target`                                                                              | [*components.TrackedScanScanTarget](../../models/components/trackedscanscantarget.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `Tasks`                                                                               | [][components.TrackedScanTask](../../models/components/trackedscantask.md)            | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `TrackedScanID`                                                                       | **string*                                                                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
