@@ -109,7 +109,6 @@ func main() {
 
 * [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Get multiple certificates
 * [GetCertificate](docs/sdks/globaldata/README.md#getcertificate) - Get a certificate
-* [GetHostObservationsWithCertificate](docs/sdks/globaldata/README.md#gethostobservationswithcertificate) - Get Host Observations With Certificate
 * [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Get multiple hosts
 * [GetHost](docs/sdks/globaldata/README.md#gethost) - Get a host
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
@@ -125,6 +124,7 @@ func main() {
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
 * [GetTrackedScan](docs/sdks/threathunting/README.md#gettrackedscan) - Get tracked scan details
+* [GetHostObservationsWithCertificate](docs/sdks/threathunting/README.md#gethostobservationswithcertificate) - Get Host Observations With Certificate
 * [CreateTrackedScan](docs/sdks/threathunting/README.md#createtrackedscan) - Create a tracked discovery scan
 * [GetTrackedScanThreatHunting](docs/sdks/threathunting/README.md#gettrackedscanthreathunting) - Get tracked scan details
 * [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - CensEye: Retrieve value counts to discover pivots

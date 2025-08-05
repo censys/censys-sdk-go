@@ -6,18 +6,18 @@ import (
 	"github.com/censys/censys-sdk-go/models/components"
 )
 
-type V3GlobaldataGetHostObservationsWithCertificateGlobals struct {
+type V3ThreathuntingGetHostObservationsWithCertificateGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateGlobals) GetOrganizationID() *string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateGlobals) GetOrganizationID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.OrganizationID
 }
 
-type V3GlobaldataGetHostObservationsWithCertificateRequest struct {
+type V3ThreathuntingGetHostObservationsWithCertificateRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// SHA-256 hash of the certificate
@@ -36,84 +36,84 @@ type V3GlobaldataGetHostObservationsWithCertificateRequest struct {
 	PageSize *int `queryParam:"style=form,explode=false,name=page_size"`
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetOrganizationID() *string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetOrganizationID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.OrganizationID
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetCertificateID() string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetCertificateID() string {
 	if o == nil {
 		return ""
 	}
 	return o.CertificateID
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetStartTime() *string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetStartTime() *string {
 	if o == nil {
 		return nil
 	}
 	return o.StartTime
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetEndTime() *string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetEndTime() *string {
 	if o == nil {
 		return nil
 	}
 	return o.EndTime
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetPort() *int {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPort() *int {
 	if o == nil {
 		return nil
 	}
 	return o.Port
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetProtocol() *string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetProtocol() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Protocol
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetPageToken() *string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPageToken() *string {
 	if o == nil {
 		return nil
 	}
 	return o.PageToken
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateRequest) GetPageSize() *int {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPageSize() *int {
 	if o == nil {
 		return nil
 	}
 	return o.PageSize
 }
 
-type V3GlobaldataGetHostObservationsWithCertificateResponse struct {
+type V3ThreathuntingGetHostObservationsWithCertificateResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// A list of host observations for the certificate
 	ResponseEnvelopeHostObservationResponse *components.ResponseEnvelopeHostObservationResponse
 	Headers                                 map[string][]string
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateResponse) GetHTTPMeta() components.HTTPMetadata {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetHTTPMeta() components.HTTPMetadata {
 	if o == nil {
 		return components.HTTPMetadata{}
 	}
 	return o.HTTPMeta
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateResponse) GetResponseEnvelopeHostObservationResponse() *components.ResponseEnvelopeHostObservationResponse {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetResponseEnvelopeHostObservationResponse() *components.ResponseEnvelopeHostObservationResponse {
 	if o == nil {
 		return nil
 	}
 	return o.ResponseEnvelopeHostObservationResponse
 }
 
-func (o *V3GlobaldataGetHostObservationsWithCertificateResponse) GetHeaders() map[string][]string {
+func (o *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetHeaders() map[string][]string {
 	if o == nil {
 		return map[string][]string{}
 	}
