@@ -9,7 +9,6 @@ Endpoints related to the Global Data product
 
 * [GetCertificates](#getcertificates) - Get multiple certificates
 * [GetCertificate](#getcertificate) - Get a certificate
-* [GetHostObservationsWithCertificate](#gethostobservationswithcertificate) - Get Host Observations With Certificate
 * [GetHosts](#gethosts) - Get multiple hosts
 * [GetHost](#gethost) - Get a host
 * [GetHostTimeline](#gethosttimeline) - Get host event history
@@ -127,67 +126,6 @@ func main() {
 ### Response
 
 **[*operations.V3GlobaldataAssetCertificateResponse](../../models/operations/v3globaldataassetcertificateresponse.md), error**
-
-### Errors
-
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
-
-## GetHostObservationsWithCertificate
-
-Retrieve historical observations of hosts associated with a certificate fingerprint. Useful for threat hunting, detection engineering, and timeline generation.
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="v3-globaldata-get-host-observations-with-certificate" method="get" path="/v3/global/asset/certificate/{certificate_id}/observations/hosts" -->
-```go
-package main
-
-import(
-	"context"
-	censyssdkgo "github.com/censys/censys-sdk-go"
-	"github.com/censys/censys-sdk-go/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
-        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
-    )
-
-    res, err := s.GlobalData.GetHostObservationsWithCertificate(ctx, operations.V3GlobaldataGetHostObservationsWithCertificateRequest{
-        CertificateID: "55af8a301eb51abdaf7c31bec951638fe5a99d5d92117eca2be493026613fa46",
-        StartTime: censyssdkgo.String("2023-01-01T00:00:00Z"),
-        EndTime: censyssdkgo.String("2023-12-31T23:59:59Z"),
-        Port: censyssdkgo.Int(443),
-        Protocol: censyssdkgo.String("TCP"),
-        PageSize: censyssdkgo.Int(50),
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ResponseEnvelopeHostObservationResponse != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                                                | :heavy_check_mark:                                                                                                                                   | The context to use for the request.                                                                                                                  |
-| `request`                                                                                                                                            | [operations.V3GlobaldataGetHostObservationsWithCertificateRequest](../../models/operations/v3globaldatagethostobservationswithcertificaterequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
-| `opts`                                                                                                                                               | [][operations.Option](../../models/operations/option.md)                                                                                             | :heavy_minus_sign:                                                                                                                                   | The options for this request.                                                                                                                        |
-
-### Response
-
-**[*operations.V3GlobaldataGetHostObservationsWithCertificateResponse](../../models/operations/v3globaldatagethostobservationswithcertificateresponse.md), error**
 
 ### Errors
 

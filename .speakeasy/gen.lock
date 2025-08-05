@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 18eb579f1504b0a4a663f34494fcac83
-  docVersion: 1.0.24
-  speakeasyVersion: 1.595.3
-  generationVersion: 2.671.2
-  releaseVersion: 0.19.0
-  configChecksum: 1025b819eaa889ec2582996fa8517c7a
+  docChecksum: b4f8f6d248cb74d458e3f2f57c93bd34
+  docVersion: 1.0.25
+  speakeasyVersion: 1.596.1
+  generationVersion: 2.672.0
+  releaseVersion: 0.19.1
+  configChecksum: b79cd8d423c6d668826844bb3f868bfe
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -528,11 +528,11 @@ generatedFiles:
   - /models/operations/v3globaldataassethosttimeline.go
   - /models/operations/v3globaldataassetwebproperty.go
   - /models/operations/v3globaldataassetwebpropertylist.go
-  - /models/operations/v3globaldatagethostobservationswithcertificate.go
   - /models/operations/v3globaldatascansget.go
   - /models/operations/v3globaldatascansrescan.go
   - /models/operations/v3globaldatasearchaggregate.go
   - /models/operations/v3globaldatasearchquery.go
+  - /models/operations/v3threathuntinggethostobservationswithcertificate.go
   - /models/operations/v3threathuntingscansdiscovery.go
   - /models/operations/v3threathuntingscansget.go
   - /models/operations/v3threathuntingvaluecounts.go
@@ -1136,9 +1136,6 @@ generatedFiles:
   - docs/models/operations/v3globaldataassetwebpropertylistresponse.md
   - docs/models/operations/v3globaldataassetwebpropertyrequest.md
   - docs/models/operations/v3globaldataassetwebpropertyresponse.md
-  - docs/models/operations/v3globaldatagethostobservationswithcertificateglobals.md
-  - docs/models/operations/v3globaldatagethostobservationswithcertificaterequest.md
-  - docs/models/operations/v3globaldatagethostobservationswithcertificateresponse.md
   - docs/models/operations/v3globaldatascansgetglobals.md
   - docs/models/operations/v3globaldatascansgetrequest.md
   - docs/models/operations/v3globaldatascansgetresponse.md
@@ -1151,6 +1148,9 @@ generatedFiles:
   - docs/models/operations/v3globaldatasearchqueryglobals.md
   - docs/models/operations/v3globaldatasearchqueryrequest.md
   - docs/models/operations/v3globaldatasearchqueryresponse.md
+  - docs/models/operations/v3threathuntinggethostobservationswithcertificateglobals.md
+  - docs/models/operations/v3threathuntinggethostobservationswithcertificaterequest.md
+  - docs/models/operations/v3threathuntinggethostobservationswithcertificateresponse.md
   - docs/models/operations/v3threathuntingscansdiscoveryglobals.md
   - docs/models/operations/v3threathuntingscansdiscoveryrequest.md
   - docs/models/operations/v3threathuntingscansdiscoveryresponse.md
@@ -1477,6 +1477,23 @@ examples:
           organization_id: "<id>"
       requestBody:
         application/json: {"target": {"hostname_port": {"hostname": "censys.io", "port": 443}}}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-threathunting-get-host-observations-with-certificate:
+    speakeasy-default-v3-threathunting-get-host-observations-with-certificate:
+      parameters:
+        path:
+          certificate_id: "55af8a301eb51abdaf7c31bec951638fe5a99d5d92117eca2be493026613fa46"
+        query:
+          organization_id: "<id>"
+          start_time: "2023-01-01T00:00:00Z"
+          end_time: "2023-12-31T23:59:59Z"
+          port: 443
+          protocol: "TCP"
+          page_size: 50
       responses:
         "200":
           application/json: {}
