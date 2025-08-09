@@ -5,6 +5,7 @@ package components
 type Screenshot struct {
 	ExtractedText *string `json:"extracted_text,omitempty"`
 	Handle        *string `json:"handle,omitempty"`
+	Phash         *string `json:"phash,omitempty"`
 }
 
 func (o *Screenshot) GetExtractedText() *string {
@@ -19,4 +20,11 @@ func (o *Screenshot) GetHandle() *string {
 		return nil
 	}
 	return o.Handle
+}
+
+func (o *Screenshot) GetPhash() *string {
+	if o == nil {
+		return nil
+	}
+	return o.Phash
 }

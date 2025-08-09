@@ -108,7 +108,9 @@ func main() {
 ### [GlobalData](docs/sdks/globaldata/README.md)
 
 * [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Get multiple certificates
+* [GetCertificatesRaw](docs/sdks/globaldata/README.md#getcertificatesraw) - Get multiple certificates in PEM format
 * [GetCertificate](docs/sdks/globaldata/README.md#getcertificate) - Get a certificate
+* [GetCertificateRaw](docs/sdks/globaldata/README.md#getcertificateraw) - Get a certificate in PEM format
 * [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Get multiple hosts
 * [GetHost](docs/sdks/globaldata/README.md#gethost) - Get a host
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
