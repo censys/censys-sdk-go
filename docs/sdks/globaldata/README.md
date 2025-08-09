@@ -8,7 +8,9 @@ Endpoints related to the Global Data product
 ### Available Operations
 
 * [GetCertificates](#getcertificates) - Get multiple certificates
+* [GetCertificatesRaw](#getcertificatesraw) - Get multiple certificates in PEM format
 * [GetCertificate](#getcertificate) - Get a certificate
+* [GetCertificateRaw](#getcertificateraw) - Get a certificate in PEM format
 * [GetHosts](#gethosts) - Get multiple hosts
 * [GetHost](#gethost) - Get a host
 * [GetHostTimeline](#gethosttimeline) - Get host event history
@@ -78,6 +80,64 @@ func main() {
 | sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
 | sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
 
+## GetCertificatesRaw
+
+Retrieve the raw PEM-encoded format for multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate-list-raw" method="get" path="/v3/global/asset/certificate/raw" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.GetCertificatesRaw(ctx, operations.V3GlobaldataAssetCertificateListRawRequest{
+        CertificateIds: []string{
+            "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeListRawCertificateResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
+| `request`                                                                                                                      | [operations.V3GlobaldataAssetCertificateListRawRequest](../../models/operations/v3globaldataassetcertificatelistrawrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `opts`                                                                                                                         | [][operations.Option](../../models/operations/option.md)                                                                       | :heavy_minus_sign:                                                                                                             | The options for this request.                                                                                                  |
+
+### Response
+
+**[*operations.V3GlobaldataAssetCertificateListRawResponse](../../models/operations/v3globaldataassetcertificatelistrawresponse.md), error**
+
+### Errors
+
+| Error Type               | Status Code              | Content Type             |
+| ------------------------ | ------------------------ | ------------------------ |
+| sdkerrors.ErrorModel     | 401, 404                 | application/problem+json |
+| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+
 ## GetCertificate
 
 Retrieve information about a single certificate. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
@@ -126,6 +186,62 @@ func main() {
 ### Response
 
 **[*operations.V3GlobaldataAssetCertificateResponse](../../models/operations/v3globaldataassetcertificateresponse.md), error**
+
+### Errors
+
+| Error Type               | Status Code              | Content Type             |
+| ------------------------ | ------------------------ | ------------------------ |
+| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
+| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+
+## GetCertificateRaw
+
+Retrieve the raw PEM-encoded format of a certificate. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate-raw" method="get" path="/v3/global/asset/certificate/{certificate_id}/raw" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.GetCertificateRaw(ctx, operations.V3GlobaldataAssetCertificateRawRequest{
+        CertificateID: "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseStream != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.V3GlobaldataAssetCertificateRawRequest](../../models/operations/v3globaldataassetcertificaterawrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `opts`                                                                                                                 | [][operations.Option](../../models/operations/option.md)                                                               | :heavy_minus_sign:                                                                                                     | The options for this request.                                                                                          |
+
+### Response
+
+**[*operations.V3GlobaldataAssetCertificateRawResponse](../../models/operations/v3globaldataassetcertificaterawresponse.md), error**
 
 ### Errors
 

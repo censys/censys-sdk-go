@@ -43,139 +43,141 @@ func (e *ServiceTransportProtocol) UnmarshalJSON(data []byte) error {
 }
 
 type Service struct {
-	Activemq           *Activemq                 `json:"activemq,omitempty"`
-	Amqp               *Amqp                     `json:"amqp,omitempty"`
-	AnyConnect         *AnyConnect               `json:"any_connect,omitempty"`
-	Bacnet             *Bacnet                   `json:"bacnet,omitempty"`
-	Banner             *string                   `json:"banner,omitempty"`
-	BannerHashSha256   *string                   `json:"banner_hash_sha256,omitempty"`
-	BannerHex          *string                   `json:"banner_hex,omitempty"`
-	Cert               *Certificate              `json:"cert,omitempty"`
-	CheckpointTopology *CheckpointTopology       `json:"checkpoint_topology,omitempty"`
-	Chromecast         *Chromecast               `json:"chromecast,omitempty"`
-	CiscoIpsla         *CiscoIpsla               `json:"cisco_ipsla,omitempty"`
-	Cmore              *Cmore                    `json:"cmore,omitempty"`
-	Coap               *Coap                     `json:"coap,omitempty"`
-	CrestronCp3        *CrestronCp3              `json:"crestron_cp3,omitempty"`
-	CrestronDinAp2     *CrestronDinAp2           `json:"crestron_din_ap2,omitempty"`
-	Cwmp               *Cwmp                     `json:"cwmp,omitempty"`
-	Darkcomet          *Darkcomet                `json:"darkcomet,omitempty"`
-	Darkgate           *Darkgate                 `json:"darkgate,omitempty"`
-	Dcerpc             *Dcerpc                   `json:"dcerpc,omitempty"`
-	Dhcpdiscover       *Dhcpdiscover             `json:"dhcpdiscover,omitempty"`
-	Dnp3               *Dnp3                     `json:"dnp3,omitempty"`
-	DNS                *DNS                      `json:"dns,omitempty"`
-	Dtls               *Dtls                     `json:"dtls,omitempty"`
-	DvrIP              *DvrIP                    `json:"dvr_ip,omitempty"`
-	Eip                *Eip                      `json:"eip,omitempty"`
-	ElfFile            *ElfFile                  `json:"elf_file,omitempty"`
-	Endpoints          []EndpointScanState       `json:"endpoints,omitempty"`
-	Epmd               *Epmd                     `json:"epmd,omitempty"`
-	Etcd               *Etcd                     `json:"etcd,omitempty"`
-	Ethereum           *Ethereum                 `json:"ethereum,omitempty"`
-	Exposures          []Risk                    `json:"exposures,omitempty"`
-	Fox                *Fox                      `json:"fox,omitempty"`
-	Ftp                *Ftp                      `json:"ftp,omitempty"`
-	Gearman            *Gearman                  `json:"gearman,omitempty"`
-	Hardware           []Attribute               `json:"hardware,omitempty"`
-	HidVertx           *HidVertx                 `json:"hid_vertx,omitempty"`
-	Hikvision          *Hikvision                `json:"hikvision,omitempty"`
-	Ibmnje             *Ibmnje                   `json:"ibmnje,omitempty"`
-	Ike                *Ike                      `json:"ike,omitempty"`
-	Imap               *Imap                     `json:"imap,omitempty"`
-	Iota               *Iota                     `json:"iota,omitempty"`
-	IP                 *string                   `json:"ip,omitempty"`
-	Ipmi               *Ipmi                     `json:"ipmi,omitempty"`
-	Ipp                *Ipp                      `json:"ipp,omitempty"`
-	Iscsi              *Iscsi                    `json:"iscsi,omitempty"`
-	Ja4tscan           *Ja4TScanScan             `json:"ja4tscan,omitempty"`
-	Jarm               *JarmScan                 `json:"jarm,omitempty"`
-	Krpc               *Krpc                     `json:"krpc,omitempty"`
-	L2tp               *L2Tp                     `json:"l2tp,omitempty"`
-	Labels             []Label                   `json:"labels,omitempty"`
-	Ldap               *Ldap                     `json:"ldap,omitempty"`
-	Lpd                *Lpd                      `json:"lpd,omitempty"`
-	Mdns               *Mdns                     `json:"mdns,omitempty"`
-	Memcached          *Memcached                `json:"memcached,omitempty"`
-	Minecraft          *Minecraft                `json:"minecraft,omitempty"`
-	Misconfigs         []Risk                    `json:"misconfigs,omitempty"`
-	Mms                *Mms                      `json:"mms,omitempty"`
-	Modbus             *Modbus                   `json:"modbus,omitempty"`
-	MoneroP2p          *MoneroP2P                `json:"monero_p2p,omitempty"`
-	Mongodb            *Mongodb                  `json:"mongodb,omitempty"`
-	Mqtt               *Mqtt                     `json:"mqtt,omitempty"`
-	Mssql              *Mssql                    `json:"mssql,omitempty"`
-	Murmur             *Murmur                   `json:"murmur,omitempty"`
-	Mysql              *Mysql                    `json:"mysql,omitempty"`
-	NatsIo             *NatsIo                   `json:"nats_io,omitempty"`
-	Nbd                *Nbd                      `json:"nbd,omitempty"`
-	NfsMountd          *NfsMountd                `json:"nfs_mountd,omitempty"`
-	Nmea               *Nmea                     `json:"nmea,omitempty"`
-	Ntp                *Ntp                      `json:"ntp,omitempty"`
-	Ntrip              *Ntrip                    `json:"ntrip,omitempty"`
-	Onc                *Onc                      `json:"onc,omitempty"`
-	Onvif              *Onvif                    `json:"onvif,omitempty"`
-	OpcUa              *OpcUa                    `json:"opc_ua,omitempty"`
-	Openvpn            *Openvpn                  `json:"openvpn,omitempty"`
-	OperatingSystems   []Attribute               `json:"operating_systems,omitempty"`
-	Oracle             *Oracle                   `json:"oracle,omitempty"`
-	PcAnywhere         *PcAnywhere               `json:"pc_anywhere,omitempty"`
-	Pgbouncer          *Pgbouncer                `json:"pgbouncer,omitempty"`
-	Pop3               *Pop3                     `json:"pop3,omitempty"`
-	Port               *int                      `json:"port,omitempty"`
-	Portmap            *Portmap                  `json:"portmap,omitempty"`
-	Postgres           *Postgres                 `json:"postgres,omitempty"`
-	Pptp               *Pptp                     `json:"pptp,omitempty"`
-	ProfinetCm         *ProfinetCm               `json:"profinet_cm,omitempty"`
-	Protocol           *string                   `json:"protocol,omitempty"`
-	Rdate              *Rdate                    `json:"rdate,omitempty"`
-	Rdp                *Rdp                      `json:"rdp,omitempty"`
-	Realport           *Realport                 `json:"realport,omitempty"`
-	Redis              *Redis                    `json:"redis,omitempty"`
-	Redline            *Redline                  `json:"redline,omitempty"`
-	RedlionCrimson     *RedlionCrimson           `json:"redlion_crimson,omitempty"`
-	RepresentativeInfo *RepresentativeInfo       `json:"representative_info,omitempty"`
-	Rifatron           *Rifatron                 `json:"rifatron,omitempty"`
-	Ripple             *Ripple                   `json:"ripple,omitempty"`
-	Rlogin             *Rlogin                   `json:"rlogin,omitempty"`
-	Rocketmq           *Rocketmq                 `json:"rocketmq,omitempty"`
-	Rtsp               *Rtsp                     `json:"rtsp,omitempty"`
-	S7                 *S7                       `json:"s7,omitempty"`
-	SapRouter          *SapRouter                `json:"sap_router,omitempty"`
-	ScanTime           *string                   `json:"scan_time,omitempty"`
-	Scpi               *Scpi                     `json:"scpi,omitempty"`
-	Screenshots        []Screenshot              `json:"screenshots,omitempty"`
-	Ser2net            *Ser2Net                  `json:"ser2net,omitempty"`
-	SevenDaysToDie     *SevenDaysToDie           `json:"seven_days_to_die,omitempty"`
-	Sip                *Sip                      `json:"sip,omitempty"`
-	Skinny             *Skinny                   `json:"skinny,omitempty"`
-	Smb                *Smb                      `json:"smb,omitempty"`
-	SMTP               *SMTP                     `json:"smtp,omitempty"`
-	Snmp               *Snmp                     `json:"snmp,omitempty"`
-	Socks              *Socks                    `json:"socks,omitempty"`
-	Software           []Attribute               `json:"software,omitempty"`
-	Spice              *Spice                    `json:"spice,omitempty"`
-	Ssdp               *Ssdp                     `json:"ssdp,omitempty"`
-	SSH                *SSH                      `json:"ssh,omitempty"`
-	Steam              *Steam                    `json:"steam,omitempty"`
-	TacacsPlus         *TacacsPlus               `json:"tacacs_plus,omitempty"`
-	TeamViewer         *TeamViewer               `json:"team_viewer,omitempty"`
-	Telnet             *Telnet                   `json:"telnet,omitempty"`
-	Threats            []Threat                  `json:"threats,omitempty"`
-	Tibia              *Tibia                    `json:"tibia,omitempty"`
-	TLS                *TLS                      `json:"tls,omitempty"`
-	TplinkKasa         *TplinkKasa               `json:"tplink_kasa,omitempty"`
-	TransportProtocol  *ServiceTransportProtocol `json:"transport_protocol,omitempty"`
-	UnitronicsPcom     *UnitronicsPcom           `json:"unitronics_pcom,omitempty"`
-	Upnp               *Upnp                     `json:"upnp,omitempty"`
-	Ventrilo           *Ventrilo                 `json:"ventrilo,omitempty"`
-	Vnc                *Vnc                      `json:"vnc,omitempty"`
-	Vulns              []Vuln                    `json:"vulns,omitempty"`
-	WeblogicT3         *WeblogicT3               `json:"weblogic_t3,omitempty"`
-	Winrm              *Winrm                    `json:"winrm,omitempty"`
-	WsDiscovery        *WsDiscovery              `json:"ws_discovery,omitempty"`
-	X11                *X11                      `json:"x11,omitempty"`
-	Zeromq             *Zeromq                   `json:"zeromq,omitempty"`
+	Activemq                 *Activemq                 `json:"activemq,omitempty"`
+	Amqp                     *Amqp                     `json:"amqp,omitempty"`
+	AnyConnect               *AnyConnect               `json:"any_connect,omitempty"`
+	AsteriskManagerInterface *AsteriskManagerInterface `json:"asterisk_manager_interface,omitempty"`
+	Bacnet                   *Bacnet                   `json:"bacnet,omitempty"`
+	Banner                   *string                   `json:"banner,omitempty"`
+	BannerHashSha256         *string                   `json:"banner_hash_sha256,omitempty"`
+	BannerHex                *string                   `json:"banner_hex,omitempty"`
+	Cert                     *Certificate              `json:"cert,omitempty"`
+	CheckpointTopology       *CheckpointTopology       `json:"checkpoint_topology,omitempty"`
+	Chromecast               *Chromecast               `json:"chromecast,omitempty"`
+	CiscoIpsla               *CiscoIpsla               `json:"cisco_ipsla,omitempty"`
+	Cmore                    *Cmore                    `json:"cmore,omitempty"`
+	Coap                     *Coap                     `json:"coap,omitempty"`
+	CrestronCp3              *CrestronCp3              `json:"crestron_cp3,omitempty"`
+	CrestronDinAp2           *CrestronDinAp2           `json:"crestron_din_ap2,omitempty"`
+	Cwmp                     *Cwmp                     `json:"cwmp,omitempty"`
+	Darkcomet                *Darkcomet                `json:"darkcomet,omitempty"`
+	Darkgate                 *Darkgate                 `json:"darkgate,omitempty"`
+	Dcerpc                   *Dcerpc                   `json:"dcerpc,omitempty"`
+	Dhcpdiscover             *Dhcpdiscover             `json:"dhcpdiscover,omitempty"`
+	Dnp3                     *Dnp3                     `json:"dnp3,omitempty"`
+	DNS                      *DNS                      `json:"dns,omitempty"`
+	Dtls                     *Dtls                     `json:"dtls,omitempty"`
+	DvrIP                    *DvrIP                    `json:"dvr_ip,omitempty"`
+	Eip                      *Eip                      `json:"eip,omitempty"`
+	ElfFile                  *ElfFile                  `json:"elf_file,omitempty"`
+	Endpoints                []EndpointScanState       `json:"endpoints,omitempty"`
+	Epmd                     *Epmd                     `json:"epmd,omitempty"`
+	Etcd                     *Etcd                     `json:"etcd,omitempty"`
+	Ethereum                 *Ethereum                 `json:"ethereum,omitempty"`
+	Exposures                []Risk                    `json:"exposures,omitempty"`
+	Fox                      *Fox                      `json:"fox,omitempty"`
+	Ftp                      *Ftp                      `json:"ftp,omitempty"`
+	Gearman                  *Gearman                  `json:"gearman,omitempty"`
+	Hardware                 []Attribute               `json:"hardware,omitempty"`
+	HidVertx                 *HidVertx                 `json:"hid_vertx,omitempty"`
+	Hikvision                *Hikvision                `json:"hikvision,omitempty"`
+	Ibmnje                   *Ibmnje                   `json:"ibmnje,omitempty"`
+	Ike                      *Ike                      `json:"ike,omitempty"`
+	Imap                     *Imap                     `json:"imap,omitempty"`
+	Iota                     *Iota                     `json:"iota,omitempty"`
+	IP                       *string                   `json:"ip,omitempty"`
+	Ipmi                     *Ipmi                     `json:"ipmi,omitempty"`
+	Ipp                      *Ipp                      `json:"ipp,omitempty"`
+	Iscsi                    *Iscsi                    `json:"iscsi,omitempty"`
+	Ja4tscan                 *Ja4TScanScan             `json:"ja4tscan,omitempty"`
+	Jarm                     *JarmScan                 `json:"jarm,omitempty"`
+	Krpc                     *Krpc                     `json:"krpc,omitempty"`
+	L2tp                     *L2Tp                     `json:"l2tp,omitempty"`
+	Labels                   []Label                   `json:"labels,omitempty"`
+	Ldap                     *Ldap                     `json:"ldap,omitempty"`
+	Lpd                      *Lpd                      `json:"lpd,omitempty"`
+	Mdns                     *Mdns                     `json:"mdns,omitempty"`
+	Memcached                *Memcached                `json:"memcached,omitempty"`
+	Minecraft                *Minecraft                `json:"minecraft,omitempty"`
+	Misconfigs               []Risk                    `json:"misconfigs,omitempty"`
+	Mms                      *Mms                      `json:"mms,omitempty"`
+	Modbus                   *Modbus                   `json:"modbus,omitempty"`
+	MoneroP2p                *MoneroP2P                `json:"monero_p2p,omitempty"`
+	Mongodb                  *Mongodb                  `json:"mongodb,omitempty"`
+	Mqtt                     *Mqtt                     `json:"mqtt,omitempty"`
+	Mssql                    *Mssql                    `json:"mssql,omitempty"`
+	Murmur                   *Murmur                   `json:"murmur,omitempty"`
+	Mysql                    *Mysql                    `json:"mysql,omitempty"`
+	NatsIo                   *NatsIo                   `json:"nats_io,omitempty"`
+	Nbd                      *Nbd                      `json:"nbd,omitempty"`
+	NfsMountd                *NfsMountd                `json:"nfs_mountd,omitempty"`
+	Nmea                     *Nmea                     `json:"nmea,omitempty"`
+	Ntp                      *Ntp                      `json:"ntp,omitempty"`
+	Ntrip                    *Ntrip                    `json:"ntrip,omitempty"`
+	Onc                      *Onc                      `json:"onc,omitempty"`
+	Onvif                    *Onvif                    `json:"onvif,omitempty"`
+	OpcUa                    *OpcUa                    `json:"opc_ua,omitempty"`
+	Openvpn                  *Openvpn                  `json:"openvpn,omitempty"`
+	OpenvpnMgmt              *OpenvpnMgmt              `json:"openvpn_mgmt,omitempty"`
+	OperatingSystems         []Attribute               `json:"operating_systems,omitempty"`
+	Oracle                   *Oracle                   `json:"oracle,omitempty"`
+	PcAnywhere               *PcAnywhere               `json:"pc_anywhere,omitempty"`
+	Pgbouncer                *Pgbouncer                `json:"pgbouncer,omitempty"`
+	Pop3                     *Pop3                     `json:"pop3,omitempty"`
+	Port                     *int                      `json:"port,omitempty"`
+	Portmap                  *Portmap                  `json:"portmap,omitempty"`
+	Postgres                 *Postgres                 `json:"postgres,omitempty"`
+	Pptp                     *Pptp                     `json:"pptp,omitempty"`
+	ProfinetCm               *ProfinetCm               `json:"profinet_cm,omitempty"`
+	Protocol                 *string                   `json:"protocol,omitempty"`
+	Rdate                    *Rdate                    `json:"rdate,omitempty"`
+	Rdp                      *Rdp                      `json:"rdp,omitempty"`
+	Realport                 *Realport                 `json:"realport,omitempty"`
+	Redis                    *Redis                    `json:"redis,omitempty"`
+	Redline                  *Redline                  `json:"redline,omitempty"`
+	RedlionCrimson           *RedlionCrimson           `json:"redlion_crimson,omitempty"`
+	RepresentativeInfo       *RepresentativeInfo       `json:"representative_info,omitempty"`
+	Rifatron                 *Rifatron                 `json:"rifatron,omitempty"`
+	Ripple                   *Ripple                   `json:"ripple,omitempty"`
+	Rlogin                   *Rlogin                   `json:"rlogin,omitempty"`
+	Rocketmq                 *Rocketmq                 `json:"rocketmq,omitempty"`
+	Rtsp                     *Rtsp                     `json:"rtsp,omitempty"`
+	S7                       *S7                       `json:"s7,omitempty"`
+	SapRouter                *SapRouter                `json:"sap_router,omitempty"`
+	ScanTime                 *string                   `json:"scan_time,omitempty"`
+	Scpi                     *Scpi                     `json:"scpi,omitempty"`
+	Screenshots              []Screenshot              `json:"screenshots,omitempty"`
+	Ser2net                  *Ser2Net                  `json:"ser2net,omitempty"`
+	SevenDaysToDie           *SevenDaysToDie           `json:"seven_days_to_die,omitempty"`
+	Sip                      *Sip                      `json:"sip,omitempty"`
+	Skinny                   *Skinny                   `json:"skinny,omitempty"`
+	Smb                      *Smb                      `json:"smb,omitempty"`
+	SMTP                     *SMTP                     `json:"smtp,omitempty"`
+	Snmp                     *Snmp                     `json:"snmp,omitempty"`
+	Socks                    *Socks                    `json:"socks,omitempty"`
+	Software                 []Attribute               `json:"software,omitempty"`
+	Spice                    *Spice                    `json:"spice,omitempty"`
+	Ssdp                     *Ssdp                     `json:"ssdp,omitempty"`
+	SSH                      *SSH                      `json:"ssh,omitempty"`
+	Steam                    *Steam                    `json:"steam,omitempty"`
+	TacacsPlus               *TacacsPlus               `json:"tacacs_plus,omitempty"`
+	TeamViewer               *TeamViewer               `json:"team_viewer,omitempty"`
+	Telnet                   *Telnet                   `json:"telnet,omitempty"`
+	Threats                  []Threat                  `json:"threats,omitempty"`
+	Tibia                    *Tibia                    `json:"tibia,omitempty"`
+	TLS                      *TLS                      `json:"tls,omitempty"`
+	TplinkKasa               *TplinkKasa               `json:"tplink_kasa,omitempty"`
+	TransportProtocol        *ServiceTransportProtocol `json:"transport_protocol,omitempty"`
+	UnitronicsPcom           *UnitronicsPcom           `json:"unitronics_pcom,omitempty"`
+	Upnp                     *Upnp                     `json:"upnp,omitempty"`
+	Ventrilo                 *Ventrilo                 `json:"ventrilo,omitempty"`
+	Vnc                      *Vnc                      `json:"vnc,omitempty"`
+	Vulns                    []Vuln                    `json:"vulns,omitempty"`
+	WeblogicT3               *WeblogicT3               `json:"weblogic_t3,omitempty"`
+	Winrm                    *Winrm                    `json:"winrm,omitempty"`
+	WsDiscovery              *WsDiscovery              `json:"ws_discovery,omitempty"`
+	X11                      *X11                      `json:"x11,omitempty"`
+	Zeromq                   *Zeromq                   `json:"zeromq,omitempty"`
 }
 
 func (o *Service) GetActivemq() *Activemq {
@@ -197,6 +199,13 @@ func (o *Service) GetAnyConnect() *AnyConnect {
 		return nil
 	}
 	return o.AnyConnect
+}
+
+func (o *Service) GetAsteriskManagerInterface() *AsteriskManagerInterface {
+	if o == nil {
+		return nil
+	}
+	return o.AsteriskManagerInterface
 }
 
 func (o *Service) GetBacnet() *Bacnet {
@@ -694,6 +703,13 @@ func (o *Service) GetOpenvpn() *Openvpn {
 		return nil
 	}
 	return o.Openvpn
+}
+
+func (o *Service) GetOpenvpnMgmt() *OpenvpnMgmt {
+	if o == nil {
+		return nil
+	}
+	return o.OpenvpnMgmt
 }
 
 func (o *Service) GetOperatingSystems() []Attribute {
