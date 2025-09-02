@@ -1,20 +1,21 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: b4f8f6d248cb74d458e3f2f57c93bd34
-  docVersion: 1.0.25
-  speakeasyVersion: 1.596.1
-  generationVersion: 2.672.0
-  releaseVersion: 0.19.1
-  configChecksum: b79cd8d423c6d668826844bb3f868bfe
+  docChecksum: 9ca30cd9f14db131dfe52085958534f6
+  docVersion: 1.0.35
+  speakeasyVersion: 1.607.0
+  generationVersion: 2.690.1
+  releaseVersion: 0.20.0
+  configChecksum: 77f7e198eaccb2548949094271596937
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.9.3
+    core: 3.9.5
     defaultEnabledRetries: 0.2.0
+    downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
     examples: 2.81.5
     globalSecurity: 2.82.11
@@ -27,17 +28,22 @@ features:
     nameOverrides: 2.81.2
     nullables: 0.1.1
     responseFormat: 0.1.2
-    retries: 2.84.0
+    retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.12
+    unions: 2.85.13
 generatedFiles:
   - .gitattributes
   - /models/components/activemq.go
+  - /models/components/alternativequery.go
   - /models/components/amqp.go
   - /models/components/amqpprotocol.go
   - /models/components/amqpversion.go
   - /models/components/analyticscapabilities.go
   - /models/components/anyconnect.go
+  - /models/components/assetcertificatelistinputbody.go
+  - /models/components/assethostlistinputbody.go
+  - /models/components/assetwebpropertylistinputbody.go
+  - /models/components/asteriskmanagerinterface.go
   - /models/components/attribute.go
   - /models/components/auth.go
   - /models/components/authorityinfoaccess.go
@@ -76,6 +82,7 @@ generatedFiles:
   - /models/components/collectioneventsresponse.go
   - /models/components/connection.go
   - /models/components/contact.go
+  - /models/components/convertqueryerror.go
   - /models/components/coordinates.go
   - /models/components/countcondition.go
   - /models/components/cpe.go
@@ -311,6 +318,7 @@ generatedFiles:
   - /models/components/opendirectory.go
   - /models/components/opendirectoryfile.go
   - /models/components/openvpn.go
+  - /models/components/openvpnmgmt.go
   - /models/components/oracle.go
   - /models/components/oracledescriptor.go
   - /models/components/organization.go
@@ -349,6 +357,7 @@ generatedFiles:
   - /models/components/qcstatementspdslocation.go
   - /models/components/qcstatementsqclegislation.go
   - /models/components/qcstatementsqctype.go
+  - /models/components/rawcertificateresponse.go
   - /models/components/rdate.go
   - /models/components/rdp.go
   - /models/components/rdpcertificateinfo.go
@@ -377,6 +386,8 @@ generatedFiles:
   - /models/components/responseenvelopelistcertificateasset.go
   - /models/components/responseenvelopelistcollectionsresponsev1.go
   - /models/components/responseenvelopelisthostasset.go
+  - /models/components/responseenvelopelistrawcertificateresponse.go
+  - /models/components/responseenvelopelistsearchconvertqueryresponse.go
   - /models/components/responseenvelopelistwebpropertyasset.go
   - /models/components/responseenvelopesearchaggregateresponse.go
   - /models/components/responseenvelopesearchqueryresponse.go
@@ -416,6 +427,8 @@ generatedFiles:
   - /models/components/searchaggregateresponse.go
   - /models/components/searchaggregateresponsebucket.go
   - /models/components/searchcapabilities.go
+  - /models/components/searchconvertqueryinputbody.go
+  - /models/components/searchconvertqueryresponse.go
   - /models/components/searchqueryhit.go
   - /models/components/searchqueryinputbody.go
   - /models/components/searchqueryresponse.go
@@ -522,15 +535,18 @@ generatedFiles:
   - /models/operations/v3collectionssearchaggregate.go
   - /models/operations/v3collectionssearchquery.go
   - /models/operations/v3globaldataassetcertificate.go
-  - /models/operations/v3globaldataassetcertificatelist.go
+  - /models/operations/v3globaldataassetcertificatelistpost.go
+  - /models/operations/v3globaldataassetcertificatelistrawpost.go
+  - /models/operations/v3globaldataassetcertificateraw.go
   - /models/operations/v3globaldataassethost.go
-  - /models/operations/v3globaldataassethostlist.go
+  - /models/operations/v3globaldataassethostlistpost.go
   - /models/operations/v3globaldataassethosttimeline.go
   - /models/operations/v3globaldataassetwebproperty.go
-  - /models/operations/v3globaldataassetwebpropertylist.go
+  - /models/operations/v3globaldataassetwebpropertylistpost.go
   - /models/operations/v3globaldatascansget.go
   - /models/operations/v3globaldatascansrescan.go
   - /models/operations/v3globaldatasearchaggregate.go
+  - /models/operations/v3globaldatasearchconvert.go
   - /models/operations/v3globaldatasearchquery.go
   - /models/operations/v3threathuntinggethostobservationswithcertificate.go
   - /models/operations/v3threathuntingscansdiscovery.go
@@ -540,11 +556,16 @@ generatedFiles:
   - USAGE.md
   - collections.go
   - docs/models/components/activemq.md
+  - docs/models/components/alternativequery.md
   - docs/models/components/amqp.md
   - docs/models/components/amqpprotocol.md
   - docs/models/components/amqpversion.md
   - docs/models/components/analyticscapabilities.md
   - docs/models/components/anyconnect.md
+  - docs/models/components/assetcertificatelistinputbody.md
+  - docs/models/components/assethostlistinputbody.md
+  - docs/models/components/assetwebpropertylistinputbody.md
+  - docs/models/components/asteriskmanagerinterface.md
   - docs/models/components/attackcomplexity.md
   - docs/models/components/attackrequirements.md
   - docs/models/components/attackvector.md
@@ -591,6 +612,7 @@ generatedFiles:
   - docs/models/components/confidentiality.md
   - docs/models/components/connection.md
   - docs/models/components/contact.md
+  - docs/models/components/convertqueryerror.md
   - docs/models/components/coordinates.md
   - docs/models/components/countcondition.md
   - docs/models/components/cpe.md
@@ -844,6 +866,7 @@ generatedFiles:
   - docs/models/components/opendirectory.md
   - docs/models/components/opendirectoryfile.md
   - docs/models/components/openvpn.md
+  - docs/models/components/openvpnmgmt.md
   - docs/models/components/oracle.md
   - docs/models/components/oracledescriptor.md
   - docs/models/components/organization.md
@@ -885,6 +908,7 @@ generatedFiles:
   - docs/models/components/qcstatementspdslocation.md
   - docs/models/components/qcstatementsqclegislation.md
   - docs/models/components/qcstatementsqctype.md
+  - docs/models/components/rawcertificateresponse.md
   - docs/models/components/rcode.md
   - docs/models/components/rdate.md
   - docs/models/components/rdp.md
@@ -919,6 +943,8 @@ generatedFiles:
   - docs/models/components/responseenvelopelistcertificateasset.md
   - docs/models/components/responseenvelopelistcollectionsresponsev1.md
   - docs/models/components/responseenvelopelisthostasset.md
+  - docs/models/components/responseenvelopelistrawcertificateresponse.md
+  - docs/models/components/responseenvelopelistsearchconvertqueryresponse.md
   - docs/models/components/responseenvelopelistwebpropertyasset.md
   - docs/models/components/responseenvelopesearchaggregateresponse.md
   - docs/models/components/responseenvelopesearchqueryresponse.md
@@ -964,6 +990,9 @@ generatedFiles:
   - docs/models/components/searchaggregateresponse.md
   - docs/models/components/searchaggregateresponsebucket.md
   - docs/models/components/searchcapabilities.md
+  - docs/models/components/searchconvertqueryinputbody.md
+  - docs/models/components/searchconvertqueryresponse.md
+  - docs/models/components/searchconvertqueryresponsetargets.md
   - docs/models/components/searchqueryhit.md
   - docs/models/components/searchqueryinputbody.md
   - docs/models/components/searchqueryresponse.md
@@ -1021,6 +1050,7 @@ generatedFiles:
   - docs/models/components/target.md
   - docs/models/components/target1.md
   - docs/models/components/target2.md
+  - docs/models/components/targets.md
   - docs/models/components/targetserviceid.md
   - docs/models/components/targettransportprotocol.md
   - docs/models/components/targetweborigin.md
@@ -1116,24 +1146,30 @@ generatedFiles:
   - docs/models/operations/v3collectionssearchqueryrequest.md
   - docs/models/operations/v3collectionssearchqueryresponse.md
   - docs/models/operations/v3globaldataassetcertificateglobals.md
-  - docs/models/operations/v3globaldataassetcertificatelistglobals.md
-  - docs/models/operations/v3globaldataassetcertificatelistrequest.md
-  - docs/models/operations/v3globaldataassetcertificatelistresponse.md
+  - docs/models/operations/v3globaldataassetcertificatelistpostglobals.md
+  - docs/models/operations/v3globaldataassetcertificatelistpostrequest.md
+  - docs/models/operations/v3globaldataassetcertificatelistpostresponse.md
+  - docs/models/operations/v3globaldataassetcertificatelistrawpostglobals.md
+  - docs/models/operations/v3globaldataassetcertificatelistrawpostrequest.md
+  - docs/models/operations/v3globaldataassetcertificatelistrawpostresponse.md
+  - docs/models/operations/v3globaldataassetcertificaterawglobals.md
+  - docs/models/operations/v3globaldataassetcertificaterawrequest.md
+  - docs/models/operations/v3globaldataassetcertificaterawresponse.md
   - docs/models/operations/v3globaldataassetcertificaterequest.md
   - docs/models/operations/v3globaldataassetcertificateresponse.md
   - docs/models/operations/v3globaldataassethostglobals.md
-  - docs/models/operations/v3globaldataassethostlistglobals.md
-  - docs/models/operations/v3globaldataassethostlistrequest.md
-  - docs/models/operations/v3globaldataassethostlistresponse.md
+  - docs/models/operations/v3globaldataassethostlistpostglobals.md
+  - docs/models/operations/v3globaldataassethostlistpostrequest.md
+  - docs/models/operations/v3globaldataassethostlistpostresponse.md
   - docs/models/operations/v3globaldataassethostrequest.md
   - docs/models/operations/v3globaldataassethostresponse.md
   - docs/models/operations/v3globaldataassethosttimelineglobals.md
   - docs/models/operations/v3globaldataassethosttimelinerequest.md
   - docs/models/operations/v3globaldataassethosttimelineresponse.md
   - docs/models/operations/v3globaldataassetwebpropertyglobals.md
-  - docs/models/operations/v3globaldataassetwebpropertylistglobals.md
-  - docs/models/operations/v3globaldataassetwebpropertylistrequest.md
-  - docs/models/operations/v3globaldataassetwebpropertylistresponse.md
+  - docs/models/operations/v3globaldataassetwebpropertylistpostglobals.md
+  - docs/models/operations/v3globaldataassetwebpropertylistpostrequest.md
+  - docs/models/operations/v3globaldataassetwebpropertylistpostresponse.md
   - docs/models/operations/v3globaldataassetwebpropertyrequest.md
   - docs/models/operations/v3globaldataassetwebpropertyresponse.md
   - docs/models/operations/v3globaldatascansgetglobals.md
@@ -1145,6 +1181,9 @@ generatedFiles:
   - docs/models/operations/v3globaldatasearchaggregateglobals.md
   - docs/models/operations/v3globaldatasearchaggregaterequest.md
   - docs/models/operations/v3globaldatasearchaggregateresponse.md
+  - docs/models/operations/v3globaldatasearchconvertglobals.md
+  - docs/models/operations/v3globaldatasearchconvertrequest.md
+  - docs/models/operations/v3globaldatasearchconvertresponse.md
   - docs/models/operations/v3globaldatasearchqueryglobals.md
   - docs/models/operations/v3globaldatasearchqueryrequest.md
   - docs/models/operations/v3globaldatasearchqueryresponse.md
@@ -1350,8 +1389,8 @@ examples:
           host_id: "8.8.8.8"
         query:
           organization_id: "<id>"
-          start_time: "2025-01-01T00:00:00Z"
-          end_time: "2025-01-02T00:00:00Z"
+          start_time: "2025-01-02T00:00:00Z"
+          end_time: "2025-01-01T00:00:00Z"
       responses:
         "200":
           application/vnd.censys.api.v3.host_timeline_event.v1+json: {}
@@ -1498,6 +1537,80 @@ examples:
         "200":
           application/json: {}
         "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-certificate-list-post:
+    speakeasy-default-v3-globaldata-asset-certificate-list-post:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"certificate_ids": ["3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf"]}
+      responses:
+        "200":
+          application/vnd.censys.api.v3.certificate.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-certificate-list-raw-post:
+    speakeasy-default-v3-globaldata-asset-certificate-list-raw-post:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"certificate_ids": ["3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf"]}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-certificate-raw:
+    speakeasy-default-v3-globaldata-asset-certificate-raw:
+      parameters:
+        path:
+          certificate_id: "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf"
+        query:
+          organization_id: "<id>"
+      responses:
+        "200":
+          application/x-pem-file: "x-file: example.file"
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-host-list-post:
+    speakeasy-default-v3-globaldata-asset-host-list-post:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"host_ids": ["8.8.8.8"]}
+      responses:
+        "200":
+          application/vnd.censys.api.v3.host.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-asset-webproperty-list-post:
+    speakeasy-default-v3-globaldata-asset-webproperty-list-post:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"webproperty_ids": ["platform.censys.io:80"]}
+      responses:
+        "200":
+          application/vnd.censys.api.v3.webproperty.v1+json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-search-convert:
+    speakeasy-default-v3-globaldata-search-convert:
+      parameters:
+        query:
+          organization_id: "<id>"
+      requestBody:
+        application/json: {"queries": ["<value 1>", "<value 2>", "<value 3>"]}
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+        "500":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
 examplesVersion: 1.0.2
 generatedTests: {}

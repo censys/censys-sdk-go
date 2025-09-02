@@ -16,6 +16,17 @@ type TargetWebOrigin struct {
 	Port int `json:"port"`
 }
 
+func (t TargetWebOrigin) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TargetWebOrigin) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"hostname", "port"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *TargetWebOrigin) GetHostname() string {
 	if o == nil {
 		return ""
@@ -33,6 +44,17 @@ func (o *TargetWebOrigin) GetPort() int {
 // Two - Rescan of known web property
 type Two struct {
 	WebOrigin TargetWebOrigin `json:"web_origin"`
+}
+
+func (t Two) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *Two) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"web_origin"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *Two) GetWebOrigin() TargetWebOrigin {
@@ -87,6 +109,17 @@ type TargetServiceID struct {
 	TransportProtocol TargetTransportProtocol `json:"transport_protocol"`
 }
 
+func (t TargetServiceID) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TargetServiceID) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"ip", "port", "protocol", "transport_protocol"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *TargetServiceID) GetIP() string {
 	if o == nil {
 		return ""
@@ -118,6 +151,17 @@ func (o *TargetServiceID) GetTransportProtocol() TargetTransportProtocol {
 // One - Rescan of known service
 type One struct {
 	ServiceID TargetServiceID `json:"service_id"`
+}
+
+func (o One) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(o, "", false)
+}
+
+func (o *One) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &o, "", false, []string{"service_id"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *One) GetServiceID() TargetServiceID {
@@ -162,14 +206,14 @@ func CreateScansRescanInputBodyTargetTwo(two Two) ScansRescanInputBodyTarget {
 func (u *ScansRescanInputBodyTarget) UnmarshalJSON(data []byte) error {
 
 	var one One = One{}
-	if err := utils.UnmarshalJSON(data, &one, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &one, "", true, nil); err == nil {
 		u.One = &one
 		u.Type = ScansRescanInputBodyTargetTypeOne
 		return nil
 	}
 
 	var two Two = Two{}
-	if err := utils.UnmarshalJSON(data, &two, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &two, "", true, nil); err == nil {
 		u.Two = &two
 		u.Type = ScansRescanInputBodyTargetTypeTwo
 		return nil

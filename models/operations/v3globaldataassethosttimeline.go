@@ -24,9 +24,9 @@ type V3GlobaldataAssetHostTimelineRequest struct {
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The IP address of a host.
 	HostID string `pathParam:"style=simple,explode=false,name=host_id"`
-	// Start time of the host timeline. Must be a valid RFC3339 string. Ensure that you suffix the date with T00:00:00Z or a specific time.
+	// Start time of the host timeline. Equivalent to the To field in the event history UI. This must be the timestamp closest to the current time. For example, if you want events from January 1, 2025 to the start of January 2, 2025, input the January 2 timestamp here. Must be a valid RFC3339 string. Ensure that you suffix the date with T00:00:00Z or a specific time.
 	StartTime time.Time `queryParam:"style=form,explode=false,name=start_time"`
-	// End time of the host timeline. Must be a valid RFC3339 string. Ensure that you suffix the date with T00:00:00Z or a specific time.
+	// End time of the host timeline. Equivalent to the From field in the event history UI. This must be the timestamp furthest from the current time. For example, if you want events from January 1, 2025 to the start of January 2, 2025, input the January 1 timestamp here. Must be a valid RFC3339 string. Ensure that you suffix the date with T00:00:00Z or a specific time.
 	EndTime time.Time `queryParam:"style=form,explode=false,name=end_time"`
 }
 
@@ -35,7 +35,7 @@ func (v V3GlobaldataAssetHostTimelineRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3GlobaldataAssetHostTimelineRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"host_id", "start_time", "end_time"}); err != nil {
 		return err
 	}
 	return nil

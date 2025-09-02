@@ -131,7 +131,7 @@ func (v V3CollectionsListEventsRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3CollectionsListEventsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"collection_uid"}); err != nil {
 		return err
 	}
 	return nil

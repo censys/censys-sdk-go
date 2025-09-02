@@ -33,7 +33,7 @@ func (v V3GlobaldataAssetWebpropertyRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3GlobaldataAssetWebpropertyRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"webproperty_id"}); err != nil {
 		return err
 	}
 	return nil

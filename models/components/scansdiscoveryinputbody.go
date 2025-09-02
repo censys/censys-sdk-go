@@ -15,6 +15,17 @@ type HostnamePort struct {
 	Port int `json:"port"`
 }
 
+func (h HostnamePort) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(h, "", false)
+}
+
+func (h *HostnamePort) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"hostname", "port"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *HostnamePort) GetHostname() string {
 	if o == nil {
 		return ""
@@ -34,6 +45,17 @@ type Target2 struct {
 	HostnamePort HostnamePort `json:"hostname_port"`
 }
 
+func (t Target2) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *Target2) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"hostname_port"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *Target2) GetHostnamePort() HostnamePort {
 	if o == nil {
 		return HostnamePort{}
@@ -46,6 +68,17 @@ type HostPort struct {
 	IP string `json:"ip"`
 	// Port number to scan
 	Port int `json:"port"`
+}
+
+func (h HostPort) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(h, "", false)
+}
+
+func (h *HostPort) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"ip", "port"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *HostPort) GetIP() string {
@@ -65,6 +98,17 @@ func (o *HostPort) GetPort() int {
 // Target1 - Discovery scan against IP:PORT
 type Target1 struct {
 	HostPort HostPort `json:"host_port"`
+}
+
+func (t Target1) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *Target1) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"host_port"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *Target1) GetHostPort() HostPort {
@@ -109,14 +153,14 @@ func CreateScansDiscoveryInputBodyTargetTarget2(target2 Target2) ScansDiscoveryI
 func (u *ScansDiscoveryInputBodyTarget) UnmarshalJSON(data []byte) error {
 
 	var target1 Target1 = Target1{}
-	if err := utils.UnmarshalJSON(data, &target1, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &target1, "", true, nil); err == nil {
 		u.Target1 = &target1
 		u.Type = ScansDiscoveryInputBodyTargetTypeTarget1
 		return nil
 	}
 
 	var target2 Target2 = Target2{}
-	if err := utils.UnmarshalJSON(data, &target2, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &target2, "", true, nil); err == nil {
 		u.Target2 = &target2
 		u.Type = ScansDiscoveryInputBodyTargetTypeTarget2
 		return nil
