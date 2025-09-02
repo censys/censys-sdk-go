@@ -1,7 +1,9 @@
 package main
 
 import (
+	"bytes"
 	"context"
+	"io"
 	"os"
 	"testing"
 	"time"
@@ -38,7 +40,35 @@ func TestSDKSuite(t *testing.T) {
 	suite.Run(t, new(SDKTestSuite))
 }
 
-func (s *SDKTestSuite) TestGlobalDataCertificate() {
+func (s *SDKTestSuite) TestGlobalData_GetCertificates() {
+	certIDs := []string{
+		"00000002741c89f06524afbbb4720876bc173aca3a6ce344e08584859b9ac34e",
+		"000000033b547e13ee216c65b0ff50237f0decef12acb76fce0a96afa9c70d50",
+	}
+	res, err := s.client.GlobalData.GetCertificates(s.ctx, operations.V3GlobaldataAssetCertificateListPostRequest{
+		AssetCertificateListInputBody: components.AssetCertificateListInputBody{
+			CertificateIds: certIDs,
+		},
+	})
+	require.NoError(s.T(), err)
+	require.NotNil(s.T(), res)
+}
+
+func (s *SDKTestSuite) TestGlobalData_GetCertificatesRaw() {
+	certIDs := []string{
+		"00000002741c89f06524afbbb4720876bc173aca3a6ce344e08584859b9ac34e",
+		"000000033b547e13ee216c65b0ff50237f0decef12acb76fce0a96afa9c70d50",
+	}
+	res, err := s.client.GlobalData.GetCertificatesRaw(s.ctx, operations.V3GlobaldataAssetCertificateListRawPostRequest{
+		AssetCertificateListInputBody: components.AssetCertificateListInputBody{
+			CertificateIds: certIDs,
+		},
+	})
+	require.NoError(s.T(), err)
+	require.NotNil(s.T(), res)
+}
+
+func (s *SDKTestSuite) TestGlobalData_GetCertificate() {
 	certID := "00000002741c89f06524afbbb4720876bc173aca3a6ce344e08584859b9ac34e"
 	res, err := s.client.GlobalData.GetCertificate(s.ctx, operations.V3GlobaldataAssetCertificateRequest{
 		CertificateID: certID,
@@ -47,28 +77,32 @@ func (s *SDKTestSuite) TestGlobalDataCertificate() {
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestGlobalDataCertificatesList() {
-	certIDs := []string{
-		"00000002741c89f06524afbbb4720876bc173aca3a6ce344e08584859b9ac34e",
-		"000000033b547e13ee216c65b0ff50237f0decef12acb76fce0a96afa9c70d50",
-	}
-	res, err := s.client.GlobalData.GetCertificates(s.ctx, operations.V3GlobaldataAssetCertificateListRequest{
-		CertificateIds: certIDs,
+func (s *SDKTestSuite) TestGlobalData_GetCertificateRaw() {
+	certID := "00000002741c89f06524afbbb4720876bc173aca3a6ce344e08584859b9ac34e"
+	res, err := s.client.GlobalData.GetCertificateRaw(s.ctx, operations.V3GlobaldataAssetCertificateRawRequest{
+		CertificateID: certID,
 	})
 	require.NoError(s.T(), err)
 	require.NotNil(s.T(), res)
+	defer res.ResponseStream.Close()
+	buf := new(bytes.Buffer)
+	n, err := io.Copy(buf, res.ResponseStream)
+	require.NoError(s.T(), err)
+	require.NotNil(s.T(), n)
 }
 
-func (s *SDKTestSuite) TestGlobalDataHostList() {
+func (s *SDKTestSuite) TestGlobalData_GetHosts() {
 	hostIDs := []string{"1.1.1.1", "8.8.8.8"}
-	res, err := s.client.GlobalData.GetHosts(s.ctx, operations.V3GlobaldataAssetHostListRequest{
-		HostIds: hostIDs,
+	res, err := s.client.GlobalData.GetHosts(s.ctx, operations.V3GlobaldataAssetHostListPostRequest{
+		AssetHostListInputBody: components.AssetHostListInputBody{
+			HostIds: hostIDs,
+		},
 	})
 	require.NoError(s.T(), err)
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestGlobalDataHost() {
+func (s *SDKTestSuite) TestGlobalData_GetHost() {
 	hostID := "125.13.31.107"
 	atTime, err := time.Parse(time.RFC3339, "2025-03-20T00:00:00Z")
 	require.NoError(s.T(), err)
@@ -80,7 +114,7 @@ func (s *SDKTestSuite) TestGlobalDataHost() {
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestGlobalDataHostTimeline() {
+func (s *SDKTestSuite) TestGlobalData_GetHostTimeline() {
 	hostID := "125.13.31.107"
 	startTime, err := time.Parse(time.RFC3339, "2025-03-20T00:00:00Z")
 	require.NoError(s.T(), err)
@@ -95,7 +129,21 @@ func (s *SDKTestSuite) TestGlobalDataHostTimeline() {
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestGlobalDataWebProperty() {
+func (s *SDKTestSuite) TestGlobalData_GetWebProperties() {
+	webPropertyIDs := []string{
+		"104.236.29.250:443",
+		"78.133.74.135:49152",
+	}
+	res, err := s.client.GlobalData.GetWebProperties(s.ctx, operations.V3GlobaldataAssetWebpropertyListPostRequest{
+		AssetWebpropertyListInputBody: components.AssetWebpropertyListInputBody{
+			WebpropertyIds: webPropertyIDs,
+		},
+	})
+	require.NoError(s.T(), err)
+	require.NotNil(s.T(), res)
+}
+
+func (s *SDKTestSuite) TestGlobalData_GetWebProperty() {
 	webPropertyID := "104.236.29.250:443"
 	res, err := s.client.GlobalData.GetWebProperty(s.ctx, operations.V3GlobaldataAssetWebpropertyRequest{
 		WebpropertyID: webPropertyID,
@@ -104,19 +152,7 @@ func (s *SDKTestSuite) TestGlobalDataWebProperty() {
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestGlobalDataWebPropertiesList() {
-	webPropertyIDs := []string{
-		"104.236.29.250:443",
-		"78.133.74.135:49152",
-	}
-	res, err := s.client.GlobalData.GetWebProperties(s.ctx, operations.V3GlobaldataAssetWebpropertyListRequest{
-		WebpropertyIds: webPropertyIDs,
-	})
-	require.NoError(s.T(), err)
-	require.NotNil(s.T(), res)
-}
-
-func (s *SDKTestSuite) TestGlobalDataSearchAggregate() {
+func (s *SDKTestSuite) TestGlobalData_Aggregate() {
 	res, err := s.client.GlobalData.Aggregate(s.ctx, operations.V3GlobaldataSearchAggregateRequest{
 		SearchAggregateInputBody: components.SearchAggregateInputBody{
 			Field:           "web.endpoints.http.status_reason",
@@ -128,7 +164,7 @@ func (s *SDKTestSuite) TestGlobalDataSearchAggregate() {
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestGlobalDataSearchQuery() {
+func (s *SDKTestSuite) TestGlobalData_Search() {
 	pageSize := int64(3)
 	res, err := s.client.GlobalData.Search(s.ctx, operations.V3GlobaldataSearchQueryRequest{
 		SearchQueryInputBody: components.SearchQueryInputBody{
