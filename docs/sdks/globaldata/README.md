@@ -8,17 +8,19 @@ Endpoints related to the Global Data product
 ### Available Operations
 
 * [GetCertificates](#getcertificates) - Get multiple certificates
+* [GetCertificatesRaw](#getcertificatesraw) - Get multiple certificates in PEM format
 * [GetCertificate](#getcertificate) - Get a certificate
+* [GetCertificateRaw](#getcertificateraw) - Get a certificate in PEM format
 * [GetHosts](#gethosts) - Get multiple hosts
 * [GetHost](#gethost) - Get a host
 * [GetHostTimeline](#gethosttimeline) - Get host event history
 * [GetWebProperties](#getwebproperties) - Get multiple web properties
 * [GetWebProperty](#getwebproperty) - Get a web property
-* [CreateTrackedScan](#createtrackedscan) - Create a tracked rescan
-* [GetTrackedScan](#gettrackedscan) - Get tracked scan details
+* [CreateTrackedScan](#createtrackedscan) - Live Rescan: Initiate a new rescan
+* [GetTrackedScan](#gettrackedscan) - Get scan status
 * [Aggregate](#aggregate) - Aggregate results for a search query
+* [ConvertLegacySearchQueries](#convertlegacysearchqueries) - Convert Legacy Search queries to Platform queries
 * [Search](#search) - Run a search query
-* [GetTrackedScanThreatHunting](#gettrackedscanthreathunting) - Get tracked scan details
 
 ## GetCertificates
 
@@ -26,13 +28,14 @@ Retrieve information about multiple certificates. A certificate ID is its SHA-25
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate-list" method="get" path="/v3/global/asset/certificate" -->
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate-list-post" method="post" path="/v3/global/asset/certificate" -->
 ```go
 package main
 
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -45,9 +48,11 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.GlobalData.GetCertificates(ctx, operations.V3GlobaldataAssetCertificateListRequest{
-        CertificateIds: []string{
-            "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+    res, err := s.GlobalData.GetCertificates(ctx, operations.V3GlobaldataAssetCertificateListPostRequest{
+        AssetCertificateListInputBody: components.AssetCertificateListInputBody{
+            CertificateIds: []string{
+                "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+            },
         },
     })
     if err != nil {
@@ -61,21 +66,82 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.V3GlobaldataAssetCertificateListRequest](../../models/operations/v3globaldataassetcertificatelistrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `opts`                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                 | :heavy_minus_sign:                                                                                                       | The options for this request.                                                                                            |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                                            | :heavy_check_mark:                                                                                                               | The context to use for the request.                                                                                              |
+| `request`                                                                                                                        | [operations.V3GlobaldataAssetCertificateListPostRequest](../../models/operations/v3globaldataassetcertificatelistpostrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `opts`                                                                                                                           | [][operations.Option](../../models/operations/option.md)                                                                         | :heavy_minus_sign:                                                                                                               | The options for this request.                                                                                                    |
 
 ### Response
 
-**[*operations.V3GlobaldataAssetCertificateListResponse](../../models/operations/v3globaldataassetcertificatelistresponse.md), error**
+**[*operations.V3GlobaldataAssetCertificateListPostResponse](../../models/operations/v3globaldataassetcertificatelistpostresponse.md), error**
 
 ### Errors
 
 | Error Type               | Status Code              | Content Type             |
 | ------------------------ | ------------------------ | ------------------------ |
 | sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
+| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+
+## GetCertificatesRaw
+
+Retrieve the raw PEM-encoded format for multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate-list-raw-post" method="post" path="/v3/global/asset/certificate/raw" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.GetCertificatesRaw(ctx, operations.V3GlobaldataAssetCertificateListRawPostRequest{
+        AssetCertificateListInputBody: components.AssetCertificateListInputBody{
+            CertificateIds: []string{
+                "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+            },
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeListRawCertificateResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                                  | :heavy_check_mark:                                                                                                                     | The context to use for the request.                                                                                                    |
+| `request`                                                                                                                              | [operations.V3GlobaldataAssetCertificateListRawPostRequest](../../models/operations/v3globaldataassetcertificatelistrawpostrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `opts`                                                                                                                                 | [][operations.Option](../../models/operations/option.md)                                                                               | :heavy_minus_sign:                                                                                                                     | The options for this request.                                                                                                          |
+
+### Response
+
+**[*operations.V3GlobaldataAssetCertificateListRawPostResponse](../../models/operations/v3globaldataassetcertificatelistrawpostresponse.md), error**
+
+### Errors
+
+| Error Type               | Status Code              | Content Type             |
+| ------------------------ | ------------------------ | ------------------------ |
+| sdkerrors.ErrorModel     | 401, 404                 | application/problem+json |
 | sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
 
 ## GetCertificate
@@ -134,13 +200,13 @@ func main() {
 | sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
 | sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
 
-## GetHosts
+## GetCertificateRaw
 
-Retrieve information about multiple hosts. A host ID is its IP address.
+Retrieve the raw PEM-encoded format of a certificate. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-host-list" method="get" path="/v3/global/asset/host" -->
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-certificate-raw" method="get" path="/v3/global/asset/certificate/{certificate_id}/raw" -->
 ```go
 package main
 
@@ -159,9 +225,68 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.GlobalData.GetHosts(ctx, operations.V3GlobaldataAssetHostListRequest{
-        HostIds: []string{
-            "8.8.8.8",
+    res, err := s.GlobalData.GetCertificateRaw(ctx, operations.V3GlobaldataAssetCertificateRawRequest{
+        CertificateID: "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseStream != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.V3GlobaldataAssetCertificateRawRequest](../../models/operations/v3globaldataassetcertificaterawrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `opts`                                                                                                                 | [][operations.Option](../../models/operations/option.md)                                                               | :heavy_minus_sign:                                                                                                     | The options for this request.                                                                                          |
+
+### Response
+
+**[*operations.V3GlobaldataAssetCertificateRawResponse](../../models/operations/v3globaldataassetcertificaterawresponse.md), error**
+
+### Errors
+
+| Error Type               | Status Code              | Content Type             |
+| ------------------------ | ------------------------ | ------------------------ |
+| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
+| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+
+## GetHosts
+
+Retrieve information about multiple hosts. A host ID is its IP address.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-host-list-post" method="post" path="/v3/global/asset/host" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.GetHosts(ctx, operations.V3GlobaldataAssetHostListPostRequest{
+        AssetHostListInputBody: components.AssetHostListInputBody{
+            HostIds: []string{
+                "8.8.8.8",
+            },
         },
     })
     if err != nil {
@@ -175,15 +300,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
-| `request`                                                                                                  | [operations.V3GlobaldataAssetHostListRequest](../../models/operations/v3globaldataassethostlistrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `opts`                                                                                                     | [][operations.Option](../../models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.V3GlobaldataAssetHostListPostRequest](../../models/operations/v3globaldataassethostlistpostrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../models/operations/option.md)                                                           | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
 
 ### Response
 
-**[*operations.V3GlobaldataAssetHostListResponse](../../models/operations/v3globaldataassethostlistresponse.md), error**
+**[*operations.V3GlobaldataAssetHostListPostResponse](../../models/operations/v3globaldataassethostlistpostresponse.md), error**
 
 ### Errors
 
@@ -252,7 +377,7 @@ func main() {
 
 ## GetHostTimeline
 
-Retrieve event history for a host. A host ID is its IP address.
+Retrieve event history for a host. A host ID is its IP address.<br><br>Note that when a service protocol changes after a new scan (for example, from `UNKNOWN` to `NETBIOS`), this information will only be reflected in the `scan` object. It will not be shown in the `service_scanned diff` object.
 
 ### Example Usage
 
@@ -278,8 +403,8 @@ func main() {
 
     res, err := s.GlobalData.GetHostTimeline(ctx, operations.V3GlobaldataAssetHostTimelineRequest{
         HostID: "8.8.8.8",
-        StartTime: types.MustTimeFromString("2025-01-01T00:00:00Z"),
-        EndTime: types.MustTimeFromString("2025-01-02T00:00:00Z"),
+        StartTime: types.MustTimeFromString("2025-01-02T00:00:00Z"),
+        EndTime: types.MustTimeFromString("2025-01-01T00:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
@@ -315,13 +440,14 @@ Retrieve information about multiple web properties. Web properties are identifie
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-webproperty-list" method="get" path="/v3/global/asset/webproperty" -->
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-webproperty-list-post" method="post" path="/v3/global/asset/webproperty" -->
 ```go
 package main
 
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -334,9 +460,11 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.GlobalData.GetWebProperties(ctx, operations.V3GlobaldataAssetWebpropertyListRequest{
-        WebpropertyIds: []string{
-            "platform.censys.io:80",
+    res, err := s.GlobalData.GetWebProperties(ctx, operations.V3GlobaldataAssetWebpropertyListPostRequest{
+        AssetWebpropertyListInputBody: components.AssetWebpropertyListInputBody{
+            WebpropertyIds: []string{
+                "platform.censys.io:80",
+            },
         },
     })
     if err != nil {
@@ -350,15 +478,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
-| `request`                                                                                                                | [operations.V3GlobaldataAssetWebpropertyListRequest](../../models/operations/v3globaldataassetwebpropertylistrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `opts`                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                 | :heavy_minus_sign:                                                                                                       | The options for this request.                                                                                            |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                                            | :heavy_check_mark:                                                                                                               | The context to use for the request.                                                                                              |
+| `request`                                                                                                                        | [operations.V3GlobaldataAssetWebpropertyListPostRequest](../../models/operations/v3globaldataassetwebpropertylistpostrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `opts`                                                                                                                           | [][operations.Option](../../models/operations/option.md)                                                                         | :heavy_minus_sign:                                                                                                               | The options for this request.                                                                                                    |
 
 ### Response
 
-**[*operations.V3GlobaldataAssetWebpropertyListResponse](../../models/operations/v3globaldataassetwebpropertylistresponse.md), error**
+**[*operations.V3GlobaldataAssetWebpropertyListPostResponse](../../models/operations/v3globaldataassetwebpropertylistpostresponse.md), error**
 
 ### Errors
 
@@ -427,7 +555,7 @@ func main() {
 
 ## CreateTrackedScan
 
-Create a new tracked rescan for a known service or web property. Rescans are used to update information for previously discovered targets. The scan will be queued. The response will contain a scan ID that you can use with the [get tracked scan details endpoint](https://docs.censys.com/reference/v3-globaldata-scans-get#/) to monitor its status and results.<br><br>This endpoint is available to all Enterprise customers.
+Initiate a rescan for a known host service at a specific IP and port (`ip:port`) or hostname and port (`hostname:port`). This is equivalent to the [Live Rescan](https://docs.censys.com/docs/platform-live-rescan#/) feature available in the UI, but you can also target web properties in addition to hosts.<br><br>The scan may take several minutes to complete. The response will contain a scan ID that you can use to [monitor the scan's status](https://docs.censys.com/reference/v3-globaldata-scans-get#/). After the scan completes, perform a lookup on the target asset to retrieve detailed scan information.<br><br>This endpoint is available to all Enterprise customers. It costs 10 credits to execute.
 
 ### Example Usage
 
@@ -493,8 +621,7 @@ func main() {
 
 ## GetTrackedScan
 
-Retrieve the current status and results of a tracked scan by its ID.
-        This endpoint works for both discovery scans and rescans.
+Retrieve the current status of a scan by its ID. This endpoint works for both [Live Discovery scans](https://docs.censys.com/reference/v3-threathunting-scans-discovery#/) and [Live Rescans](https://docs.censys.com/reference/v3-globaldata-scans-rescan#/).<br><br>If the scan was successful, perform a lookup on the target asset to retrieve detailed scan information.<br><br>This endpoint is available to all Enterprise customers. This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -609,6 +736,70 @@ func main() {
 | sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
 | sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
 
+## ConvertLegacySearchQueries
+
+Convert Censys Search Language queries used in Legacy Search into Censys Query Language (CenQL) queries for use in the Platform.<br><br>Reference the [documentation on CenQL](https://docs.censys.com/docs/censys-query-language) for more information about query syntax.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-search-convert" method="post" path="/v3/global/search/convert" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.ConvertLegacySearchQueries(ctx, operations.V3GlobaldataSearchConvertRequest{
+        SearchConvertQueryInputBody: components.SearchConvertQueryInputBody{
+            Queries: []string{
+                "<value 1>",
+                "<value 2>",
+                "<value 3>",
+            },
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeListSearchConvertQueryResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.V3GlobaldataSearchConvertRequest](../../models/operations/v3globaldatasearchconvertrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.V3GlobaldataSearchConvertResponse](../../models/operations/v3globaldatasearchconvertresponse.md), error**
+
+### Errors
+
+| Error Type               | Status Code              | Content Type             |
+| ------------------------ | ------------------------ | ------------------------ |
+| sdkerrors.ErrorModel     | 401                      | application/problem+json |
+| sdkerrors.ErrorModel     | 500                      | application/problem+json |
+| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+
 ## Search
 
 Run a search query across Censys data. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax.
@@ -664,63 +855,6 @@ func main() {
 ### Response
 
 **[*operations.V3GlobaldataSearchQueryResponse](../../models/operations/v3globaldatasearchqueryresponse.md), error**
-
-### Errors
-
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
-
-## GetTrackedScanThreatHunting
-
-Retrieve the current status and results of a tracked scan by its ID.
-        This endpoint works for both discovery scans and rescans.
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="v3-threathunting-scans-get" method="get" path="/v3/threat-hunting/scans/{scan_id}" -->
-```go
-package main
-
-import(
-	"context"
-	censyssdkgo "github.com/censys/censys-sdk-go"
-	"github.com/censys/censys-sdk-go/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
-        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
-    )
-
-    res, err := s.GlobalData.GetTrackedScanThreatHunting(ctx, operations.V3ThreathuntingScansGetRequest{
-        ScanID: "cd62e794-9f12-4c2f-b5b3-153853aaf8d9",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ResponseEnvelopeTrackedScan != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.V3ThreathuntingScansGetRequest](../../models/operations/v3threathuntingscansgetrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../models/operations/option.md)                                               | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
-
-### Response
-
-**[*operations.V3ThreathuntingScansGetResponse](../../models/operations/v3threathuntingscansgetresponse.md), error**
 
 ### Errors
 

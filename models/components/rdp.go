@@ -8,6 +8,7 @@ type Rdp struct {
 	ProtocolFlags            *RdpProtocolFlags    `json:"protocol_flags,omitempty"`
 	SelectedSecurityProtocol *RdpSecurityProtocol `json:"selected_security_protocol,omitempty"`
 	Version                  *RdpVersion          `json:"version,omitempty"`
+	X224CcPduDstref          *int                 `json:"x224_cc_pdu_dstref,omitempty"`
 	X224CcPduSrcref          *int                 `json:"x224_cc_pdu_srcref,omitempty"`
 }
 
@@ -44,6 +45,13 @@ func (o *Rdp) GetVersion() *RdpVersion {
 		return nil
 	}
 	return o.Version
+}
+
+func (o *Rdp) GetX224CcPduDstref() *int {
+	if o == nil {
+		return nil
+	}
+	return o.X224CcPduDstref
 }
 
 func (o *Rdp) GetX224CcPduSrcref() *int {

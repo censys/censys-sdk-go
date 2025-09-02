@@ -1,0 +1,9 @@
+# AlternativeQuery
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `Query`                                                                                                 | *string*                                                                                                | :heavy_check_mark:                                                                                      | An alternative query that may be used.                                                                  |
+| `Targets`                                                                                               | [][components.Targets](../../models/components/targets.md)                                              | :heavy_check_mark:                                                                                      | The types of Platform data records (host, cert, and web) that can be targeted by the alternative query. |

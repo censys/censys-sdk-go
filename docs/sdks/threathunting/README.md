@@ -7,72 +7,14 @@ Endpoints related to the Threat Hunting product
 
 ### Available Operations
 
-* [GetTrackedScan](#gettrackedscan) - Get tracked scan details
-* [GetHostObservationsWithCertificate](#gethostobservationswithcertificate) - Get Host Observations With Certificate
-* [CreateTrackedScan](#createtrackedscan) - Create a tracked discovery scan
-* [GetTrackedScanThreatHunting](#gettrackedscanthreathunting) - Get tracked scan details
+* [GetHostObservationsWithCertificate](#gethostobservationswithcertificate) - Get host history for a certificate
+* [CreateTrackedScan](#createtrackedscan) - Live Discovery: Initiate a new scan
+* [GetTrackedScanThreatHunting](#gettrackedscanthreathunting) - Get scan status
 * [ValueCounts](#valuecounts) - CensEye: Retrieve value counts to discover pivots
-
-## GetTrackedScan
-
-Retrieve the current status and results of a tracked scan by its ID.
-        This endpoint works for both discovery scans and rescans.
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="v3-globaldata-scans-get" method="get" path="/v3/global/scans/{scan_id}" -->
-```go
-package main
-
-import(
-	"context"
-	censyssdkgo "github.com/censys/censys-sdk-go"
-	"github.com/censys/censys-sdk-go/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
-        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
-    )
-
-    res, err := s.ThreatHunting.GetTrackedScan(ctx, operations.V3GlobaldataScansGetRequest{
-        ScanID: "5f39588f-d4c5-48e5-8894-0bb5918c28fa",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ResponseEnvelopeTrackedScan != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.V3GlobaldataScansGetRequest](../../models/operations/v3globaldatascansgetrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../models/operations/option.md)                                         | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
-
-### Response
-
-**[*operations.V3GlobaldataScansGetResponse](../../models/operations/v3globaldatascansgetresponse.md), error**
-
-### Errors
-
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
 
 ## GetHostObservationsWithCertificate
 
-Retrieve historical observations of hosts associated with a certificate fingerprint. Useful for threat hunting, detection engineering, and timeline generation.
+Retrieve the historical observations of hosts associated with a certificate. This is useful for threat hunting, detection engineering, and timeline generation. Certificate history is also visible to Threat Hunting users in the Platform UI on the [certificate timeline](https://docs.censys.com/docs/platform-threat-hunting-use-cert-history-to-build-better-detections#/).<br><br>You can define a specific time frame of interest. If you do not specify a time frame, this endpoint will search the historical dataset that is available to your account. You may also filter results by port and transport protocol.<br><br>This endpoint is available to organizations that have access to the Threat Hunting module. It costs 5 credits per page of results.
 
 ### Example Usage
 
@@ -133,7 +75,7 @@ func main() {
 
 ## CreateTrackedScan
 
-Create a new tracked discovery scan for a specified target. Discovery scans are used to scan new targets that have not been previously identified. The scan will be queued. The response will contain a scan ID that you can use with the [get tracked scan details endpoint](https://docs.censys.com/reference/v3-globaldata-scans-get#/) to monitor its status and results.<br><br>This endpoint is available to organizations that have access to the Threat Hunting module.
+Initiate a scan to look for a currently unobserved service at a specific IP and port (`ip:port`) or hostname and port (`hostname:port`). This is equivalent to the [Live Discovery](https://docs.censys.com/docs/platform-threat-hunting-use-live-scan-and-rescan-to-validate-infrastructure#/) feature available in the UI, but you can also target web properties in addition to hosts.<br><br>The scan may take several minutes to complete. The response will contain a scan ID that you can use to [monitor the scan's status](https://docs.censys.com/reference/v3-threathunting-scans-get#/). After the scan completes, perform a lookup on the target asset to retrieve detailed scan information.<br><br>This endpoint is available to organizations that have access to the Threat Hunting module. It costs 15 credits to execute this endpoint.
 
 ### Example Usage
 
@@ -199,8 +141,7 @@ func main() {
 
 ## GetTrackedScanThreatHunting
 
-Retrieve the current status and results of a tracked scan by its ID.
-        This endpoint works for both discovery scans and rescans.
+Retrieve the current status of a scan by its ID. This endpoint works for both [Live Discovery scans](https://docs.censys.com/reference/v3-threathunting-scans-discovery#/) and [Live Rescans](https://docs.censys.com/reference/v3-globaldata-scans-rescan#/).<br><br>If the scan was successful, perform a lookup on the target asset to retrieve detailed scan information.<br><br>This endpoint is available to all Enterprise customers. This endpoint does not cost any credits to execute.
 
 ### Example Usage
 

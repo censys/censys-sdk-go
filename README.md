@@ -108,25 +108,26 @@ func main() {
 ### [GlobalData](docs/sdks/globaldata/README.md)
 
 * [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Get multiple certificates
+* [GetCertificatesRaw](docs/sdks/globaldata/README.md#getcertificatesraw) - Get multiple certificates in PEM format
 * [GetCertificate](docs/sdks/globaldata/README.md#getcertificate) - Get a certificate
+* [GetCertificateRaw](docs/sdks/globaldata/README.md#getcertificateraw) - Get a certificate in PEM format
 * [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Get multiple hosts
 * [GetHost](docs/sdks/globaldata/README.md#gethost) - Get a host
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
 * [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Get multiple web properties
 * [GetWebProperty](docs/sdks/globaldata/README.md#getwebproperty) - Get a web property
-* [CreateTrackedScan](docs/sdks/globaldata/README.md#createtrackedscan) - Create a tracked rescan
-* [GetTrackedScan](docs/sdks/globaldata/README.md#gettrackedscan) - Get tracked scan details
+* [CreateTrackedScan](docs/sdks/globaldata/README.md#createtrackedscan) - Live Rescan: Initiate a new rescan
+* [GetTrackedScan](docs/sdks/globaldata/README.md#gettrackedscan) - Get scan status
 * [Aggregate](docs/sdks/globaldata/README.md#aggregate) - Aggregate results for a search query
+* [ConvertLegacySearchQueries](docs/sdks/globaldata/README.md#convertlegacysearchqueries) - Convert Legacy Search queries to Platform queries
 * [Search](docs/sdks/globaldata/README.md#search) - Run a search query
-* [GetTrackedScanThreatHunting](docs/sdks/globaldata/README.md#gettrackedscanthreathunting) - Get tracked scan details
 
 
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
-* [GetTrackedScan](docs/sdks/threathunting/README.md#gettrackedscan) - Get tracked scan details
-* [GetHostObservationsWithCertificate](docs/sdks/threathunting/README.md#gethostobservationswithcertificate) - Get Host Observations With Certificate
-* [CreateTrackedScan](docs/sdks/threathunting/README.md#createtrackedscan) - Create a tracked discovery scan
-* [GetTrackedScanThreatHunting](docs/sdks/threathunting/README.md#gettrackedscanthreathunting) - Get tracked scan details
+* [GetHostObservationsWithCertificate](docs/sdks/threathunting/README.md#gethostobservationswithcertificate) - Get host history for a certificate
+* [CreateTrackedScan](docs/sdks/threathunting/README.md#createtrackedscan) - Live Discovery: Initiate a new scan
+* [GetTrackedScanThreatHunting](docs/sdks/threathunting/README.md#gettrackedscanthreathunting) - Get scan status
 * [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - CensEye: Retrieve value counts to discover pivots
 
 </details>
