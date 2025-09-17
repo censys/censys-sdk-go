@@ -7,16 +7,16 @@ type Ike struct {
 	V2 *IkeV2 `json:"v2,omitempty"`
 }
 
-func (o *Ike) GetV1() *IkeV1 {
-	if o == nil {
+func (i *Ike) GetV1() *IkeV1 {
+	if i == nil {
 		return nil
 	}
-	return o.V1
+	return i.V1
 }
 
-func (o *Ike) GetV2() *IkeV2 {
-	if o == nil {
+func (i *Ike) GetV2() *IkeV2 {
+	if i == nil {
 		return nil
 	}
-	return o.V2
+	return i.V2
 }

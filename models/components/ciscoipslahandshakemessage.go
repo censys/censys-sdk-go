@@ -9,30 +9,30 @@ type CiscoIpslaHandshakeMessage struct {
 	Type   *int    `json:"type,omitempty"`
 }
 
-func (o *CiscoIpslaHandshakeMessage) GetIP() *string {
-	if o == nil {
+func (c *CiscoIpslaHandshakeMessage) GetIP() *string {
+	if c == nil {
 		return nil
 	}
-	return o.IP
+	return c.IP
 }
 
-func (o *CiscoIpslaHandshakeMessage) GetLength() *int {
-	if o == nil {
+func (c *CiscoIpslaHandshakeMessage) GetLength() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Length
+	return c.Length
 }
 
-func (o *CiscoIpslaHandshakeMessage) GetPort() *int {
-	if o == nil {
+func (c *CiscoIpslaHandshakeMessage) GetPort() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Port
+	return c.Port
 }
 
-func (o *CiscoIpslaHandshakeMessage) GetType() *int {
-	if o == nil {
+func (c *CiscoIpslaHandshakeMessage) GetType() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }

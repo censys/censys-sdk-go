@@ -7,16 +7,16 @@ type Ssdp struct {
 	UpnpURL *string                        `json:"upnp_url,omitempty"`
 }
 
-func (o *Ssdp) GetHeaders() map[string]HTTPRepeatedHeaders {
-	if o == nil {
+func (s *Ssdp) GetHeaders() map[string]HTTPRepeatedHeaders {
+	if s == nil {
 		return nil
 	}
-	return o.Headers
+	return s.Headers
 }
 
-func (o *Ssdp) GetUpnpURL() *string {
-	if o == nil {
+func (s *Ssdp) GetUpnpURL() *string {
+	if s == nil {
 		return nil
 	}
-	return o.UpnpURL
+	return s.UpnpURL
 }

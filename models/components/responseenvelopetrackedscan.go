@@ -6,9 +6,9 @@ type ResponseEnvelopeTrackedScan struct {
 	Result *TrackedScan `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeTrackedScan) GetResult() *TrackedScan {
-	if o == nil {
+func (r *ResponseEnvelopeTrackedScan) GetResult() *TrackedScan {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

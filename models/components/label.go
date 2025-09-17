@@ -49,30 +49,30 @@ type Label struct {
 	Value      *string      `json:"value,omitempty"`
 }
 
-func (o *Label) GetConfidence() *float64 {
-	if o == nil {
+func (l *Label) GetConfidence() *float64 {
+	if l == nil {
 		return nil
 	}
-	return o.Confidence
+	return l.Confidence
 }
 
-func (o *Label) GetEvidence() []Evidence {
-	if o == nil {
+func (l *Label) GetEvidence() []Evidence {
+	if l == nil {
 		return nil
 	}
-	return o.Evidence
+	return l.Evidence
 }
 
-func (o *Label) GetSource() *LabelSource {
-	if o == nil {
+func (l *Label) GetSource() *LabelSource {
+	if l == nil {
 		return nil
 	}
-	return o.Source
+	return l.Source
 }
 
-func (o *Label) GetValue() *string {
-	if o == nil {
+func (l *Label) GetValue() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Value
+	return l.Value
 }

@@ -7,16 +7,16 @@ type AuthorityInfoAccess struct {
 	OcspUrls   []string `json:"ocsp_urls,omitempty"`
 }
 
-func (o *AuthorityInfoAccess) GetIssuerUrls() []string {
-	if o == nil {
+func (a *AuthorityInfoAccess) GetIssuerUrls() []string {
+	if a == nil {
 		return nil
 	}
-	return o.IssuerUrls
+	return a.IssuerUrls
 }
 
-func (o *AuthorityInfoAccess) GetOcspUrls() []string {
-	if o == nil {
+func (a *AuthorityInfoAccess) GetOcspUrls() []string {
+	if a == nil {
 		return nil
 	}
-	return o.OcspUrls
+	return a.OcspUrls
 }

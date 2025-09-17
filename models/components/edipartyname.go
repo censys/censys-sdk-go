@@ -7,16 +7,16 @@ type EdiPartyName struct {
 	PartyName    *string `json:"party_name,omitempty"`
 }
 
-func (o *EdiPartyName) GetNameAssigner() *string {
-	if o == nil {
+func (e *EdiPartyName) GetNameAssigner() *string {
+	if e == nil {
 		return nil
 	}
-	return o.NameAssigner
+	return e.NameAssigner
 }
 
-func (o *EdiPartyName) GetPartyName() *string {
-	if o == nil {
+func (e *EdiPartyName) GetPartyName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.PartyName
+	return e.PartyName
 }

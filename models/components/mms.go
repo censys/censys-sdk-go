@@ -8,23 +8,23 @@ type Mms struct {
 	Vendor   *string `json:"vendor,omitempty"`
 }
 
-func (o *Mms) GetModel() *string {
-	if o == nil {
+func (m *Mms) GetModel() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Model
+	return m.Model
 }
 
-func (o *Mms) GetRevision() *string {
-	if o == nil {
+func (m *Mms) GetRevision() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Revision
+	return m.Revision
 }
 
-func (o *Mms) GetVendor() *string {
-	if o == nil {
+func (m *Mms) GetVendor() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Vendor
+	return m.Vendor
 }

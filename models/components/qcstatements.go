@@ -7,16 +7,16 @@ type QcStatements struct {
 	Parsed *QcStatementsParsedStatements `json:"parsed,omitempty"`
 }
 
-func (o *QcStatements) GetIds() []string {
-	if o == nil {
+func (q *QcStatements) GetIds() []string {
+	if q == nil {
 		return nil
 	}
-	return o.Ids
+	return q.Ids
 }
 
-func (o *QcStatements) GetParsed() *QcStatementsParsedStatements {
-	if o == nil {
+func (q *QcStatements) GetParsed() *QcStatementsParsedStatements {
+	if q == nil {
 		return nil
 	}
-	return o.Parsed
+	return q.Parsed
 }

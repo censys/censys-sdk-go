@@ -21,58 +21,58 @@ type GeneralNames struct {
 	UniformResourceIdentifiers []string `json:"uniform_resource_identifiers,omitempty"`
 }
 
-func (o *GeneralNames) GetDirectoryNames() []DistinguishedName {
-	if o == nil {
+func (g *GeneralNames) GetDirectoryNames() []DistinguishedName {
+	if g == nil {
 		return nil
 	}
-	return o.DirectoryNames
+	return g.DirectoryNames
 }
 
-func (o *GeneralNames) GetDNSNames() []string {
-	if o == nil {
+func (g *GeneralNames) GetDNSNames() []string {
+	if g == nil {
 		return nil
 	}
-	return o.DNSNames
+	return g.DNSNames
 }
 
-func (o *GeneralNames) GetEdiPartyNames() []EdiPartyName {
-	if o == nil {
+func (g *GeneralNames) GetEdiPartyNames() []EdiPartyName {
+	if g == nil {
 		return nil
 	}
-	return o.EdiPartyNames
+	return g.EdiPartyNames
 }
 
-func (o *GeneralNames) GetEmailAddresses() []string {
-	if o == nil {
+func (g *GeneralNames) GetEmailAddresses() []string {
+	if g == nil {
 		return nil
 	}
-	return o.EmailAddresses
+	return g.EmailAddresses
 }
 
-func (o *GeneralNames) GetIPAddresses() []string {
-	if o == nil {
+func (g *GeneralNames) GetIPAddresses() []string {
+	if g == nil {
 		return nil
 	}
-	return o.IPAddresses
+	return g.IPAddresses
 }
 
-func (o *GeneralNames) GetOtherNames() []OtherName {
-	if o == nil {
+func (g *GeneralNames) GetOtherNames() []OtherName {
+	if g == nil {
 		return nil
 	}
-	return o.OtherNames
+	return g.OtherNames
 }
 
-func (o *GeneralNames) GetRegisteredIds() []string {
-	if o == nil {
+func (g *GeneralNames) GetRegisteredIds() []string {
+	if g == nil {
 		return nil
 	}
-	return o.RegisteredIds
+	return g.RegisteredIds
 }
 
-func (o *GeneralNames) GetUniformResourceIdentifiers() []string {
-	if o == nil {
+func (g *GeneralNames) GetUniformResourceIdentifiers() []string {
+	if g == nil {
 		return nil
 	}
-	return o.UniformResourceIdentifiers
+	return g.UniformResourceIdentifiers
 }

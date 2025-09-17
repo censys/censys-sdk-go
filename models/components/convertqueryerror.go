@@ -7,9 +7,9 @@ type ConvertQueryError struct {
 	Message string `json:"message"`
 }
 
-func (o *ConvertQueryError) GetMessage() string {
-	if o == nil {
+func (c *ConvertQueryError) GetMessage() string {
+	if c == nil {
 		return ""
 	}
-	return o.Message
+	return c.Message
 }

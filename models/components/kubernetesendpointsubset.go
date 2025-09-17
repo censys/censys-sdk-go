@@ -7,16 +7,16 @@ type KubernetesEndpointSubset struct {
 	Ports     []KubernetesEndpointSubsetPort            `json:"ports,omitempty"`
 }
 
-func (o *KubernetesEndpointSubset) GetAddresses() []KubernetesEndpointSubsetEndpointAddress {
-	if o == nil {
+func (k *KubernetesEndpointSubset) GetAddresses() []KubernetesEndpointSubsetEndpointAddress {
+	if k == nil {
 		return nil
 	}
-	return o.Addresses
+	return k.Addresses
 }
 
-func (o *KubernetesEndpointSubset) GetPorts() []KubernetesEndpointSubsetPort {
-	if o == nil {
+func (k *KubernetesEndpointSubset) GetPorts() []KubernetesEndpointSubsetPort {
+	if k == nil {
 		return nil
 	}
-	return o.Ports
+	return k.Ports
 }

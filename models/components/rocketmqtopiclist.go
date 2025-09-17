@@ -7,16 +7,16 @@ type RocketmqTopicList struct {
 	TopicList []string                `json:"topic_list,omitempty"`
 }
 
-func (o *RocketmqTopicList) GetHeader() *RocketmqResponseHeader {
-	if o == nil {
+func (r *RocketmqTopicList) GetHeader() *RocketmqResponseHeader {
+	if r == nil {
 		return nil
 	}
-	return o.Header
+	return r.Header
 }
 
-func (o *RocketmqTopicList) GetTopicList() []string {
-	if o == nil {
+func (r *RocketmqTopicList) GetTopicList() []string {
+	if r == nil {
 		return nil
 	}
-	return o.TopicList
+	return r.TopicList
 }

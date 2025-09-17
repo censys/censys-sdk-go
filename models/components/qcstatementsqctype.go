@@ -6,9 +6,9 @@ type QcStatementsQcType struct {
 	Ids []string `json:"ids,omitempty"`
 }
 
-func (o *QcStatementsQcType) GetIds() []string {
-	if o == nil {
+func (q *QcStatementsQcType) GetIds() []string {
+	if q == nil {
 		return nil
 	}
-	return o.Ids
+	return q.Ids
 }

@@ -8,23 +8,23 @@ type ReplayCapabilities struct {
 	SessionTimeoutRange *string `json:"session_timeout_range,omitempty"`
 }
 
-func (o *ReplayCapabilities) GetReversePlayback() *bool {
-	if o == nil {
+func (r *ReplayCapabilities) GetReversePlayback() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ReversePlayback
+	return r.ReversePlayback
 }
 
-func (o *ReplayCapabilities) GetRtpRtspTCP() *bool {
-	if o == nil {
+func (r *ReplayCapabilities) GetRtpRtspTCP() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.RtpRtspTCP
+	return r.RtpRtspTCP
 }
 
-func (o *ReplayCapabilities) GetSessionTimeoutRange() *string {
-	if o == nil {
+func (r *ReplayCapabilities) GetSessionTimeoutRange() *string {
+	if r == nil {
 		return nil
 	}
-	return o.SessionTimeoutRange
+	return r.SessionTimeoutRange
 }

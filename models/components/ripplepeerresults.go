@@ -12,51 +12,51 @@ type RipplePeerResults struct {
 	ValidatorSites             []string `json:"validator_sites,omitempty"`
 }
 
-func (o *RipplePeerResults) GetBuildVersion() *string {
-	if o == nil {
+func (r *RipplePeerResults) GetBuildVersion() *string {
+	if r == nil {
 		return nil
 	}
-	return o.BuildVersion
+	return r.BuildVersion
 }
 
-func (o *RipplePeerResults) GetPeerCrawlerResponseVersion() *int64 {
-	if o == nil {
+func (r *RipplePeerResults) GetPeerCrawlerResponseVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.PeerCrawlerResponseVersion
+	return r.PeerCrawlerResponseVersion
 }
 
-func (o *RipplePeerResults) GetPeers() []Peer {
-	if o == nil {
+func (r *RipplePeerResults) GetPeers() []Peer {
+	if r == nil {
 		return nil
 	}
-	return o.Peers
+	return r.Peers
 }
 
-func (o *RipplePeerResults) GetPubkeyNode() *string {
-	if o == nil {
+func (r *RipplePeerResults) GetPubkeyNode() *string {
+	if r == nil {
 		return nil
 	}
-	return o.PubkeyNode
+	return r.PubkeyNode
 }
 
-func (o *RipplePeerResults) GetPublisherList() []string {
-	if o == nil {
+func (r *RipplePeerResults) GetPublisherList() []string {
+	if r == nil {
 		return nil
 	}
-	return o.PublisherList
+	return r.PublisherList
 }
 
-func (o *RipplePeerResults) GetServerState() *string {
-	if o == nil {
+func (r *RipplePeerResults) GetServerState() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ServerState
+	return r.ServerState
 }
 
-func (o *RipplePeerResults) GetValidatorSites() []string {
-	if o == nil {
+func (r *RipplePeerResults) GetValidatorSites() []string {
+	if r == nil {
 		return nil
 	}
-	return o.ValidatorSites
+	return r.ValidatorSites
 }

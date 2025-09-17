@@ -9,30 +9,30 @@ type Spice struct {
 	X509PublicKey *string `json:"x509_public_key,omitempty"`
 }
 
-func (o *Spice) GetMajorVersion() *int {
-	if o == nil {
+func (s *Spice) GetMajorVersion() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MajorVersion
+	return s.MajorVersion
 }
 
-func (o *Spice) GetMinorVersion() *int {
-	if o == nil {
+func (s *Spice) GetMinorVersion() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MinorVersion
+	return s.MinorVersion
 }
 
-func (o *Spice) GetTLSOnly() *bool {
-	if o == nil {
+func (s *Spice) GetTLSOnly() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.TLSOnly
+	return s.TLSOnly
 }
 
-func (o *Spice) GetX509PublicKey() *string {
-	if o == nil {
+func (s *Spice) GetX509PublicKey() *string {
+	if s == nil {
 		return nil
 	}
-	return o.X509PublicKey
+	return s.X509PublicKey
 }

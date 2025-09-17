@@ -7,16 +7,16 @@ type SearchCapabilities struct {
 	MetadataSearch     *bool `json:"metadata_search,omitempty"`
 }
 
-func (o *SearchCapabilities) GetGeneralStartEvents() *bool {
-	if o == nil {
+func (s *SearchCapabilities) GetGeneralStartEvents() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.GeneralStartEvents
+	return s.GeneralStartEvents
 }
 
-func (o *SearchCapabilities) GetMetadataSearch() *bool {
-	if o == nil {
+func (s *SearchCapabilities) GetMetadataSearch() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.MetadataSearch
+	return s.MetadataSearch
 }

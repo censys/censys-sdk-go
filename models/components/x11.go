@@ -9,30 +9,30 @@ type X11 struct {
 	Version                *string `json:"version,omitempty"`
 }
 
-func (o *X11) GetRefusalReason() *string {
-	if o == nil {
+func (x *X11) GetRefusalReason() *string {
+	if x == nil {
 		return nil
 	}
-	return o.RefusalReason
+	return x.RefusalReason
 }
 
-func (o *X11) GetRequiresAuthentication() *bool {
-	if o == nil {
+func (x *X11) GetRequiresAuthentication() *bool {
+	if x == nil {
 		return nil
 	}
-	return o.RequiresAuthentication
+	return x.RequiresAuthentication
 }
 
-func (o *X11) GetVendor() *string {
-	if o == nil {
+func (x *X11) GetVendor() *string {
+	if x == nil {
 		return nil
 	}
-	return o.Vendor
+	return x.Vendor
 }
 
-func (o *X11) GetVersion() *string {
-	if o == nil {
+func (x *X11) GetVersion() *string {
+	if x == nil {
 		return nil
 	}
-	return o.Version
+	return x.Version
 }

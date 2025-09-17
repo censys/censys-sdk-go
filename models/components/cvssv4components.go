@@ -474,100 +474,100 @@ type CVSSv4Components struct {
 	VulnerabilityResponseEffort *VulnerabilityResponseEffort     `json:"vulnerability_response_effort,omitempty"`
 }
 
-func (o *CVSSv4Components) GetAttackComplexity() *CVSSv4ComponentsAttackComplexity {
-	if o == nil {
+func (c *CVSSv4Components) GetAttackComplexity() *CVSSv4ComponentsAttackComplexity {
+	if c == nil {
 		return nil
 	}
-	return o.AttackComplexity
+	return c.AttackComplexity
 }
 
-func (o *CVSSv4Components) GetAttackRequirements() *AttackRequirements {
-	if o == nil {
+func (c *CVSSv4Components) GetAttackRequirements() *AttackRequirements {
+	if c == nil {
 		return nil
 	}
-	return o.AttackRequirements
+	return c.AttackRequirements
 }
 
-func (o *CVSSv4Components) GetAttackVector() *CVSSv4ComponentsAttackVector {
-	if o == nil {
+func (c *CVSSv4Components) GetAttackVector() *CVSSv4ComponentsAttackVector {
+	if c == nil {
 		return nil
 	}
-	return o.AttackVector
+	return c.AttackVector
 }
 
-func (o *CVSSv4Components) GetAutomatable() *Automatable {
-	if o == nil {
+func (c *CVSSv4Components) GetAutomatable() *Automatable {
+	if c == nil {
 		return nil
 	}
-	return o.Automatable
+	return c.Automatable
 }
 
-func (o *CVSSv4Components) GetAvailability() *CVSSv4ComponentsAvailability {
-	if o == nil {
+func (c *CVSSv4Components) GetAvailability() *CVSSv4ComponentsAvailability {
+	if c == nil {
 		return nil
 	}
-	return o.Availability
+	return c.Availability
 }
 
-func (o *CVSSv4Components) GetConfidentiality() *CVSSv4ComponentsConfidentiality {
-	if o == nil {
+func (c *CVSSv4Components) GetConfidentiality() *CVSSv4ComponentsConfidentiality {
+	if c == nil {
 		return nil
 	}
-	return o.Confidentiality
+	return c.Confidentiality
 }
 
-func (o *CVSSv4Components) GetIntegrity() *CVSSv4ComponentsIntegrity {
-	if o == nil {
+func (c *CVSSv4Components) GetIntegrity() *CVSSv4ComponentsIntegrity {
+	if c == nil {
 		return nil
 	}
-	return o.Integrity
+	return c.Integrity
 }
 
-func (o *CVSSv4Components) GetPrivilegesRequired() *CVSSv4ComponentsPrivilegesRequired {
-	if o == nil {
+func (c *CVSSv4Components) GetPrivilegesRequired() *CVSSv4ComponentsPrivilegesRequired {
+	if c == nil {
 		return nil
 	}
-	return o.PrivilegesRequired
+	return c.PrivilegesRequired
 }
 
-func (o *CVSSv4Components) GetProviderUrgency() *ProviderUrgency {
-	if o == nil {
+func (c *CVSSv4Components) GetProviderUrgency() *ProviderUrgency {
+	if c == nil {
 		return nil
 	}
-	return o.ProviderUrgency
+	return c.ProviderUrgency
 }
 
-func (o *CVSSv4Components) GetRecovery() *Recovery {
-	if o == nil {
+func (c *CVSSv4Components) GetRecovery() *Recovery {
+	if c == nil {
 		return nil
 	}
-	return o.Recovery
+	return c.Recovery
 }
 
-func (o *CVSSv4Components) GetSafety() *Safety {
-	if o == nil {
+func (c *CVSSv4Components) GetSafety() *Safety {
+	if c == nil {
 		return nil
 	}
-	return o.Safety
+	return c.Safety
 }
 
-func (o *CVSSv4Components) GetUserInteraction() *CVSSv4ComponentsUserInteraction {
-	if o == nil {
+func (c *CVSSv4Components) GetUserInteraction() *CVSSv4ComponentsUserInteraction {
+	if c == nil {
 		return nil
 	}
-	return o.UserInteraction
+	return c.UserInteraction
 }
 
-func (o *CVSSv4Components) GetValueDensity() *ValueDensity {
-	if o == nil {
+func (c *CVSSv4Components) GetValueDensity() *ValueDensity {
+	if c == nil {
 		return nil
 	}
-	return o.ValueDensity
+	return c.ValueDensity
 }
 
-func (o *CVSSv4Components) GetVulnerabilityResponseEffort() *VulnerabilityResponseEffort {
-	if o == nil {
+func (c *CVSSv4Components) GetVulnerabilityResponseEffort() *VulnerabilityResponseEffort {
+	if c == nil {
 		return nil
 	}
-	return o.VulnerabilityResponseEffort
+	return c.VulnerabilityResponseEffort
 }

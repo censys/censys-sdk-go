@@ -13,58 +13,58 @@ type RdpDomainParameters struct {
 	NumPriorities         *int64 `json:"num_priorities,omitempty"`
 }
 
-func (o *RdpDomainParameters) GetDomainProtocolVersion() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetDomainProtocolVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.DomainProtocolVersion
+	return r.DomainProtocolVersion
 }
 
-func (o *RdpDomainParameters) GetMaxChannelIds() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetMaxChannelIds() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.MaxChannelIds
+	return r.MaxChannelIds
 }
 
-func (o *RdpDomainParameters) GetMaxMcspduSize() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetMaxMcspduSize() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.MaxMcspduSize
+	return r.MaxMcspduSize
 }
 
-func (o *RdpDomainParameters) GetMaxProviderHeight() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetMaxProviderHeight() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.MaxProviderHeight
+	return r.MaxProviderHeight
 }
 
-func (o *RdpDomainParameters) GetMaxTokenIds() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetMaxTokenIds() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.MaxTokenIds
+	return r.MaxTokenIds
 }
 
-func (o *RdpDomainParameters) GetMaxUserIDChannels() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetMaxUserIDChannels() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.MaxUserIDChannels
+	return r.MaxUserIDChannels
 }
 
-func (o *RdpDomainParameters) GetMinThroughput() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetMinThroughput() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.MinThroughput
+	return r.MinThroughput
 }
 
-func (o *RdpDomainParameters) GetNumPriorities() *int64 {
-	if o == nil {
+func (r *RdpDomainParameters) GetNumPriorities() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.NumPriorities
+	return r.NumPriorities
 }

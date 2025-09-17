@@ -10,37 +10,37 @@ type EthereumVersion struct {
 	Version  *string `json:"version,omitempty"`
 }
 
-func (o *EthereumVersion) GetClient() *string {
-	if o == nil {
+func (e *EthereumVersion) GetClient() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Client
+	return e.Client
 }
 
-func (o *EthereumVersion) GetCompiler() *string {
-	if o == nil {
+func (e *EthereumVersion) GetCompiler() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Compiler
+	return e.Compiler
 }
 
-func (o *EthereumVersion) GetPlatform() *string {
-	if o == nil {
+func (e *EthereumVersion) GetPlatform() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Platform
+	return e.Platform
 }
 
-func (o *EthereumVersion) GetTrailing() *string {
-	if o == nil {
+func (e *EthereumVersion) GetTrailing() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Trailing
+	return e.Trailing
 }
 
-func (o *EthereumVersion) GetVersion() *string {
-	if o == nil {
+func (e *EthereumVersion) GetVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Version
+	return e.Version
 }

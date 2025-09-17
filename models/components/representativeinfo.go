@@ -46,30 +46,30 @@ type RepresentativeInfo struct {
 	SampledPort      *int                      `json:"sampled_port,omitempty"`
 }
 
-func (o *RepresentativeInfo) GetExcludedPorts() []int {
-	if o == nil {
+func (r *RepresentativeInfo) GetExcludedPorts() []int {
+	if r == nil {
 		return nil
 	}
-	return o.ExcludedPorts
+	return r.ExcludedPorts
 }
 
-func (o *RepresentativeInfo) GetReason() *RepresentativeInfoReason {
-	if o == nil {
+func (r *RepresentativeInfo) GetReason() *RepresentativeInfoReason {
+	if r == nil {
 		return nil
 	}
-	return o.Reason
+	return r.Reason
 }
 
-func (o *RepresentativeInfo) GetRepresentedPorts() []int {
-	if o == nil {
+func (r *RepresentativeInfo) GetRepresentedPorts() []int {
+	if r == nil {
 		return nil
 	}
-	return o.RepresentedPorts
+	return r.RepresentedPorts
 }
 
-func (o *RepresentativeInfo) GetSampledPort() *int {
-	if o == nil {
+func (r *RepresentativeInfo) GetSampledPort() *int {
+	if r == nil {
 		return nil
 	}
-	return o.SampledPort
+	return r.SampledPort
 }

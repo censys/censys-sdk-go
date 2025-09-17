@@ -12,51 +12,51 @@ type Realport struct {
 	Vpd                map[string]string `json:"vpd,omitempty"`
 }
 
-func (o *Realport) GetHardwareID() *int {
-	if o == nil {
+func (r *Realport) GetHardwareID() *int {
+	if r == nil {
 		return nil
 	}
-	return o.HardwareID
+	return r.HardwareID
 }
 
-func (o *Realport) GetHardwareVersion() *int {
-	if o == nil {
+func (r *Realport) GetHardwareVersion() *int {
+	if r == nil {
 		return nil
 	}
-	return o.HardwareVersion
+	return r.HardwareVersion
 }
 
-func (o *Realport) GetNumPorts() *int {
-	if o == nil {
+func (r *Realport) GetNumPorts() *int {
+	if r == nil {
 		return nil
 	}
-	return o.NumPorts
+	return r.NumPorts
 }
 
-func (o *Realport) GetProductName() *string {
-	if o == nil {
+func (r *Realport) GetProductName() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ProductName
+	return r.ProductName
 }
 
-func (o *Realport) GetSoftwareVersion() *int {
-	if o == nil {
+func (r *Realport) GetSoftwareVersion() *int {
+	if r == nil {
 		return nil
 	}
-	return o.SoftwareVersion
+	return r.SoftwareVersion
 }
 
-func (o *Realport) GetUnpatchedEtherlite() *bool {
-	if o == nil {
+func (r *Realport) GetUnpatchedEtherlite() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.UnpatchedEtherlite
+	return r.UnpatchedEtherlite
 }
 
-func (o *Realport) GetVpd() map[string]string {
-	if o == nil {
+func (r *Realport) GetVpd() map[string]string {
+	if r == nil {
 		return nil
 	}
-	return o.Vpd
+	return r.Vpd
 }

@@ -14,65 +14,65 @@ type SnmpEngine struct {
 	Rfc3411      *bool   `json:"rfc3411,omitempty"`
 }
 
-func (o *SnmpEngine) GetDescription() *string {
-	if o == nil {
+func (s *SnmpEngine) GetDescription() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Description
+	return s.Description
 }
 
-func (o *SnmpEngine) GetEngineBoots() *int {
-	if o == nil {
+func (s *SnmpEngine) GetEngineBoots() *int {
+	if s == nil {
 		return nil
 	}
-	return o.EngineBoots
+	return s.EngineBoots
 }
 
-func (o *SnmpEngine) GetEngineTime() *int {
-	if o == nil {
+func (s *SnmpEngine) GetEngineTime() *int {
+	if s == nil {
 		return nil
 	}
-	return o.EngineTime
+	return s.EngineTime
 }
 
-func (o *SnmpEngine) GetFormat() *string {
-	if o == nil {
+func (s *SnmpEngine) GetFormat() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Format
+	return s.Format
 }
 
-func (o *SnmpEngine) GetFormatData() *string {
-	if o == nil {
+func (s *SnmpEngine) GetFormatData() *string {
+	if s == nil {
 		return nil
 	}
-	return o.FormatData
+	return s.FormatData
 }
 
-func (o *SnmpEngine) GetOrganization() *string {
-	if o == nil {
+func (s *SnmpEngine) GetOrganization() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Organization
+	return s.Organization
 }
 
-func (o *SnmpEngine) GetPen() *int {
-	if o == nil {
+func (s *SnmpEngine) GetPen() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Pen
+	return s.Pen
 }
 
-func (o *SnmpEngine) GetRawID() *string {
-	if o == nil {
+func (s *SnmpEngine) GetRawID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.RawID
+	return s.RawID
 }
 
-func (o *SnmpEngine) GetRfc3411() *bool {
-	if o == nil {
+func (s *SnmpEngine) GetRfc3411() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Rfc3411
+	return s.Rfc3411
 }

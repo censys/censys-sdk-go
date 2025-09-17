@@ -7,16 +7,16 @@ type Port struct {
 	Protocol []string `json:"protocol,omitempty"`
 }
 
-func (o *Port) GetPort() *string {
-	if o == nil {
+func (p *Port) GetPort() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Port
+	return p.Port
 }
 
-func (o *Port) GetProtocol() []string {
-	if o == nil {
+func (p *Port) GetProtocol() []string {
+	if p == nil {
 		return nil
 	}
-	return o.Protocol
+	return p.Protocol
 }

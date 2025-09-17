@@ -8,23 +8,23 @@ type SSHAlgorithmSelectionDirectionAlgorithms struct {
 	Mac         *string `json:"mac,omitempty"`
 }
 
-func (o *SSHAlgorithmSelectionDirectionAlgorithms) GetCipher() *string {
-	if o == nil {
+func (s *SSHAlgorithmSelectionDirectionAlgorithms) GetCipher() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Cipher
+	return s.Cipher
 }
 
-func (o *SSHAlgorithmSelectionDirectionAlgorithms) GetCompression() *string {
-	if o == nil {
+func (s *SSHAlgorithmSelectionDirectionAlgorithms) GetCompression() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Compression
+	return s.Compression
 }
 
-func (o *SSHAlgorithmSelectionDirectionAlgorithms) GetMac() *string {
-	if o == nil {
+func (s *SSHAlgorithmSelectionDirectionAlgorithms) GetMac() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Mac
+	return s.Mac
 }

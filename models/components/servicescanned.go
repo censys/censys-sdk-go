@@ -7,16 +7,16 @@ type ServiceScanned struct {
 	Scan *ServiceScan         `json:"scan,omitempty"`
 }
 
-func (o *ServiceScanned) GetDiff() map[string]FieldDiff {
-	if o == nil {
+func (s *ServiceScanned) GetDiff() map[string]FieldDiff {
+	if s == nil {
 		return nil
 	}
-	return o.Diff
+	return s.Diff
 }
 
-func (o *ServiceScanned) GetScan() *ServiceScan {
-	if o == nil {
+func (s *ServiceScanned) GetScan() *ServiceScan {
+	if s == nil {
 		return nil
 	}
-	return o.Scan
+	return s.Scan
 }

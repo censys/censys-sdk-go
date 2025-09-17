@@ -26,18 +26,18 @@ func (h *HostnamePort) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HostnamePort) GetHostname() string {
-	if o == nil {
+func (h *HostnamePort) GetHostname() string {
+	if h == nil {
 		return ""
 	}
-	return o.Hostname
+	return h.Hostname
 }
 
-func (o *HostnamePort) GetPort() int {
-	if o == nil {
+func (h *HostnamePort) GetPort() int {
+	if h == nil {
 		return 0
 	}
-	return o.Port
+	return h.Port
 }
 
 // Target2 - Discovery scan against hostname:PORT
@@ -56,11 +56,11 @@ func (t *Target2) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Target2) GetHostnamePort() HostnamePort {
-	if o == nil {
+func (t *Target2) GetHostnamePort() HostnamePort {
+	if t == nil {
 		return HostnamePort{}
 	}
-	return o.HostnamePort
+	return t.HostnamePort
 }
 
 type HostPort struct {
@@ -81,18 +81,18 @@ func (h *HostPort) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HostPort) GetIP() string {
-	if o == nil {
+func (h *HostPort) GetIP() string {
+	if h == nil {
 		return ""
 	}
-	return o.IP
+	return h.IP
 }
 
-func (o *HostPort) GetPort() int {
-	if o == nil {
+func (h *HostPort) GetPort() int {
+	if h == nil {
 		return 0
 	}
-	return o.Port
+	return h.Port
 }
 
 // Target1 - Discovery scan against IP:PORT
@@ -111,11 +111,11 @@ func (t *Target1) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Target1) GetHostPort() HostPort {
-	if o == nil {
+func (t *Target1) GetHostPort() HostPort {
+	if t == nil {
 		return HostPort{}
 	}
-	return o.HostPort
+	return t.HostPort
 }
 
 type ScansDiscoveryInputBodyTargetType string
@@ -126,8 +126,8 @@ const (
 )
 
 type ScansDiscoveryInputBodyTarget struct {
-	Target1 *Target1 `queryParam:"inline"`
-	Target2 *Target2 `queryParam:"inline"`
+	Target1 *Target1 `queryParam:"inline" name:"target"`
+	Target2 *Target2 `queryParam:"inline" name:"target"`
 
 	Type ScansDiscoveryInputBodyTargetType
 }
@@ -185,9 +185,9 @@ type ScansDiscoveryInputBody struct {
 	Target ScansDiscoveryInputBodyTarget `json:"target"`
 }
 
-func (o *ScansDiscoveryInputBody) GetTarget() ScansDiscoveryInputBodyTarget {
-	if o == nil {
+func (s *ScansDiscoveryInputBody) GetTarget() ScansDiscoveryInputBodyTarget {
+	if s == nil {
 		return ScansDiscoveryInputBodyTarget{}
 	}
-	return o.Target
+	return s.Target
 }

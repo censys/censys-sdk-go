@@ -23,128 +23,128 @@ type Fox struct {
 	VMVersion     *string `json:"vm_version,omitempty"`
 }
 
-func (o *Fox) GetAppName() *string {
-	if o == nil {
+func (f *Fox) GetAppName() *string {
+	if f == nil {
 		return nil
 	}
-	return o.AppName
+	return f.AppName
 }
 
-func (o *Fox) GetAppVersion() *string {
-	if o == nil {
+func (f *Fox) GetAppVersion() *string {
+	if f == nil {
 		return nil
 	}
-	return o.AppVersion
+	return f.AppVersion
 }
 
-func (o *Fox) GetAuthAgentType() *string {
-	if o == nil {
+func (f *Fox) GetAuthAgentType() *string {
+	if f == nil {
 		return nil
 	}
-	return o.AuthAgentType
+	return f.AuthAgentType
 }
 
-func (o *Fox) GetBrandID() *string {
-	if o == nil {
+func (f *Fox) GetBrandID() *string {
+	if f == nil {
 		return nil
 	}
-	return o.BrandID
+	return f.BrandID
 }
 
-func (o *Fox) GetHostAddress() *string {
-	if o == nil {
+func (f *Fox) GetHostAddress() *string {
+	if f == nil {
 		return nil
 	}
-	return o.HostAddress
+	return f.HostAddress
 }
 
-func (o *Fox) GetHostID() *string {
-	if o == nil {
+func (f *Fox) GetHostID() *string {
+	if f == nil {
 		return nil
 	}
-	return o.HostID
+	return f.HostID
 }
 
-func (o *Fox) GetHostname() *string {
-	if o == nil {
+func (f *Fox) GetHostname() *string {
+	if f == nil {
 		return nil
 	}
-	return o.Hostname
+	return f.Hostname
 }
 
-func (o *Fox) GetID() *int {
-	if o == nil {
+func (f *Fox) GetID() *int {
+	if f == nil {
 		return nil
 	}
-	return o.ID
+	return f.ID
 }
 
-func (o *Fox) GetLanguage() *string {
-	if o == nil {
+func (f *Fox) GetLanguage() *string {
+	if f == nil {
 		return nil
 	}
-	return o.Language
+	return f.Language
 }
 
-func (o *Fox) GetOsName() *string {
-	if o == nil {
+func (f *Fox) GetOsName() *string {
+	if f == nil {
 		return nil
 	}
-	return o.OsName
+	return f.OsName
 }
 
-func (o *Fox) GetOsVersion() *string {
-	if o == nil {
+func (f *Fox) GetOsVersion() *string {
+	if f == nil {
 		return nil
 	}
-	return o.OsVersion
+	return f.OsVersion
 }
 
-func (o *Fox) GetStationName() *string {
-	if o == nil {
+func (f *Fox) GetStationName() *string {
+	if f == nil {
 		return nil
 	}
-	return o.StationName
+	return f.StationName
 }
 
-func (o *Fox) GetSysInfo() *string {
-	if o == nil {
+func (f *Fox) GetSysInfo() *string {
+	if f == nil {
 		return nil
 	}
-	return o.SysInfo
+	return f.SysInfo
 }
 
-func (o *Fox) GetTimeZone() *string {
-	if o == nil {
+func (f *Fox) GetTimeZone() *string {
+	if f == nil {
 		return nil
 	}
-	return o.TimeZone
+	return f.TimeZone
 }
 
-func (o *Fox) GetVersion() *string {
-	if o == nil {
+func (f *Fox) GetVersion() *string {
+	if f == nil {
 		return nil
 	}
-	return o.Version
+	return f.Version
 }
 
-func (o *Fox) GetVMName() *string {
-	if o == nil {
+func (f *Fox) GetVMName() *string {
+	if f == nil {
 		return nil
 	}
-	return o.VMName
+	return f.VMName
 }
 
-func (o *Fox) GetVMUUID() *string {
-	if o == nil {
+func (f *Fox) GetVMUUID() *string {
+	if f == nil {
 		return nil
 	}
-	return o.VMUUID
+	return f.VMUUID
 }
 
-func (o *Fox) GetVMVersion() *string {
-	if o == nil {
+func (f *Fox) GetVMVersion() *string {
+	if f == nil {
 		return nil
 	}
-	return o.VMVersion
+	return f.VMVersion
 }

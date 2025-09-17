@@ -6,9 +6,9 @@ type Darkgate struct {
 	Files []DarkgateFile `json:"files,omitempty"`
 }
 
-func (o *Darkgate) GetFiles() []DarkgateFile {
-	if o == nil {
+func (d *Darkgate) GetFiles() []DarkgateFile {
+	if d == nil {
 		return nil
 	}
-	return o.Files
+	return d.Files
 }

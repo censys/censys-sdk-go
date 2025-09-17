@@ -73,7 +73,7 @@ func main() {
 			Fields: []string{
 				"host.ip",
 			},
-			PageSize: censyssdkgo.Int64(1),
+			PageSize: censyssdkgo.Pointer[int64](1),
 			Query:    "host.services: (protocol=SSH and not port: 22)",
 		},
 	})
@@ -107,14 +107,14 @@ func main() {
 
 ### [GlobalData](docs/sdks/globaldata/README.md)
 
-* [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Get multiple certificates
-* [GetCertificatesRaw](docs/sdks/globaldata/README.md#getcertificatesraw) - Get multiple certificates in PEM format
+* [GetCertificates](docs/sdks/globaldata/README.md#getcertificates) - Retrieve multiple certificates
+* [GetCertificatesRaw](docs/sdks/globaldata/README.md#getcertificatesraw) - Retrieve multiple certificates in PEM format
 * [GetCertificate](docs/sdks/globaldata/README.md#getcertificate) - Get a certificate
 * [GetCertificateRaw](docs/sdks/globaldata/README.md#getcertificateraw) - Get a certificate in PEM format
-* [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Get multiple hosts
+* [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Retrieve multiple hosts
 * [GetHost](docs/sdks/globaldata/README.md#gethost) - Get a host
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
-* [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Get multiple web properties
+* [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](docs/sdks/globaldata/README.md#getwebproperty) - Get a web property
 * [CreateTrackedScan](docs/sdks/globaldata/README.md#createtrackedscan) - Live Rescan: Initiate a new rescan
 * [GetTrackedScan](docs/sdks/globaldata/README.md#gettrackedscan) - Get scan status
@@ -170,8 +170,8 @@ func main() {
 	)
 
 	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.String("<next_page_token>"),
-		PageSize:  censyssdkgo.Int64(1),
+		PageToken: censyssdkgo.Pointer("<next_page_token>"),
+		PageSize:  censyssdkgo.Pointer[int64](1),
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -211,8 +211,8 @@ func main() {
 	)
 
 	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.String("<next_page_token>"),
-		PageSize:  censyssdkgo.Int64(1),
+		PageToken: censyssdkgo.Pointer("<next_page_token>"),
+		PageSize:  censyssdkgo.Pointer[int64](1),
 	}, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
@@ -266,8 +266,8 @@ func main() {
 	)
 
 	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.String("<next_page_token>"),
-		PageSize:  censyssdkgo.Int64(1),
+		PageToken: censyssdkgo.Pointer("<next_page_token>"),
+		PageSize:  censyssdkgo.Pointer[int64](1),
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -289,10 +289,11 @@ By Default, an API error will return `sdkerrors.SDKError`. When custom error res
 
 For example, the `List` function may return the following errors:
 
-| Error Type           | Status Code | Content Type             |
-| -------------------- | ----------- | ------------------------ |
-| sdkerrors.ErrorModel | 401, 403    | application/problem+json |
-| sdkerrors.SDKError   | 4XX, 5XX    | \*/\*                    |
+| Error Type                    | Status Code | Content Type             |
+| ----------------------------- | ----------- | ------------------------ |
+| sdkerrors.AuthenticationError | 401         | application/json         |
+| sdkerrors.ErrorModel          | 403         | application/problem+json |
+| sdkerrors.SDKError            | 4XX, 5XX    | \*/\*                    |
 
 ### Example
 
@@ -317,10 +318,16 @@ func main() {
 	)
 
 	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.String("<next_page_token>"),
-		PageSize:  censyssdkgo.Int64(1),
+		PageToken: censyssdkgo.Pointer("<next_page_token>"),
+		PageSize:  censyssdkgo.Pointer[int64](1),
 	})
 	if err != nil {
+
+		var e *sdkerrors.AuthenticationError
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
 
 		var e *sdkerrors.ErrorModel
 		if errors.As(err, &e) {
@@ -365,8 +372,8 @@ func main() {
 	)
 
 	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.String("<next_page_token>"),
-		PageSize:  censyssdkgo.Int64(1),
+		PageToken: censyssdkgo.Pointer("<next_page_token>"),
+		PageSize:  censyssdkgo.Pointer[int64](1),
 	})
 	if err != nil {
 		log.Fatal(err)
@@ -440,8 +447,8 @@ func main() {
 	)
 
 	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.String("<next_page_token>"),
-		PageSize:  censyssdkgo.Int64(1),
+		PageToken: censyssdkgo.Pointer("<next_page_token>"),
+		PageSize:  censyssdkgo.Pointer[int64](1),
 	})
 	if err != nil {
 		log.Fatal(err)

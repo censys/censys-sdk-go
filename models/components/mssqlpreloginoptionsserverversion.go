@@ -8,23 +8,23 @@ type MssqlPreloginOptionsServerVersion struct {
 	Minor       *int `json:"minor,omitempty"`
 }
 
-func (o *MssqlPreloginOptionsServerVersion) GetBuildNumber() *int {
-	if o == nil {
+func (m *MssqlPreloginOptionsServerVersion) GetBuildNumber() *int {
+	if m == nil {
 		return nil
 	}
-	return o.BuildNumber
+	return m.BuildNumber
 }
 
-func (o *MssqlPreloginOptionsServerVersion) GetMajor() *int {
-	if o == nil {
+func (m *MssqlPreloginOptionsServerVersion) GetMajor() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Major
+	return m.Major
 }
 
-func (o *MssqlPreloginOptionsServerVersion) GetMinor() *int {
-	if o == nil {
+func (m *MssqlPreloginOptionsServerVersion) GetMinor() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Minor
+	return m.Minor
 }

@@ -7,16 +7,16 @@ type AmqpProtocol struct {
 	Name *string `json:"name,omitempty"`
 }
 
-func (o *AmqpProtocol) GetID() *int {
-	if o == nil {
+func (a *AmqpProtocol) GetID() *int {
+	if a == nil {
 		return nil
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AmqpProtocol) GetName() *string {
-	if o == nil {
+func (a *AmqpProtocol) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }

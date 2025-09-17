@@ -7,16 +7,16 @@ type JarmScanned struct {
 	Scan *JarmScan            `json:"scan,omitempty"`
 }
 
-func (o *JarmScanned) GetDiff() map[string]FieldDiff {
-	if o == nil {
+func (j *JarmScanned) GetDiff() map[string]FieldDiff {
+	if j == nil {
 		return nil
 	}
-	return o.Diff
+	return j.Diff
 }
 
-func (o *JarmScanned) GetScan() *JarmScan {
-	if o == nil {
+func (j *JarmScanned) GetScan() *JarmScan {
+	if j == nil {
 		return nil
 	}
-	return o.Scan
+	return j.Scan
 }

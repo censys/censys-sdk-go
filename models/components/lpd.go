@@ -12,51 +12,51 @@ type Lpd struct {
 	Text       *string     `json:"text,omitempty"`
 }
 
-func (o *Lpd) GetJobs() *LpdMessage {
-	if o == nil {
+func (l *Lpd) GetJobs() *LpdMessage {
+	if l == nil {
 		return nil
 	}
-	return o.Jobs
+	return l.Jobs
 }
 
-func (o *Lpd) GetLongState() *string {
-	if o == nil {
+func (l *Lpd) GetLongState() *string {
+	if l == nil {
 		return nil
 	}
-	return o.LongState
+	return l.LongState
 }
 
-func (o *Lpd) GetLpdMessage() *LpdMessage {
-	if o == nil {
+func (l *Lpd) GetLpdMessage() *LpdMessage {
+	if l == nil {
 		return nil
 	}
-	return o.LpdMessage
+	return l.LpdMessage
 }
 
-func (o *Lpd) GetPrinter() *string {
-	if o == nil {
+func (l *Lpd) GetPrinter() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Printer
+	return l.Printer
 }
 
-func (o *Lpd) GetRaw() *string {
-	if o == nil {
+func (l *Lpd) GetRaw() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Raw
+	return l.Raw
 }
 
-func (o *Lpd) GetShortState() *string {
-	if o == nil {
+func (l *Lpd) GetShortState() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ShortState
+	return l.ShortState
 }
 
-func (o *Lpd) GetText() *string {
-	if o == nil {
+func (l *Lpd) GetText() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Text
+	return l.Text
 }

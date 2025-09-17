@@ -39,11 +39,11 @@ func main() {
 
     res, err := s.ThreatHunting.GetHostObservationsWithCertificate(ctx, operations.V3ThreathuntingGetHostObservationsWithCertificateRequest{
         CertificateID: "55af8a301eb51abdaf7c31bec951638fe5a99d5d92117eca2be493026613fa46",
-        StartTime: censyssdkgo.String("2023-01-01T00:00:00Z"),
-        EndTime: censyssdkgo.String("2023-12-31T23:59:59Z"),
-        Port: censyssdkgo.Int(443),
-        Protocol: censyssdkgo.String("TCP"),
-        PageSize: censyssdkgo.Int(50),
+        StartTime: censyssdkgo.Pointer("2023-01-01T00:00:00Z"),
+        EndTime: censyssdkgo.Pointer("2023-12-31T23:59:59Z"),
+        Port: censyssdkgo.Pointer[int](443),
+        Protocol: censyssdkgo.Pointer("TCP"),
+        PageSize: censyssdkgo.Pointer[int](50),
     })
     if err != nil {
         log.Fatal(err)
@@ -68,10 +68,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## CreateTrackedScan
 
@@ -261,7 +262,8 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |

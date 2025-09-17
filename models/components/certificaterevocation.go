@@ -7,16 +7,16 @@ type CertificateRevocation struct {
 	Ocsp *CertificateRevocationRevocationInfo `json:"ocsp,omitempty"`
 }
 
-func (o *CertificateRevocation) GetCrl() *CertificateRevocationRevocationInfo {
-	if o == nil {
+func (c *CertificateRevocation) GetCrl() *CertificateRevocationRevocationInfo {
+	if c == nil {
 		return nil
 	}
-	return o.Crl
+	return c.Crl
 }
 
-func (o *CertificateRevocation) GetOcsp() *CertificateRevocationRevocationInfo {
-	if o == nil {
+func (c *CertificateRevocation) GetOcsp() *CertificateRevocationRevocationInfo {
+	if c == nil {
 		return nil
 	}
-	return o.Ocsp
+	return c.Ocsp
 }

@@ -7,16 +7,16 @@ type Dhcpdiscover struct {
 	Params *DhcpdiscoverResponseParams `json:"params,omitempty"`
 }
 
-func (o *Dhcpdiscover) GetMethod() *string {
-	if o == nil {
+func (d *Dhcpdiscover) GetMethod() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Method
+	return d.Method
 }
 
-func (o *Dhcpdiscover) GetParams() *DhcpdiscoverResponseParams {
-	if o == nil {
+func (d *Dhcpdiscover) GetParams() *DhcpdiscoverResponseParams {
+	if d == nil {
 		return nil
 	}
-	return o.Params
+	return d.Params
 }

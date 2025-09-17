@@ -10,37 +10,37 @@ type PortmapV2Entry struct {
 	Version     *int    `json:"version,omitempty"`
 }
 
-func (o *PortmapV2Entry) GetDescription() *string {
-	if o == nil {
+func (p *PortmapV2Entry) GetDescription() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Description
+	return p.Description
 }
 
-func (o *PortmapV2Entry) GetPort() *int {
-	if o == nil {
+func (p *PortmapV2Entry) GetPort() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Port
+	return p.Port
 }
 
-func (o *PortmapV2Entry) GetProtocol() *string {
-	if o == nil {
+func (p *PortmapV2Entry) GetProtocol() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Protocol
+	return p.Protocol
 }
 
-func (o *PortmapV2Entry) GetShorthand() *string {
-	if o == nil {
+func (p *PortmapV2Entry) GetShorthand() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Shorthand
+	return p.Shorthand
 }
 
-func (o *PortmapV2Entry) GetVersion() *int {
-	if o == nil {
+func (p *PortmapV2Entry) GetVersion() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Version
+	return p.Version
 }

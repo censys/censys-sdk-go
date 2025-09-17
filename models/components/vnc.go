@@ -14,44 +14,44 @@ type Vnc struct {
 	Version       *string       `json:"version,omitempty"`
 }
 
-func (o *Vnc) GetConnectionFailedReason() *string {
-	if o == nil {
+func (v *Vnc) GetConnectionFailedReason() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ConnectionFailedReason
+	return v.ConnectionFailedReason
 }
 
-func (o *Vnc) GetDesktopName() *string {
-	if o == nil {
+func (v *Vnc) GetDesktopName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.DesktopName
+	return v.DesktopName
 }
 
-func (o *Vnc) GetPixelEncoding() *VncKeyValue {
-	if o == nil {
+func (v *Vnc) GetPixelEncoding() *VncKeyValue {
+	if v == nil {
 		return nil
 	}
-	return o.PixelEncoding
+	return v.PixelEncoding
 }
 
-func (o *Vnc) GetScreenInfo() *DesktopInfo {
-	if o == nil {
+func (v *Vnc) GetScreenInfo() *DesktopInfo {
+	if v == nil {
 		return nil
 	}
-	return o.ScreenInfo
+	return v.ScreenInfo
 }
 
-func (o *Vnc) GetSecurityTypes() []VncKeyValue {
-	if o == nil {
+func (v *Vnc) GetSecurityTypes() []VncKeyValue {
+	if v == nil {
 		return nil
 	}
-	return o.SecurityTypes
+	return v.SecurityTypes
 }
 
-func (o *Vnc) GetVersion() *string {
-	if o == nil {
+func (v *Vnc) GetVersion() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Version
+	return v.Version
 }

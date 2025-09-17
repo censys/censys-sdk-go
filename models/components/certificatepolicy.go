@@ -8,23 +8,23 @@ type CertificatePolicy struct {
 	UserNotice []UserNotice `json:"user_notice,omitempty"`
 }
 
-func (o *CertificatePolicy) GetCps() []string {
-	if o == nil {
+func (c *CertificatePolicy) GetCps() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Cps
+	return c.Cps
 }
 
-func (o *CertificatePolicy) GetID() *string {
-	if o == nil {
+func (c *CertificatePolicy) GetID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *CertificatePolicy) GetUserNotice() []UserNotice {
-	if o == nil {
+func (c *CertificatePolicy) GetUserNotice() []UserNotice {
+	if c == nil {
 		return nil
 	}
-	return o.UserNotice
+	return c.UserNotice
 }

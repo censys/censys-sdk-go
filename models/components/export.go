@@ -12,51 +12,51 @@ type Export struct {
 	TransmitFlags      []string `json:"transmit_flags,omitempty"`
 }
 
-func (o *Export) GetDetails() *string {
-	if o == nil {
+func (e *Export) GetDetails() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Details
+	return e.Details
 }
 
-func (o *Export) GetMaxPayloadSize() *int {
-	if o == nil {
+func (e *Export) GetMaxPayloadSize() *int {
+	if e == nil {
 		return nil
 	}
-	return o.MaxPayloadSize
+	return e.MaxPayloadSize
 }
 
-func (o *Export) GetMinBlockSize() *int {
-	if o == nil {
+func (e *Export) GetMinBlockSize() *int {
+	if e == nil {
 		return nil
 	}
-	return o.MinBlockSize
+	return e.MinBlockSize
 }
 
-func (o *Export) GetName() *string {
-	if o == nil {
+func (e *Export) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *Export) GetPreferredBlockSize() *int {
-	if o == nil {
+func (e *Export) GetPreferredBlockSize() *int {
+	if e == nil {
 		return nil
 	}
-	return o.PreferredBlockSize
+	return e.PreferredBlockSize
 }
 
-func (o *Export) GetSize() *int64 {
-	if o == nil {
+func (e *Export) GetSize() *int64 {
+	if e == nil {
 		return nil
 	}
-	return o.Size
+	return e.Size
 }
 
-func (o *Export) GetTransmitFlags() []string {
-	if o == nil {
+func (e *Export) GetTransmitFlags() []string {
+	if e == nil {
 		return nil
 	}
-	return o.TransmitFlags
+	return e.TransmitFlags
 }

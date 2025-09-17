@@ -8,23 +8,23 @@ type KubernetesEndpoint struct {
 	Subsets  []KubernetesEndpointSubset `json:"subsets,omitempty"`
 }
 
-func (o *KubernetesEndpoint) GetName() *string {
-	if o == nil {
+func (k *KubernetesEndpoint) GetName() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Name
+	return k.Name
 }
 
-func (o *KubernetesEndpoint) GetSelfLink() *string {
-	if o == nil {
+func (k *KubernetesEndpoint) GetSelfLink() *string {
+	if k == nil {
 		return nil
 	}
-	return o.SelfLink
+	return k.SelfLink
 }
 
-func (o *KubernetesEndpoint) GetSubsets() []KubernetesEndpointSubset {
-	if o == nil {
+func (k *KubernetesEndpoint) GetSubsets() []KubernetesEndpointSubset {
+	if k == nil {
 		return nil
 	}
-	return o.Subsets
+	return k.Subsets
 }

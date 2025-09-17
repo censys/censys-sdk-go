@@ -21,58 +21,58 @@ type Ipp struct {
 	VersionString *string `json:"version_string,omitempty"`
 }
 
-func (o *Ipp) GetAttributeCupsVersion() *string {
-	if o == nil {
+func (i *Ipp) GetAttributeCupsVersion() *string {
+	if i == nil {
 		return nil
 	}
-	return o.AttributeCupsVersion
+	return i.AttributeCupsVersion
 }
 
-func (o *Ipp) GetAttributeIppVersions() []string {
-	if o == nil {
+func (i *Ipp) GetAttributeIppVersions() []string {
+	if i == nil {
 		return nil
 	}
-	return o.AttributeIppVersions
+	return i.AttributeIppVersions
 }
 
-func (o *Ipp) GetAttributePrinterUris() []string {
-	if o == nil {
+func (i *Ipp) GetAttributePrinterUris() []string {
+	if i == nil {
 		return nil
 	}
-	return o.AttributePrinterUris
+	return i.AttributePrinterUris
 }
 
-func (o *Ipp) GetAttributes() []IppAttribute {
-	if o == nil {
+func (i *Ipp) GetAttributes() []IppAttribute {
+	if i == nil {
 		return nil
 	}
-	return o.Attributes
+	return i.Attributes
 }
 
-func (o *Ipp) GetCupsVersion() *string {
-	if o == nil {
+func (i *Ipp) GetCupsVersion() *string {
+	if i == nil {
 		return nil
 	}
-	return o.CupsVersion
+	return i.CupsVersion
 }
 
-func (o *Ipp) GetMajorVersion() *int {
-	if o == nil {
+func (i *Ipp) GetMajorVersion() *int {
+	if i == nil {
 		return nil
 	}
-	return o.MajorVersion
+	return i.MajorVersion
 }
 
-func (o *Ipp) GetMinorVersion() *int {
-	if o == nil {
+func (i *Ipp) GetMinorVersion() *int {
+	if i == nil {
 		return nil
 	}
-	return o.MinorVersion
+	return i.MinorVersion
 }
 
-func (o *Ipp) GetVersionString() *string {
-	if o == nil {
+func (i *Ipp) GetVersionString() *string {
+	if i == nil {
 		return nil
 	}
-	return o.VersionString
+	return i.VersionString
 }

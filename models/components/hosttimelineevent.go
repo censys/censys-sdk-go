@@ -14,65 +14,65 @@ type HostTimelineEvent struct {
 	WhoisUpdated       *WhoisUpdated       `json:"whois_updated,omitempty"`
 }
 
-func (o *HostTimelineEvent) GetEndpointScanned() *EndpointScanned {
-	if o == nil {
+func (h *HostTimelineEvent) GetEndpointScanned() *EndpointScanned {
+	if h == nil {
 		return nil
 	}
-	return o.EndpointScanned
+	return h.EndpointScanned
 }
 
-func (o *HostTimelineEvent) GetEventTime() *string {
-	if o == nil {
+func (h *HostTimelineEvent) GetEventTime() *string {
+	if h == nil {
 		return nil
 	}
-	return o.EventTime
+	return h.EventTime
 }
 
-func (o *HostTimelineEvent) GetForwardDNSResolved() *ForwardDNSResolved {
-	if o == nil {
+func (h *HostTimelineEvent) GetForwardDNSResolved() *ForwardDNSResolved {
+	if h == nil {
 		return nil
 	}
-	return o.ForwardDNSResolved
+	return h.ForwardDNSResolved
 }
 
-func (o *HostTimelineEvent) GetJarmScanned() *JarmScanned {
-	if o == nil {
+func (h *HostTimelineEvent) GetJarmScanned() *JarmScanned {
+	if h == nil {
 		return nil
 	}
-	return o.JarmScanned
+	return h.JarmScanned
 }
 
-func (o *HostTimelineEvent) GetLocationUpdated() *LocationUpdated {
-	if o == nil {
+func (h *HostTimelineEvent) GetLocationUpdated() *LocationUpdated {
+	if h == nil {
 		return nil
 	}
-	return o.LocationUpdated
+	return h.LocationUpdated
 }
 
-func (o *HostTimelineEvent) GetReverseDNSResolved() *ReverseDNSResolved {
-	if o == nil {
+func (h *HostTimelineEvent) GetReverseDNSResolved() *ReverseDNSResolved {
+	if h == nil {
 		return nil
 	}
-	return o.ReverseDNSResolved
+	return h.ReverseDNSResolved
 }
 
-func (o *HostTimelineEvent) GetRouteUpdated() *RouteUpdated {
-	if o == nil {
+func (h *HostTimelineEvent) GetRouteUpdated() *RouteUpdated {
+	if h == nil {
 		return nil
 	}
-	return o.RouteUpdated
+	return h.RouteUpdated
 }
 
-func (o *HostTimelineEvent) GetServiceScanned() *ServiceScanned {
-	if o == nil {
+func (h *HostTimelineEvent) GetServiceScanned() *ServiceScanned {
+	if h == nil {
 		return nil
 	}
-	return o.ServiceScanned
+	return h.ServiceScanned
 }
 
-func (o *HostTimelineEvent) GetWhoisUpdated() *WhoisUpdated {
-	if o == nil {
+func (h *HostTimelineEvent) GetWhoisUpdated() *WhoisUpdated {
+	if h == nil {
 		return nil
 	}
-	return o.WhoisUpdated
+	return h.WhoisUpdated
 }

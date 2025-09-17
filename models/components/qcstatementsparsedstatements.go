@@ -12,51 +12,51 @@ type QcStatementsParsedStatements struct {
 	Types           []QcStatementsQcType        `json:"types,omitempty"`
 }
 
-func (o *QcStatementsParsedStatements) GetEtsiCompliance() []bool {
-	if o == nil {
+func (q *QcStatementsParsedStatements) GetEtsiCompliance() []bool {
+	if q == nil {
 		return nil
 	}
-	return o.EtsiCompliance
+	return q.EtsiCompliance
 }
 
-func (o *QcStatementsParsedStatements) GetLegislation() []QCStatementsQCLegislation {
-	if o == nil {
+func (q *QcStatementsParsedStatements) GetLegislation() []QCStatementsQCLegislation {
+	if q == nil {
 		return nil
 	}
-	return o.Legislation
+	return q.Legislation
 }
 
-func (o *QcStatementsParsedStatements) GetLimit() []QcStatementsMonetaryValue {
-	if o == nil {
+func (q *QcStatementsParsedStatements) GetLimit() []QcStatementsMonetaryValue {
+	if q == nil {
 		return nil
 	}
-	return o.Limit
+	return q.Limit
 }
 
-func (o *QcStatementsParsedStatements) GetPdsLocations() []QcStatementsPdsLocation {
-	if o == nil {
+func (q *QcStatementsParsedStatements) GetPdsLocations() []QcStatementsPdsLocation {
+	if q == nil {
 		return nil
 	}
-	return o.PdsLocations
+	return q.PdsLocations
 }
 
-func (o *QcStatementsParsedStatements) GetRetentionPeriod() []int64 {
-	if o == nil {
+func (q *QcStatementsParsedStatements) GetRetentionPeriod() []int64 {
+	if q == nil {
 		return nil
 	}
-	return o.RetentionPeriod
+	return q.RetentionPeriod
 }
 
-func (o *QcStatementsParsedStatements) GetSscd() []bool {
-	if o == nil {
+func (q *QcStatementsParsedStatements) GetSscd() []bool {
+	if q == nil {
 		return nil
 	}
-	return o.Sscd
+	return q.Sscd
 }
 
-func (o *QcStatementsParsedStatements) GetTypes() []QcStatementsQcType {
-	if o == nil {
+func (q *QcStatementsParsedStatements) GetTypes() []QcStatementsQcType {
+	if q == nil {
 		return nil
 	}
-	return o.Types
+	return q.Types
 }

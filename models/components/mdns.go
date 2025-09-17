@@ -8,23 +8,23 @@ type Mdns struct {
 	Results           []MdnsResult `json:"results,omitempty"`
 }
 
-func (o *Mdns) GetMultipleResponses() *bool {
-	if o == nil {
+func (m *Mdns) GetMultipleResponses() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.MultipleResponses
+	return m.MultipleResponses
 }
 
-func (o *Mdns) GetNames() []string {
-	if o == nil {
+func (m *Mdns) GetNames() []string {
+	if m == nil {
 		return nil
 	}
-	return o.Names
+	return m.Names
 }
 
-func (o *Mdns) GetResults() []MdnsResult {
-	if o == nil {
+func (m *Mdns) GetResults() []MdnsResult {
+	if m == nil {
 		return nil
 	}
-	return o.Results
+	return m.Results
 }

@@ -7,9 +7,9 @@ type AssetCertificateListInputBody struct {
 	CertificateIds []string `json:"certificate_ids"`
 }
 
-func (o *AssetCertificateListInputBody) GetCertificateIds() []string {
-	if o == nil {
+func (a *AssetCertificateListInputBody) GetCertificateIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.CertificateIds
+	return a.CertificateIds
 }

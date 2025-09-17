@@ -1,3 +1,4 @@
+.env.local
 # .gitignore
 .DS_Store
 **/.speakeasy/temp/

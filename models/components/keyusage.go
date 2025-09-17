@@ -25,72 +25,72 @@ type KeyUsage struct {
 	Value *int `json:"value,omitempty"`
 }
 
-func (o *KeyUsage) GetCertificateSign() *bool {
-	if o == nil {
+func (k *KeyUsage) GetCertificateSign() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.CertificateSign
+	return k.CertificateSign
 }
 
-func (o *KeyUsage) GetContentCommitment() *bool {
-	if o == nil {
+func (k *KeyUsage) GetContentCommitment() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.ContentCommitment
+	return k.ContentCommitment
 }
 
-func (o *KeyUsage) GetCrlSign() *bool {
-	if o == nil {
+func (k *KeyUsage) GetCrlSign() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.CrlSign
+	return k.CrlSign
 }
 
-func (o *KeyUsage) GetDataEncipherment() *bool {
-	if o == nil {
+func (k *KeyUsage) GetDataEncipherment() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.DataEncipherment
+	return k.DataEncipherment
 }
 
-func (o *KeyUsage) GetDecipherOnly() *bool {
-	if o == nil {
+func (k *KeyUsage) GetDecipherOnly() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.DecipherOnly
+	return k.DecipherOnly
 }
 
-func (o *KeyUsage) GetDigitalSignature() *bool {
-	if o == nil {
+func (k *KeyUsage) GetDigitalSignature() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.DigitalSignature
+	return k.DigitalSignature
 }
 
-func (o *KeyUsage) GetEncipherOnly() *bool {
-	if o == nil {
+func (k *KeyUsage) GetEncipherOnly() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.EncipherOnly
+	return k.EncipherOnly
 }
 
-func (o *KeyUsage) GetKeyAgreement() *bool {
-	if o == nil {
+func (k *KeyUsage) GetKeyAgreement() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.KeyAgreement
+	return k.KeyAgreement
 }
 
-func (o *KeyUsage) GetKeyEncipherment() *bool {
-	if o == nil {
+func (k *KeyUsage) GetKeyEncipherment() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.KeyEncipherment
+	return k.KeyEncipherment
 }
 
-func (o *KeyUsage) GetValue() *int {
-	if o == nil {
+func (k *KeyUsage) GetValue() *int {
+	if k == nil {
 		return nil
 	}
-	return o.Value
+	return k.Value
 }

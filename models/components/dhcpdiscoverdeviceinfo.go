@@ -24,135 +24,135 @@ type DhcpdiscoverDeviceInfo struct {
 	VideoOutputChannels      *int64                 `json:"video_output_channels,omitempty"`
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetAlarmInputChannels() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetAlarmInputChannels() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.AlarmInputChannels
+	return d.AlarmInputChannels
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetAlarmOutputChannels() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetAlarmOutputChannels() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.AlarmOutputChannels
+	return d.AlarmOutputChannels
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetDeviceClass() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetDeviceClass() *string {
+	if d == nil {
 		return nil
 	}
-	return o.DeviceClass
+	return d.DeviceClass
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetDeviceID() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetDeviceID() *string {
+	if d == nil {
 		return nil
 	}
-	return o.DeviceID
+	return d.DeviceID
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetDeviceType() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetDeviceType() *string {
+	if d == nil {
 		return nil
 	}
-	return o.DeviceType
+	return d.DeviceType
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetHTTPPort() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetHTTPPort() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.HTTPPort
+	return d.HTTPPort
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetIpv4Address() *DhcpdiscoverIPAddress {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetIpv4Address() *DhcpdiscoverIPAddress {
+	if d == nil {
 		return nil
 	}
-	return o.Ipv4Address
+	return d.Ipv4Address
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetIpv6Address() *DhcpdiscoverIPAddress {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetIpv6Address() *DhcpdiscoverIPAddress {
+	if d == nil {
 		return nil
 	}
-	return o.Ipv6Address
+	return d.Ipv6Address
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetMachineGroup() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetMachineGroup() *string {
+	if d == nil {
 		return nil
 	}
-	return o.MachineGroup
+	return d.MachineGroup
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetMachineName() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetMachineName() *string {
+	if d == nil {
 		return nil
 	}
-	return o.MachineName
+	return d.MachineName
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetManufacturer() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetManufacturer() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Manufacturer
+	return d.Manufacturer
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetPort() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetPort() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.Port
+	return d.Port
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetRemoteVideoInputChannels() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetRemoteVideoInputChannels() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.RemoteVideoInputChannels
+	return d.RemoteVideoInputChannels
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetSerialNumber() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetSerialNumber() *string {
+	if d == nil {
 		return nil
 	}
-	return o.SerialNumber
+	return d.SerialNumber
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetUnloginFuncMask() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetUnloginFuncMask() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.UnloginFuncMask
+	return d.UnloginFuncMask
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetVendor() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetVendor() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Vendor
+	return d.Vendor
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetVersion() *string {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetVersion() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Version
+	return d.Version
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetVideoInputChannels() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetVideoInputChannels() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.VideoInputChannels
+	return d.VideoInputChannels
 }
 
-func (o *DhcpdiscoverDeviceInfo) GetVideoOutputChannels() *int64 {
-	if o == nil {
+func (d *DhcpdiscoverDeviceInfo) GetVideoOutputChannels() *int64 {
+	if d == nil {
 		return nil
 	}
-	return o.VideoOutputChannels
+	return d.VideoOutputChannels
 }

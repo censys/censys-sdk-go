@@ -14,65 +14,65 @@ type Connection struct {
 	VersionMax    *int     `json:"version_max,omitempty"`
 }
 
-func (o *Connection) GetAhsLength() *int {
-	if o == nil {
+func (c *Connection) GetAhsLength() *int {
+	if c == nil {
 		return nil
 	}
-	return o.AhsLength
+	return c.AhsLength
 }
 
-func (o *Connection) GetCmdSeq() *int {
-	if o == nil {
+func (c *Connection) GetCmdSeq() *int {
+	if c == nil {
 		return nil
 	}
-	return o.CmdSeq
+	return c.CmdSeq
 }
 
-func (o *Connection) GetIsid() *int64 {
-	if o == nil {
+func (c *Connection) GetIsid() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.Isid
+	return c.Isid
 }
 
-func (o *Connection) GetKeyvalPairs() []string {
-	if o == nil {
+func (c *Connection) GetKeyvalPairs() []string {
+	if c == nil {
 		return nil
 	}
-	return o.KeyvalPairs
+	return c.KeyvalPairs
 }
 
-func (o *Connection) GetMaxNewCmds() *int {
-	if o == nil {
+func (c *Connection) GetMaxNewCmds() *int {
+	if c == nil {
 		return nil
 	}
-	return o.MaxNewCmds
+	return c.MaxNewCmds
 }
 
-func (o *Connection) GetStatusSeq() *int {
-	if o == nil {
+func (c *Connection) GetStatusSeq() *int {
+	if c == nil {
 		return nil
 	}
-	return o.StatusSeq
+	return c.StatusSeq
 }
 
-func (o *Connection) GetTsih() *int64 {
-	if o == nil {
+func (c *Connection) GetTsih() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.Tsih
+	return c.Tsih
 }
 
-func (o *Connection) GetVersionActive() *int {
-	if o == nil {
+func (c *Connection) GetVersionActive() *int {
+	if c == nil {
 		return nil
 	}
-	return o.VersionActive
+	return c.VersionActive
 }
 
-func (o *Connection) GetVersionMax() *int {
-	if o == nil {
+func (c *Connection) GetVersionMax() *int {
+	if c == nil {
 		return nil
 	}
-	return o.VersionMax
+	return c.VersionMax
 }

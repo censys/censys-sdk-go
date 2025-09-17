@@ -6,9 +6,9 @@ type FloatValue struct {
 	Value *float32 `json:"value,omitempty"`
 }
 
-func (o *FloatValue) GetValue() *float32 {
-	if o == nil {
+func (f *FloatValue) GetValue() *float32 {
+	if f == nil {
 		return nil
 	}
-	return o.Value
+	return f.Value
 }

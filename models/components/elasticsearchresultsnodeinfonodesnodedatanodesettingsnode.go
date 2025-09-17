@@ -7,16 +7,16 @@ type ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNode struct {
 	Name *string                                                        `json:"name,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNode) GetAttr() *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttr {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNode) GetAttr() *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttr {
+	if e == nil {
 		return nil
 	}
-	return o.Attr
+	return e.Attr
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNode) GetName() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNode) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }

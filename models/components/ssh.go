@@ -10,37 +10,37 @@ type SSH struct {
 	ServerHostKey      *SSHServerHostKey      `json:"server_host_key,omitempty"`
 }
 
-func (o *SSH) GetAlgorithmSelection() *SSHAlgorithmSelection {
-	if o == nil {
+func (s *SSH) GetAlgorithmSelection() *SSHAlgorithmSelection {
+	if s == nil {
 		return nil
 	}
-	return o.AlgorithmSelection
+	return s.AlgorithmSelection
 }
 
-func (o *SSH) GetEndpointID() *SSHEndpointID {
-	if o == nil {
+func (s *SSH) GetEndpointID() *SSHEndpointID {
+	if s == nil {
 		return nil
 	}
-	return o.EndpointID
+	return s.EndpointID
 }
 
-func (o *SSH) GetHasshFingerprint() *string {
-	if o == nil {
+func (s *SSH) GetHasshFingerprint() *string {
+	if s == nil {
 		return nil
 	}
-	return o.HasshFingerprint
+	return s.HasshFingerprint
 }
 
-func (o *SSH) GetKexInitMessage() *SSHKexInitMessage {
-	if o == nil {
+func (s *SSH) GetKexInitMessage() *SSHKexInitMessage {
+	if s == nil {
 		return nil
 	}
-	return o.KexInitMessage
+	return s.KexInitMessage
 }
 
-func (o *SSH) GetServerHostKey() *SSHServerHostKey {
-	if o == nil {
+func (s *SSH) GetServerHostKey() *SSHServerHostKey {
+	if s == nil {
 		return nil
 	}
-	return o.ServerHostKey
+	return s.ServerHostKey
 }

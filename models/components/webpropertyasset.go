@@ -7,16 +7,16 @@ type WebpropertyAsset struct {
 	Resource   Webproperty    `json:"resource"`
 }
 
-func (o *WebpropertyAsset) GetExtensions() map[string]any {
-	if o == nil {
+func (w *WebpropertyAsset) GetExtensions() map[string]any {
+	if w == nil {
 		return map[string]any{}
 	}
-	return o.Extensions
+	return w.Extensions
 }
 
-func (o *WebpropertyAsset) GetResource() Webproperty {
-	if o == nil {
+func (w *WebpropertyAsset) GetResource() Webproperty {
+	if w == nil {
 		return Webproperty{}
 	}
-	return o.Resource
+	return w.Resource
 }

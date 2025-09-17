@@ -8,23 +8,23 @@ type Gearman struct {
 	Workers []Worker `json:"workers,omitempty"`
 }
 
-func (o *Gearman) GetStatus() []Status {
-	if o == nil {
+func (g *Gearman) GetStatus() []Status {
+	if g == nil {
 		return nil
 	}
-	return o.Status
+	return g.Status
 }
 
-func (o *Gearman) GetVersion() *string {
-	if o == nil {
+func (g *Gearman) GetVersion() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Version
+	return g.Version
 }
 
-func (o *Gearman) GetWorkers() []Worker {
-	if o == nil {
+func (g *Gearman) GetWorkers() []Worker {
+	if g == nil {
 		return nil
 	}
-	return o.Workers
+	return g.Workers
 }

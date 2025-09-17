@@ -10,37 +10,37 @@ type Snmp struct {
 	Versions      []string        `json:"versions,omitempty"`
 }
 
-func (o *Snmp) GetEngine() *SnmpEngine {
-	if o == nil {
+func (s *Snmp) GetEngine() *SnmpEngine {
+	if s == nil {
 		return nil
 	}
-	return o.Engine
+	return s.Engine
 }
 
-func (o *Snmp) GetOidInterfaces() *SnmpInterfaces {
-	if o == nil {
+func (s *Snmp) GetOidInterfaces() *SnmpInterfaces {
+	if s == nil {
 		return nil
 	}
-	return o.OidInterfaces
+	return s.OidInterfaces
 }
 
-func (o *Snmp) GetOidPhysical() *SnmpPhysical {
-	if o == nil {
+func (s *Snmp) GetOidPhysical() *SnmpPhysical {
+	if s == nil {
 		return nil
 	}
-	return o.OidPhysical
+	return s.OidPhysical
 }
 
-func (o *Snmp) GetOidSystem() *SnmpSystem {
-	if o == nil {
+func (s *Snmp) GetOidSystem() *SnmpSystem {
+	if s == nil {
 		return nil
 	}
-	return o.OidSystem
+	return s.OidSystem
 }
 
-func (o *Snmp) GetVersions() []string {
-	if o == nil {
+func (s *Snmp) GetVersions() []string {
+	if s == nil {
 		return nil
 	}
-	return o.Versions
+	return s.Versions
 }

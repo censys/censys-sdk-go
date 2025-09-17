@@ -8,23 +8,23 @@ type Etcd struct {
 	Version *EtcdVersion `json:"version,omitempty"`
 }
 
-func (o *Etcd) GetV2() *EtcdV2 {
-	if o == nil {
+func (e *Etcd) GetV2() *EtcdV2 {
+	if e == nil {
 		return nil
 	}
-	return o.V2
+	return e.V2
 }
 
-func (o *Etcd) GetV3() *EtcdV3 {
-	if o == nil {
+func (e *Etcd) GetV3() *EtcdV3 {
+	if e == nil {
 		return nil
 	}
-	return o.V3
+	return e.V3
 }
 
-func (o *Etcd) GetVersion() *EtcdVersion {
-	if o == nil {
+func (e *Etcd) GetVersion() *EtcdVersion {
+	if e == nil {
 		return nil
 	}
-	return o.Version
+	return e.Version
 }

@@ -9,30 +9,30 @@ type Rtsp struct {
 	WwwAuth  *string  `json:"www_auth,omitempty"`
 }
 
-func (o *Rtsp) GetAuth() *string {
-	if o == nil {
+func (r *Rtsp) GetAuth() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Auth
+	return r.Auth
 }
 
-func (o *Rtsp) GetCommands() []string {
-	if o == nil {
+func (r *Rtsp) GetCommands() []string {
+	if r == nil {
 		return nil
 	}
-	return o.Commands
+	return r.Commands
 }
 
-func (o *Rtsp) GetServer() *string {
-	if o == nil {
+func (r *Rtsp) GetServer() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Server
+	return r.Server
 }
 
-func (o *Rtsp) GetWwwAuth() *string {
-	if o == nil {
+func (r *Rtsp) GetWwwAuth() *string {
+	if r == nil {
 		return nil
 	}
-	return o.WwwAuth
+	return r.WwwAuth
 }

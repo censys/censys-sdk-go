@@ -30,37 +30,37 @@ func (s *SearchAggregateInputBody) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *SearchAggregateInputBody) GetCountByLevel() *string {
-	if o == nil {
+func (s *SearchAggregateInputBody) GetCountByLevel() *string {
+	if s == nil {
 		return nil
 	}
-	return o.CountByLevel
+	return s.CountByLevel
 }
 
-func (o *SearchAggregateInputBody) GetField() string {
-	if o == nil {
+func (s *SearchAggregateInputBody) GetField() string {
+	if s == nil {
 		return ""
 	}
-	return o.Field
+	return s.Field
 }
 
-func (o *SearchAggregateInputBody) GetFilterByQuery() *bool {
-	if o == nil {
+func (s *SearchAggregateInputBody) GetFilterByQuery() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.FilterByQuery
+	return s.FilterByQuery
 }
 
-func (o *SearchAggregateInputBody) GetNumberOfBuckets() int64 {
-	if o == nil {
+func (s *SearchAggregateInputBody) GetNumberOfBuckets() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.NumberOfBuckets
+	return s.NumberOfBuckets
 }
 
-func (o *SearchAggregateInputBody) GetQuery() string {
-	if o == nil {
+func (s *SearchAggregateInputBody) GetQuery() string {
+	if s == nil {
 		return ""
 	}
-	return o.Query
+	return s.Query
 }

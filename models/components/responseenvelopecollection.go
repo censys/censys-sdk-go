@@ -6,9 +6,9 @@ type ResponseEnvelopeCollection struct {
 	Result *Collection `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeCollection) GetResult() *Collection {
-	if o == nil {
+func (r *ResponseEnvelopeCollection) GetResult() *Collection {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

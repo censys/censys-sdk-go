@@ -7,9 +7,9 @@ type Imap struct {
 	StartTLS *string `json:"start_tls,omitempty"`
 }
 
-func (o *Imap) GetStartTLS() *string {
-	if o == nil {
+func (i *Imap) GetStartTLS() *string {
+	if i == nil {
 		return nil
 	}
-	return o.StartTLS
+	return i.StartTLS
 }

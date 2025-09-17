@@ -6,9 +6,9 @@ type ResponseEnvelopeHostObservationResponse struct {
 	Result *HostObservationResponse `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeHostObservationResponse) GetResult() *HostObservationResponse {
-	if o == nil {
+func (r *ResponseEnvelopeHostObservationResponse) GetResult() *HostObservationResponse {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

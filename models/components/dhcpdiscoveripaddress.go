@@ -10,37 +10,37 @@ type DhcpdiscoverIPAddress struct {
 	Subnetmask       *string `json:"subnetmask,omitempty"`
 }
 
-func (o *DhcpdiscoverIPAddress) GetDefaultGateway() *string {
-	if o == nil {
+func (d *DhcpdiscoverIPAddress) GetDefaultGateway() *string {
+	if d == nil {
 		return nil
 	}
-	return o.DefaultGateway
+	return d.DefaultGateway
 }
 
-func (o *DhcpdiscoverIPAddress) GetDhcpEnable() *bool {
-	if o == nil {
+func (d *DhcpdiscoverIPAddress) GetDhcpEnable() *bool {
+	if d == nil {
 		return nil
 	}
-	return o.DhcpEnable
+	return d.DhcpEnable
 }
 
-func (o *DhcpdiscoverIPAddress) GetIPAddress() *string {
-	if o == nil {
+func (d *DhcpdiscoverIPAddress) GetIPAddress() *string {
+	if d == nil {
 		return nil
 	}
-	return o.IPAddress
+	return d.IPAddress
 }
 
-func (o *DhcpdiscoverIPAddress) GetLinkLocalAddress() *string {
-	if o == nil {
+func (d *DhcpdiscoverIPAddress) GetLinkLocalAddress() *string {
+	if d == nil {
 		return nil
 	}
-	return o.LinkLocalAddress
+	return d.LinkLocalAddress
 }
 
-func (o *DhcpdiscoverIPAddress) GetSubnetmask() *string {
-	if o == nil {
+func (d *DhcpdiscoverIPAddress) GetSubnetmask() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Subnetmask
+	return d.Subnetmask
 }

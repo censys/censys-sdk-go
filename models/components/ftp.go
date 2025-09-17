@@ -10,37 +10,37 @@ type Ftp struct {
 	StatusMeaning   *string `json:"status_meaning,omitempty"`
 }
 
-func (o *Ftp) GetAuthSslResponse() *string {
-	if o == nil {
+func (f *Ftp) GetAuthSslResponse() *string {
+	if f == nil {
 		return nil
 	}
-	return o.AuthSslResponse
+	return f.AuthSslResponse
 }
 
-func (o *Ftp) GetAuthTLSResponse() *string {
-	if o == nil {
+func (f *Ftp) GetAuthTLSResponse() *string {
+	if f == nil {
 		return nil
 	}
-	return o.AuthTLSResponse
+	return f.AuthTLSResponse
 }
 
-func (o *Ftp) GetImplicitTLS() *bool {
-	if o == nil {
+func (f *Ftp) GetImplicitTLS() *bool {
+	if f == nil {
 		return nil
 	}
-	return o.ImplicitTLS
+	return f.ImplicitTLS
 }
 
-func (o *Ftp) GetStatusCode() *int {
-	if o == nil {
+func (f *Ftp) GetStatusCode() *int {
+	if f == nil {
 		return nil
 	}
-	return o.StatusCode
+	return f.StatusCode
 }
 
-func (o *Ftp) GetStatusMeaning() *string {
-	if o == nil {
+func (f *Ftp) GetStatusMeaning() *string {
+	if f == nil {
 		return nil
 	}
-	return o.StatusMeaning
+	return f.StatusMeaning
 }

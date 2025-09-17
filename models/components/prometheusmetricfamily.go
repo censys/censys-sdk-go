@@ -7,16 +7,16 @@ type PrometheusMetricFamily struct {
 	Name *string `json:"name,omitempty"`
 }
 
-func (o *PrometheusMetricFamily) GetHelp() *string {
-	if o == nil {
+func (p *PrometheusMetricFamily) GetHelp() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Help
+	return p.Help
 }
 
-func (o *PrometheusMetricFamily) GetName() *string {
-	if o == nil {
+func (p *PrometheusMetricFamily) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }

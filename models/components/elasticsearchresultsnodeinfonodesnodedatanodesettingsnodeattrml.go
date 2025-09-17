@@ -8,23 +8,23 @@ type ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML struct {
 	MaxOpenJobs   *string `json:"max_open_jobs,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML) GetEnabled() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML) GetEnabled() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Enabled
+	return e.Enabled
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML) GetMachineMemory() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML) GetMachineMemory() *string {
+	if e == nil {
 		return nil
 	}
-	return o.MachineMemory
+	return e.MachineMemory
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML) GetMaxOpenJobs() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML) GetMaxOpenJobs() *string {
+	if e == nil {
 		return nil
 	}
-	return o.MaxOpenJobs
+	return e.MaxOpenJobs
 }

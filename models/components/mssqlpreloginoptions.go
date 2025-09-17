@@ -14,65 +14,65 @@ type MssqlPreloginOptions struct {
 	Unknown         map[string]string                  `json:"unknown,omitempty"`
 }
 
-func (o *MssqlPreloginOptions) GetEncryptMode() *string {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetEncryptMode() *string {
+	if m == nil {
 		return nil
 	}
-	return o.EncryptMode
+	return m.EncryptMode
 }
 
-func (o *MssqlPreloginOptions) GetFedAuthRequired() *bool {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetFedAuthRequired() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.FedAuthRequired
+	return m.FedAuthRequired
 }
 
-func (o *MssqlPreloginOptions) GetInstance() *string {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetInstance() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Instance
+	return m.Instance
 }
 
-func (o *MssqlPreloginOptions) GetMars() *bool {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetMars() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.Mars
+	return m.Mars
 }
 
-func (o *MssqlPreloginOptions) GetNonce() *string {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetNonce() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Nonce
+	return m.Nonce
 }
 
-func (o *MssqlPreloginOptions) GetServerVersion() *MssqlPreloginOptionsServerVersion {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetServerVersion() *MssqlPreloginOptionsServerVersion {
+	if m == nil {
 		return nil
 	}
-	return o.ServerVersion
+	return m.ServerVersion
 }
 
-func (o *MssqlPreloginOptions) GetThreadID() *int {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetThreadID() *int {
+	if m == nil {
 		return nil
 	}
-	return o.ThreadID
+	return m.ThreadID
 }
 
-func (o *MssqlPreloginOptions) GetTraceID() *string {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetTraceID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.TraceID
+	return m.TraceID
 }
 
-func (o *MssqlPreloginOptions) GetUnknown() map[string]string {
-	if o == nil {
+func (m *MssqlPreloginOptions) GetUnknown() map[string]string {
+	if m == nil {
 		return nil
 	}
-	return o.Unknown
+	return m.Unknown
 }

@@ -19,51 +19,51 @@ type ZLint struct {
 	WarningsPresent *bool `json:"warnings_present,omitempty"`
 }
 
-func (o *ZLint) GetErrorsPresent() *bool {
-	if o == nil {
+func (z *ZLint) GetErrorsPresent() *bool {
+	if z == nil {
 		return nil
 	}
-	return o.ErrorsPresent
+	return z.ErrorsPresent
 }
 
-func (o *ZLint) GetFailedLints() []string {
-	if o == nil {
+func (z *ZLint) GetFailedLints() []string {
+	if z == nil {
 		return nil
 	}
-	return o.FailedLints
+	return z.FailedLints
 }
 
-func (o *ZLint) GetFatalsPresent() *bool {
-	if o == nil {
+func (z *ZLint) GetFatalsPresent() *bool {
+	if z == nil {
 		return nil
 	}
-	return o.FatalsPresent
+	return z.FatalsPresent
 }
 
-func (o *ZLint) GetNoticesPresent() *bool {
-	if o == nil {
+func (z *ZLint) GetNoticesPresent() *bool {
+	if z == nil {
 		return nil
 	}
-	return o.NoticesPresent
+	return z.NoticesPresent
 }
 
-func (o *ZLint) GetTimestamp() *string {
-	if o == nil {
+func (z *ZLint) GetTimestamp() *string {
+	if z == nil {
 		return nil
 	}
-	return o.Timestamp
+	return z.Timestamp
 }
 
-func (o *ZLint) GetVersion() *int64 {
-	if o == nil {
+func (z *ZLint) GetVersion() *int64 {
+	if z == nil {
 		return nil
 	}
-	return o.Version
+	return z.Version
 }
 
-func (o *ZLint) GetWarningsPresent() *bool {
-	if o == nil {
+func (z *ZLint) GetWarningsPresent() *bool {
+	if z == nil {
 		return nil
 	}
-	return o.WarningsPresent
+	return z.WarningsPresent
 }

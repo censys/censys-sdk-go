@@ -7,9 +7,9 @@ type SearchConvertQueryInputBody struct {
 	Queries []string `json:"queries"`
 }
 
-func (o *SearchConvertQueryInputBody) GetQueries() []string {
-	if o == nil {
+func (s *SearchConvertQueryInputBody) GetQueries() []string {
+	if s == nil {
 		return nil
 	}
-	return o.Queries
+	return s.Queries
 }

@@ -9,30 +9,30 @@ type ChromecastVolume struct {
 	StepInterval *FloatValue `json:"step_interval,omitempty"`
 }
 
-func (o *ChromecastVolume) GetControlType() *string {
-	if o == nil {
+func (c *ChromecastVolume) GetControlType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ControlType
+	return c.ControlType
 }
 
-func (o *ChromecastVolume) GetLevel() *float32 {
-	if o == nil {
+func (c *ChromecastVolume) GetLevel() *float32 {
+	if c == nil {
 		return nil
 	}
-	return o.Level
+	return c.Level
 }
 
-func (o *ChromecastVolume) GetMuted() *bool {
-	if o == nil {
+func (c *ChromecastVolume) GetMuted() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Muted
+	return c.Muted
 }
 
-func (o *ChromecastVolume) GetStepInterval() *FloatValue {
-	if o == nil {
+func (c *ChromecastVolume) GetStepInterval() *FloatValue {
+	if c == nil {
 		return nil
 	}
-	return o.StepInterval
+	return c.StepInterval
 }

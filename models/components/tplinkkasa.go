@@ -20,107 +20,107 @@ type TplinkKasa struct {
 	Updating   *int64  `json:"updating,omitempty"`
 }
 
-func (o *TplinkKasa) GetActiveMode() *string {
-	if o == nil {
+func (t *TplinkKasa) GetActiveMode() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ActiveMode
+	return t.ActiveMode
 }
 
-func (o *TplinkKasa) GetBrightness() *int64 {
-	if o == nil {
+func (t *TplinkKasa) GetBrightness() *int64 {
+	if t == nil {
 		return nil
 	}
-	return o.Brightness
+	return t.Brightness
 }
 
-func (o *TplinkKasa) GetDevName() *string {
-	if o == nil {
+func (t *TplinkKasa) GetDevName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.DevName
+	return t.DevName
 }
 
-func (o *TplinkKasa) GetErrCode() *int64 {
-	if o == nil {
+func (t *TplinkKasa) GetErrCode() *int64 {
+	if t == nil {
 		return nil
 	}
-	return o.ErrCode
+	return t.ErrCode
 }
 
-func (o *TplinkKasa) GetFeature() *string {
-	if o == nil {
+func (t *TplinkKasa) GetFeature() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Feature
+	return t.Feature
 }
 
-func (o *TplinkKasa) GetHwVer() *string {
-	if o == nil {
+func (t *TplinkKasa) GetHwVer() *string {
+	if t == nil {
 		return nil
 	}
-	return o.HwVer
+	return t.HwVer
 }
 
-func (o *TplinkKasa) GetIconHash() *string {
-	if o == nil {
+func (t *TplinkKasa) GetIconHash() *string {
+	if t == nil {
 		return nil
 	}
-	return o.IconHash
+	return t.IconHash
 }
 
-func (o *TplinkKasa) GetLedOff() *int64 {
-	if o == nil {
+func (t *TplinkKasa) GetLedOff() *int64 {
+	if t == nil {
 		return nil
 	}
-	return o.LedOff
+	return t.LedOff
 }
 
-func (o *TplinkKasa) GetMicType() *string {
-	if o == nil {
+func (t *TplinkKasa) GetMicType() *string {
+	if t == nil {
 		return nil
 	}
-	return o.MicType
+	return t.MicType
 }
 
-func (o *TplinkKasa) GetModel() *string {
-	if o == nil {
+func (t *TplinkKasa) GetModel() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Model
+	return t.Model
 }
 
-func (o *TplinkKasa) GetOnTime() *int64 {
-	if o == nil {
+func (t *TplinkKasa) GetOnTime() *int64 {
+	if t == nil {
 		return nil
 	}
-	return o.OnTime
+	return t.OnTime
 }
 
-func (o *TplinkKasa) GetRelayState() *int64 {
-	if o == nil {
+func (t *TplinkKasa) GetRelayState() *int64 {
+	if t == nil {
 		return nil
 	}
-	return o.RelayState
+	return t.RelayState
 }
 
-func (o *TplinkKasa) GetRssi() *int64 {
-	if o == nil {
+func (t *TplinkKasa) GetRssi() *int64 {
+	if t == nil {
 		return nil
 	}
-	return o.Rssi
+	return t.Rssi
 }
 
-func (o *TplinkKasa) GetSwVer() *string {
-	if o == nil {
+func (t *TplinkKasa) GetSwVer() *string {
+	if t == nil {
 		return nil
 	}
-	return o.SwVer
+	return t.SwVer
 }
 
-func (o *TplinkKasa) GetUpdating() *int64 {
-	if o == nil {
+func (t *TplinkKasa) GetUpdating() *int64 {
+	if t == nil {
 		return nil
 	}
-	return o.Updating
+	return t.Updating
 }

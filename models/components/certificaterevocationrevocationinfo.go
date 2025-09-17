@@ -71,30 +71,30 @@ type CertificateRevocationRevocationInfo struct {
 	Revoked *bool `json:"revoked,omitempty"`
 }
 
-func (o *CertificateRevocationRevocationInfo) GetNextUpdate() *string {
-	if o == nil {
+func (c *CertificateRevocationRevocationInfo) GetNextUpdate() *string {
+	if c == nil {
 		return nil
 	}
-	return o.NextUpdate
+	return c.NextUpdate
 }
 
-func (o *CertificateRevocationRevocationInfo) GetReason() *Reason {
-	if o == nil {
+func (c *CertificateRevocationRevocationInfo) GetReason() *Reason {
+	if c == nil {
 		return nil
 	}
-	return o.Reason
+	return c.Reason
 }
 
-func (o *CertificateRevocationRevocationInfo) GetRevocationTime() *string {
-	if o == nil {
+func (c *CertificateRevocationRevocationInfo) GetRevocationTime() *string {
+	if c == nil {
 		return nil
 	}
-	return o.RevocationTime
+	return c.RevocationTime
 }
 
-func (o *CertificateRevocationRevocationInfo) GetRevoked() *bool {
-	if o == nil {
+func (c *CertificateRevocationRevocationInfo) GetRevoked() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Revoked
+	return c.Revoked
 }

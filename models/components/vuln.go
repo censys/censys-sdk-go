@@ -120,79 +120,79 @@ type Vuln struct {
 	Year       *int            `json:"year,omitempty"`
 }
 
-func (o *Vuln) GetConfidence() *float64 {
-	if o == nil {
+func (v *Vuln) GetConfidence() *float64 {
+	if v == nil {
 		return nil
 	}
-	return o.Confidence
+	return v.Confidence
 }
 
-func (o *Vuln) GetCwes() []Cwe {
-	if o == nil {
+func (v *Vuln) GetCwes() []Cwe {
+	if v == nil {
 		return nil
 	}
-	return o.Cwes
+	return v.Cwes
 }
 
-func (o *Vuln) GetEvidence() []Evidence {
-	if o == nil {
+func (v *Vuln) GetEvidence() []Evidence {
+	if v == nil {
 		return nil
 	}
-	return o.Evidence
+	return v.Evidence
 }
 
-func (o *Vuln) GetID() *string {
-	if o == nil {
+func (v *Vuln) GetID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.ID
+	return v.ID
 }
 
-func (o *Vuln) GetKev() []Kev {
-	if o == nil {
+func (v *Vuln) GetKev() []Kev {
+	if v == nil {
 		return nil
 	}
-	return o.Kev
+	return v.Kev
 }
 
-func (o *Vuln) GetMetrics() *Metrics {
-	if o == nil {
+func (v *Vuln) GetMetrics() *Metrics {
+	if v == nil {
 		return nil
 	}
-	return o.Metrics
+	return v.Metrics
 }
 
-func (o *Vuln) GetName() *string {
-	if o == nil {
+func (v *Vuln) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *Vuln) GetRiskSource() *VulnRiskSource {
-	if o == nil {
+func (v *Vuln) GetRiskSource() *VulnRiskSource {
+	if v == nil {
 		return nil
 	}
-	return o.RiskSource
+	return v.RiskSource
 }
 
-func (o *Vuln) GetSeverity() *VulnSeverity {
-	if o == nil {
+func (v *Vuln) GetSeverity() *VulnSeverity {
+	if v == nil {
 		return nil
 	}
-	return o.Severity
+	return v.Severity
 }
 
-func (o *Vuln) GetSource() *VulnSource {
-	if o == nil {
+func (v *Vuln) GetSource() *VulnSource {
+	if v == nil {
 		return nil
 	}
-	return o.Source
+	return v.Source
 }
 
-func (o *Vuln) GetYear() *int {
-	if o == nil {
+func (v *Vuln) GetYear() *int {
+	if v == nil {
 		return nil
 	}
-	return o.Year
+	return v.Year
 }

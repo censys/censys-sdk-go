@@ -15,44 +15,44 @@ type HTTPFavicon struct {
 	Size *int `json:"size,omitempty"`
 }
 
-func (o *HTTPFavicon) GetHashMd5() *string {
-	if o == nil {
+func (h *HTTPFavicon) GetHashMd5() *string {
+	if h == nil {
 		return nil
 	}
-	return o.HashMd5
+	return h.HashMd5
 }
 
-func (o *HTTPFavicon) GetHashPhash() *string {
-	if o == nil {
+func (h *HTTPFavicon) GetHashPhash() *string {
+	if h == nil {
 		return nil
 	}
-	return o.HashPhash
+	return h.HashPhash
 }
 
-func (o *HTTPFavicon) GetHashSha256() *string {
-	if o == nil {
+func (h *HTTPFavicon) GetHashSha256() *string {
+	if h == nil {
 		return nil
 	}
-	return o.HashSha256
+	return h.HashSha256
 }
 
-func (o *HTTPFavicon) GetHashShodan() *int {
-	if o == nil {
+func (h *HTTPFavicon) GetHashShodan() *int {
+	if h == nil {
 		return nil
 	}
-	return o.HashShodan
+	return h.HashShodan
 }
 
-func (o *HTTPFavicon) GetName() *string {
-	if o == nil {
+func (h *HTTPFavicon) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HTTPFavicon) GetSize() *int {
-	if o == nil {
+func (h *HTTPFavicon) GetSize() *int {
+	if h == nil {
 		return nil
 	}
-	return o.Size
+	return h.Size
 }

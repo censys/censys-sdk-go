@@ -11,44 +11,44 @@ type MurmurMurmurVersion struct {
 	VersionString *string `json:"version_string,omitempty"`
 }
 
-func (o *MurmurMurmurVersion) GetBuild() *int {
-	if o == nil {
+func (m *MurmurMurmurVersion) GetBuild() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Build
+	return m.Build
 }
 
-func (o *MurmurMurmurVersion) GetMajor() *int {
-	if o == nil {
+func (m *MurmurMurmurVersion) GetMajor() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Major
+	return m.Major
 }
 
-func (o *MurmurMurmurVersion) GetMinor() *int {
-	if o == nil {
+func (m *MurmurMurmurVersion) GetMinor() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Minor
+	return m.Minor
 }
 
-func (o *MurmurMurmurVersion) GetOs() *string {
-	if o == nil {
+func (m *MurmurMurmurVersion) GetOs() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Os
+	return m.Os
 }
 
-func (o *MurmurMurmurVersion) GetOsVersion() *string {
-	if o == nil {
+func (m *MurmurMurmurVersion) GetOsVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.OsVersion
+	return m.OsVersion
 }
 
-func (o *MurmurMurmurVersion) GetVersionString() *string {
-	if o == nil {
+func (m *MurmurMurmurVersion) GetVersionString() *string {
+	if m == nil {
 		return nil
 	}
-	return o.VersionString
+	return m.VersionString
 }

@@ -21,107 +21,107 @@ type UpnpDevice struct {
 	Upc              *string       `json:"upc,omitempty"`
 }
 
-func (o *UpnpDevice) GetDeviceType() *string {
-	if o == nil {
+func (u *UpnpDevice) GetDeviceType() *string {
+	if u == nil {
 		return nil
 	}
-	return o.DeviceType
+	return u.DeviceType
 }
 
-func (o *UpnpDevice) GetFriendlyName() *string {
-	if o == nil {
+func (u *UpnpDevice) GetFriendlyName() *string {
+	if u == nil {
 		return nil
 	}
-	return o.FriendlyName
+	return u.FriendlyName
 }
 
-func (o *UpnpDevice) GetID() *int {
-	if o == nil {
+func (u *UpnpDevice) GetID() *int {
+	if u == nil {
 		return nil
 	}
-	return o.ID
+	return u.ID
 }
 
-func (o *UpnpDevice) GetManufacturer() *string {
-	if o == nil {
+func (u *UpnpDevice) GetManufacturer() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Manufacturer
+	return u.Manufacturer
 }
 
-func (o *UpnpDevice) GetManufacturerURL() *string {
-	if o == nil {
+func (u *UpnpDevice) GetManufacturerURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ManufacturerURL
+	return u.ManufacturerURL
 }
 
-func (o *UpnpDevice) GetModelDescription() *string {
-	if o == nil {
+func (u *UpnpDevice) GetModelDescription() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ModelDescription
+	return u.ModelDescription
 }
 
-func (o *UpnpDevice) GetModelName() *string {
-	if o == nil {
+func (u *UpnpDevice) GetModelName() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ModelName
+	return u.ModelName
 }
 
-func (o *UpnpDevice) GetModelNumber() *string {
-	if o == nil {
+func (u *UpnpDevice) GetModelNumber() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ModelNumber
+	return u.ModelNumber
 }
 
-func (o *UpnpDevice) GetModelURL() *string {
-	if o == nil {
+func (u *UpnpDevice) GetModelURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ModelURL
+	return u.ModelURL
 }
 
-func (o *UpnpDevice) GetParentID() *int {
-	if o == nil {
+func (u *UpnpDevice) GetParentID() *int {
+	if u == nil {
 		return nil
 	}
-	return o.ParentID
+	return u.ParentID
 }
 
-func (o *UpnpDevice) GetPresentationURL() *string {
-	if o == nil {
+func (u *UpnpDevice) GetPresentationURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.PresentationURL
+	return u.PresentationURL
 }
 
-func (o *UpnpDevice) GetSerialNumber() *string {
-	if o == nil {
+func (u *UpnpDevice) GetSerialNumber() *string {
+	if u == nil {
 		return nil
 	}
-	return o.SerialNumber
+	return u.SerialNumber
 }
 
-func (o *UpnpDevice) GetServiceList() []UpnpService {
-	if o == nil {
+func (u *UpnpDevice) GetServiceList() []UpnpService {
+	if u == nil {
 		return nil
 	}
-	return o.ServiceList
+	return u.ServiceList
 }
 
-func (o *UpnpDevice) GetUdn() *string {
-	if o == nil {
+func (u *UpnpDevice) GetUdn() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Udn
+	return u.Udn
 }
 
-func (o *UpnpDevice) GetUpc() *string {
-	if o == nil {
+func (u *UpnpDevice) GetUpc() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Upc
+	return u.Upc
 }

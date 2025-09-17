@@ -9,30 +9,30 @@ type SSHAlgorithmSelection struct {
 	ServerToClientAlgGroup *SSHAlgorithmSelectionDirectionAlgorithms `json:"server_to_client_alg_group,omitempty"`
 }
 
-func (o *SSHAlgorithmSelection) GetClientToServerAlgGroup() *SSHAlgorithmSelectionDirectionAlgorithms {
-	if o == nil {
+func (s *SSHAlgorithmSelection) GetClientToServerAlgGroup() *SSHAlgorithmSelectionDirectionAlgorithms {
+	if s == nil {
 		return nil
 	}
-	return o.ClientToServerAlgGroup
+	return s.ClientToServerAlgGroup
 }
 
-func (o *SSHAlgorithmSelection) GetHostKeyAlgorithm() *string {
-	if o == nil {
+func (s *SSHAlgorithmSelection) GetHostKeyAlgorithm() *string {
+	if s == nil {
 		return nil
 	}
-	return o.HostKeyAlgorithm
+	return s.HostKeyAlgorithm
 }
 
-func (o *SSHAlgorithmSelection) GetKexAlgorithm() *string {
-	if o == nil {
+func (s *SSHAlgorithmSelection) GetKexAlgorithm() *string {
+	if s == nil {
 		return nil
 	}
-	return o.KexAlgorithm
+	return s.KexAlgorithm
 }
 
-func (o *SSHAlgorithmSelection) GetServerToClientAlgGroup() *SSHAlgorithmSelectionDirectionAlgorithms {
-	if o == nil {
+func (s *SSHAlgorithmSelection) GetServerToClientAlgGroup() *SSHAlgorithmSelectionDirectionAlgorithms {
+	if s == nil {
 		return nil
 	}
-	return o.ServerToClientAlgGroup
+	return s.ServerToClientAlgGroup
 }

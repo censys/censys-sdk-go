@@ -11,44 +11,44 @@ type Coap struct {
 	Version     *int    `json:"version,omitempty"`
 }
 
-func (o *Coap) GetCode() *string {
-	if o == nil {
+func (c *Coap) GetCode() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Code
+	return c.Code
 }
 
-func (o *Coap) GetMessageID() *int {
-	if o == nil {
+func (c *Coap) GetMessageID() *int {
+	if c == nil {
 		return nil
 	}
-	return o.MessageID
+	return c.MessageID
 }
 
-func (o *Coap) GetMessageType() *string {
-	if o == nil {
+func (c *Coap) GetMessageType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.MessageType
+	return c.MessageType
 }
 
-func (o *Coap) GetPayload() *string {
-	if o == nil {
+func (c *Coap) GetPayload() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Payload
+	return c.Payload
 }
 
-func (o *Coap) GetToken() *string {
-	if o == nil {
+func (c *Coap) GetToken() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Token
+	return c.Token
 }
 
-func (o *Coap) GetVersion() *int {
-	if o == nil {
+func (c *Coap) GetVersion() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Version
+	return c.Version
 }

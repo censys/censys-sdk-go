@@ -10,37 +10,37 @@ type EventsCapabilities struct {
 	WsSubscriptionPolicySupport                   *bool `json:"ws_subscription_policy_support,omitempty"`
 }
 
-func (o *EventsCapabilities) GetMaxNotificationProducers() *int {
-	if o == nil {
+func (e *EventsCapabilities) GetMaxNotificationProducers() *int {
+	if e == nil {
 		return nil
 	}
-	return o.MaxNotificationProducers
+	return e.MaxNotificationProducers
 }
 
-func (o *EventsCapabilities) GetMaxPullPoints() *int {
-	if o == nil {
+func (e *EventsCapabilities) GetMaxPullPoints() *int {
+	if e == nil {
 		return nil
 	}
-	return o.MaxPullPoints
+	return e.MaxPullPoints
 }
 
-func (o *EventsCapabilities) GetWsPausableSubscriptionManagerInterfaceSupport() *bool {
-	if o == nil {
+func (e *EventsCapabilities) GetWsPausableSubscriptionManagerInterfaceSupport() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.WsPausableSubscriptionManagerInterfaceSupport
+	return e.WsPausableSubscriptionManagerInterfaceSupport
 }
 
-func (o *EventsCapabilities) GetWsPullPointSupport() *bool {
-	if o == nil {
+func (e *EventsCapabilities) GetWsPullPointSupport() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.WsPullPointSupport
+	return e.WsPullPointSupport
 }
 
-func (o *EventsCapabilities) GetWsSubscriptionPolicySupport() *bool {
-	if o == nil {
+func (e *EventsCapabilities) GetWsSubscriptionPolicySupport() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.WsSubscriptionPolicySupport
+	return e.WsSubscriptionPolicySupport
 }

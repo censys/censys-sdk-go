@@ -7,16 +7,16 @@ type ScadaView struct {
 	Title       *string `json:"title,omitempty"`
 }
 
-func (o *ScadaView) GetDescription() *string {
-	if o == nil {
+func (s *ScadaView) GetDescription() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Description
+	return s.Description
 }
 
-func (o *ScadaView) GetTitle() *string {
-	if o == nil {
+func (s *ScadaView) GetTitle() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Title
+	return s.Title
 }

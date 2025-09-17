@@ -7,16 +7,16 @@ type ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttr struct {
 	XpackInstalled *string                                                          `json:"xpack_installed,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttr) GetMl() *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttr) GetMl() *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttrML {
+	if e == nil {
 		return nil
 	}
-	return o.Ml
+	return e.Ml
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttr) GetXpackInstalled() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettingsNodeAttr) GetXpackInstalled() *string {
+	if e == nil {
 		return nil
 	}
-	return o.XpackInstalled
+	return e.XpackInstalled
 }

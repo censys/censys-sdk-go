@@ -6,9 +6,9 @@ type QCStatementsQCLegislation struct {
 	CountryCodes []string `json:"country_codes,omitempty"`
 }
 
-func (o *QCStatementsQCLegislation) GetCountryCodes() []string {
-	if o == nil {
+func (q *QCStatementsQCLegislation) GetCountryCodes() []string {
+	if q == nil {
 		return nil
 	}
-	return o.CountryCodes
+	return q.CountryCodes
 }

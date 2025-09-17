@@ -28,93 +28,93 @@ type PixelFormat struct {
 	TrueColor *bool `json:"true_color,omitempty"`
 }
 
-func (o *PixelFormat) GetBigEndian() *bool {
-	if o == nil {
+func (p *PixelFormat) GetBigEndian() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.BigEndian
+	return p.BigEndian
 }
 
-func (o *PixelFormat) GetBitsPerPixel() *int {
-	if o == nil {
+func (p *PixelFormat) GetBitsPerPixel() *int {
+	if p == nil {
 		return nil
 	}
-	return o.BitsPerPixel
+	return p.BitsPerPixel
 }
 
-func (o *PixelFormat) GetBlueMax() *int {
-	if o == nil {
+func (p *PixelFormat) GetBlueMax() *int {
+	if p == nil {
 		return nil
 	}
-	return o.BlueMax
+	return p.BlueMax
 }
 
-func (o *PixelFormat) GetBlueShift() *int {
-	if o == nil {
+func (p *PixelFormat) GetBlueShift() *int {
+	if p == nil {
 		return nil
 	}
-	return o.BlueShift
+	return p.BlueShift
 }
 
-func (o *PixelFormat) GetDepth() *int {
-	if o == nil {
+func (p *PixelFormat) GetDepth() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Depth
+	return p.Depth
 }
 
-func (o *PixelFormat) GetGreenMax() *int {
-	if o == nil {
+func (p *PixelFormat) GetGreenMax() *int {
+	if p == nil {
 		return nil
 	}
-	return o.GreenMax
+	return p.GreenMax
 }
 
-func (o *PixelFormat) GetGreenShift() *int {
-	if o == nil {
+func (p *PixelFormat) GetGreenShift() *int {
+	if p == nil {
 		return nil
 	}
-	return o.GreenShift
+	return p.GreenShift
 }
 
-func (o *PixelFormat) GetPadding1() *int {
-	if o == nil {
+func (p *PixelFormat) GetPadding1() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Padding1
+	return p.Padding1
 }
 
-func (o *PixelFormat) GetPadding2() *int {
-	if o == nil {
+func (p *PixelFormat) GetPadding2() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Padding2
+	return p.Padding2
 }
 
-func (o *PixelFormat) GetPadding3() *int {
-	if o == nil {
+func (p *PixelFormat) GetPadding3() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Padding3
+	return p.Padding3
 }
 
-func (o *PixelFormat) GetRedMax() *int {
-	if o == nil {
+func (p *PixelFormat) GetRedMax() *int {
+	if p == nil {
 		return nil
 	}
-	return o.RedMax
+	return p.RedMax
 }
 
-func (o *PixelFormat) GetRedShift() *int {
-	if o == nil {
+func (p *PixelFormat) GetRedShift() *int {
+	if p == nil {
 		return nil
 	}
-	return o.RedShift
+	return p.RedShift
 }
 
-func (o *PixelFormat) GetTrueColor() *bool {
-	if o == nil {
+func (p *PixelFormat) GetTrueColor() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.TrueColor
+	return p.TrueColor
 }

@@ -14,65 +14,65 @@ type Pptp struct {
 	Vendor          *string           `json:"vendor,omitempty"`
 }
 
-func (o *Pptp) GetBearerMessage() *PptpResponseInfo {
-	if o == nil {
+func (p *Pptp) GetBearerMessage() *PptpResponseInfo {
+	if p == nil {
 		return nil
 	}
-	return o.BearerMessage
+	return p.BearerMessage
 }
 
-func (o *Pptp) GetErrorMessage() *PptpResponseInfo {
-	if o == nil {
+func (p *Pptp) GetErrorMessage() *PptpResponseInfo {
+	if p == nil {
 		return nil
 	}
-	return o.ErrorMessage
+	return p.ErrorMessage
 }
 
-func (o *Pptp) GetFirmware() *PptpVersion {
-	if o == nil {
+func (p *Pptp) GetFirmware() *PptpVersion {
+	if p == nil {
 		return nil
 	}
-	return o.Firmware
+	return p.Firmware
 }
 
-func (o *Pptp) GetFramingMessage() *PptpResponseInfo {
-	if o == nil {
+func (p *Pptp) GetFramingMessage() *PptpResponseInfo {
+	if p == nil {
 		return nil
 	}
-	return o.FramingMessage
+	return p.FramingMessage
 }
 
-func (o *Pptp) GetHostname() *string {
-	if o == nil {
+func (p *Pptp) GetHostname() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Hostname
+	return p.Hostname
 }
 
-func (o *Pptp) GetMaximumChannels() *int {
-	if o == nil {
+func (p *Pptp) GetMaximumChannels() *int {
+	if p == nil {
 		return nil
 	}
-	return o.MaximumChannels
+	return p.MaximumChannels
 }
 
-func (o *Pptp) GetProtocol() *PptpVersion {
-	if o == nil {
+func (p *Pptp) GetProtocol() *PptpVersion {
+	if p == nil {
 		return nil
 	}
-	return o.Protocol
+	return p.Protocol
 }
 
-func (o *Pptp) GetResultMessage() *PptpResponseInfo {
-	if o == nil {
+func (p *Pptp) GetResultMessage() *PptpResponseInfo {
+	if p == nil {
 		return nil
 	}
-	return o.ResultMessage
+	return p.ResultMessage
 }
 
-func (o *Pptp) GetVendor() *string {
-	if o == nil {
+func (p *Pptp) GetVendor() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Vendor
+	return p.Vendor
 }

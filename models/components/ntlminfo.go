@@ -19,100 +19,100 @@ type NtlmInfo struct {
 	TargetName                *string `json:"target_name,omitempty"`
 }
 
-func (o *NtlmInfo) GetAlwaysSignSupported() *bool {
-	if o == nil {
+func (n *NtlmInfo) GetAlwaysSignSupported() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.AlwaysSignSupported
+	return n.AlwaysSignSupported
 }
 
-func (o *NtlmInfo) GetChallengeType() *int {
-	if o == nil {
+func (n *NtlmInfo) GetChallengeType() *int {
+	if n == nil {
 		return nil
 	}
-	return o.ChallengeType
+	return n.ChallengeType
 }
 
-func (o *NtlmInfo) GetDNSDomainName() *string {
-	if o == nil {
+func (n *NtlmInfo) GetDNSDomainName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.DNSDomainName
+	return n.DNSDomainName
 }
 
-func (o *NtlmInfo) GetDNSServerName() *string {
-	if o == nil {
+func (n *NtlmInfo) GetDNSServerName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.DNSServerName
+	return n.DNSServerName
 }
 
-func (o *NtlmInfo) GetDNSTreeName() *string {
-	if o == nil {
+func (n *NtlmInfo) GetDNSTreeName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.DNSTreeName
+	return n.DNSTreeName
 }
 
-func (o *NtlmInfo) GetEncryption128bitSupported() *bool {
-	if o == nil {
+func (n *NtlmInfo) GetEncryption128bitSupported() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Encryption128bitSupported
+	return n.Encryption128bitSupported
 }
 
-func (o *NtlmInfo) GetEncryption56bitSupported() *bool {
-	if o == nil {
+func (n *NtlmInfo) GetEncryption56bitSupported() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Encryption56bitSupported
+	return n.Encryption56bitSupported
 }
 
-func (o *NtlmInfo) GetNetbiosComputerName() *string {
-	if o == nil {
+func (n *NtlmInfo) GetNetbiosComputerName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.NetbiosComputerName
+	return n.NetbiosComputerName
 }
 
-func (o *NtlmInfo) GetNetbiosDomainName() *string {
-	if o == nil {
+func (n *NtlmInfo) GetNetbiosDomainName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.NetbiosDomainName
+	return n.NetbiosDomainName
 }
 
-func (o *NtlmInfo) GetNtlm1Supported() *bool {
-	if o == nil {
+func (n *NtlmInfo) GetNtlm1Supported() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Ntlm1Supported
+	return n.Ntlm1Supported
 }
 
-func (o *NtlmInfo) GetNtlm2Supported() *bool {
-	if o == nil {
+func (n *NtlmInfo) GetNtlm2Supported() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Ntlm2Supported
+	return n.Ntlm2Supported
 }
 
-func (o *NtlmInfo) GetNtlmVersion() *int {
-	if o == nil {
+func (n *NtlmInfo) GetNtlmVersion() *int {
+	if n == nil {
 		return nil
 	}
-	return o.NtlmVersion
+	return n.NtlmVersion
 }
 
-func (o *NtlmInfo) GetOsVersion() *string {
-	if o == nil {
+func (n *NtlmInfo) GetOsVersion() *string {
+	if n == nil {
 		return nil
 	}
-	return o.OsVersion
+	return n.OsVersion
 }
 
-func (o *NtlmInfo) GetTargetName() *string {
-	if o == nil {
+func (n *NtlmInfo) GetTargetName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.TargetName
+	return n.TargetName
 }

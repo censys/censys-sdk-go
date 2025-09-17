@@ -55,72 +55,72 @@ type Threat struct {
 	Type       []string       `json:"type,omitempty"`
 }
 
-func (o *Threat) GetActors() []ThreatActor {
-	if o == nil {
+func (t *Threat) GetActors() []ThreatActor {
+	if t == nil {
 		return nil
 	}
-	return o.Actors
+	return t.Actors
 }
 
-func (o *Threat) GetConfidence() *float64 {
-	if o == nil {
+func (t *Threat) GetConfidence() *float64 {
+	if t == nil {
 		return nil
 	}
-	return o.Confidence
+	return t.Confidence
 }
 
-func (o *Threat) GetDetails() *ThreatDetails {
-	if o == nil {
+func (t *Threat) GetDetails() *ThreatDetails {
+	if t == nil {
 		return nil
 	}
-	return o.Details
+	return t.Details
 }
 
-func (o *Threat) GetEvidence() []Evidence {
-	if o == nil {
+func (t *Threat) GetEvidence() []Evidence {
+	if t == nil {
 		return nil
 	}
-	return o.Evidence
+	return t.Evidence
 }
 
-func (o *Threat) GetID() *string {
-	if o == nil {
+func (t *Threat) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *Threat) GetMalware() *ThreatMalware {
-	if o == nil {
+func (t *Threat) GetMalware() *ThreatMalware {
+	if t == nil {
 		return nil
 	}
-	return o.Malware
+	return t.Malware
 }
 
-func (o *Threat) GetName() *string {
-	if o == nil {
+func (t *Threat) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }
 
-func (o *Threat) GetSource() *ThreatSource {
-	if o == nil {
+func (t *Threat) GetSource() *ThreatSource {
+	if t == nil {
 		return nil
 	}
-	return o.Source
+	return t.Source
 }
 
-func (o *Threat) GetTactic() []string {
-	if o == nil {
+func (t *Threat) GetTactic() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Tactic
+	return t.Tactic
 }
 
-func (o *Threat) GetType() []string {
-	if o == nil {
+func (t *Threat) GetType() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Type
+	return t.Type
 }

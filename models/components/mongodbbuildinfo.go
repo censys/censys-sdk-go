@@ -10,23 +10,23 @@ type MongodbBuildInfo struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *MongodbBuildInfo) GetBuildEnvironment() *MongodbBuildInfoBuildEnvironment {
-	if o == nil {
+func (m *MongodbBuildInfo) GetBuildEnvironment() *MongodbBuildInfoBuildEnvironment {
+	if m == nil {
 		return nil
 	}
-	return o.BuildEnvironment
+	return m.BuildEnvironment
 }
 
-func (o *MongodbBuildInfo) GetGitVersion() *string {
-	if o == nil {
+func (m *MongodbBuildInfo) GetGitVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.GitVersion
+	return m.GitVersion
 }
 
-func (o *MongodbBuildInfo) GetVersion() *string {
-	if o == nil {
+func (m *MongodbBuildInfo) GetVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Version
+	return m.Version
 }

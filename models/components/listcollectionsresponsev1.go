@@ -7,16 +7,16 @@ type ListCollectionsResponseV1 struct {
 	NextPageToken string       `json:"next_page_token"`
 }
 
-func (o *ListCollectionsResponseV1) GetCollections() []Collection {
-	if o == nil {
+func (l *ListCollectionsResponseV1) GetCollections() []Collection {
+	if l == nil {
 		return nil
 	}
-	return o.Collections
+	return l.Collections
 }
 
-func (o *ListCollectionsResponseV1) GetNextPageToken() string {
-	if o == nil {
+func (l *ListCollectionsResponseV1) GetNextPageToken() string {
+	if l == nil {
 		return ""
 	}
-	return o.NextPageToken
+	return l.NextPageToken
 }

@@ -8,23 +8,23 @@ type SearchQueryHit struct {
 	WebpropertyV1 *WebpropertyAsset `json:"webproperty_v1,omitempty"`
 }
 
-func (o *SearchQueryHit) GetCertificateV1() *CertificateAsset {
-	if o == nil {
+func (s *SearchQueryHit) GetCertificateV1() *CertificateAsset {
+	if s == nil {
 		return nil
 	}
-	return o.CertificateV1
+	return s.CertificateV1
 }
 
-func (o *SearchQueryHit) GetHostV1() *HostAsset {
-	if o == nil {
+func (s *SearchQueryHit) GetHostV1() *HostAsset {
+	if s == nil {
 		return nil
 	}
-	return o.HostV1
+	return s.HostV1
 }
 
-func (o *SearchQueryHit) GetWebpropertyV1() *WebpropertyAsset {
-	if o == nil {
+func (s *SearchQueryHit) GetWebpropertyV1() *WebpropertyAsset {
+	if s == nil {
 		return nil
 	}
-	return o.WebpropertyV1
+	return s.WebpropertyV1
 }

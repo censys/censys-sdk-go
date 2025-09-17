@@ -7,16 +7,16 @@ type RocketmqClusterInfo struct {
 	Payload *string                 `json:"payload,omitempty"`
 }
 
-func (o *RocketmqClusterInfo) GetHeader() *RocketmqResponseHeader {
-	if o == nil {
+func (r *RocketmqClusterInfo) GetHeader() *RocketmqResponseHeader {
+	if r == nil {
 		return nil
 	}
-	return o.Header
+	return r.Header
 }
 
-func (o *RocketmqClusterInfo) GetPayload() *string {
-	if o == nil {
+func (r *RocketmqClusterInfo) GetPayload() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Payload
+	return r.Payload
 }

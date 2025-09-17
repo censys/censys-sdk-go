@@ -14,65 +14,65 @@ type SapRouterRouterInfo struct {
 	StartedOn                  *string               `json:"started_on,omitempty"`
 }
 
-func (o *SapRouterRouterInfo) GetConnectedClientInfo() []SapRouterClientInfo {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetConnectedClientInfo() []SapRouterClientInfo {
+	if s == nil {
 		return nil
 	}
-	return o.ConnectedClientInfo
+	return s.ConnectedClientInfo
 }
 
-func (o *SapRouterRouterInfo) GetNumClients() *int64 {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetNumClients() *int64 {
+	if s == nil {
 		return nil
 	}
-	return o.NumClients
+	return s.NumClients
 }
 
-func (o *SapRouterRouterInfo) GetParentPid() *int {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetParentPid() *int {
+	if s == nil {
 		return nil
 	}
-	return o.ParentPid
+	return s.ParentPid
 }
 
-func (o *SapRouterRouterInfo) GetParentPort() *int {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetParentPort() *int {
+	if s == nil {
 		return nil
 	}
-	return o.ParentPort
+	return s.ParentPort
 }
 
-func (o *SapRouterRouterInfo) GetPid() *int {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetPid() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Pid
+	return s.Pid
 }
 
-func (o *SapRouterRouterInfo) GetPort() *int {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetPort() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Port
+	return s.Port
 }
 
-func (o *SapRouterRouterInfo) GetRouttabRelativeDirectory() *string {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetRouttabRelativeDirectory() *string {
+	if s == nil {
 		return nil
 	}
-	return o.RouttabRelativeDirectory
+	return s.RouttabRelativeDirectory
 }
 
-func (o *SapRouterRouterInfo) GetSapRouterAbsoluteDirectory() *string {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetSapRouterAbsoluteDirectory() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SapRouterAbsoluteDirectory
+	return s.SapRouterAbsoluteDirectory
 }
 
-func (o *SapRouterRouterInfo) GetStartedOn() *string {
-	if o == nil {
+func (s *SapRouterRouterInfo) GetStartedOn() *string {
+	if s == nil {
 		return nil
 	}
-	return o.StartedOn
+	return s.StartedOn
 }

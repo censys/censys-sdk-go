@@ -9,16 +9,16 @@ type SearchValueCountsInputBody struct {
 	Query *string `json:"query,omitempty"`
 }
 
-func (o *SearchValueCountsInputBody) GetAndCountConditions() []CountCondition {
-	if o == nil {
+func (s *SearchValueCountsInputBody) GetAndCountConditions() []CountCondition {
+	if s == nil {
 		return nil
 	}
-	return o.AndCountConditions
+	return s.AndCountConditions
 }
 
-func (o *SearchValueCountsInputBody) GetQuery() *string {
-	if o == nil {
+func (s *SearchValueCountsInputBody) GetQuery() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Query
+	return s.Query
 }

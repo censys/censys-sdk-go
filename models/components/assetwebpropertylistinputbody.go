@@ -7,9 +7,9 @@ type AssetWebpropertyListInputBody struct {
 	WebpropertyIds []string `json:"webproperty_ids"`
 }
 
-func (o *AssetWebpropertyListInputBody) GetWebpropertyIds() []string {
-	if o == nil {
+func (a *AssetWebpropertyListInputBody) GetWebpropertyIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.WebpropertyIds
+	return a.WebpropertyIds
 }

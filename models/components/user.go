@@ -7,16 +7,16 @@ type User struct {
 	Steamid   *string `json:"steamid,omitempty"`
 }
 
-func (o *User) GetAuthKeyID() *string {
-	if o == nil {
+func (u *User) GetAuthKeyID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.AuthKeyID
+	return u.AuthKeyID
 }
 
-func (o *User) GetSteamid() *string {
-	if o == nil {
+func (u *User) GetSteamid() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Steamid
+	return u.Steamid
 }

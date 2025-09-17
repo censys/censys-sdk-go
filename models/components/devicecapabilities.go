@@ -8,23 +8,23 @@ type DeviceCapabilities struct {
 	System   *SystemCapabilities   `json:"system,omitempty"`
 }
 
-func (o *DeviceCapabilities) GetNetwork() *NetworkCapabilities {
-	if o == nil {
+func (d *DeviceCapabilities) GetNetwork() *NetworkCapabilities {
+	if d == nil {
 		return nil
 	}
-	return o.Network
+	return d.Network
 }
 
-func (o *DeviceCapabilities) GetSecurity() *SecurityCapabilities {
-	if o == nil {
+func (d *DeviceCapabilities) GetSecurity() *SecurityCapabilities {
+	if d == nil {
 		return nil
 	}
-	return o.Security
+	return d.Security
 }
 
-func (o *DeviceCapabilities) GetSystem() *SystemCapabilities {
-	if o == nil {
+func (d *DeviceCapabilities) GetSystem() *SystemCapabilities {
+	if d == nil {
 		return nil
 	}
-	return o.System
+	return d.System
 }

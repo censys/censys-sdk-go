@@ -7,9 +7,9 @@ type AssetHostListInputBody struct {
 	HostIds []string `json:"host_ids"`
 }
 
-func (o *AssetHostListInputBody) GetHostIds() []string {
-	if o == nil {
+func (a *AssetHostListInputBody) GetHostIds() []string {
+	if a == nil {
 		return nil
 	}
-	return o.HostIds
+	return a.HostIds
 }

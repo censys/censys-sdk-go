@@ -6,9 +6,9 @@ type ResponseEnvelopeListSearchConvertQueryResponse struct {
 	Result []SearchConvertQueryResponse `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeListSearchConvertQueryResponse) GetResult() []SearchConvertQueryResponse {
-	if o == nil {
+func (r *ResponseEnvelopeListSearchConvertQueryResponse) GetResult() []SearchConvertQueryResponse {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

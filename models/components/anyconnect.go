@@ -15,37 +15,37 @@ type AnyConnect struct {
 	ResponseType *string `json:"response_type,omitempty"`
 }
 
-func (o *AnyConnect) GetAggregateAuthVersion() *int {
-	if o == nil {
+func (a *AnyConnect) GetAggregateAuthVersion() *int {
+	if a == nil {
 		return nil
 	}
-	return o.AggregateAuthVersion
+	return a.AggregateAuthVersion
 }
 
-func (o *AnyConnect) GetAuthMethods() []string {
-	if o == nil {
+func (a *AnyConnect) GetAuthMethods() []string {
+	if a == nil {
 		return nil
 	}
-	return o.AuthMethods
+	return a.AuthMethods
 }
 
-func (o *AnyConnect) GetGroups() []string {
-	if o == nil {
+func (a *AnyConnect) GetGroups() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Groups
+	return a.Groups
 }
 
-func (o *AnyConnect) GetRaw() *string {
-	if o == nil {
+func (a *AnyConnect) GetRaw() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Raw
+	return a.Raw
 }
 
-func (o *AnyConnect) GetResponseType() *string {
-	if o == nil {
+func (a *AnyConnect) GetResponseType() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ResponseType
+	return a.ResponseType
 }

@@ -9,30 +9,30 @@ type TorServiceDescriptor struct {
 	Onion         *string `json:"onion,omitempty"`
 }
 
-func (o *TorServiceDescriptor) GetAlgorithmName() *string {
-	if o == nil {
+func (t *TorServiceDescriptor) GetAlgorithmName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.AlgorithmName
+	return t.AlgorithmName
 }
 
-func (o *TorServiceDescriptor) GetHash() *string {
-	if o == nil {
+func (t *TorServiceDescriptor) GetHash() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Hash
+	return t.Hash
 }
 
-func (o *TorServiceDescriptor) GetHashBits() *int {
-	if o == nil {
+func (t *TorServiceDescriptor) GetHashBits() *int {
+	if t == nil {
 		return nil
 	}
-	return o.HashBits
+	return t.HashBits
 }
 
-func (o *TorServiceDescriptor) GetOnion() *string {
-	if o == nil {
+func (t *TorServiceDescriptor) GetOnion() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Onion
+	return t.Onion
 }

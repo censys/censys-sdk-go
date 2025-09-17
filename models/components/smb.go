@@ -18,65 +18,65 @@ type Smb struct {
 	Smbv1Support    *bool               `json:"smbv1_support,omitempty"`
 }
 
-func (o *Smb) GetGroupName() *string {
-	if o == nil {
+func (s *Smb) GetGroupName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.GroupName
+	return s.GroupName
 }
 
-func (o *Smb) GetHasNtlm() *bool {
-	if o == nil {
+func (s *Smb) GetHasNtlm() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.HasNtlm
+	return s.HasNtlm
 }
 
-func (o *Smb) GetNativeOs() *string {
-	if o == nil {
+func (s *Smb) GetNativeOs() *string {
+	if s == nil {
 		return nil
 	}
-	return o.NativeOs
+	return s.NativeOs
 }
 
-func (o *Smb) GetNegotiationLog() *SmbNegotiationLog {
-	if o == nil {
+func (s *Smb) GetNegotiationLog() *SmbNegotiationLog {
+	if s == nil {
 		return nil
 	}
-	return o.NegotiationLog
+	return s.NegotiationLog
 }
 
-func (o *Smb) GetNtlm() *string {
-	if o == nil {
+func (s *Smb) GetNtlm() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Ntlm
+	return s.Ntlm
 }
 
-func (o *Smb) GetSessionSetupLog() *SmbSessionSetupLog {
-	if o == nil {
+func (s *Smb) GetSessionSetupLog() *SmbSessionSetupLog {
+	if s == nil {
 		return nil
 	}
-	return o.SessionSetupLog
+	return s.SessionSetupLog
 }
 
-func (o *Smb) GetSmbCapabilities() *SmbSmbCapabilities {
-	if o == nil {
+func (s *Smb) GetSmbCapabilities() *SmbSmbCapabilities {
+	if s == nil {
 		return nil
 	}
-	return o.SmbCapabilities
+	return s.SmbCapabilities
 }
 
-func (o *Smb) GetSmbVersion() *SmbSmbVersions {
-	if o == nil {
+func (s *Smb) GetSmbVersion() *SmbSmbVersions {
+	if s == nil {
 		return nil
 	}
-	return o.SmbVersion
+	return s.SmbVersion
 }
 
-func (o *Smb) GetSmbv1Support() *bool {
-	if o == nil {
+func (s *Smb) GetSmbv1Support() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Smbv1Support
+	return s.Smbv1Support
 }

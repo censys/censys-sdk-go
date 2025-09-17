@@ -12,51 +12,51 @@ type Murmur struct {
 	Version        *MurmurMurmurVersion `json:"version,omitempty"`
 }
 
-func (o *Murmur) GetCryptSetup() *CryptSetup {
-	if o == nil {
+func (m *Murmur) GetCryptSetup() *CryptSetup {
+	if m == nil {
 		return nil
 	}
-	return o.CryptSetup
+	return m.CryptSetup
 }
 
-func (o *Murmur) GetMurmurMessages() []MurmurMessage {
-	if o == nil {
+func (m *Murmur) GetMurmurMessages() []MurmurMessage {
+	if m == nil {
 		return nil
 	}
-	return o.MurmurMessages
+	return m.MurmurMessages
 }
 
-func (o *Murmur) GetReject() *Reject {
-	if o == nil {
+func (m *Murmur) GetReject() *Reject {
+	if m == nil {
 		return nil
 	}
-	return o.Reject
+	return m.Reject
 }
 
-func (o *Murmur) GetServerConfig() *ServerConfig {
-	if o == nil {
+func (m *Murmur) GetServerConfig() *ServerConfig {
+	if m == nil {
 		return nil
 	}
-	return o.ServerConfig
+	return m.ServerConfig
 }
 
-func (o *Murmur) GetServerSync() *ServerSync {
-	if o == nil {
+func (m *Murmur) GetServerSync() *ServerSync {
+	if m == nil {
 		return nil
 	}
-	return o.ServerSync
+	return m.ServerSync
 }
 
-func (o *Murmur) GetTextMessages() []TextMessage {
-	if o == nil {
+func (m *Murmur) GetTextMessages() []TextMessage {
+	if m == nil {
 		return nil
 	}
-	return o.TextMessages
+	return m.TextMessages
 }
 
-func (o *Murmur) GetVersion() *MurmurMurmurVersion {
-	if o == nil {
+func (m *Murmur) GetVersion() *MurmurMurmurVersion {
+	if m == nil {
 		return nil
 	}
-	return o.Version
+	return m.Version
 }

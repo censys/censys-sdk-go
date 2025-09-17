@@ -23,7 +23,7 @@ func main() {
 			Fields: []string{
 				"host.ip",
 			},
-			PageSize: censyssdkgo.Int64(1),
+			PageSize: censyssdkgo.Pointer[int64](1),
 			Query:    "host.services: (protocol=SSH and not port: 22)",
 		},
 	})

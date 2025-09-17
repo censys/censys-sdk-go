@@ -6,9 +6,9 @@ type Pgbouncer struct {
 	StartupCapabilities *PgbouncerStartupCapabilities `json:"startup_capabilities,omitempty"`
 }
 
-func (o *Pgbouncer) GetStartupCapabilities() *PgbouncerStartupCapabilities {
-	if o == nil {
+func (p *Pgbouncer) GetStartupCapabilities() *PgbouncerStartupCapabilities {
+	if p == nil {
 		return nil
 	}
-	return o.StartupCapabilities
+	return p.StartupCapabilities
 }

@@ -10,32 +10,32 @@ type V3GlobaldataScansGetGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataScansGetGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataScansGetGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataScansGetRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The unique identifier of the tracked scan
 	ScanID string `pathParam:"style=simple,explode=false,name=scan_id"`
 }
 
-func (o *V3GlobaldataScansGetRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataScansGetRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataScansGetRequest) GetScanID() string {
-	if o == nil {
+func (v *V3GlobaldataScansGetRequest) GetScanID() string {
+	if v == nil {
 		return ""
 	}
-	return o.ScanID
+	return v.ScanID
 }
 
 type V3GlobaldataScansGetResponse struct {
@@ -45,23 +45,23 @@ type V3GlobaldataScansGetResponse struct {
 	Headers                     map[string][]string
 }
 
-func (o *V3GlobaldataScansGetResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataScansGetResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataScansGetResponse) GetResponseEnvelopeTrackedScan() *components.ResponseEnvelopeTrackedScan {
-	if o == nil {
+func (v *V3GlobaldataScansGetResponse) GetResponseEnvelopeTrackedScan() *components.ResponseEnvelopeTrackedScan {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeTrackedScan
+	return v.ResponseEnvelopeTrackedScan
 }
 
-func (o *V3GlobaldataScansGetResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataScansGetResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

@@ -47,149 +47,149 @@ type Redis struct {
 	UsedMemory *int `json:"used_memory,omitempty"`
 }
 
-func (o *Redis) GetArchBits() *string {
-	if o == nil {
+func (r *Redis) GetArchBits() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ArchBits
+	return r.ArchBits
 }
 
-func (o *Redis) GetAuthResponse() *string {
-	if o == nil {
+func (r *Redis) GetAuthResponse() *string {
+	if r == nil {
 		return nil
 	}
-	return o.AuthResponse
+	return r.AuthResponse
 }
 
-func (o *Redis) GetBuildID() *string {
-	if o == nil {
+func (r *Redis) GetBuildID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.BuildID
+	return r.BuildID
 }
 
-func (o *Redis) GetCommands() []string {
-	if o == nil {
+func (r *Redis) GetCommands() []string {
+	if r == nil {
 		return nil
 	}
-	return o.Commands
+	return r.Commands
 }
 
-func (o *Redis) GetCommandsProcessed() *int {
-	if o == nil {
+func (r *Redis) GetCommandsProcessed() *int {
+	if r == nil {
 		return nil
 	}
-	return o.CommandsProcessed
+	return r.CommandsProcessed
 }
 
-func (o *Redis) GetConnectionsReceived() *int {
-	if o == nil {
+func (r *Redis) GetConnectionsReceived() *int {
+	if r == nil {
 		return nil
 	}
-	return o.ConnectionsReceived
+	return r.ConnectionsReceived
 }
 
-func (o *Redis) GetGccVersion() *string {
-	if o == nil {
+func (r *Redis) GetGccVersion() *string {
+	if r == nil {
 		return nil
 	}
-	return o.GccVersion
+	return r.GccVersion
 }
 
-func (o *Redis) GetGitSha1() *string {
-	if o == nil {
+func (r *Redis) GetGitSha1() *string {
+	if r == nil {
 		return nil
 	}
-	return o.GitSha1
+	return r.GitSha1
 }
 
-func (o *Redis) GetInfoResponse() map[string]string {
-	if o == nil {
+func (r *Redis) GetInfoResponse() map[string]string {
+	if r == nil {
 		return nil
 	}
-	return o.InfoResponse
+	return r.InfoResponse
 }
 
-func (o *Redis) GetMajor() *int {
-	if o == nil {
+func (r *Redis) GetMajor() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Major
+	return r.Major
 }
 
-func (o *Redis) GetMemAllocator() *string {
-	if o == nil {
+func (r *Redis) GetMemAllocator() *string {
+	if r == nil {
 		return nil
 	}
-	return o.MemAllocator
+	return r.MemAllocator
 }
 
-func (o *Redis) GetMinor() *int {
-	if o == nil {
+func (r *Redis) GetMinor() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Minor
+	return r.Minor
 }
 
-func (o *Redis) GetMode() *string {
-	if o == nil {
+func (r *Redis) GetMode() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Mode
+	return r.Mode
 }
 
-func (o *Redis) GetNonexistentResponse() *string {
-	if o == nil {
+func (r *Redis) GetNonexistentResponse() *string {
+	if r == nil {
 		return nil
 	}
-	return o.NonexistentResponse
+	return r.NonexistentResponse
 }
 
-func (o *Redis) GetOs() *string {
-	if o == nil {
+func (r *Redis) GetOs() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Os
+	return r.Os
 }
 
-func (o *Redis) GetPatchLevel() *int {
-	if o == nil {
+func (r *Redis) GetPatchLevel() *int {
+	if r == nil {
 		return nil
 	}
-	return o.PatchLevel
+	return r.PatchLevel
 }
 
-func (o *Redis) GetPingResponse() *string {
-	if o == nil {
+func (r *Redis) GetPingResponse() *string {
+	if r == nil {
 		return nil
 	}
-	return o.PingResponse
+	return r.PingResponse
 }
 
-func (o *Redis) GetQuitResponse() *string {
-	if o == nil {
+func (r *Redis) GetQuitResponse() *string {
+	if r == nil {
 		return nil
 	}
-	return o.QuitResponse
+	return r.QuitResponse
 }
 
-func (o *Redis) GetRawCommandOutput() []RedisRawOutput {
-	if o == nil {
+func (r *Redis) GetRawCommandOutput() []RedisRawOutput {
+	if r == nil {
 		return nil
 	}
-	return o.RawCommandOutput
+	return r.RawCommandOutput
 }
 
-func (o *Redis) GetUptime() *int {
-	if o == nil {
+func (r *Redis) GetUptime() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Uptime
+	return r.Uptime
 }
 
-func (o *Redis) GetUsedMemory() *int {
-	if o == nil {
+func (r *Redis) GetUsedMemory() *int {
+	if r == nil {
 		return nil
 	}
-	return o.UsedMemory
+	return r.UsedMemory
 }

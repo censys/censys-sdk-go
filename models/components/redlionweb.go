@@ -8,23 +8,23 @@ type RedlionWeb struct {
 	Title             *string  `json:"title,omitempty"`
 }
 
-func (o *RedlionWeb) GetEnhancedWebServer() *bool {
-	if o == nil {
+func (r *RedlionWeb) GetEnhancedWebServer() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.EnhancedWebServer
+	return r.EnhancedWebServer
 }
 
-func (o *RedlionWeb) GetLogNames() []string {
-	if o == nil {
+func (r *RedlionWeb) GetLogNames() []string {
+	if r == nil {
 		return nil
 	}
-	return o.LogNames
+	return r.LogNames
 }
 
-func (o *RedlionWeb) GetTitle() *string {
-	if o == nil {
+func (r *RedlionWeb) GetTitle() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Title
+	return r.Title
 }

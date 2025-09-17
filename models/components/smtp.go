@@ -9,16 +9,16 @@ type SMTP struct {
 	StartTLS *string `json:"start_tls,omitempty"`
 }
 
-func (o *SMTP) GetEhlo() *string {
-	if o == nil {
+func (s *SMTP) GetEhlo() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Ehlo
+	return s.Ehlo
 }
 
-func (o *SMTP) GetStartTLS() *string {
-	if o == nil {
+func (s *SMTP) GetStartTLS() *string {
+	if s == nil {
 		return nil
 	}
-	return o.StartTLS
+	return s.StartTLS
 }

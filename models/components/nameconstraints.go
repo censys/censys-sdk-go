@@ -34,107 +34,107 @@ type NameConstraints struct {
 	PermittedUris []string `json:"permitted_uris,omitempty"`
 }
 
-func (o *NameConstraints) GetCritical() *bool {
-	if o == nil {
+func (n *NameConstraints) GetCritical() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Critical
+	return n.Critical
 }
 
-func (o *NameConstraints) GetExcludedDirectoryNames() []DistinguishedName {
-	if o == nil {
+func (n *NameConstraints) GetExcludedDirectoryNames() []DistinguishedName {
+	if n == nil {
 		return nil
 	}
-	return o.ExcludedDirectoryNames
+	return n.ExcludedDirectoryNames
 }
 
-func (o *NameConstraints) GetExcludedEdiPartyNames() []EdiPartyName {
-	if o == nil {
+func (n *NameConstraints) GetExcludedEdiPartyNames() []EdiPartyName {
+	if n == nil {
 		return nil
 	}
-	return o.ExcludedEdiPartyNames
+	return n.ExcludedEdiPartyNames
 }
 
-func (o *NameConstraints) GetExcludedEmailAddresses() []string {
-	if o == nil {
+func (n *NameConstraints) GetExcludedEmailAddresses() []string {
+	if n == nil {
 		return nil
 	}
-	return o.ExcludedEmailAddresses
+	return n.ExcludedEmailAddresses
 }
 
-func (o *NameConstraints) GetExcludedIPAddresses() []GeneralSubtreeIP {
-	if o == nil {
+func (n *NameConstraints) GetExcludedIPAddresses() []GeneralSubtreeIP {
+	if n == nil {
 		return nil
 	}
-	return o.ExcludedIPAddresses
+	return n.ExcludedIPAddresses
 }
 
-func (o *NameConstraints) GetExcludedNames() []string {
-	if o == nil {
+func (n *NameConstraints) GetExcludedNames() []string {
+	if n == nil {
 		return nil
 	}
-	return o.ExcludedNames
+	return n.ExcludedNames
 }
 
-func (o *NameConstraints) GetExcludedRegisteredIds() []string {
-	if o == nil {
+func (n *NameConstraints) GetExcludedRegisteredIds() []string {
+	if n == nil {
 		return nil
 	}
-	return o.ExcludedRegisteredIds
+	return n.ExcludedRegisteredIds
 }
 
-func (o *NameConstraints) GetExcludedUris() []string {
-	if o == nil {
+func (n *NameConstraints) GetExcludedUris() []string {
+	if n == nil {
 		return nil
 	}
-	return o.ExcludedUris
+	return n.ExcludedUris
 }
 
-func (o *NameConstraints) GetPermittedDirectoryNames() []DistinguishedName {
-	if o == nil {
+func (n *NameConstraints) GetPermittedDirectoryNames() []DistinguishedName {
+	if n == nil {
 		return nil
 	}
-	return o.PermittedDirectoryNames
+	return n.PermittedDirectoryNames
 }
 
-func (o *NameConstraints) GetPermittedEdiPartyNames() []EdiPartyName {
-	if o == nil {
+func (n *NameConstraints) GetPermittedEdiPartyNames() []EdiPartyName {
+	if n == nil {
 		return nil
 	}
-	return o.PermittedEdiPartyNames
+	return n.PermittedEdiPartyNames
 }
 
-func (o *NameConstraints) GetPermittedEmailAddresses() []string {
-	if o == nil {
+func (n *NameConstraints) GetPermittedEmailAddresses() []string {
+	if n == nil {
 		return nil
 	}
-	return o.PermittedEmailAddresses
+	return n.PermittedEmailAddresses
 }
 
-func (o *NameConstraints) GetPermittedIPAddresses() []GeneralSubtreeIP {
-	if o == nil {
+func (n *NameConstraints) GetPermittedIPAddresses() []GeneralSubtreeIP {
+	if n == nil {
 		return nil
 	}
-	return o.PermittedIPAddresses
+	return n.PermittedIPAddresses
 }
 
-func (o *NameConstraints) GetPermittedNames() []string {
-	if o == nil {
+func (n *NameConstraints) GetPermittedNames() []string {
+	if n == nil {
 		return nil
 	}
-	return o.PermittedNames
+	return n.PermittedNames
 }
 
-func (o *NameConstraints) GetPermittedRegisteredIds() []string {
-	if o == nil {
+func (n *NameConstraints) GetPermittedRegisteredIds() []string {
+	if n == nil {
 		return nil
 	}
-	return o.PermittedRegisteredIds
+	return n.PermittedRegisteredIds
 }
 
-func (o *NameConstraints) GetPermittedUris() []string {
-	if o == nil {
+func (n *NameConstraints) GetPermittedUris() []string {
+	if n == nil {
 		return nil
 	}
-	return o.PermittedUris
+	return n.PermittedUris
 }

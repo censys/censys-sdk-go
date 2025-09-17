@@ -11,23 +11,23 @@ type RsaPublicKey struct {
 	Modulus *string `json:"modulus,omitempty"`
 }
 
-func (o *RsaPublicKey) GetExponent() *int64 {
-	if o == nil {
+func (r *RsaPublicKey) GetExponent() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Exponent
+	return r.Exponent
 }
 
-func (o *RsaPublicKey) GetLength() *int64 {
-	if o == nil {
+func (r *RsaPublicKey) GetLength() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Length
+	return r.Length
 }
 
-func (o *RsaPublicKey) GetModulus() *string {
-	if o == nil {
+func (r *RsaPublicKey) GetModulus() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Modulus
+	return r.Modulus
 }

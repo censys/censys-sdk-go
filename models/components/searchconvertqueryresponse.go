@@ -54,44 +54,44 @@ type SearchConvertQueryResponse struct {
 	Targets []SearchConvertQueryResponseTargets `json:"targets"`
 }
 
-func (o *SearchConvertQueryResponse) GetAlternativeQueries() []AlternativeQuery {
-	if o == nil {
+func (s *SearchConvertQueryResponse) GetAlternativeQueries() []AlternativeQuery {
+	if s == nil {
 		return nil
 	}
-	return o.AlternativeQueries
+	return s.AlternativeQueries
 }
 
-func (o *SearchConvertQueryResponse) GetComments() []string {
-	if o == nil {
+func (s *SearchConvertQueryResponse) GetComments() []string {
+	if s == nil {
 		return nil
 	}
-	return o.Comments
+	return s.Comments
 }
 
-func (o *SearchConvertQueryResponse) GetConvertedQuery() *string {
-	if o == nil {
+func (s *SearchConvertQueryResponse) GetConvertedQuery() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ConvertedQuery
+	return s.ConvertedQuery
 }
 
-func (o *SearchConvertQueryResponse) GetErrors() []ConvertQueryError {
-	if o == nil {
+func (s *SearchConvertQueryResponse) GetErrors() []ConvertQueryError {
+	if s == nil {
 		return nil
 	}
-	return o.Errors
+	return s.Errors
 }
 
-func (o *SearchConvertQueryResponse) GetOriginalQuery() string {
-	if o == nil {
+func (s *SearchConvertQueryResponse) GetOriginalQuery() string {
+	if s == nil {
 		return ""
 	}
-	return o.OriginalQuery
+	return s.OriginalQuery
 }
 
-func (o *SearchConvertQueryResponse) GetTargets() []SearchConvertQueryResponseTargets {
-	if o == nil {
+func (s *SearchConvertQueryResponse) GetTargets() []SearchConvertQueryResponseTargets {
+	if s == nil {
 		return nil
 	}
-	return o.Targets
+	return s.Targets
 }

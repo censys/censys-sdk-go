@@ -6,9 +6,9 @@ type TeamViewer struct {
 	Response *string `json:"response,omitempty"`
 }
 
-func (o *TeamViewer) GetResponse() *string {
-	if o == nil {
+func (t *TeamViewer) GetResponse() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Response
+	return t.Response
 }

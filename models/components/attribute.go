@@ -58,93 +58,93 @@ type Attribute struct {
 	Version    *string       `json:"version,omitempty"`
 }
 
-func (o *Attribute) GetComponents() []Cpe {
-	if o == nil {
+func (a *Attribute) GetComponents() []Cpe {
+	if a == nil {
 		return nil
 	}
-	return o.Components
+	return a.Components
 }
 
-func (o *Attribute) GetConfidence() *float64 {
-	if o == nil {
+func (a *Attribute) GetConfidence() *float64 {
+	if a == nil {
 		return nil
 	}
-	return o.Confidence
+	return a.Confidence
 }
 
-func (o *Attribute) GetCpe() *string {
-	if o == nil {
+func (a *Attribute) GetCpe() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Cpe
+	return a.Cpe
 }
 
-func (o *Attribute) GetEdition() *string {
-	if o == nil {
+func (a *Attribute) GetEdition() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Edition
+	return a.Edition
 }
 
-func (o *Attribute) GetEvidence() []Evidence {
-	if o == nil {
+func (a *Attribute) GetEvidence() []Evidence {
+	if a == nil {
 		return nil
 	}
-	return o.Evidence
+	return a.Evidence
 }
 
-func (o *Attribute) GetLifeCycle() *CPELifeCycle {
-	if o == nil {
+func (a *Attribute) GetLifeCycle() *CPELifeCycle {
+	if a == nil {
 		return nil
 	}
-	return o.LifeCycle
+	return a.LifeCycle
 }
 
-func (o *Attribute) GetPart() *string {
-	if o == nil {
+func (a *Attribute) GetPart() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Part
+	return a.Part
 }
 
-func (o *Attribute) GetProduct() *string {
-	if o == nil {
+func (a *Attribute) GetProduct() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Product
+	return a.Product
 }
 
-func (o *Attribute) GetSource() *Source {
-	if o == nil {
+func (a *Attribute) GetSource() *Source {
+	if a == nil {
 		return nil
 	}
-	return o.Source
+	return a.Source
 }
 
-func (o *Attribute) GetType() []string {
-	if o == nil {
+func (a *Attribute) GetType() []string {
+	if a == nil {
 		return nil
 	}
-	return o.Type
+	return a.Type
 }
 
-func (o *Attribute) GetUpdate() *string {
-	if o == nil {
+func (a *Attribute) GetUpdate() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Update
+	return a.Update
 }
 
-func (o *Attribute) GetVendor() *string {
-	if o == nil {
+func (a *Attribute) GetVendor() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Vendor
+	return a.Vendor
 }
 
-func (o *Attribute) GetVersion() *string {
-	if o == nil {
+func (a *Attribute) GetVersion() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Version
+	return a.Version
 }

@@ -6,9 +6,9 @@ type ValueCountsResponse struct {
 	AndCountResults []float64 `json:"and_count_results"`
 }
 
-func (o *ValueCountsResponse) GetAndCountResults() []float64 {
-	if o == nil {
+func (v *ValueCountsResponse) GetAndCountResults() []float64 {
+	if v == nil {
 		return nil
 	}
-	return o.AndCountResults
+	return v.AndCountResults
 }

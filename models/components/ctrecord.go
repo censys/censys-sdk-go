@@ -11,23 +11,23 @@ type CtRecord struct {
 	Index *int64 `json:"index,omitempty"`
 }
 
-func (o *CtRecord) GetAddedToCtAt() *string {
-	if o == nil {
+func (c *CtRecord) GetAddedToCtAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AddedToCtAt
+	return c.AddedToCtAt
 }
 
-func (o *CtRecord) GetCtToCensysAt() *string {
-	if o == nil {
+func (c *CtRecord) GetCtToCensysAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CtToCensysAt
+	return c.CtToCensysAt
 }
 
-func (o *CtRecord) GetIndex() *int64 {
-	if o == nil {
+func (c *CtRecord) GetIndex() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.Index
+	return c.Index
 }

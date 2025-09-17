@@ -10,23 +10,23 @@ type Postgres struct {
 	SupportedVersions *string           `json:"supported_versions,omitempty"`
 }
 
-func (o *Postgres) GetProtocolError() map[string]string {
-	if o == nil {
+func (p *Postgres) GetProtocolError() map[string]string {
+	if p == nil {
 		return nil
 	}
-	return o.ProtocolError
+	return p.ProtocolError
 }
 
-func (o *Postgres) GetStartupError() map[string]string {
-	if o == nil {
+func (p *Postgres) GetStartupError() map[string]string {
+	if p == nil {
 		return nil
 	}
-	return o.StartupError
+	return p.StartupError
 }
 
-func (o *Postgres) GetSupportedVersions() *string {
-	if o == nil {
+func (p *Postgres) GetSupportedVersions() *string {
+	if p == nil {
 		return nil
 	}
-	return o.SupportedVersions
+	return p.SupportedVersions
 }

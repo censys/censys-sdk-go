@@ -7,16 +7,16 @@ type Winrm struct {
 	NtlmInfo  *NtlmInfo `json:"ntlm_info,omitempty"`
 }
 
-func (o *Winrm) GetAuthTypes() []string {
-	if o == nil {
+func (w *Winrm) GetAuthTypes() []string {
+	if w == nil {
 		return nil
 	}
-	return o.AuthTypes
+	return w.AuthTypes
 }
 
-func (o *Winrm) GetNtlmInfo() *NtlmInfo {
-	if o == nil {
+func (w *Winrm) GetNtlmInfo() *NtlmInfo {
+	if w == nil {
 		return nil
 	}
-	return o.NtlmInfo
+	return w.NtlmInfo
 }

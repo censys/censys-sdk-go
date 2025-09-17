@@ -8,16 +8,16 @@ type KubernetesRole struct {
 	Rules []KubernetesRoleRule `json:"rules,omitempty"`
 }
 
-func (o *KubernetesRole) GetName() *string {
-	if o == nil {
+func (k *KubernetesRole) GetName() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Name
+	return k.Name
 }
 
-func (o *KubernetesRole) GetRules() []KubernetesRoleRule {
-	if o == nil {
+func (k *KubernetesRole) GetRules() []KubernetesRoleRule {
+	if k == nil {
 		return nil
 	}
-	return o.Rules
+	return k.Rules
 }

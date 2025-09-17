@@ -98,6 +98,7 @@ type Service struct {
 	Lpd                      *Lpd                      `json:"lpd,omitempty"`
 	Mdns                     *Mdns                     `json:"mdns,omitempty"`
 	Memcached                *Memcached                `json:"memcached,omitempty"`
+	MikrotikWinbox           *MikrotikWinbox           `json:"mikrotik_winbox,omitempty"`
 	Minecraft                *Minecraft                `json:"minecraft,omitempty"`
 	Misconfigs               []Risk                    `json:"misconfigs,omitempty"`
 	Mms                      *Mms                      `json:"mms,omitempty"`
@@ -180,947 +181,954 @@ type Service struct {
 	Zeromq                   *Zeromq                   `json:"zeromq,omitempty"`
 }
 
-func (o *Service) GetActivemq() *Activemq {
-	if o == nil {
+func (s *Service) GetActivemq() *Activemq {
+	if s == nil {
 		return nil
 	}
-	return o.Activemq
+	return s.Activemq
 }
 
-func (o *Service) GetAmqp() *Amqp {
-	if o == nil {
+func (s *Service) GetAmqp() *Amqp {
+	if s == nil {
 		return nil
 	}
-	return o.Amqp
+	return s.Amqp
 }
 
-func (o *Service) GetAnyConnect() *AnyConnect {
-	if o == nil {
+func (s *Service) GetAnyConnect() *AnyConnect {
+	if s == nil {
 		return nil
 	}
-	return o.AnyConnect
+	return s.AnyConnect
 }
 
-func (o *Service) GetAsteriskManagerInterface() *AsteriskManagerInterface {
-	if o == nil {
+func (s *Service) GetAsteriskManagerInterface() *AsteriskManagerInterface {
+	if s == nil {
 		return nil
 	}
-	return o.AsteriskManagerInterface
+	return s.AsteriskManagerInterface
 }
 
-func (o *Service) GetBacnet() *Bacnet {
-	if o == nil {
+func (s *Service) GetBacnet() *Bacnet {
+	if s == nil {
 		return nil
 	}
-	return o.Bacnet
+	return s.Bacnet
 }
 
-func (o *Service) GetBanner() *string {
-	if o == nil {
+func (s *Service) GetBanner() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Banner
+	return s.Banner
 }
 
-func (o *Service) GetBannerHashSha256() *string {
-	if o == nil {
+func (s *Service) GetBannerHashSha256() *string {
+	if s == nil {
 		return nil
 	}
-	return o.BannerHashSha256
+	return s.BannerHashSha256
 }
 
-func (o *Service) GetBannerHex() *string {
-	if o == nil {
+func (s *Service) GetBannerHex() *string {
+	if s == nil {
 		return nil
 	}
-	return o.BannerHex
+	return s.BannerHex
 }
 
-func (o *Service) GetCert() *Certificate {
-	if o == nil {
+func (s *Service) GetCert() *Certificate {
+	if s == nil {
 		return nil
 	}
-	return o.Cert
+	return s.Cert
 }
 
-func (o *Service) GetCheckpointTopology() *CheckpointTopology {
-	if o == nil {
+func (s *Service) GetCheckpointTopology() *CheckpointTopology {
+	if s == nil {
 		return nil
 	}
-	return o.CheckpointTopology
+	return s.CheckpointTopology
 }
 
-func (o *Service) GetChromecast() *Chromecast {
-	if o == nil {
+func (s *Service) GetChromecast() *Chromecast {
+	if s == nil {
 		return nil
 	}
-	return o.Chromecast
+	return s.Chromecast
 }
 
-func (o *Service) GetCiscoIpsla() *CiscoIpsla {
-	if o == nil {
+func (s *Service) GetCiscoIpsla() *CiscoIpsla {
+	if s == nil {
 		return nil
 	}
-	return o.CiscoIpsla
+	return s.CiscoIpsla
 }
 
-func (o *Service) GetCmore() *Cmore {
-	if o == nil {
+func (s *Service) GetCmore() *Cmore {
+	if s == nil {
 		return nil
 	}
-	return o.Cmore
+	return s.Cmore
 }
 
-func (o *Service) GetCoap() *Coap {
-	if o == nil {
+func (s *Service) GetCoap() *Coap {
+	if s == nil {
 		return nil
 	}
-	return o.Coap
+	return s.Coap
 }
 
-func (o *Service) GetCrestronCp3() *CrestronCp3 {
-	if o == nil {
+func (s *Service) GetCrestronCp3() *CrestronCp3 {
+	if s == nil {
 		return nil
 	}
-	return o.CrestronCp3
+	return s.CrestronCp3
 }
 
-func (o *Service) GetCrestronDinAp2() *CrestronDinAp2 {
-	if o == nil {
+func (s *Service) GetCrestronDinAp2() *CrestronDinAp2 {
+	if s == nil {
 		return nil
 	}
-	return o.CrestronDinAp2
+	return s.CrestronDinAp2
 }
 
-func (o *Service) GetCwmp() *Cwmp {
-	if o == nil {
+func (s *Service) GetCwmp() *Cwmp {
+	if s == nil {
 		return nil
 	}
-	return o.Cwmp
+	return s.Cwmp
 }
 
-func (o *Service) GetDarkcomet() *Darkcomet {
-	if o == nil {
+func (s *Service) GetDarkcomet() *Darkcomet {
+	if s == nil {
 		return nil
 	}
-	return o.Darkcomet
+	return s.Darkcomet
 }
 
-func (o *Service) GetDarkgate() *Darkgate {
-	if o == nil {
+func (s *Service) GetDarkgate() *Darkgate {
+	if s == nil {
 		return nil
 	}
-	return o.Darkgate
+	return s.Darkgate
 }
 
-func (o *Service) GetDcerpc() *Dcerpc {
-	if o == nil {
+func (s *Service) GetDcerpc() *Dcerpc {
+	if s == nil {
 		return nil
 	}
-	return o.Dcerpc
+	return s.Dcerpc
 }
 
-func (o *Service) GetDhcpdiscover() *Dhcpdiscover {
-	if o == nil {
+func (s *Service) GetDhcpdiscover() *Dhcpdiscover {
+	if s == nil {
 		return nil
 	}
-	return o.Dhcpdiscover
+	return s.Dhcpdiscover
 }
 
-func (o *Service) GetDnp3() *Dnp3 {
-	if o == nil {
+func (s *Service) GetDnp3() *Dnp3 {
+	if s == nil {
 		return nil
 	}
-	return o.Dnp3
+	return s.Dnp3
 }
 
-func (o *Service) GetDNS() *DNS {
-	if o == nil {
+func (s *Service) GetDNS() *DNS {
+	if s == nil {
 		return nil
 	}
-	return o.DNS
+	return s.DNS
 }
 
-func (o *Service) GetDtls() *Dtls {
-	if o == nil {
+func (s *Service) GetDtls() *Dtls {
+	if s == nil {
 		return nil
 	}
-	return o.Dtls
+	return s.Dtls
 }
 
-func (o *Service) GetDvrIP() *DvrIP {
-	if o == nil {
+func (s *Service) GetDvrIP() *DvrIP {
+	if s == nil {
 		return nil
 	}
-	return o.DvrIP
+	return s.DvrIP
 }
 
-func (o *Service) GetEip() *Eip {
-	if o == nil {
+func (s *Service) GetEip() *Eip {
+	if s == nil {
 		return nil
 	}
-	return o.Eip
+	return s.Eip
 }
 
-func (o *Service) GetElfFile() *ElfFile {
-	if o == nil {
+func (s *Service) GetElfFile() *ElfFile {
+	if s == nil {
 		return nil
 	}
-	return o.ElfFile
+	return s.ElfFile
 }
 
-func (o *Service) GetEndpoints() []EndpointScanState {
-	if o == nil {
+func (s *Service) GetEndpoints() []EndpointScanState {
+	if s == nil {
 		return nil
 	}
-	return o.Endpoints
+	return s.Endpoints
 }
 
-func (o *Service) GetEpmd() *Epmd {
-	if o == nil {
+func (s *Service) GetEpmd() *Epmd {
+	if s == nil {
 		return nil
 	}
-	return o.Epmd
+	return s.Epmd
 }
 
-func (o *Service) GetEtcd() *Etcd {
-	if o == nil {
+func (s *Service) GetEtcd() *Etcd {
+	if s == nil {
 		return nil
 	}
-	return o.Etcd
+	return s.Etcd
 }
 
-func (o *Service) GetEthereum() *Ethereum {
-	if o == nil {
+func (s *Service) GetEthereum() *Ethereum {
+	if s == nil {
 		return nil
 	}
-	return o.Ethereum
+	return s.Ethereum
 }
 
-func (o *Service) GetExposures() []Risk {
-	if o == nil {
+func (s *Service) GetExposures() []Risk {
+	if s == nil {
 		return nil
 	}
-	return o.Exposures
+	return s.Exposures
 }
 
-func (o *Service) GetFox() *Fox {
-	if o == nil {
+func (s *Service) GetFox() *Fox {
+	if s == nil {
 		return nil
 	}
-	return o.Fox
+	return s.Fox
 }
 
-func (o *Service) GetFtp() *Ftp {
-	if o == nil {
+func (s *Service) GetFtp() *Ftp {
+	if s == nil {
 		return nil
 	}
-	return o.Ftp
+	return s.Ftp
 }
 
-func (o *Service) GetGearman() *Gearman {
-	if o == nil {
+func (s *Service) GetGearman() *Gearman {
+	if s == nil {
 		return nil
 	}
-	return o.Gearman
+	return s.Gearman
 }
 
-func (o *Service) GetHardware() []Attribute {
-	if o == nil {
+func (s *Service) GetHardware() []Attribute {
+	if s == nil {
 		return nil
 	}
-	return o.Hardware
+	return s.Hardware
 }
 
-func (o *Service) GetHidVertx() *HidVertx {
-	if o == nil {
+func (s *Service) GetHidVertx() *HidVertx {
+	if s == nil {
 		return nil
 	}
-	return o.HidVertx
+	return s.HidVertx
 }
 
-func (o *Service) GetHikvision() *Hikvision {
-	if o == nil {
+func (s *Service) GetHikvision() *Hikvision {
+	if s == nil {
 		return nil
 	}
-	return o.Hikvision
+	return s.Hikvision
 }
 
-func (o *Service) GetIbmnje() *Ibmnje {
-	if o == nil {
+func (s *Service) GetIbmnje() *Ibmnje {
+	if s == nil {
 		return nil
 	}
-	return o.Ibmnje
+	return s.Ibmnje
 }
 
-func (o *Service) GetIke() *Ike {
-	if o == nil {
+func (s *Service) GetIke() *Ike {
+	if s == nil {
 		return nil
 	}
-	return o.Ike
+	return s.Ike
 }
 
-func (o *Service) GetImap() *Imap {
-	if o == nil {
+func (s *Service) GetImap() *Imap {
+	if s == nil {
 		return nil
 	}
-	return o.Imap
+	return s.Imap
 }
 
-func (o *Service) GetIota() *Iota {
-	if o == nil {
+func (s *Service) GetIota() *Iota {
+	if s == nil {
 		return nil
 	}
-	return o.Iota
+	return s.Iota
 }
 
-func (o *Service) GetIP() *string {
-	if o == nil {
+func (s *Service) GetIP() *string {
+	if s == nil {
 		return nil
 	}
-	return o.IP
+	return s.IP
 }
 
-func (o *Service) GetIpmi() *Ipmi {
-	if o == nil {
+func (s *Service) GetIpmi() *Ipmi {
+	if s == nil {
 		return nil
 	}
-	return o.Ipmi
+	return s.Ipmi
 }
 
-func (o *Service) GetIpp() *Ipp {
-	if o == nil {
+func (s *Service) GetIpp() *Ipp {
+	if s == nil {
 		return nil
 	}
-	return o.Ipp
+	return s.Ipp
 }
 
-func (o *Service) GetIscsi() *Iscsi {
-	if o == nil {
+func (s *Service) GetIscsi() *Iscsi {
+	if s == nil {
 		return nil
 	}
-	return o.Iscsi
+	return s.Iscsi
 }
 
-func (o *Service) GetJa4tscan() *Ja4TScanScan {
-	if o == nil {
+func (s *Service) GetJa4tscan() *Ja4TScanScan {
+	if s == nil {
 		return nil
 	}
-	return o.Ja4tscan
+	return s.Ja4tscan
 }
 
-func (o *Service) GetJarm() *JarmScan {
-	if o == nil {
+func (s *Service) GetJarm() *JarmScan {
+	if s == nil {
 		return nil
 	}
-	return o.Jarm
+	return s.Jarm
 }
 
-func (o *Service) GetKrpc() *Krpc {
-	if o == nil {
+func (s *Service) GetKrpc() *Krpc {
+	if s == nil {
 		return nil
 	}
-	return o.Krpc
+	return s.Krpc
 }
 
-func (o *Service) GetL2tp() *L2Tp {
-	if o == nil {
+func (s *Service) GetL2tp() *L2Tp {
+	if s == nil {
 		return nil
 	}
-	return o.L2tp
+	return s.L2tp
 }
 
-func (o *Service) GetLabels() []Label {
-	if o == nil {
+func (s *Service) GetLabels() []Label {
+	if s == nil {
 		return nil
 	}
-	return o.Labels
+	return s.Labels
 }
 
-func (o *Service) GetLdap() *Ldap {
-	if o == nil {
+func (s *Service) GetLdap() *Ldap {
+	if s == nil {
 		return nil
 	}
-	return o.Ldap
+	return s.Ldap
 }
 
-func (o *Service) GetLpd() *Lpd {
-	if o == nil {
+func (s *Service) GetLpd() *Lpd {
+	if s == nil {
 		return nil
 	}
-	return o.Lpd
+	return s.Lpd
 }
 
-func (o *Service) GetMdns() *Mdns {
-	if o == nil {
+func (s *Service) GetMdns() *Mdns {
+	if s == nil {
 		return nil
 	}
-	return o.Mdns
+	return s.Mdns
 }
 
-func (o *Service) GetMemcached() *Memcached {
-	if o == nil {
+func (s *Service) GetMemcached() *Memcached {
+	if s == nil {
 		return nil
 	}
-	return o.Memcached
+	return s.Memcached
 }
 
-func (o *Service) GetMinecraft() *Minecraft {
-	if o == nil {
+func (s *Service) GetMikrotikWinbox() *MikrotikWinbox {
+	if s == nil {
 		return nil
 	}
-	return o.Minecraft
+	return s.MikrotikWinbox
 }
 
-func (o *Service) GetMisconfigs() []Risk {
-	if o == nil {
+func (s *Service) GetMinecraft() *Minecraft {
+	if s == nil {
 		return nil
 	}
-	return o.Misconfigs
+	return s.Minecraft
 }
 
-func (o *Service) GetMms() *Mms {
-	if o == nil {
+func (s *Service) GetMisconfigs() []Risk {
+	if s == nil {
 		return nil
 	}
-	return o.Mms
+	return s.Misconfigs
 }
 
-func (o *Service) GetModbus() *Modbus {
-	if o == nil {
+func (s *Service) GetMms() *Mms {
+	if s == nil {
 		return nil
 	}
-	return o.Modbus
+	return s.Mms
 }
 
-func (o *Service) GetMoneroP2p() *MoneroP2P {
-	if o == nil {
+func (s *Service) GetModbus() *Modbus {
+	if s == nil {
 		return nil
 	}
-	return o.MoneroP2p
+	return s.Modbus
 }
 
-func (o *Service) GetMongodb() *Mongodb {
-	if o == nil {
+func (s *Service) GetMoneroP2p() *MoneroP2P {
+	if s == nil {
 		return nil
 	}
-	return o.Mongodb
+	return s.MoneroP2p
 }
 
-func (o *Service) GetMqtt() *Mqtt {
-	if o == nil {
+func (s *Service) GetMongodb() *Mongodb {
+	if s == nil {
 		return nil
 	}
-	return o.Mqtt
+	return s.Mongodb
 }
 
-func (o *Service) GetMssql() *Mssql {
-	if o == nil {
+func (s *Service) GetMqtt() *Mqtt {
+	if s == nil {
 		return nil
 	}
-	return o.Mssql
+	return s.Mqtt
 }
 
-func (o *Service) GetMurmur() *Murmur {
-	if o == nil {
+func (s *Service) GetMssql() *Mssql {
+	if s == nil {
 		return nil
 	}
-	return o.Murmur
+	return s.Mssql
 }
 
-func (o *Service) GetMysql() *Mysql {
-	if o == nil {
+func (s *Service) GetMurmur() *Murmur {
+	if s == nil {
 		return nil
 	}
-	return o.Mysql
+	return s.Murmur
 }
 
-func (o *Service) GetNatsIo() *NatsIo {
-	if o == nil {
+func (s *Service) GetMysql() *Mysql {
+	if s == nil {
 		return nil
 	}
-	return o.NatsIo
+	return s.Mysql
 }
 
-func (o *Service) GetNbd() *Nbd {
-	if o == nil {
+func (s *Service) GetNatsIo() *NatsIo {
+	if s == nil {
 		return nil
 	}
-	return o.Nbd
+	return s.NatsIo
 }
 
-func (o *Service) GetNfsMountd() *NfsMountd {
-	if o == nil {
+func (s *Service) GetNbd() *Nbd {
+	if s == nil {
 		return nil
 	}
-	return o.NfsMountd
+	return s.Nbd
 }
 
-func (o *Service) GetNmea() *Nmea {
-	if o == nil {
+func (s *Service) GetNfsMountd() *NfsMountd {
+	if s == nil {
 		return nil
 	}
-	return o.Nmea
+	return s.NfsMountd
 }
 
-func (o *Service) GetNtp() *Ntp {
-	if o == nil {
+func (s *Service) GetNmea() *Nmea {
+	if s == nil {
 		return nil
 	}
-	return o.Ntp
+	return s.Nmea
 }
 
-func (o *Service) GetNtrip() *Ntrip {
-	if o == nil {
+func (s *Service) GetNtp() *Ntp {
+	if s == nil {
 		return nil
 	}
-	return o.Ntrip
+	return s.Ntp
 }
 
-func (o *Service) GetOnc() *Onc {
-	if o == nil {
+func (s *Service) GetNtrip() *Ntrip {
+	if s == nil {
 		return nil
 	}
-	return o.Onc
+	return s.Ntrip
 }
 
-func (o *Service) GetOnvif() *Onvif {
-	if o == nil {
+func (s *Service) GetOnc() *Onc {
+	if s == nil {
 		return nil
 	}
-	return o.Onvif
+	return s.Onc
 }
 
-func (o *Service) GetOpcUa() *OpcUa {
-	if o == nil {
+func (s *Service) GetOnvif() *Onvif {
+	if s == nil {
 		return nil
 	}
-	return o.OpcUa
+	return s.Onvif
 }
 
-func (o *Service) GetOpenvpn() *Openvpn {
-	if o == nil {
+func (s *Service) GetOpcUa() *OpcUa {
+	if s == nil {
 		return nil
 	}
-	return o.Openvpn
+	return s.OpcUa
 }
 
-func (o *Service) GetOpenvpnMgmt() *OpenvpnMgmt {
-	if o == nil {
+func (s *Service) GetOpenvpn() *Openvpn {
+	if s == nil {
 		return nil
 	}
-	return o.OpenvpnMgmt
+	return s.Openvpn
 }
 
-func (o *Service) GetOperatingSystems() []Attribute {
-	if o == nil {
+func (s *Service) GetOpenvpnMgmt() *OpenvpnMgmt {
+	if s == nil {
 		return nil
 	}
-	return o.OperatingSystems
+	return s.OpenvpnMgmt
 }
 
-func (o *Service) GetOracle() *Oracle {
-	if o == nil {
+func (s *Service) GetOperatingSystems() []Attribute {
+	if s == nil {
 		return nil
 	}
-	return o.Oracle
+	return s.OperatingSystems
 }
 
-func (o *Service) GetPcAnywhere() *PcAnywhere {
-	if o == nil {
+func (s *Service) GetOracle() *Oracle {
+	if s == nil {
 		return nil
 	}
-	return o.PcAnywhere
+	return s.Oracle
 }
 
-func (o *Service) GetPgbouncer() *Pgbouncer {
-	if o == nil {
+func (s *Service) GetPcAnywhere() *PcAnywhere {
+	if s == nil {
 		return nil
 	}
-	return o.Pgbouncer
+	return s.PcAnywhere
 }
 
-func (o *Service) GetPop3() *Pop3 {
-	if o == nil {
+func (s *Service) GetPgbouncer() *Pgbouncer {
+	if s == nil {
 		return nil
 	}
-	return o.Pop3
+	return s.Pgbouncer
 }
 
-func (o *Service) GetPort() *int {
-	if o == nil {
+func (s *Service) GetPop3() *Pop3 {
+	if s == nil {
 		return nil
 	}
-	return o.Port
+	return s.Pop3
 }
 
-func (o *Service) GetPortmap() *Portmap {
-	if o == nil {
+func (s *Service) GetPort() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Portmap
+	return s.Port
 }
 
-func (o *Service) GetPostgres() *Postgres {
-	if o == nil {
+func (s *Service) GetPortmap() *Portmap {
+	if s == nil {
 		return nil
 	}
-	return o.Postgres
+	return s.Portmap
 }
 
-func (o *Service) GetPptp() *Pptp {
-	if o == nil {
+func (s *Service) GetPostgres() *Postgres {
+	if s == nil {
 		return nil
 	}
-	return o.Pptp
+	return s.Postgres
 }
 
-func (o *Service) GetProfinetCm() *ProfinetCm {
-	if o == nil {
+func (s *Service) GetPptp() *Pptp {
+	if s == nil {
 		return nil
 	}
-	return o.ProfinetCm
+	return s.Pptp
 }
 
-func (o *Service) GetProtocol() *string {
-	if o == nil {
+func (s *Service) GetProfinetCm() *ProfinetCm {
+	if s == nil {
 		return nil
 	}
-	return o.Protocol
+	return s.ProfinetCm
 }
 
-func (o *Service) GetRdate() *Rdate {
-	if o == nil {
+func (s *Service) GetProtocol() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Rdate
+	return s.Protocol
 }
 
-func (o *Service) GetRdp() *Rdp {
-	if o == nil {
+func (s *Service) GetRdate() *Rdate {
+	if s == nil {
 		return nil
 	}
-	return o.Rdp
+	return s.Rdate
 }
 
-func (o *Service) GetRealport() *Realport {
-	if o == nil {
+func (s *Service) GetRdp() *Rdp {
+	if s == nil {
 		return nil
 	}
-	return o.Realport
+	return s.Rdp
 }
 
-func (o *Service) GetRedis() *Redis {
-	if o == nil {
+func (s *Service) GetRealport() *Realport {
+	if s == nil {
 		return nil
 	}
-	return o.Redis
+	return s.Realport
 }
 
-func (o *Service) GetRedline() *Redline {
-	if o == nil {
+func (s *Service) GetRedis() *Redis {
+	if s == nil {
 		return nil
 	}
-	return o.Redline
+	return s.Redis
 }
 
-func (o *Service) GetRedlionCrimson() *RedlionCrimson {
-	if o == nil {
+func (s *Service) GetRedline() *Redline {
+	if s == nil {
 		return nil
 	}
-	return o.RedlionCrimson
+	return s.Redline
 }
 
-func (o *Service) GetRepresentativeInfo() *RepresentativeInfo {
-	if o == nil {
+func (s *Service) GetRedlionCrimson() *RedlionCrimson {
+	if s == nil {
 		return nil
 	}
-	return o.RepresentativeInfo
+	return s.RedlionCrimson
 }
 
-func (o *Service) GetRifatron() *Rifatron {
-	if o == nil {
+func (s *Service) GetRepresentativeInfo() *RepresentativeInfo {
+	if s == nil {
 		return nil
 	}
-	return o.Rifatron
+	return s.RepresentativeInfo
 }
 
-func (o *Service) GetRipple() *Ripple {
-	if o == nil {
+func (s *Service) GetRifatron() *Rifatron {
+	if s == nil {
 		return nil
 	}
-	return o.Ripple
+	return s.Rifatron
 }
 
-func (o *Service) GetRlogin() *Rlogin {
-	if o == nil {
+func (s *Service) GetRipple() *Ripple {
+	if s == nil {
 		return nil
 	}
-	return o.Rlogin
+	return s.Ripple
 }
 
-func (o *Service) GetRocketmq() *Rocketmq {
-	if o == nil {
+func (s *Service) GetRlogin() *Rlogin {
+	if s == nil {
 		return nil
 	}
-	return o.Rocketmq
+	return s.Rlogin
 }
 
-func (o *Service) GetRtsp() *Rtsp {
-	if o == nil {
+func (s *Service) GetRocketmq() *Rocketmq {
+	if s == nil {
 		return nil
 	}
-	return o.Rtsp
+	return s.Rocketmq
 }
 
-func (o *Service) GetS7() *S7 {
-	if o == nil {
+func (s *Service) GetRtsp() *Rtsp {
+	if s == nil {
 		return nil
 	}
-	return o.S7
+	return s.Rtsp
 }
 
-func (o *Service) GetSapRouter() *SapRouter {
-	if o == nil {
+func (s *Service) GetS7() *S7 {
+	if s == nil {
 		return nil
 	}
-	return o.SapRouter
+	return s.S7
 }
 
-func (o *Service) GetScanTime() *string {
-	if o == nil {
+func (s *Service) GetSapRouter() *SapRouter {
+	if s == nil {
 		return nil
 	}
-	return o.ScanTime
+	return s.SapRouter
 }
 
-func (o *Service) GetScpi() *Scpi {
-	if o == nil {
+func (s *Service) GetScanTime() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Scpi
+	return s.ScanTime
 }
 
-func (o *Service) GetScreenshots() []Screenshot {
-	if o == nil {
+func (s *Service) GetScpi() *Scpi {
+	if s == nil {
 		return nil
 	}
-	return o.Screenshots
+	return s.Scpi
 }
 
-func (o *Service) GetSer2net() *Ser2Net {
-	if o == nil {
+func (s *Service) GetScreenshots() []Screenshot {
+	if s == nil {
 		return nil
 	}
-	return o.Ser2net
+	return s.Screenshots
 }
 
-func (o *Service) GetSevenDaysToDie() *SevenDaysToDie {
-	if o == nil {
+func (s *Service) GetSer2net() *Ser2Net {
+	if s == nil {
 		return nil
 	}
-	return o.SevenDaysToDie
+	return s.Ser2net
 }
 
-func (o *Service) GetSip() *Sip {
-	if o == nil {
+func (s *Service) GetSevenDaysToDie() *SevenDaysToDie {
+	if s == nil {
 		return nil
 	}
-	return o.Sip
+	return s.SevenDaysToDie
 }
 
-func (o *Service) GetSkinny() *Skinny {
-	if o == nil {
+func (s *Service) GetSip() *Sip {
+	if s == nil {
 		return nil
 	}
-	return o.Skinny
+	return s.Sip
 }
 
-func (o *Service) GetSmb() *Smb {
-	if o == nil {
+func (s *Service) GetSkinny() *Skinny {
+	if s == nil {
 		return nil
 	}
-	return o.Smb
+	return s.Skinny
 }
 
-func (o *Service) GetSMTP() *SMTP {
-	if o == nil {
+func (s *Service) GetSmb() *Smb {
+	if s == nil {
 		return nil
 	}
-	return o.SMTP
+	return s.Smb
 }
 
-func (o *Service) GetSnmp() *Snmp {
-	if o == nil {
+func (s *Service) GetSMTP() *SMTP {
+	if s == nil {
 		return nil
 	}
-	return o.Snmp
+	return s.SMTP
 }
 
-func (o *Service) GetSocks() *Socks {
-	if o == nil {
+func (s *Service) GetSnmp() *Snmp {
+	if s == nil {
 		return nil
 	}
-	return o.Socks
+	return s.Snmp
 }
 
-func (o *Service) GetSoftware() []Attribute {
-	if o == nil {
+func (s *Service) GetSocks() *Socks {
+	if s == nil {
 		return nil
 	}
-	return o.Software
+	return s.Socks
 }
 
-func (o *Service) GetSpice() *Spice {
-	if o == nil {
+func (s *Service) GetSoftware() []Attribute {
+	if s == nil {
 		return nil
 	}
-	return o.Spice
+	return s.Software
 }
 
-func (o *Service) GetSsdp() *Ssdp {
-	if o == nil {
+func (s *Service) GetSpice() *Spice {
+	if s == nil {
 		return nil
 	}
-	return o.Ssdp
+	return s.Spice
 }
 
-func (o *Service) GetSSH() *SSH {
-	if o == nil {
+func (s *Service) GetSsdp() *Ssdp {
+	if s == nil {
 		return nil
 	}
-	return o.SSH
+	return s.Ssdp
 }
 
-func (o *Service) GetSteam() *Steam {
-	if o == nil {
+func (s *Service) GetSSH() *SSH {
+	if s == nil {
 		return nil
 	}
-	return o.Steam
+	return s.SSH
 }
 
-func (o *Service) GetTacacsPlus() *TacacsPlus {
-	if o == nil {
+func (s *Service) GetSteam() *Steam {
+	if s == nil {
 		return nil
 	}
-	return o.TacacsPlus
+	return s.Steam
 }
 
-func (o *Service) GetTeamViewer() *TeamViewer {
-	if o == nil {
+func (s *Service) GetTacacsPlus() *TacacsPlus {
+	if s == nil {
 		return nil
 	}
-	return o.TeamViewer
+	return s.TacacsPlus
 }
 
-func (o *Service) GetTelnet() *Telnet {
-	if o == nil {
+func (s *Service) GetTeamViewer() *TeamViewer {
+	if s == nil {
 		return nil
 	}
-	return o.Telnet
+	return s.TeamViewer
 }
 
-func (o *Service) GetThreats() []Threat {
-	if o == nil {
+func (s *Service) GetTelnet() *Telnet {
+	if s == nil {
 		return nil
 	}
-	return o.Threats
+	return s.Telnet
 }
 
-func (o *Service) GetTibia() *Tibia {
-	if o == nil {
+func (s *Service) GetThreats() []Threat {
+	if s == nil {
 		return nil
 	}
-	return o.Tibia
+	return s.Threats
 }
 
-func (o *Service) GetTLS() *TLS {
-	if o == nil {
+func (s *Service) GetTibia() *Tibia {
+	if s == nil {
 		return nil
 	}
-	return o.TLS
+	return s.Tibia
 }
 
-func (o *Service) GetTplinkKasa() *TplinkKasa {
-	if o == nil {
+func (s *Service) GetTLS() *TLS {
+	if s == nil {
 		return nil
 	}
-	return o.TplinkKasa
+	return s.TLS
 }
 
-func (o *Service) GetTransportProtocol() *ServiceTransportProtocol {
-	if o == nil {
+func (s *Service) GetTplinkKasa() *TplinkKasa {
+	if s == nil {
 		return nil
 	}
-	return o.TransportProtocol
+	return s.TplinkKasa
 }
 
-func (o *Service) GetUnitronicsPcom() *UnitronicsPcom {
-	if o == nil {
+func (s *Service) GetTransportProtocol() *ServiceTransportProtocol {
+	if s == nil {
 		return nil
 	}
-	return o.UnitronicsPcom
+	return s.TransportProtocol
 }
 
-func (o *Service) GetUpnp() *Upnp {
-	if o == nil {
+func (s *Service) GetUnitronicsPcom() *UnitronicsPcom {
+	if s == nil {
 		return nil
 	}
-	return o.Upnp
+	return s.UnitronicsPcom
 }
 
-func (o *Service) GetVentrilo() *Ventrilo {
-	if o == nil {
+func (s *Service) GetUpnp() *Upnp {
+	if s == nil {
 		return nil
 	}
-	return o.Ventrilo
+	return s.Upnp
 }
 
-func (o *Service) GetVnc() *Vnc {
-	if o == nil {
+func (s *Service) GetVentrilo() *Ventrilo {
+	if s == nil {
 		return nil
 	}
-	return o.Vnc
+	return s.Ventrilo
 }
 
-func (o *Service) GetVulns() []Vuln {
-	if o == nil {
+func (s *Service) GetVnc() *Vnc {
+	if s == nil {
 		return nil
 	}
-	return o.Vulns
+	return s.Vnc
 }
 
-func (o *Service) GetWeblogicT3() *WeblogicT3 {
-	if o == nil {
+func (s *Service) GetVulns() []Vuln {
+	if s == nil {
 		return nil
 	}
-	return o.WeblogicT3
+	return s.Vulns
 }
 
-func (o *Service) GetWinrm() *Winrm {
-	if o == nil {
+func (s *Service) GetWeblogicT3() *WeblogicT3 {
+	if s == nil {
 		return nil
 	}
-	return o.Winrm
+	return s.WeblogicT3
 }
 
-func (o *Service) GetWsDiscovery() *WsDiscovery {
-	if o == nil {
+func (s *Service) GetWinrm() *Winrm {
+	if s == nil {
 		return nil
 	}
-	return o.WsDiscovery
+	return s.Winrm
 }
 
-func (o *Service) GetX11() *X11 {
-	if o == nil {
+func (s *Service) GetWsDiscovery() *WsDiscovery {
+	if s == nil {
 		return nil
 	}
-	return o.X11
+	return s.WsDiscovery
 }
 
-func (o *Service) GetZeromq() *Zeromq {
-	if o == nil {
+func (s *Service) GetX11() *X11 {
+	if s == nil {
 		return nil
 	}
-	return o.Zeromq
+	return s.X11
+}
+
+func (s *Service) GetZeromq() *Zeromq {
+	if s == nil {
+		return nil
+	}
+	return s.Zeromq
 }

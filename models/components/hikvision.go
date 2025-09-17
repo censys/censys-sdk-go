@@ -9,30 +9,30 @@ type Hikvision struct {
 	WebVersion    *string             `json:"web_version,omitempty"`
 }
 
-func (o *Hikvision) GetCustomVersion() *string {
-	if o == nil {
+func (h *Hikvision) GetCustomVersion() *string {
+	if h == nil {
 		return nil
 	}
-	return o.CustomVersion
+	return h.CustomVersion
 }
 
-func (o *Hikvision) GetPlatforms() []HikvisionPlatform {
-	if o == nil {
+func (h *Hikvision) GetPlatforms() []HikvisionPlatform {
+	if h == nil {
 		return nil
 	}
-	return o.Platforms
+	return h.Platforms
 }
 
-func (o *Hikvision) GetPluginVersion() *string {
-	if o == nil {
+func (h *Hikvision) GetPluginVersion() *string {
+	if h == nil {
 		return nil
 	}
-	return o.PluginVersion
+	return h.PluginVersion
 }
 
-func (o *Hikvision) GetWebVersion() *string {
-	if o == nil {
+func (h *Hikvision) GetWebVersion() *string {
+	if h == nil {
 		return nil
 	}
-	return o.WebVersion
+	return h.WebVersion
 }

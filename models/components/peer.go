@@ -10,37 +10,37 @@ type Peer struct {
 	Version   *string `json:"version,omitempty"`
 }
 
-func (o *Peer) GetIP() *string {
-	if o == nil {
+func (p *Peer) GetIP() *string {
+	if p == nil {
 		return nil
 	}
-	return o.IP
+	return p.IP
 }
 
-func (o *Peer) GetPort() *int64 {
-	if o == nil {
+func (p *Peer) GetPort() *int64 {
+	if p == nil {
 		return nil
 	}
-	return o.Port
+	return p.Port
 }
 
-func (o *Peer) GetPublicKey() *string {
-	if o == nil {
+func (p *Peer) GetPublicKey() *string {
+	if p == nil {
 		return nil
 	}
-	return o.PublicKey
+	return p.PublicKey
 }
 
-func (o *Peer) GetType() *string {
-	if o == nil {
+func (p *Peer) GetType() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Type
+	return p.Type
 }
 
-func (o *Peer) GetVersion() *string {
-	if o == nil {
+func (p *Peer) GetVersion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Version
+	return p.Version
 }

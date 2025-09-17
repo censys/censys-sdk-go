@@ -18,51 +18,51 @@ type SnmpSystem struct {
 	Services *SnmpSystemServices `json:"services,omitempty"`
 }
 
-func (o *SnmpSystem) GetContact() *string {
-	if o == nil {
+func (s *SnmpSystem) GetContact() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Contact
+	return s.Contact
 }
 
-func (o *SnmpSystem) GetDesc() *string {
-	if o == nil {
+func (s *SnmpSystem) GetDesc() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Desc
+	return s.Desc
 }
 
-func (o *SnmpSystem) GetInitTime() *int {
-	if o == nil {
+func (s *SnmpSystem) GetInitTime() *int {
+	if s == nil {
 		return nil
 	}
-	return o.InitTime
+	return s.InitTime
 }
 
-func (o *SnmpSystem) GetLocation() *string {
-	if o == nil {
+func (s *SnmpSystem) GetLocation() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Location
+	return s.Location
 }
 
-func (o *SnmpSystem) GetName() *string {
-	if o == nil {
+func (s *SnmpSystem) GetName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Name
+	return s.Name
 }
 
-func (o *SnmpSystem) GetObjectID() *string {
-	if o == nil {
+func (s *SnmpSystem) GetObjectID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ObjectID
+	return s.ObjectID
 }
 
-func (o *SnmpSystem) GetServices() *SnmpSystemServices {
-	if o == nil {
+func (s *SnmpSystem) GetServices() *SnmpSystemServices {
+	if s == nil {
 		return nil
 	}
-	return o.Services
+	return s.Services
 }

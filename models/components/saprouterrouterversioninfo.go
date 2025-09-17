@@ -8,23 +8,23 @@ type SapRouterRouterVersionInfo struct {
 	Version *int64  `json:"version,omitempty"`
 }
 
-func (o *SapRouterRouterVersionInfo) GetName() *string {
-	if o == nil {
+func (s *SapRouterRouterVersionInfo) GetName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Name
+	return s.Name
 }
 
-func (o *SapRouterRouterVersionInfo) GetRelease() *int64 {
-	if o == nil {
+func (s *SapRouterRouterVersionInfo) GetRelease() *int64 {
+	if s == nil {
 		return nil
 	}
-	return o.Release
+	return s.Release
 }
 
-func (o *SapRouterRouterVersionInfo) GetVersion() *int64 {
-	if o == nil {
+func (s *SapRouterRouterVersionInfo) GetVersion() *int64 {
+	if s == nil {
 		return nil
 	}
-	return o.Version
+	return s.Version
 }

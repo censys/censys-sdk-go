@@ -8,23 +8,23 @@ type Ethereum struct {
 	Version  *EthereumVersion `json:"version,omitempty"`
 }
 
-func (o *Ethereum) GetAccounts() []string {
-	if o == nil {
+func (e *Ethereum) GetAccounts() []string {
+	if e == nil {
 		return nil
 	}
-	return o.Accounts
+	return e.Accounts
 }
 
-func (o *Ethereum) GetHashrate() *string {
-	if o == nil {
+func (e *Ethereum) GetHashrate() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Hashrate
+	return e.Hashrate
 }
 
-func (o *Ethereum) GetVersion() *EthereumVersion {
-	if o == nil {
+func (e *Ethereum) GetVersion() *EthereumVersion {
+	if e == nil {
 		return nil
 	}
-	return o.Version
+	return e.Version
 }

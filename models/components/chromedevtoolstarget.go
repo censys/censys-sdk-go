@@ -8,23 +8,23 @@ type ChromeDevtoolsTarget struct {
 	URL   *string `json:"url,omitempty"`
 }
 
-func (o *ChromeDevtoolsTarget) GetTitle() *string {
-	if o == nil {
+func (c *ChromeDevtoolsTarget) GetTitle() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Title
+	return c.Title
 }
 
-func (o *ChromeDevtoolsTarget) GetType() *string {
-	if o == nil {
+func (c *ChromeDevtoolsTarget) GetType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }
 
-func (o *ChromeDevtoolsTarget) GetURL() *string {
-	if o == nil {
+func (c *ChromeDevtoolsTarget) GetURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.URL
+	return c.URL
 }

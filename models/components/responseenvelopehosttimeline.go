@@ -6,9 +6,9 @@ type ResponseEnvelopeHostTimeline struct {
 	Result *HostTimeline `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeHostTimeline) GetResult() *HostTimeline {
-	if o == nil {
+func (r *ResponseEnvelopeHostTimeline) GetResult() *HostTimeline {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

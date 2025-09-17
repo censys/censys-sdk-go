@@ -11,44 +11,44 @@ type RedlionCrimson struct {
 	Model                *string `json:"model,omitempty"`
 }
 
-func (o *RedlionCrimson) GetConfigsExposed() *bool {
-	if o == nil {
+func (r *RedlionCrimson) GetConfigsExposed() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ConfigsExposed
+	return r.ConfigsExposed
 }
 
-func (o *RedlionCrimson) GetControlEngineStatus() *string {
-	if o == nil {
+func (r *RedlionCrimson) GetControlEngineStatus() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ControlEngineStatus
+	return r.ControlEngineStatus
 }
 
-func (o *RedlionCrimson) GetCurrentSoftwareLevel() *string {
-	if o == nil {
+func (r *RedlionCrimson) GetCurrentSoftwareLevel() *string {
+	if r == nil {
 		return nil
 	}
-	return o.CurrentSoftwareLevel
+	return r.CurrentSoftwareLevel
 }
 
-func (o *RedlionCrimson) GetExecutionStatus() *string {
-	if o == nil {
+func (r *RedlionCrimson) GetExecutionStatus() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ExecutionStatus
+	return r.ExecutionStatus
 }
 
-func (o *RedlionCrimson) GetManufacturer() *string {
-	if o == nil {
+func (r *RedlionCrimson) GetManufacturer() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Manufacturer
+	return r.Manufacturer
 }
 
-func (o *RedlionCrimson) GetModel() *string {
-	if o == nil {
+func (r *RedlionCrimson) GetModel() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Model
+	return r.Model
 }

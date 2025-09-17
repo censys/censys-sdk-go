@@ -10,31 +10,31 @@ type V3GlobaldataAssetWebpropertyListPostGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataAssetWebpropertyListPostGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyListPostGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataAssetWebpropertyListPostRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID                *string                                  `queryParam:"style=form,explode=false,name=organization_id"`
 	AssetWebpropertyListInputBody components.AssetWebpropertyListInputBody `request:"mediaType=application/json"`
 }
 
-func (o *V3GlobaldataAssetWebpropertyListPostRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyListPostRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataAssetWebpropertyListPostRequest) GetAssetWebpropertyListInputBody() components.AssetWebpropertyListInputBody {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyListPostRequest) GetAssetWebpropertyListInputBody() components.AssetWebpropertyListInputBody {
+	if v == nil {
 		return components.AssetWebpropertyListInputBody{}
 	}
-	return o.AssetWebpropertyListInputBody
+	return v.AssetWebpropertyListInputBody
 }
 
 type V3GlobaldataAssetWebpropertyListPostResponse struct {
@@ -44,23 +44,23 @@ type V3GlobaldataAssetWebpropertyListPostResponse struct {
 	Headers                              map[string][]string
 }
 
-func (o *V3GlobaldataAssetWebpropertyListPostResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyListPostResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataAssetWebpropertyListPostResponse) GetResponseEnvelopeListWebpropertyAsset() *components.ResponseEnvelopeListWebpropertyAsset {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyListPostResponse) GetResponseEnvelopeListWebpropertyAsset() *components.ResponseEnvelopeListWebpropertyAsset {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeListWebpropertyAsset
+	return v.ResponseEnvelopeListWebpropertyAsset
 }
 
-func (o *V3GlobaldataAssetWebpropertyListPostResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyListPostResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

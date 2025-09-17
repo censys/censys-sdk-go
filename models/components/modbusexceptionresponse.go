@@ -7,16 +7,16 @@ type ModbusExceptionResponse struct {
 	ExceptionType     *int `json:"exception_type,omitempty"`
 }
 
-func (o *ModbusExceptionResponse) GetExceptionFunction() *int {
-	if o == nil {
+func (m *ModbusExceptionResponse) GetExceptionFunction() *int {
+	if m == nil {
 		return nil
 	}
-	return o.ExceptionFunction
+	return m.ExceptionFunction
 }
 
-func (o *ModbusExceptionResponse) GetExceptionType() *int {
-	if o == nil {
+func (m *ModbusExceptionResponse) GetExceptionType() *int {
+	if m == nil {
 		return nil
 	}
-	return o.ExceptionType
+	return m.ExceptionType
 }

@@ -9,30 +9,30 @@ type Rlogin struct {
 	SoftwareVersion *string `json:"software_version,omitempty"`
 }
 
-func (o *Rlogin) GetError() *string {
-	if o == nil {
+func (r *Rlogin) GetError() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Error
+	return r.Error
 }
 
-func (o *Rlogin) GetOperatingSystem() *string {
-	if o == nil {
+func (r *Rlogin) GetOperatingSystem() *string {
+	if r == nil {
 		return nil
 	}
-	return o.OperatingSystem
+	return r.OperatingSystem
 }
 
-func (o *Rlogin) GetSoftware() *string {
-	if o == nil {
+func (r *Rlogin) GetSoftware() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Software
+	return r.Software
 }
 
-func (o *Rlogin) GetSoftwareVersion() *string {
-	if o == nil {
+func (r *Rlogin) GetSoftwareVersion() *string {
+	if r == nil {
 		return nil
 	}
-	return o.SoftwareVersion
+	return r.SoftwareVersion
 }

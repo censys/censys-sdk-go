@@ -11,44 +11,44 @@ type SSHServerHostKey struct {
 	RsaPublicKey      *RSACryptographicKey     `json:"rsa_public_key,omitempty"`
 }
 
-func (o *SSHServerHostKey) GetCertkeyPublicKey() *string {
-	if o == nil {
+func (s *SSHServerHostKey) GetCertkeyPublicKey() *string {
+	if s == nil {
 		return nil
 	}
-	return o.CertkeyPublicKey
+	return s.CertkeyPublicKey
 }
 
-func (o *SSHServerHostKey) GetDsaPublicKey() *DSACryptographicKey {
-	if o == nil {
+func (s *SSHServerHostKey) GetDsaPublicKey() *DSACryptographicKey {
+	if s == nil {
 		return nil
 	}
-	return o.DsaPublicKey
+	return s.DsaPublicKey
 }
 
-func (o *SSHServerHostKey) GetEcdsaPublicKey() *ECDSACryptographicKey {
-	if o == nil {
+func (s *SSHServerHostKey) GetEcdsaPublicKey() *ECDSACryptographicKey {
+	if s == nil {
 		return nil
 	}
-	return o.EcdsaPublicKey
+	return s.EcdsaPublicKey
 }
 
-func (o *SSHServerHostKey) GetEd25519PublicKey() *Ed25519CryptographicKey {
-	if o == nil {
+func (s *SSHServerHostKey) GetEd25519PublicKey() *Ed25519CryptographicKey {
+	if s == nil {
 		return nil
 	}
-	return o.Ed25519PublicKey
+	return s.Ed25519PublicKey
 }
 
-func (o *SSHServerHostKey) GetFingerprintSha256() *string {
-	if o == nil {
+func (s *SSHServerHostKey) GetFingerprintSha256() *string {
+	if s == nil {
 		return nil
 	}
-	return o.FingerprintSha256
+	return s.FingerprintSha256
 }
 
-func (o *SSHServerHostKey) GetRsaPublicKey() *RSACryptographicKey {
-	if o == nil {
+func (s *SSHServerHostKey) GetRsaPublicKey() *RSACryptographicKey {
+	if s == nil {
 		return nil
 	}
-	return o.RsaPublicKey
+	return s.RsaPublicKey
 }

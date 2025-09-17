@@ -13,37 +13,37 @@ type IpmiCommandPayload struct {
 	RequestorSequenceNumber *int `json:"requestor_sequence_number,omitempty"`
 }
 
-func (o *IpmiCommandPayload) GetChecksumError() *bool {
-	if o == nil {
+func (i *IpmiCommandPayload) GetChecksumError() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.ChecksumError
+	return i.ChecksumError
 }
 
-func (o *IpmiCommandPayload) GetData() *string {
-	if o == nil {
+func (i *IpmiCommandPayload) GetData() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Data
+	return i.Data
 }
 
-func (o *IpmiCommandPayload) GetIpmiCommandNumber() *IpmiCommandPayloadCommandNumber {
-	if o == nil {
+func (i *IpmiCommandPayload) GetIpmiCommandNumber() *IpmiCommandPayloadCommandNumber {
+	if i == nil {
 		return nil
 	}
-	return o.IpmiCommandNumber
+	return i.IpmiCommandNumber
 }
 
-func (o *IpmiCommandPayload) GetNetworkFunctionCode() *IpmiCommandPayloadPackedNetFn {
-	if o == nil {
+func (i *IpmiCommandPayload) GetNetworkFunctionCode() *IpmiCommandPayloadPackedNetFn {
+	if i == nil {
 		return nil
 	}
-	return o.NetworkFunctionCode
+	return i.NetworkFunctionCode
 }
 
-func (o *IpmiCommandPayload) GetRequestorSequenceNumber() *int {
-	if o == nil {
+func (i *IpmiCommandPayload) GetRequestorSequenceNumber() *int {
+	if i == nil {
 		return nil
 	}
-	return o.RequestorSequenceNumber
+	return i.RequestorSequenceNumber
 }

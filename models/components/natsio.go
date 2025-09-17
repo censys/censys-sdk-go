@@ -21,114 +21,114 @@ type NatsIo struct {
 	WsConnectUrls []string `json:"ws_connect_urls,omitempty"`
 }
 
-func (o *NatsIo) GetAuthRequired() *bool {
-	if o == nil {
+func (n *NatsIo) GetAuthRequired() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.AuthRequired
+	return n.AuthRequired
 }
 
-func (o *NatsIo) GetCluster() *string {
-	if o == nil {
+func (n *NatsIo) GetCluster() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Cluster
+	return n.Cluster
 }
 
-func (o *NatsIo) GetConnectUrls() []string {
-	if o == nil {
+func (n *NatsIo) GetConnectUrls() []string {
+	if n == nil {
 		return nil
 	}
-	return o.ConnectUrls
+	return n.ConnectUrls
 }
 
-func (o *NatsIo) GetDomain() *string {
-	if o == nil {
+func (n *NatsIo) GetDomain() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Domain
+	return n.Domain
 }
 
-func (o *NatsIo) GetGitCommit() *string {
-	if o == nil {
+func (n *NatsIo) GetGitCommit() *string {
+	if n == nil {
 		return nil
 	}
-	return o.GitCommit
+	return n.GitCommit
 }
 
-func (o *NatsIo) GetGo() *string {
-	if o == nil {
+func (n *NatsIo) GetGo() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Go
+	return n.Go
 }
 
-func (o *NatsIo) GetHeaders() *bool {
-	if o == nil {
+func (n *NatsIo) GetHeaders() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Headers
+	return n.Headers
 }
 
-func (o *NatsIo) GetJetstream() *bool {
-	if o == nil {
+func (n *NatsIo) GetJetstream() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Jetstream
+	return n.Jetstream
 }
 
-func (o *NatsIo) GetProto() *int {
-	if o == nil {
+func (n *NatsIo) GetProto() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Proto
+	return n.Proto
 }
 
-func (o *NatsIo) GetServerID() *string {
-	if o == nil {
+func (n *NatsIo) GetServerID() *string {
+	if n == nil {
 		return nil
 	}
-	return o.ServerID
+	return n.ServerID
 }
 
-func (o *NatsIo) GetServerName() *string {
-	if o == nil {
+func (n *NatsIo) GetServerName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.ServerName
+	return n.ServerName
 }
 
-func (o *NatsIo) GetTLSAvailable() *bool {
-	if o == nil {
+func (n *NatsIo) GetTLSAvailable() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.TLSAvailable
+	return n.TLSAvailable
 }
 
-func (o *NatsIo) GetTLSRequired() *bool {
-	if o == nil {
+func (n *NatsIo) GetTLSRequired() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.TLSRequired
+	return n.TLSRequired
 }
 
-func (o *NatsIo) GetTLSVerify() *bool {
-	if o == nil {
+func (n *NatsIo) GetTLSVerify() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.TLSVerify
+	return n.TLSVerify
 }
 
-func (o *NatsIo) GetVersion() *string {
-	if o == nil {
+func (n *NatsIo) GetVersion() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Version
+	return n.Version
 }
 
-func (o *NatsIo) GetWsConnectUrls() []string {
-	if o == nil {
+func (n *NatsIo) GetWsConnectUrls() []string {
+	if n == nil {
 		return nil
 	}
-	return o.WsConnectUrls
+	return n.WsConnectUrls
 }

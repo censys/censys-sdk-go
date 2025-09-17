@@ -10,37 +10,37 @@ type ElasticSearchResultsNodeInfoNodesNodeDataThreadPool struct {
 	Type      *string `json:"type,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetKeepAlive() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetKeepAlive() *string {
+	if e == nil {
 		return nil
 	}
-	return o.KeepAlive
+	return e.KeepAlive
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetMax() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetMax() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Max
+	return e.Max
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetMin() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetMin() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Min
+	return e.Min
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetQueueSize() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetQueueSize() *int {
+	if e == nil {
 		return nil
 	}
-	return o.QueueSize
+	return e.QueueSize
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetType() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataThreadPool) GetType() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Type
+	return e.Type
 }

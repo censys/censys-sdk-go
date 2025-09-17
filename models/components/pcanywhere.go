@@ -10,23 +10,23 @@ type PcAnywhere struct {
 	Status *PcAnywhereStatus `json:"status,omitempty"`
 }
 
-func (o *PcAnywhere) GetName() *string {
-	if o == nil {
+func (p *PcAnywhere) GetName() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Name
+	return p.Name
 }
 
-func (o *PcAnywhere) GetNr() *string {
-	if o == nil {
+func (p *PcAnywhere) GetNr() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Nr
+	return p.Nr
 }
 
-func (o *PcAnywhere) GetStatus() *PcAnywhereStatus {
-	if o == nil {
+func (p *PcAnywhere) GetStatus() *PcAnywhereStatus {
+	if p == nil {
 		return nil
 	}
-	return o.Status
+	return p.Status
 }

@@ -8,23 +8,23 @@ type CPELifeCycle struct {
 	ReleaseDate   *string `json:"release_date,omitempty"`
 }
 
-func (o *CPELifeCycle) GetEndOfLife() *bool {
-	if o == nil {
+func (c *CPELifeCycle) GetEndOfLife() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.EndOfLife
+	return c.EndOfLife
 }
 
-func (o *CPELifeCycle) GetEndOfLifeDate() *string {
-	if o == nil {
+func (c *CPELifeCycle) GetEndOfLifeDate() *string {
+	if c == nil {
 		return nil
 	}
-	return o.EndOfLifeDate
+	return c.EndOfLifeDate
 }
 
-func (o *CPELifeCycle) GetReleaseDate() *string {
-	if o == nil {
+func (c *CPELifeCycle) GetReleaseDate() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ReleaseDate
+	return c.ReleaseDate
 }

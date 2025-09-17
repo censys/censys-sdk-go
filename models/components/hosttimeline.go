@@ -23,16 +23,16 @@ func (h *HostTimeline) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HostTimeline) GetEvents() []HostTimelineEventAsset {
-	if o == nil {
+func (h *HostTimeline) GetEvents() []HostTimelineEventAsset {
+	if h == nil {
 		return nil
 	}
-	return o.Events
+	return h.Events
 }
 
-func (o *HostTimeline) GetScannedTo() time.Time {
-	if o == nil {
+func (h *HostTimeline) GetScannedTo() time.Time {
+	if h == nil {
 		return time.Time{}
 	}
-	return o.ScannedTo
+	return h.ScannedTo
 }

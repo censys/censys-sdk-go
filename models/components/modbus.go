@@ -9,30 +9,30 @@ type Modbus struct {
 	UnitID            *int64                   `json:"unit_id,omitempty"`
 }
 
-func (o *Modbus) GetExceptionResponse() *ModbusExceptionResponse {
-	if o == nil {
+func (m *Modbus) GetExceptionResponse() *ModbusExceptionResponse {
+	if m == nil {
 		return nil
 	}
-	return o.ExceptionResponse
+	return m.ExceptionResponse
 }
 
-func (o *Modbus) GetFunction() *int {
-	if o == nil {
+func (m *Modbus) GetFunction() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Function
+	return m.Function
 }
 
-func (o *Modbus) GetMeiResponse() *ModbusMEIResponse {
-	if o == nil {
+func (m *Modbus) GetMeiResponse() *ModbusMEIResponse {
+	if m == nil {
 		return nil
 	}
-	return o.MeiResponse
+	return m.MeiResponse
 }
 
-func (o *Modbus) GetUnitID() *int64 {
-	if o == nil {
+func (m *Modbus) GetUnitID() *int64 {
+	if m == nil {
 		return nil
 	}
-	return o.UnitID
+	return m.UnitID
 }

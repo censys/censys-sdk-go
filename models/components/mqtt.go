@@ -9,23 +9,23 @@ type Mqtt struct {
 	SubscriptionAckReturn *MqttSubscriptionAckReturn `json:"subscription_ack_return,omitempty"`
 }
 
-func (o *Mqtt) GetConnectionAckRaw() *string {
-	if o == nil {
+func (m *Mqtt) GetConnectionAckRaw() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ConnectionAckRaw
+	return m.ConnectionAckRaw
 }
 
-func (o *Mqtt) GetConnectionAckReturn() *MqttConnectionAckReturn {
-	if o == nil {
+func (m *Mqtt) GetConnectionAckReturn() *MqttConnectionAckReturn {
+	if m == nil {
 		return nil
 	}
-	return o.ConnectionAckReturn
+	return m.ConnectionAckReturn
 }
 
-func (o *Mqtt) GetSubscriptionAckReturn() *MqttSubscriptionAckReturn {
-	if o == nil {
+func (m *Mqtt) GetSubscriptionAckReturn() *MqttSubscriptionAckReturn {
+	if m == nil {
 		return nil
 	}
-	return o.SubscriptionAckReturn
+	return m.SubscriptionAckReturn
 }

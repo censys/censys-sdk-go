@@ -9,30 +9,30 @@ type EipService struct {
 	SupportsUDP  *bool   `json:"supports_udp,omitempty"`
 }
 
-func (o *EipService) GetCapabilities() *int {
-	if o == nil {
+func (e *EipService) GetCapabilities() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Capabilities
+	return e.Capabilities
 }
 
-func (o *EipService) GetServiceName() *string {
-	if o == nil {
+func (e *EipService) GetServiceName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ServiceName
+	return e.ServiceName
 }
 
-func (o *EipService) GetSupportsTCP() *bool {
-	if o == nil {
+func (e *EipService) GetSupportsTCP() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.SupportsTCP
+	return e.SupportsTCP
 }
 
-func (o *EipService) GetSupportsUDP() *bool {
-	if o == nil {
+func (e *EipService) GetSupportsUDP() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.SupportsUDP
+	return e.SupportsUDP
 }

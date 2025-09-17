@@ -8,23 +8,23 @@ type Dcerpc struct {
 	Endpoints     []DcerpcEndpoint `json:"endpoints,omitempty"`
 }
 
-func (o *Dcerpc) GetCouldBind() *bool {
-	if o == nil {
+func (d *Dcerpc) GetCouldBind() *bool {
+	if d == nil {
 		return nil
 	}
-	return o.CouldBind
+	return d.CouldBind
 }
 
-func (o *Dcerpc) GetCouldQueryEpm() *bool {
-	if o == nil {
+func (d *Dcerpc) GetCouldQueryEpm() *bool {
+	if d == nil {
 		return nil
 	}
-	return o.CouldQueryEpm
+	return d.CouldQueryEpm
 }
 
-func (o *Dcerpc) GetEndpoints() []DcerpcEndpoint {
-	if o == nil {
+func (d *Dcerpc) GetEndpoints() []DcerpcEndpoint {
+	if d == nil {
 		return nil
 	}
-	return o.Endpoints
+	return d.Endpoints
 }

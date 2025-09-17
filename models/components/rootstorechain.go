@@ -6,9 +6,9 @@ type RootStoreChain struct {
 	Sha256fp []string `json:"sha256fp,omitempty"`
 }
 
-func (o *RootStoreChain) GetSha256fp() []string {
-	if o == nil {
+func (r *RootStoreChain) GetSha256fp() []string {
+	if r == nil {
 		return nil
 	}
-	return o.Sha256fp
+	return r.Sha256fp
 }

@@ -7,16 +7,16 @@ type CobaltStrikePostEx struct {
 	X86 *string `json:"x86,omitempty"`
 }
 
-func (o *CobaltStrikePostEx) GetX64() *string {
-	if o == nil {
+func (c *CobaltStrikePostEx) GetX64() *string {
+	if c == nil {
 		return nil
 	}
-	return o.X64
+	return c.X64
 }
 
-func (o *CobaltStrikePostEx) GetX86() *string {
-	if o == nil {
+func (c *CobaltStrikePostEx) GetX86() *string {
+	if c == nil {
 		return nil
 	}
-	return o.X86
+	return c.X86
 }

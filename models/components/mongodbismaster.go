@@ -13,58 +13,58 @@ type MongodbIsMaster struct {
 	ReadOnly                     *bool `json:"read_only,omitempty"`
 }
 
-func (o *MongodbIsMaster) GetIsMaster() *bool {
-	if o == nil {
+func (m *MongodbIsMaster) GetIsMaster() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.IsMaster
+	return m.IsMaster
 }
 
-func (o *MongodbIsMaster) GetLogicalSessionTimeoutMinutes() *int {
-	if o == nil {
+func (m *MongodbIsMaster) GetLogicalSessionTimeoutMinutes() *int {
+	if m == nil {
 		return nil
 	}
-	return o.LogicalSessionTimeoutMinutes
+	return m.LogicalSessionTimeoutMinutes
 }
 
-func (o *MongodbIsMaster) GetMaxBsonObjectSize() *int {
-	if o == nil {
+func (m *MongodbIsMaster) GetMaxBsonObjectSize() *int {
+	if m == nil {
 		return nil
 	}
-	return o.MaxBsonObjectSize
+	return m.MaxBsonObjectSize
 }
 
-func (o *MongodbIsMaster) GetMaxMessageSizeBytes() *int {
-	if o == nil {
+func (m *MongodbIsMaster) GetMaxMessageSizeBytes() *int {
+	if m == nil {
 		return nil
 	}
-	return o.MaxMessageSizeBytes
+	return m.MaxMessageSizeBytes
 }
 
-func (o *MongodbIsMaster) GetMaxWireVersion() *int {
-	if o == nil {
+func (m *MongodbIsMaster) GetMaxWireVersion() *int {
+	if m == nil {
 		return nil
 	}
-	return o.MaxWireVersion
+	return m.MaxWireVersion
 }
 
-func (o *MongodbIsMaster) GetMaxWriteBatchSize() *int {
-	if o == nil {
+func (m *MongodbIsMaster) GetMaxWriteBatchSize() *int {
+	if m == nil {
 		return nil
 	}
-	return o.MaxWriteBatchSize
+	return m.MaxWriteBatchSize
 }
 
-func (o *MongodbIsMaster) GetMinWireVersion() *int {
-	if o == nil {
+func (m *MongodbIsMaster) GetMinWireVersion() *int {
+	if m == nil {
 		return nil
 	}
-	return o.MinWireVersion
+	return m.MinWireVersion
 }
 
-func (o *MongodbIsMaster) GetReadOnly() *bool {
-	if o == nil {
+func (m *MongodbIsMaster) GetReadOnly() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.ReadOnly
+	return m.ReadOnly
 }

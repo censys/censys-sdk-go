@@ -8,23 +8,23 @@ type ZeromqHandshake struct {
 	SocketType *string `json:"socket_type,omitempty"`
 }
 
-func (o *ZeromqHandshake) GetRaw() *string {
-	if o == nil {
+func (z *ZeromqHandshake) GetRaw() *string {
+	if z == nil {
 		return nil
 	}
-	return o.Raw
+	return z.Raw
 }
 
-func (o *ZeromqHandshake) GetReady() *bool {
-	if o == nil {
+func (z *ZeromqHandshake) GetReady() *bool {
+	if z == nil {
 		return nil
 	}
-	return o.Ready
+	return z.Ready
 }
 
-func (o *ZeromqHandshake) GetSocketType() *string {
-	if o == nil {
+func (z *ZeromqHandshake) GetSocketType() *string {
+	if z == nil {
 		return nil
 	}
-	return o.SocketType
+	return z.SocketType
 }

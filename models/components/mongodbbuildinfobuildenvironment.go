@@ -14,65 +14,65 @@ type MongodbBuildInfoBuildEnvironment struct {
 	TargetOs   *string `json:"target_os,omitempty"`
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetCc() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetCc() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Cc
+	return m.Cc
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetCcFlags() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetCcFlags() *string {
+	if m == nil {
 		return nil
 	}
-	return o.CcFlags
+	return m.CcFlags
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetCxx() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetCxx() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Cxx
+	return m.Cxx
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetCxxFlags() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetCxxFlags() *string {
+	if m == nil {
 		return nil
 	}
-	return o.CxxFlags
+	return m.CxxFlags
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetDistArch() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetDistArch() *string {
+	if m == nil {
 		return nil
 	}
-	return o.DistArch
+	return m.DistArch
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetDistMod() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetDistMod() *string {
+	if m == nil {
 		return nil
 	}
-	return o.DistMod
+	return m.DistMod
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetLinkFlags() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetLinkFlags() *string {
+	if m == nil {
 		return nil
 	}
-	return o.LinkFlags
+	return m.LinkFlags
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetTargetArch() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetTargetArch() *string {
+	if m == nil {
 		return nil
 	}
-	return o.TargetArch
+	return m.TargetArch
 }
 
-func (o *MongodbBuildInfoBuildEnvironment) GetTargetOs() *string {
-	if o == nil {
+func (m *MongodbBuildInfoBuildEnvironment) GetTargetOs() *string {
+	if m == nil {
 		return nil
 	}
-	return o.TargetOs
+	return m.TargetOs
 }

@@ -9,30 +9,30 @@ type RippleClioResults struct {
 	ValidationQuorum *int64  `json:"validation_quorum,omitempty"`
 }
 
-func (o *RippleClioResults) GetClioVersion() *string {
-	if o == nil {
+func (r *RippleClioResults) GetClioVersion() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ClioVersion
+	return r.ClioVersion
 }
 
-func (o *RippleClioResults) GetRippledVersion() *string {
-	if o == nil {
+func (r *RippleClioResults) GetRippledVersion() *string {
+	if r == nil {
 		return nil
 	}
-	return o.RippledVersion
+	return r.RippledVersion
 }
 
-func (o *RippleClioResults) GetValidated() *bool {
-	if o == nil {
+func (r *RippleClioResults) GetValidated() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.Validated
+	return r.Validated
 }
 
-func (o *RippleClioResults) GetValidationQuorum() *int64 {
-	if o == nil {
+func (r *RippleClioResults) GetValidationQuorum() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.ValidationQuorum
+	return r.ValidationQuorum
 }

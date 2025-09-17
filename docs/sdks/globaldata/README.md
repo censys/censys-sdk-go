@@ -7,14 +7,14 @@ Endpoints related to the Global Data product
 
 ### Available Operations
 
-* [GetCertificates](#getcertificates) - Get multiple certificates
-* [GetCertificatesRaw](#getcertificatesraw) - Get multiple certificates in PEM format
+* [GetCertificates](#getcertificates) - Retrieve multiple certificates
+* [GetCertificatesRaw](#getcertificatesraw) - Retrieve multiple certificates in PEM format
 * [GetCertificate](#getcertificate) - Get a certificate
 * [GetCertificateRaw](#getcertificateraw) - Get a certificate in PEM format
-* [GetHosts](#gethosts) - Get multiple hosts
+* [GetHosts](#gethosts) - Retrieve multiple hosts
 * [GetHost](#gethost) - Get a host
 * [GetHostTimeline](#gethosttimeline) - Get host event history
-* [GetWebProperties](#getwebproperties) - Get multiple web properties
+* [GetWebProperties](#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](#getwebproperty) - Get a web property
 * [CreateTrackedScan](#createtrackedscan) - Live Rescan: Initiate a new rescan
 * [GetTrackedScan](#gettrackedscan) - Get scan status
@@ -78,10 +78,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetCertificatesRaw
 
@@ -139,10 +140,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 404                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetCertificate
 
@@ -195,10 +197,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetCertificateRaw
 
@@ -251,10 +254,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetHosts
 
@@ -312,10 +316,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetHost
 
@@ -370,10 +375,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetHostTimeline
 
@@ -429,10 +435,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetWebProperties
 
@@ -490,10 +497,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetWebProperty
 
@@ -548,10 +556,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 422                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## CreateTrackedScan
 
@@ -731,10 +740,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ConvertLegacySearchQueries
 
@@ -794,11 +804,12 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401                      | application/problem+json |
-| sdkerrors.ErrorModel     | 500                      | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Search
 
@@ -831,7 +842,7 @@ func main() {
             Fields: []string{
                 "host.ip",
             },
-            PageSize: censyssdkgo.Int64(1),
+            PageSize: censyssdkgo.Pointer[int64](1),
             Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })
@@ -858,7 +869,8 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |

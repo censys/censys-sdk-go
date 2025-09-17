@@ -12,44 +12,44 @@ type Kubernetes struct {
 	VersionInfo              *KubernetesVersionInfo `json:"version_info,omitempty"`
 }
 
-func (o *Kubernetes) GetEndpoints() []KubernetesEndpoint {
-	if o == nil {
+func (k *Kubernetes) GetEndpoints() []KubernetesEndpoint {
+	if k == nil {
 		return nil
 	}
-	return o.Endpoints
+	return k.Endpoints
 }
 
-func (o *Kubernetes) GetKubernetesDashboardFound() *bool {
-	if o == nil {
+func (k *Kubernetes) GetKubernetesDashboardFound() *bool {
+	if k == nil {
 		return nil
 	}
-	return o.KubernetesDashboardFound
+	return k.KubernetesDashboardFound
 }
 
-func (o *Kubernetes) GetNodes() []KubernetesNode {
-	if o == nil {
+func (k *Kubernetes) GetNodes() []KubernetesNode {
+	if k == nil {
 		return nil
 	}
-	return o.Nodes
+	return k.Nodes
 }
 
-func (o *Kubernetes) GetPodNames() []string {
-	if o == nil {
+func (k *Kubernetes) GetPodNames() []string {
+	if k == nil {
 		return nil
 	}
-	return o.PodNames
+	return k.PodNames
 }
 
-func (o *Kubernetes) GetRoles() []KubernetesRole {
-	if o == nil {
+func (k *Kubernetes) GetRoles() []KubernetesRole {
+	if k == nil {
 		return nil
 	}
-	return o.Roles
+	return k.Roles
 }
 
-func (o *Kubernetes) GetVersionInfo() *KubernetesVersionInfo {
-	if o == nil {
+func (k *Kubernetes) GetVersionInfo() *KubernetesVersionInfo {
+	if k == nil {
 		return nil
 	}
-	return o.VersionInfo
+	return k.VersionInfo
 }

@@ -23,128 +23,128 @@ type SecurityCapabilities struct {
 	X509Token            *bool `json:"x509_token,omitempty"`
 }
 
-func (o *SecurityCapabilities) GetAccessPolicyConfig() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetAccessPolicyConfig() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.AccessPolicyConfig
+	return s.AccessPolicyConfig
 }
 
-func (o *SecurityCapabilities) GetDefaultAccessPolicy() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetDefaultAccessPolicy() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DefaultAccessPolicy
+	return s.DefaultAccessPolicy
 }
 
-func (o *SecurityCapabilities) GetDot1x() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetDot1x() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Dot1x
+	return s.Dot1x
 }
 
-func (o *SecurityCapabilities) GetHTTPDigest() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetHTTPDigest() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.HTTPDigest
+	return s.HTTPDigest
 }
 
-func (o *SecurityCapabilities) GetKerberosToken() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetKerberosToken() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.KerberosToken
+	return s.KerberosToken
 }
 
-func (o *SecurityCapabilities) GetMaxPasswordLength() *int {
-	if o == nil {
+func (s *SecurityCapabilities) GetMaxPasswordLength() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MaxPasswordLength
+	return s.MaxPasswordLength
 }
 
-func (o *SecurityCapabilities) GetMaxUsernameLength() *int {
-	if o == nil {
+func (s *SecurityCapabilities) GetMaxUsernameLength() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MaxUsernameLength
+	return s.MaxUsernameLength
 }
 
-func (o *SecurityCapabilities) GetMaxUsers() *int {
-	if o == nil {
+func (s *SecurityCapabilities) GetMaxUsers() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MaxUsers
+	return s.MaxUsers
 }
 
-func (o *SecurityCapabilities) GetOnboardKeyGeneration() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetOnboardKeyGeneration() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.OnboardKeyGeneration
+	return s.OnboardKeyGeneration
 }
 
-func (o *SecurityCapabilities) GetRelToken() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetRelToken() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.RelToken
+	return s.RelToken
 }
 
-func (o *SecurityCapabilities) GetRemoteUserHandling() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetRemoteUserHandling() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.RemoteUserHandling
+	return s.RemoteUserHandling
 }
 
-func (o *SecurityCapabilities) GetSamlToken() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetSamlToken() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SamlToken
+	return s.SamlToken
 }
 
-func (o *SecurityCapabilities) GetSupportedEapMethods() *int {
-	if o == nil {
+func (s *SecurityCapabilities) GetSupportedEapMethods() *int {
+	if s == nil {
 		return nil
 	}
-	return o.SupportedEapMethods
+	return s.SupportedEapMethods
 }
 
-func (o *SecurityCapabilities) GetTLS10() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetTLS10() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.TLS10
+	return s.TLS10
 }
 
-func (o *SecurityCapabilities) GetTLS11() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetTLS11() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.TLS11
+	return s.TLS11
 }
 
-func (o *SecurityCapabilities) GetTLS12() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetTLS12() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.TLS12
+	return s.TLS12
 }
 
-func (o *SecurityCapabilities) GetUsernameToken() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetUsernameToken() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.UsernameToken
+	return s.UsernameToken
 }
 
-func (o *SecurityCapabilities) GetX509Token() *bool {
-	if o == nil {
+func (s *SecurityCapabilities) GetX509Token() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.X509Token
+	return s.X509Token
 }

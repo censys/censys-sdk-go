@@ -19,51 +19,51 @@ type IpmiCapabilitiesSupportedAuthTypes struct {
 	Raw *int `json:"raw,omitempty"`
 }
 
-func (o *IpmiCapabilitiesSupportedAuthTypes) GetExtended() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesSupportedAuthTypes) GetExtended() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.Extended
+	return i.Extended
 }
 
-func (o *IpmiCapabilitiesSupportedAuthTypes) GetMd2() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesSupportedAuthTypes) GetMd2() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.Md2
+	return i.Md2
 }
 
-func (o *IpmiCapabilitiesSupportedAuthTypes) GetMd5() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesSupportedAuthTypes) GetMd5() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.Md5
+	return i.Md5
 }
 
-func (o *IpmiCapabilitiesSupportedAuthTypes) GetNone() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesSupportedAuthTypes) GetNone() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.None
+	return i.None
 }
 
-func (o *IpmiCapabilitiesSupportedAuthTypes) GetOemProprietary() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesSupportedAuthTypes) GetOemProprietary() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.OemProprietary
+	return i.OemProprietary
 }
 
-func (o *IpmiCapabilitiesSupportedAuthTypes) GetPassword() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesSupportedAuthTypes) GetPassword() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.Password
+	return i.Password
 }
 
-func (o *IpmiCapabilitiesSupportedAuthTypes) GetRaw() *int {
-	if o == nil {
+func (i *IpmiCapabilitiesSupportedAuthTypes) GetRaw() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }

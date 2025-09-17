@@ -71,184 +71,184 @@ type EndpointScanState struct {
 	TransportProtocol *TransportProtocol `json:"transport_protocol,omitempty"`
 }
 
-func (o *EndpointScanState) GetBanner() *string {
-	if o == nil {
+func (e *EndpointScanState) GetBanner() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Banner
+	return e.Banner
 }
 
-func (o *EndpointScanState) GetBannerHashSha256() *string {
-	if o == nil {
+func (e *EndpointScanState) GetBannerHashSha256() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BannerHashSha256
+	return e.BannerHashSha256
 }
 
-func (o *EndpointScanState) GetChromeDevtools() *ChromeDevtools {
-	if o == nil {
+func (e *EndpointScanState) GetChromeDevtools() *ChromeDevtools {
+	if e == nil {
 		return nil
 	}
-	return o.ChromeDevtools
+	return e.ChromeDevtools
 }
 
-func (o *EndpointScanState) GetCobaltStrike() *CobaltStrike {
-	if o == nil {
+func (e *EndpointScanState) GetCobaltStrike() *CobaltStrike {
+	if e == nil {
 		return nil
 	}
-	return o.CobaltStrike
+	return e.CobaltStrike
 }
 
-func (o *EndpointScanState) GetElasticsearch() *ElasticSearch {
-	if o == nil {
+func (e *EndpointScanState) GetElasticsearch() *ElasticSearch {
+	if e == nil {
 		return nil
 	}
-	return o.Elasticsearch
+	return e.Elasticsearch
 }
 
-func (o *EndpointScanState) GetEndpointType() *string {
-	if o == nil {
+func (e *EndpointScanState) GetEndpointType() *string {
+	if e == nil {
 		return nil
 	}
-	return o.EndpointType
+	return e.EndpointType
 }
 
-func (o *EndpointScanState) GetFortigate() *Fortigate {
-	if o == nil {
+func (e *EndpointScanState) GetFortigate() *Fortigate {
+	if e == nil {
 		return nil
 	}
-	return o.Fortigate
+	return e.Fortigate
 }
 
-func (o *EndpointScanState) GetGraphql() *Graphql {
-	if o == nil {
+func (e *EndpointScanState) GetGraphql() *Graphql {
+	if e == nil {
 		return nil
 	}
-	return o.Graphql
+	return e.Graphql
 }
 
-func (o *EndpointScanState) GetHostname() *string {
-	if o == nil {
+func (e *EndpointScanState) GetHostname() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Hostname
+	return e.Hostname
 }
 
-func (o *EndpointScanState) GetHTTP() *HTTP {
-	if o == nil {
+func (e *EndpointScanState) GetHTTP() *HTTP {
+	if e == nil {
 		return nil
 	}
-	return o.HTTP
+	return e.HTTP
 }
 
-func (o *EndpointScanState) GetIP() *string {
-	if o == nil {
+func (e *EndpointScanState) GetIP() *string {
+	if e == nil {
 		return nil
 	}
-	return o.IP
+	return e.IP
 }
 
-func (o *EndpointScanState) GetIvantiAvalanche() *IvantiAvalanche {
-	if o == nil {
+func (e *EndpointScanState) GetIvantiAvalanche() *IvantiAvalanche {
+	if e == nil {
 		return nil
 	}
-	return o.IvantiAvalanche
+	return e.IvantiAvalanche
 }
 
-func (o *EndpointScanState) GetKubernetes() *Kubernetes {
-	if o == nil {
+func (e *EndpointScanState) GetKubernetes() *Kubernetes {
+	if e == nil {
 		return nil
 	}
-	return o.Kubernetes
+	return e.Kubernetes
 }
 
-func (o *EndpointScanState) GetOllama() *Ollama {
-	if o == nil {
+func (e *EndpointScanState) GetOllama() *Ollama {
+	if e == nil {
 		return nil
 	}
-	return o.Ollama
+	return e.Ollama
 }
 
-func (o *EndpointScanState) GetOpenDirectory() *OpenDirectory {
-	if o == nil {
+func (e *EndpointScanState) GetOpenDirectory() *OpenDirectory {
+	if e == nil {
 		return nil
 	}
-	return o.OpenDirectory
+	return e.OpenDirectory
 }
 
-func (o *EndpointScanState) GetPath() *string {
-	if o == nil {
+func (e *EndpointScanState) GetPath() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Path
+	return e.Path
 }
 
-func (o *EndpointScanState) GetPlexMediaServer() *PlexMediaServer {
-	if o == nil {
+func (e *EndpointScanState) GetPlexMediaServer() *PlexMediaServer {
+	if e == nil {
 		return nil
 	}
-	return o.PlexMediaServer
+	return e.PlexMediaServer
 }
 
-func (o *EndpointScanState) GetPort() *int {
-	if o == nil {
+func (e *EndpointScanState) GetPort() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Port
+	return e.Port
 }
 
-func (o *EndpointScanState) GetPprof() *Pprof {
-	if o == nil {
+func (e *EndpointScanState) GetPprof() *Pprof {
+	if e == nil {
 		return nil
 	}
-	return o.Pprof
+	return e.Pprof
 }
 
-func (o *EndpointScanState) GetPrometheus() *Prometheus {
-	if o == nil {
+func (e *EndpointScanState) GetPrometheus() *Prometheus {
+	if e == nil {
 		return nil
 	}
-	return o.Prometheus
+	return e.Prometheus
 }
 
-func (o *EndpointScanState) GetPrometheusTarget() *PrometheusTarget {
-	if o == nil {
+func (e *EndpointScanState) GetPrometheusTarget() *PrometheusTarget {
+	if e == nil {
 		return nil
 	}
-	return o.PrometheusTarget
+	return e.PrometheusTarget
 }
 
-func (o *EndpointScanState) GetRedlionWeb() *RedlionWeb {
-	if o == nil {
+func (e *EndpointScanState) GetRedlionWeb() *RedlionWeb {
+	if e == nil {
 		return nil
 	}
-	return o.RedlionWeb
+	return e.RedlionWeb
 }
 
-func (o *EndpointScanState) GetScadaView() *ScadaView {
-	if o == nil {
+func (e *EndpointScanState) GetScadaView() *ScadaView {
+	if e == nil {
 		return nil
 	}
-	return o.ScadaView
+	return e.ScadaView
 }
 
-func (o *EndpointScanState) GetScanTime() *string {
-	if o == nil {
+func (e *EndpointScanState) GetScanTime() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ScanTime
+	return e.ScanTime
 }
 
-func (o *EndpointScanState) GetScreenshots() []Screenshot {
-	if o == nil {
+func (e *EndpointScanState) GetScreenshots() []Screenshot {
+	if e == nil {
 		return nil
 	}
-	return o.Screenshots
+	return e.Screenshots
 }
 
-func (o *EndpointScanState) GetTransportProtocol() *TransportProtocol {
-	if o == nil {
+func (e *EndpointScanState) GetTransportProtocol() *TransportProtocol {
+	if e == nil {
 		return nil
 	}
-	return o.TransportProtocol
+	return e.TransportProtocol
 }

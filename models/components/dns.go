@@ -143,65 +143,65 @@ type DNS struct {
 	Version    *string     `json:"version,omitempty"`
 }
 
-func (o *DNS) GetAdditionals() []DNSResourceRecord {
-	if o == nil {
+func (d *DNS) GetAdditionals() []DNSResourceRecord {
+	if d == nil {
 		return nil
 	}
-	return o.Additionals
+	return d.Additionals
 }
 
-func (o *DNS) GetAnswers() []DNSResourceRecord {
-	if o == nil {
+func (d *DNS) GetAnswers() []DNSResourceRecord {
+	if d == nil {
 		return nil
 	}
-	return o.Answers
+	return d.Answers
 }
 
-func (o *DNS) GetAuthorities() []DNSResourceRecord {
-	if o == nil {
+func (d *DNS) GetAuthorities() []DNSResourceRecord {
+	if d == nil {
 		return nil
 	}
-	return o.Authorities
+	return d.Authorities
 }
 
-func (o *DNS) GetEdns() *DNSEDNS {
-	if o == nil {
+func (d *DNS) GetEdns() *DNSEDNS {
+	if d == nil {
 		return nil
 	}
-	return o.Edns
+	return d.Edns
 }
 
-func (o *DNS) GetQuestions() []DNSResourceRecord {
-	if o == nil {
+func (d *DNS) GetQuestions() []DNSResourceRecord {
+	if d == nil {
 		return nil
 	}
-	return o.Questions
+	return d.Questions
 }
 
-func (o *DNS) GetRCode() *RCode {
-	if o == nil {
+func (d *DNS) GetRCode() *RCode {
+	if d == nil {
 		return nil
 	}
-	return o.RCode
+	return d.RCode
 }
 
-func (o *DNS) GetResolvesCorrectly() *bool {
-	if o == nil {
+func (d *DNS) GetResolvesCorrectly() *bool {
+	if d == nil {
 		return nil
 	}
-	return o.ResolvesCorrectly
+	return d.ResolvesCorrectly
 }
 
-func (o *DNS) GetServerType() *ServerType {
-	if o == nil {
+func (d *DNS) GetServerType() *ServerType {
+	if d == nil {
 		return nil
 	}
-	return o.ServerType
+	return d.ServerType
 }
 
-func (o *DNS) GetVersion() *string {
-	if o == nil {
+func (d *DNS) GetVersion() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Version
+	return d.Version
 }

@@ -12,30 +12,30 @@ type IpmiSessionHeader struct {
 	SessionSequenceNumber *int64 `json:"session_sequence_number,omitempty"`
 }
 
-func (o *IpmiSessionHeader) GetAuthCode() *string {
-	if o == nil {
+func (i *IpmiSessionHeader) GetAuthCode() *string {
+	if i == nil {
 		return nil
 	}
-	return o.AuthCode
+	return i.AuthCode
 }
 
-func (o *IpmiSessionHeader) GetAuthType() *IpmiSessionHeaderAuthType {
-	if o == nil {
+func (i *IpmiSessionHeader) GetAuthType() *IpmiSessionHeaderAuthType {
+	if i == nil {
 		return nil
 	}
-	return o.AuthType
+	return i.AuthType
 }
 
-func (o *IpmiSessionHeader) GetSessionID() *int64 {
-	if o == nil {
+func (i *IpmiSessionHeader) GetSessionID() *int64 {
+	if i == nil {
 		return nil
 	}
-	return o.SessionID
+	return i.SessionID
 }
 
-func (o *IpmiSessionHeader) GetSessionSequenceNumber() *int64 {
-	if o == nil {
+func (i *IpmiSessionHeader) GetSessionSequenceNumber() *int64 {
+	if i == nil {
 		return nil
 	}
-	return o.SessionSequenceNumber
+	return i.SessionSequenceNumber
 }

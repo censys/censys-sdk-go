@@ -10,37 +10,37 @@ type PanTiltZoomCapabilities struct {
 	StatusPosition              *bool `json:"status_position,omitempty"`
 }
 
-func (o *PanTiltZoomCapabilities) GetEflip() *bool {
-	if o == nil {
+func (p *PanTiltZoomCapabilities) GetEflip() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.Eflip
+	return p.Eflip
 }
 
-func (o *PanTiltZoomCapabilities) GetGetCompatibleConfigurations() *bool {
-	if o == nil {
+func (p *PanTiltZoomCapabilities) GetGetCompatibleConfigurations() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.GetCompatibleConfigurations
+	return p.GetCompatibleConfigurations
 }
 
-func (o *PanTiltZoomCapabilities) GetMoveStatus() *bool {
-	if o == nil {
+func (p *PanTiltZoomCapabilities) GetMoveStatus() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.MoveStatus
+	return p.MoveStatus
 }
 
-func (o *PanTiltZoomCapabilities) GetReverse() *bool {
-	if o == nil {
+func (p *PanTiltZoomCapabilities) GetReverse() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.Reverse
+	return p.Reverse
 }
 
-func (o *PanTiltZoomCapabilities) GetStatusPosition() *bool {
-	if o == nil {
+func (p *PanTiltZoomCapabilities) GetStatusPosition() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.StatusPosition
+	return p.StatusPosition
 }

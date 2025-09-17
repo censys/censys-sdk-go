@@ -8,23 +8,23 @@ type Redline struct {
 	Transport        *string `json:"transport,omitempty"`
 }
 
-func (o *Redline) GetActionResponse() *string {
-	if o == nil {
+func (r *Redline) GetActionResponse() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ActionResponse
+	return r.ActionResponse
 }
 
-func (o *Redline) GetSettingsResponse() *string {
-	if o == nil {
+func (r *Redline) GetSettingsResponse() *string {
+	if r == nil {
 		return nil
 	}
-	return o.SettingsResponse
+	return r.SettingsResponse
 }
 
-func (o *Redline) GetTransport() *string {
-	if o == nil {
+func (r *Redline) GetTransport() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Transport
+	return r.Transport
 }

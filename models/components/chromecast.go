@@ -12,51 +12,51 @@ type Chromecast struct {
 	Volume          *ChromecastVolume       `json:"volume,omitempty"`
 }
 
-func (o *Chromecast) GetApplications() []ChromecastApplication {
-	if o == nil {
+func (c *Chromecast) GetApplications() []ChromecastApplication {
+	if c == nil {
 		return nil
 	}
-	return o.Applications
+	return c.Applications
 }
 
-func (o *Chromecast) GetIconURL() *string {
-	if o == nil {
+func (c *Chromecast) GetIconURL() *string {
+	if c == nil {
 		return nil
 	}
-	return o.IconURL
+	return c.IconURL
 }
 
-func (o *Chromecast) GetIsActiveInput() *bool {
-	if o == nil {
+func (c *Chromecast) GetIsActiveInput() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.IsActiveInput
+	return c.IsActiveInput
 }
 
-func (o *Chromecast) GetProtocolVersion() *int {
-	if o == nil {
+func (c *Chromecast) GetProtocolVersion() *int {
+	if c == nil {
 		return nil
 	}
-	return o.ProtocolVersion
+	return c.ProtocolVersion
 }
 
-func (o *Chromecast) GetStatusText() *string {
-	if o == nil {
+func (c *Chromecast) GetStatusText() *string {
+	if c == nil {
 		return nil
 	}
-	return o.StatusText
+	return c.StatusText
 }
 
-func (o *Chromecast) GetUniversalAppID() *string {
-	if o == nil {
+func (c *Chromecast) GetUniversalAppID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UniversalAppID
+	return c.UniversalAppID
 }
 
-func (o *Chromecast) GetVolume() *ChromecastVolume {
-	if o == nil {
+func (c *Chromecast) GetVolume() *ChromecastVolume {
+	if c == nil {
 		return nil
 	}
-	return o.Volume
+	return c.Volume
 }

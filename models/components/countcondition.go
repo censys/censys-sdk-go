@@ -7,9 +7,9 @@ type CountCondition struct {
 	FieldValuePairs []FieldValuePair `json:"field_value_pairs"`
 }
 
-func (o *CountCondition) GetFieldValuePairs() []FieldValuePair {
-	if o == nil {
+func (c *CountCondition) GetFieldValuePairs() []FieldValuePair {
+	if c == nil {
 		return nil
 	}
-	return o.FieldValuePairs
+	return c.FieldValuePairs
 }

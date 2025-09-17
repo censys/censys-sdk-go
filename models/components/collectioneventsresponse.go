@@ -7,16 +7,16 @@ type CollectionEventsResponse struct {
 	NextPage string            `json:"next_page"`
 }
 
-func (o *CollectionEventsResponse) GetEvents() []CollectionEvent {
-	if o == nil {
+func (c *CollectionEventsResponse) GetEvents() []CollectionEvent {
+	if c == nil {
 		return nil
 	}
-	return o.Events
+	return c.Events
 }
 
-func (o *CollectionEventsResponse) GetNextPage() string {
-	if o == nil {
+func (c *CollectionEventsResponse) GetNextPage() string {
+	if c == nil {
 		return ""
 	}
-	return o.NextPage
+	return c.NextPage
 }

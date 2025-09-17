@@ -6,9 +6,9 @@ type PlexMediaServer struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *PlexMediaServer) GetVersion() *string {
-	if o == nil {
+func (p *PlexMediaServer) GetVersion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Version
+	return p.Version
 }

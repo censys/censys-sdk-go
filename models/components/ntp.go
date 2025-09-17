@@ -6,9 +6,9 @@ type Ntp struct {
 	GetTimeHeader *NTPNTPHeader `json:"get_time_header,omitempty"`
 }
 
-func (o *Ntp) GetGetTimeHeader() *NTPNTPHeader {
-	if o == nil {
+func (n *Ntp) GetGetTimeHeader() *NTPNTPHeader {
+	if n == nil {
 		return nil
 	}
-	return o.GetTimeHeader
+	return n.GetTimeHeader
 }

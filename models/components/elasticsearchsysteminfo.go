@@ -9,30 +9,30 @@ type ElasticSearchSystemInfo struct {
 	Version     *ElasticSearchSystemInfoVer `json:"version,omitempty"`
 }
 
-func (o *ElasticSearchSystemInfo) GetClusterUUID() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfo) GetClusterUUID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ClusterUUID
+	return e.ClusterUUID
 }
 
-func (o *ElasticSearchSystemInfo) GetName() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfo) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *ElasticSearchSystemInfo) GetTagline() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfo) GetTagline() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Tagline
+	return e.Tagline
 }
 
-func (o *ElasticSearchSystemInfo) GetVersion() *ElasticSearchSystemInfoVer {
-	if o == nil {
+func (e *ElasticSearchSystemInfo) GetVersion() *ElasticSearchSystemInfoVer {
+	if e == nil {
 		return nil
 	}
-	return o.Version
+	return e.Version
 }

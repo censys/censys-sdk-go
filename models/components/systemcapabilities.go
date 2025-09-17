@@ -16,79 +16,79 @@ type SystemCapabilities struct {
 	SystemLogging          *bool `json:"system_logging,omitempty"`
 }
 
-func (o *SystemCapabilities) GetDiscoveryBye() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetDiscoveryBye() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DiscoveryBye
+	return s.DiscoveryBye
 }
 
-func (o *SystemCapabilities) GetDiscoveryResolve() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetDiscoveryResolve() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.DiscoveryResolve
+	return s.DiscoveryResolve
 }
 
-func (o *SystemCapabilities) GetFirmwareUpgrade() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetFirmwareUpgrade() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.FirmwareUpgrade
+	return s.FirmwareUpgrade
 }
 
-func (o *SystemCapabilities) GetHTTPFirmwareUpgrade() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetHTTPFirmwareUpgrade() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.HTTPFirmwareUpgrade
+	return s.HTTPFirmwareUpgrade
 }
 
-func (o *SystemCapabilities) GetHTTPSupportInformation() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetHTTPSupportInformation() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.HTTPSupportInformation
+	return s.HTTPSupportInformation
 }
 
-func (o *SystemCapabilities) GetHTTPSystemBackup() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetHTTPSystemBackup() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.HTTPSystemBackup
+	return s.HTTPSystemBackup
 }
 
-func (o *SystemCapabilities) GetHTTPSystemLogging() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetHTTPSystemLogging() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.HTTPSystemLogging
+	return s.HTTPSystemLogging
 }
 
-func (o *SystemCapabilities) GetRemoteDiscovery() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetRemoteDiscovery() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.RemoteDiscovery
+	return s.RemoteDiscovery
 }
 
-func (o *SystemCapabilities) GetStorageConfiguration() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetStorageConfiguration() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.StorageConfiguration
+	return s.StorageConfiguration
 }
 
-func (o *SystemCapabilities) GetSystemBackup() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetSystemBackup() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SystemBackup
+	return s.SystemBackup
 }
 
-func (o *SystemCapabilities) GetSystemLogging() *bool {
-	if o == nil {
+func (s *SystemCapabilities) GetSystemLogging() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SystemLogging
+	return s.SystemLogging
 }

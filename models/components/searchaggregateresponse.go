@@ -10,37 +10,37 @@ type SearchAggregateResponse struct {
 	TotalCount          int64                           `json:"total_count"`
 }
 
-func (o *SearchAggregateResponse) GetBuckets() []SearchAggregateResponseBucket {
-	if o == nil {
+func (s *SearchAggregateResponse) GetBuckets() []SearchAggregateResponseBucket {
+	if s == nil {
 		return nil
 	}
-	return o.Buckets
+	return s.Buckets
 }
 
-func (o *SearchAggregateResponse) GetIsMoreThanTotalHits() bool {
-	if o == nil {
+func (s *SearchAggregateResponse) GetIsMoreThanTotalHits() bool {
+	if s == nil {
 		return false
 	}
-	return o.IsMoreThanTotalHits
+	return s.IsMoreThanTotalHits
 }
 
-func (o *SearchAggregateResponse) GetOtherCount() int64 {
-	if o == nil {
+func (s *SearchAggregateResponse) GetOtherCount() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.OtherCount
+	return s.OtherCount
 }
 
-func (o *SearchAggregateResponse) GetQueryDurationMillis() int64 {
-	if o == nil {
+func (s *SearchAggregateResponse) GetQueryDurationMillis() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.QueryDurationMillis
+	return s.QueryDurationMillis
 }
 
-func (o *SearchAggregateResponse) GetTotalCount() int64 {
-	if o == nil {
+func (s *SearchAggregateResponse) GetTotalCount() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.TotalCount
+	return s.TotalCount
 }

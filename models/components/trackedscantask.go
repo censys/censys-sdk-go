@@ -54,23 +54,23 @@ type TrackedScanTask struct {
 	UpdateTime  *string                `json:"update_time,omitempty"`
 }
 
-func (o *TrackedScanTask) GetDescription() *string {
-	if o == nil {
+func (t *TrackedScanTask) GetDescription() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Description
+	return t.Description
 }
 
-func (o *TrackedScanTask) GetStatus() *TrackedScanTaskStatus {
-	if o == nil {
+func (t *TrackedScanTask) GetStatus() *TrackedScanTaskStatus {
+	if t == nil {
 		return nil
 	}
-	return o.Status
+	return t.Status
 }
 
-func (o *TrackedScanTask) GetUpdateTime() *string {
-	if o == nil {
+func (t *TrackedScanTask) GetUpdateTime() *string {
+	if t == nil {
 		return nil
 	}
-	return o.UpdateTime
+	return t.UpdateTime
 }

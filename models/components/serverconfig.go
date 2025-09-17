@@ -12,51 +12,51 @@ type ServerConfig struct {
 	WelcomeText        *string `json:"welcome_text,omitempty"`
 }
 
-func (o *ServerConfig) GetAllowHTML() *bool {
-	if o == nil {
+func (s *ServerConfig) GetAllowHTML() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.AllowHTML
+	return s.AllowHTML
 }
 
-func (o *ServerConfig) GetImageMessageLength() *int {
-	if o == nil {
+func (s *ServerConfig) GetImageMessageLength() *int {
+	if s == nil {
 		return nil
 	}
-	return o.ImageMessageLength
+	return s.ImageMessageLength
 }
 
-func (o *ServerConfig) GetMaxBandwidth() *int {
-	if o == nil {
+func (s *ServerConfig) GetMaxBandwidth() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MaxBandwidth
+	return s.MaxBandwidth
 }
 
-func (o *ServerConfig) GetMaxUsers() *int {
-	if o == nil {
+func (s *ServerConfig) GetMaxUsers() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MaxUsers
+	return s.MaxUsers
 }
 
-func (o *ServerConfig) GetMessageLength() *int {
-	if o == nil {
+func (s *ServerConfig) GetMessageLength() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MessageLength
+	return s.MessageLength
 }
 
-func (o *ServerConfig) GetRecordingAllowed() *bool {
-	if o == nil {
+func (s *ServerConfig) GetRecordingAllowed() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.RecordingAllowed
+	return s.RecordingAllowed
 }
 
-func (o *ServerConfig) GetWelcomeText() *string {
-	if o == nil {
+func (s *ServerConfig) GetWelcomeText() *string {
+	if s == nil {
 		return nil
 	}
-	return o.WelcomeText
+	return s.WelcomeText
 }

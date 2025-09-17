@@ -6,9 +6,9 @@ type RedisRawOutput struct {
 	Output *string `json:"output,omitempty"`
 }
 
-func (o *RedisRawOutput) GetOutput() *string {
-	if o == nil {
+func (r *RedisRawOutput) GetOutput() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Output
+	return r.Output
 }

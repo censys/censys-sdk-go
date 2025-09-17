@@ -8,23 +8,23 @@ type KubernetesEndpointSubsetEndpointAddress struct {
 	NodeName *string `json:"node_name,omitempty"`
 }
 
-func (o *KubernetesEndpointSubsetEndpointAddress) GetHostname() *string {
-	if o == nil {
+func (k *KubernetesEndpointSubsetEndpointAddress) GetHostname() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Hostname
+	return k.Hostname
 }
 
-func (o *KubernetesEndpointSubsetEndpointAddress) GetIP() *string {
-	if o == nil {
+func (k *KubernetesEndpointSubsetEndpointAddress) GetIP() *string {
+	if k == nil {
 		return nil
 	}
-	return o.IP
+	return k.IP
 }
 
-func (o *KubernetesEndpointSubsetEndpointAddress) GetNodeName() *string {
-	if o == nil {
+func (k *KubernetesEndpointSubsetEndpointAddress) GetNodeName() *string {
+	if k == nil {
 		return nil
 	}
-	return o.NodeName
+	return k.NodeName
 }

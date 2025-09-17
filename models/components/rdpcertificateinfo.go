@@ -7,16 +7,16 @@ type RdpCertificateInfo struct {
 	ProprietaryRsaKey    *RdpEmbeddedRSACert `json:"proprietary_rsa_key,omitempty"`
 }
 
-func (o *RdpCertificateInfo) GetInternalX509ChainFps() []string {
-	if o == nil {
+func (r *RdpCertificateInfo) GetInternalX509ChainFps() []string {
+	if r == nil {
 		return nil
 	}
-	return o.InternalX509ChainFps
+	return r.InternalX509ChainFps
 }
 
-func (o *RdpCertificateInfo) GetProprietaryRsaKey() *RdpEmbeddedRSACert {
-	if o == nil {
+func (r *RdpCertificateInfo) GetProprietaryRsaKey() *RdpEmbeddedRSACert {
+	if r == nil {
 		return nil
 	}
-	return o.ProprietaryRsaKey
+	return r.ProprietaryRsaKey
 }

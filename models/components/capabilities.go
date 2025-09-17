@@ -15,72 +15,72 @@ type Capabilities struct {
 	Search      *SearchCapabilities      `json:"search,omitempty"`
 }
 
-func (o *Capabilities) GetAnalytics() *AnalyticsCapabilities {
-	if o == nil {
+func (c *Capabilities) GetAnalytics() *AnalyticsCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Analytics
+	return c.Analytics
 }
 
-func (o *Capabilities) GetDevice() *DeviceCapabilities {
-	if o == nil {
+func (c *Capabilities) GetDevice() *DeviceCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Device
+	return c.Device
 }
 
-func (o *Capabilities) GetDeviceIo() *DeviceIOCapabilities {
-	if o == nil {
+func (c *Capabilities) GetDeviceIo() *DeviceIOCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.DeviceIo
+	return c.DeviceIo
 }
 
-func (o *Capabilities) GetEvents() *EventsCapabilities {
-	if o == nil {
+func (c *Capabilities) GetEvents() *EventsCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Events
+	return c.Events
 }
 
-func (o *Capabilities) GetImage() *ImageCapabilities {
-	if o == nil {
+func (c *Capabilities) GetImage() *ImageCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Image
+	return c.Image
 }
 
-func (o *Capabilities) GetMedia() *MediaCapabilities {
-	if o == nil {
+func (c *Capabilities) GetMedia() *MediaCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Media
+	return c.Media
 }
 
-func (o *Capabilities) GetPanTiltZoom() *PanTiltZoomCapabilities {
-	if o == nil {
+func (c *Capabilities) GetPanTiltZoom() *PanTiltZoomCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.PanTiltZoom
+	return c.PanTiltZoom
 }
 
-func (o *Capabilities) GetRecording() *RecordingCapabilities {
-	if o == nil {
+func (c *Capabilities) GetRecording() *RecordingCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Recording
+	return c.Recording
 }
 
-func (o *Capabilities) GetReplay() *ReplayCapabilities {
-	if o == nil {
+func (c *Capabilities) GetReplay() *ReplayCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Replay
+	return c.Replay
 }
 
-func (o *Capabilities) GetSearch() *SearchCapabilities {
-	if o == nil {
+func (c *Capabilities) GetSearch() *SearchCapabilities {
+	if c == nil {
 		return nil
 	}
-	return o.Search
+	return c.Search
 }

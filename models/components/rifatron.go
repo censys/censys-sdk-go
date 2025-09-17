@@ -6,9 +6,9 @@ type Rifatron struct {
 	Model *string `json:"model,omitempty"`
 }
 
-func (o *Rifatron) GetModel() *string {
-	if o == nil {
+func (r *Rifatron) GetModel() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Model
+	return r.Model
 }

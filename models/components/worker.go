@@ -9,30 +9,30 @@ type Worker struct {
 	IP        *string `json:"ip,omitempty"`
 }
 
-func (o *Worker) GetClientID() *string {
-	if o == nil {
+func (w *Worker) GetClientID() *string {
+	if w == nil {
 		return nil
 	}
-	return o.ClientID
+	return w.ClientID
 }
 
-func (o *Worker) GetFd() *string {
-	if o == nil {
+func (w *Worker) GetFd() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Fd
+	return w.Fd
 }
 
-func (o *Worker) GetFunctions() *string {
-	if o == nil {
+func (w *Worker) GetFunctions() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Functions
+	return w.Functions
 }
 
-func (o *Worker) GetIP() *string {
-	if o == nil {
+func (w *Worker) GetIP() *string {
+	if w == nil {
 		return nil
 	}
-	return o.IP
+	return w.IP
 }

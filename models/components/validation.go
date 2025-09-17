@@ -9,30 +9,30 @@ type Validation struct {
 	Nss       *RootStore `json:"nss,omitempty"`
 }
 
-func (o *Validation) GetApple() *RootStore {
-	if o == nil {
+func (v *Validation) GetApple() *RootStore {
+	if v == nil {
 		return nil
 	}
-	return o.Apple
+	return v.Apple
 }
 
-func (o *Validation) GetChrome() *RootStore {
-	if o == nil {
+func (v *Validation) GetChrome() *RootStore {
+	if v == nil {
 		return nil
 	}
-	return o.Chrome
+	return v.Chrome
 }
 
-func (o *Validation) GetMicrosoft() *RootStore {
-	if o == nil {
+func (v *Validation) GetMicrosoft() *RootStore {
+	if v == nil {
 		return nil
 	}
-	return o.Microsoft
+	return v.Microsoft
 }
 
-func (o *Validation) GetNss() *RootStore {
-	if o == nil {
+func (v *Validation) GetNss() *RootStore {
+	if v == nil {
 		return nil
 	}
-	return o.Nss
+	return v.Nss
 }

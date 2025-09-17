@@ -9,30 +9,30 @@ type Zeromq struct {
 	SubscriptionMatch map[string]bool  `json:"subscription_match,omitempty"`
 }
 
-func (o *Zeromq) GetGreeting() *ZeromqGreeting {
-	if o == nil {
+func (z *Zeromq) GetGreeting() *ZeromqGreeting {
+	if z == nil {
 		return nil
 	}
-	return o.Greeting
+	return z.Greeting
 }
 
-func (o *Zeromq) GetHandshake() *ZeromqHandshake {
-	if o == nil {
+func (z *Zeromq) GetHandshake() *ZeromqHandshake {
+	if z == nil {
 		return nil
 	}
-	return o.Handshake
+	return z.Handshake
 }
 
-func (o *Zeromq) GetSubscriptionData() *string {
-	if o == nil {
+func (z *Zeromq) GetSubscriptionData() *string {
+	if z == nil {
 		return nil
 	}
-	return o.SubscriptionData
+	return z.SubscriptionData
 }
 
-func (o *Zeromq) GetSubscriptionMatch() map[string]bool {
-	if o == nil {
+func (z *Zeromq) GetSubscriptionMatch() map[string]bool {
+	if z == nil {
 		return nil
 	}
-	return o.SubscriptionMatch
+	return z.SubscriptionMatch
 }

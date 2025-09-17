@@ -9,30 +9,30 @@ type DcerpcEndpoint struct {
 	Protocol      *string  `json:"protocol,omitempty"`
 }
 
-func (o *DcerpcEndpoint) GetBindings() []string {
-	if o == nil {
+func (d *DcerpcEndpoint) GetBindings() []string {
+	if d == nil {
 		return nil
 	}
-	return o.Bindings
+	return d.Bindings
 }
 
-func (o *DcerpcEndpoint) GetExecutable() *string {
-	if o == nil {
+func (d *DcerpcEndpoint) GetExecutable() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Executable
+	return d.Executable
 }
 
-func (o *DcerpcEndpoint) GetExplainedUUID() *string {
-	if o == nil {
+func (d *DcerpcEndpoint) GetExplainedUUID() *string {
+	if d == nil {
 		return nil
 	}
-	return o.ExplainedUUID
+	return d.ExplainedUUID
 }
 
-func (o *DcerpcEndpoint) GetProtocol() *string {
-	if o == nil {
+func (d *DcerpcEndpoint) GetProtocol() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Protocol
+	return d.Protocol
 }

@@ -8,23 +8,23 @@ type AmqpVersion struct {
 	Revision *int `json:"revision,omitempty"`
 }
 
-func (o *AmqpVersion) GetMajor() *int {
-	if o == nil {
+func (a *AmqpVersion) GetMajor() *int {
+	if a == nil {
 		return nil
 	}
-	return o.Major
+	return a.Major
 }
 
-func (o *AmqpVersion) GetMinor() *int {
-	if o == nil {
+func (a *AmqpVersion) GetMinor() *int {
+	if a == nil {
 		return nil
 	}
-	return o.Minor
+	return a.Minor
 }
 
-func (o *AmqpVersion) GetRevision() *int {
-	if o == nil {
+func (a *AmqpVersion) GetRevision() *int {
+	if a == nil {
 		return nil
 	}
-	return o.Revision
+	return a.Revision
 }

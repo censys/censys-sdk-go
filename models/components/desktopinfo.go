@@ -9,30 +9,30 @@ type DesktopInfo struct {
 	Width       *int         `json:"width,omitempty"`
 }
 
-func (o *DesktopInfo) GetHeight() *int {
-	if o == nil {
+func (d *DesktopInfo) GetHeight() *int {
+	if d == nil {
 		return nil
 	}
-	return o.Height
+	return d.Height
 }
 
-func (o *DesktopInfo) GetNameLen() *int {
-	if o == nil {
+func (d *DesktopInfo) GetNameLen() *int {
+	if d == nil {
 		return nil
 	}
-	return o.NameLen
+	return d.NameLen
 }
 
-func (o *DesktopInfo) GetPixelFormat() *PixelFormat {
-	if o == nil {
+func (d *DesktopInfo) GetPixelFormat() *PixelFormat {
+	if d == nil {
 		return nil
 	}
-	return o.PixelFormat
+	return d.PixelFormat
 }
 
-func (o *DesktopInfo) GetWidth() *int {
-	if o == nil {
+func (d *DesktopInfo) GetWidth() *int {
+	if d == nil {
 		return nil
 	}
-	return o.Width
+	return d.Width
 }

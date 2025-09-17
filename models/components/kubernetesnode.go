@@ -23,72 +23,72 @@ type KubernetesNode struct {
 	OsImage *string `json:"os_image,omitempty"`
 }
 
-func (o *KubernetesNode) GetAddresses() []KubernetesNodeNodeAddress {
-	if o == nil {
+func (k *KubernetesNode) GetAddresses() []KubernetesNodeNodeAddress {
+	if k == nil {
 		return nil
 	}
-	return o.Addresses
+	return k.Addresses
 }
 
-func (o *KubernetesNode) GetArchitecture() *string {
-	if o == nil {
+func (k *KubernetesNode) GetArchitecture() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Architecture
+	return k.Architecture
 }
 
-func (o *KubernetesNode) GetContainerRuntimeVersion() *string {
-	if o == nil {
+func (k *KubernetesNode) GetContainerRuntimeVersion() *string {
+	if k == nil {
 		return nil
 	}
-	return o.ContainerRuntimeVersion
+	return k.ContainerRuntimeVersion
 }
 
-func (o *KubernetesNode) GetImages() []string {
-	if o == nil {
+func (k *KubernetesNode) GetImages() []string {
+	if k == nil {
 		return nil
 	}
-	return o.Images
+	return k.Images
 }
 
-func (o *KubernetesNode) GetKernelVersion() *string {
-	if o == nil {
+func (k *KubernetesNode) GetKernelVersion() *string {
+	if k == nil {
 		return nil
 	}
-	return o.KernelVersion
+	return k.KernelVersion
 }
 
-func (o *KubernetesNode) GetKubeProxyVersion() *string {
-	if o == nil {
+func (k *KubernetesNode) GetKubeProxyVersion() *string {
+	if k == nil {
 		return nil
 	}
-	return o.KubeProxyVersion
+	return k.KubeProxyVersion
 }
 
-func (o *KubernetesNode) GetKubeletVersion() *string {
-	if o == nil {
+func (k *KubernetesNode) GetKubeletVersion() *string {
+	if k == nil {
 		return nil
 	}
-	return o.KubeletVersion
+	return k.KubeletVersion
 }
 
-func (o *KubernetesNode) GetName() *string {
-	if o == nil {
+func (k *KubernetesNode) GetName() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Name
+	return k.Name
 }
 
-func (o *KubernetesNode) GetOperatingSystem() *string {
-	if o == nil {
+func (k *KubernetesNode) GetOperatingSystem() *string {
+	if k == nil {
 		return nil
 	}
-	return o.OperatingSystem
+	return k.OperatingSystem
 }
 
-func (o *KubernetesNode) GetOsImage() *string {
-	if o == nil {
+func (k *KubernetesNode) GetOsImage() *string {
+	if k == nil {
 		return nil
 	}
-	return o.OsImage
+	return k.OsImage
 }

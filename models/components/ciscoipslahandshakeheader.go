@@ -9,30 +9,30 @@ type CiscoIpslaHandshakeHeader struct {
 	Version *int `json:"version,omitempty"`
 }
 
-func (o *CiscoIpslaHandshakeHeader) GetLength() *int {
-	if o == nil {
+func (c *CiscoIpslaHandshakeHeader) GetLength() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Length
+	return c.Length
 }
 
-func (o *CiscoIpslaHandshakeHeader) GetSeq() *int {
-	if o == nil {
+func (c *CiscoIpslaHandshakeHeader) GetSeq() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Seq
+	return c.Seq
 }
 
-func (o *CiscoIpslaHandshakeHeader) GetUnknown() *int {
-	if o == nil {
+func (c *CiscoIpslaHandshakeHeader) GetUnknown() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Unknown
+	return c.Unknown
 }
 
-func (o *CiscoIpslaHandshakeHeader) GetVersion() *int {
-	if o == nil {
+func (c *CiscoIpslaHandshakeHeader) GetVersion() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Version
+	return c.Version
 }

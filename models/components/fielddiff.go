@@ -7,16 +7,16 @@ type FieldDiff struct {
 	Old *string `json:"old,omitempty"`
 }
 
-func (o *FieldDiff) GetNew() *string {
-	if o == nil {
+func (f *FieldDiff) GetNew() *string {
+	if f == nil {
 		return nil
 	}
-	return o.New
+	return f.New
 }
 
-func (o *FieldDiff) GetOld() *string {
-	if o == nil {
+func (f *FieldDiff) GetOld() *string {
+	if f == nil {
 		return nil
 	}
-	return o.Old
+	return f.Old
 }

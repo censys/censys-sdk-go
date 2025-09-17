@@ -7,16 +7,16 @@ type UserNotice struct {
 	NoticeReference *NoticeReference `json:"notice_reference,omitempty"`
 }
 
-func (o *UserNotice) GetExplicitText() *string {
-	if o == nil {
+func (u *UserNotice) GetExplicitText() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ExplicitText
+	return u.ExplicitText
 }
 
-func (o *UserNotice) GetNoticeReference() *NoticeReference {
-	if o == nil {
+func (u *UserNotice) GetNoticeReference() *NoticeReference {
+	if u == nil {
 		return nil
 	}
-	return o.NoticeReference
+	return u.NoticeReference
 }

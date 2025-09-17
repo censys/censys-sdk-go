@@ -9,16 +9,16 @@ type PcAnywhereStatus struct {
 	Raw *string `json:"raw,omitempty"`
 }
 
-func (o *PcAnywhereStatus) GetInUse() *bool {
-	if o == nil {
+func (p *PcAnywhereStatus) GetInUse() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.InUse
+	return p.InUse
 }
 
-func (o *PcAnywhereStatus) GetRaw() *string {
-	if o == nil {
+func (p *PcAnywhereStatus) GetRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Raw
+	return p.Raw
 }

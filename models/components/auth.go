@@ -6,9 +6,9 @@ type Auth struct {
 	Enabled *bool `json:"enabled,omitempty"`
 }
 
-func (o *Auth) GetEnabled() *bool {
-	if o == nil {
+func (a *Auth) GetEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.Enabled
+	return a.Enabled
 }

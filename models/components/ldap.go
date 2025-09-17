@@ -11,23 +11,23 @@ type Ldap struct {
 	ResultCode *int `json:"result_code,omitempty"`
 }
 
-func (o *Ldap) GetAllowsAnonymousBind() *bool {
-	if o == nil {
+func (l *Ldap) GetAllowsAnonymousBind() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.AllowsAnonymousBind
+	return l.AllowsAnonymousBind
 }
 
-func (o *Ldap) GetAttributes() []LdapAttribute {
-	if o == nil {
+func (l *Ldap) GetAttributes() []LdapAttribute {
+	if l == nil {
 		return nil
 	}
-	return o.Attributes
+	return l.Attributes
 }
 
-func (o *Ldap) GetResultCode() *int {
-	if o == nil {
+func (l *Ldap) GetResultCode() *int {
+	if l == nil {
 		return nil
 	}
-	return o.ResultCode
+	return l.ResultCode
 }

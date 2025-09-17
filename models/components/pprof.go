@@ -14,65 +14,65 @@ type Pprof struct {
 	Trace        *int    `json:"trace,omitempty"`
 }
 
-func (o *Pprof) GetAllocs() *int {
-	if o == nil {
+func (p *Pprof) GetAllocs() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Allocs
+	return p.Allocs
 }
 
-func (o *Pprof) GetBlock() *int {
-	if o == nil {
+func (p *Pprof) GetBlock() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Block
+	return p.Block
 }
 
-func (o *Pprof) GetCmdline() *string {
-	if o == nil {
+func (p *Pprof) GetCmdline() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Cmdline
+	return p.Cmdline
 }
 
-func (o *Pprof) GetGoroutine() *int {
-	if o == nil {
+func (p *Pprof) GetGoroutine() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Goroutine
+	return p.Goroutine
 }
 
-func (o *Pprof) GetHeap() *int {
-	if o == nil {
+func (p *Pprof) GetHeap() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Heap
+	return p.Heap
 }
 
-func (o *Pprof) GetMutex() *int {
-	if o == nil {
+func (p *Pprof) GetMutex() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Mutex
+	return p.Mutex
 }
 
-func (o *Pprof) GetProfile() *int {
-	if o == nil {
+func (p *Pprof) GetProfile() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Profile
+	return p.Profile
 }
 
-func (o *Pprof) GetThreadcreate() *int {
-	if o == nil {
+func (p *Pprof) GetThreadcreate() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Threadcreate
+	return p.Threadcreate
 }
 
-func (o *Pprof) GetTrace() *int {
-	if o == nil {
+func (p *Pprof) GetTrace() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Trace
+	return p.Trace
 }

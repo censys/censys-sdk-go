@@ -10,32 +10,32 @@ type V3GlobaldataAssetCertificateGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataAssetCertificateGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataAssetCertificateRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The SHA-256 certificate fingerprint.
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificate_id"`
 }
 
-func (o *V3GlobaldataAssetCertificateRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataAssetCertificateRequest) GetCertificateID() string {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateRequest) GetCertificateID() string {
+	if v == nil {
 		return ""
 	}
-	return o.CertificateID
+	return v.CertificateID
 }
 
 type V3GlobaldataAssetCertificateResponse struct {
@@ -45,23 +45,23 @@ type V3GlobaldataAssetCertificateResponse struct {
 	Headers                          map[string][]string
 }
 
-func (o *V3GlobaldataAssetCertificateResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataAssetCertificateResponse) GetResponseEnvelopeCertificateAsset() *components.ResponseEnvelopeCertificateAsset {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateResponse) GetResponseEnvelopeCertificateAsset() *components.ResponseEnvelopeCertificateAsset {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeCertificateAsset
+	return v.ResponseEnvelopeCertificateAsset
 }
 
-func (o *V3GlobaldataAssetCertificateResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

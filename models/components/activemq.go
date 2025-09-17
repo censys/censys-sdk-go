@@ -17,86 +17,86 @@ type Activemq struct {
 	TightEncodingEnabled              *bool   `json:"tight_encoding_enabled,omitempty"`
 }
 
-func (o *Activemq) GetCacheEnabled() *bool {
-	if o == nil {
+func (a *Activemq) GetCacheEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.CacheEnabled
+	return a.CacheEnabled
 }
 
-func (o *Activemq) GetCacheSize() *int {
-	if o == nil {
+func (a *Activemq) GetCacheSize() *int {
+	if a == nil {
 		return nil
 	}
-	return o.CacheSize
+	return a.CacheSize
 }
 
-func (o *Activemq) GetMaxFrameSize() *int64 {
-	if o == nil {
+func (a *Activemq) GetMaxFrameSize() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.MaxFrameSize
+	return a.MaxFrameSize
 }
 
-func (o *Activemq) GetMaxInactivityDuration() *int64 {
-	if o == nil {
+func (a *Activemq) GetMaxInactivityDuration() *int64 {
+	if a == nil {
 		return nil
 	}
-	return o.MaxInactivityDuration
+	return a.MaxInactivityDuration
 }
 
-func (o *Activemq) GetMaxInactivityDurationInitialDelay() *int {
-	if o == nil {
+func (a *Activemq) GetMaxInactivityDurationInitialDelay() *int {
+	if a == nil {
 		return nil
 	}
-	return o.MaxInactivityDurationInitialDelay
+	return a.MaxInactivityDurationInitialDelay
 }
 
-func (o *Activemq) GetPlatformDetails() *string {
-	if o == nil {
+func (a *Activemq) GetPlatformDetails() *string {
+	if a == nil {
 		return nil
 	}
-	return o.PlatformDetails
+	return a.PlatformDetails
 }
 
-func (o *Activemq) GetProviderName() *string {
-	if o == nil {
+func (a *Activemq) GetProviderName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ProviderName
+	return a.ProviderName
 }
 
-func (o *Activemq) GetProviderVersion() *string {
-	if o == nil {
+func (a *Activemq) GetProviderVersion() *string {
+	if a == nil {
 		return nil
 	}
-	return o.ProviderVersion
+	return a.ProviderVersion
 }
 
-func (o *Activemq) GetSizePrefixDisabled() *bool {
-	if o == nil {
+func (a *Activemq) GetSizePrefixDisabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.SizePrefixDisabled
+	return a.SizePrefixDisabled
 }
 
-func (o *Activemq) GetStackTraceEnabled() *bool {
-	if o == nil {
+func (a *Activemq) GetStackTraceEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.StackTraceEnabled
+	return a.StackTraceEnabled
 }
 
-func (o *Activemq) GetTCPNoDelayEnabled() *bool {
-	if o == nil {
+func (a *Activemq) GetTCPNoDelayEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.TCPNoDelayEnabled
+	return a.TCPNoDelayEnabled
 }
 
-func (o *Activemq) GetTightEncodingEnabled() *bool {
-	if o == nil {
+func (a *Activemq) GetTightEncodingEnabled() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.TightEncodingEnabled
+	return a.TightEncodingEnabled
 }

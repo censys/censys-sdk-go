@@ -91,30 +91,30 @@ func (e *EventStatusChange) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *EventStatusChange) GetEventTime() time.Time {
-	if o == nil {
+func (e *EventStatusChange) GetEventTime() time.Time {
+	if e == nil {
 		return time.Time{}
 	}
-	return o.EventTime
+	return e.EventTime
 }
 
-func (o *EventStatusChange) GetNewStatus() NewStatus {
-	if o == nil {
+func (e *EventStatusChange) GetNewStatus() NewStatus {
+	if e == nil {
 		return NewStatus("")
 	}
-	return o.NewStatus
+	return e.NewStatus
 }
 
-func (o *EventStatusChange) GetOldStatus() *OldStatus {
-	if o == nil {
+func (e *EventStatusChange) GetOldStatus() *OldStatus {
+	if e == nil {
 		return nil
 	}
-	return o.OldStatus
+	return e.OldStatus
 }
 
-func (o *EventStatusChange) GetReason() *string {
-	if o == nil {
+func (e *EventStatusChange) GetReason() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Reason
+	return e.Reason
 }

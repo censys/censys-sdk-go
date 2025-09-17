@@ -8,23 +8,23 @@ type ModbusMEIResponse struct {
 	Objects         map[string]string `json:"objects,omitempty"`
 }
 
-func (o *ModbusMEIResponse) GetConformityLevel() *int64 {
-	if o == nil {
+func (m *ModbusMEIResponse) GetConformityLevel() *int64 {
+	if m == nil {
 		return nil
 	}
-	return o.ConformityLevel
+	return m.ConformityLevel
 }
 
-func (o *ModbusMEIResponse) GetMoreFollows() *bool {
-	if o == nil {
+func (m *ModbusMEIResponse) GetMoreFollows() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.MoreFollows
+	return m.MoreFollows
 }
 
-func (o *ModbusMEIResponse) GetObjects() map[string]string {
-	if o == nil {
+func (m *ModbusMEIResponse) GetObjects() map[string]string {
+	if m == nil {
 		return nil
 	}
-	return o.Objects
+	return m.Objects
 }

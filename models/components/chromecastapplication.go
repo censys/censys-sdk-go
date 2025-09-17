@@ -11,44 +11,44 @@ type ChromecastApplication struct {
 	TransportID *string               `json:"transport_id,omitempty"`
 }
 
-func (o *ChromecastApplication) GetAppID() *string {
-	if o == nil {
+func (c *ChromecastApplication) GetAppID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AppID
+	return c.AppID
 }
 
-func (o *ChromecastApplication) GetAppType() *string {
-	if o == nil {
+func (c *ChromecastApplication) GetAppType() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AppType
+	return c.AppType
 }
 
-func (o *ChromecastApplication) GetDisplayName() *string {
-	if o == nil {
+func (c *ChromecastApplication) GetDisplayName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.DisplayName
+	return c.DisplayName
 }
 
-func (o *ChromecastApplication) GetNamespaces() []ChromecastNamespace {
-	if o == nil {
+func (c *ChromecastApplication) GetNamespaces() []ChromecastNamespace {
+	if c == nil {
 		return nil
 	}
-	return o.Namespaces
+	return c.Namespaces
 }
 
-func (o *ChromecastApplication) GetSessionID() *string {
-	if o == nil {
+func (c *ChromecastApplication) GetSessionID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SessionID
+	return c.SessionID
 }
 
-func (o *ChromecastApplication) GetTransportID() *string {
-	if o == nil {
+func (c *ChromecastApplication) GetTransportID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.TransportID
+	return c.TransportID
 }

@@ -21,114 +21,114 @@ type ElasticSearchResultsNodeInfoNodesNodeData struct {
 	Version             *string                                                `json:"version,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetBuildFlavor() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetBuildFlavor() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BuildFlavor
+	return e.BuildFlavor
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetBuildHash() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetBuildHash() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BuildHash
+	return e.BuildHash
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetBuildType() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetBuildType() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BuildType
+	return e.BuildType
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetHost() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetHost() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Host
+	return e.Host
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetIngestProcessors() []string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetIngestProcessors() []string {
+	if e == nil {
 		return nil
 	}
-	return o.IngestProcessors
+	return e.IngestProcessors
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetIP() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetIP() *string {
+	if e == nil {
 		return nil
 	}
-	return o.IP
+	return e.IP
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetIPRaw() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetIPRaw() *string {
+	if e == nil {
 		return nil
 	}
-	return o.IPRaw
+	return e.IPRaw
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetJvm() *ElasticSearchResultsNodeInfoNodesNodeDataJVM {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetJvm() *ElasticSearchResultsNodeInfoNodesNodeDataJVM {
+	if e == nil {
 		return nil
 	}
-	return o.Jvm
+	return e.Jvm
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetModules() []ElasticSearchResultsNodeInfoNodesNodeDataModules {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetModules() []ElasticSearchResultsNodeInfoNodesNodeDataModules {
+	if e == nil {
 		return nil
 	}
-	return o.Modules
+	return e.Modules
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetName() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetOs() *ElasticSearchResultsNodeInfoNodesNodeDataOS {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetOs() *ElasticSearchResultsNodeInfoNodesNodeDataOS {
+	if e == nil {
 		return nil
 	}
-	return o.Os
+	return e.Os
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetRoles() []string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetRoles() []string {
+	if e == nil {
 		return nil
 	}
-	return o.Roles
+	return e.Roles
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetSettings() *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettings {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetSettings() *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettings {
+	if e == nil {
 		return nil
 	}
-	return o.Settings
+	return e.Settings
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetThreadPoolList() []ElasticSearchResultsNodeInfoNodesNodeDataThreadPool {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetThreadPoolList() []ElasticSearchResultsNodeInfoNodesNodeDataThreadPool {
+	if e == nil {
 		return nil
 	}
-	return o.ThreadPoolList
+	return e.ThreadPoolList
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetTotalIndexingBuffer() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetTotalIndexingBuffer() *int {
+	if e == nil {
 		return nil
 	}
-	return o.TotalIndexingBuffer
+	return e.TotalIndexingBuffer
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeData) GetVersion() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Version
+	return e.Version
 }

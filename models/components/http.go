@@ -28,100 +28,100 @@ type HTTP struct {
 	URI *string `json:"uri,omitempty"`
 }
 
-func (o *HTTP) GetBody() *string {
-	if o == nil {
+func (h *HTTP) GetBody() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Body
+	return h.Body
 }
 
-func (o *HTTP) GetBodyHashSha1() *string {
-	if o == nil {
+func (h *HTTP) GetBodyHashSha1() *string {
+	if h == nil {
 		return nil
 	}
-	return o.BodyHashSha1
+	return h.BodyHashSha1
 }
 
-func (o *HTTP) GetBodyHashSha256() *string {
-	if o == nil {
+func (h *HTTP) GetBodyHashSha256() *string {
+	if h == nil {
 		return nil
 	}
-	return o.BodyHashSha256
+	return h.BodyHashSha256
 }
 
-func (o *HTTP) GetBodyHashTlsh() *string {
-	if o == nil {
+func (h *HTTP) GetBodyHashTlsh() *string {
+	if h == nil {
 		return nil
 	}
-	return o.BodyHashTlsh
+	return h.BodyHashTlsh
 }
 
-func (o *HTTP) GetBodySize() *int {
-	if o == nil {
+func (h *HTTP) GetBodySize() *int {
+	if h == nil {
 		return nil
 	}
-	return o.BodySize
+	return h.BodySize
 }
 
-func (o *HTTP) GetFavicons() []HTTPFavicon {
-	if o == nil {
+func (h *HTTP) GetFavicons() []HTTPFavicon {
+	if h == nil {
 		return nil
 	}
-	return o.Favicons
+	return h.Favicons
 }
 
-func (o *HTTP) GetHeaders() map[string]HTTPRepeatedHeaders {
-	if o == nil {
+func (h *HTTP) GetHeaders() map[string]HTTPRepeatedHeaders {
+	if h == nil {
 		return nil
 	}
-	return o.Headers
+	return h.Headers
 }
 
-func (o *HTTP) GetHTMLTags() []string {
-	if o == nil {
+func (h *HTTP) GetHTMLTags() []string {
+	if h == nil {
 		return nil
 	}
-	return o.HTMLTags
+	return h.HTMLTags
 }
 
-func (o *HTTP) GetHTMLTitle() *string {
-	if o == nil {
+func (h *HTTP) GetHTMLTitle() *string {
+	if h == nil {
 		return nil
 	}
-	return o.HTMLTitle
+	return h.HTMLTitle
 }
 
-func (o *HTTP) GetProtocol() *string {
-	if o == nil {
+func (h *HTTP) GetProtocol() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Protocol
+	return h.Protocol
 }
 
-func (o *HTTP) GetStatusCode() *int {
-	if o == nil {
+func (h *HTTP) GetStatusCode() *int {
+	if h == nil {
 		return nil
 	}
-	return o.StatusCode
+	return h.StatusCode
 }
 
-func (o *HTTP) GetStatusReason() *string {
-	if o == nil {
+func (h *HTTP) GetStatusReason() *string {
+	if h == nil {
 		return nil
 	}
-	return o.StatusReason
+	return h.StatusReason
 }
 
-func (o *HTTP) GetSupportedVersions() []string {
-	if o == nil {
+func (h *HTTP) GetSupportedVersions() []string {
+	if h == nil {
 		return nil
 	}
-	return o.SupportedVersions
+	return h.SupportedVersions
 }
 
-func (o *HTTP) GetURI() *string {
-	if o == nil {
+func (h *HTTP) GetURI() *string {
+	if h == nil {
 		return nil
 	}
-	return o.URI
+	return h.URI
 }

@@ -9,16 +9,16 @@ type IpmiCapabilitiesCompletionCode struct {
 	Raw *int `json:"raw,omitempty"`
 }
 
-func (o *IpmiCapabilitiesCompletionCode) GetName() *string {
-	if o == nil {
+func (i *IpmiCapabilitiesCompletionCode) GetName() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *IpmiCapabilitiesCompletionCode) GetRaw() *int {
-	if o == nil {
+func (i *IpmiCapabilitiesCompletionCode) GetRaw() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }

@@ -11,44 +11,44 @@ type Ibmnje struct {
 	Type   *string `json:"type,omitempty"`
 }
 
-func (o *Ibmnje) GetOhost() *string {
-	if o == nil {
+func (i *Ibmnje) GetOhost() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Ohost
+	return i.Ohost
 }
 
-func (o *Ibmnje) GetOip() *string {
-	if o == nil {
+func (i *Ibmnje) GetOip() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Oip
+	return i.Oip
 }
 
-func (o *Ibmnje) GetReason() *int {
-	if o == nil {
+func (i *Ibmnje) GetReason() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Reason
+	return i.Reason
 }
 
-func (o *Ibmnje) GetRhost() *string {
-	if o == nil {
+func (i *Ibmnje) GetRhost() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Rhost
+	return i.Rhost
 }
 
-func (o *Ibmnje) GetRip() *string {
-	if o == nil {
+func (i *Ibmnje) GetRip() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Rip
+	return i.Rip
 }
 
-func (o *Ibmnje) GetType() *string {
-	if o == nil {
+func (i *Ibmnje) GetType() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Type
+	return i.Type
 }

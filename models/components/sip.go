@@ -11,30 +11,30 @@ type Sip struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *Sip) GetCode() *int {
-	if o == nil {
+func (s *Sip) GetCode() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Code
+	return s.Code
 }
 
-func (o *Sip) GetServer() *string {
-	if o == nil {
+func (s *Sip) GetServer() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Server
+	return s.Server
 }
 
-func (o *Sip) GetStatus() *string {
-	if o == nil {
+func (s *Sip) GetStatus() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Status
+	return s.Status
 }
 
-func (o *Sip) GetVersion() *string {
-	if o == nil {
+func (s *Sip) GetVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Version
+	return s.Version
 }

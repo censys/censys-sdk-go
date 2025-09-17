@@ -19,51 +19,51 @@ type SmbSmbCapabilities struct {
 	SmbPersistentHandleSupport *bool `json:"smb_persistent_handle_support,omitempty"`
 }
 
-func (o *SmbSmbCapabilities) GetSmbDfsSupport() *bool {
-	if o == nil {
+func (s *SmbSmbCapabilities) GetSmbDfsSupport() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SmbDfsSupport
+	return s.SmbDfsSupport
 }
 
-func (o *SmbSmbCapabilities) GetSmbDirectoryLeasingSupport() *bool {
-	if o == nil {
+func (s *SmbSmbCapabilities) GetSmbDirectoryLeasingSupport() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SmbDirectoryLeasingSupport
+	return s.SmbDirectoryLeasingSupport
 }
 
-func (o *SmbSmbCapabilities) GetSmbEncryptionSupport() *bool {
-	if o == nil {
+func (s *SmbSmbCapabilities) GetSmbEncryptionSupport() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SmbEncryptionSupport
+	return s.SmbEncryptionSupport
 }
 
-func (o *SmbSmbCapabilities) GetSmbLeasingSupport() *bool {
-	if o == nil {
+func (s *SmbSmbCapabilities) GetSmbLeasingSupport() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SmbLeasingSupport
+	return s.SmbLeasingSupport
 }
 
-func (o *SmbSmbCapabilities) GetSmbMultichanSupport() *bool {
-	if o == nil {
+func (s *SmbSmbCapabilities) GetSmbMultichanSupport() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SmbMultichanSupport
+	return s.SmbMultichanSupport
 }
 
-func (o *SmbSmbCapabilities) GetSmbMulticreditSupport() *bool {
-	if o == nil {
+func (s *SmbSmbCapabilities) GetSmbMulticreditSupport() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SmbMulticreditSupport
+	return s.SmbMulticreditSupport
 }
 
-func (o *SmbSmbCapabilities) GetSmbPersistentHandleSupport() *bool {
-	if o == nil {
+func (s *SmbSmbCapabilities) GetSmbPersistentHandleSupport() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SmbPersistentHandleSupport
+	return s.SmbPersistentHandleSupport
 }

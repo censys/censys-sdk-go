@@ -7,16 +7,16 @@ type CiscoIpslaHandshake struct {
 	Message *CiscoIpslaHandshakeMessage `json:"message,omitempty"`
 }
 
-func (o *CiscoIpslaHandshake) GetHeader() *CiscoIpslaHandshakeHeader {
-	if o == nil {
+func (c *CiscoIpslaHandshake) GetHeader() *CiscoIpslaHandshakeHeader {
+	if c == nil {
 		return nil
 	}
-	return o.Header
+	return c.Header
 }
 
-func (o *CiscoIpslaHandshake) GetMessage() *CiscoIpslaHandshakeMessage {
-	if o == nil {
+func (c *CiscoIpslaHandshake) GetMessage() *CiscoIpslaHandshakeMessage {
+	if c == nil {
 		return nil
 	}
-	return o.Message
+	return c.Message
 }

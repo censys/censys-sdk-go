@@ -9,30 +9,30 @@ type MediaStreaming struct {
 	RtpTCP              *bool `json:"rtp_tcp,omitempty"`
 }
 
-func (o *MediaStreaming) GetNonAggregateControl() *bool {
-	if o == nil {
+func (m *MediaStreaming) GetNonAggregateControl() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.NonAggregateControl
+	return m.NonAggregateControl
 }
 
-func (o *MediaStreaming) GetRtpMulticast() *bool {
-	if o == nil {
+func (m *MediaStreaming) GetRtpMulticast() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.RtpMulticast
+	return m.RtpMulticast
 }
 
-func (o *MediaStreaming) GetRtpRtspTCP() *bool {
-	if o == nil {
+func (m *MediaStreaming) GetRtpRtspTCP() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.RtpRtspTCP
+	return m.RtpRtspTCP
 }
 
-func (o *MediaStreaming) GetRtpTCP() *bool {
-	if o == nil {
+func (m *MediaStreaming) GetRtpTCP() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.RtpTCP
+	return m.RtpTCP
 }

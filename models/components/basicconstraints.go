@@ -9,16 +9,16 @@ type BasicConstraints struct {
 	MaxPathLen *int `json:"max_path_len,omitempty"`
 }
 
-func (o *BasicConstraints) GetIsCa() *bool {
-	if o == nil {
+func (b *BasicConstraints) GetIsCa() *bool {
+	if b == nil {
 		return nil
 	}
-	return o.IsCa
+	return b.IsCa
 }
 
-func (o *BasicConstraints) GetMaxPathLen() *int {
-	if o == nil {
+func (b *BasicConstraints) GetMaxPathLen() *int {
+	if b == nil {
 		return nil
 	}
-	return o.MaxPathLen
+	return b.MaxPathLen
 }

@@ -7,16 +7,16 @@ type WhoisUpdated struct {
 	Whois *Whois               `json:"whois,omitempty"`
 }
 
-func (o *WhoisUpdated) GetDiff() map[string]FieldDiff {
-	if o == nil {
+func (w *WhoisUpdated) GetDiff() map[string]FieldDiff {
+	if w == nil {
 		return nil
 	}
-	return o.Diff
+	return w.Diff
 }
 
-func (o *WhoisUpdated) GetWhois() *Whois {
-	if o == nil {
+func (w *WhoisUpdated) GetWhois() *Whois {
+	if w == nil {
 		return nil
 	}
-	return o.Whois
+	return w.Whois
 }

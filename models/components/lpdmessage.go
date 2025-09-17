@@ -7,16 +7,16 @@ type LpdMessage struct {
 	Status *int    `json:"status,omitempty"`
 }
 
-func (o *LpdMessage) GetBody() *string {
-	if o == nil {
+func (l *LpdMessage) GetBody() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Body
+	return l.Body
 }
 
-func (o *LpdMessage) GetStatus() *int {
-	if o == nil {
+func (l *LpdMessage) GetStatus() *int {
+	if l == nil {
 		return nil
 	}
-	return o.Status
+	return l.Status
 }

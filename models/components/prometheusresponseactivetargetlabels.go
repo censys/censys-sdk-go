@@ -9,16 +9,16 @@ type PrometheusResponseActiveTargetLabels struct {
 	Job *string `json:"job,omitempty"`
 }
 
-func (o *PrometheusResponseActiveTargetLabels) GetInstance() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTargetLabels) GetInstance() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Instance
+	return p.Instance
 }
 
-func (o *PrometheusResponseActiveTargetLabels) GetJob() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTargetLabels) GetJob() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Job
+	return p.Job
 }

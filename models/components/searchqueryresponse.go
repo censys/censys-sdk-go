@@ -10,37 +10,37 @@ type SearchQueryResponse struct {
 	TotalHits           float64          `json:"total_hits"`
 }
 
-func (o *SearchQueryResponse) GetHits() []SearchQueryHit {
-	if o == nil {
+func (s *SearchQueryResponse) GetHits() []SearchQueryHit {
+	if s == nil {
 		return nil
 	}
-	return o.Hits
+	return s.Hits
 }
 
-func (o *SearchQueryResponse) GetNextPageToken() string {
-	if o == nil {
+func (s *SearchQueryResponse) GetNextPageToken() string {
+	if s == nil {
 		return ""
 	}
-	return o.NextPageToken
+	return s.NextPageToken
 }
 
-func (o *SearchQueryResponse) GetPreviousPageToken() string {
-	if o == nil {
+func (s *SearchQueryResponse) GetPreviousPageToken() string {
+	if s == nil {
 		return ""
 	}
-	return o.PreviousPageToken
+	return s.PreviousPageToken
 }
 
-func (o *SearchQueryResponse) GetQueryDurationMillis() int {
-	if o == nil {
+func (s *SearchQueryResponse) GetQueryDurationMillis() int {
+	if s == nil {
 		return 0
 	}
-	return o.QueryDurationMillis
+	return s.QueryDurationMillis
 }
 
-func (o *SearchQueryResponse) GetTotalHits() float64 {
-	if o == nil {
+func (s *SearchQueryResponse) GetTotalHits() float64 {
+	if s == nil {
 		return 0.0
 	}
-	return o.TotalHits
+	return s.TotalHits
 }

@@ -9,30 +9,30 @@ type DSACryptographicKey struct {
 	Y *string `json:"y,omitempty"`
 }
 
-func (o *DSACryptographicKey) GetG() *string {
-	if o == nil {
+func (d *DSACryptographicKey) GetG() *string {
+	if d == nil {
 		return nil
 	}
-	return o.G
+	return d.G
 }
 
-func (o *DSACryptographicKey) GetP() *string {
-	if o == nil {
+func (d *DSACryptographicKey) GetP() *string {
+	if d == nil {
 		return nil
 	}
-	return o.P
+	return d.P
 }
 
-func (o *DSACryptographicKey) GetQ() *string {
-	if o == nil {
+func (d *DSACryptographicKey) GetQ() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Q
+	return d.Q
 }
 
-func (o *DSACryptographicKey) GetY() *string {
-	if o == nil {
+func (d *DSACryptographicKey) GetY() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Y
+	return d.Y
 }

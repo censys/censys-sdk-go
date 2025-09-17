@@ -17,86 +17,86 @@ type EipIdentity struct {
 	VendorName     *string `json:"vendor_name,omitempty"`
 }
 
-func (o *EipIdentity) GetDeviceType() *string {
-	if o == nil {
+func (e *EipIdentity) GetDeviceType() *string {
+	if e == nil {
 		return nil
 	}
-	return o.DeviceType
+	return e.DeviceType
 }
 
-func (o *EipIdentity) GetDeviceTypeCode() *int {
-	if o == nil {
+func (e *EipIdentity) GetDeviceTypeCode() *int {
+	if e == nil {
 		return nil
 	}
-	return o.DeviceTypeCode
+	return e.DeviceTypeCode
 }
 
-func (o *EipIdentity) GetProductCode() *int {
-	if o == nil {
+func (e *EipIdentity) GetProductCode() *int {
+	if e == nil {
 		return nil
 	}
-	return o.ProductCode
+	return e.ProductCode
 }
 
-func (o *EipIdentity) GetProductName() *string {
-	if o == nil {
+func (e *EipIdentity) GetProductName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ProductName
+	return e.ProductName
 }
 
-func (o *EipIdentity) GetRevision() *string {
-	if o == nil {
+func (e *EipIdentity) GetRevision() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Revision
+	return e.Revision
 }
 
-func (o *EipIdentity) GetSerialNumber() *int {
-	if o == nil {
+func (e *EipIdentity) GetSerialNumber() *int {
+	if e == nil {
 		return nil
 	}
-	return o.SerialNumber
+	return e.SerialNumber
 }
 
-func (o *EipIdentity) GetSocketAddr() *string {
-	if o == nil {
+func (e *EipIdentity) GetSocketAddr() *string {
+	if e == nil {
 		return nil
 	}
-	return o.SocketAddr
+	return e.SocketAddr
 }
 
-func (o *EipIdentity) GetSocketPort() *int {
-	if o == nil {
+func (e *EipIdentity) GetSocketPort() *int {
+	if e == nil {
 		return nil
 	}
-	return o.SocketPort
+	return e.SocketPort
 }
 
-func (o *EipIdentity) GetState() *int {
-	if o == nil {
+func (e *EipIdentity) GetState() *int {
+	if e == nil {
 		return nil
 	}
-	return o.State
+	return e.State
 }
 
-func (o *EipIdentity) GetStatus() *int {
-	if o == nil {
+func (e *EipIdentity) GetStatus() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *EipIdentity) GetVendorID() *string {
-	if o == nil {
+func (e *EipIdentity) GetVendorID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.VendorID
+	return e.VendorID
 }
 
-func (o *EipIdentity) GetVendorName() *string {
-	if o == nil {
+func (e *EipIdentity) GetVendorName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.VendorName
+	return e.VendorName
 }

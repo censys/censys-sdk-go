@@ -19,100 +19,100 @@ type RdpSecurityProtocol struct {
 	TLS                      *bool `json:"tls,omitempty"`
 }
 
-func (o *RdpSecurityProtocol) GetCredssp() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetCredssp() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.Credssp
+	return r.Credssp
 }
 
-func (o *RdpSecurityProtocol) GetCredsspEarlyAuth() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetCredsspEarlyAuth() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.CredsspEarlyAuth
+	return r.CredsspEarlyAuth
 }
 
-func (o *RdpSecurityProtocol) GetError() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetError() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.Error
+	return r.Error
 }
 
-func (o *RdpSecurityProtocol) GetErrorBadFlags() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetErrorBadFlags() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ErrorBadFlags
+	return r.ErrorBadFlags
 }
 
-func (o *RdpSecurityProtocol) GetErrorHybridRequired() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetErrorHybridRequired() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ErrorHybridRequired
+	return r.ErrorHybridRequired
 }
 
-func (o *RdpSecurityProtocol) GetErrorSslCertMissing() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetErrorSslCertMissing() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ErrorSslCertMissing
+	return r.ErrorSslCertMissing
 }
 
-func (o *RdpSecurityProtocol) GetErrorSslForbidden() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetErrorSslForbidden() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ErrorSslForbidden
+	return r.ErrorSslForbidden
 }
 
-func (o *RdpSecurityProtocol) GetErrorSslRequired() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetErrorSslRequired() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ErrorSslRequired
+	return r.ErrorSslRequired
 }
 
-func (o *RdpSecurityProtocol) GetErrorSslUserAuthRequired() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetErrorSslUserAuthRequired() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ErrorSslUserAuthRequired
+	return r.ErrorSslUserAuthRequired
 }
 
-func (o *RdpSecurityProtocol) GetErrorUnknown() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetErrorUnknown() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ErrorUnknown
+	return r.ErrorUnknown
 }
 
-func (o *RdpSecurityProtocol) GetRawValue() *int {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetRawValue() *int {
+	if r == nil {
 		return nil
 	}
-	return o.RawValue
+	return r.RawValue
 }
 
-func (o *RdpSecurityProtocol) GetRdstls() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetRdstls() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.Rdstls
+	return r.Rdstls
 }
 
-func (o *RdpSecurityProtocol) GetStandardRdp() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetStandardRdp() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.StandardRdp
+	return r.StandardRdp
 }
 
-func (o *RdpSecurityProtocol) GetTLS() *bool {
-	if o == nil {
+func (r *RdpSecurityProtocol) GetTLS() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.TLS
+	return r.TLS
 }

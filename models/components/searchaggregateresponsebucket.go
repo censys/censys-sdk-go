@@ -7,16 +7,16 @@ type SearchAggregateResponseBucket struct {
 	Key   string `json:"key"`
 }
 
-func (o *SearchAggregateResponseBucket) GetCount() int64 {
-	if o == nil {
+func (s *SearchAggregateResponseBucket) GetCount() int64 {
+	if s == nil {
 		return 0
 	}
-	return o.Count
+	return s.Count
 }
 
-func (o *SearchAggregateResponseBucket) GetKey() string {
-	if o == nil {
+func (s *SearchAggregateResponseBucket) GetKey() string {
+	if s == nil {
 		return ""
 	}
-	return o.Key
+	return s.Key
 }

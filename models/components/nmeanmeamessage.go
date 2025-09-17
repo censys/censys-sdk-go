@@ -9,30 +9,30 @@ type NmeaNmeaMessage struct {
 	TalkerName *string  `json:"talker_name,omitempty"`
 }
 
-func (o *NmeaNmeaMessage) GetFields() []string {
-	if o == nil {
+func (n *NmeaNmeaMessage) GetFields() []string {
+	if n == nil {
 		return nil
 	}
-	return o.Fields
+	return n.Fields
 }
 
-func (o *NmeaNmeaMessage) GetSentenceID() *string {
-	if o == nil {
+func (n *NmeaNmeaMessage) GetSentenceID() *string {
+	if n == nil {
 		return nil
 	}
-	return o.SentenceID
+	return n.SentenceID
 }
 
-func (o *NmeaNmeaMessage) GetTalkerID() *string {
-	if o == nil {
+func (n *NmeaNmeaMessage) GetTalkerID() *string {
+	if n == nil {
 		return nil
 	}
-	return o.TalkerID
+	return n.TalkerID
 }
 
-func (o *NmeaNmeaMessage) GetTalkerName() *string {
-	if o == nil {
+func (n *NmeaNmeaMessage) GetTalkerName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.TalkerName
+	return n.TalkerName
 }

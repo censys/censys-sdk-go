@@ -11,23 +11,23 @@ type CrudCreateInputBody struct {
 	Query string `json:"query"`
 }
 
-func (o *CrudCreateInputBody) GetDescription() *string {
-	if o == nil {
+func (c *CrudCreateInputBody) GetDescription() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *CrudCreateInputBody) GetName() string {
-	if o == nil {
+func (c *CrudCreateInputBody) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CrudCreateInputBody) GetQuery() string {
-	if o == nil {
+func (c *CrudCreateInputBody) GetQuery() string {
+	if c == nil {
 		return ""
 	}
-	return o.Query
+	return c.Query
 }

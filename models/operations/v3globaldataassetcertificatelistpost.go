@@ -10,31 +10,31 @@ type V3GlobaldataAssetCertificateListPostGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataAssetCertificateListPostGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateListPostGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataAssetCertificateListPostRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID                *string                                  `queryParam:"style=form,explode=false,name=organization_id"`
 	AssetCertificateListInputBody components.AssetCertificateListInputBody `request:"mediaType=application/json"`
 }
 
-func (o *V3GlobaldataAssetCertificateListPostRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateListPostRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataAssetCertificateListPostRequest) GetAssetCertificateListInputBody() components.AssetCertificateListInputBody {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateListPostRequest) GetAssetCertificateListInputBody() components.AssetCertificateListInputBody {
+	if v == nil {
 		return components.AssetCertificateListInputBody{}
 	}
-	return o.AssetCertificateListInputBody
+	return v.AssetCertificateListInputBody
 }
 
 type V3GlobaldataAssetCertificateListPostResponse struct {
@@ -44,23 +44,23 @@ type V3GlobaldataAssetCertificateListPostResponse struct {
 	Headers                              map[string][]string
 }
 
-func (o *V3GlobaldataAssetCertificateListPostResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateListPostResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataAssetCertificateListPostResponse) GetResponseEnvelopeListCertificateAsset() *components.ResponseEnvelopeListCertificateAsset {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateListPostResponse) GetResponseEnvelopeListCertificateAsset() *components.ResponseEnvelopeListCertificateAsset {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeListCertificateAsset
+	return v.ResponseEnvelopeListCertificateAsset
 }
 
-func (o *V3GlobaldataAssetCertificateListPostResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataAssetCertificateListPostResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

@@ -10,37 +10,37 @@ type ThreatActor struct {
 	PrimaryName     *string  `json:"primary_name,omitempty"`
 }
 
-func (o *ThreatActor) GetAllNames() []string {
-	if o == nil {
+func (t *ThreatActor) GetAllNames() []string {
+	if t == nil {
 		return nil
 	}
-	return o.AllNames
+	return t.AllNames
 }
 
-func (o *ThreatActor) GetID() *string {
-	if o == nil {
+func (t *ThreatActor) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *ThreatActor) GetMalpediaGroupID() *string {
-	if o == nil {
+func (t *ThreatActor) GetMalpediaGroupID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.MalpediaGroupID
+	return t.MalpediaGroupID
 }
 
-func (o *ThreatActor) GetMitreGroupID() *string {
-	if o == nil {
+func (t *ThreatActor) GetMitreGroupID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.MitreGroupID
+	return t.MitreGroupID
 }
 
-func (o *ThreatActor) GetPrimaryName() *string {
-	if o == nil {
+func (t *ThreatActor) GetPrimaryName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.PrimaryName
+	return t.PrimaryName
 }

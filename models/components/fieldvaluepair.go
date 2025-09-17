@@ -9,16 +9,16 @@ type FieldValuePair struct {
 	Value string `json:"value"`
 }
 
-func (o *FieldValuePair) GetField() string {
-	if o == nil {
+func (f *FieldValuePair) GetField() string {
+	if f == nil {
 		return ""
 	}
-	return o.Field
+	return f.Field
 }
 
-func (o *FieldValuePair) GetValue() string {
-	if o == nil {
+func (f *FieldValuePair) GetValue() string {
+	if f == nil {
 		return ""
 	}
-	return o.Value
+	return f.Value
 }

@@ -42,8 +42,8 @@ func main() {
     )
 
     res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-        PageToken: censyssdkgo.String("<next_page_token>"),
-        PageSize: censyssdkgo.Int64(1),
+        PageToken: censyssdkgo.Pointer("<next_page_token>"),
+        PageSize: censyssdkgo.Pointer[int64](1),
     })
     if err != nil {
         log.Fatal(err)
@@ -68,10 +68,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Create
 
@@ -101,7 +102,7 @@ func main() {
 
     res, err := s.Collections.Create(ctx, operations.V3CollectionsCrudCreateRequest{
         CrudCreateInputBody: &components.CrudCreateInputBody{
-            Description: censyssdkgo.String("Hosts with services with AsyncRAT indicator in cert subject DN"),
+            Description: censyssdkgo.Pointer("Hosts with services with AsyncRAT indicator in cert subject DN"),
             Name: "Hosts services with AsyncRAT indicator",
             Query: "host.services.cert.parsed.subject_dn: \"asyncrat\"",
         },
@@ -129,10 +130,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Delete
 
@@ -185,10 +187,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Get
 
@@ -241,10 +244,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Update
 
@@ -275,7 +279,7 @@ func main() {
     res, err := s.Collections.Update(ctx, operations.V3CollectionsCrudUpdateRequest{
         CollectionUID: "11111111-2222-3333-4444-555555555555",
         CrudUpdateInputBody: &components.CrudUpdateInputBody{
-            Description: censyssdkgo.String("Hosts with services with AsyncRAT indicator in cert subject DN"),
+            Description: censyssdkgo.Pointer("Hosts with services with AsyncRAT indicator in cert subject DN"),
             Name: "Hosts services with AsyncRAT indicator",
             Query: "host.services.cert.parsed.subject_dn: \"asyncrat\"",
         },
@@ -303,10 +307,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListEvents
 
@@ -336,8 +341,8 @@ func main() {
 
     res, err := s.Collections.ListEvents(ctx, operations.V3CollectionsListEventsRequest{
         CollectionUID: "11111111-2222-3333-4444-555555555555",
-        PageSize: censyssdkgo.Int(1),
-        PageToken: censyssdkgo.String("<next_page_token>"),
+        PageSize: censyssdkgo.Pointer[int](1),
+        PageToken: censyssdkgo.Pointer("<next_page_token>"),
         StartTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
         EndTime: types.MustNewTimeFromString("2025-01-02T00:00:00Z"),
     })
@@ -364,10 +369,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Aggregate
 
@@ -426,10 +432,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Search
 
@@ -463,7 +470,7 @@ func main() {
             Fields: []string{
                 "host.ip",
             },
-            PageSize: censyssdkgo.Int64(1),
+            PageSize: censyssdkgo.Pointer[int64](1),
             Query: "host.services: (protocol=SSH and not port: 22)",
         },
     })
@@ -490,7 +497,8 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |

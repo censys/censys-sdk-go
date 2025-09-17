@@ -8,23 +8,23 @@ type Extension struct {
 	Value    *string `json:"value,omitempty"`
 }
 
-func (o *Extension) GetCritical() *bool {
-	if o == nil {
+func (e *Extension) GetCritical() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.Critical
+	return e.Critical
 }
 
-func (o *Extension) GetID() *string {
-	if o == nil {
+func (e *Extension) GetID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ID
+	return e.ID
 }
 
-func (o *Extension) GetValue() *string {
-	if o == nil {
+func (e *Extension) GetValue() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Value
+	return e.Value
 }

@@ -9,30 +9,30 @@ type Upnp struct {
 	Spec     *UpnpSpecVersion               `json:"spec,omitempty"`
 }
 
-func (o *Upnp) GetDevices() []UpnpDevice {
-	if o == nil {
+func (u *Upnp) GetDevices() []UpnpDevice {
+	if u == nil {
 		return nil
 	}
-	return o.Devices
+	return u.Devices
 }
 
-func (o *Upnp) GetEndpoint() *string {
-	if o == nil {
+func (u *Upnp) GetEndpoint() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Endpoint
+	return u.Endpoint
 }
 
-func (o *Upnp) GetHeaders() map[string]HTTPRepeatedHeaders {
-	if o == nil {
+func (u *Upnp) GetHeaders() map[string]HTTPRepeatedHeaders {
+	if u == nil {
 		return nil
 	}
-	return o.Headers
+	return u.Headers
 }
 
-func (o *Upnp) GetSpec() *UpnpSpecVersion {
-	if o == nil {
+func (u *Upnp) GetSpec() *UpnpSpecVersion {
+	if u == nil {
 		return nil
 	}
-	return o.Spec
+	return u.Spec
 }

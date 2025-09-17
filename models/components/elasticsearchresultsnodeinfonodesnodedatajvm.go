@@ -14,65 +14,65 @@ type ElasticSearchResultsNodeInfoNodesNodeDataJVM struct {
 	VMVersion   *string  `json:"vm_version,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetGc() []string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetGc() []string {
+	if e == nil {
 		return nil
 	}
-	return o.Gc
+	return e.Gc
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetInputArgs() []string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetInputArgs() []string {
+	if e == nil {
 		return nil
 	}
-	return o.InputArgs
+	return e.InputArgs
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetMemoryPools() []string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetMemoryPools() []string {
+	if e == nil {
 		return nil
 	}
-	return o.MemoryPools
+	return e.MemoryPools
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetStartTime() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetStartTime() *string {
+	if e == nil {
 		return nil
 	}
-	return o.StartTime
+	return e.StartTime
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetStartTimeMs() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetStartTimeMs() *int {
+	if e == nil {
 		return nil
 	}
-	return o.StartTimeMs
+	return e.StartTimeMs
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVersion() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Version
+	return e.Version
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVMName() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVMName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.VMName
+	return e.VMName
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVMVendor() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVMVendor() *string {
+	if e == nil {
 		return nil
 	}
-	return o.VMVendor
+	return e.VMVendor
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVMVersion() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetVMVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.VMVersion
+	return e.VMVersion
 }

@@ -7,16 +7,16 @@ type CheckpointTopology struct {
 	Organization *string `json:"organization,omitempty"`
 }
 
-func (o *CheckpointTopology) GetCommonName() *string {
-	if o == nil {
+func (c *CheckpointTopology) GetCommonName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.CommonName
+	return c.CommonName
 }
 
-func (o *CheckpointTopology) GetOrganization() *string {
-	if o == nil {
+func (c *CheckpointTopology) GetOrganization() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Organization
+	return c.Organization
 }

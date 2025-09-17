@@ -9,30 +9,30 @@ type Socks struct {
 	SocksVersion                 *int64  `json:"socks_version,omitempty"`
 }
 
-func (o *Socks) GetNoAuthenticationRequired() *bool {
-	if o == nil {
+func (s *Socks) GetNoAuthenticationRequired() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.NoAuthenticationRequired
+	return s.NoAuthenticationRequired
 }
 
-func (o *Socks) GetPreferredAuthentication() *string {
-	if o == nil {
+func (s *Socks) GetPreferredAuthentication() *string {
+	if s == nil {
 		return nil
 	}
-	return o.PreferredAuthentication
+	return s.PreferredAuthentication
 }
 
-func (o *Socks) GetPreferredAuthenticationValue() *int {
-	if o == nil {
+func (s *Socks) GetPreferredAuthenticationValue() *int {
+	if s == nil {
 		return nil
 	}
-	return o.PreferredAuthenticationValue
+	return s.PreferredAuthenticationValue
 }
 
-func (o *Socks) GetSocksVersion() *int64 {
-	if o == nil {
+func (s *Socks) GetSocksVersion() *int64 {
+	if s == nil {
 		return nil
 	}
-	return o.SocksVersion
+	return s.SocksVersion
 }

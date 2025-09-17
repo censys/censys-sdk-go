@@ -10,15 +10,15 @@ type V3ThreathuntingGetHostObservationsWithCertificateGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3ThreathuntingGetHostObservationsWithCertificateRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// SHA-256 hash of the certificate
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificate_id"`
@@ -36,60 +36,60 @@ type V3ThreathuntingGetHostObservationsWithCertificateRequest struct {
 	PageSize *int `queryParam:"style=form,explode=false,name=page_size"`
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetCertificateID() string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetCertificateID() string {
+	if v == nil {
 		return ""
 	}
-	return o.CertificateID
+	return v.CertificateID
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetStartTime() *string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetStartTime() *string {
+	if v == nil {
 		return nil
 	}
-	return o.StartTime
+	return v.StartTime
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetEndTime() *string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetEndTime() *string {
+	if v == nil {
 		return nil
 	}
-	return o.EndTime
+	return v.EndTime
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPort() *int {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPort() *int {
+	if v == nil {
 		return nil
 	}
-	return o.Port
+	return v.Port
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetProtocol() *string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetProtocol() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Protocol
+	return v.Protocol
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPageToken() *string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPageToken() *string {
+	if v == nil {
 		return nil
 	}
-	return o.PageToken
+	return v.PageToken
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPageSize() *int {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPageSize() *int {
+	if v == nil {
 		return nil
 	}
-	return o.PageSize
+	return v.PageSize
 }
 
 type V3ThreathuntingGetHostObservationsWithCertificateResponse struct {
@@ -99,23 +99,23 @@ type V3ThreathuntingGetHostObservationsWithCertificateResponse struct {
 	Headers                                 map[string][]string
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetResponseEnvelopeHostObservationResponse() *components.ResponseEnvelopeHostObservationResponse {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetResponseEnvelopeHostObservationResponse() *components.ResponseEnvelopeHostObservationResponse {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeHostObservationResponse
+	return v.ResponseEnvelopeHostObservationResponse
 }
 
-func (o *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

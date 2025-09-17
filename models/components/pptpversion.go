@@ -7,16 +7,16 @@ type PptpVersion struct {
 	Minor *int `json:"minor,omitempty"`
 }
 
-func (o *PptpVersion) GetMajor() *int {
-	if o == nil {
+func (p *PptpVersion) GetMajor() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Major
+	return p.Major
 }
 
-func (o *PptpVersion) GetMinor() *int {
-	if o == nil {
+func (p *PptpVersion) GetMinor() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Minor
+	return p.Minor
 }

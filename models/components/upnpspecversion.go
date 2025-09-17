@@ -7,16 +7,16 @@ type UpnpSpecVersion struct {
 	Minor *string `json:"minor,omitempty"`
 }
 
-func (o *UpnpSpecVersion) GetMajor() *string {
-	if o == nil {
+func (u *UpnpSpecVersion) GetMajor() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Major
+	return u.Major
 }
 
-func (o *UpnpSpecVersion) GetMinor() *string {
-	if o == nil {
+func (u *UpnpSpecVersion) GetMinor() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Minor
+	return u.Minor
 }

@@ -8,23 +8,23 @@ type Cwmp struct {
 	Server  *string  `json:"server,omitempty"`
 }
 
-func (o *Cwmp) GetAuth() []string {
-	if o == nil {
+func (c *Cwmp) GetAuth() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Auth
+	return c.Auth
 }
 
-func (o *Cwmp) GetCookies() []string {
-	if o == nil {
+func (c *Cwmp) GetCookies() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Cookies
+	return c.Cookies
 }
 
-func (o *Cwmp) GetServer() *string {
-	if o == nil {
+func (c *Cwmp) GetServer() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Server
+	return c.Server
 }

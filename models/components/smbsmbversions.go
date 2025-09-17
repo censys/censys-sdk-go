@@ -13,30 +13,30 @@ type SmbSmbVersions struct {
 	VersionString *string `json:"version_string,omitempty"`
 }
 
-func (o *SmbSmbVersions) GetMajor() *int {
-	if o == nil {
+func (s *SmbSmbVersions) GetMajor() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Major
+	return s.Major
 }
 
-func (o *SmbSmbVersions) GetMinor() *int {
-	if o == nil {
+func (s *SmbSmbVersions) GetMinor() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Minor
+	return s.Minor
 }
 
-func (o *SmbSmbVersions) GetRevision() *int {
-	if o == nil {
+func (s *SmbSmbVersions) GetRevision() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Revision
+	return s.Revision
 }
 
-func (o *SmbSmbVersions) GetVersionString() *string {
-	if o == nil {
+func (s *SmbSmbVersions) GetVersionString() *string {
+	if s == nil {
 		return nil
 	}
-	return o.VersionString
+	return s.VersionString
 }

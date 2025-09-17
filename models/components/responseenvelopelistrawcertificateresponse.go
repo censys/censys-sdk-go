@@ -6,9 +6,9 @@ type ResponseEnvelopeListRawCertificateResponse struct {
 	Result []RawCertificateResponse `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeListRawCertificateResponse) GetResult() []RawCertificateResponse {
-	if o == nil {
+func (r *ResponseEnvelopeListRawCertificateResponse) GetResult() []RawCertificateResponse {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

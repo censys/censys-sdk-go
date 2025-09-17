@@ -43,30 +43,30 @@ type HostDNSForwardResolution struct {
 	Server      *string     `json:"server,omitempty"`
 }
 
-func (o *HostDNSForwardResolution) GetName() *string {
-	if o == nil {
+func (h *HostDNSForwardResolution) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HostDNSForwardResolution) GetRecordType() *RecordType {
-	if o == nil {
+func (h *HostDNSForwardResolution) GetRecordType() *RecordType {
+	if h == nil {
 		return nil
 	}
-	return o.RecordType
+	return h.RecordType
 }
 
-func (o *HostDNSForwardResolution) GetResolveTime() *string {
-	if o == nil {
+func (h *HostDNSForwardResolution) GetResolveTime() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ResolveTime
+	return h.ResolveTime
 }
 
-func (o *HostDNSForwardResolution) GetServer() *string {
-	if o == nil {
+func (h *HostDNSForwardResolution) GetServer() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Server
+	return h.Server
 }

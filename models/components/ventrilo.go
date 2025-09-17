@@ -7,16 +7,16 @@ type Ventrilo struct {
 	Messages   []VentriloMessage `json:"messages,omitempty"`
 }
 
-func (o *Ventrilo) GetAttributes() []string {
-	if o == nil {
+func (v *Ventrilo) GetAttributes() []string {
+	if v == nil {
 		return nil
 	}
-	return o.Attributes
+	return v.Attributes
 }
 
-func (o *Ventrilo) GetMessages() []VentriloMessage {
-	if o == nil {
+func (v *Ventrilo) GetMessages() []VentriloMessage {
+	if v == nil {
 		return nil
 	}
-	return o.Messages
+	return v.Messages
 }

@@ -10,37 +10,37 @@ type RdpProtocolFlags struct {
 	RestrictedAuthMode          *bool `json:"restricted_auth_mode,omitempty"`
 }
 
-func (o *RdpProtocolFlags) GetDynvcGraphicsPipeline() *bool {
-	if o == nil {
+func (r *RdpProtocolFlags) GetDynvcGraphicsPipeline() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.DynvcGraphicsPipeline
+	return r.DynvcGraphicsPipeline
 }
 
-func (o *RdpProtocolFlags) GetExtendedClientDataSupported() *bool {
-	if o == nil {
+func (r *RdpProtocolFlags) GetExtendedClientDataSupported() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.ExtendedClientDataSupported
+	return r.ExtendedClientDataSupported
 }
 
-func (o *RdpProtocolFlags) GetNegRespReserved() *bool {
-	if o == nil {
+func (r *RdpProtocolFlags) GetNegRespReserved() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.NegRespReserved
+	return r.NegRespReserved
 }
 
-func (o *RdpProtocolFlags) GetRestrictedAdminMode() *bool {
-	if o == nil {
+func (r *RdpProtocolFlags) GetRestrictedAdminMode() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.RestrictedAdminMode
+	return r.RestrictedAdminMode
 }
 
-func (o *RdpProtocolFlags) GetRestrictedAuthMode() *bool {
-	if o == nil {
+func (r *RdpProtocolFlags) GetRestrictedAuthMode() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.RestrictedAuthMode
+	return r.RestrictedAuthMode
 }

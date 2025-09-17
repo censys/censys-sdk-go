@@ -9,30 +9,30 @@ type Metrics struct {
 	Epss    *Epss   `json:"epss,omitempty"`
 }
 
-func (o *Metrics) GetCvssV30() *Cvss {
-	if o == nil {
+func (m *Metrics) GetCvssV30() *Cvss {
+	if m == nil {
 		return nil
 	}
-	return o.CvssV30
+	return m.CvssV30
 }
 
-func (o *Metrics) GetCvssV31() *Cvss {
-	if o == nil {
+func (m *Metrics) GetCvssV31() *Cvss {
+	if m == nil {
 		return nil
 	}
-	return o.CvssV31
+	return m.CvssV31
 }
 
-func (o *Metrics) GetCvssV40() *CVSSv4 {
-	if o == nil {
+func (m *Metrics) GetCvssV40() *CVSSv4 {
+	if m == nil {
 		return nil
 	}
-	return o.CvssV40
+	return m.CvssV40
 }
 
-func (o *Metrics) GetEpss() *Epss {
-	if o == nil {
+func (m *Metrics) GetEpss() *Epss {
+	if m == nil {
 		return nil
 	}
-	return o.Epss
+	return m.Epss
 }

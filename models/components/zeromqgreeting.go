@@ -10,37 +10,37 @@ type ZeromqGreeting struct {
 	VersionMinor *int    `json:"version_minor,omitempty"`
 }
 
-func (o *ZeromqGreeting) GetAsServer() *bool {
-	if o == nil {
+func (z *ZeromqGreeting) GetAsServer() *bool {
+	if z == nil {
 		return nil
 	}
-	return o.AsServer
+	return z.AsServer
 }
 
-func (o *ZeromqGreeting) GetMechanism() *string {
-	if o == nil {
+func (z *ZeromqGreeting) GetMechanism() *string {
+	if z == nil {
 		return nil
 	}
-	return o.Mechanism
+	return z.Mechanism
 }
 
-func (o *ZeromqGreeting) GetSignature() *string {
-	if o == nil {
+func (z *ZeromqGreeting) GetSignature() *string {
+	if z == nil {
 		return nil
 	}
-	return o.Signature
+	return z.Signature
 }
 
-func (o *ZeromqGreeting) GetVersionMajor() *int {
-	if o == nil {
+func (z *ZeromqGreeting) GetVersionMajor() *int {
+	if z == nil {
 		return nil
 	}
-	return o.VersionMajor
+	return z.VersionMajor
 }
 
-func (o *ZeromqGreeting) GetVersionMinor() *int {
-	if o == nil {
+func (z *ZeromqGreeting) GetVersionMinor() *int {
+	if z == nil {
 		return nil
 	}
-	return o.VersionMinor
+	return z.VersionMinor
 }

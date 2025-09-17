@@ -8,23 +8,23 @@ type Rocketmq struct {
 	Version     *string              `json:"version,omitempty"`
 }
 
-func (o *Rocketmq) GetClusterInfo() *RocketmqClusterInfo {
-	if o == nil {
+func (r *Rocketmq) GetClusterInfo() *RocketmqClusterInfo {
+	if r == nil {
 		return nil
 	}
-	return o.ClusterInfo
+	return r.ClusterInfo
 }
 
-func (o *Rocketmq) GetTopics() *RocketmqTopicList {
-	if o == nil {
+func (r *Rocketmq) GetTopics() *RocketmqTopicList {
+	if r == nil {
 		return nil
 	}
-	return o.Topics
+	return r.Topics
 }
 
-func (o *Rocketmq) GetVersion() *string {
-	if o == nil {
+func (r *Rocketmq) GetVersion() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }

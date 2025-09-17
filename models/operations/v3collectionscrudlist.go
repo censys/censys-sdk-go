@@ -10,15 +10,15 @@ type V3CollectionsCrudListGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3CollectionsCrudListGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsCrudListGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3CollectionsCrudListRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// page token for the requested page of collection results
 	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`
@@ -26,25 +26,25 @@ type V3CollectionsCrudListRequest struct {
 	PageSize *int64 `queryParam:"style=form,explode=false,name=page_size"`
 }
 
-func (o *V3CollectionsCrudListRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsCrudListRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3CollectionsCrudListRequest) GetPageToken() *string {
-	if o == nil {
+func (v *V3CollectionsCrudListRequest) GetPageToken() *string {
+	if v == nil {
 		return nil
 	}
-	return o.PageToken
+	return v.PageToken
 }
 
-func (o *V3CollectionsCrudListRequest) GetPageSize() *int64 {
-	if o == nil {
+func (v *V3CollectionsCrudListRequest) GetPageSize() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.PageSize
+	return v.PageSize
 }
 
 type V3CollectionsCrudListResponse struct {
@@ -54,23 +54,23 @@ type V3CollectionsCrudListResponse struct {
 	Headers                                   map[string][]string
 }
 
-func (o *V3CollectionsCrudListResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3CollectionsCrudListResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3CollectionsCrudListResponse) GetResponseEnvelopeListCollectionsResponseV1() *components.ResponseEnvelopeListCollectionsResponseV1 {
-	if o == nil {
+func (v *V3CollectionsCrudListResponse) GetResponseEnvelopeListCollectionsResponseV1() *components.ResponseEnvelopeListCollectionsResponseV1 {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeListCollectionsResponseV1
+	return v.ResponseEnvelopeListCollectionsResponseV1
 }
 
-func (o *V3CollectionsCrudListResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3CollectionsCrudListResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

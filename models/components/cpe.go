@@ -13,58 +13,58 @@ type Cpe struct {
 	Version   *string       `json:"version,omitempty"`
 }
 
-func (o *Cpe) GetCpe() *string {
-	if o == nil {
+func (c *Cpe) GetCpe() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Cpe
+	return c.Cpe
 }
 
-func (o *Cpe) GetEdition() *string {
-	if o == nil {
+func (c *Cpe) GetEdition() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Edition
+	return c.Edition
 }
 
-func (o *Cpe) GetLifeCycle() *CPELifeCycle {
-	if o == nil {
+func (c *Cpe) GetLifeCycle() *CPELifeCycle {
+	if c == nil {
 		return nil
 	}
-	return o.LifeCycle
+	return c.LifeCycle
 }
 
-func (o *Cpe) GetPart() *string {
-	if o == nil {
+func (c *Cpe) GetPart() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Part
+	return c.Part
 }
 
-func (o *Cpe) GetProduct() *string {
-	if o == nil {
+func (c *Cpe) GetProduct() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Product
+	return c.Product
 }
 
-func (o *Cpe) GetUpdate() *string {
-	if o == nil {
+func (c *Cpe) GetUpdate() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Update
+	return c.Update
 }
 
-func (o *Cpe) GetVendor() *string {
-	if o == nil {
+func (c *Cpe) GetVendor() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Vendor
+	return c.Vendor
 }
 
-func (o *Cpe) GetVersion() *string {
-	if o == nil {
+func (c *Cpe) GetVersion() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Version
+	return c.Version
 }

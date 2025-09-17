@@ -7,16 +7,16 @@ type CollectionEvent struct {
 	StatusChange *EventStatusChange `json:"status_change,omitempty"`
 }
 
-func (o *CollectionEvent) GetAssetChange() *EventAssetChange {
-	if o == nil {
+func (c *CollectionEvent) GetAssetChange() *EventAssetChange {
+	if c == nil {
 		return nil
 	}
-	return o.AssetChange
+	return c.AssetChange
 }
 
-func (o *CollectionEvent) GetStatusChange() *EventStatusChange {
-	if o == nil {
+func (c *CollectionEvent) GetStatusChange() *EventStatusChange {
+	if c == nil {
 		return nil
 	}
-	return o.StatusChange
+	return c.StatusChange
 }

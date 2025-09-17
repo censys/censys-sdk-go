@@ -11,30 +11,30 @@ type Amqp struct {
 	Version     *AmqpVersion  `json:"version,omitempty"`
 }
 
-func (o *Amqp) GetExplicitTLS() *bool {
-	if o == nil {
+func (a *Amqp) GetExplicitTLS() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.ExplicitTLS
+	return a.ExplicitTLS
 }
 
-func (o *Amqp) GetImplicitTLS() *bool {
-	if o == nil {
+func (a *Amqp) GetImplicitTLS() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.ImplicitTLS
+	return a.ImplicitTLS
 }
 
-func (o *Amqp) GetProtocolID() *AmqpProtocol {
-	if o == nil {
+func (a *Amqp) GetProtocolID() *AmqpProtocol {
+	if a == nil {
 		return nil
 	}
-	return o.ProtocolID
+	return a.ProtocolID
 }
 
-func (o *Amqp) GetVersion() *AmqpVersion {
-	if o == nil {
+func (a *Amqp) GetVersion() *AmqpVersion {
+	if a == nil {
 		return nil
 	}
-	return o.Version
+	return a.Version
 }

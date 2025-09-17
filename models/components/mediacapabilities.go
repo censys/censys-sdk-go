@@ -11,44 +11,44 @@ type MediaCapabilities struct {
 	VideoSourceMode *bool           `json:"video_source_mode,omitempty"`
 }
 
-func (o *MediaCapabilities) GetOsd() *bool {
-	if o == nil {
+func (m *MediaCapabilities) GetOsd() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.Osd
+	return m.Osd
 }
 
-func (o *MediaCapabilities) GetProfile() *MediaProfile {
-	if o == nil {
+func (m *MediaCapabilities) GetProfile() *MediaProfile {
+	if m == nil {
 		return nil
 	}
-	return o.Profile
+	return m.Profile
 }
 
-func (o *MediaCapabilities) GetRotation() *bool {
-	if o == nil {
+func (m *MediaCapabilities) GetRotation() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.Rotation
+	return m.Rotation
 }
 
-func (o *MediaCapabilities) GetSnapshotURI() *bool {
-	if o == nil {
+func (m *MediaCapabilities) GetSnapshotURI() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.SnapshotURI
+	return m.SnapshotURI
 }
 
-func (o *MediaCapabilities) GetStreaming() *MediaStreaming {
-	if o == nil {
+func (m *MediaCapabilities) GetStreaming() *MediaStreaming {
+	if m == nil {
 		return nil
 	}
-	return o.Streaming
+	return m.Streaming
 }
 
-func (o *MediaCapabilities) GetVideoSourceMode() *bool {
-	if o == nil {
+func (m *MediaCapabilities) GetVideoSourceMode() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.VideoSourceMode
+	return m.VideoSourceMode
 }

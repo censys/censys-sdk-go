@@ -19,51 +19,51 @@ type NTPNTPHeader struct {
 	Version *int `json:"version,omitempty"`
 }
 
-func (o *NTPNTPHeader) GetLeapIndicator() *int {
-	if o == nil {
+func (n *NTPNTPHeader) GetLeapIndicator() *int {
+	if n == nil {
 		return nil
 	}
-	return o.LeapIndicator
+	return n.LeapIndicator
 }
 
-func (o *NTPNTPHeader) GetMode() *int {
-	if o == nil {
+func (n *NTPNTPHeader) GetMode() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Mode
+	return n.Mode
 }
 
-func (o *NTPNTPHeader) GetPoll() *int {
-	if o == nil {
+func (n *NTPNTPHeader) GetPoll() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Poll
+	return n.Poll
 }
 
-func (o *NTPNTPHeader) GetPrecision() *int {
-	if o == nil {
+func (n *NTPNTPHeader) GetPrecision() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Precision
+	return n.Precision
 }
 
-func (o *NTPNTPHeader) GetReferenceID() *string {
-	if o == nil {
+func (n *NTPNTPHeader) GetReferenceID() *string {
+	if n == nil {
 		return nil
 	}
-	return o.ReferenceID
+	return n.ReferenceID
 }
 
-func (o *NTPNTPHeader) GetStratum() *int {
-	if o == nil {
+func (n *NTPNTPHeader) GetStratum() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Stratum
+	return n.Stratum
 }
 
-func (o *NTPNTPHeader) GetVersion() *int {
-	if o == nil {
+func (n *NTPNTPHeader) GetVersion() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Version
+	return n.Version
 }
