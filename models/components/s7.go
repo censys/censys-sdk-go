@@ -19,100 +19,100 @@ type S7 struct {
 	System             *string `json:"system,omitempty"`
 }
 
-func (o *S7) GetCopyright() *string {
-	if o == nil {
+func (s *S7) GetCopyright() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Copyright
+	return s.Copyright
 }
 
-func (o *S7) GetCPUProfile() *string {
-	if o == nil {
+func (s *S7) GetCPUProfile() *string {
+	if s == nil {
 		return nil
 	}
-	return o.CPUProfile
+	return s.CPUProfile
 }
 
-func (o *S7) GetFirmware() *string {
-	if o == nil {
+func (s *S7) GetFirmware() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Firmware
+	return s.Firmware
 }
 
-func (o *S7) GetHardware() *string {
-	if o == nil {
+func (s *S7) GetHardware() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Hardware
+	return s.Hardware
 }
 
-func (o *S7) GetLocation() *string {
-	if o == nil {
+func (s *S7) GetLocation() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Location
+	return s.Location
 }
 
-func (o *S7) GetMemorySerialNumber() *string {
-	if o == nil {
+func (s *S7) GetMemorySerialNumber() *string {
+	if s == nil {
 		return nil
 	}
-	return o.MemorySerialNumber
+	return s.MemorySerialNumber
 }
 
-func (o *S7) GetModule() *string {
-	if o == nil {
+func (s *S7) GetModule() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Module
+	return s.Module
 }
 
-func (o *S7) GetModuleID() *string {
-	if o == nil {
+func (s *S7) GetModuleID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ModuleID
+	return s.ModuleID
 }
 
-func (o *S7) GetModuleType() *string {
-	if o == nil {
+func (s *S7) GetModuleType() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ModuleType
+	return s.ModuleType
 }
 
-func (o *S7) GetOemID() *string {
-	if o == nil {
+func (s *S7) GetOemID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.OemID
+	return s.OemID
 }
 
-func (o *S7) GetPlantID() *string {
-	if o == nil {
+func (s *S7) GetPlantID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.PlantID
+	return s.PlantID
 }
 
-func (o *S7) GetReservedForOs() *string {
-	if o == nil {
+func (s *S7) GetReservedForOs() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ReservedForOs
+	return s.ReservedForOs
 }
 
-func (o *S7) GetSerialNumber() *string {
-	if o == nil {
+func (s *S7) GetSerialNumber() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SerialNumber
+	return s.SerialNumber
 }
 
-func (o *S7) GetSystem() *string {
-	if o == nil {
+func (s *S7) GetSystem() *string {
+	if s == nil {
 		return nil
 	}
-	return o.System
+	return s.System
 }

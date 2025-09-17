@@ -6,9 +6,9 @@ type ResponseEnvelopeWebpropertyAsset struct {
 	Result *WebpropertyAsset `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeWebpropertyAsset) GetResult() *WebpropertyAsset {
-	if o == nil {
+func (r *ResponseEnvelopeWebpropertyAsset) GetResult() *WebpropertyAsset {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

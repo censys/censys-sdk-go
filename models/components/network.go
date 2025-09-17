@@ -12,44 +12,44 @@ type Network struct {
 	Updated *string  `json:"updated,omitempty"`
 }
 
-func (o *Network) GetAllocationType() *string {
-	if o == nil {
+func (n *Network) GetAllocationType() *string {
+	if n == nil {
 		return nil
 	}
-	return o.AllocationType
+	return n.AllocationType
 }
 
-func (o *Network) GetCidrs() []string {
-	if o == nil {
+func (n *Network) GetCidrs() []string {
+	if n == nil {
 		return nil
 	}
-	return o.Cidrs
+	return n.Cidrs
 }
 
-func (o *Network) GetCreated() *string {
-	if o == nil {
+func (n *Network) GetCreated() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Created
+	return n.Created
 }
 
-func (o *Network) GetHandle() *string {
-	if o == nil {
+func (n *Network) GetHandle() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Handle
+	return n.Handle
 }
 
-func (o *Network) GetName() *string {
-	if o == nil {
+func (n *Network) GetName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Name
+	return n.Name
 }
 
-func (o *Network) GetUpdated() *string {
-	if o == nil {
+func (n *Network) GetUpdated() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Updated
+	return n.Updated
 }

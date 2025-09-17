@@ -7,16 +7,16 @@ type HostTimelineEventAsset struct {
 	Resource   HostTimelineEvent `json:"resource"`
 }
 
-func (o *HostTimelineEventAsset) GetExtensions() map[string]any {
-	if o == nil {
+func (h *HostTimelineEventAsset) GetExtensions() map[string]any {
+	if h == nil {
 		return map[string]any{}
 	}
-	return o.Extensions
+	return h.Extensions
 }
 
-func (o *HostTimelineEventAsset) GetResource() HostTimelineEvent {
-	if o == nil {
+func (h *HostTimelineEventAsset) GetResource() HostTimelineEvent {
+	if h == nil {
 		return HostTimelineEvent{}
 	}
-	return o.Resource
+	return h.Resource
 }

@@ -7,16 +7,16 @@ type EipInterface struct {
 	Name  *string `json:"name,omitempty"`
 }
 
-func (o *EipInterface) GetIndex() *int {
-	if o == nil {
+func (e *EipInterface) GetIndex() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Index
+	return e.Index
 }
 
-func (o *EipInterface) GetName() *string {
-	if o == nil {
+func (e *EipInterface) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }

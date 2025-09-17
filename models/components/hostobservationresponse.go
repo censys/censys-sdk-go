@@ -8,23 +8,23 @@ type HostObservationResponse struct {
 	TotalResults  int64                  `json:"total_results"`
 }
 
-func (o *HostObservationResponse) GetNextPageToken() *string {
-	if o == nil {
+func (h *HostObservationResponse) GetNextPageToken() *string {
+	if h == nil {
 		return nil
 	}
-	return o.NextPageToken
+	return h.NextPageToken
 }
 
-func (o *HostObservationResponse) GetRanges() []HostObservationRange {
-	if o == nil {
+func (h *HostObservationResponse) GetRanges() []HostObservationRange {
+	if h == nil {
 		return nil
 	}
-	return o.Ranges
+	return h.Ranges
 }
 
-func (o *HostObservationResponse) GetTotalResults() int64 {
-	if o == nil {
+func (h *HostObservationResponse) GetTotalResults() int64 {
+	if h == nil {
 		return 0
 	}
-	return o.TotalResults
+	return h.TotalResults
 }

@@ -7,16 +7,16 @@ type ElasticSearchResultsNodeInfoNodes struct {
 	NodeName *string                                    `json:"node_name,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodes) GetNodeData() *ElasticSearchResultsNodeInfoNodesNodeData {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodes) GetNodeData() *ElasticSearchResultsNodeInfoNodesNodeData {
+	if e == nil {
 		return nil
 	}
-	return o.NodeData
+	return e.NodeData
 }
 
-func (o *ElasticSearchResultsNodeInfoNodes) GetNodeName() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodes) GetNodeName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.NodeName
+	return e.NodeName
 }

@@ -8,23 +8,23 @@ type VentriloMessage struct {
 	Header *VentriloHeader `json:"header,omitempty"`
 }
 
-func (o *VentriloMessage) GetBody() *string {
-	if o == nil {
+func (v *VentriloMessage) GetBody() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Body
+	return v.Body
 }
 
-func (o *VentriloMessage) GetError() *string {
-	if o == nil {
+func (v *VentriloMessage) GetError() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Error
+	return v.Error
 }
 
-func (o *VentriloMessage) GetHeader() *VentriloHeader {
-	if o == nil {
+func (v *VentriloMessage) GetHeader() *VentriloHeader {
+	if v == nil {
 		return nil
 	}
-	return o.Header
+	return v.Header
 }

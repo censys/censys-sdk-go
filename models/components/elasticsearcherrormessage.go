@@ -8,23 +8,23 @@ type ElasticSearchErrorMessage struct {
 	Type   *string `json:"type,omitempty"`
 }
 
-func (o *ElasticSearchErrorMessage) GetHeader() *string {
-	if o == nil {
+func (e *ElasticSearchErrorMessage) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
-func (o *ElasticSearchErrorMessage) GetReason() *string {
-	if o == nil {
+func (e *ElasticSearchErrorMessage) GetReason() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Reason
+	return e.Reason
 }
 
-func (o *ElasticSearchErrorMessage) GetType() *string {
-	if o == nil {
+func (e *ElasticSearchErrorMessage) GetType() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Type
+	return e.Type
 }

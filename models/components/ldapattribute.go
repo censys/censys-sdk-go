@@ -9,16 +9,16 @@ type LdapAttribute struct {
 	Values []string `json:"values,omitempty"`
 }
 
-func (o *LdapAttribute) GetName() *string {
-	if o == nil {
+func (l *LdapAttribute) GetName() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Name
+	return l.Name
 }
 
-func (o *LdapAttribute) GetValues() []string {
-	if o == nil {
+func (l *LdapAttribute) GetValues() []string {
+	if l == nil {
 		return nil
 	}
-	return o.Values
+	return l.Values
 }

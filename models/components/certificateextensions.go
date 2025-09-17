@@ -26,114 +26,114 @@ type CertificateExtensions struct {
 	TorServiceDescriptors []TorServiceDescriptor `json:"tor_service_descriptors,omitempty"`
 }
 
-func (o *CertificateExtensions) GetAuthorityInfoAccess() *AuthorityInfoAccess {
-	if o == nil {
+func (c *CertificateExtensions) GetAuthorityInfoAccess() *AuthorityInfoAccess {
+	if c == nil {
 		return nil
 	}
-	return o.AuthorityInfoAccess
+	return c.AuthorityInfoAccess
 }
 
-func (o *CertificateExtensions) GetAuthorityKeyID() *string {
-	if o == nil {
+func (c *CertificateExtensions) GetAuthorityKeyID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AuthorityKeyID
+	return c.AuthorityKeyID
 }
 
-func (o *CertificateExtensions) GetBasicConstraints() *BasicConstraints {
-	if o == nil {
+func (c *CertificateExtensions) GetBasicConstraints() *BasicConstraints {
+	if c == nil {
 		return nil
 	}
-	return o.BasicConstraints
+	return c.BasicConstraints
 }
 
-func (o *CertificateExtensions) GetCabfOrganizationID() *CabfOrganizationID {
-	if o == nil {
+func (c *CertificateExtensions) GetCabfOrganizationID() *CabfOrganizationID {
+	if c == nil {
 		return nil
 	}
-	return o.CabfOrganizationID
+	return c.CabfOrganizationID
 }
 
-func (o *CertificateExtensions) GetCertificatePolicies() []CertificatePolicy {
-	if o == nil {
+func (c *CertificateExtensions) GetCertificatePolicies() []CertificatePolicy {
+	if c == nil {
 		return nil
 	}
-	return o.CertificatePolicies
+	return c.CertificatePolicies
 }
 
-func (o *CertificateExtensions) GetCrlDistributionPoints() []string {
-	if o == nil {
+func (c *CertificateExtensions) GetCrlDistributionPoints() []string {
+	if c == nil {
 		return nil
 	}
-	return o.CrlDistributionPoints
+	return c.CrlDistributionPoints
 }
 
-func (o *CertificateExtensions) GetCtPoison() *bool {
-	if o == nil {
+func (c *CertificateExtensions) GetCtPoison() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.CtPoison
+	return c.CtPoison
 }
 
-func (o *CertificateExtensions) GetExtendedKeyUsage() *ExtendedKeyUsage {
-	if o == nil {
+func (c *CertificateExtensions) GetExtendedKeyUsage() *ExtendedKeyUsage {
+	if c == nil {
 		return nil
 	}
-	return o.ExtendedKeyUsage
+	return c.ExtendedKeyUsage
 }
 
-func (o *CertificateExtensions) GetIssuerAltName() *GeneralNames {
-	if o == nil {
+func (c *CertificateExtensions) GetIssuerAltName() *GeneralNames {
+	if c == nil {
 		return nil
 	}
-	return o.IssuerAltName
+	return c.IssuerAltName
 }
 
-func (o *CertificateExtensions) GetKeyUsage() *KeyUsage {
-	if o == nil {
+func (c *CertificateExtensions) GetKeyUsage() *KeyUsage {
+	if c == nil {
 		return nil
 	}
-	return o.KeyUsage
+	return c.KeyUsage
 }
 
-func (o *CertificateExtensions) GetNameConstraints() *NameConstraints {
-	if o == nil {
+func (c *CertificateExtensions) GetNameConstraints() *NameConstraints {
+	if c == nil {
 		return nil
 	}
-	return o.NameConstraints
+	return c.NameConstraints
 }
 
-func (o *CertificateExtensions) GetQcStatements() *QcStatements {
-	if o == nil {
+func (c *CertificateExtensions) GetQcStatements() *QcStatements {
+	if c == nil {
 		return nil
 	}
-	return o.QcStatements
+	return c.QcStatements
 }
 
-func (o *CertificateExtensions) GetSignedCertificateTimestamps() []SignedCertificateTimestamp {
-	if o == nil {
+func (c *CertificateExtensions) GetSignedCertificateTimestamps() []SignedCertificateTimestamp {
+	if c == nil {
 		return nil
 	}
-	return o.SignedCertificateTimestamps
+	return c.SignedCertificateTimestamps
 }
 
-func (o *CertificateExtensions) GetSubjectAltName() *GeneralNames {
-	if o == nil {
+func (c *CertificateExtensions) GetSubjectAltName() *GeneralNames {
+	if c == nil {
 		return nil
 	}
-	return o.SubjectAltName
+	return c.SubjectAltName
 }
 
-func (o *CertificateExtensions) GetSubjectKeyID() *string {
-	if o == nil {
+func (c *CertificateExtensions) GetSubjectKeyID() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SubjectKeyID
+	return c.SubjectKeyID
 }
 
-func (o *CertificateExtensions) GetTorServiceDescriptors() []TorServiceDescriptor {
-	if o == nil {
+func (c *CertificateExtensions) GetTorServiceDescriptors() []TorServiceDescriptor {
+	if c == nil {
 		return nil
 	}
-	return o.TorServiceDescriptors
+	return c.TorServiceDescriptors
 }

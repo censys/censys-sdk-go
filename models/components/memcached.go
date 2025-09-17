@@ -15,37 +15,37 @@ type Memcached struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *Memcached) GetASCIIBindingProtocolEnabled() *bool {
-	if o == nil {
+func (m *Memcached) GetASCIIBindingProtocolEnabled() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.ASCIIBindingProtocolEnabled
+	return m.ASCIIBindingProtocolEnabled
 }
 
-func (o *Memcached) GetBinaryBindingProtocolEnabled() *bool {
-	if o == nil {
+func (m *Memcached) GetBinaryBindingProtocolEnabled() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.BinaryBindingProtocolEnabled
+	return m.BinaryBindingProtocolEnabled
 }
 
-func (o *Memcached) GetRespondsToUDP() *bool {
-	if o == nil {
+func (m *Memcached) GetRespondsToUDP() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.RespondsToUDP
+	return m.RespondsToUDP
 }
 
-func (o *Memcached) GetStats() map[string]string {
-	if o == nil {
+func (m *Memcached) GetStats() map[string]string {
+	if m == nil {
 		return nil
 	}
-	return o.Stats
+	return m.Stats
 }
 
-func (o *Memcached) GetVersion() *string {
-	if o == nil {
+func (m *Memcached) GetVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Version
+	return m.Version
 }

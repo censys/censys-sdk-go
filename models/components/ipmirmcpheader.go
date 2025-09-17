@@ -10,23 +10,23 @@ type IpmiRMCPHeader struct {
 	Version *int `json:"version,omitempty"`
 }
 
-func (o *IpmiRMCPHeader) GetMessageClass() *IpmiRMCPHeaderMessageClass {
-	if o == nil {
+func (i *IpmiRMCPHeader) GetMessageClass() *IpmiRMCPHeaderMessageClass {
+	if i == nil {
 		return nil
 	}
-	return o.MessageClass
+	return i.MessageClass
 }
 
-func (o *IpmiRMCPHeader) GetSequenceNumber() *int {
-	if o == nil {
+func (i *IpmiRMCPHeader) GetSequenceNumber() *int {
+	if i == nil {
 		return nil
 	}
-	return o.SequenceNumber
+	return i.SequenceNumber
 }
 
-func (o *IpmiRMCPHeader) GetVersion() *int {
-	if o == nil {
+func (i *IpmiRMCPHeader) GetVersion() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Version
+	return i.Version
 }

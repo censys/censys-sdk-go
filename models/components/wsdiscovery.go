@@ -9,30 +9,30 @@ type WsDiscovery struct {
 	Types           []string `json:"types,omitempty"`
 }
 
-func (o *WsDiscovery) GetAddresses() []string {
-	if o == nil {
+func (w *WsDiscovery) GetAddresses() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Addresses
+	return w.Addresses
 }
 
-func (o *WsDiscovery) GetMetadataVersion() *int {
-	if o == nil {
+func (w *WsDiscovery) GetMetadataVersion() *int {
+	if w == nil {
 		return nil
 	}
-	return o.MetadataVersion
+	return w.MetadataVersion
 }
 
-func (o *WsDiscovery) GetScopes() []string {
-	if o == nil {
+func (w *WsDiscovery) GetScopes() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Scopes
+	return w.Scopes
 }
 
-func (o *WsDiscovery) GetTypes() []string {
-	if o == nil {
+func (w *WsDiscovery) GetTypes() []string {
+	if w == nil {
 		return nil
 	}
-	return o.Types
+	return w.Types
 }

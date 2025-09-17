@@ -7,16 +7,16 @@ type ReverseDNSResolved struct {
 	ResolveTime *string  `json:"resolve_time,omitempty"`
 }
 
-func (o *ReverseDNSResolved) GetNames() []string {
-	if o == nil {
+func (r *ReverseDNSResolved) GetNames() []string {
+	if r == nil {
 		return nil
 	}
-	return o.Names
+	return r.Names
 }
 
-func (o *ReverseDNSResolved) GetResolveTime() *string {
-	if o == nil {
+func (r *ReverseDNSResolved) GetResolveTime() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ResolveTime
+	return r.ResolveTime
 }

@@ -6,9 +6,9 @@ type Krpc struct {
 	PingResponseID *string `json:"ping_response_id,omitempty"`
 }
 
-func (o *Krpc) GetPingResponseID() *string {
-	if o == nil {
+func (k *Krpc) GetPingResponseID() *string {
+	if k == nil {
 		return nil
 	}
-	return o.PingResponseID
+	return k.PingResponseID
 }

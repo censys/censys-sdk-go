@@ -20,107 +20,107 @@ type Webproperty struct {
 	Vulns            []Vuln              `json:"vulns,omitempty"`
 }
 
-func (o *Webproperty) GetCert() *Certificate {
-	if o == nil {
+func (w *Webproperty) GetCert() *Certificate {
+	if w == nil {
 		return nil
 	}
-	return o.Cert
+	return w.Cert
 }
 
-func (o *Webproperty) GetEndpoints() []EndpointScanState {
-	if o == nil {
+func (w *Webproperty) GetEndpoints() []EndpointScanState {
+	if w == nil {
 		return nil
 	}
-	return o.Endpoints
+	return w.Endpoints
 }
 
-func (o *Webproperty) GetExposures() []Risk {
-	if o == nil {
+func (w *Webproperty) GetExposures() []Risk {
+	if w == nil {
 		return nil
 	}
-	return o.Exposures
+	return w.Exposures
 }
 
-func (o *Webproperty) GetHardware() []Attribute {
-	if o == nil {
+func (w *Webproperty) GetHardware() []Attribute {
+	if w == nil {
 		return nil
 	}
-	return o.Hardware
+	return w.Hardware
 }
 
-func (o *Webproperty) GetHostname() *string {
-	if o == nil {
+func (w *Webproperty) GetHostname() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Hostname
+	return w.Hostname
 }
 
-func (o *Webproperty) GetJarm() *JarmScan {
-	if o == nil {
+func (w *Webproperty) GetJarm() *JarmScan {
+	if w == nil {
 		return nil
 	}
-	return o.Jarm
+	return w.Jarm
 }
 
-func (o *Webproperty) GetLabels() []Label {
-	if o == nil {
+func (w *Webproperty) GetLabels() []Label {
+	if w == nil {
 		return nil
 	}
-	return o.Labels
+	return w.Labels
 }
 
-func (o *Webproperty) GetMisconfigs() []Risk {
-	if o == nil {
+func (w *Webproperty) GetMisconfigs() []Risk {
+	if w == nil {
 		return nil
 	}
-	return o.Misconfigs
+	return w.Misconfigs
 }
 
-func (o *Webproperty) GetOperatingSystems() []Attribute {
-	if o == nil {
+func (w *Webproperty) GetOperatingSystems() []Attribute {
+	if w == nil {
 		return nil
 	}
-	return o.OperatingSystems
+	return w.OperatingSystems
 }
 
-func (o *Webproperty) GetPort() *int {
-	if o == nil {
+func (w *Webproperty) GetPort() *int {
+	if w == nil {
 		return nil
 	}
-	return o.Port
+	return w.Port
 }
 
-func (o *Webproperty) GetScanTime() *string {
-	if o == nil {
+func (w *Webproperty) GetScanTime() *string {
+	if w == nil {
 		return nil
 	}
-	return o.ScanTime
+	return w.ScanTime
 }
 
-func (o *Webproperty) GetSoftware() []Attribute {
-	if o == nil {
+func (w *Webproperty) GetSoftware() []Attribute {
+	if w == nil {
 		return nil
 	}
-	return o.Software
+	return w.Software
 }
 
-func (o *Webproperty) GetThreats() []Threat {
-	if o == nil {
+func (w *Webproperty) GetThreats() []Threat {
+	if w == nil {
 		return nil
 	}
-	return o.Threats
+	return w.Threats
 }
 
-func (o *Webproperty) GetTLS() *TLS {
-	if o == nil {
+func (w *Webproperty) GetTLS() *TLS {
+	if w == nil {
 		return nil
 	}
-	return o.TLS
+	return w.TLS
 }
 
-func (o *Webproperty) GetVulns() []Vuln {
-	if o == nil {
+func (w *Webproperty) GetVulns() []Vuln {
+	if w == nil {
 		return nil
 	}
-	return o.Vulns
+	return w.Vulns
 }

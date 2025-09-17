@@ -9,30 +9,30 @@ type SignedCertificateTimestamp struct {
 	Version   *int                                 `json:"version,omitempty"`
 }
 
-func (o *SignedCertificateTimestamp) GetLogID() *string {
-	if o == nil {
+func (s *SignedCertificateTimestamp) GetLogID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.LogID
+	return s.LogID
 }
 
-func (o *SignedCertificateTimestamp) GetSignature() *SignedCertificateTimestampSignature {
-	if o == nil {
+func (s *SignedCertificateTimestamp) GetSignature() *SignedCertificateTimestampSignature {
+	if s == nil {
 		return nil
 	}
-	return o.Signature
+	return s.Signature
 }
 
-func (o *SignedCertificateTimestamp) GetTimestamp() *string {
-	if o == nil {
+func (s *SignedCertificateTimestamp) GetTimestamp() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Timestamp
+	return s.Timestamp
 }
 
-func (o *SignedCertificateTimestamp) GetVersion() *int {
-	if o == nil {
+func (s *SignedCertificateTimestamp) GetVersion() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Version
+	return s.Version
 }

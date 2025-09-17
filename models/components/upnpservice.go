@@ -10,37 +10,37 @@ type UpnpService struct {
 	ServiceType *string `json:"service_type,omitempty"`
 }
 
-func (o *UpnpService) GetControlURL() *string {
-	if o == nil {
+func (u *UpnpService) GetControlURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ControlURL
+	return u.ControlURL
 }
 
-func (o *UpnpService) GetEventSubURL() *string {
-	if o == nil {
+func (u *UpnpService) GetEventSubURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.EventSubURL
+	return u.EventSubURL
 }
 
-func (o *UpnpService) GetScpdURL() *string {
-	if o == nil {
+func (u *UpnpService) GetScpdURL() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ScpdURL
+	return u.ScpdURL
 }
 
-func (o *UpnpService) GetServiceID() *string {
-	if o == nil {
+func (u *UpnpService) GetServiceID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ServiceID
+	return u.ServiceID
 }
 
-func (o *UpnpService) GetServiceType() *string {
-	if o == nil {
+func (u *UpnpService) GetServiceType() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ServiceType
+	return u.ServiceType
 }

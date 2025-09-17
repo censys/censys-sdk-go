@@ -91,6 +91,7 @@ type ServiceScan struct {
 	Lpd                      *Lpd                          `json:"lpd,omitempty"`
 	Mdns                     *Mdns                         `json:"mdns,omitempty"`
 	Memcached                *Memcached                    `json:"memcached,omitempty"`
+	MikrotikWinbox           *MikrotikWinbox               `json:"mikrotik_winbox,omitempty"`
 	Minecraft                *Minecraft                    `json:"minecraft,omitempty"`
 	Mms                      *Mms                          `json:"mms,omitempty"`
 	Modbus                   *Modbus                       `json:"modbus,omitempty"`
@@ -168,863 +169,870 @@ type ServiceScan struct {
 	Zeromq                   *Zeromq                       `json:"zeromq,omitempty"`
 }
 
-func (o *ServiceScan) GetActivemq() *Activemq {
-	if o == nil {
+func (s *ServiceScan) GetActivemq() *Activemq {
+	if s == nil {
 		return nil
 	}
-	return o.Activemq
+	return s.Activemq
 }
 
-func (o *ServiceScan) GetAmqp() *Amqp {
-	if o == nil {
+func (s *ServiceScan) GetAmqp() *Amqp {
+	if s == nil {
 		return nil
 	}
-	return o.Amqp
+	return s.Amqp
 }
 
-func (o *ServiceScan) GetAnyConnect() *AnyConnect {
-	if o == nil {
+func (s *ServiceScan) GetAnyConnect() *AnyConnect {
+	if s == nil {
 		return nil
 	}
-	return o.AnyConnect
+	return s.AnyConnect
 }
 
-func (o *ServiceScan) GetAsteriskManagerInterface() *AsteriskManagerInterface {
-	if o == nil {
+func (s *ServiceScan) GetAsteriskManagerInterface() *AsteriskManagerInterface {
+	if s == nil {
 		return nil
 	}
-	return o.AsteriskManagerInterface
+	return s.AsteriskManagerInterface
 }
 
-func (o *ServiceScan) GetBacnet() *Bacnet {
-	if o == nil {
+func (s *ServiceScan) GetBacnet() *Bacnet {
+	if s == nil {
 		return nil
 	}
-	return o.Bacnet
+	return s.Bacnet
 }
 
-func (o *ServiceScan) GetBanner() *string {
-	if o == nil {
+func (s *ServiceScan) GetBanner() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Banner
+	return s.Banner
 }
 
-func (o *ServiceScan) GetBannerHashSha256() *string {
-	if o == nil {
+func (s *ServiceScan) GetBannerHashSha256() *string {
+	if s == nil {
 		return nil
 	}
-	return o.BannerHashSha256
+	return s.BannerHashSha256
 }
 
-func (o *ServiceScan) GetCheckpointTopology() *CheckpointTopology {
-	if o == nil {
+func (s *ServiceScan) GetCheckpointTopology() *CheckpointTopology {
+	if s == nil {
 		return nil
 	}
-	return o.CheckpointTopology
+	return s.CheckpointTopology
 }
 
-func (o *ServiceScan) GetChromecast() *Chromecast {
-	if o == nil {
+func (s *ServiceScan) GetChromecast() *Chromecast {
+	if s == nil {
 		return nil
 	}
-	return o.Chromecast
+	return s.Chromecast
 }
 
-func (o *ServiceScan) GetCiscoIpsla() *CiscoIpsla {
-	if o == nil {
+func (s *ServiceScan) GetCiscoIpsla() *CiscoIpsla {
+	if s == nil {
 		return nil
 	}
-	return o.CiscoIpsla
+	return s.CiscoIpsla
 }
 
-func (o *ServiceScan) GetCmore() *Cmore {
-	if o == nil {
+func (s *ServiceScan) GetCmore() *Cmore {
+	if s == nil {
 		return nil
 	}
-	return o.Cmore
+	return s.Cmore
 }
 
-func (o *ServiceScan) GetCoap() *Coap {
-	if o == nil {
+func (s *ServiceScan) GetCoap() *Coap {
+	if s == nil {
 		return nil
 	}
-	return o.Coap
+	return s.Coap
 }
 
-func (o *ServiceScan) GetCrestronCp3() *CrestronCp3 {
-	if o == nil {
+func (s *ServiceScan) GetCrestronCp3() *CrestronCp3 {
+	if s == nil {
 		return nil
 	}
-	return o.CrestronCp3
+	return s.CrestronCp3
 }
 
-func (o *ServiceScan) GetCrestronDinAp2() *CrestronDinAp2 {
-	if o == nil {
+func (s *ServiceScan) GetCrestronDinAp2() *CrestronDinAp2 {
+	if s == nil {
 		return nil
 	}
-	return o.CrestronDinAp2
+	return s.CrestronDinAp2
 }
 
-func (o *ServiceScan) GetCwmp() *Cwmp {
-	if o == nil {
+func (s *ServiceScan) GetCwmp() *Cwmp {
+	if s == nil {
 		return nil
 	}
-	return o.Cwmp
+	return s.Cwmp
 }
 
-func (o *ServiceScan) GetDarkcomet() *Darkcomet {
-	if o == nil {
+func (s *ServiceScan) GetDarkcomet() *Darkcomet {
+	if s == nil {
 		return nil
 	}
-	return o.Darkcomet
+	return s.Darkcomet
 }
 
-func (o *ServiceScan) GetDarkgate() *Darkgate {
-	if o == nil {
+func (s *ServiceScan) GetDarkgate() *Darkgate {
+	if s == nil {
 		return nil
 	}
-	return o.Darkgate
+	return s.Darkgate
 }
 
-func (o *ServiceScan) GetDcerpc() *Dcerpc {
-	if o == nil {
+func (s *ServiceScan) GetDcerpc() *Dcerpc {
+	if s == nil {
 		return nil
 	}
-	return o.Dcerpc
+	return s.Dcerpc
 }
 
-func (o *ServiceScan) GetDhcpdiscover() *Dhcpdiscover {
-	if o == nil {
+func (s *ServiceScan) GetDhcpdiscover() *Dhcpdiscover {
+	if s == nil {
 		return nil
 	}
-	return o.Dhcpdiscover
+	return s.Dhcpdiscover
 }
 
-func (o *ServiceScan) GetDnp3() *Dnp3 {
-	if o == nil {
+func (s *ServiceScan) GetDnp3() *Dnp3 {
+	if s == nil {
 		return nil
 	}
-	return o.Dnp3
+	return s.Dnp3
 }
 
-func (o *ServiceScan) GetDNS() *DNS {
-	if o == nil {
+func (s *ServiceScan) GetDNS() *DNS {
+	if s == nil {
 		return nil
 	}
-	return o.DNS
+	return s.DNS
 }
 
-func (o *ServiceScan) GetDtls() *Dtls {
-	if o == nil {
+func (s *ServiceScan) GetDtls() *Dtls {
+	if s == nil {
 		return nil
 	}
-	return o.Dtls
+	return s.Dtls
 }
 
-func (o *ServiceScan) GetDvrIP() *DvrIP {
-	if o == nil {
+func (s *ServiceScan) GetDvrIP() *DvrIP {
+	if s == nil {
 		return nil
 	}
-	return o.DvrIP
+	return s.DvrIP
 }
 
-func (o *ServiceScan) GetEip() *Eip {
-	if o == nil {
+func (s *ServiceScan) GetEip() *Eip {
+	if s == nil {
 		return nil
 	}
-	return o.Eip
+	return s.Eip
 }
 
-func (o *ServiceScan) GetElfFile() *ElfFile {
-	if o == nil {
+func (s *ServiceScan) GetElfFile() *ElfFile {
+	if s == nil {
 		return nil
 	}
-	return o.ElfFile
+	return s.ElfFile
 }
 
-func (o *ServiceScan) GetEpmd() *Epmd {
-	if o == nil {
+func (s *ServiceScan) GetEpmd() *Epmd {
+	if s == nil {
 		return nil
 	}
-	return o.Epmd
+	return s.Epmd
 }
 
-func (o *ServiceScan) GetEtcd() *Etcd {
-	if o == nil {
+func (s *ServiceScan) GetEtcd() *Etcd {
+	if s == nil {
 		return nil
 	}
-	return o.Etcd
+	return s.Etcd
 }
 
-func (o *ServiceScan) GetEthereum() *Ethereum {
-	if o == nil {
+func (s *ServiceScan) GetEthereum() *Ethereum {
+	if s == nil {
 		return nil
 	}
-	return o.Ethereum
+	return s.Ethereum
 }
 
-func (o *ServiceScan) GetFox() *Fox {
-	if o == nil {
+func (s *ServiceScan) GetFox() *Fox {
+	if s == nil {
 		return nil
 	}
-	return o.Fox
+	return s.Fox
 }
 
-func (o *ServiceScan) GetFtp() *Ftp {
-	if o == nil {
+func (s *ServiceScan) GetFtp() *Ftp {
+	if s == nil {
 		return nil
 	}
-	return o.Ftp
+	return s.Ftp
 }
 
-func (o *ServiceScan) GetGearman() *Gearman {
-	if o == nil {
+func (s *ServiceScan) GetGearman() *Gearman {
+	if s == nil {
 		return nil
 	}
-	return o.Gearman
+	return s.Gearman
 }
 
-func (o *ServiceScan) GetHidVertx() *HidVertx {
-	if o == nil {
+func (s *ServiceScan) GetHidVertx() *HidVertx {
+	if s == nil {
 		return nil
 	}
-	return o.HidVertx
+	return s.HidVertx
 }
 
-func (o *ServiceScan) GetHikvision() *Hikvision {
-	if o == nil {
+func (s *ServiceScan) GetHikvision() *Hikvision {
+	if s == nil {
 		return nil
 	}
-	return o.Hikvision
+	return s.Hikvision
 }
 
-func (o *ServiceScan) GetIbmnje() *Ibmnje {
-	if o == nil {
+func (s *ServiceScan) GetIbmnje() *Ibmnje {
+	if s == nil {
 		return nil
 	}
-	return o.Ibmnje
+	return s.Ibmnje
 }
 
-func (o *ServiceScan) GetIke() *Ike {
-	if o == nil {
+func (s *ServiceScan) GetIke() *Ike {
+	if s == nil {
 		return nil
 	}
-	return o.Ike
+	return s.Ike
 }
 
-func (o *ServiceScan) GetImap() *Imap {
-	if o == nil {
+func (s *ServiceScan) GetImap() *Imap {
+	if s == nil {
 		return nil
 	}
-	return o.Imap
+	return s.Imap
 }
 
-func (o *ServiceScan) GetIota() *Iota {
-	if o == nil {
+func (s *ServiceScan) GetIota() *Iota {
+	if s == nil {
 		return nil
 	}
-	return o.Iota
+	return s.Iota
 }
 
-func (o *ServiceScan) GetIP() *string {
-	if o == nil {
+func (s *ServiceScan) GetIP() *string {
+	if s == nil {
 		return nil
 	}
-	return o.IP
+	return s.IP
 }
 
-func (o *ServiceScan) GetIpmi() *Ipmi {
-	if o == nil {
+func (s *ServiceScan) GetIpmi() *Ipmi {
+	if s == nil {
 		return nil
 	}
-	return o.Ipmi
+	return s.Ipmi
 }
 
-func (o *ServiceScan) GetIpp() *Ipp {
-	if o == nil {
+func (s *ServiceScan) GetIpp() *Ipp {
+	if s == nil {
 		return nil
 	}
-	return o.Ipp
+	return s.Ipp
 }
 
-func (o *ServiceScan) GetIsSuccess() *bool {
-	if o == nil {
+func (s *ServiceScan) GetIsSuccess() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.IsSuccess
+	return s.IsSuccess
 }
 
-func (o *ServiceScan) GetIscsi() *Iscsi {
-	if o == nil {
+func (s *ServiceScan) GetIscsi() *Iscsi {
+	if s == nil {
 		return nil
 	}
-	return o.Iscsi
+	return s.Iscsi
 }
 
-func (o *ServiceScan) GetKrpc() *Krpc {
-	if o == nil {
+func (s *ServiceScan) GetKrpc() *Krpc {
+	if s == nil {
 		return nil
 	}
-	return o.Krpc
+	return s.Krpc
 }
 
-func (o *ServiceScan) GetL2tp() *L2Tp {
-	if o == nil {
+func (s *ServiceScan) GetL2tp() *L2Tp {
+	if s == nil {
 		return nil
 	}
-	return o.L2tp
+	return s.L2tp
 }
 
-func (o *ServiceScan) GetLdap() *Ldap {
-	if o == nil {
+func (s *ServiceScan) GetLdap() *Ldap {
+	if s == nil {
 		return nil
 	}
-	return o.Ldap
+	return s.Ldap
 }
 
-func (o *ServiceScan) GetLpd() *Lpd {
-	if o == nil {
+func (s *ServiceScan) GetLpd() *Lpd {
+	if s == nil {
 		return nil
 	}
-	return o.Lpd
+	return s.Lpd
 }
 
-func (o *ServiceScan) GetMdns() *Mdns {
-	if o == nil {
+func (s *ServiceScan) GetMdns() *Mdns {
+	if s == nil {
 		return nil
 	}
-	return o.Mdns
+	return s.Mdns
 }
 
-func (o *ServiceScan) GetMemcached() *Memcached {
-	if o == nil {
+func (s *ServiceScan) GetMemcached() *Memcached {
+	if s == nil {
 		return nil
 	}
-	return o.Memcached
+	return s.Memcached
 }
 
-func (o *ServiceScan) GetMinecraft() *Minecraft {
-	if o == nil {
+func (s *ServiceScan) GetMikrotikWinbox() *MikrotikWinbox {
+	if s == nil {
 		return nil
 	}
-	return o.Minecraft
+	return s.MikrotikWinbox
 }
 
-func (o *ServiceScan) GetMms() *Mms {
-	if o == nil {
+func (s *ServiceScan) GetMinecraft() *Minecraft {
+	if s == nil {
 		return nil
 	}
-	return o.Mms
+	return s.Minecraft
 }
 
-func (o *ServiceScan) GetModbus() *Modbus {
-	if o == nil {
+func (s *ServiceScan) GetMms() *Mms {
+	if s == nil {
 		return nil
 	}
-	return o.Modbus
+	return s.Mms
 }
 
-func (o *ServiceScan) GetMoneroP2p() *MoneroP2P {
-	if o == nil {
+func (s *ServiceScan) GetModbus() *Modbus {
+	if s == nil {
 		return nil
 	}
-	return o.MoneroP2p
+	return s.Modbus
 }
 
-func (o *ServiceScan) GetMongodb() *Mongodb {
-	if o == nil {
+func (s *ServiceScan) GetMoneroP2p() *MoneroP2P {
+	if s == nil {
 		return nil
 	}
-	return o.Mongodb
+	return s.MoneroP2p
 }
 
-func (o *ServiceScan) GetMqtt() *Mqtt {
-	if o == nil {
+func (s *ServiceScan) GetMongodb() *Mongodb {
+	if s == nil {
 		return nil
 	}
-	return o.Mqtt
+	return s.Mongodb
 }
 
-func (o *ServiceScan) GetMssql() *Mssql {
-	if o == nil {
+func (s *ServiceScan) GetMqtt() *Mqtt {
+	if s == nil {
 		return nil
 	}
-	return o.Mssql
+	return s.Mqtt
 }
 
-func (o *ServiceScan) GetMurmur() *Murmur {
-	if o == nil {
+func (s *ServiceScan) GetMssql() *Mssql {
+	if s == nil {
 		return nil
 	}
-	return o.Murmur
+	return s.Mssql
 }
 
-func (o *ServiceScan) GetMysql() *Mysql {
-	if o == nil {
+func (s *ServiceScan) GetMurmur() *Murmur {
+	if s == nil {
 		return nil
 	}
-	return o.Mysql
+	return s.Murmur
 }
 
-func (o *ServiceScan) GetNatsIo() *NatsIo {
-	if o == nil {
+func (s *ServiceScan) GetMysql() *Mysql {
+	if s == nil {
 		return nil
 	}
-	return o.NatsIo
+	return s.Mysql
 }
 
-func (o *ServiceScan) GetNbd() *Nbd {
-	if o == nil {
+func (s *ServiceScan) GetNatsIo() *NatsIo {
+	if s == nil {
 		return nil
 	}
-	return o.Nbd
+	return s.NatsIo
 }
 
-func (o *ServiceScan) GetNfsMountd() *NfsMountd {
-	if o == nil {
+func (s *ServiceScan) GetNbd() *Nbd {
+	if s == nil {
 		return nil
 	}
-	return o.NfsMountd
+	return s.Nbd
 }
 
-func (o *ServiceScan) GetNmea() *Nmea {
-	if o == nil {
+func (s *ServiceScan) GetNfsMountd() *NfsMountd {
+	if s == nil {
 		return nil
 	}
-	return o.Nmea
+	return s.NfsMountd
 }
 
-func (o *ServiceScan) GetNtp() *Ntp {
-	if o == nil {
+func (s *ServiceScan) GetNmea() *Nmea {
+	if s == nil {
 		return nil
 	}
-	return o.Ntp
+	return s.Nmea
 }
 
-func (o *ServiceScan) GetNtrip() *Ntrip {
-	if o == nil {
+func (s *ServiceScan) GetNtp() *Ntp {
+	if s == nil {
 		return nil
 	}
-	return o.Ntrip
+	return s.Ntp
 }
 
-func (o *ServiceScan) GetOnc() *Onc {
-	if o == nil {
+func (s *ServiceScan) GetNtrip() *Ntrip {
+	if s == nil {
 		return nil
 	}
-	return o.Onc
+	return s.Ntrip
 }
 
-func (o *ServiceScan) GetOnvif() *Onvif {
-	if o == nil {
+func (s *ServiceScan) GetOnc() *Onc {
+	if s == nil {
 		return nil
 	}
-	return o.Onvif
+	return s.Onc
 }
 
-func (o *ServiceScan) GetOpcUa() *OpcUa {
-	if o == nil {
+func (s *ServiceScan) GetOnvif() *Onvif {
+	if s == nil {
 		return nil
 	}
-	return o.OpcUa
+	return s.Onvif
 }
 
-func (o *ServiceScan) GetOpenvpn() *Openvpn {
-	if o == nil {
+func (s *ServiceScan) GetOpcUa() *OpcUa {
+	if s == nil {
 		return nil
 	}
-	return o.Openvpn
+	return s.OpcUa
 }
 
-func (o *ServiceScan) GetOpenvpnMgmt() *OpenvpnMgmt {
-	if o == nil {
+func (s *ServiceScan) GetOpenvpn() *Openvpn {
+	if s == nil {
 		return nil
 	}
-	return o.OpenvpnMgmt
+	return s.Openvpn
 }
 
-func (o *ServiceScan) GetOracle() *Oracle {
-	if o == nil {
+func (s *ServiceScan) GetOpenvpnMgmt() *OpenvpnMgmt {
+	if s == nil {
 		return nil
 	}
-	return o.Oracle
+	return s.OpenvpnMgmt
 }
 
-func (o *ServiceScan) GetPcAnywhere() *PcAnywhere {
-	if o == nil {
+func (s *ServiceScan) GetOracle() *Oracle {
+	if s == nil {
 		return nil
 	}
-	return o.PcAnywhere
+	return s.Oracle
 }
 
-func (o *ServiceScan) GetPgbouncer() *Pgbouncer {
-	if o == nil {
+func (s *ServiceScan) GetPcAnywhere() *PcAnywhere {
+	if s == nil {
 		return nil
 	}
-	return o.Pgbouncer
+	return s.PcAnywhere
 }
 
-func (o *ServiceScan) GetPop3() *Pop3 {
-	if o == nil {
+func (s *ServiceScan) GetPgbouncer() *Pgbouncer {
+	if s == nil {
 		return nil
 	}
-	return o.Pop3
+	return s.Pgbouncer
 }
 
-func (o *ServiceScan) GetPort() *int {
-	if o == nil {
+func (s *ServiceScan) GetPop3() *Pop3 {
+	if s == nil {
 		return nil
 	}
-	return o.Port
+	return s.Pop3
 }
 
-func (o *ServiceScan) GetPortmap() *Portmap {
-	if o == nil {
+func (s *ServiceScan) GetPort() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Portmap
+	return s.Port
 }
 
-func (o *ServiceScan) GetPostgres() *Postgres {
-	if o == nil {
+func (s *ServiceScan) GetPortmap() *Portmap {
+	if s == nil {
 		return nil
 	}
-	return o.Postgres
+	return s.Portmap
 }
 
-func (o *ServiceScan) GetPptp() *Pptp {
-	if o == nil {
+func (s *ServiceScan) GetPostgres() *Postgres {
+	if s == nil {
 		return nil
 	}
-	return o.Pptp
+	return s.Postgres
 }
 
-func (o *ServiceScan) GetProfinetCm() *ProfinetCm {
-	if o == nil {
+func (s *ServiceScan) GetPptp() *Pptp {
+	if s == nil {
 		return nil
 	}
-	return o.ProfinetCm
+	return s.Pptp
 }
 
-func (o *ServiceScan) GetProtocol() *string {
-	if o == nil {
+func (s *ServiceScan) GetProfinetCm() *ProfinetCm {
+	if s == nil {
 		return nil
 	}
-	return o.Protocol
+	return s.ProfinetCm
 }
 
-func (o *ServiceScan) GetRdate() *Rdate {
-	if o == nil {
+func (s *ServiceScan) GetProtocol() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Rdate
+	return s.Protocol
 }
 
-func (o *ServiceScan) GetRdp() *Rdp {
-	if o == nil {
+func (s *ServiceScan) GetRdate() *Rdate {
+	if s == nil {
 		return nil
 	}
-	return o.Rdp
+	return s.Rdate
 }
 
-func (o *ServiceScan) GetRealport() *Realport {
-	if o == nil {
+func (s *ServiceScan) GetRdp() *Rdp {
+	if s == nil {
 		return nil
 	}
-	return o.Realport
+	return s.Rdp
 }
 
-func (o *ServiceScan) GetRedis() *Redis {
-	if o == nil {
+func (s *ServiceScan) GetRealport() *Realport {
+	if s == nil {
 		return nil
 	}
-	return o.Redis
+	return s.Realport
 }
 
-func (o *ServiceScan) GetRedline() *Redline {
-	if o == nil {
+func (s *ServiceScan) GetRedis() *Redis {
+	if s == nil {
 		return nil
 	}
-	return o.Redline
+	return s.Redis
 }
 
-func (o *ServiceScan) GetRedlionCrimson() *RedlionCrimson {
-	if o == nil {
+func (s *ServiceScan) GetRedline() *Redline {
+	if s == nil {
 		return nil
 	}
-	return o.RedlionCrimson
+	return s.Redline
 }
 
-func (o *ServiceScan) GetRepresentativeInfo() *RepresentativeInfo {
-	if o == nil {
+func (s *ServiceScan) GetRedlionCrimson() *RedlionCrimson {
+	if s == nil {
 		return nil
 	}
-	return o.RepresentativeInfo
+	return s.RedlionCrimson
 }
 
-func (o *ServiceScan) GetRifatron() *Rifatron {
-	if o == nil {
+func (s *ServiceScan) GetRepresentativeInfo() *RepresentativeInfo {
+	if s == nil {
 		return nil
 	}
-	return o.Rifatron
+	return s.RepresentativeInfo
 }
 
-func (o *ServiceScan) GetRipple() *Ripple {
-	if o == nil {
+func (s *ServiceScan) GetRifatron() *Rifatron {
+	if s == nil {
 		return nil
 	}
-	return o.Ripple
+	return s.Rifatron
 }
 
-func (o *ServiceScan) GetRlogin() *Rlogin {
-	if o == nil {
+func (s *ServiceScan) GetRipple() *Ripple {
+	if s == nil {
 		return nil
 	}
-	return o.Rlogin
+	return s.Ripple
 }
 
-func (o *ServiceScan) GetRocketmq() *Rocketmq {
-	if o == nil {
+func (s *ServiceScan) GetRlogin() *Rlogin {
+	if s == nil {
 		return nil
 	}
-	return o.Rocketmq
+	return s.Rlogin
 }
 
-func (o *ServiceScan) GetRtsp() *Rtsp {
-	if o == nil {
+func (s *ServiceScan) GetRocketmq() *Rocketmq {
+	if s == nil {
 		return nil
 	}
-	return o.Rtsp
+	return s.Rocketmq
 }
 
-func (o *ServiceScan) GetS7() *S7 {
-	if o == nil {
+func (s *ServiceScan) GetRtsp() *Rtsp {
+	if s == nil {
 		return nil
 	}
-	return o.S7
+	return s.Rtsp
 }
 
-func (o *ServiceScan) GetSapRouter() *SapRouter {
-	if o == nil {
+func (s *ServiceScan) GetS7() *S7 {
+	if s == nil {
 		return nil
 	}
-	return o.SapRouter
+	return s.S7
 }
 
-func (o *ServiceScan) GetScanTime() *string {
-	if o == nil {
+func (s *ServiceScan) GetSapRouter() *SapRouter {
+	if s == nil {
 		return nil
 	}
-	return o.ScanTime
+	return s.SapRouter
 }
 
-func (o *ServiceScan) GetScpi() *Scpi {
-	if o == nil {
+func (s *ServiceScan) GetScanTime() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Scpi
+	return s.ScanTime
 }
 
-func (o *ServiceScan) GetScreenshots() []Screenshot {
-	if o == nil {
+func (s *ServiceScan) GetScpi() *Scpi {
+	if s == nil {
 		return nil
 	}
-	return o.Screenshots
+	return s.Scpi
 }
 
-func (o *ServiceScan) GetSer2net() *Ser2Net {
-	if o == nil {
+func (s *ServiceScan) GetScreenshots() []Screenshot {
+	if s == nil {
 		return nil
 	}
-	return o.Ser2net
+	return s.Screenshots
 }
 
-func (o *ServiceScan) GetSevenDaysToDie() *SevenDaysToDie {
-	if o == nil {
+func (s *ServiceScan) GetSer2net() *Ser2Net {
+	if s == nil {
 		return nil
 	}
-	return o.SevenDaysToDie
+	return s.Ser2net
 }
 
-func (o *ServiceScan) GetSip() *Sip {
-	if o == nil {
+func (s *ServiceScan) GetSevenDaysToDie() *SevenDaysToDie {
+	if s == nil {
 		return nil
 	}
-	return o.Sip
+	return s.SevenDaysToDie
 }
 
-func (o *ServiceScan) GetSkinny() *Skinny {
-	if o == nil {
+func (s *ServiceScan) GetSip() *Sip {
+	if s == nil {
 		return nil
 	}
-	return o.Skinny
+	return s.Sip
 }
 
-func (o *ServiceScan) GetSmb() *Smb {
-	if o == nil {
+func (s *ServiceScan) GetSkinny() *Skinny {
+	if s == nil {
 		return nil
 	}
-	return o.Smb
+	return s.Skinny
 }
 
-func (o *ServiceScan) GetSMTP() *SMTP {
-	if o == nil {
+func (s *ServiceScan) GetSmb() *Smb {
+	if s == nil {
 		return nil
 	}
-	return o.SMTP
+	return s.Smb
 }
 
-func (o *ServiceScan) GetSnmp() *Snmp {
-	if o == nil {
+func (s *ServiceScan) GetSMTP() *SMTP {
+	if s == nil {
 		return nil
 	}
-	return o.Snmp
+	return s.SMTP
 }
 
-func (o *ServiceScan) GetSocks() *Socks {
-	if o == nil {
+func (s *ServiceScan) GetSnmp() *Snmp {
+	if s == nil {
 		return nil
 	}
-	return o.Socks
+	return s.Snmp
 }
 
-func (o *ServiceScan) GetSpice() *Spice {
-	if o == nil {
+func (s *ServiceScan) GetSocks() *Socks {
+	if s == nil {
 		return nil
 	}
-	return o.Spice
+	return s.Socks
 }
 
-func (o *ServiceScan) GetSsdp() *Ssdp {
-	if o == nil {
+func (s *ServiceScan) GetSpice() *Spice {
+	if s == nil {
 		return nil
 	}
-	return o.Ssdp
+	return s.Spice
 }
 
-func (o *ServiceScan) GetSSH() *SSH {
-	if o == nil {
+func (s *ServiceScan) GetSsdp() *Ssdp {
+	if s == nil {
 		return nil
 	}
-	return o.SSH
+	return s.Ssdp
 }
 
-func (o *ServiceScan) GetSteam() *Steam {
-	if o == nil {
+func (s *ServiceScan) GetSSH() *SSH {
+	if s == nil {
 		return nil
 	}
-	return o.Steam
+	return s.SSH
 }
 
-func (o *ServiceScan) GetTacacsPlus() *TacacsPlus {
-	if o == nil {
+func (s *ServiceScan) GetSteam() *Steam {
+	if s == nil {
 		return nil
 	}
-	return o.TacacsPlus
+	return s.Steam
 }
 
-func (o *ServiceScan) GetTeamViewer() *TeamViewer {
-	if o == nil {
+func (s *ServiceScan) GetTacacsPlus() *TacacsPlus {
+	if s == nil {
 		return nil
 	}
-	return o.TeamViewer
+	return s.TacacsPlus
 }
 
-func (o *ServiceScan) GetTelnet() *Telnet {
-	if o == nil {
+func (s *ServiceScan) GetTeamViewer() *TeamViewer {
+	if s == nil {
 		return nil
 	}
-	return o.Telnet
+	return s.TeamViewer
 }
 
-func (o *ServiceScan) GetTibia() *Tibia {
-	if o == nil {
+func (s *ServiceScan) GetTelnet() *Telnet {
+	if s == nil {
 		return nil
 	}
-	return o.Tibia
+	return s.Telnet
 }
 
-func (o *ServiceScan) GetTLS() *TLS {
-	if o == nil {
+func (s *ServiceScan) GetTibia() *Tibia {
+	if s == nil {
 		return nil
 	}
-	return o.TLS
+	return s.Tibia
 }
 
-func (o *ServiceScan) GetTplinkKasa() *TplinkKasa {
-	if o == nil {
+func (s *ServiceScan) GetTLS() *TLS {
+	if s == nil {
 		return nil
 	}
-	return o.TplinkKasa
+	return s.TLS
 }
 
-func (o *ServiceScan) GetTransportProtocol() *ServiceScanTransportProtocol {
-	if o == nil {
+func (s *ServiceScan) GetTplinkKasa() *TplinkKasa {
+	if s == nil {
 		return nil
 	}
-	return o.TransportProtocol
+	return s.TplinkKasa
 }
 
-func (o *ServiceScan) GetUnitronicsPcom() *UnitronicsPcom {
-	if o == nil {
+func (s *ServiceScan) GetTransportProtocol() *ServiceScanTransportProtocol {
+	if s == nil {
 		return nil
 	}
-	return o.UnitronicsPcom
+	return s.TransportProtocol
 }
 
-func (o *ServiceScan) GetUpnp() *Upnp {
-	if o == nil {
+func (s *ServiceScan) GetUnitronicsPcom() *UnitronicsPcom {
+	if s == nil {
 		return nil
 	}
-	return o.Upnp
+	return s.UnitronicsPcom
 }
 
-func (o *ServiceScan) GetVentrilo() *Ventrilo {
-	if o == nil {
+func (s *ServiceScan) GetUpnp() *Upnp {
+	if s == nil {
 		return nil
 	}
-	return o.Ventrilo
+	return s.Upnp
 }
 
-func (o *ServiceScan) GetVnc() *Vnc {
-	if o == nil {
+func (s *ServiceScan) GetVentrilo() *Ventrilo {
+	if s == nil {
 		return nil
 	}
-	return o.Vnc
+	return s.Ventrilo
 }
 
-func (o *ServiceScan) GetWeblogicT3() *WeblogicT3 {
-	if o == nil {
+func (s *ServiceScan) GetVnc() *Vnc {
+	if s == nil {
 		return nil
 	}
-	return o.WeblogicT3
+	return s.Vnc
 }
 
-func (o *ServiceScan) GetWinrm() *Winrm {
-	if o == nil {
+func (s *ServiceScan) GetWeblogicT3() *WeblogicT3 {
+	if s == nil {
 		return nil
 	}
-	return o.Winrm
+	return s.WeblogicT3
 }
 
-func (o *ServiceScan) GetWsDiscovery() *WsDiscovery {
-	if o == nil {
+func (s *ServiceScan) GetWinrm() *Winrm {
+	if s == nil {
 		return nil
 	}
-	return o.WsDiscovery
+	return s.Winrm
 }
 
-func (o *ServiceScan) GetX11() *X11 {
-	if o == nil {
+func (s *ServiceScan) GetWsDiscovery() *WsDiscovery {
+	if s == nil {
 		return nil
 	}
-	return o.X11
+	return s.WsDiscovery
 }
 
-func (o *ServiceScan) GetZeromq() *Zeromq {
-	if o == nil {
+func (s *ServiceScan) GetX11() *X11 {
+	if s == nil {
 		return nil
 	}
-	return o.Zeromq
+	return s.X11
+}
+
+func (s *ServiceScan) GetZeromq() *Zeromq {
+	if s == nil {
+		return nil
+	}
+	return s.Zeromq
 }

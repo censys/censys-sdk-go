@@ -13,30 +13,30 @@ type PrometheusResponseActiveTargetDiscoveredLabels struct {
 	Scheme *string `json:"scheme,omitempty"`
 }
 
-func (o *PrometheusResponseActiveTargetDiscoveredLabels) GetAddress() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTargetDiscoveredLabels) GetAddress() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address
+	return p.Address
 }
 
-func (o *PrometheusResponseActiveTargetDiscoveredLabels) GetJob() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTargetDiscoveredLabels) GetJob() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Job
+	return p.Job
 }
 
-func (o *PrometheusResponseActiveTargetDiscoveredLabels) GetMetricsPath() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTargetDiscoveredLabels) GetMetricsPath() *string {
+	if p == nil {
 		return nil
 	}
-	return o.MetricsPath
+	return p.MetricsPath
 }
 
-func (o *PrometheusResponseActiveTargetDiscoveredLabels) GetScheme() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTargetDiscoveredLabels) GetScheme() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Scheme
+	return p.Scheme
 }

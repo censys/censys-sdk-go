@@ -284,58 +284,58 @@ type CVSSComponents struct {
 	UserInteraction *UserInteraction `json:"user_interaction,omitempty"`
 }
 
-func (o *CVSSComponents) GetAttackComplexity() *AttackComplexity {
-	if o == nil {
+func (c *CVSSComponents) GetAttackComplexity() *AttackComplexity {
+	if c == nil {
 		return nil
 	}
-	return o.AttackComplexity
+	return c.AttackComplexity
 }
 
-func (o *CVSSComponents) GetAttackVector() *AttackVector {
-	if o == nil {
+func (c *CVSSComponents) GetAttackVector() *AttackVector {
+	if c == nil {
 		return nil
 	}
-	return o.AttackVector
+	return c.AttackVector
 }
 
-func (o *CVSSComponents) GetAvailability() *Availability {
-	if o == nil {
+func (c *CVSSComponents) GetAvailability() *Availability {
+	if c == nil {
 		return nil
 	}
-	return o.Availability
+	return c.Availability
 }
 
-func (o *CVSSComponents) GetConfidentiality() *Confidentiality {
-	if o == nil {
+func (c *CVSSComponents) GetConfidentiality() *Confidentiality {
+	if c == nil {
 		return nil
 	}
-	return o.Confidentiality
+	return c.Confidentiality
 }
 
-func (o *CVSSComponents) GetIntegrity() *Integrity {
-	if o == nil {
+func (c *CVSSComponents) GetIntegrity() *Integrity {
+	if c == nil {
 		return nil
 	}
-	return o.Integrity
+	return c.Integrity
 }
 
-func (o *CVSSComponents) GetPrivilegesRequired() *PrivilegesRequired {
-	if o == nil {
+func (c *CVSSComponents) GetPrivilegesRequired() *PrivilegesRequired {
+	if c == nil {
 		return nil
 	}
-	return o.PrivilegesRequired
+	return c.PrivilegesRequired
 }
 
-func (o *CVSSComponents) GetScope() *Scope {
-	if o == nil {
+func (c *CVSSComponents) GetScope() *Scope {
+	if c == nil {
 		return nil
 	}
-	return o.Scope
+	return c.Scope
 }
 
-func (o *CVSSComponents) GetUserInteraction() *UserInteraction {
-	if o == nil {
+func (c *CVSSComponents) GetUserInteraction() *UserInteraction {
+	if c == nil {
 		return nil
 	}
-	return o.UserInteraction
+	return c.UserInteraction
 }

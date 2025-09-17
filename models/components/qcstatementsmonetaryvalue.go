@@ -9,30 +9,30 @@ type QcStatementsMonetaryValue struct {
 	Exponent       *int64  `json:"exponent,omitempty"`
 }
 
-func (o *QcStatementsMonetaryValue) GetAmount() *int64 {
-	if o == nil {
+func (q *QcStatementsMonetaryValue) GetAmount() *int64 {
+	if q == nil {
 		return nil
 	}
-	return o.Amount
+	return q.Amount
 }
 
-func (o *QcStatementsMonetaryValue) GetCurrency() *string {
-	if o == nil {
+func (q *QcStatementsMonetaryValue) GetCurrency() *string {
+	if q == nil {
 		return nil
 	}
-	return o.Currency
+	return q.Currency
 }
 
-func (o *QcStatementsMonetaryValue) GetCurrencyNumber() *int64 {
-	if o == nil {
+func (q *QcStatementsMonetaryValue) GetCurrencyNumber() *int64 {
+	if q == nil {
 		return nil
 	}
-	return o.CurrencyNumber
+	return q.CurrencyNumber
 }
 
-func (o *QcStatementsMonetaryValue) GetExponent() *int64 {
-	if o == nil {
+func (q *QcStatementsMonetaryValue) GetExponent() *int64 {
+	if q == nil {
 		return nil
 	}
-	return o.Exponent
+	return q.Exponent
 }

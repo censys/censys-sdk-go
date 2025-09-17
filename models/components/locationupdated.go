@@ -6,9 +6,9 @@ type LocationUpdated struct {
 	Location *Location `json:"location,omitempty"`
 }
 
-func (o *LocationUpdated) GetLocation() *Location {
-	if o == nil {
+func (l *LocationUpdated) GetLocation() *Location {
+	if l == nil {
 		return nil
 	}
-	return o.Location
+	return l.Location
 }

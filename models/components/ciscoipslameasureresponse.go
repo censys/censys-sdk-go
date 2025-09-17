@@ -12,51 +12,51 @@ type CiscoIpslaMeasureResponse struct {
 	Type        *int    `json:"type,omitempty"`
 }
 
-func (o *CiscoIpslaMeasureResponse) GetFlags() *int {
-	if o == nil {
+func (c *CiscoIpslaMeasureResponse) GetFlags() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Flags
+	return c.Flags
 }
 
-func (o *CiscoIpslaMeasureResponse) GetPayload() *string {
-	if o == nil {
+func (c *CiscoIpslaMeasureResponse) GetPayload() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Payload
+	return c.Payload
 }
 
-func (o *CiscoIpslaMeasureResponse) GetReceiveSeq() *int {
-	if o == nil {
+func (c *CiscoIpslaMeasureResponse) GetReceiveSeq() *int {
+	if c == nil {
 		return nil
 	}
-	return o.ReceiveSeq
+	return c.ReceiveSeq
 }
 
-func (o *CiscoIpslaMeasureResponse) GetReceiveTime() *int64 {
-	if o == nil {
+func (c *CiscoIpslaMeasureResponse) GetReceiveTime() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.ReceiveTime
+	return c.ReceiveTime
 }
 
-func (o *CiscoIpslaMeasureResponse) GetSendSeq() *int {
-	if o == nil {
+func (c *CiscoIpslaMeasureResponse) GetSendSeq() *int {
+	if c == nil {
 		return nil
 	}
-	return o.SendSeq
+	return c.SendSeq
 }
 
-func (o *CiscoIpslaMeasureResponse) GetSendTime() *int64 {
-	if o == nil {
+func (c *CiscoIpslaMeasureResponse) GetSendTime() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.SendTime
+	return c.SendTime
 }
 
-func (o *CiscoIpslaMeasureResponse) GetType() *int {
-	if o == nil {
+func (c *CiscoIpslaMeasureResponse) GetType() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Type
+	return c.Type
 }

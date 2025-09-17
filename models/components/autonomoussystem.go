@@ -17,44 +17,44 @@ type AutonomousSystem struct {
 	Organization *string `json:"organization,omitempty"`
 }
 
-func (o *AutonomousSystem) GetAsn() *int {
-	if o == nil {
+func (a *AutonomousSystem) GetAsn() *int {
+	if a == nil {
 		return nil
 	}
-	return o.Asn
+	return a.Asn
 }
 
-func (o *AutonomousSystem) GetBgpPrefix() *string {
-	if o == nil {
+func (a *AutonomousSystem) GetBgpPrefix() *string {
+	if a == nil {
 		return nil
 	}
-	return o.BgpPrefix
+	return a.BgpPrefix
 }
 
-func (o *AutonomousSystem) GetCountryCode() *string {
-	if o == nil {
+func (a *AutonomousSystem) GetCountryCode() *string {
+	if a == nil {
 		return nil
 	}
-	return o.CountryCode
+	return a.CountryCode
 }
 
-func (o *AutonomousSystem) GetDescription() *string {
-	if o == nil {
+func (a *AutonomousSystem) GetDescription() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Description
+	return a.Description
 }
 
-func (o *AutonomousSystem) GetName() *string {
-	if o == nil {
+func (a *AutonomousSystem) GetName() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Name
+	return a.Name
 }
 
-func (o *AutonomousSystem) GetOrganization() *string {
-	if o == nil {
+func (a *AutonomousSystem) GetOrganization() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Organization
+	return a.Organization
 }

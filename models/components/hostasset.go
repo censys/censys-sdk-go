@@ -7,16 +7,16 @@ type HostAsset struct {
 	Resource   Host           `json:"resource"`
 }
 
-func (o *HostAsset) GetExtensions() map[string]any {
-	if o == nil {
+func (h *HostAsset) GetExtensions() map[string]any {
+	if h == nil {
 		return map[string]any{}
 	}
-	return o.Extensions
+	return h.Extensions
 }
 
-func (o *HostAsset) GetResource() Host {
-	if o == nil {
+func (h *HostAsset) GetResource() Host {
+	if h == nil {
 		return Host{}
 	}
-	return o.Resource
+	return h.Resource
 }

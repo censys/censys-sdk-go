@@ -7,16 +7,16 @@ type DarkgateFile struct {
 	Name   *string `json:"name,omitempty"`
 }
 
-func (o *DarkgateFile) GetLength() *int {
-	if o == nil {
+func (d *DarkgateFile) GetLength() *int {
+	if d == nil {
 		return nil
 	}
-	return o.Length
+	return d.Length
 }
 
-func (o *DarkgateFile) GetName() *string {
-	if o == nil {
+func (d *DarkgateFile) GetName() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Name
+	return d.Name
 }

@@ -8,23 +8,23 @@ type Iota struct {
 	V2Info *NodeInfoV2 `json:"v2_info,omitempty"`
 }
 
-func (o *Iota) GetV0Info() *NodeInfoV0 {
-	if o == nil {
+func (i *Iota) GetV0Info() *NodeInfoV0 {
+	if i == nil {
 		return nil
 	}
-	return o.V0Info
+	return i.V0Info
 }
 
-func (o *Iota) GetV1Info() *NodeInfoV1 {
-	if o == nil {
+func (i *Iota) GetV1Info() *NodeInfoV1 {
+	if i == nil {
 		return nil
 	}
-	return o.V1Info
+	return i.V1Info
 }
 
-func (o *Iota) GetV2Info() *NodeInfoV2 {
-	if o == nil {
+func (i *Iota) GetV2Info() *NodeInfoV2 {
+	if i == nil {
 		return nil
 	}
-	return o.V2Info
+	return i.V2Info
 }

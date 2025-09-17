@@ -13,58 +13,58 @@ type Tibia struct {
 	Version       *string `json:"version,omitempty"`
 }
 
-func (o *Tibia) GetClientVersion() *string {
-	if o == nil {
+func (t *Tibia) GetClientVersion() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ClientVersion
+	return t.ClientVersion
 }
 
-func (o *Tibia) GetLocation() *string {
-	if o == nil {
+func (t *Tibia) GetLocation() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Location
+	return t.Location
 }
 
-func (o *Tibia) GetLoginIP() *string {
-	if o == nil {
+func (t *Tibia) GetLoginIP() *string {
+	if t == nil {
 		return nil
 	}
-	return o.LoginIP
+	return t.LoginIP
 }
 
-func (o *Tibia) GetLoginPort() *string {
-	if o == nil {
+func (t *Tibia) GetLoginPort() *string {
+	if t == nil {
 		return nil
 	}
-	return o.LoginPort
+	return t.LoginPort
 }
 
-func (o *Tibia) GetName() *string {
-	if o == nil {
+func (t *Tibia) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }
 
-func (o *Tibia) GetServer() *string {
-	if o == nil {
+func (t *Tibia) GetServer() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Server
+	return t.Server
 }
 
-func (o *Tibia) GetURL() *string {
-	if o == nil {
+func (t *Tibia) GetURL() *string {
+	if t == nil {
 		return nil
 	}
-	return o.URL
+	return t.URL
 }
 
-func (o *Tibia) GetVersion() *string {
-	if o == nil {
+func (t *Tibia) GetVersion() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Version
+	return t.Version
 }

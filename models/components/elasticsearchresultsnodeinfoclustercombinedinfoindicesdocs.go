@@ -7,16 +7,16 @@ type ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs struct {
 	Deleted *int `json:"deleted,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetCount() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetCount() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Count
+	return e.Count
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetDeleted() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetDeleted() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Deleted
+	return e.Deleted
 }

@@ -11,23 +11,23 @@ type PrometheusResponsePrometheusVersion struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *PrometheusResponsePrometheusVersion) GetGoVersion() *string {
-	if o == nil {
+func (p *PrometheusResponsePrometheusVersion) GetGoVersion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.GoVersion
+	return p.GoVersion
 }
 
-func (o *PrometheusResponsePrometheusVersion) GetRevision() *string {
-	if o == nil {
+func (p *PrometheusResponsePrometheusVersion) GetRevision() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Revision
+	return p.Revision
 }
 
-func (o *PrometheusResponsePrometheusVersion) GetVersion() *string {
-	if o == nil {
+func (p *PrometheusResponsePrometheusVersion) GetVersion() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Version
+	return p.Version
 }

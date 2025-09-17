@@ -9,30 +9,30 @@ type TrackedScanScanTarget struct {
 	WebOrigin    *WebOrigin                         `json:"web_origin,omitempty"`
 }
 
-func (o *TrackedScanScanTarget) GetHostPort() *TrackedScanScanTargetHostPort {
-	if o == nil {
+func (t *TrackedScanScanTarget) GetHostPort() *TrackedScanScanTargetHostPort {
+	if t == nil {
 		return nil
 	}
-	return o.HostPort
+	return t.HostPort
 }
 
-func (o *TrackedScanScanTarget) GetHostnamePort() *TrackedScanScanTargetHostnamePort {
-	if o == nil {
+func (t *TrackedScanScanTarget) GetHostnamePort() *TrackedScanScanTargetHostnamePort {
+	if t == nil {
 		return nil
 	}
-	return o.HostnamePort
+	return t.HostnamePort
 }
 
-func (o *TrackedScanScanTarget) GetServiceID() *ServiceID {
-	if o == nil {
+func (t *TrackedScanScanTarget) GetServiceID() *ServiceID {
+	if t == nil {
 		return nil
 	}
-	return o.ServiceID
+	return t.ServiceID
 }
 
-func (o *TrackedScanScanTarget) GetWebOrigin() *WebOrigin {
-	if o == nil {
+func (t *TrackedScanScanTarget) GetWebOrigin() *WebOrigin {
+	if t == nil {
 		return nil
 	}
-	return o.WebOrigin
+	return t.WebOrigin
 }

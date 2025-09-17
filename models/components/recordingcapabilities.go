@@ -13,58 +13,58 @@ type RecordingCapabilities struct {
 	Options           *bool   `json:"options,omitempty"`
 }
 
-func (o *RecordingCapabilities) GetDynamicRecordings() *bool {
-	if o == nil {
+func (r *RecordingCapabilities) GetDynamicRecordings() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.DynamicRecordings
+	return r.DynamicRecordings
 }
 
-func (o *RecordingCapabilities) GetDynamicTracks() *bool {
-	if o == nil {
+func (r *RecordingCapabilities) GetDynamicTracks() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.DynamicTracks
+	return r.DynamicTracks
 }
 
-func (o *RecordingCapabilities) GetEncoding() *string {
-	if o == nil {
+func (r *RecordingCapabilities) GetEncoding() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Encoding
+	return r.Encoding
 }
 
-func (o *RecordingCapabilities) GetMaxRate() *int {
-	if o == nil {
+func (r *RecordingCapabilities) GetMaxRate() *int {
+	if r == nil {
 		return nil
 	}
-	return o.MaxRate
+	return r.MaxRate
 }
 
-func (o *RecordingCapabilities) GetMaxRecordings() *int {
-	if o == nil {
+func (r *RecordingCapabilities) GetMaxRecordings() *int {
+	if r == nil {
 		return nil
 	}
-	return o.MaxRecordings
+	return r.MaxRecordings
 }
 
-func (o *RecordingCapabilities) GetMaxRecordingsJob() *int {
-	if o == nil {
+func (r *RecordingCapabilities) GetMaxRecordingsJob() *int {
+	if r == nil {
 		return nil
 	}
-	return o.MaxRecordingsJob
+	return r.MaxRecordingsJob
 }
 
-func (o *RecordingCapabilities) GetMaxTotalRate() *int {
-	if o == nil {
+func (r *RecordingCapabilities) GetMaxTotalRate() *int {
+	if r == nil {
 		return nil
 	}
-	return o.MaxTotalRate
+	return r.MaxTotalRate
 }
 
-func (o *RecordingCapabilities) GetOptions() *bool {
-	if o == nil {
+func (r *RecordingCapabilities) GetOptions() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.Options
+	return r.Options
 }

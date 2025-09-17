@@ -14,65 +14,65 @@ type NetworkCapabilities struct {
 	ZeroConfiguration   *bool `json:"zero_configuration,omitempty"`
 }
 
-func (o *NetworkCapabilities) GetDhcpV6() *bool {
-	if o == nil {
+func (n *NetworkCapabilities) GetDhcpV6() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.DhcpV6
+	return n.DhcpV6
 }
 
-func (o *NetworkCapabilities) GetDot11Configuration() *bool {
-	if o == nil {
+func (n *NetworkCapabilities) GetDot11Configuration() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Dot11Configuration
+	return n.Dot11Configuration
 }
 
-func (o *NetworkCapabilities) GetDot1xConfigurations() *int {
-	if o == nil {
+func (n *NetworkCapabilities) GetDot1xConfigurations() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Dot1xConfigurations
+	return n.Dot1xConfigurations
 }
 
-func (o *NetworkCapabilities) GetDynamicDNS() *bool {
-	if o == nil {
+func (n *NetworkCapabilities) GetDynamicDNS() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.DynamicDNS
+	return n.DynamicDNS
 }
 
-func (o *NetworkCapabilities) GetHostnameFromDhcp() *bool {
-	if o == nil {
+func (n *NetworkCapabilities) GetHostnameFromDhcp() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.HostnameFromDhcp
+	return n.HostnameFromDhcp
 }
 
-func (o *NetworkCapabilities) GetIPFilter() *bool {
-	if o == nil {
+func (n *NetworkCapabilities) GetIPFilter() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.IPFilter
+	return n.IPFilter
 }
 
-func (o *NetworkCapabilities) GetIpv6() *bool {
-	if o == nil {
+func (n *NetworkCapabilities) GetIpv6() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.Ipv6
+	return n.Ipv6
 }
 
-func (o *NetworkCapabilities) GetNtp() *int {
-	if o == nil {
+func (n *NetworkCapabilities) GetNtp() *int {
+	if n == nil {
 		return nil
 	}
-	return o.Ntp
+	return n.Ntp
 }
 
-func (o *NetworkCapabilities) GetZeroConfiguration() *bool {
-	if o == nil {
+func (n *NetworkCapabilities) GetZeroConfiguration() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.ZeroConfiguration
+	return n.ZeroConfiguration
 }

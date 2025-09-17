@@ -10,37 +10,37 @@ type TextMessage struct {
 	TreeID    []int   `json:"tree_id,omitempty"`
 }
 
-func (o *TextMessage) GetActor() *int {
-	if o == nil {
+func (t *TextMessage) GetActor() *int {
+	if t == nil {
 		return nil
 	}
-	return o.Actor
+	return t.Actor
 }
 
-func (o *TextMessage) GetChannelID() []int {
-	if o == nil {
+func (t *TextMessage) GetChannelID() []int {
+	if t == nil {
 		return nil
 	}
-	return o.ChannelID
+	return t.ChannelID
 }
 
-func (o *TextMessage) GetMessage() *string {
-	if o == nil {
+func (t *TextMessage) GetMessage() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Message
+	return t.Message
 }
 
-func (o *TextMessage) GetSession() []int {
-	if o == nil {
+func (t *TextMessage) GetSession() []int {
+	if t == nil {
 		return nil
 	}
-	return o.Session
+	return t.Session
 }
 
-func (o *TextMessage) GetTreeID() []int {
-	if o == nil {
+func (t *TextMessage) GetTreeID() []int {
+	if t == nil {
 		return nil
 	}
-	return o.TreeID
+	return t.TreeID
 }

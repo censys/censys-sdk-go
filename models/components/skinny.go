@@ -6,9 +6,9 @@ type Skinny struct {
 	Response *string `json:"response,omitempty"`
 }
 
-func (o *Skinny) GetResponse() *string {
-	if o == nil {
+func (s *Skinny) GetResponse() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Response
+	return s.Response
 }

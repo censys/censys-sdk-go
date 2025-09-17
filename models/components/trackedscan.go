@@ -10,37 +10,37 @@ type TrackedScan struct {
 	TrackedScanID *string                `json:"tracked_scan_id,omitempty"`
 }
 
-func (o *TrackedScan) GetCompleted() *bool {
-	if o == nil {
+func (t *TrackedScan) GetCompleted() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.Completed
+	return t.Completed
 }
 
-func (o *TrackedScan) GetCreateTime() *string {
-	if o == nil {
+func (t *TrackedScan) GetCreateTime() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CreateTime
+	return t.CreateTime
 }
 
-func (o *TrackedScan) GetTarget() *TrackedScanScanTarget {
-	if o == nil {
+func (t *TrackedScan) GetTarget() *TrackedScanScanTarget {
+	if t == nil {
 		return nil
 	}
-	return o.Target
+	return t.Target
 }
 
-func (o *TrackedScan) GetTasks() []TrackedScanTask {
-	if o == nil {
+func (t *TrackedScan) GetTasks() []TrackedScanTask {
+	if t == nil {
 		return nil
 	}
-	return o.Tasks
+	return t.Tasks
 }
 
-func (o *TrackedScan) GetTrackedScanID() *string {
-	if o == nil {
+func (t *TrackedScan) GetTrackedScanID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.TrackedScanID
+	return t.TrackedScanID
 }

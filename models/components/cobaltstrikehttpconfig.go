@@ -8,23 +8,23 @@ type CobaltStrikeHTTPConfig struct {
 	Verb   *string `json:"verb,omitempty"`
 }
 
-func (o *CobaltStrikeHTTPConfig) GetClient() *string {
-	if o == nil {
+func (c *CobaltStrikeHTTPConfig) GetClient() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Client
+	return c.Client
 }
 
-func (o *CobaltStrikeHTTPConfig) GetURI() *string {
-	if o == nil {
+func (c *CobaltStrikeHTTPConfig) GetURI() *string {
+	if c == nil {
 		return nil
 	}
-	return o.URI
+	return c.URI
 }
 
-func (o *CobaltStrikeHTTPConfig) GetVerb() *string {
-	if o == nil {
+func (c *CobaltStrikeHTTPConfig) GetVerb() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Verb
+	return c.Verb
 }

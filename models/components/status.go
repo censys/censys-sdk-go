@@ -9,30 +9,30 @@ type Status struct {
 	Total            *int    `json:"total,omitempty"`
 }
 
-func (o *Status) GetAvailableWorkers() *int {
-	if o == nil {
+func (s *Status) GetAvailableWorkers() *int {
+	if s == nil {
 		return nil
 	}
-	return o.AvailableWorkers
+	return s.AvailableWorkers
 }
 
-func (o *Status) GetFunction() *string {
-	if o == nil {
+func (s *Status) GetFunction() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Function
+	return s.Function
 }
 
-func (o *Status) GetRunning() *int {
-	if o == nil {
+func (s *Status) GetRunning() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Running
+	return s.Running
 }
 
-func (o *Status) GetTotal() *int {
-	if o == nil {
+func (s *Status) GetTotal() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Total
+	return s.Total
 }

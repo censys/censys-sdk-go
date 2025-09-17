@@ -28,163 +28,163 @@ type Steam struct {
 	VrLinkCaps           *string  `json:"vr_link_caps,omitempty"`
 }
 
-func (o *Steam) GetBroadcastingActive() *bool {
-	if o == nil {
+func (s *Steam) GetBroadcastingActive() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.BroadcastingActive
+	return s.BroadcastingActive
 }
 
-func (o *Steam) GetConnectPort() *int {
-	if o == nil {
+func (s *Steam) GetConnectPort() *int {
+	if s == nil {
 		return nil
 	}
-	return o.ConnectPort
+	return s.ConnectPort
 }
 
-func (o *Steam) GetContentCachePort() *int {
-	if o == nil {
+func (s *Steam) GetContentCachePort() *int {
+	if s == nil {
 		return nil
 	}
-	return o.ContentCachePort
+	return s.ContentCachePort
 }
 
-func (o *Steam) GetDownloadLanPeerGroup() *int {
-	if o == nil {
+func (s *Steam) GetDownloadLanPeerGroup() *int {
+	if s == nil {
 		return nil
 	}
-	return o.DownloadLanPeerGroup
+	return s.DownloadLanPeerGroup
 }
 
-func (o *Steam) GetEnabledServices() *int {
-	if o == nil {
+func (s *Steam) GetEnabledServices() *int {
+	if s == nil {
 		return nil
 	}
-	return o.EnabledServices
+	return s.EnabledServices
 }
 
-func (o *Steam) GetEuniverse() *int {
-	if o == nil {
+func (s *Steam) GetEuniverse() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Euniverse
+	return s.Euniverse
 }
 
-func (o *Steam) GetGamesRunning() *bool {
-	if o == nil {
+func (s *Steam) GetGamesRunning() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.GamesRunning
+	return s.GamesRunning
 }
 
-func (o *Steam) GetHostname() *string {
-	if o == nil {
+func (s *Steam) GetHostname() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Hostname
+	return s.Hostname
 }
 
-func (o *Steam) GetIPAddresses() []string {
-	if o == nil {
+func (s *Steam) GetIPAddresses() []string {
+	if s == nil {
 		return nil
 	}
-	return o.IPAddresses
+	return s.IPAddresses
 }
 
-func (o *Steam) GetIs64bit() *bool {
-	if o == nil {
+func (s *Steam) GetIs64bit() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Is64bit
+	return s.Is64bit
 }
 
-func (o *Steam) GetMacAddresses() []string {
-	if o == nil {
+func (s *Steam) GetMacAddresses() []string {
+	if s == nil {
 		return nil
 	}
-	return o.MacAddresses
+	return s.MacAddresses
 }
 
-func (o *Steam) GetMinVersion() *int {
-	if o == nil {
+func (s *Steam) GetMinVersion() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MinVersion
+	return s.MinVersion
 }
 
-func (o *Steam) GetOstype() *int {
-	if o == nil {
+func (s *Steam) GetOstype() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Ostype
+	return s.Ostype
 }
 
-func (o *Steam) GetPublicIPAddress() *string {
-	if o == nil {
+func (s *Steam) GetPublicIPAddress() *string {
+	if s == nil {
 		return nil
 	}
-	return o.PublicIPAddress
+	return s.PublicIPAddress
 }
 
-func (o *Steam) GetRemoteplayActive() *bool {
-	if o == nil {
+func (s *Steam) GetRemoteplayActive() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.RemoteplayActive
+	return s.RemoteplayActive
 }
 
-func (o *Steam) GetScreenLocked() *bool {
-	if o == nil {
+func (s *Steam) GetScreenLocked() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.ScreenLocked
+	return s.ScreenLocked
 }
 
-func (o *Steam) GetSteamDeck() *bool {
-	if o == nil {
+func (s *Steam) GetSteamDeck() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SteamDeck
+	return s.SteamDeck
 }
 
-func (o *Steam) GetSteamVersion() *string {
-	if o == nil {
+func (s *Steam) GetSteamVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SteamVersion
+	return s.SteamVersion
 }
 
-func (o *Steam) GetSupportedServices() *int {
-	if o == nil {
+func (s *Steam) GetSupportedServices() *int {
+	if s == nil {
 		return nil
 	}
-	return o.SupportedServices
+	return s.SupportedServices
 }
 
-func (o *Steam) GetUsers() []User {
-	if o == nil {
+func (s *Steam) GetUsers() []User {
+	if s == nil {
 		return nil
 	}
-	return o.Users
+	return s.Users
 }
 
-func (o *Steam) GetVersion() *int {
-	if o == nil {
+func (s *Steam) GetVersion() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Version
+	return s.Version
 }
 
-func (o *Steam) GetVrActive() *bool {
-	if o == nil {
+func (s *Steam) GetVrActive() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.VrActive
+	return s.VrActive
 }
 
-func (o *Steam) GetVrLinkCaps() *string {
-	if o == nil {
+func (s *Steam) GetVrLinkCaps() *string {
+	if s == nil {
 		return nil
 	}
-	return o.VrLinkCaps
+	return s.VrLinkCaps
 }

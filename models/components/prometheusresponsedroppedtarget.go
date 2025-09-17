@@ -13,30 +13,30 @@ type PrometheusResponseDroppedTarget struct {
 	Scheme *string `json:"scheme,omitempty"`
 }
 
-func (o *PrometheusResponseDroppedTarget) GetAddress() *string {
-	if o == nil {
+func (p *PrometheusResponseDroppedTarget) GetAddress() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Address
+	return p.Address
 }
 
-func (o *PrometheusResponseDroppedTarget) GetJob() *string {
-	if o == nil {
+func (p *PrometheusResponseDroppedTarget) GetJob() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Job
+	return p.Job
 }
 
-func (o *PrometheusResponseDroppedTarget) GetMetricsPath() *string {
-	if o == nil {
+func (p *PrometheusResponseDroppedTarget) GetMetricsPath() *string {
+	if p == nil {
 		return nil
 	}
-	return o.MetricsPath
+	return p.MetricsPath
 }
 
-func (o *PrometheusResponseDroppedTarget) GetScheme() *string {
-	if o == nil {
+func (p *PrometheusResponseDroppedTarget) GetScheme() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Scheme
+	return p.Scheme
 }

@@ -12,30 +12,30 @@ type Signature struct {
 	Value *string `json:"value,omitempty"`
 }
 
-func (o *Signature) GetSelfSigned() *bool {
-	if o == nil {
+func (s *Signature) GetSelfSigned() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.SelfSigned
+	return s.SelfSigned
 }
 
-func (o *Signature) GetSignatureAlgorithm() *KeyAlgorithm {
-	if o == nil {
+func (s *Signature) GetSignatureAlgorithm() *KeyAlgorithm {
+	if s == nil {
 		return nil
 	}
-	return o.SignatureAlgorithm
+	return s.SignatureAlgorithm
 }
 
-func (o *Signature) GetValid() *bool {
-	if o == nil {
+func (s *Signature) GetValid() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Valid
+	return s.Valid
 }
 
-func (o *Signature) GetValue() *string {
-	if o == nil {
+func (s *Signature) GetValue() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Value
+	return s.Value
 }

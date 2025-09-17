@@ -17,44 +17,44 @@ type IpmiCapabilitiesAuthStatus struct {
 	UserAuthDisabled *bool `json:"user_auth_disabled,omitempty"`
 }
 
-func (o *IpmiCapabilitiesAuthStatus) GetAnonymousLoginEnabled() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesAuthStatus) GetAnonymousLoginEnabled() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.AnonymousLoginEnabled
+	return i.AnonymousLoginEnabled
 }
 
-func (o *IpmiCapabilitiesAuthStatus) GetAuthEachMessage() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesAuthStatus) GetAuthEachMessage() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.AuthEachMessage
+	return i.AuthEachMessage
 }
 
-func (o *IpmiCapabilitiesAuthStatus) GetHasAnonymousUsers() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesAuthStatus) GetHasAnonymousUsers() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.HasAnonymousUsers
+	return i.HasAnonymousUsers
 }
 
-func (o *IpmiCapabilitiesAuthStatus) GetHasNamedUsers() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesAuthStatus) GetHasNamedUsers() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.HasNamedUsers
+	return i.HasNamedUsers
 }
 
-func (o *IpmiCapabilitiesAuthStatus) GetTwoKeyLoginRequired() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesAuthStatus) GetTwoKeyLoginRequired() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.TwoKeyLoginRequired
+	return i.TwoKeyLoginRequired
 }
 
-func (o *IpmiCapabilitiesAuthStatus) GetUserAuthDisabled() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesAuthStatus) GetUserAuthDisabled() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.UserAuthDisabled
+	return i.UserAuthDisabled
 }

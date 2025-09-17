@@ -9,30 +9,30 @@ type AnalyticsCapabilities struct {
 	RuleSupport                        *bool `json:"rule_support,omitempty"`
 }
 
-func (o *AnalyticsCapabilities) GetAnalyticsModuleSupport() *bool {
-	if o == nil {
+func (a *AnalyticsCapabilities) GetAnalyticsModuleSupport() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.AnalyticsModuleSupport
+	return a.AnalyticsModuleSupport
 }
 
-func (o *AnalyticsCapabilities) GetCellBasedSceneDescriptionSupported() *bool {
-	if o == nil {
+func (a *AnalyticsCapabilities) GetCellBasedSceneDescriptionSupported() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.CellBasedSceneDescriptionSupported
+	return a.CellBasedSceneDescriptionSupported
 }
 
-func (o *AnalyticsCapabilities) GetRuleOptionsSupported() *bool {
-	if o == nil {
+func (a *AnalyticsCapabilities) GetRuleOptionsSupported() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.RuleOptionsSupported
+	return a.RuleOptionsSupported
 }
 
-func (o *AnalyticsCapabilities) GetRuleSupport() *bool {
-	if o == nil {
+func (a *AnalyticsCapabilities) GetRuleSupport() *bool {
+	if a == nil {
 		return nil
 	}
-	return o.RuleSupport
+	return a.RuleSupport
 }

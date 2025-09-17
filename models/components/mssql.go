@@ -10,30 +10,30 @@ type Mssql struct {
 	Version         *string               `json:"version,omitempty"`
 }
 
-func (o *Mssql) GetEncryptMode() *string {
-	if o == nil {
+func (m *Mssql) GetEncryptMode() *string {
+	if m == nil {
 		return nil
 	}
-	return o.EncryptMode
+	return m.EncryptMode
 }
 
-func (o *Mssql) GetInstanceName() *string {
-	if o == nil {
+func (m *Mssql) GetInstanceName() *string {
+	if m == nil {
 		return nil
 	}
-	return o.InstanceName
+	return m.InstanceName
 }
 
-func (o *Mssql) GetPreloginOptions() *MssqlPreloginOptions {
-	if o == nil {
+func (m *Mssql) GetPreloginOptions() *MssqlPreloginOptions {
+	if m == nil {
 		return nil
 	}
-	return o.PreloginOptions
+	return m.PreloginOptions
 }
 
-func (o *Mssql) GetVersion() *string {
-	if o == nil {
+func (m *Mssql) GetVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Version
+	return m.Version
 }

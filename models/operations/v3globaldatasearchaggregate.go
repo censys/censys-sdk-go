@@ -10,31 +10,31 @@ type V3GlobaldataSearchAggregateGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataSearchAggregateGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataSearchAggregateGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataSearchAggregateRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID           *string                             `queryParam:"style=form,explode=false,name=organization_id"`
 	SearchAggregateInputBody components.SearchAggregateInputBody `request:"mediaType=application/json"`
 }
 
-func (o *V3GlobaldataSearchAggregateRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataSearchAggregateRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataSearchAggregateRequest) GetSearchAggregateInputBody() components.SearchAggregateInputBody {
-	if o == nil {
+func (v *V3GlobaldataSearchAggregateRequest) GetSearchAggregateInputBody() components.SearchAggregateInputBody {
+	if v == nil {
 		return components.SearchAggregateInputBody{}
 	}
-	return o.SearchAggregateInputBody
+	return v.SearchAggregateInputBody
 }
 
 type V3GlobaldataSearchAggregateResponse struct {
@@ -44,23 +44,23 @@ type V3GlobaldataSearchAggregateResponse struct {
 	Headers                                 map[string][]string
 }
 
-func (o *V3GlobaldataSearchAggregateResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataSearchAggregateResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataSearchAggregateResponse) GetResponseEnvelopeSearchAggregateResponse() *components.ResponseEnvelopeSearchAggregateResponse {
-	if o == nil {
+func (v *V3GlobaldataSearchAggregateResponse) GetResponseEnvelopeSearchAggregateResponse() *components.ResponseEnvelopeSearchAggregateResponse {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeSearchAggregateResponse
+	return v.ResponseEnvelopeSearchAggregateResponse
 }
 
-func (o *V3GlobaldataSearchAggregateResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataSearchAggregateResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

@@ -7,16 +7,16 @@ type RouteUpdated struct {
 	Route *AutonomousSystem    `json:"route,omitempty"`
 }
 
-func (o *RouteUpdated) GetDiff() map[string]FieldDiff {
-	if o == nil {
+func (r *RouteUpdated) GetDiff() map[string]FieldDiff {
+	if r == nil {
 		return nil
 	}
-	return o.Diff
+	return r.Diff
 }
 
-func (o *RouteUpdated) GetRoute() *AutonomousSystem {
-	if o == nil {
+func (r *RouteUpdated) GetRoute() *AutonomousSystem {
+	if r == nil {
 		return nil
 	}
-	return o.Route
+	return r.Route
 }

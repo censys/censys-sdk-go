@@ -8,23 +8,23 @@ type ElasticSearch struct {
 	SystemInfo      *ElasticSearchSystemInfo      `json:"system_info,omitempty"`
 }
 
-func (o *ElasticSearch) GetErrorMessage() *ElasticSearchErrorMessage {
-	if o == nil {
+func (e *ElasticSearch) GetErrorMessage() *ElasticSearchErrorMessage {
+	if e == nil {
 		return nil
 	}
-	return o.ErrorMessage
+	return e.ErrorMessage
 }
 
-func (o *ElasticSearch) GetResultsNodeInfo() *ElasticSearchResultsNodeInfo {
-	if o == nil {
+func (e *ElasticSearch) GetResultsNodeInfo() *ElasticSearchResultsNodeInfo {
+	if e == nil {
 		return nil
 	}
-	return o.ResultsNodeInfo
+	return e.ResultsNodeInfo
 }
 
-func (o *ElasticSearch) GetSystemInfo() *ElasticSearchSystemInfo {
-	if o == nil {
+func (e *ElasticSearch) GetSystemInfo() *ElasticSearchSystemInfo {
+	if e == nil {
 		return nil
 	}
-	return o.SystemInfo
+	return e.SystemInfo
 }

@@ -27,44 +27,44 @@ func (h *HostObservationRange) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *HostObservationRange) GetEndTime() time.Time {
-	if o == nil {
+func (h *HostObservationRange) GetEndTime() time.Time {
+	if h == nil {
 		return time.Time{}
 	}
-	return o.EndTime
+	return h.EndTime
 }
 
-func (o *HostObservationRange) GetIP() string {
-	if o == nil {
+func (h *HostObservationRange) GetIP() string {
+	if h == nil {
 		return ""
 	}
-	return o.IP
+	return h.IP
 }
 
-func (o *HostObservationRange) GetPort() int {
-	if o == nil {
+func (h *HostObservationRange) GetPort() int {
+	if h == nil {
 		return 0
 	}
-	return o.Port
+	return h.Port
 }
 
-func (o *HostObservationRange) GetProtocols() []string {
-	if o == nil {
+func (h *HostObservationRange) GetProtocols() []string {
+	if h == nil {
 		return nil
 	}
-	return o.Protocols
+	return h.Protocols
 }
 
-func (o *HostObservationRange) GetStartTime() time.Time {
-	if o == nil {
+func (h *HostObservationRange) GetStartTime() time.Time {
+	if h == nil {
 		return time.Time{}
 	}
-	return o.StartTime
+	return h.StartTime
 }
 
-func (o *HostObservationRange) GetTransportProtocol() string {
-	if o == nil {
+func (h *HostObservationRange) GetTransportProtocol() string {
+	if h == nil {
 		return ""
 	}
-	return o.TransportProtocol
+	return h.TransportProtocol
 }

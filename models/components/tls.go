@@ -73,51 +73,51 @@ type TLS struct {
 	Versions        []TLSVersionData `json:"versions,omitempty"`
 }
 
-func (o *TLS) GetCipherSelected() *string {
-	if o == nil {
+func (t *TLS) GetCipherSelected() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CipherSelected
+	return t.CipherSelected
 }
 
-func (o *TLS) GetFingerprintSha256() *string {
-	if o == nil {
+func (t *TLS) GetFingerprintSha256() *string {
+	if t == nil {
 		return nil
 	}
-	return o.FingerprintSha256
+	return t.FingerprintSha256
 }
 
-func (o *TLS) GetJa3s() *string {
-	if o == nil {
+func (t *TLS) GetJa3s() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Ja3s
+	return t.Ja3s
 }
 
-func (o *TLS) GetJa4s() *string {
-	if o == nil {
+func (t *TLS) GetJa4s() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Ja4s
+	return t.Ja4s
 }
 
-func (o *TLS) GetPresentedChain() []TLSChain {
-	if o == nil {
+func (t *TLS) GetPresentedChain() []TLSChain {
+	if t == nil {
 		return nil
 	}
-	return o.PresentedChain
+	return t.PresentedChain
 }
 
-func (o *TLS) GetVersionSelected() *VersionSelected {
-	if o == nil {
+func (t *TLS) GetVersionSelected() *VersionSelected {
+	if t == nil {
 		return nil
 	}
-	return o.VersionSelected
+	return t.VersionSelected
 }
 
-func (o *TLS) GetVersions() []TLSVersionData {
-	if o == nil {
+func (t *TLS) GetVersions() []TLSVersionData {
+	if t == nil {
 		return nil
 	}
-	return o.Versions
+	return t.Versions
 }

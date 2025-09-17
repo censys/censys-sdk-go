@@ -6,9 +6,9 @@ type L2TpSccrp struct {
 	AttributeValues *L2TpAttributeValues `json:"attribute_values,omitempty"`
 }
 
-func (o *L2TpSccrp) GetAttributeValues() *L2TpAttributeValues {
-	if o == nil {
+func (l *L2TpSccrp) GetAttributeValues() *L2TpAttributeValues {
+	if l == nil {
 		return nil
 	}
-	return o.AttributeValues
+	return l.AttributeValues
 }

@@ -7,9 +7,9 @@ type HTTPRepeatedHeaders struct {
 	Headers []string `json:"headers,omitempty"`
 }
 
-func (o *HTTPRepeatedHeaders) GetHeaders() []string {
-	if o == nil {
+func (h *HTTPRepeatedHeaders) GetHeaders() []string {
+	if h == nil {
 		return nil
 	}
-	return o.Headers
+	return h.Headers
 }

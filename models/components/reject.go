@@ -59,16 +59,16 @@ type Reject struct {
 	Type   *RejectType `json:"type,omitempty"`
 }
 
-func (o *Reject) GetReason() *string {
-	if o == nil {
+func (r *Reject) GetReason() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Reason
+	return r.Reason
 }
 
-func (o *Reject) GetType() *RejectType {
-	if o == nil {
+func (r *Reject) GetType() *RejectType {
+	if r == nil {
 		return nil
 	}
-	return o.Type
+	return r.Type
 }

@@ -12,51 +12,51 @@ type NodeInfoV1 struct {
 	Version                 *string  `json:"version,omitempty"`
 }
 
-func (o *NodeInfoV1) GetConfirmedMilestoneIndex() *int64 {
-	if o == nil {
+func (n *NodeInfoV1) GetConfirmedMilestoneIndex() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.ConfirmedMilestoneIndex
+	return n.ConfirmedMilestoneIndex
 }
 
-func (o *NodeInfoV1) GetFeatures() []string {
-	if o == nil {
+func (n *NodeInfoV1) GetFeatures() []string {
+	if n == nil {
 		return nil
 	}
-	return o.Features
+	return n.Features
 }
 
-func (o *NodeInfoV1) GetIsHealthy() *bool {
-	if o == nil {
+func (n *NodeInfoV1) GetIsHealthy() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.IsHealthy
+	return n.IsHealthy
 }
 
-func (o *NodeInfoV1) GetLatestMilestoneIndex() *int64 {
-	if o == nil {
+func (n *NodeInfoV1) GetLatestMilestoneIndex() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.LatestMilestoneIndex
+	return n.LatestMilestoneIndex
 }
 
-func (o *NodeInfoV1) GetName() *string {
-	if o == nil {
+func (n *NodeInfoV1) GetName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Name
+	return n.Name
 }
 
-func (o *NodeInfoV1) GetNetworkID() *string {
-	if o == nil {
+func (n *NodeInfoV1) GetNetworkID() *string {
+	if n == nil {
 		return nil
 	}
-	return o.NetworkID
+	return n.NetworkID
 }
 
-func (o *NodeInfoV1) GetVersion() *string {
-	if o == nil {
+func (n *NodeInfoV1) GetVersion() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Version
+	return n.Version
 }

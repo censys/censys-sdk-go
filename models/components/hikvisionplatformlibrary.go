@@ -7,16 +7,16 @@ type HikvisionPlatformLibrary struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *HikvisionPlatformLibrary) GetName() *string {
-	if o == nil {
+func (h *HikvisionPlatformLibrary) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }
 
-func (o *HikvisionPlatformLibrary) GetVersion() *string {
-	if o == nil {
+func (h *HikvisionPlatformLibrary) GetVersion() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Version
+	return h.Version
 }

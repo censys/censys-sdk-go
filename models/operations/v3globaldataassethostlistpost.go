@@ -10,31 +10,31 @@ type V3GlobaldataAssetHostListPostGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataAssetHostListPostGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetHostListPostGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataAssetHostListPostRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID         *string                           `queryParam:"style=form,explode=false,name=organization_id"`
 	AssetHostListInputBody components.AssetHostListInputBody `request:"mediaType=application/json"`
 }
 
-func (o *V3GlobaldataAssetHostListPostRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetHostListPostRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataAssetHostListPostRequest) GetAssetHostListInputBody() components.AssetHostListInputBody {
-	if o == nil {
+func (v *V3GlobaldataAssetHostListPostRequest) GetAssetHostListInputBody() components.AssetHostListInputBody {
+	if v == nil {
 		return components.AssetHostListInputBody{}
 	}
-	return o.AssetHostListInputBody
+	return v.AssetHostListInputBody
 }
 
 type V3GlobaldataAssetHostListPostResponse struct {
@@ -44,23 +44,23 @@ type V3GlobaldataAssetHostListPostResponse struct {
 	Headers                       map[string][]string
 }
 
-func (o *V3GlobaldataAssetHostListPostResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataAssetHostListPostResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataAssetHostListPostResponse) GetResponseEnvelopeListHostAsset() *components.ResponseEnvelopeListHostAsset {
-	if o == nil {
+func (v *V3GlobaldataAssetHostListPostResponse) GetResponseEnvelopeListHostAsset() *components.ResponseEnvelopeListHostAsset {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeListHostAsset
+	return v.ResponseEnvelopeListHostAsset
 }
 
-func (o *V3GlobaldataAssetHostListPostResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataAssetHostListPostResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

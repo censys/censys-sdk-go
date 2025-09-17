@@ -8,23 +8,23 @@ type PgbouncerStartupCapabilities struct {
 	V4 *bool `json:"v4,omitempty"`
 }
 
-func (o *PgbouncerStartupCapabilities) GetV2() *bool {
-	if o == nil {
+func (p *PgbouncerStartupCapabilities) GetV2() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.V2
+	return p.V2
 }
 
-func (o *PgbouncerStartupCapabilities) GetV3() *bool {
-	if o == nil {
+func (p *PgbouncerStartupCapabilities) GetV3() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.V3
+	return p.V3
 }
 
-func (o *PgbouncerStartupCapabilities) GetV4() *bool {
-	if o == nil {
+func (p *PgbouncerStartupCapabilities) GetV4() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.V4
+	return p.V4
 }

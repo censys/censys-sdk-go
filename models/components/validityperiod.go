@@ -11,23 +11,23 @@ type ValidityPeriod struct {
 	NotBefore *string `json:"not_before,omitempty"`
 }
 
-func (o *ValidityPeriod) GetLengthSeconds() *int64 {
-	if o == nil {
+func (v *ValidityPeriod) GetLengthSeconds() *int64 {
+	if v == nil {
 		return nil
 	}
-	return o.LengthSeconds
+	return v.LengthSeconds
 }
 
-func (o *ValidityPeriod) GetNotAfter() *string {
-	if o == nil {
+func (v *ValidityPeriod) GetNotAfter() *string {
+	if v == nil {
 		return nil
 	}
-	return o.NotAfter
+	return v.NotAfter
 }
 
-func (o *ValidityPeriod) GetNotBefore() *string {
-	if o == nil {
+func (v *ValidityPeriod) GetNotBefore() *string {
+	if v == nil {
 		return nil
 	}
-	return o.NotBefore
+	return v.NotBefore
 }

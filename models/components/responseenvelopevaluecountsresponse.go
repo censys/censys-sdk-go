@@ -6,9 +6,9 @@ type ResponseEnvelopeValueCountsResponse struct {
 	Result *ValueCountsResponse `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeValueCountsResponse) GetResult() *ValueCountsResponse {
-	if o == nil {
+func (r *ResponseEnvelopeValueCountsResponse) GetResult() *ValueCountsResponse {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

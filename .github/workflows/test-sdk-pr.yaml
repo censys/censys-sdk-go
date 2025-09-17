@@ -29,6 +29,10 @@ jobs:
           go-version: '1.22.5'
           cache: true
 
+      - name: Verify dependencies
+        working-directory: ${{ github.workspace }}/tests
+        run: go mod tidy && go mod verify
+
       - name: Run tests
         working-directory: ${{ github.workspace }}/tests
         env:

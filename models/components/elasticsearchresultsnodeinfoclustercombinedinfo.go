@@ -11,44 +11,44 @@ type ElasticSearchResultsNodeInfoClusterCombinedInfo struct {
 	UUID       *string                                                    `json:"uuid,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetFilesystem() *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetFilesystem() *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem {
+	if e == nil {
 		return nil
 	}
-	return o.Filesystem
+	return e.Filesystem
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetIndices() *ElasticSearchResultsNodeInfoClusterCombinedInfoIndices {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetIndices() *ElasticSearchResultsNodeInfoClusterCombinedInfoIndices {
+	if e == nil {
 		return nil
 	}
-	return o.Indices
+	return e.Indices
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetName() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetStatus() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetStatus() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetTimestamp() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetTimestamp() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Timestamp
+	return e.Timestamp
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetUUID() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetUUID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.UUID
+	return e.UUID
 }

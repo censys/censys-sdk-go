@@ -6,9 +6,9 @@ type Darkcomet struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *Darkcomet) GetVersion() *string {
-	if o == nil {
+func (d *Darkcomet) GetVersion() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Version
+	return d.Version
 }

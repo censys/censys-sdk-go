@@ -6,9 +6,9 @@ type ResponseEnvelopeSearchQueryResponse struct {
 	Result *SearchQueryResponse `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeSearchQueryResponse) GetResult() *SearchQueryResponse {
-	if o == nil {
+func (r *ResponseEnvelopeSearchQueryResponse) GetResult() *SearchQueryResponse {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

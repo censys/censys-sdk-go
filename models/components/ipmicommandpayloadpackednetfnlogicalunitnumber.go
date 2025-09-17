@@ -9,16 +9,16 @@ type IpmiCommandPayloadPackedNetFnLogicalUnitNumber struct {
 	Raw *int `json:"raw,omitempty"`
 }
 
-func (o *IpmiCommandPayloadPackedNetFnLogicalUnitNumber) GetName() *string {
-	if o == nil {
+func (i *IpmiCommandPayloadPackedNetFnLogicalUnitNumber) GetName() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *IpmiCommandPayloadPackedNetFnLogicalUnitNumber) GetRaw() *int {
-	if o == nil {
+func (i *IpmiCommandPayloadPackedNetFnLogicalUnitNumber) GetRaw() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }

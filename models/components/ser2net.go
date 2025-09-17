@@ -10,37 +10,37 @@ type Ser2Net struct {
 	SoftwareVersion  *string                  `json:"software_version,omitempty"`
 }
 
-func (o *Ser2Net) GetDevice() *string {
-	if o == nil {
+func (s *Ser2Net) GetDevice() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Device
+	return s.Device
 }
 
-func (o *Ser2Net) GetOs() *string {
-	if o == nil {
+func (s *Ser2Net) GetOs() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Os
+	return s.Os
 }
 
-func (o *Ser2Net) GetSerialParameters() *Ser2NetSerialParameters {
-	if o == nil {
+func (s *Ser2Net) GetSerialParameters() *Ser2NetSerialParameters {
+	if s == nil {
 		return nil
 	}
-	return o.SerialParameters
+	return s.SerialParameters
 }
 
-func (o *Ser2Net) GetSoftware() *string {
-	if o == nil {
+func (s *Ser2Net) GetSoftware() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Software
+	return s.Software
 }
 
-func (o *Ser2Net) GetSoftwareVersion() *string {
-	if o == nil {
+func (s *Ser2Net) GetSoftwareVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SoftwareVersion
+	return s.SoftwareVersion
 }

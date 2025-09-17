@@ -17,86 +17,86 @@ type DvrIP struct {
 	WirelessAlarmCapability *string                   `json:"wireless_alarm_capability,omitempty"`
 }
 
-func (o *DvrIP) GetAccessURL() *string {
-	if o == nil {
+func (d *DvrIP) GetAccessURL() *string {
+	if d == nil {
 		return nil
 	}
-	return o.AccessURL
+	return d.AccessURL
 }
 
-func (o *DvrIP) GetFunctionCapability() *string {
-	if o == nil {
+func (d *DvrIP) GetFunctionCapability() *string {
+	if d == nil {
 		return nil
 	}
-	return o.FunctionCapability
+	return d.FunctionCapability
 }
 
-func (o *DvrIP) GetFunctionList() *string {
-	if o == nil {
+func (d *DvrIP) GetFunctionList() *string {
+	if d == nil {
 		return nil
 	}
-	return o.FunctionList
+	return d.FunctionList
 }
 
-func (o *DvrIP) GetHardDrive() *string {
-	if o == nil {
+func (d *DvrIP) GetHardDrive() *string {
+	if d == nil {
 		return nil
 	}
-	return o.HardDrive
+	return d.HardDrive
 }
 
-func (o *DvrIP) GetLanguageSupport() *string {
-	if o == nil {
+func (d *DvrIP) GetLanguageSupport() *string {
+	if d == nil {
 		return nil
 	}
-	return o.LanguageSupport
+	return d.LanguageSupport
 }
 
-func (o *DvrIP) GetNetworkStatus() *string {
-	if o == nil {
+func (d *DvrIP) GetNetworkStatus() *string {
+	if d == nil {
 		return nil
 	}
-	return o.NetworkStatus
+	return d.NetworkStatus
 }
 
-func (o *DvrIP) GetOemInfo() *string {
-	if o == nil {
+func (d *DvrIP) GetOemInfo() *string {
+	if d == nil {
 		return nil
 	}
-	return o.OemInfo
+	return d.OemInfo
 }
 
-func (o *DvrIP) GetPartitionCapability() *DvrIPPartitionCapability {
-	if o == nil {
+func (d *DvrIP) GetPartitionCapability() *DvrIPPartitionCapability {
+	if d == nil {
 		return nil
 	}
-	return o.PartitionCapability
+	return d.PartitionCapability
 }
 
-func (o *DvrIP) GetSerial() *string {
-	if o == nil {
+func (d *DvrIP) GetSerial() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Serial
+	return d.Serial
 }
 
-func (o *DvrIP) GetSplitScreenCapability() *string {
-	if o == nil {
+func (d *DvrIP) GetSplitScreenCapability() *string {
+	if d == nil {
 		return nil
 	}
-	return o.SplitScreenCapability
+	return d.SplitScreenCapability
 }
 
-func (o *DvrIP) GetVersion() *string {
-	if o == nil {
+func (d *DvrIP) GetVersion() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Version
+	return d.Version
 }
 
-func (o *DvrIP) GetWirelessAlarmCapability() *string {
-	if o == nil {
+func (d *DvrIP) GetWirelessAlarmCapability() *string {
+	if d == nil {
 		return nil
 	}
-	return o.WirelessAlarmCapability
+	return d.WirelessAlarmCapability
 }

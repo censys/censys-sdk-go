@@ -6,9 +6,9 @@ type PrometheusTarget struct {
 	MetricFamilies []PrometheusMetricFamily `json:"metric_families,omitempty"`
 }
 
-func (o *PrometheusTarget) GetMetricFamilies() []PrometheusMetricFamily {
-	if o == nil {
+func (p *PrometheusTarget) GetMetricFamilies() []PrometheusMetricFamily {
+	if p == nil {
 		return nil
 	}
-	return o.MetricFamilies
+	return p.MetricFamilies
 }

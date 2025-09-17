@@ -6,9 +6,9 @@ type ResponseEnvelopeListCollectionsResponseV1 struct {
 	Result *ListCollectionsResponseV1 `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeListCollectionsResponseV1) GetResult() *ListCollectionsResponseV1 {
-	if o == nil {
+func (r *ResponseEnvelopeListCollectionsResponseV1) GetResult() *ListCollectionsResponseV1 {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

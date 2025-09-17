@@ -12,51 +12,51 @@ type MoneroP2PResponseHeader struct {
 	Version         *int   `json:"version,omitempty"`
 }
 
-func (o *MoneroP2PResponseHeader) GetCommand() *int {
-	if o == nil {
+func (m *MoneroP2PResponseHeader) GetCommand() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Command
+	return m.Command
 }
 
-func (o *MoneroP2PResponseHeader) GetExpectsResponse() *bool {
-	if o == nil {
+func (m *MoneroP2PResponseHeader) GetExpectsResponse() *bool {
+	if m == nil {
 		return nil
 	}
-	return o.ExpectsResponse
+	return m.ExpectsResponse
 }
 
-func (o *MoneroP2PResponseHeader) GetFlags() *int {
-	if o == nil {
+func (m *MoneroP2PResponseHeader) GetFlags() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Flags
+	return m.Flags
 }
 
-func (o *MoneroP2PResponseHeader) GetLength() *int {
-	if o == nil {
+func (m *MoneroP2PResponseHeader) GetLength() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Length
+	return m.Length
 }
 
-func (o *MoneroP2PResponseHeader) GetReturnCode() *int {
-	if o == nil {
+func (m *MoneroP2PResponseHeader) GetReturnCode() *int {
+	if m == nil {
 		return nil
 	}
-	return o.ReturnCode
+	return m.ReturnCode
 }
 
-func (o *MoneroP2PResponseHeader) GetSignature() *int64 {
-	if o == nil {
+func (m *MoneroP2PResponseHeader) GetSignature() *int64 {
+	if m == nil {
 		return nil
 	}
-	return o.Signature
+	return m.Signature
 }
 
-func (o *MoneroP2PResponseHeader) GetVersion() *int {
-	if o == nil {
+func (m *MoneroP2PResponseHeader) GetVersion() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Version
+	return m.Version
 }

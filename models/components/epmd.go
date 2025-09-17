@@ -6,9 +6,9 @@ type Epmd struct {
 	Names []string `json:"names,omitempty"`
 }
 
-func (o *Epmd) GetNames() []string {
-	if o == nil {
+func (e *Epmd) GetNames() []string {
+	if e == nil {
 		return nil
 	}
-	return o.Names
+	return e.Names
 }

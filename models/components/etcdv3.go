@@ -8,23 +8,23 @@ type EtcdV3 struct {
 	TotalKeys *int      `json:"total_keys,omitempty"`
 }
 
-func (o *EtcdV3) GetAuth() *Auth {
-	if o == nil {
+func (e *EtcdV3) GetAuth() *Auth {
+	if e == nil {
 		return nil
 	}
-	return o.Auth
+	return e.Auth
 }
 
-func (o *EtcdV3) GetMembers() []Members {
-	if o == nil {
+func (e *EtcdV3) GetMembers() []Members {
+	if e == nil {
 		return nil
 	}
-	return o.Members
+	return e.Members
 }
 
-func (o *EtcdV3) GetTotalKeys() *int {
-	if o == nil {
+func (e *EtcdV3) GetTotalKeys() *int {
+	if e == nil {
 		return nil
 	}
-	return o.TotalKeys
+	return e.TotalKeys
 }

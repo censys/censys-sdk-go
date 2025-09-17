@@ -10,31 +10,31 @@ type V3ThreathuntingValueCountsGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3ThreathuntingValueCountsGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3ThreathuntingValueCountsGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3ThreathuntingValueCountsRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID             *string                               `queryParam:"style=form,explode=false,name=organization_id"`
 	SearchValueCountsInputBody components.SearchValueCountsInputBody `request:"mediaType=application/json"`
 }
 
-func (o *V3ThreathuntingValueCountsRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3ThreathuntingValueCountsRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3ThreathuntingValueCountsRequest) GetSearchValueCountsInputBody() components.SearchValueCountsInputBody {
-	if o == nil {
+func (v *V3ThreathuntingValueCountsRequest) GetSearchValueCountsInputBody() components.SearchValueCountsInputBody {
+	if v == nil {
 		return components.SearchValueCountsInputBody{}
 	}
-	return o.SearchValueCountsInputBody
+	return v.SearchValueCountsInputBody
 }
 
 type V3ThreathuntingValueCountsResponse struct {
@@ -44,23 +44,23 @@ type V3ThreathuntingValueCountsResponse struct {
 	Headers                             map[string][]string
 }
 
-func (o *V3ThreathuntingValueCountsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3ThreathuntingValueCountsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3ThreathuntingValueCountsResponse) GetResponseEnvelopeValueCountsResponse() *components.ResponseEnvelopeValueCountsResponse {
-	if o == nil {
+func (v *V3ThreathuntingValueCountsResponse) GetResponseEnvelopeValueCountsResponse() *components.ResponseEnvelopeValueCountsResponse {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeValueCountsResponse
+	return v.ResponseEnvelopeValueCountsResponse
 }
 
-func (o *V3ThreathuntingValueCountsResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3ThreathuntingValueCountsResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

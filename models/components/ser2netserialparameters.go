@@ -9,30 +9,30 @@ type Ser2NetSerialParameters struct {
 	StopBits *string `json:"stop_bits,omitempty"`
 }
 
-func (o *Ser2NetSerialParameters) GetBaudRate() *string {
-	if o == nil {
+func (s *Ser2NetSerialParameters) GetBaudRate() *string {
+	if s == nil {
 		return nil
 	}
-	return o.BaudRate
+	return s.BaudRate
 }
 
-func (o *Ser2NetSerialParameters) GetDataBits() *string {
-	if o == nil {
+func (s *Ser2NetSerialParameters) GetDataBits() *string {
+	if s == nil {
 		return nil
 	}
-	return o.DataBits
+	return s.DataBits
 }
 
-func (o *Ser2NetSerialParameters) GetParity() *string {
-	if o == nil {
+func (s *Ser2NetSerialParameters) GetParity() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Parity
+	return s.Parity
 }
 
-func (o *Ser2NetSerialParameters) GetStopBits() *string {
-	if o == nil {
+func (s *Ser2NetSerialParameters) GetStopBits() *string {
+	if s == nil {
 		return nil
 	}
-	return o.StopBits
+	return s.StopBits
 }

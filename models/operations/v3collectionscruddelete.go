@@ -10,32 +10,32 @@ type V3CollectionsCrudDeleteGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3CollectionsCrudDeleteGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsCrudDeleteGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3CollectionsCrudDeleteRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The UID for the collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console.
 	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
 }
 
-func (o *V3CollectionsCrudDeleteRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsCrudDeleteRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3CollectionsCrudDeleteRequest) GetCollectionUID() string {
-	if o == nil {
+func (v *V3CollectionsCrudDeleteRequest) GetCollectionUID() string {
+	if v == nil {
 		return ""
 	}
-	return o.CollectionUID
+	return v.CollectionUID
 }
 
 type V3CollectionsCrudDeleteResponse struct {
@@ -43,16 +43,16 @@ type V3CollectionsCrudDeleteResponse struct {
 	Headers  map[string][]string
 }
 
-func (o *V3CollectionsCrudDeleteResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3CollectionsCrudDeleteResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3CollectionsCrudDeleteResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3CollectionsCrudDeleteResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

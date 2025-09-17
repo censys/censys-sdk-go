@@ -13,58 +13,58 @@ type NodeInfoV0 struct {
 	Version                    *string  `json:"version,omitempty"`
 }
 
-func (o *NodeInfoV0) GetFeatures() []string {
-	if o == nil {
+func (n *NodeInfoV0) GetFeatures() []string {
+	if n == nil {
 		return nil
 	}
-	return o.Features
+	return n.Features
 }
 
-func (o *NodeInfoV0) GetIsHealthy() *bool {
-	if o == nil {
+func (n *NodeInfoV0) GetIsHealthy() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.IsHealthy
+	return n.IsHealthy
 }
 
-func (o *NodeInfoV0) GetLatestMilestone() *int64 {
-	if o == nil {
+func (n *NodeInfoV0) GetLatestMilestone() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.LatestMilestone
+	return n.LatestMilestone
 }
 
-func (o *NodeInfoV0) GetLatestUncommittedMilestone() *int64 {
-	if o == nil {
+func (n *NodeInfoV0) GetLatestUncommittedMilestone() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.LatestUncommittedMilestone
+	return n.LatestUncommittedMilestone
 }
 
-func (o *NodeInfoV0) GetName() *string {
-	if o == nil {
+func (n *NodeInfoV0) GetName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Name
+	return n.Name
 }
 
-func (o *NodeInfoV0) GetNeighbors() *int64 {
-	if o == nil {
+func (n *NodeInfoV0) GetNeighbors() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.Neighbors
+	return n.Neighbors
 }
 
-func (o *NodeInfoV0) GetTips() *int64 {
-	if o == nil {
+func (n *NodeInfoV0) GetTips() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.Tips
+	return n.Tips
 }
 
-func (o *NodeInfoV0) GetVersion() *string {
-	if o == nil {
+func (n *NodeInfoV0) GetVersion() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Version
+	return n.Version
 }

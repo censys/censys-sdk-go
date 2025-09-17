@@ -23,100 +23,100 @@ type CertificateParsed struct {
 	Version           *int            `json:"version,omitempty"`
 }
 
-func (o *CertificateParsed) GetExtensions() *CertificateExtensions {
-	if o == nil {
+func (c *CertificateParsed) GetExtensions() *CertificateExtensions {
+	if c == nil {
 		return nil
 	}
-	return o.Extensions
+	return c.Extensions
 }
 
-func (o *CertificateParsed) GetIssuer() *DistinguishedName {
-	if o == nil {
+func (c *CertificateParsed) GetIssuer() *DistinguishedName {
+	if c == nil {
 		return nil
 	}
-	return o.Issuer
+	return c.Issuer
 }
 
-func (o *CertificateParsed) GetIssuerDn() *string {
-	if o == nil {
+func (c *CertificateParsed) GetIssuerDn() *string {
+	if c == nil {
 		return nil
 	}
-	return o.IssuerDn
+	return c.IssuerDn
 }
 
-func (o *CertificateParsed) GetJa4x() *string {
-	if o == nil {
+func (c *CertificateParsed) GetJa4x() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Ja4x
+	return c.Ja4x
 }
 
-func (o *CertificateParsed) GetRedacted() *bool {
-	if o == nil {
+func (c *CertificateParsed) GetRedacted() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Redacted
+	return c.Redacted
 }
 
-func (o *CertificateParsed) GetSerialNumber() *string {
-	if o == nil {
+func (c *CertificateParsed) GetSerialNumber() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SerialNumber
+	return c.SerialNumber
 }
 
-func (o *CertificateParsed) GetSerialNumberHex() *string {
-	if o == nil {
+func (c *CertificateParsed) GetSerialNumberHex() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SerialNumberHex
+	return c.SerialNumberHex
 }
 
-func (o *CertificateParsed) GetSignature() *Signature {
-	if o == nil {
+func (c *CertificateParsed) GetSignature() *Signature {
+	if c == nil {
 		return nil
 	}
-	return o.Signature
+	return c.Signature
 }
 
-func (o *CertificateParsed) GetSubject() *DistinguishedName {
-	if o == nil {
+func (c *CertificateParsed) GetSubject() *DistinguishedName {
+	if c == nil {
 		return nil
 	}
-	return o.Subject
+	return c.Subject
 }
 
-func (o *CertificateParsed) GetSubjectDn() *string {
-	if o == nil {
+func (c *CertificateParsed) GetSubjectDn() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SubjectDn
+	return c.SubjectDn
 }
 
-func (o *CertificateParsed) GetSubjectKeyInfo() *SubjectKeyInfo {
-	if o == nil {
+func (c *CertificateParsed) GetSubjectKeyInfo() *SubjectKeyInfo {
+	if c == nil {
 		return nil
 	}
-	return o.SubjectKeyInfo
+	return c.SubjectKeyInfo
 }
 
-func (o *CertificateParsed) GetUnknownExtensions() []Extension {
-	if o == nil {
+func (c *CertificateParsed) GetUnknownExtensions() []Extension {
+	if c == nil {
 		return nil
 	}
-	return o.UnknownExtensions
+	return c.UnknownExtensions
 }
 
-func (o *CertificateParsed) GetValidityPeriod() *ValidityPeriod {
-	if o == nil {
+func (c *CertificateParsed) GetValidityPeriod() *ValidityPeriod {
+	if c == nil {
 		return nil
 	}
-	return o.ValidityPeriod
+	return c.ValidityPeriod
 }
 
-func (o *CertificateParsed) GetVersion() *int {
-	if o == nil {
+func (c *CertificateParsed) GetVersion() *int {
+	if c == nil {
 		return nil
 	}
-	return o.Version
+	return c.Version
 }

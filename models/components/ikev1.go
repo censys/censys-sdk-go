@@ -11,23 +11,23 @@ type IkeV1 struct {
 	VendorIds []string `json:"vendor_ids,omitempty"`
 }
 
-func (o *IkeV1) GetAcceptedProposal() *bool {
-	if o == nil {
+func (i *IkeV1) GetAcceptedProposal() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.AcceptedProposal
+	return i.AcceptedProposal
 }
 
-func (o *IkeV1) GetNotifyMessageTypes() []int {
-	if o == nil {
+func (i *IkeV1) GetNotifyMessageTypes() []int {
+	if i == nil {
 		return nil
 	}
-	return o.NotifyMessageTypes
+	return i.NotifyMessageTypes
 }
 
-func (o *IkeV1) GetVendorIds() []string {
-	if o == nil {
+func (i *IkeV1) GetVendorIds() []string {
+	if i == nil {
 		return nil
 	}
-	return o.VendorIds
+	return i.VendorIds
 }

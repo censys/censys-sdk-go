@@ -10,23 +10,23 @@ type Cvss struct {
 	Vector *string `json:"vector,omitempty"`
 }
 
-func (o *Cvss) GetComponents() *CVSSComponents {
-	if o == nil {
+func (c *Cvss) GetComponents() *CVSSComponents {
+	if c == nil {
 		return nil
 	}
-	return o.Components
+	return c.Components
 }
 
-func (o *Cvss) GetScore() *float64 {
-	if o == nil {
+func (c *Cvss) GetScore() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Score
+	return c.Score
 }
 
-func (o *Cvss) GetVector() *string {
-	if o == nil {
+func (c *Cvss) GetVector() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Vector
+	return c.Vector
 }

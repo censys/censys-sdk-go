@@ -12,51 +12,51 @@ type SevenDaysToDie struct {
 	Version       *string `json:"version,omitempty"`
 }
 
-func (o *SevenDaysToDie) GetGameName() *string {
-	if o == nil {
+func (s *SevenDaysToDie) GetGameName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.GameName
+	return s.GameName
 }
 
-func (o *SevenDaysToDie) GetGameType() *string {
-	if o == nil {
+func (s *SevenDaysToDie) GetGameType() *string {
+	if s == nil {
 		return nil
 	}
-	return o.GameType
+	return s.GameType
 }
 
-func (o *SevenDaysToDie) GetRegion() *string {
-	if o == nil {
+func (s *SevenDaysToDie) GetRegion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Region
+	return s.Region
 }
 
-func (o *SevenDaysToDie) GetServerURL() *string {
-	if o == nil {
+func (s *SevenDaysToDie) GetServerURL() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ServerURL
+	return s.ServerURL
 }
 
-func (o *SevenDaysToDie) GetServerVersion() *string {
-	if o == nil {
+func (s *SevenDaysToDie) GetServerVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ServerVersion
+	return s.ServerVersion
 }
 
-func (o *SevenDaysToDie) GetSteamID() *string {
-	if o == nil {
+func (s *SevenDaysToDie) GetSteamID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SteamID
+	return s.SteamID
 }
 
-func (o *SevenDaysToDie) GetVersion() *string {
-	if o == nil {
+func (s *SevenDaysToDie) GetVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Version
+	return s.Version
 }

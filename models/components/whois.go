@@ -7,16 +7,16 @@ type Whois struct {
 	Organization *Organization `json:"organization,omitempty"`
 }
 
-func (o *Whois) GetNetwork() *Network {
-	if o == nil {
+func (w *Whois) GetNetwork() *Network {
+	if w == nil {
 		return nil
 	}
-	return o.Network
+	return w.Network
 }
 
-func (o *Whois) GetOrganization() *Organization {
-	if o == nil {
+func (w *Whois) GetOrganization() *Organization {
+	if w == nil {
 		return nil
 	}
-	return o.Organization
+	return w.Organization
 }

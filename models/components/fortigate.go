@@ -11,44 +11,44 @@ type Fortigate struct {
 	Version    *string `json:"version,omitempty"`
 }
 
-func (o *Fortigate) GetAPIVersion() *string {
-	if o == nil {
+func (f *Fortigate) GetAPIVersion() *string {
+	if f == nil {
 		return nil
 	}
-	return o.APIVersion
+	return f.APIVersion
 }
 
-func (o *Fortigate) GetBuild() *int {
-	if o == nil {
+func (f *Fortigate) GetBuild() *int {
+	if f == nil {
 		return nil
 	}
-	return o.Build
+	return f.Build
 }
 
-func (o *Fortigate) GetSerial() *string {
-	if o == nil {
+func (f *Fortigate) GetSerial() *string {
+	if f == nil {
 		return nil
 	}
-	return o.Serial
+	return f.Serial
 }
 
-func (o *Fortigate) GetStatusCode() *int {
-	if o == nil {
+func (f *Fortigate) GetStatusCode() *int {
+	if f == nil {
 		return nil
 	}
-	return o.StatusCode
+	return f.StatusCode
 }
 
-func (o *Fortigate) GetStatusMsg() *string {
-	if o == nil {
+func (f *Fortigate) GetStatusMsg() *string {
+	if f == nil {
 		return nil
 	}
-	return o.StatusMsg
+	return f.StatusMsg
 }
 
-func (o *Fortigate) GetVersion() *string {
-	if o == nil {
+func (f *Fortigate) GetVersion() *string {
+	if f == nil {
 		return nil
 	}
-	return o.Version
+	return f.Version
 }

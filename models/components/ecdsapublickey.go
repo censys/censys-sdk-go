@@ -15,72 +15,72 @@ type EcdsaPublicKey struct {
 	Y      *string `json:"y,omitempty"`
 }
 
-func (o *EcdsaPublicKey) GetB() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetB() *string {
+	if e == nil {
 		return nil
 	}
-	return o.B
+	return e.B
 }
 
-func (o *EcdsaPublicKey) GetCurve() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetCurve() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Curve
+	return e.Curve
 }
 
-func (o *EcdsaPublicKey) GetGx() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetGx() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Gx
+	return e.Gx
 }
 
-func (o *EcdsaPublicKey) GetGy() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetGy() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Gy
+	return e.Gy
 }
 
-func (o *EcdsaPublicKey) GetLength() *int64 {
-	if o == nil {
+func (e *EcdsaPublicKey) GetLength() *int64 {
+	if e == nil {
 		return nil
 	}
-	return o.Length
+	return e.Length
 }
 
-func (o *EcdsaPublicKey) GetN() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetN() *string {
+	if e == nil {
 		return nil
 	}
-	return o.N
+	return e.N
 }
 
-func (o *EcdsaPublicKey) GetP() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetP() *string {
+	if e == nil {
 		return nil
 	}
-	return o.P
+	return e.P
 }
 
-func (o *EcdsaPublicKey) GetPub() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetPub() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pub
+	return e.Pub
 }
 
-func (o *EcdsaPublicKey) GetX() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetX() *string {
+	if e == nil {
 		return nil
 	}
-	return o.X
+	return e.X
 }
 
-func (o *EcdsaPublicKey) GetY() *string {
-	if o == nil {
+func (e *EcdsaPublicKey) GetY() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Y
+	return e.Y
 }

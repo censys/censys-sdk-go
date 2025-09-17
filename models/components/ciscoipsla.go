@@ -7,16 +7,16 @@ type CiscoIpsla struct {
 	MeasureResponse *CiscoIpslaMeasureResponse `json:"measure_response,omitempty"`
 }
 
-func (o *CiscoIpsla) GetHandshake() *CiscoIpslaHandshake {
-	if o == nil {
+func (c *CiscoIpsla) GetHandshake() *CiscoIpslaHandshake {
+	if c == nil {
 		return nil
 	}
-	return o.Handshake
+	return c.Handshake
 }
 
-func (o *CiscoIpsla) GetMeasureResponse() *CiscoIpslaMeasureResponse {
-	if o == nil {
+func (c *CiscoIpsla) GetMeasureResponse() *CiscoIpslaMeasureResponse {
+	if c == nil {
 		return nil
 	}
-	return o.MeasureResponse
+	return c.MeasureResponse
 }

@@ -6,9 +6,9 @@ type Ct struct {
 	Entries map[string]CtRecord `json:"entries,omitempty"`
 }
 
-func (o *Ct) GetEntries() map[string]CtRecord {
-	if o == nil {
+func (c *Ct) GetEntries() map[string]CtRecord {
+	if c == nil {
 		return nil
 	}
-	return o.Entries
+	return c.Entries
 }

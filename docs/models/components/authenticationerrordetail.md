@@ -1,0 +1,12 @@
+# AuthenticationErrorDetail
+
+
+## Fields
+
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     | Example                                                         |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `Code`                                                          | **int64*                                                        | :heavy_minus_sign:                                              | HTTP status code                                                | 401                                                             |
+| `Message`                                                       | **string*                                                       | :heavy_minus_sign:                                              | Human-readable message describing the error occurrence          | Access credentials are invalid                                  |
+| `Reason`                                                        | **string*                                                       | :heavy_minus_sign:                                              | Human-readable explanation of the underlying cause of the error | Access token is not active                                      |
+| `Request`                                                       | **string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |                                                                 |
+| `Status`                                                        | **string*                                                       | :heavy_minus_sign:                                              | HTTP status message associated with the error                   | Unauthorized                                                    |

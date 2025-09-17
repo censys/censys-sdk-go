@@ -7,16 +7,16 @@ type MurmurMessageMurmurHeader struct {
 	Type   *string `json:"type,omitempty"`
 }
 
-func (o *MurmurMessageMurmurHeader) GetLength() *int {
-	if o == nil {
+func (m *MurmurMessageMurmurHeader) GetLength() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Length
+	return m.Length
 }
 
-func (o *MurmurMessageMurmurHeader) GetType() *string {
-	if o == nil {
+func (m *MurmurMessageMurmurHeader) GetType() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Type
+	return m.Type
 }

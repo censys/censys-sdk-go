@@ -9,30 +9,30 @@ type CabfOrganizationID struct {
 	State     *string `json:"state,omitempty"`
 }
 
-func (o *CabfOrganizationID) GetCountry() *string {
-	if o == nil {
+func (c *CabfOrganizationID) GetCountry() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Country
+	return c.Country
 }
 
-func (o *CabfOrganizationID) GetReference() *string {
-	if o == nil {
+func (c *CabfOrganizationID) GetReference() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Reference
+	return c.Reference
 }
 
-func (o *CabfOrganizationID) GetScheme() *string {
-	if o == nil {
+func (c *CabfOrganizationID) GetScheme() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Scheme
+	return c.Scheme
 }
 
-func (o *CabfOrganizationID) GetState() *string {
-	if o == nil {
+func (c *CabfOrganizationID) GetState() *string {
+	if c == nil {
 		return nil
 	}
-	return o.State
+	return c.State
 }

@@ -8,23 +8,23 @@ type HostDNS struct {
 	ReverseDNS *HostDNSReverseResolution           `json:"reverse_dns,omitempty"`
 }
 
-func (o *HostDNS) GetForwardDNS() map[string]HostDNSForwardResolution {
-	if o == nil {
+func (h *HostDNS) GetForwardDNS() map[string]HostDNSForwardResolution {
+	if h == nil {
 		return nil
 	}
-	return o.ForwardDNS
+	return h.ForwardDNS
 }
 
-func (o *HostDNS) GetNames() []string {
-	if o == nil {
+func (h *HostDNS) GetNames() []string {
+	if h == nil {
 		return nil
 	}
-	return o.Names
+	return h.Names
 }
 
-func (o *HostDNS) GetReverseDNS() *HostDNSReverseResolution {
-	if o == nil {
+func (h *HostDNS) GetReverseDNS() *HostDNSReverseResolution {
+	if h == nil {
 		return nil
 	}
-	return o.ReverseDNS
+	return h.ReverseDNS
 }

@@ -7,16 +7,16 @@ type ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesStore struct {
 	SizeInBytes     *int `json:"size_in_bytes,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesStore) GetReservedInBytes() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesStore) GetReservedInBytes() *int {
+	if e == nil {
 		return nil
 	}
-	return o.ReservedInBytes
+	return e.ReservedInBytes
 }
 
-func (o *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesStore) GetSizeInBytes() *int {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesStore) GetSizeInBytes() *int {
+	if e == nil {
 		return nil
 	}
-	return o.SizeInBytes
+	return e.SizeInBytes
 }

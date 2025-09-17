@@ -8,23 +8,23 @@ type Eip struct {
 	Services   []EipService   `json:"services,omitempty"`
 }
 
-func (o *Eip) GetIdentity() *EipIdentity {
-	if o == nil {
+func (e *Eip) GetIdentity() *EipIdentity {
+	if e == nil {
 		return nil
 	}
-	return o.Identity
+	return e.Identity
 }
 
-func (o *Eip) GetInterfaces() []EipInterface {
-	if o == nil {
+func (e *Eip) GetInterfaces() []EipInterface {
+	if e == nil {
 		return nil
 	}
-	return o.Interfaces
+	return e.Interfaces
 }
 
-func (o *Eip) GetServices() []EipService {
-	if o == nil {
+func (e *Eip) GetServices() []EipService {
+	if e == nil {
 		return nil
 	}
-	return o.Services
+	return e.Services
 }

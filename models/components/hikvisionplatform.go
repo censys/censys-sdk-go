@@ -7,16 +7,16 @@ type HikvisionPlatform struct {
 	Name      *string                    `json:"name,omitempty"`
 }
 
-func (o *HikvisionPlatform) GetLibraries() []HikvisionPlatformLibrary {
-	if o == nil {
+func (h *HikvisionPlatform) GetLibraries() []HikvisionPlatformLibrary {
+	if h == nil {
 		return nil
 	}
-	return o.Libraries
+	return h.Libraries
 }
 
-func (o *HikvisionPlatform) GetName() *string {
-	if o == nil {
+func (h *HikvisionPlatform) GetName() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Name
+	return h.Name
 }

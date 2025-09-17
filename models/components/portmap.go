@@ -7,16 +7,16 @@ type Portmap struct {
 	V3Entries []PortmapV3Entry `json:"v3_entries,omitempty"`
 }
 
-func (o *Portmap) GetV2Entries() []PortmapV2Entry {
-	if o == nil {
+func (p *Portmap) GetV2Entries() []PortmapV2Entry {
+	if p == nil {
 		return nil
 	}
-	return o.V2Entries
+	return p.V2Entries
 }
 
-func (o *Portmap) GetV3Entries() []PortmapV3Entry {
-	if o == nil {
+func (p *Portmap) GetV3Entries() []PortmapV3Entry {
+	if p == nil {
 		return nil
 	}
-	return o.V3Entries
+	return p.V3Entries
 }

@@ -11,44 +11,44 @@ type ChromeDevtools struct {
 	WebkitVersion   *string                `json:"webkit_version,omitempty"`
 }
 
-func (o *ChromeDevtools) GetBrowser() *string {
-	if o == nil {
+func (c *ChromeDevtools) GetBrowser() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Browser
+	return c.Browser
 }
 
-func (o *ChromeDevtools) GetProtocolVersion() *string {
-	if o == nil {
+func (c *ChromeDevtools) GetProtocolVersion() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ProtocolVersion
+	return c.ProtocolVersion
 }
 
-func (o *ChromeDevtools) GetTargets() []ChromeDevtoolsTarget {
-	if o == nil {
+func (c *ChromeDevtools) GetTargets() []ChromeDevtoolsTarget {
+	if c == nil {
 		return nil
 	}
-	return o.Targets
+	return c.Targets
 }
 
-func (o *ChromeDevtools) GetUserAgent() *string {
-	if o == nil {
+func (c *ChromeDevtools) GetUserAgent() *string {
+	if c == nil {
 		return nil
 	}
-	return o.UserAgent
+	return c.UserAgent
 }
 
-func (o *ChromeDevtools) GetV8Version() *string {
-	if o == nil {
+func (c *ChromeDevtools) GetV8Version() *string {
+	if c == nil {
 		return nil
 	}
-	return o.V8Version
+	return c.V8Version
 }
 
-func (o *ChromeDevtools) GetWebkitVersion() *string {
-	if o == nil {
+func (c *ChromeDevtools) GetWebkitVersion() *string {
+	if c == nil {
 		return nil
 	}
-	return o.WebkitVersion
+	return c.WebkitVersion
 }

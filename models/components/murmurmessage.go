@@ -7,16 +7,16 @@ type MurmurMessage struct {
 	Header *MurmurMessageMurmurHeader `json:"header,omitempty"`
 }
 
-func (o *MurmurMessage) GetBody() *string {
-	if o == nil {
+func (m *MurmurMessage) GetBody() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Body
+	return m.Body
 }
 
-func (o *MurmurMessage) GetHeader() *MurmurMessageMurmurHeader {
-	if o == nil {
+func (m *MurmurMessage) GetHeader() *MurmurMessageMurmurHeader {
+	if m == nil {
 		return nil
 	}
-	return o.Header
+	return m.Header
 }

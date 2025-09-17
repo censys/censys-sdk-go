@@ -15,72 +15,72 @@ type Host struct {
 	Whois            *Whois     `json:"whois,omitempty"`
 }
 
-func (o *Host) GetAutonomousSystem() *Routing {
-	if o == nil {
+func (h *Host) GetAutonomousSystem() *Routing {
+	if h == nil {
 		return nil
 	}
-	return o.AutonomousSystem
+	return h.AutonomousSystem
 }
 
-func (o *Host) GetDNS() *HostDNS {
-	if o == nil {
+func (h *Host) GetDNS() *HostDNS {
+	if h == nil {
 		return nil
 	}
-	return o.DNS
+	return h.DNS
 }
 
-func (o *Host) GetHardware() *Attribute {
-	if o == nil {
+func (h *Host) GetHardware() *Attribute {
+	if h == nil {
 		return nil
 	}
-	return o.Hardware
+	return h.Hardware
 }
 
-func (o *Host) GetIP() *string {
-	if o == nil {
+func (h *Host) GetIP() *string {
+	if h == nil {
 		return nil
 	}
-	return o.IP
+	return h.IP
 }
 
-func (o *Host) GetLabels() []Label {
-	if o == nil {
+func (h *Host) GetLabels() []Label {
+	if h == nil {
 		return nil
 	}
-	return o.Labels
+	return h.Labels
 }
 
-func (o *Host) GetLocation() *Location {
-	if o == nil {
+func (h *Host) GetLocation() *Location {
+	if h == nil {
 		return nil
 	}
-	return o.Location
+	return h.Location
 }
 
-func (o *Host) GetOperatingSystem() *Attribute {
-	if o == nil {
+func (h *Host) GetOperatingSystem() *Attribute {
+	if h == nil {
 		return nil
 	}
-	return o.OperatingSystem
+	return h.OperatingSystem
 }
 
-func (o *Host) GetServiceCount() *int {
-	if o == nil {
+func (h *Host) GetServiceCount() *int {
+	if h == nil {
 		return nil
 	}
-	return o.ServiceCount
+	return h.ServiceCount
 }
 
-func (o *Host) GetServices() []Service {
-	if o == nil {
+func (h *Host) GetServices() []Service {
+	if h == nil {
 		return nil
 	}
-	return o.Services
+	return h.Services
 }
 
-func (o *Host) GetWhois() *Whois {
-	if o == nil {
+func (h *Host) GetWhois() *Whois {
+	if h == nil {
 		return nil
 	}
-	return o.Whois
+	return h.Whois
 }

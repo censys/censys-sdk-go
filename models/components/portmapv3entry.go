@@ -11,44 +11,44 @@ type PortmapV3Entry struct {
 	Version          *int    `json:"version,omitempty"`
 }
 
-func (o *PortmapV3Entry) GetDescription() *string {
-	if o == nil {
+func (p *PortmapV3Entry) GetDescription() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Description
+	return p.Description
 }
 
-func (o *PortmapV3Entry) GetNetworkID() *string {
-	if o == nil {
+func (p *PortmapV3Entry) GetNetworkID() *string {
+	if p == nil {
 		return nil
 	}
-	return o.NetworkID
+	return p.NetworkID
 }
 
-func (o *PortmapV3Entry) GetOwner() *string {
-	if o == nil {
+func (p *PortmapV3Entry) GetOwner() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Owner
+	return p.Owner
 }
 
-func (o *PortmapV3Entry) GetShorthand() *string {
-	if o == nil {
+func (p *PortmapV3Entry) GetShorthand() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Shorthand
+	return p.Shorthand
 }
 
-func (o *PortmapV3Entry) GetUniversalAddress() *string {
-	if o == nil {
+func (p *PortmapV3Entry) GetUniversalAddress() *string {
+	if p == nil {
 		return nil
 	}
-	return o.UniversalAddress
+	return p.UniversalAddress
 }
 
-func (o *PortmapV3Entry) GetVersion() *int {
-	if o == nil {
+func (p *PortmapV3Entry) GetVersion() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Version
+	return p.Version
 }

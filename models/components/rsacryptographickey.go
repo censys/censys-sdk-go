@@ -8,23 +8,23 @@ type RSACryptographicKey struct {
 	Modulus  *string `json:"modulus,omitempty"`
 }
 
-func (o *RSACryptographicKey) GetExponent() *string {
-	if o == nil {
+func (r *RSACryptographicKey) GetExponent() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Exponent
+	return r.Exponent
 }
 
-func (o *RSACryptographicKey) GetLength() *int {
-	if o == nil {
+func (r *RSACryptographicKey) GetLength() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Length
+	return r.Length
 }
 
-func (o *RSACryptographicKey) GetModulus() *string {
-	if o == nil {
+func (r *RSACryptographicKey) GetModulus() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Modulus
+	return r.Modulus
 }

@@ -6,9 +6,9 @@ type ResponseEnvelopeHostAsset struct {
 	Result *HostAsset `json:"result,omitempty"`
 }
 
-func (o *ResponseEnvelopeHostAsset) GetResult() *HostAsset {
-	if o == nil {
+func (r *ResponseEnvelopeHostAsset) GetResult() *HostAsset {
+	if r == nil {
 		return nil
 	}
-	return o.Result
+	return r.Result
 }

@@ -27,79 +27,79 @@ type Mysql struct {
 	StatusFlags map[string]bool `json:"status_flags,omitempty"`
 }
 
-func (o *Mysql) GetAuthPluginData() *string {
-	if o == nil {
+func (m *Mysql) GetAuthPluginData() *string {
+	if m == nil {
 		return nil
 	}
-	return o.AuthPluginData
+	return m.AuthPluginData
 }
 
-func (o *Mysql) GetAuthPluginName() *string {
-	if o == nil {
+func (m *Mysql) GetAuthPluginName() *string {
+	if m == nil {
 		return nil
 	}
-	return o.AuthPluginName
+	return m.AuthPluginName
 }
 
-func (o *Mysql) GetCapabilityFlags() map[string]bool {
-	if o == nil {
+func (m *Mysql) GetCapabilityFlags() map[string]bool {
+	if m == nil {
 		return nil
 	}
-	return o.CapabilityFlags
+	return m.CapabilityFlags
 }
 
-func (o *Mysql) GetCharacterSet() *int {
-	if o == nil {
+func (m *Mysql) GetCharacterSet() *int {
+	if m == nil {
 		return nil
 	}
-	return o.CharacterSet
+	return m.CharacterSet
 }
 
-func (o *Mysql) GetConnectionID() *int {
-	if o == nil {
+func (m *Mysql) GetConnectionID() *int {
+	if m == nil {
 		return nil
 	}
-	return o.ConnectionID
+	return m.ConnectionID
 }
 
-func (o *Mysql) GetErrorCode() *int64 {
-	if o == nil {
+func (m *Mysql) GetErrorCode() *int64 {
+	if m == nil {
 		return nil
 	}
-	return o.ErrorCode
+	return m.ErrorCode
 }
 
-func (o *Mysql) GetErrorID() *string {
-	if o == nil {
+func (m *Mysql) GetErrorID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ErrorID
+	return m.ErrorID
 }
 
-func (o *Mysql) GetErrorMessage() *string {
-	if o == nil {
+func (m *Mysql) GetErrorMessage() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ErrorMessage
+	return m.ErrorMessage
 }
 
-func (o *Mysql) GetProtocolVersion() *int {
-	if o == nil {
+func (m *Mysql) GetProtocolVersion() *int {
+	if m == nil {
 		return nil
 	}
-	return o.ProtocolVersion
+	return m.ProtocolVersion
 }
 
-func (o *Mysql) GetServerVersion() *string {
-	if o == nil {
+func (m *Mysql) GetServerVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ServerVersion
+	return m.ServerVersion
 }
 
-func (o *Mysql) GetStatusFlags() map[string]bool {
-	if o == nil {
+func (m *Mysql) GetStatusFlags() map[string]bool {
+	if m == nil {
 		return nil
 	}
-	return o.StatusFlags
+	return m.StatusFlags
 }

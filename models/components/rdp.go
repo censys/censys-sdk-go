@@ -12,51 +12,51 @@ type Rdp struct {
 	X224CcPduSrcref          *int                 `json:"x224_cc_pdu_srcref,omitempty"`
 }
 
-func (o *Rdp) GetCertificateInfo() *RdpCertificateInfo {
-	if o == nil {
+func (r *Rdp) GetCertificateInfo() *RdpCertificateInfo {
+	if r == nil {
 		return nil
 	}
-	return o.CertificateInfo
+	return r.CertificateInfo
 }
 
-func (o *Rdp) GetConnectResponse() *RdpConnectResponse {
-	if o == nil {
+func (r *Rdp) GetConnectResponse() *RdpConnectResponse {
+	if r == nil {
 		return nil
 	}
-	return o.ConnectResponse
+	return r.ConnectResponse
 }
 
-func (o *Rdp) GetProtocolFlags() *RdpProtocolFlags {
-	if o == nil {
+func (r *Rdp) GetProtocolFlags() *RdpProtocolFlags {
+	if r == nil {
 		return nil
 	}
-	return o.ProtocolFlags
+	return r.ProtocolFlags
 }
 
-func (o *Rdp) GetSelectedSecurityProtocol() *RdpSecurityProtocol {
-	if o == nil {
+func (r *Rdp) GetSelectedSecurityProtocol() *RdpSecurityProtocol {
+	if r == nil {
 		return nil
 	}
-	return o.SelectedSecurityProtocol
+	return r.SelectedSecurityProtocol
 }
 
-func (o *Rdp) GetVersion() *RdpVersion {
-	if o == nil {
+func (r *Rdp) GetVersion() *RdpVersion {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }
 
-func (o *Rdp) GetX224CcPduDstref() *int {
-	if o == nil {
+func (r *Rdp) GetX224CcPduDstref() *int {
+	if r == nil {
 		return nil
 	}
-	return o.X224CcPduDstref
+	return r.X224CcPduDstref
 }
 
-func (o *Rdp) GetX224CcPduSrcref() *int {
-	if o == nil {
+func (r *Rdp) GetX224CcPduSrcref() *int {
+	if r == nil {
 		return nil
 	}
-	return o.X224CcPduSrcref
+	return r.X224CcPduSrcref
 }

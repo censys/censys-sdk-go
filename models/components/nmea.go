@@ -6,9 +6,9 @@ type Nmea struct {
 	Messages []NmeaNmeaMessage `json:"messages,omitempty"`
 }
 
-func (o *Nmea) GetMessages() []NmeaNmeaMessage {
-	if o == nil {
+func (n *Nmea) GetMessages() []NmeaNmeaMessage {
+	if n == nil {
 		return nil
 	}
-	return o.Messages
+	return n.Messages
 }

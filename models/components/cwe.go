@@ -7,9 +7,9 @@ type Cwe struct {
 	Entry *string `json:"entry,omitempty"`
 }
 
-func (o *Cwe) GetEntry() *string {
-	if o == nil {
+func (c *Cwe) GetEntry() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Entry
+	return c.Entry
 }

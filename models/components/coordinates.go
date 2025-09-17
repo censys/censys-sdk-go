@@ -7,16 +7,16 @@ type Coordinates struct {
 	Longitude *float64 `json:"longitude,omitempty"`
 }
 
-func (o *Coordinates) GetLatitude() *float64 {
-	if o == nil {
+func (c *Coordinates) GetLatitude() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Latitude
+	return c.Latitude
 }
 
-func (o *Coordinates) GetLongitude() *float64 {
-	if o == nil {
+func (c *Coordinates) GetLongitude() *float64 {
+	if c == nil {
 		return nil
 	}
-	return o.Longitude
+	return c.Longitude
 }

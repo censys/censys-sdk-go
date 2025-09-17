@@ -9,30 +9,30 @@ type ThreatDetails struct {
 	Version        *string  `json:"version,omitempty"`
 }
 
-func (o *ThreatDetails) GetCampaignID() *string {
-	if o == nil {
+func (t *ThreatDetails) GetCampaignID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CampaignID
+	return t.CampaignID
 }
 
-func (o *ThreatDetails) GetCampaignTheme() *string {
-	if o == nil {
+func (t *ThreatDetails) GetCampaignTheme() *string {
+	if t == nil {
 		return nil
 	}
-	return o.CampaignTheme
+	return t.CampaignTheme
 }
 
-func (o *ThreatDetails) GetControlServers() []string {
-	if o == nil {
+func (t *ThreatDetails) GetControlServers() []string {
+	if t == nil {
 		return nil
 	}
-	return o.ControlServers
+	return t.ControlServers
 }
 
-func (o *ThreatDetails) GetVersion() *string {
-	if o == nil {
+func (t *ThreatDetails) GetVersion() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Version
+	return t.Version
 }

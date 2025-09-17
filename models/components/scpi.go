@@ -9,30 +9,30 @@ type Scpi struct {
 	Serial       *string `json:"serial,omitempty"`
 }
 
-func (o *Scpi) GetFirmware() *string {
-	if o == nil {
+func (s *Scpi) GetFirmware() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Firmware
+	return s.Firmware
 }
 
-func (o *Scpi) GetManufacturer() *string {
-	if o == nil {
+func (s *Scpi) GetManufacturer() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Manufacturer
+	return s.Manufacturer
 }
 
-func (o *Scpi) GetModel() *string {
-	if o == nil {
+func (s *Scpi) GetModel() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Model
+	return s.Model
 }
 
-func (o *Scpi) GetSerial() *string {
-	if o == nil {
+func (s *Scpi) GetSerial() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Serial
+	return s.Serial
 }

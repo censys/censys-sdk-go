@@ -9,16 +9,16 @@ type KubernetesNodeNodeAddress struct {
 	AddressType *string `json:"address_type,omitempty"`
 }
 
-func (o *KubernetesNodeNodeAddress) GetAddress() *string {
-	if o == nil {
+func (k *KubernetesNodeNodeAddress) GetAddress() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Address
+	return k.Address
 }
 
-func (o *KubernetesNodeNodeAddress) GetAddressType() *string {
-	if o == nil {
+func (k *KubernetesNodeNodeAddress) GetAddressType() *string {
+	if k == nil {
 		return nil
 	}
-	return o.AddressType
+	return k.AddressType
 }

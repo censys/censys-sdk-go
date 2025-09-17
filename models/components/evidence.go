@@ -13,58 +13,58 @@ type Evidence struct {
 	SemverExpression *string `json:"semver_expression,omitempty"`
 }
 
-func (o *Evidence) GetDataPath() *string {
-	if o == nil {
+func (e *Evidence) GetDataPath() *string {
+	if e == nil {
 		return nil
 	}
-	return o.DataPath
+	return e.DataPath
 }
 
-func (o *Evidence) GetExists() *bool {
-	if o == nil {
+func (e *Evidence) GetExists() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.Exists
+	return e.Exists
 }
 
-func (o *Evidence) GetFoundValue() *string {
-	if o == nil {
+func (e *Evidence) GetFoundValue() *string {
+	if e == nil {
 		return nil
 	}
-	return o.FoundValue
+	return e.FoundValue
 }
 
-func (o *Evidence) GetLiteralMatch() *string {
-	if o == nil {
+func (e *Evidence) GetLiteralMatch() *string {
+	if e == nil {
 		return nil
 	}
-	return o.LiteralMatch
+	return e.LiteralMatch
 }
 
-func (o *Evidence) GetNegative() *bool {
-	if o == nil {
+func (e *Evidence) GetNegative() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.Negative
+	return e.Negative
 }
 
-func (o *Evidence) GetProprietary() *bool {
-	if o == nil {
+func (e *Evidence) GetProprietary() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.Proprietary
+	return e.Proprietary
 }
 
-func (o *Evidence) GetRegex() *string {
-	if o == nil {
+func (e *Evidence) GetRegex() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Regex
+	return e.Regex
 }
 
-func (o *Evidence) GetSemverExpression() *string {
-	if o == nil {
+func (e *Evidence) GetSemverExpression() *string {
+	if e == nil {
 		return nil
 	}
-	return o.SemverExpression
+	return e.SemverExpression
 }

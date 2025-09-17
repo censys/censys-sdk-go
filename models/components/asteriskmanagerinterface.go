@@ -6,9 +6,9 @@ type AsteriskManagerInterface struct {
 	Version *string `json:"version,omitempty"`
 }
 
-func (o *AsteriskManagerInterface) GetVersion() *string {
-	if o == nil {
+func (a *AsteriskManagerInterface) GetVersion() *string {
+	if a == nil {
 		return nil
 	}
-	return o.Version
+	return a.Version
 }

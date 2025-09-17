@@ -11,44 +11,44 @@ type SapRouterClientInfo struct {
 	Traced      *bool   `json:"traced,omitempty"`
 }
 
-func (o *SapRouterClientInfo) GetConnected() *bool {
-	if o == nil {
+func (s *SapRouterClientInfo) GetConnected() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Connected
+	return s.Connected
 }
 
-func (o *SapRouterClientInfo) GetConnectedOn() *string {
-	if o == nil {
+func (s *SapRouterClientInfo) GetConnectedOn() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ConnectedOn
+	return s.ConnectedOn
 }
 
-func (o *SapRouterClientInfo) GetID() *int {
-	if o == nil {
+func (s *SapRouterClientInfo) GetID() *int {
+	if s == nil {
 		return nil
 	}
-	return o.ID
+	return s.ID
 }
 
-func (o *SapRouterClientInfo) GetRouted() *bool {
-	if o == nil {
+func (s *SapRouterClientInfo) GetRouted() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Routed
+	return s.Routed
 }
 
-func (o *SapRouterClientInfo) GetService() *string {
-	if o == nil {
+func (s *SapRouterClientInfo) GetService() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Service
+	return s.Service
 }
 
-func (o *SapRouterClientInfo) GetTraced() *bool {
-	if o == nil {
+func (s *SapRouterClientInfo) GetTraced() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Traced
+	return s.Traced
 }

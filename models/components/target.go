@@ -12,51 +12,51 @@ type Target struct {
 	PublicPortals  []string `json:"public_portals,omitempty"`
 }
 
-func (o *Target) GetAlias() *string {
-	if o == nil {
+func (t *Target) GetAlias() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Alias
+	return t.Alias
 }
 
-func (o *Target) GetAuths() []string {
-	if o == nil {
+func (t *Target) GetAuths() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Auths
+	return t.Auths
 }
 
-func (o *Target) GetDNSPortals() []string {
-	if o == nil {
+func (t *Target) GetDNSPortals() []string {
+	if t == nil {
 		return nil
 	}
-	return o.DNSPortals
+	return t.DNSPortals
 }
 
-func (o *Target) GetErrors() []string {
-	if o == nil {
+func (t *Target) GetErrors() []string {
+	if t == nil {
 		return nil
 	}
-	return o.Errors
+	return t.Errors
 }
 
-func (o *Target) GetName() *string {
-	if o == nil {
+func (t *Target) GetName() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Name
+	return t.Name
 }
 
-func (o *Target) GetPrivatePortals() []string {
-	if o == nil {
+func (t *Target) GetPrivatePortals() []string {
+	if t == nil {
 		return nil
 	}
-	return o.PrivatePortals
+	return t.PrivatePortals
 }
 
-func (o *Target) GetPublicPortals() []string {
-	if o == nil {
+func (t *Target) GetPublicPortals() []string {
+	if t == nil {
 		return nil
 	}
-	return o.PublicPortals
+	return t.PublicPortals
 }

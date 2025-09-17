@@ -49,30 +49,30 @@ type ServiceID struct {
 	TransportProtocol *ServiceIDTransportProtocol `json:"transport_protocol,omitempty"`
 }
 
-func (o *ServiceID) GetIP() *string {
-	if o == nil {
+func (s *ServiceID) GetIP() *string {
+	if s == nil {
 		return nil
 	}
-	return o.IP
+	return s.IP
 }
 
-func (o *ServiceID) GetPort() *int {
-	if o == nil {
+func (s *ServiceID) GetPort() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Port
+	return s.Port
 }
 
-func (o *ServiceID) GetProtocol() *string {
-	if o == nil {
+func (s *ServiceID) GetProtocol() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Protocol
+	return s.Protocol
 }
 
-func (o *ServiceID) GetTransportProtocol() *ServiceIDTransportProtocol {
-	if o == nil {
+func (s *ServiceID) GetTransportProtocol() *ServiceIDTransportProtocol {
+	if s == nil {
 		return nil
 	}
-	return o.TransportProtocol
+	return s.TransportProtocol
 }

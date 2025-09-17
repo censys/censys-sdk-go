@@ -8,23 +8,23 @@ type ProfinetCm struct {
 	MultipleFragments *bool   `json:"multiple_fragments,omitempty"`
 }
 
-func (o *ProfinetCm) GetByteOrder() *string {
-	if o == nil {
+func (p *ProfinetCm) GetByteOrder() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ByteOrder
+	return p.ByteOrder
 }
 
-func (o *ProfinetCm) GetLookupResponseRaw() *string {
-	if o == nil {
+func (p *ProfinetCm) GetLookupResponseRaw() *string {
+	if p == nil {
 		return nil
 	}
-	return o.LookupResponseRaw
+	return p.LookupResponseRaw
 }
 
-func (o *ProfinetCm) GetMultipleFragments() *bool {
-	if o == nil {
+func (p *ProfinetCm) GetMultipleFragments() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.MultipleFragments
+	return p.MultipleFragments
 }

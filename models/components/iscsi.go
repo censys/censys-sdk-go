@@ -8,23 +8,23 @@ type Iscsi struct {
 	Targets    []Target    `json:"targets,omitempty"`
 }
 
-func (o *Iscsi) GetConnection() *Connection {
-	if o == nil {
+func (i *Iscsi) GetConnection() *Connection {
+	if i == nil {
 		return nil
 	}
-	return o.Connection
+	return i.Connection
 }
 
-func (o *Iscsi) GetErrors() []string {
-	if o == nil {
+func (i *Iscsi) GetErrors() []string {
+	if i == nil {
 		return nil
 	}
-	return o.Errors
+	return i.Errors
 }
 
-func (o *Iscsi) GetTargets() []Target {
-	if o == nil {
+func (i *Iscsi) GetTargets() []Target {
+	if i == nil {
 		return nil
 	}
-	return o.Targets
+	return i.Targets
 }

@@ -7,16 +7,16 @@ type CobaltStrike struct {
 	X86 *CobaltStrikeConfig `json:"x86,omitempty"`
 }
 
-func (o *CobaltStrike) GetX64() *CobaltStrikeConfig {
-	if o == nil {
+func (c *CobaltStrike) GetX64() *CobaltStrikeConfig {
+	if c == nil {
 		return nil
 	}
-	return o.X64
+	return c.X64
 }
 
-func (o *CobaltStrike) GetX86() *CobaltStrikeConfig {
-	if o == nil {
+func (c *CobaltStrike) GetX86() *CobaltStrikeConfig {
+	if c == nil {
 		return nil
 	}
-	return o.X86
+	return c.X86
 }

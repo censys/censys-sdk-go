@@ -24,72 +24,72 @@ type Location struct {
 	Timezone *string `json:"timezone,omitempty"`
 }
 
-func (o *Location) GetCity() *string {
-	if o == nil {
+func (l *Location) GetCity() *string {
+	if l == nil {
 		return nil
 	}
-	return o.City
+	return l.City
 }
 
-func (o *Location) GetContinent() *string {
-	if o == nil {
+func (l *Location) GetContinent() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Continent
+	return l.Continent
 }
 
-func (o *Location) GetCoordinates() *Coordinates {
-	if o == nil {
+func (l *Location) GetCoordinates() *Coordinates {
+	if l == nil {
 		return nil
 	}
-	return o.Coordinates
+	return l.Coordinates
 }
 
-func (o *Location) GetCountry() *string {
-	if o == nil {
+func (l *Location) GetCountry() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Country
+	return l.Country
 }
 
-func (o *Location) GetCountryCode() *string {
-	if o == nil {
+func (l *Location) GetCountryCode() *string {
+	if l == nil {
 		return nil
 	}
-	return o.CountryCode
+	return l.CountryCode
 }
 
-func (o *Location) GetPostalCode() *string {
-	if o == nil {
+func (l *Location) GetPostalCode() *string {
+	if l == nil {
 		return nil
 	}
-	return o.PostalCode
+	return l.PostalCode
 }
 
-func (o *Location) GetProvince() *string {
-	if o == nil {
+func (l *Location) GetProvince() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Province
+	return l.Province
 }
 
-func (o *Location) GetRegisteredCountry() *string {
-	if o == nil {
+func (l *Location) GetRegisteredCountry() *string {
+	if l == nil {
 		return nil
 	}
-	return o.RegisteredCountry
+	return l.RegisteredCountry
 }
 
-func (o *Location) GetRegisteredCountryCode() *string {
-	if o == nil {
+func (l *Location) GetRegisteredCountryCode() *string {
+	if l == nil {
 		return nil
 	}
-	return o.RegisteredCountryCode
+	return l.RegisteredCountryCode
 }
 
-func (o *Location) GetTimezone() *string {
-	if o == nil {
+func (l *Location) GetTimezone() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Timezone
+	return l.Timezone
 }

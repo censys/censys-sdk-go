@@ -15,51 +15,51 @@ type IpmiCapabilities struct {
 	SupportedAuthTypes *IpmiCapabilitiesSupportedAuthTypes `json:"supported_auth_types,omitempty"`
 }
 
-func (o *IpmiCapabilities) GetAuthStatus() *IpmiCapabilitiesAuthStatus {
-	if o == nil {
+func (i *IpmiCapabilities) GetAuthStatus() *IpmiCapabilitiesAuthStatus {
+	if i == nil {
 		return nil
 	}
-	return o.AuthStatus
+	return i.AuthStatus
 }
 
-func (o *IpmiCapabilities) GetChannelNumber() *int {
-	if o == nil {
+func (i *IpmiCapabilities) GetChannelNumber() *int {
+	if i == nil {
 		return nil
 	}
-	return o.ChannelNumber
+	return i.ChannelNumber
 }
 
-func (o *IpmiCapabilities) GetCompletionCode() *IpmiCapabilitiesCompletionCode {
-	if o == nil {
+func (i *IpmiCapabilities) GetCompletionCode() *IpmiCapabilitiesCompletionCode {
+	if i == nil {
 		return nil
 	}
-	return o.CompletionCode
+	return i.CompletionCode
 }
 
-func (o *IpmiCapabilities) GetExtendedCapabilities() *IpmiCapabilitiesExtendedCapabilities {
-	if o == nil {
+func (i *IpmiCapabilities) GetExtendedCapabilities() *IpmiCapabilitiesExtendedCapabilities {
+	if i == nil {
 		return nil
 	}
-	return o.ExtendedCapabilities
+	return i.ExtendedCapabilities
 }
 
-func (o *IpmiCapabilities) GetOemData() *int {
-	if o == nil {
+func (i *IpmiCapabilities) GetOemData() *int {
+	if i == nil {
 		return nil
 	}
-	return o.OemData
+	return i.OemData
 }
 
-func (o *IpmiCapabilities) GetOemID() *string {
-	if o == nil {
+func (i *IpmiCapabilities) GetOemID() *string {
+	if i == nil {
 		return nil
 	}
-	return o.OemID
+	return i.OemID
 }
 
-func (o *IpmiCapabilities) GetSupportedAuthTypes() *IpmiCapabilitiesSupportedAuthTypes {
-	if o == nil {
+func (i *IpmiCapabilities) GetSupportedAuthTypes() *IpmiCapabilitiesSupportedAuthTypes {
+	if i == nil {
 		return nil
 	}
-	return o.SupportedAuthTypes
+	return i.SupportedAuthTypes
 }

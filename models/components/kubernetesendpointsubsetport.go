@@ -8,23 +8,23 @@ type KubernetesEndpointSubsetPort struct {
 	Protocol *string `json:"protocol,omitempty"`
 }
 
-func (o *KubernetesEndpointSubsetPort) GetName() *string {
-	if o == nil {
+func (k *KubernetesEndpointSubsetPort) GetName() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Name
+	return k.Name
 }
 
-func (o *KubernetesEndpointSubsetPort) GetPort() *int {
-	if o == nil {
+func (k *KubernetesEndpointSubsetPort) GetPort() *int {
+	if k == nil {
 		return nil
 	}
-	return o.Port
+	return k.Port
 }
 
-func (o *KubernetesEndpointSubsetPort) GetProtocol() *string {
-	if o == nil {
+func (k *KubernetesEndpointSubsetPort) GetProtocol() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Protocol
+	return k.Protocol
 }

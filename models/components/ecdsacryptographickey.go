@@ -15,72 +15,72 @@ type ECDSACryptographicKey struct {
 	Y      *string `json:"y,omitempty"`
 }
 
-func (o *ECDSACryptographicKey) GetB() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetB() *string {
+	if e == nil {
 		return nil
 	}
-	return o.B
+	return e.B
 }
 
-func (o *ECDSACryptographicKey) GetCurve() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetCurve() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Curve
+	return e.Curve
 }
 
-func (o *ECDSACryptographicKey) GetGx() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetGx() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Gx
+	return e.Gx
 }
 
-func (o *ECDSACryptographicKey) GetGy() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetGy() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Gy
+	return e.Gy
 }
 
-func (o *ECDSACryptographicKey) GetLength() *int {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetLength() *int {
+	if e == nil {
 		return nil
 	}
-	return o.Length
+	return e.Length
 }
 
-func (o *ECDSACryptographicKey) GetN() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetN() *string {
+	if e == nil {
 		return nil
 	}
-	return o.N
+	return e.N
 }
 
-func (o *ECDSACryptographicKey) GetP() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetP() *string {
+	if e == nil {
 		return nil
 	}
-	return o.P
+	return e.P
 }
 
-func (o *ECDSACryptographicKey) GetPub() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetPub() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pub
+	return e.Pub
 }
 
-func (o *ECDSACryptographicKey) GetX() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetX() *string {
+	if e == nil {
 		return nil
 	}
-	return o.X
+	return e.X
 }
 
-func (o *ECDSACryptographicKey) GetY() *string {
-	if o == nil {
+func (e *ECDSACryptographicKey) GetY() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Y
+	return e.Y
 }

@@ -58,65 +58,65 @@ type JarmScan struct {
 	TransportProtocol   *JarmScanTransportProtocol `json:"transport_protocol,omitempty"`
 }
 
-func (o *JarmScan) GetCipherAndVersionFingerprint() *string {
-	if o == nil {
+func (j *JarmScan) GetCipherAndVersionFingerprint() *string {
+	if j == nil {
 		return nil
 	}
-	return o.CipherAndVersionFingerprint
+	return j.CipherAndVersionFingerprint
 }
 
-func (o *JarmScan) GetFingerprint() *string {
-	if o == nil {
+func (j *JarmScan) GetFingerprint() *string {
+	if j == nil {
 		return nil
 	}
-	return o.Fingerprint
+	return j.Fingerprint
 }
 
-func (o *JarmScan) GetHostname() *string {
-	if o == nil {
+func (j *JarmScan) GetHostname() *string {
+	if j == nil {
 		return nil
 	}
-	return o.Hostname
+	return j.Hostname
 }
 
-func (o *JarmScan) GetIP() *string {
-	if o == nil {
+func (j *JarmScan) GetIP() *string {
+	if j == nil {
 		return nil
 	}
-	return o.IP
+	return j.IP
 }
 
-func (o *JarmScan) GetIsSuccess() *bool {
-	if o == nil {
+func (j *JarmScan) GetIsSuccess() *bool {
+	if j == nil {
 		return nil
 	}
-	return o.IsSuccess
+	return j.IsSuccess
 }
 
-func (o *JarmScan) GetPort() *int {
-	if o == nil {
+func (j *JarmScan) GetPort() *int {
+	if j == nil {
 		return nil
 	}
-	return o.Port
+	return j.Port
 }
 
-func (o *JarmScan) GetScanTime() *string {
-	if o == nil {
+func (j *JarmScan) GetScanTime() *string {
+	if j == nil {
 		return nil
 	}
-	return o.ScanTime
+	return j.ScanTime
 }
 
-func (o *JarmScan) GetTLSExtensionsSha256() *string {
-	if o == nil {
+func (j *JarmScan) GetTLSExtensionsSha256() *string {
+	if j == nil {
 		return nil
 	}
-	return o.TLSExtensionsSha256
+	return j.TLSExtensionsSha256
 }
 
-func (o *JarmScan) GetTransportProtocol() *JarmScanTransportProtocol {
-	if o == nil {
+func (j *JarmScan) GetTransportProtocol() *JarmScanTransportProtocol {
+	if j == nil {
 		return nil
 	}
-	return o.TransportProtocol
+	return j.TransportProtocol
 }

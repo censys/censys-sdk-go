@@ -6,9 +6,9 @@ type UnrecognizedPublicKey struct {
 	Raw *string `json:"raw,omitempty"`
 }
 
-func (o *UnrecognizedPublicKey) GetRaw() *string {
-	if o == nil {
+func (u *UnrecognizedPublicKey) GetRaw() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Raw
+	return u.Raw
 }

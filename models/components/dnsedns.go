@@ -9,30 +9,30 @@ type DNSEDNS struct {
 	Version *int     `json:"version,omitempty"`
 }
 
-func (o *DNSEDNS) GetDo() *bool {
-	if o == nil {
+func (d *DNSEDNS) GetDo() *bool {
+	if d == nil {
 		return nil
 	}
-	return o.Do
+	return d.Do
 }
 
-func (o *DNSEDNS) GetOptions() []string {
-	if o == nil {
+func (d *DNSEDNS) GetOptions() []string {
+	if d == nil {
 		return nil
 	}
-	return o.Options
+	return d.Options
 }
 
-func (o *DNSEDNS) GetUDP() *int {
-	if o == nil {
+func (d *DNSEDNS) GetUDP() *int {
+	if d == nil {
 		return nil
 	}
-	return o.UDP
+	return d.UDP
 }
 
-func (o *DNSEDNS) GetVersion() *int {
-	if o == nil {
+func (d *DNSEDNS) GetVersion() *int {
+	if d == nil {
 		return nil
 	}
-	return o.Version
+	return d.Version
 }

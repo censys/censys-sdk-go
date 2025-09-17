@@ -11,23 +11,23 @@ type KubernetesRoleRule struct {
 	Verbs []string `json:"verbs,omitempty"`
 }
 
-func (o *KubernetesRoleRule) GetAPIGroups() []string {
-	if o == nil {
+func (k *KubernetesRoleRule) GetAPIGroups() []string {
+	if k == nil {
 		return nil
 	}
-	return o.APIGroups
+	return k.APIGroups
 }
 
-func (o *KubernetesRoleRule) GetResources() []string {
-	if o == nil {
+func (k *KubernetesRoleRule) GetResources() []string {
+	if k == nil {
 		return nil
 	}
-	return o.Resources
+	return k.Resources
 }
 
-func (o *KubernetesRoleRule) GetVerbs() []string {
-	if o == nil {
+func (k *KubernetesRoleRule) GetVerbs() []string {
+	if k == nil {
 		return nil
 	}
-	return o.Verbs
+	return k.Verbs
 }

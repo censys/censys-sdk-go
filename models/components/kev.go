@@ -46,23 +46,23 @@ type Kev struct {
 	Source *KEVSource `json:"source,omitempty"`
 }
 
-func (o *Kev) GetDateAdded() *string {
-	if o == nil {
+func (k *Kev) GetDateAdded() *string {
+	if k == nil {
 		return nil
 	}
-	return o.DateAdded
+	return k.DateAdded
 }
 
-func (o *Kev) GetDateDue() *string {
-	if o == nil {
+func (k *Kev) GetDateDue() *string {
+	if k == nil {
 		return nil
 	}
-	return o.DateDue
+	return k.DateDue
 }
 
-func (o *Kev) GetSource() *KEVSource {
-	if o == nil {
+func (k *Kev) GetSource() *KEVSource {
+	if k == nil {
 		return nil
 	}
-	return o.Source
+	return k.Source
 }

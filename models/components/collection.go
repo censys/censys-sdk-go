@@ -109,72 +109,72 @@ func (c *Collection) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Collection) GetAddedAssets24Hours() int64 {
-	if o == nil {
+func (c *Collection) GetAddedAssets24Hours() int64 {
+	if c == nil {
 		return 0
 	}
-	return o.AddedAssets24Hours
+	return c.AddedAssets24Hours
 }
 
-func (o *Collection) GetCreateTime() time.Time {
-	if o == nil {
+func (c *Collection) GetCreateTime() time.Time {
+	if c == nil {
 		return time.Time{}
 	}
-	return o.CreateTime
+	return c.CreateTime
 }
 
-func (o *Collection) GetDescription() string {
-	if o == nil {
+func (c *Collection) GetDescription() string {
+	if c == nil {
 		return ""
 	}
-	return o.Description
+	return c.Description
 }
 
-func (o *Collection) GetID() string {
-	if o == nil {
+func (c *Collection) GetID() string {
+	if c == nil {
 		return ""
 	}
-	return o.ID
+	return c.ID
 }
 
-func (o *Collection) GetName() string {
-	if o == nil {
+func (c *Collection) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *Collection) GetQuery() string {
-	if o == nil {
+func (c *Collection) GetQuery() string {
+	if c == nil {
 		return ""
 	}
-	return o.Query
+	return c.Query
 }
 
-func (o *Collection) GetRemovedAssets24Hours() int64 {
-	if o == nil {
+func (c *Collection) GetRemovedAssets24Hours() int64 {
+	if c == nil {
 		return 0
 	}
-	return o.RemovedAssets24Hours
+	return c.RemovedAssets24Hours
 }
 
-func (o *Collection) GetStatus() CollectionStatus {
-	if o == nil {
+func (c *Collection) GetStatus() CollectionStatus {
+	if c == nil {
 		return CollectionStatus("")
 	}
-	return o.Status
+	return c.Status
 }
 
-func (o *Collection) GetStatusReason() *StatusReason {
-	if o == nil {
+func (c *Collection) GetStatusReason() *StatusReason {
+	if c == nil {
 		return nil
 	}
-	return o.StatusReason
+	return c.StatusReason
 }
 
-func (o *Collection) GetTotalAssets() int64 {
-	if o == nil {
+func (c *Collection) GetTotalAssets() int64 {
+	if c == nil {
 		return 0
 	}
-	return o.TotalAssets
+	return c.TotalAssets
 }

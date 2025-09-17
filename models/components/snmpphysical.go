@@ -19,51 +19,51 @@ type SnmpPhysical struct {
 	SoftwareRev *string `json:"software_rev,omitempty"`
 }
 
-func (o *SnmpPhysical) GetFirmwareRev() *string {
-	if o == nil {
+func (s *SnmpPhysical) GetFirmwareRev() *string {
+	if s == nil {
 		return nil
 	}
-	return o.FirmwareRev
+	return s.FirmwareRev
 }
 
-func (o *SnmpPhysical) GetHardwareRev() *string {
-	if o == nil {
+func (s *SnmpPhysical) GetHardwareRev() *string {
+	if s == nil {
 		return nil
 	}
-	return o.HardwareRev
+	return s.HardwareRev
 }
 
-func (o *SnmpPhysical) GetMfgName() *string {
-	if o == nil {
+func (s *SnmpPhysical) GetMfgName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.MfgName
+	return s.MfgName
 }
 
-func (o *SnmpPhysical) GetModelName() *string {
-	if o == nil {
+func (s *SnmpPhysical) GetModelName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ModelName
+	return s.ModelName
 }
 
-func (o *SnmpPhysical) GetName() *string {
-	if o == nil {
+func (s *SnmpPhysical) GetName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Name
+	return s.Name
 }
 
-func (o *SnmpPhysical) GetSerialNum() *string {
-	if o == nil {
+func (s *SnmpPhysical) GetSerialNum() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SerialNum
+	return s.SerialNum
 }
 
-func (o *SnmpPhysical) GetSoftwareRev() *string {
-	if o == nil {
+func (s *SnmpPhysical) GetSoftwareRev() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SoftwareRev
+	return s.SoftwareRev
 }

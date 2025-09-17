@@ -11,23 +11,23 @@ type IpmiSessionHeaderAuthType struct {
 	Type *int `json:"type,omitempty"`
 }
 
-func (o *IpmiSessionHeaderAuthType) GetName() *string {
-	if o == nil {
+func (i *IpmiSessionHeaderAuthType) GetName() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *IpmiSessionHeaderAuthType) GetRaw() *int {
-	if o == nil {
+func (i *IpmiSessionHeaderAuthType) GetRaw() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }
 
-func (o *IpmiSessionHeaderAuthType) GetType() *int {
-	if o == nil {
+func (i *IpmiSessionHeaderAuthType) GetType() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Type
+	return i.Type
 }

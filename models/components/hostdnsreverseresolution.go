@@ -8,23 +8,23 @@ type HostDNSReverseResolution struct {
 	Server      *string  `json:"server,omitempty"`
 }
 
-func (o *HostDNSReverseResolution) GetNames() []string {
-	if o == nil {
+func (h *HostDNSReverseResolution) GetNames() []string {
+	if h == nil {
 		return nil
 	}
-	return o.Names
+	return h.Names
 }
 
-func (o *HostDNSReverseResolution) GetResolveTime() *string {
-	if o == nil {
+func (h *HostDNSReverseResolution) GetResolveTime() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ResolveTime
+	return h.ResolveTime
 }
 
-func (o *HostDNSReverseResolution) GetServer() *string {
-	if o == nil {
+func (h *HostDNSReverseResolution) GetServer() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Server
+	return h.Server
 }

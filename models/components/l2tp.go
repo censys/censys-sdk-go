@@ -14,65 +14,65 @@ type L2Tp struct {
 	ZlbReceived        *bool        `json:"zlb_received,omitempty"`
 }
 
-func (o *L2Tp) GetHelloReceived() *bool {
-	if o == nil {
+func (l *L2Tp) GetHelloReceived() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.HelloReceived
+	return l.HelloReceived
 }
 
-func (o *L2Tp) GetOrderedMessagesRaw() []string {
-	if o == nil {
+func (l *L2Tp) GetOrderedMessagesRaw() []string {
+	if l == nil {
 		return nil
 	}
-	return o.OrderedMessagesRaw
+	return l.OrderedMessagesRaw
 }
 
-func (o *L2Tp) GetSccnReceived() *bool {
-	if o == nil {
+func (l *L2Tp) GetSccnReceived() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.SccnReceived
+	return l.SccnReceived
 }
 
-func (o *L2Tp) GetSccrp() *L2TpSccrp {
-	if o == nil {
+func (l *L2Tp) GetSccrp() *L2TpSccrp {
+	if l == nil {
 		return nil
 	}
-	return o.Sccrp
+	return l.Sccrp
 }
 
-func (o *L2Tp) GetSccrpReceived() *bool {
-	if o == nil {
+func (l *L2Tp) GetSccrpReceived() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.SccrpReceived
+	return l.SccrpReceived
 }
 
-func (o *L2Tp) GetSccrqReceived() *bool {
-	if o == nil {
+func (l *L2Tp) GetSccrqReceived() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.SccrqReceived
+	return l.SccrqReceived
 }
 
-func (o *L2Tp) GetStopSccn() *L2TpStopCcn {
-	if o == nil {
+func (l *L2Tp) GetStopSccn() *L2TpStopCcn {
+	if l == nil {
 		return nil
 	}
-	return o.StopSccn
+	return l.StopSccn
 }
 
-func (o *L2Tp) GetStopSccnReceived() *bool {
-	if o == nil {
+func (l *L2Tp) GetStopSccnReceived() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.StopSccnReceived
+	return l.StopSccnReceived
 }
 
-func (o *L2Tp) GetZlbReceived() *bool {
-	if o == nil {
+func (l *L2Tp) GetZlbReceived() *bool {
+	if l == nil {
 		return nil
 	}
-	return o.ZlbReceived
+	return l.ZlbReceived
 }

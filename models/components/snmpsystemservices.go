@@ -19,51 +19,51 @@ type SnmpSystemServices struct {
 	Layer7 *bool `json:"layer_7,omitempty"`
 }
 
-func (o *SnmpSystemServices) GetLayer1() *bool {
-	if o == nil {
+func (s *SnmpSystemServices) GetLayer1() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Layer1
+	return s.Layer1
 }
 
-func (o *SnmpSystemServices) GetLayer2() *bool {
-	if o == nil {
+func (s *SnmpSystemServices) GetLayer2() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Layer2
+	return s.Layer2
 }
 
-func (o *SnmpSystemServices) GetLayer3() *bool {
-	if o == nil {
+func (s *SnmpSystemServices) GetLayer3() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Layer3
+	return s.Layer3
 }
 
-func (o *SnmpSystemServices) GetLayer4() *bool {
-	if o == nil {
+func (s *SnmpSystemServices) GetLayer4() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Layer4
+	return s.Layer4
 }
 
-func (o *SnmpSystemServices) GetLayer5() *bool {
-	if o == nil {
+func (s *SnmpSystemServices) GetLayer5() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Layer5
+	return s.Layer5
 }
 
-func (o *SnmpSystemServices) GetLayer6() *bool {
-	if o == nil {
+func (s *SnmpSystemServices) GetLayer6() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Layer6
+	return s.Layer6
 }
 
-func (o *SnmpSystemServices) GetLayer7() *bool {
-	if o == nil {
+func (s *SnmpSystemServices) GetLayer7() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.Layer7
+	return s.Layer7
 }

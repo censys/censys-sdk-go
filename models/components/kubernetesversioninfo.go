@@ -22,65 +22,65 @@ type KubernetesVersionInfo struct {
 	Platform *string `json:"platform,omitempty"`
 }
 
-func (o *KubernetesVersionInfo) GetBuildDate() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetBuildDate() *string {
+	if k == nil {
 		return nil
 	}
-	return o.BuildDate
+	return k.BuildDate
 }
 
-func (o *KubernetesVersionInfo) GetCompiler() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetCompiler() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Compiler
+	return k.Compiler
 }
 
-func (o *KubernetesVersionInfo) GetGitCommit() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetGitCommit() *string {
+	if k == nil {
 		return nil
 	}
-	return o.GitCommit
+	return k.GitCommit
 }
 
-func (o *KubernetesVersionInfo) GetGitTreeState() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetGitTreeState() *string {
+	if k == nil {
 		return nil
 	}
-	return o.GitTreeState
+	return k.GitTreeState
 }
 
-func (o *KubernetesVersionInfo) GetGitVersion() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetGitVersion() *string {
+	if k == nil {
 		return nil
 	}
-	return o.GitVersion
+	return k.GitVersion
 }
 
-func (o *KubernetesVersionInfo) GetGoVersion() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetGoVersion() *string {
+	if k == nil {
 		return nil
 	}
-	return o.GoVersion
+	return k.GoVersion
 }
 
-func (o *KubernetesVersionInfo) GetMajor() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetMajor() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Major
+	return k.Major
 }
 
-func (o *KubernetesVersionInfo) GetMinor() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetMinor() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Minor
+	return k.Minor
 }
 
-func (o *KubernetesVersionInfo) GetPlatform() *string {
-	if o == nil {
+func (k *KubernetesVersionInfo) GetPlatform() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Platform
+	return k.Platform
 }

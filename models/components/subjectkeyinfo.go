@@ -12,44 +12,44 @@ type SubjectKeyInfo struct {
 	Unrecognized      *UnrecognizedPublicKey `json:"unrecognized,omitempty"`
 }
 
-func (o *SubjectKeyInfo) GetDsa() *DsaPublicKey {
-	if o == nil {
+func (s *SubjectKeyInfo) GetDsa() *DsaPublicKey {
+	if s == nil {
 		return nil
 	}
-	return o.Dsa
+	return s.Dsa
 }
 
-func (o *SubjectKeyInfo) GetEcdsa() *EcdsaPublicKey {
-	if o == nil {
+func (s *SubjectKeyInfo) GetEcdsa() *EcdsaPublicKey {
+	if s == nil {
 		return nil
 	}
-	return o.Ecdsa
+	return s.Ecdsa
 }
 
-func (o *SubjectKeyInfo) GetFingerprintSha256() *string {
-	if o == nil {
+func (s *SubjectKeyInfo) GetFingerprintSha256() *string {
+	if s == nil {
 		return nil
 	}
-	return o.FingerprintSha256
+	return s.FingerprintSha256
 }
 
-func (o *SubjectKeyInfo) GetKeyAlgorithm() *KeyAlgorithm {
-	if o == nil {
+func (s *SubjectKeyInfo) GetKeyAlgorithm() *KeyAlgorithm {
+	if s == nil {
 		return nil
 	}
-	return o.KeyAlgorithm
+	return s.KeyAlgorithm
 }
 
-func (o *SubjectKeyInfo) GetRsa() *RsaPublicKey {
-	if o == nil {
+func (s *SubjectKeyInfo) GetRsa() *RsaPublicKey {
+	if s == nil {
 		return nil
 	}
-	return o.Rsa
+	return s.Rsa
 }
 
-func (o *SubjectKeyInfo) GetUnrecognized() *UnrecognizedPublicKey {
-	if o == nil {
+func (s *SubjectKeyInfo) GetUnrecognized() *UnrecognizedPublicKey {
+	if s == nil {
 		return nil
 	}
-	return o.Unrecognized
+	return s.Unrecognized
 }

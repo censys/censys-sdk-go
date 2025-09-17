@@ -9,16 +9,16 @@ type IpmiCapabilitiesExtendedCapabilities struct {
 	SupportsIpmiV20 *bool `json:"supports_ipmi_v2_0,omitempty"`
 }
 
-func (o *IpmiCapabilitiesExtendedCapabilities) GetSupportsIpmiV15() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesExtendedCapabilities) GetSupportsIpmiV15() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.SupportsIpmiV15
+	return i.SupportsIpmiV15
 }
 
-func (o *IpmiCapabilitiesExtendedCapabilities) GetSupportsIpmiV20() *bool {
-	if o == nil {
+func (i *IpmiCapabilitiesExtendedCapabilities) GetSupportsIpmiV20() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.SupportsIpmiV20
+	return i.SupportsIpmiV20
 }

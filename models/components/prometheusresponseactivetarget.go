@@ -15,44 +15,44 @@ type PrometheusResponseActiveTarget struct {
 	ScrapeURL *string `json:"scrape_url,omitempty"`
 }
 
-func (o *PrometheusResponseActiveTarget) GetDiscoveredLabels() *PrometheusResponseActiveTargetDiscoveredLabels {
-	if o == nil {
+func (p *PrometheusResponseActiveTarget) GetDiscoveredLabels() *PrometheusResponseActiveTargetDiscoveredLabels {
+	if p == nil {
 		return nil
 	}
-	return o.DiscoveredLabels
+	return p.DiscoveredLabels
 }
 
-func (o *PrometheusResponseActiveTarget) GetHealth() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTarget) GetHealth() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Health
+	return p.Health
 }
 
-func (o *PrometheusResponseActiveTarget) GetLabels() *PrometheusResponseActiveTargetLabels {
-	if o == nil {
+func (p *PrometheusResponseActiveTarget) GetLabels() *PrometheusResponseActiveTargetLabels {
+	if p == nil {
 		return nil
 	}
-	return o.Labels
+	return p.Labels
 }
 
-func (o *PrometheusResponseActiveTarget) GetLastError() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTarget) GetLastError() *string {
+	if p == nil {
 		return nil
 	}
-	return o.LastError
+	return p.LastError
 }
 
-func (o *PrometheusResponseActiveTarget) GetLastScrape() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTarget) GetLastScrape() *string {
+	if p == nil {
 		return nil
 	}
-	return o.LastScrape
+	return p.LastScrape
 }
 
-func (o *PrometheusResponseActiveTarget) GetScrapeURL() *string {
-	if o == nil {
+func (p *PrometheusResponseActiveTarget) GetScrapeURL() *string {
+	if p == nil {
 		return nil
 	}
-	return o.ScrapeURL
+	return p.ScrapeURL
 }

@@ -7,9 +7,9 @@ type Pop3 struct {
 	StartTLS *string `json:"start_tls,omitempty"`
 }
 
-func (o *Pop3) GetStartTLS() *string {
-	if o == nil {
+func (p *Pop3) GetStartTLS() *string {
+	if p == nil {
 		return nil
 	}
-	return o.StartTLS
+	return p.StartTLS
 }

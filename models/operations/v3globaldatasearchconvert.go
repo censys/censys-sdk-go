@@ -10,31 +10,31 @@ type V3GlobaldataSearchConvertGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataSearchConvertGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataSearchConvertGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataSearchConvertRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID              *string                                `queryParam:"style=form,explode=false,name=organization_id"`
 	SearchConvertQueryInputBody components.SearchConvertQueryInputBody `request:"mediaType=application/json"`
 }
 
-func (o *V3GlobaldataSearchConvertRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataSearchConvertRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataSearchConvertRequest) GetSearchConvertQueryInputBody() components.SearchConvertQueryInputBody {
-	if o == nil {
+func (v *V3GlobaldataSearchConvertRequest) GetSearchConvertQueryInputBody() components.SearchConvertQueryInputBody {
+	if v == nil {
 		return components.SearchConvertQueryInputBody{}
 	}
-	return o.SearchConvertQueryInputBody
+	return v.SearchConvertQueryInputBody
 }
 
 type V3GlobaldataSearchConvertResponse struct {
@@ -44,23 +44,23 @@ type V3GlobaldataSearchConvertResponse struct {
 	Headers                                        map[string][]string
 }
 
-func (o *V3GlobaldataSearchConvertResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataSearchConvertResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataSearchConvertResponse) GetResponseEnvelopeListSearchConvertQueryResponse() *components.ResponseEnvelopeListSearchConvertQueryResponse {
-	if o == nil {
+func (v *V3GlobaldataSearchConvertResponse) GetResponseEnvelopeListSearchConvertQueryResponse() *components.ResponseEnvelopeListSearchConvertQueryResponse {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeListSearchConvertQueryResponse
+	return v.ResponseEnvelopeListSearchConvertQueryResponse
 }
 
-func (o *V3GlobaldataSearchConvertResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataSearchConvertResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

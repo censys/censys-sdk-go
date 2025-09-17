@@ -7,16 +7,16 @@ type NoticeReference struct {
 	Organization  *string `json:"organization,omitempty"`
 }
 
-func (o *NoticeReference) GetNoticeNumbers() []int {
-	if o == nil {
+func (n *NoticeReference) GetNoticeNumbers() []int {
+	if n == nil {
 		return nil
 	}
-	return o.NoticeNumbers
+	return n.NoticeNumbers
 }
 
-func (o *NoticeReference) GetOrganization() *string {
-	if o == nil {
+func (n *NoticeReference) GetOrganization() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Organization
+	return n.Organization
 }

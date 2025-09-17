@@ -7,16 +7,16 @@ type EtcdVersion struct {
 	Server  *string `json:"server,omitempty"`
 }
 
-func (o *EtcdVersion) GetCluster() *string {
-	if o == nil {
+func (e *EtcdVersion) GetCluster() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Cluster
+	return e.Cluster
 }
 
-func (o *EtcdVersion) GetServer() *string {
-	if o == nil {
+func (e *EtcdVersion) GetServer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Server
+	return e.Server
 }

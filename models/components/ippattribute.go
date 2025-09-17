@@ -7,16 +7,16 @@ type IppAttribute struct {
 	ValueTag *int    `json:"value_tag,omitempty"`
 }
 
-func (o *IppAttribute) GetName() *string {
-	if o == nil {
+func (i *IppAttribute) GetName() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *IppAttribute) GetValueTag() *int {
-	if o == nil {
+func (i *IppAttribute) GetValueTag() *int {
+	if i == nil {
 		return nil
 	}
-	return o.ValueTag
+	return i.ValueTag
 }

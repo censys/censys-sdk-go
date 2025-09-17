@@ -15,72 +15,72 @@ type UnitronicsPcom struct {
 	UnitID          *string `json:"unit_id,omitempty"`
 }
 
-func (o *UnitronicsPcom) GetBufferSize() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetBufferSize() *string {
+	if u == nil {
 		return nil
 	}
-	return o.BufferSize
+	return u.BufferSize
 }
 
-func (o *UnitronicsPcom) GetHardwareVersion() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetHardwareVersion() *string {
+	if u == nil {
 		return nil
 	}
-	return o.HardwareVersion
+	return u.HardwareVersion
 }
 
-func (o *UnitronicsPcom) GetModel() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetModel() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Model
+	return u.Model
 }
 
-func (o *UnitronicsPcom) GetModelExecutor() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetModelExecutor() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ModelExecutor
+	return u.ModelExecutor
 }
 
-func (o *UnitronicsPcom) GetModelOpExecutor() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetModelOpExecutor() *string {
+	if u == nil {
 		return nil
 	}
-	return o.ModelOpExecutor
+	return u.ModelOpExecutor
 }
 
-func (o *UnitronicsPcom) GetName() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetName() *string {
+	if u == nil {
 		return nil
 	}
-	return o.Name
+	return u.Name
 }
 
-func (o *UnitronicsPcom) GetOsBuild() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetOsBuild() *string {
+	if u == nil {
 		return nil
 	}
-	return o.OsBuild
+	return u.OsBuild
 }
 
-func (o *UnitronicsPcom) GetOsVersion() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetOsVersion() *string {
+	if u == nil {
 		return nil
 	}
-	return o.OsVersion
+	return u.OsVersion
 }
 
-func (o *UnitronicsPcom) GetUniqueID() *int64 {
-	if o == nil {
+func (u *UnitronicsPcom) GetUniqueID() *int64 {
+	if u == nil {
 		return nil
 	}
-	return o.UniqueID
+	return u.UniqueID
 }
 
-func (o *UnitronicsPcom) GetUnitID() *string {
-	if o == nil {
+func (u *UnitronicsPcom) GetUnitID() *string {
+	if u == nil {
 		return nil
 	}
-	return o.UnitID
+	return u.UnitID
 }

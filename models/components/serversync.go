@@ -8,23 +8,23 @@ type ServerSync struct {
 	WelcomeText  *string  `json:"welcome_text,omitempty"`
 }
 
-func (o *ServerSync) GetMaxBandwidth() *int {
-	if o == nil {
+func (s *ServerSync) GetMaxBandwidth() *int {
+	if s == nil {
 		return nil
 	}
-	return o.MaxBandwidth
+	return s.MaxBandwidth
 }
 
-func (o *ServerSync) GetPermissions() []string {
-	if o == nil {
+func (s *ServerSync) GetPermissions() []string {
+	if s == nil {
 		return nil
 	}
-	return o.Permissions
+	return s.Permissions
 }
 
-func (o *ServerSync) GetWelcomeText() *string {
-	if o == nil {
+func (s *ServerSync) GetWelcomeText() *string {
+	if s == nil {
 		return nil
 	}
-	return o.WelcomeText
+	return s.WelcomeText
 }

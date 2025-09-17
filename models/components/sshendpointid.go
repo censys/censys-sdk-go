@@ -9,30 +9,30 @@ type SSHEndpointID struct {
 	SoftwareVersion *string `json:"software_version,omitempty"`
 }
 
-func (o *SSHEndpointID) GetComment() *string {
-	if o == nil {
+func (s *SSHEndpointID) GetComment() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Comment
+	return s.Comment
 }
 
-func (o *SSHEndpointID) GetProtocolVersion() *string {
-	if o == nil {
+func (s *SSHEndpointID) GetProtocolVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ProtocolVersion
+	return s.ProtocolVersion
 }
 
-func (o *SSHEndpointID) GetRaw() *string {
-	if o == nil {
+func (s *SSHEndpointID) GetRaw() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Raw
+	return s.Raw
 }
 
-func (o *SSHEndpointID) GetSoftwareVersion() *string {
-	if o == nil {
+func (s *SSHEndpointID) GetSoftwareVersion() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SoftwareVersion
+	return s.SoftwareVersion
 }

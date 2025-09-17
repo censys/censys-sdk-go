@@ -12,51 +12,51 @@ type HidVertx struct {
 	Version      *string `json:"version,omitempty"`
 }
 
-func (o *HidVertx) GetFirmwareDate() *string {
-	if o == nil {
+func (h *HidVertx) GetFirmwareDate() *string {
+	if h == nil {
 		return nil
 	}
-	return o.FirmwareDate
+	return h.FirmwareDate
 }
 
-func (o *HidVertx) GetID() *string {
-	if o == nil {
+func (h *HidVertx) GetID() *string {
+	if h == nil {
 		return nil
 	}
-	return o.ID
+	return h.ID
 }
 
-func (o *HidVertx) GetIP() *string {
-	if o == nil {
+func (h *HidVertx) GetIP() *string {
+	if h == nil {
 		return nil
 	}
-	return o.IP
+	return h.IP
 }
 
-func (o *HidVertx) GetMacAddress() *string {
-	if o == nil {
+func (h *HidVertx) GetMacAddress() *string {
+	if h == nil {
 		return nil
 	}
-	return o.MacAddress
+	return h.MacAddress
 }
 
-func (o *HidVertx) GetMakeModel() *string {
-	if o == nil {
+func (h *HidVertx) GetMakeModel() *string {
+	if h == nil {
 		return nil
 	}
-	return o.MakeModel
+	return h.MakeModel
 }
 
-func (o *HidVertx) GetModel() *string {
-	if o == nil {
+func (h *HidVertx) GetModel() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Model
+	return h.Model
 }
 
-func (o *HidVertx) GetVersion() *string {
-	if o == nil {
+func (h *HidVertx) GetVersion() *string {
+	if h == nil {
 		return nil
 	}
-	return o.Version
+	return h.Version
 }

@@ -7,16 +7,16 @@ type ElasticSearchResultsNodeInfo struct {
 	NodeInfo            []ElasticSearchResultsNodeInfoNodes              `json:"node_info,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfo) GetClusterCombinedInfo() *ElasticSearchResultsNodeInfoClusterCombinedInfo {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfo) GetClusterCombinedInfo() *ElasticSearchResultsNodeInfoClusterCombinedInfo {
+	if e == nil {
 		return nil
 	}
-	return o.ClusterCombinedInfo
+	return e.ClusterCombinedInfo
 }
 
-func (o *ElasticSearchResultsNodeInfo) GetNodeInfo() []ElasticSearchResultsNodeInfoNodes {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfo) GetNodeInfo() []ElasticSearchResultsNodeInfoNodes {
+	if e == nil {
 		return nil
 	}
-	return o.NodeInfo
+	return e.NodeInfo
 }

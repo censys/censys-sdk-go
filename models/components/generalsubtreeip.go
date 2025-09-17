@@ -13,30 +13,30 @@ type GeneralSubtreeIP struct {
 	Mask *string `json:"mask,omitempty"`
 }
 
-func (o *GeneralSubtreeIP) GetBegin() *string {
-	if o == nil {
+func (g *GeneralSubtreeIP) GetBegin() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Begin
+	return g.Begin
 }
 
-func (o *GeneralSubtreeIP) GetCidr() *string {
-	if o == nil {
+func (g *GeneralSubtreeIP) GetCidr() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Cidr
+	return g.Cidr
 }
 
-func (o *GeneralSubtreeIP) GetEnd() *string {
-	if o == nil {
+func (g *GeneralSubtreeIP) GetEnd() *string {
+	if g == nil {
 		return nil
 	}
-	return o.End
+	return g.End
 }
 
-func (o *GeneralSubtreeIP) GetMask() *string {
-	if o == nil {
+func (g *GeneralSubtreeIP) GetMask() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Mask
+	return g.Mask
 }

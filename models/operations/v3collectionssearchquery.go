@@ -10,40 +10,40 @@ type V3CollectionsSearchQueryGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3CollectionsSearchQueryGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsSearchQueryGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3CollectionsSearchQueryRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The UID for the collection
 	CollectionUID        string                          `pathParam:"style=simple,explode=false,name=collection_uid"`
 	SearchQueryInputBody components.SearchQueryInputBody `request:"mediaType=application/json"`
 }
 
-func (o *V3CollectionsSearchQueryRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsSearchQueryRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3CollectionsSearchQueryRequest) GetCollectionUID() string {
-	if o == nil {
+func (v *V3CollectionsSearchQueryRequest) GetCollectionUID() string {
+	if v == nil {
 		return ""
 	}
-	return o.CollectionUID
+	return v.CollectionUID
 }
 
-func (o *V3CollectionsSearchQueryRequest) GetSearchQueryInputBody() components.SearchQueryInputBody {
-	if o == nil {
+func (v *V3CollectionsSearchQueryRequest) GetSearchQueryInputBody() components.SearchQueryInputBody {
+	if v == nil {
 		return components.SearchQueryInputBody{}
 	}
-	return o.SearchQueryInputBody
+	return v.SearchQueryInputBody
 }
 
 type V3CollectionsSearchQueryResponse struct {
@@ -53,23 +53,23 @@ type V3CollectionsSearchQueryResponse struct {
 	Headers                             map[string][]string
 }
 
-func (o *V3CollectionsSearchQueryResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3CollectionsSearchQueryResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3CollectionsSearchQueryResponse) GetResponseEnvelopeSearchQueryResponse() *components.ResponseEnvelopeSearchQueryResponse {
-	if o == nil {
+func (v *V3CollectionsSearchQueryResponse) GetResponseEnvelopeSearchQueryResponse() *components.ResponseEnvelopeSearchQueryResponse {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeSearchQueryResponse
+	return v.ResponseEnvelopeSearchQueryResponse
 }
 
-func (o *V3CollectionsSearchQueryResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3CollectionsSearchQueryResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

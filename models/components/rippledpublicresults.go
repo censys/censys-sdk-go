@@ -13,58 +13,58 @@ type RippledPublicResults struct {
 	ValidationQuorum *int64  `json:"validation_quorum,omitempty"`
 }
 
-func (o *RippledPublicResults) GetBuildVersion() *string {
-	if o == nil {
+func (r *RippledPublicResults) GetBuildVersion() *string {
+	if r == nil {
 		return nil
 	}
-	return o.BuildVersion
+	return r.BuildVersion
 }
 
-func (o *RippledPublicResults) GetHostid() *string {
-	if o == nil {
+func (r *RippledPublicResults) GetHostid() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Hostid
+	return r.Hostid
 }
 
-func (o *RippledPublicResults) GetNetworkID() *int64 {
-	if o == nil {
+func (r *RippledPublicResults) GetNetworkID() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.NetworkID
+	return r.NetworkID
 }
 
-func (o *RippledPublicResults) GetPeers() *int64 {
-	if o == nil {
+func (r *RippledPublicResults) GetPeers() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Peers
+	return r.Peers
 }
 
-func (o *RippledPublicResults) GetPorts() []Port {
-	if o == nil {
+func (r *RippledPublicResults) GetPorts() []Port {
+	if r == nil {
 		return nil
 	}
-	return o.Ports
+	return r.Ports
 }
 
-func (o *RippledPublicResults) GetPubkeyNode() *string {
-	if o == nil {
+func (r *RippledPublicResults) GetPubkeyNode() *string {
+	if r == nil {
 		return nil
 	}
-	return o.PubkeyNode
+	return r.PubkeyNode
 }
 
-func (o *RippledPublicResults) GetServerState() *string {
-	if o == nil {
+func (r *RippledPublicResults) GetServerState() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ServerState
+	return r.ServerState
 }
 
-func (o *RippledPublicResults) GetValidationQuorum() *int64 {
-	if o == nil {
+func (r *RippledPublicResults) GetValidationQuorum() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.ValidationQuorum
+	return r.ValidationQuorum
 }

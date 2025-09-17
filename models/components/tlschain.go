@@ -11,23 +11,23 @@ type TLSChain struct {
 	SubjectDn *string `json:"subject_dn,omitempty"`
 }
 
-func (o *TLSChain) GetFingerprintSha256() *string {
-	if o == nil {
+func (t *TLSChain) GetFingerprintSha256() *string {
+	if t == nil {
 		return nil
 	}
-	return o.FingerprintSha256
+	return t.FingerprintSha256
 }
 
-func (o *TLSChain) GetIssuerDn() *string {
-	if o == nil {
+func (t *TLSChain) GetIssuerDn() *string {
+	if t == nil {
 		return nil
 	}
-	return o.IssuerDn
+	return t.IssuerDn
 }
 
-func (o *TLSChain) GetSubjectDn() *string {
-	if o == nil {
+func (t *TLSChain) GetSubjectDn() *string {
+	if t == nil {
 		return nil
 	}
-	return o.SubjectDn
+	return t.SubjectDn
 }

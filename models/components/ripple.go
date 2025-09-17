@@ -8,23 +8,23 @@ type Ripple struct {
 	RippledPublic *RippledPublicResults `json:"rippled_public,omitempty"`
 }
 
-func (o *Ripple) GetRippleClio() *RippleClioResults {
-	if o == nil {
+func (r *Ripple) GetRippleClio() *RippleClioResults {
+	if r == nil {
 		return nil
 	}
-	return o.RippleClio
+	return r.RippleClio
 }
 
-func (o *Ripple) GetRippledPeer() *RipplePeerResults {
-	if o == nil {
+func (r *Ripple) GetRippledPeer() *RipplePeerResults {
+	if r == nil {
 		return nil
 	}
-	return o.RippledPeer
+	return r.RippledPeer
 }
 
-func (o *Ripple) GetRippledPublic() *RippledPublicResults {
-	if o == nil {
+func (r *Ripple) GetRippledPublic() *RippledPublicResults {
+	if r == nil {
 		return nil
 	}
-	return o.RippledPublic
+	return r.RippledPublic
 }

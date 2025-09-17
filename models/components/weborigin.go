@@ -7,16 +7,16 @@ type WebOrigin struct {
 	Port     *int    `json:"port,omitempty"`
 }
 
-func (o *WebOrigin) GetHostname() *string {
-	if o == nil {
+func (w *WebOrigin) GetHostname() *string {
+	if w == nil {
 		return nil
 	}
-	return o.Hostname
+	return w.Hostname
 }
 
-func (o *WebOrigin) GetPort() *int {
-	if o == nil {
+func (w *WebOrigin) GetPort() *int {
+	if w == nil {
 		return nil
 	}
-	return o.Port
+	return w.Port
 }

@@ -8,23 +8,23 @@ type CryptSetup struct {
 	ServerNonce *string `json:"server_nonce,omitempty"`
 }
 
-func (o *CryptSetup) GetClientNonce() *string {
-	if o == nil {
+func (c *CryptSetup) GetClientNonce() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ClientNonce
+	return c.ClientNonce
 }
 
-func (o *CryptSetup) GetKey() *string {
-	if o == nil {
+func (c *CryptSetup) GetKey() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Key
+	return c.Key
 }
 
-func (o *CryptSetup) GetServerNonce() *string {
-	if o == nil {
+func (c *CryptSetup) GetServerNonce() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ServerNonce
+	return c.ServerNonce
 }

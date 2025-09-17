@@ -17,44 +17,44 @@ type Routing struct {
 	Organization *string `json:"organization,omitempty"`
 }
 
-func (o *Routing) GetAsn() *int {
-	if o == nil {
+func (r *Routing) GetAsn() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Asn
+	return r.Asn
 }
 
-func (o *Routing) GetBgpPrefix() *string {
-	if o == nil {
+func (r *Routing) GetBgpPrefix() *string {
+	if r == nil {
 		return nil
 	}
-	return o.BgpPrefix
+	return r.BgpPrefix
 }
 
-func (o *Routing) GetCountryCode() *string {
-	if o == nil {
+func (r *Routing) GetCountryCode() *string {
+	if r == nil {
 		return nil
 	}
-	return o.CountryCode
+	return r.CountryCode
 }
 
-func (o *Routing) GetDescription() *string {
-	if o == nil {
+func (r *Routing) GetDescription() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Description
+	return r.Description
 }
 
-func (o *Routing) GetName() *string {
-	if o == nil {
+func (r *Routing) GetName() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Name
+	return r.Name
 }
 
-func (o *Routing) GetOrganization() *string {
-	if o == nil {
+func (r *Routing) GetOrganization() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Organization
+	return r.Organization
 }

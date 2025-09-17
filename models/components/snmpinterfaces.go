@@ -7,9 +7,9 @@ type SnmpInterfaces struct {
 	NumIfaces *int `json:"num_ifaces,omitempty"`
 }
 
-func (o *SnmpInterfaces) GetNumIfaces() *int {
-	if o == nil {
+func (s *SnmpInterfaces) GetNumIfaces() *int {
+	if s == nil {
 		return nil
 	}
-	return o.NumIfaces
+	return s.NumIfaces
 }

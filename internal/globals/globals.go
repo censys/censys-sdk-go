@@ -6,9 +6,9 @@ type Globals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *Globals) GetOrganizationID() *string {
-	if o == nil {
+func (g *Globals) GetOrganizationID() *string {
+	if g == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return g.OrganizationID
 }

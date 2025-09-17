@@ -12,15 +12,15 @@ type V3GlobaldataAssetWebpropertyGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3GlobaldataAssetWebpropertyGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3GlobaldataAssetWebpropertyRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// A web property identifier.
 	WebpropertyID string `pathParam:"style=simple,explode=false,name=webproperty_id"`
@@ -39,25 +39,25 @@ func (v *V3GlobaldataAssetWebpropertyRequest) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *V3GlobaldataAssetWebpropertyRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3GlobaldataAssetWebpropertyRequest) GetWebpropertyID() string {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyRequest) GetWebpropertyID() string {
+	if v == nil {
 		return ""
 	}
-	return o.WebpropertyID
+	return v.WebpropertyID
 }
 
-func (o *V3GlobaldataAssetWebpropertyRequest) GetAtTime() *time.Time {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyRequest) GetAtTime() *time.Time {
+	if v == nil {
 		return nil
 	}
-	return o.AtTime
+	return v.AtTime
 }
 
 type V3GlobaldataAssetWebpropertyResponse struct {
@@ -67,23 +67,23 @@ type V3GlobaldataAssetWebpropertyResponse struct {
 	Headers                          map[string][]string
 }
 
-func (o *V3GlobaldataAssetWebpropertyResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3GlobaldataAssetWebpropertyResponse) GetResponseEnvelopeWebpropertyAsset() *components.ResponseEnvelopeWebpropertyAsset {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyResponse) GetResponseEnvelopeWebpropertyAsset() *components.ResponseEnvelopeWebpropertyAsset {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeWebpropertyAsset
+	return v.ResponseEnvelopeWebpropertyAsset
 }
 
-func (o *V3GlobaldataAssetWebpropertyResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3GlobaldataAssetWebpropertyResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

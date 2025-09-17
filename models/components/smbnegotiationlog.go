@@ -13,58 +13,58 @@ type SmbNegotiationLog struct {
 	SystemTime          *int          `json:"system_time,omitempty"`
 }
 
-func (o *SmbNegotiationLog) GetAuthenticationTypes() []string {
-	if o == nil {
+func (s *SmbNegotiationLog) GetAuthenticationTypes() []string {
+	if s == nil {
 		return nil
 	}
-	return o.AuthenticationTypes
+	return s.AuthenticationTypes
 }
 
-func (o *SmbNegotiationLog) GetCapabilities() *int {
-	if o == nil {
+func (s *SmbNegotiationLog) GetCapabilities() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Capabilities
+	return s.Capabilities
 }
 
-func (o *SmbNegotiationLog) GetDialectRevision() *int {
-	if o == nil {
+func (s *SmbNegotiationLog) GetDialectRevision() *int {
+	if s == nil {
 		return nil
 	}
-	return o.DialectRevision
+	return s.DialectRevision
 }
 
-func (o *SmbNegotiationLog) GetHeaderLog() *SmbHeaderLog {
-	if o == nil {
+func (s *SmbNegotiationLog) GetHeaderLog() *SmbHeaderLog {
+	if s == nil {
 		return nil
 	}
-	return o.HeaderLog
+	return s.HeaderLog
 }
 
-func (o *SmbNegotiationLog) GetSecurityMode() *int {
-	if o == nil {
+func (s *SmbNegotiationLog) GetSecurityMode() *int {
+	if s == nil {
 		return nil
 	}
-	return o.SecurityMode
+	return s.SecurityMode
 }
 
-func (o *SmbNegotiationLog) GetServerGUID() *string {
-	if o == nil {
+func (s *SmbNegotiationLog) GetServerGUID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ServerGUID
+	return s.ServerGUID
 }
 
-func (o *SmbNegotiationLog) GetServerStartTime() *int {
-	if o == nil {
+func (s *SmbNegotiationLog) GetServerStartTime() *int {
+	if s == nil {
 		return nil
 	}
-	return o.ServerStartTime
+	return s.ServerStartTime
 }
 
-func (o *SmbNegotiationLog) GetSystemTime() *int {
-	if o == nil {
+func (s *SmbNegotiationLog) GetSystemTime() *int {
+	if s == nil {
 		return nil
 	}
-	return o.SystemTime
+	return s.SystemTime
 }

@@ -16,44 +16,44 @@ type PrometheusResponse struct {
 	PrometheusVersions []PrometheusResponsePrometheusVersion `json:"prometheus_versions,omitempty"`
 }
 
-func (o *PrometheusResponse) GetActiveTargets() []PrometheusResponseActiveTarget {
-	if o == nil {
+func (p *PrometheusResponse) GetActiveTargets() []PrometheusResponseActiveTarget {
+	if p == nil {
 		return nil
 	}
-	return o.ActiveTargets
+	return p.ActiveTargets
 }
 
-func (o *PrometheusResponse) GetAllVersions() []string {
-	if o == nil {
+func (p *PrometheusResponse) GetAllVersions() []string {
+	if p == nil {
 		return nil
 	}
-	return o.AllVersions
+	return p.AllVersions
 }
 
-func (o *PrometheusResponse) GetConfigExposed() *bool {
-	if o == nil {
+func (p *PrometheusResponse) GetConfigExposed() *bool {
+	if p == nil {
 		return nil
 	}
-	return o.ConfigExposed
+	return p.ConfigExposed
 }
 
-func (o *PrometheusResponse) GetDroppedTargets() []PrometheusResponseDroppedTarget {
-	if o == nil {
+func (p *PrometheusResponse) GetDroppedTargets() []PrometheusResponseDroppedTarget {
+	if p == nil {
 		return nil
 	}
-	return o.DroppedTargets
+	return p.DroppedTargets
 }
 
-func (o *PrometheusResponse) GetGoVersions() []string {
-	if o == nil {
+func (p *PrometheusResponse) GetGoVersions() []string {
+	if p == nil {
 		return nil
 	}
-	return o.GoVersions
+	return p.GoVersions
 }
 
-func (o *PrometheusResponse) GetPrometheusVersions() []PrometheusResponsePrometheusVersion {
-	if o == nil {
+func (p *PrometheusResponse) GetPrometheusVersions() []PrometheusResponsePrometheusVersion {
+	if p == nil {
 		return nil
 	}
-	return o.PrometheusVersions
+	return p.PrometheusVersions
 }

@@ -16,79 +16,79 @@ type L2TpAttributeValues struct {
 	WindowSize       *int    `json:"window_size,omitempty"`
 }
 
-func (o *L2TpAttributeValues) GetErrorCode() *int {
-	if o == nil {
+func (l *L2TpAttributeValues) GetErrorCode() *int {
+	if l == nil {
 		return nil
 	}
-	return o.ErrorCode
+	return l.ErrorCode
 }
 
-func (o *L2TpAttributeValues) GetErrorMeaning() *string {
-	if o == nil {
+func (l *L2TpAttributeValues) GetErrorMeaning() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ErrorMeaning
+	return l.ErrorMeaning
 }
 
-func (o *L2TpAttributeValues) GetErrorMessage() *string {
-	if o == nil {
+func (l *L2TpAttributeValues) GetErrorMessage() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ErrorMessage
+	return l.ErrorMessage
 }
 
-func (o *L2TpAttributeValues) GetFirmwareRevision() *int {
-	if o == nil {
+func (l *L2TpAttributeValues) GetFirmwareRevision() *int {
+	if l == nil {
 		return nil
 	}
-	return o.FirmwareRevision
+	return l.FirmwareRevision
 }
 
-func (o *L2TpAttributeValues) GetHostname() *string {
-	if o == nil {
+func (l *L2TpAttributeValues) GetHostname() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Hostname
+	return l.Hostname
 }
 
-func (o *L2TpAttributeValues) GetProtocolRevision() *int {
-	if o == nil {
+func (l *L2TpAttributeValues) GetProtocolRevision() *int {
+	if l == nil {
 		return nil
 	}
-	return o.ProtocolRevision
+	return l.ProtocolRevision
 }
 
-func (o *L2TpAttributeValues) GetProtocolVersion() *int {
-	if o == nil {
+func (l *L2TpAttributeValues) GetProtocolVersion() *int {
+	if l == nil {
 		return nil
 	}
-	return o.ProtocolVersion
+	return l.ProtocolVersion
 }
 
-func (o *L2TpAttributeValues) GetResultCode() *int {
-	if o == nil {
+func (l *L2TpAttributeValues) GetResultCode() *int {
+	if l == nil {
 		return nil
 	}
-	return o.ResultCode
+	return l.ResultCode
 }
 
-func (o *L2TpAttributeValues) GetResultMeaning() *string {
-	if o == nil {
+func (l *L2TpAttributeValues) GetResultMeaning() *string {
+	if l == nil {
 		return nil
 	}
-	return o.ResultMeaning
+	return l.ResultMeaning
 }
 
-func (o *L2TpAttributeValues) GetVendorName() *string {
-	if o == nil {
+func (l *L2TpAttributeValues) GetVendorName() *string {
+	if l == nil {
 		return nil
 	}
-	return o.VendorName
+	return l.VendorName
 }
 
-func (o *L2TpAttributeValues) GetWindowSize() *int {
-	if o == nil {
+func (l *L2TpAttributeValues) GetWindowSize() *int {
+	if l == nil {
 		return nil
 	}
-	return o.WindowSize
+	return l.WindowSize
 }

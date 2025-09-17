@@ -38,121 +38,121 @@ type DistinguishedName struct {
 	Surname []string `json:"surname,omitempty"`
 }
 
-func (o *DistinguishedName) GetCommonName() []string {
-	if o == nil {
+func (d *DistinguishedName) GetCommonName() []string {
+	if d == nil {
 		return nil
 	}
-	return o.CommonName
+	return d.CommonName
 }
 
-func (o *DistinguishedName) GetCountry() []string {
-	if o == nil {
+func (d *DistinguishedName) GetCountry() []string {
+	if d == nil {
 		return nil
 	}
-	return o.Country
+	return d.Country
 }
 
-func (o *DistinguishedName) GetDomainComponent() []string {
-	if o == nil {
+func (d *DistinguishedName) GetDomainComponent() []string {
+	if d == nil {
 		return nil
 	}
-	return o.DomainComponent
+	return d.DomainComponent
 }
 
-func (o *DistinguishedName) GetEmailAddress() []string {
-	if o == nil {
+func (d *DistinguishedName) GetEmailAddress() []string {
+	if d == nil {
 		return nil
 	}
-	return o.EmailAddress
+	return d.EmailAddress
 }
 
-func (o *DistinguishedName) GetGivenName() []string {
-	if o == nil {
+func (d *DistinguishedName) GetGivenName() []string {
+	if d == nil {
 		return nil
 	}
-	return o.GivenName
+	return d.GivenName
 }
 
-func (o *DistinguishedName) GetJurisdictionCountry() []string {
-	if o == nil {
+func (d *DistinguishedName) GetJurisdictionCountry() []string {
+	if d == nil {
 		return nil
 	}
-	return o.JurisdictionCountry
+	return d.JurisdictionCountry
 }
 
-func (o *DistinguishedName) GetJurisdictionLocality() []string {
-	if o == nil {
+func (d *DistinguishedName) GetJurisdictionLocality() []string {
+	if d == nil {
 		return nil
 	}
-	return o.JurisdictionLocality
+	return d.JurisdictionLocality
 }
 
-func (o *DistinguishedName) GetJurisdictionProvince() []string {
-	if o == nil {
+func (d *DistinguishedName) GetJurisdictionProvince() []string {
+	if d == nil {
 		return nil
 	}
-	return o.JurisdictionProvince
+	return d.JurisdictionProvince
 }
 
-func (o *DistinguishedName) GetLocality() []string {
-	if o == nil {
+func (d *DistinguishedName) GetLocality() []string {
+	if d == nil {
 		return nil
 	}
-	return o.Locality
+	return d.Locality
 }
 
-func (o *DistinguishedName) GetOrganization() []string {
-	if o == nil {
+func (d *DistinguishedName) GetOrganization() []string {
+	if d == nil {
 		return nil
 	}
-	return o.Organization
+	return d.Organization
 }
 
-func (o *DistinguishedName) GetOrganizationID() []string {
-	if o == nil {
+func (d *DistinguishedName) GetOrganizationID() []string {
+	if d == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return d.OrganizationID
 }
 
-func (o *DistinguishedName) GetOrganizationalUnit() []string {
-	if o == nil {
+func (d *DistinguishedName) GetOrganizationalUnit() []string {
+	if d == nil {
 		return nil
 	}
-	return o.OrganizationalUnit
+	return d.OrganizationalUnit
 }
 
-func (o *DistinguishedName) GetPostalCode() []string {
-	if o == nil {
+func (d *DistinguishedName) GetPostalCode() []string {
+	if d == nil {
 		return nil
 	}
-	return o.PostalCode
+	return d.PostalCode
 }
 
-func (o *DistinguishedName) GetProvince() []string {
-	if o == nil {
+func (d *DistinguishedName) GetProvince() []string {
+	if d == nil {
 		return nil
 	}
-	return o.Province
+	return d.Province
 }
 
-func (o *DistinguishedName) GetSerialNumber() []string {
-	if o == nil {
+func (d *DistinguishedName) GetSerialNumber() []string {
+	if d == nil {
 		return nil
 	}
-	return o.SerialNumber
+	return d.SerialNumber
 }
 
-func (o *DistinguishedName) GetStreetAddress() []string {
-	if o == nil {
+func (d *DistinguishedName) GetStreetAddress() []string {
+	if d == nil {
 		return nil
 	}
-	return o.StreetAddress
+	return d.StreetAddress
 }
 
-func (o *DistinguishedName) GetSurname() []string {
-	if o == nil {
+func (d *DistinguishedName) GetSurname() []string {
+	if d == nil {
 		return nil
 	}
-	return o.Surname
+	return d.Surname
 }

@@ -7,16 +7,16 @@ type ExportList struct {
 	Groups    []string `json:"groups,omitempty"`
 }
 
-func (o *ExportList) GetDirectory() *string {
-	if o == nil {
+func (e *ExportList) GetDirectory() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Directory
+	return e.Directory
 }
 
-func (o *ExportList) GetGroups() []string {
-	if o == nil {
+func (e *ExportList) GetGroups() []string {
+	if e == nil {
 		return nil
 	}
-	return o.Groups
+	return e.Groups
 }

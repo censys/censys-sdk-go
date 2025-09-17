@@ -7,16 +7,16 @@ type Ja4TScanScan struct {
 	ScanTime    *string `json:"scan_time,omitempty"`
 }
 
-func (o *Ja4TScanScan) GetFingerprint() *string {
-	if o == nil {
+func (j *Ja4TScanScan) GetFingerprint() *string {
+	if j == nil {
 		return nil
 	}
-	return o.Fingerprint
+	return j.Fingerprint
 }
 
-func (o *Ja4TScanScan) GetScanTime() *string {
-	if o == nil {
+func (j *Ja4TScanScan) GetScanTime() *string {
+	if j == nil {
 		return nil
 	}
-	return o.ScanTime
+	return j.ScanTime
 }

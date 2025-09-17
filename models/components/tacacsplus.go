@@ -12,51 +12,51 @@ type TacacsPlus struct {
 	Version    *int    `json:"version,omitempty"`
 }
 
-func (o *TacacsPlus) GetDataLength() *int {
-	if o == nil {
+func (t *TacacsPlus) GetDataLength() *int {
+	if t == nil {
 		return nil
 	}
-	return o.DataLength
+	return t.DataLength
 }
 
-func (o *TacacsPlus) GetFlags() *int {
-	if o == nil {
+func (t *TacacsPlus) GetFlags() *int {
+	if t == nil {
 		return nil
 	}
-	return o.Flags
+	return t.Flags
 }
 
-func (o *TacacsPlus) GetObfuscated() *string {
-	if o == nil {
+func (t *TacacsPlus) GetObfuscated() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Obfuscated
+	return t.Obfuscated
 }
 
-func (o *TacacsPlus) GetSeqNum() *int {
-	if o == nil {
+func (t *TacacsPlus) GetSeqNum() *int {
+	if t == nil {
 		return nil
 	}
-	return o.SeqNum
+	return t.SeqNum
 }
 
-func (o *TacacsPlus) GetSessionID() *int {
-	if o == nil {
+func (t *TacacsPlus) GetSessionID() *int {
+	if t == nil {
 		return nil
 	}
-	return o.SessionID
+	return t.SessionID
 }
 
-func (o *TacacsPlus) GetType() *int {
-	if o == nil {
+func (t *TacacsPlus) GetType() *int {
+	if t == nil {
 		return nil
 	}
-	return o.Type
+	return t.Type
 }
 
-func (o *TacacsPlus) GetVersion() *int {
-	if o == nil {
+func (t *TacacsPlus) GetVersion() *int {
+	if t == nil {
 		return nil
 	}
-	return o.Version
+	return t.Version
 }

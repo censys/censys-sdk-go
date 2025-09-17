@@ -26,79 +26,79 @@ type SSHKexInitMessage struct {
 	ServerToClientMacs []string `json:"server_to_client_macs,omitempty"`
 }
 
-func (o *SSHKexInitMessage) GetClientToServerCiphers() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetClientToServerCiphers() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ClientToServerCiphers
+	return s.ClientToServerCiphers
 }
 
-func (o *SSHKexInitMessage) GetClientToServerCompression() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetClientToServerCompression() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ClientToServerCompression
+	return s.ClientToServerCompression
 }
 
-func (o *SSHKexInitMessage) GetClientToServerLanguages() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetClientToServerLanguages() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ClientToServerLanguages
+	return s.ClientToServerLanguages
 }
 
-func (o *SSHKexInitMessage) GetClientToServerMacs() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetClientToServerMacs() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ClientToServerMacs
+	return s.ClientToServerMacs
 }
 
-func (o *SSHKexInitMessage) GetFirstKexFollows() *bool {
-	if o == nil {
+func (s *SSHKexInitMessage) GetFirstKexFollows() *bool {
+	if s == nil {
 		return nil
 	}
-	return o.FirstKexFollows
+	return s.FirstKexFollows
 }
 
-func (o *SSHKexInitMessage) GetHostKeyAlgorithms() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetHostKeyAlgorithms() []string {
+	if s == nil {
 		return nil
 	}
-	return o.HostKeyAlgorithms
+	return s.HostKeyAlgorithms
 }
 
-func (o *SSHKexInitMessage) GetKexAlgorithms() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetKexAlgorithms() []string {
+	if s == nil {
 		return nil
 	}
-	return o.KexAlgorithms
+	return s.KexAlgorithms
 }
 
-func (o *SSHKexInitMessage) GetServerToClientCiphers() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetServerToClientCiphers() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ServerToClientCiphers
+	return s.ServerToClientCiphers
 }
 
-func (o *SSHKexInitMessage) GetServerToClientCompression() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetServerToClientCompression() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ServerToClientCompression
+	return s.ServerToClientCompression
 }
 
-func (o *SSHKexInitMessage) GetServerToClientLanguages() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetServerToClientLanguages() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ServerToClientLanguages
+	return s.ServerToClientLanguages
 }
 
-func (o *SSHKexInitMessage) GetServerToClientMacs() []string {
-	if o == nil {
+func (s *SSHKexInitMessage) GetServerToClientMacs() []string {
+	if s == nil {
 		return nil
 	}
-	return o.ServerToClientMacs
+	return s.ServerToClientMacs
 }

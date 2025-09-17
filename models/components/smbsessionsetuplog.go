@@ -9,30 +9,30 @@ type SmbSessionSetupLog struct {
 	TargetName     *string       `json:"target_name,omitempty"`
 }
 
-func (o *SmbSessionSetupLog) GetHeaderLog() *SmbHeaderLog {
-	if o == nil {
+func (s *SmbSessionSetupLog) GetHeaderLog() *SmbHeaderLog {
+	if s == nil {
 		return nil
 	}
-	return o.HeaderLog
+	return s.HeaderLog
 }
 
-func (o *SmbSessionSetupLog) GetNegotiateFlags() *int {
-	if o == nil {
+func (s *SmbSessionSetupLog) GetNegotiateFlags() *int {
+	if s == nil {
 		return nil
 	}
-	return o.NegotiateFlags
+	return s.NegotiateFlags
 }
 
-func (o *SmbSessionSetupLog) GetSetupFlags() *int {
-	if o == nil {
+func (s *SmbSessionSetupLog) GetSetupFlags() *int {
+	if s == nil {
 		return nil
 	}
-	return o.SetupFlags
+	return s.SetupFlags
 }
 
-func (o *SmbSessionSetupLog) GetTargetName() *string {
-	if o == nil {
+func (s *SmbSessionSetupLog) GetTargetName() *string {
+	if s == nil {
 		return nil
 	}
-	return o.TargetName
+	return s.TargetName
 }

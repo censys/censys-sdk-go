@@ -6,9 +6,9 @@ type Prometheus struct {
 	Response *PrometheusResponse `json:"response,omitempty"`
 }
 
-func (o *Prometheus) GetResponse() *PrometheusResponse {
-	if o == nil {
+func (p *Prometheus) GetResponse() *PrometheusResponse {
+	if p == nil {
 		return nil
 	}
-	return o.Response
+	return p.Response
 }

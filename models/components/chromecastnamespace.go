@@ -6,9 +6,9 @@ type ChromecastNamespace struct {
 	Name *string `json:"name,omitempty"`
 }
 
-func (o *ChromecastNamespace) GetName() *string {
-	if o == nil {
+func (c *ChromecastNamespace) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }

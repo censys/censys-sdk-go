@@ -11,37 +11,37 @@ type Ipmi struct {
 	SessionHeader *IpmiSessionHeader `json:"session_header,omitempty"`
 }
 
-func (o *Ipmi) GetCapabilities() *IpmiCapabilities {
-	if o == nil {
+func (i *Ipmi) GetCapabilities() *IpmiCapabilities {
+	if i == nil {
 		return nil
 	}
-	return o.Capabilities
+	return i.Capabilities
 }
 
-func (o *Ipmi) GetCommandPayload() *IpmiCommandPayload {
-	if o == nil {
+func (i *Ipmi) GetCommandPayload() *IpmiCommandPayload {
+	if i == nil {
 		return nil
 	}
-	return o.CommandPayload
+	return i.CommandPayload
 }
 
-func (o *Ipmi) GetRaw() *string {
-	if o == nil {
+func (i *Ipmi) GetRaw() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }
 
-func (o *Ipmi) GetRmcpHeader() *IpmiRMCPHeader {
-	if o == nil {
+func (i *Ipmi) GetRmcpHeader() *IpmiRMCPHeader {
+	if i == nil {
 		return nil
 	}
-	return o.RmcpHeader
+	return i.RmcpHeader
 }
 
-func (o *Ipmi) GetSessionHeader() *IpmiSessionHeader {
-	if o == nil {
+func (i *Ipmi) GetSessionHeader() *IpmiSessionHeader {
+	if i == nil {
 		return nil
 	}
-	return o.SessionHeader
+	return i.SessionHeader
 }

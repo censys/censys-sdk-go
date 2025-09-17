@@ -7,16 +7,16 @@ type RawCertificateResponse struct {
 	Pem           string `json:"pem"`
 }
 
-func (o *RawCertificateResponse) GetCertificateID() string {
-	if o == nil {
+func (r *RawCertificateResponse) GetCertificateID() string {
+	if r == nil {
 		return ""
 	}
-	return o.CertificateID
+	return r.CertificateID
 }
 
-func (o *RawCertificateResponse) GetPem() string {
-	if o == nil {
+func (r *RawCertificateResponse) GetPem() string {
+	if r == nil {
 		return ""
 	}
-	return o.Pem
+	return r.Pem
 }

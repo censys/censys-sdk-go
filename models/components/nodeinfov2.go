@@ -20,107 +20,107 @@ type NodeInfoV2 struct {
 	Version                    *string  `json:"version,omitempty"`
 }
 
-func (o *NodeInfoV2) GetDecimals() *int64 {
-	if o == nil {
+func (n *NodeInfoV2) GetDecimals() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.Decimals
+	return n.Decimals
 }
 
-func (o *NodeInfoV2) GetFeatures() []string {
-	if o == nil {
+func (n *NodeInfoV2) GetFeatures() []string {
+	if n == nil {
 		return nil
 	}
-	return o.Features
+	return n.Features
 }
 
-func (o *NodeInfoV2) GetIsHealthy() *bool {
-	if o == nil {
+func (n *NodeInfoV2) GetIsHealthy() *bool {
+	if n == nil {
 		return nil
 	}
-	return o.IsHealthy
+	return n.IsHealthy
 }
 
-func (o *NodeInfoV2) GetLatestMilestone() *int64 {
-	if o == nil {
+func (n *NodeInfoV2) GetLatestMilestone() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.LatestMilestone
+	return n.LatestMilestone
 }
 
-func (o *NodeInfoV2) GetLatestUncommittedMilestone() *int64 {
-	if o == nil {
+func (n *NodeInfoV2) GetLatestUncommittedMilestone() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.LatestUncommittedMilestone
+	return n.LatestUncommittedMilestone
 }
 
-func (o *NodeInfoV2) GetName() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Name
+	return n.Name
 }
 
-func (o *NodeInfoV2) GetNetworkName() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetNetworkName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.NetworkName
+	return n.NetworkName
 }
 
-func (o *NodeInfoV2) GetProtocolVersion() *int64 {
-	if o == nil {
+func (n *NodeInfoV2) GetProtocolVersion() *int64 {
+	if n == nil {
 		return nil
 	}
-	return o.ProtocolVersion
+	return n.ProtocolVersion
 }
 
-func (o *NodeInfoV2) GetSubunit() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetSubunit() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Subunit
+	return n.Subunit
 }
 
-func (o *NodeInfoV2) GetSupportedProtocolVersions() []int64 {
-	if o == nil {
+func (n *NodeInfoV2) GetSupportedProtocolVersions() []int64 {
+	if n == nil {
 		return nil
 	}
-	return o.SupportedProtocolVersions
+	return n.SupportedProtocolVersions
 }
 
-func (o *NodeInfoV2) GetTickerSymbol() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetTickerSymbol() *string {
+	if n == nil {
 		return nil
 	}
-	return o.TickerSymbol
+	return n.TickerSymbol
 }
 
-func (o *NodeInfoV2) GetTokenName() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetTokenName() *string {
+	if n == nil {
 		return nil
 	}
-	return o.TokenName
+	return n.TokenName
 }
 
-func (o *NodeInfoV2) GetTokenSupply() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetTokenSupply() *string {
+	if n == nil {
 		return nil
 	}
-	return o.TokenSupply
+	return n.TokenSupply
 }
 
-func (o *NodeInfoV2) GetUnit() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetUnit() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Unit
+	return n.Unit
 }
 
-func (o *NodeInfoV2) GetVersion() *string {
-	if o == nil {
+func (n *NodeInfoV2) GetVersion() *string {
+	if n == nil {
 		return nil
 	}
-	return o.Version
+	return n.Version
 }

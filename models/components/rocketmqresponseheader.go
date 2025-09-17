@@ -10,37 +10,37 @@ type RocketmqResponseHeader struct {
 	SerializeTypeCurrentRPC *string `json:"serialize_type_current_rpc,omitempty"`
 }
 
-func (o *RocketmqResponseHeader) GetCode() *int64 {
-	if o == nil {
+func (r *RocketmqResponseHeader) GetCode() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Code
+	return r.Code
 }
 
-func (o *RocketmqResponseHeader) GetFlag() *int64 {
-	if o == nil {
+func (r *RocketmqResponseHeader) GetFlag() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Flag
+	return r.Flag
 }
 
-func (o *RocketmqResponseHeader) GetLanguage() *string {
-	if o == nil {
+func (r *RocketmqResponseHeader) GetLanguage() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Language
+	return r.Language
 }
 
-func (o *RocketmqResponseHeader) GetOpaque() *int64 {
-	if o == nil {
+func (r *RocketmqResponseHeader) GetOpaque() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Opaque
+	return r.Opaque
 }
 
-func (o *RocketmqResponseHeader) GetSerializeTypeCurrentRPC() *string {
-	if o == nil {
+func (r *RocketmqResponseHeader) GetSerializeTypeCurrentRPC() *string {
+	if r == nil {
 		return nil
 	}
-	return o.SerializeTypeCurrentRPC
+	return r.SerializeTypeCurrentRPC
 }

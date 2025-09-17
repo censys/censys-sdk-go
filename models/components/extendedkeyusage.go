@@ -69,450 +69,450 @@ type ExtendedKeyUsage struct {
 	Unknown                        []string `json:"unknown,omitempty"`
 }
 
-func (o *ExtendedKeyUsage) GetAny() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAny() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.Any
+	return e.Any
 }
 
-func (o *ExtendedKeyUsage) GetAppleCodeSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCodeSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCodeSigning
+	return e.AppleCodeSigning
 }
 
-func (o *ExtendedKeyUsage) GetAppleCodeSigningDevelopment() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCodeSigningDevelopment() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCodeSigningDevelopment
+	return e.AppleCodeSigningDevelopment
 }
 
-func (o *ExtendedKeyUsage) GetAppleCodeSigningThirdParty() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCodeSigningThirdParty() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCodeSigningThirdParty
+	return e.AppleCodeSigningThirdParty
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoDevelopmentEnv() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoDevelopmentEnv() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoDevelopmentEnv
+	return e.AppleCryptoDevelopmentEnv
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoEnv() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoEnv() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoEnv
+	return e.AppleCryptoEnv
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoMaintenanceEnv() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoMaintenanceEnv() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoMaintenanceEnv
+	return e.AppleCryptoMaintenanceEnv
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoProductionEnv() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoProductionEnv() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoProductionEnv
+	return e.AppleCryptoProductionEnv
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoQos() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoQos() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoQos
+	return e.AppleCryptoQos
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoTestEnv() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoTestEnv() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoTestEnv
+	return e.AppleCryptoTestEnv
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoTier0Qos() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoTier0Qos() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoTier0Qos
+	return e.AppleCryptoTier0Qos
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoTier1Qos() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoTier1Qos() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoTier1Qos
+	return e.AppleCryptoTier1Qos
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoTier2Qos() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoTier2Qos() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoTier2Qos
+	return e.AppleCryptoTier2Qos
 }
 
-func (o *ExtendedKeyUsage) GetAppleCryptoTier3Qos() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleCryptoTier3Qos() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleCryptoTier3Qos
+	return e.AppleCryptoTier3Qos
 }
 
-func (o *ExtendedKeyUsage) GetAppleIchatEncryption() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleIchatEncryption() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleIchatEncryption
+	return e.AppleIchatEncryption
 }
 
-func (o *ExtendedKeyUsage) GetAppleIchatSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleIchatSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleIchatSigning
+	return e.AppleIchatSigning
 }
 
-func (o *ExtendedKeyUsage) GetAppleResourceSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleResourceSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleResourceSigning
+	return e.AppleResourceSigning
 }
 
-func (o *ExtendedKeyUsage) GetAppleSoftwareUpdateSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleSoftwareUpdateSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleSoftwareUpdateSigning
+	return e.AppleSoftwareUpdateSigning
 }
 
-func (o *ExtendedKeyUsage) GetAppleSystemIdentity() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetAppleSystemIdentity() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.AppleSystemIdentity
+	return e.AppleSystemIdentity
 }
 
-func (o *ExtendedKeyUsage) GetClientAuth() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetClientAuth() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.ClientAuth
+	return e.ClientAuth
 }
 
-func (o *ExtendedKeyUsage) GetCodeSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetCodeSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.CodeSigning
+	return e.CodeSigning
 }
 
-func (o *ExtendedKeyUsage) GetDvcs() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetDvcs() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.Dvcs
+	return e.Dvcs
 }
 
-func (o *ExtendedKeyUsage) GetEapOverLan() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetEapOverLan() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.EapOverLan
+	return e.EapOverLan
 }
 
-func (o *ExtendedKeyUsage) GetEapOverPpp() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetEapOverPpp() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.EapOverPpp
+	return e.EapOverPpp
 }
 
-func (o *ExtendedKeyUsage) GetEmailProtection() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetEmailProtection() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.EmailProtection
+	return e.EmailProtection
 }
 
-func (o *ExtendedKeyUsage) GetIpsecEndSystem() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetIpsecEndSystem() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.IpsecEndSystem
+	return e.IpsecEndSystem
 }
 
-func (o *ExtendedKeyUsage) GetIpsecIntermediateSystemUsage() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetIpsecIntermediateSystemUsage() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.IpsecIntermediateSystemUsage
+	return e.IpsecIntermediateSystemUsage
 }
 
-func (o *ExtendedKeyUsage) GetIpsecTunnel() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetIpsecTunnel() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.IpsecTunnel
+	return e.IpsecTunnel
 }
 
-func (o *ExtendedKeyUsage) GetIpsecUser() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetIpsecUser() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.IpsecUser
+	return e.IpsecUser
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftCaExchange() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftCaExchange() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftCaExchange
+	return e.MicrosoftCaExchange
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftCertTrustListSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftCertTrustListSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftCertTrustListSigning
+	return e.MicrosoftCertTrustListSigning
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftCspSignature() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftCspSignature() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftCspSignature
+	return e.MicrosoftCspSignature
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftDocumentSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftDocumentSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftDocumentSigning
+	return e.MicrosoftDocumentSigning
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftDrm() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftDrm() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftDrm
+	return e.MicrosoftDrm
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftDrmIndividualization() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftDrmIndividualization() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftDrmIndividualization
+	return e.MicrosoftDrmIndividualization
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftEfsRecovery() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftEfsRecovery() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftEfsRecovery
+	return e.MicrosoftEfsRecovery
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftEmbeddedNtCrypto() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftEmbeddedNtCrypto() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftEmbeddedNtCrypto
+	return e.MicrosoftEmbeddedNtCrypto
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftEncryptedFileSystem() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftEncryptedFileSystem() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftEncryptedFileSystem
+	return e.MicrosoftEncryptedFileSystem
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftEnrollmentAgent() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftEnrollmentAgent() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftEnrollmentAgent
+	return e.MicrosoftEnrollmentAgent
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftKernelModeCodeSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftKernelModeCodeSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftKernelModeCodeSigning
+	return e.MicrosoftKernelModeCodeSigning
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftKeyRecovery21() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftKeyRecovery21() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftKeyRecovery21
+	return e.MicrosoftKeyRecovery21
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftKeyRecovery3() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftKeyRecovery3() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftKeyRecovery3
+	return e.MicrosoftKeyRecovery3
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftLicenseServer() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftLicenseServer() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftLicenseServer
+	return e.MicrosoftLicenseServer
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftLicenses() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftLicenses() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftLicenses
+	return e.MicrosoftLicenses
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftLifetimeSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftLifetimeSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftLifetimeSigning
+	return e.MicrosoftLifetimeSigning
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftMobileDeviceSoftware() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftMobileDeviceSoftware() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftMobileDeviceSoftware
+	return e.MicrosoftMobileDeviceSoftware
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftNt5Crypto() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftNt5Crypto() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftNt5Crypto
+	return e.MicrosoftNt5Crypto
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftOemWhqlCrypto() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftOemWhqlCrypto() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftOemWhqlCrypto
+	return e.MicrosoftOemWhqlCrypto
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftQualifiedSubordinate() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftQualifiedSubordinate() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftQualifiedSubordinate
+	return e.MicrosoftQualifiedSubordinate
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftRootListSigner() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftRootListSigner() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftRootListSigner
+	return e.MicrosoftRootListSigner
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftServerGatedCrypto() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftServerGatedCrypto() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftServerGatedCrypto
+	return e.MicrosoftServerGatedCrypto
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftSgcSerialized() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftSgcSerialized() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftSgcSerialized
+	return e.MicrosoftSgcSerialized
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftSmartDisplay() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftSmartDisplay() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftSmartDisplay
+	return e.MicrosoftSmartDisplay
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftSmartcardLogon() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftSmartcardLogon() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftSmartcardLogon
+	return e.MicrosoftSmartcardLogon
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftSystemHealth() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftSystemHealth() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftSystemHealth
+	return e.MicrosoftSystemHealth
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftSystemHealthLoophole() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftSystemHealthLoophole() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftSystemHealthLoophole
+	return e.MicrosoftSystemHealthLoophole
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftTimestampSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftTimestampSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftTimestampSigning
+	return e.MicrosoftTimestampSigning
 }
 
-func (o *ExtendedKeyUsage) GetMicrosoftWhqlCrypto() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetMicrosoftWhqlCrypto() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.MicrosoftWhqlCrypto
+	return e.MicrosoftWhqlCrypto
 }
 
-func (o *ExtendedKeyUsage) GetNetscapeServerGatedCrypto() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetNetscapeServerGatedCrypto() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.NetscapeServerGatedCrypto
+	return e.NetscapeServerGatedCrypto
 }
 
-func (o *ExtendedKeyUsage) GetOcspSigning() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetOcspSigning() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.OcspSigning
+	return e.OcspSigning
 }
 
-func (o *ExtendedKeyUsage) GetSbgpCertAaServiceAuth() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetSbgpCertAaServiceAuth() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.SbgpCertAaServiceAuth
+	return e.SbgpCertAaServiceAuth
 }
 
-func (o *ExtendedKeyUsage) GetServerAuth() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetServerAuth() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.ServerAuth
+	return e.ServerAuth
 }
 
-func (o *ExtendedKeyUsage) GetTimeStamping() *bool {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetTimeStamping() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.TimeStamping
+	return e.TimeStamping
 }
 
-func (o *ExtendedKeyUsage) GetUnknown() []string {
-	if o == nil {
+func (e *ExtendedKeyUsage) GetUnknown() []string {
+	if e == nil {
 		return nil
 	}
-	return o.Unknown
+	return e.Unknown
 }

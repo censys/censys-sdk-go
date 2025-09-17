@@ -7,16 +7,16 @@ type CertificateAsset struct {
 	Resource   Certificate    `json:"resource"`
 }
 
-func (o *CertificateAsset) GetExtensions() map[string]any {
-	if o == nil {
+func (c *CertificateAsset) GetExtensions() map[string]any {
+	if c == nil {
 		return map[string]any{}
 	}
-	return o.Extensions
+	return c.Extensions
 }
 
-func (o *CertificateAsset) GetResource() Certificate {
-	if o == nil {
+func (c *CertificateAsset) GetResource() Certificate {
+	if c == nil {
 		return Certificate{}
 	}
-	return o.Resource
+	return c.Resource
 }

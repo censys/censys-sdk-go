@@ -27,18 +27,18 @@ func (t *TargetWebOrigin) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TargetWebOrigin) GetHostname() string {
-	if o == nil {
+func (t *TargetWebOrigin) GetHostname() string {
+	if t == nil {
 		return ""
 	}
-	return o.Hostname
+	return t.Hostname
 }
 
-func (o *TargetWebOrigin) GetPort() int {
-	if o == nil {
+func (t *TargetWebOrigin) GetPort() int {
+	if t == nil {
 		return 0
 	}
-	return o.Port
+	return t.Port
 }
 
 // Two - Rescan of known web property
@@ -57,11 +57,11 @@ func (t *Two) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *Two) GetWebOrigin() TargetWebOrigin {
-	if o == nil {
+func (t *Two) GetWebOrigin() TargetWebOrigin {
+	if t == nil {
 		return TargetWebOrigin{}
 	}
-	return o.WebOrigin
+	return t.WebOrigin
 }
 
 type TargetTransportProtocol string
@@ -120,32 +120,32 @@ func (t *TargetServiceID) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *TargetServiceID) GetIP() string {
-	if o == nil {
+func (t *TargetServiceID) GetIP() string {
+	if t == nil {
 		return ""
 	}
-	return o.IP
+	return t.IP
 }
 
-func (o *TargetServiceID) GetPort() int {
-	if o == nil {
+func (t *TargetServiceID) GetPort() int {
+	if t == nil {
 		return 0
 	}
-	return o.Port
+	return t.Port
 }
 
-func (o *TargetServiceID) GetProtocol() string {
-	if o == nil {
+func (t *TargetServiceID) GetProtocol() string {
+	if t == nil {
 		return ""
 	}
-	return o.Protocol
+	return t.Protocol
 }
 
-func (o *TargetServiceID) GetTransportProtocol() TargetTransportProtocol {
-	if o == nil {
+func (t *TargetServiceID) GetTransportProtocol() TargetTransportProtocol {
+	if t == nil {
 		return TargetTransportProtocol("")
 	}
-	return o.TransportProtocol
+	return t.TransportProtocol
 }
 
 // One - Rescan of known service
@@ -179,8 +179,8 @@ const (
 )
 
 type ScansRescanInputBodyTarget struct {
-	One *One `queryParam:"inline"`
-	Two *Two `queryParam:"inline"`
+	One *One `queryParam:"inline" name:"target"`
+	Two *Two `queryParam:"inline" name:"target"`
 
 	Type ScansRescanInputBodyTargetType
 }
@@ -238,9 +238,9 @@ type ScansRescanInputBody struct {
 	Target ScansRescanInputBodyTarget `json:"target"`
 }
 
-func (o *ScansRescanInputBody) GetTarget() ScansRescanInputBodyTarget {
-	if o == nil {
+func (s *ScansRescanInputBody) GetTarget() ScansRescanInputBodyTarget {
+	if s == nil {
 		return ScansRescanInputBodyTarget{}
 	}
-	return o.Target
+	return s.Target
 }

@@ -6,9 +6,9 @@ type NfsMountd struct {
 	ExportLists []ExportList `json:"export_lists,omitempty"`
 }
 
-func (o *NfsMountd) GetExportLists() []ExportList {
-	if o == nil {
+func (n *NfsMountd) GetExportLists() []ExportList {
+	if n == nil {
 		return nil
 	}
-	return o.ExportLists
+	return n.ExportLists
 }

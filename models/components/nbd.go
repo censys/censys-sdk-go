@@ -8,23 +8,23 @@ type Nbd struct {
 	Policies       []string `json:"policies,omitempty"`
 }
 
-func (o *Nbd) GetExports() []Export {
-	if o == nil {
+func (n *Nbd) GetExports() []Export {
+	if n == nil {
 		return nil
 	}
-	return o.Exports
+	return n.Exports
 }
 
-func (o *Nbd) GetHandshakeStyle() *string {
-	if o == nil {
+func (n *Nbd) GetHandshakeStyle() *string {
+	if n == nil {
 		return nil
 	}
-	return o.HandshakeStyle
+	return n.HandshakeStyle
 }
 
-func (o *Nbd) GetPolicies() []string {
-	if o == nil {
+func (n *Nbd) GetPolicies() []string {
+	if n == nil {
 		return nil
 	}
-	return o.Policies
+	return n.Policies
 }

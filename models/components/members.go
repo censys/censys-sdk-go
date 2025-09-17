@@ -9,30 +9,30 @@ type Members struct {
 	PeerUrls   []string `json:"peer_urls,omitempty"`
 }
 
-func (o *Members) GetClientUrls() []string {
-	if o == nil {
+func (m *Members) GetClientUrls() []string {
+	if m == nil {
 		return nil
 	}
-	return o.ClientUrls
+	return m.ClientUrls
 }
 
-func (o *Members) GetID() *string {
-	if o == nil {
+func (m *Members) GetID() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ID
+	return m.ID
 }
 
-func (o *Members) GetName() *string {
-	if o == nil {
+func (m *Members) GetName() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Name
+	return m.Name
 }
 
-func (o *Members) GetPeerUrls() []string {
-	if o == nil {
+func (m *Members) GetPeerUrls() []string {
+	if m == nil {
 		return nil
 	}
-	return o.PeerUrls
+	return m.PeerUrls
 }

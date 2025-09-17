@@ -7,16 +7,16 @@ type TrackedScanScanTargetHostnamePort struct {
 	Port     *int    `json:"port,omitempty"`
 }
 
-func (o *TrackedScanScanTargetHostnamePort) GetHostname() *string {
-	if o == nil {
+func (t *TrackedScanScanTargetHostnamePort) GetHostname() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Hostname
+	return t.Hostname
 }
 
-func (o *TrackedScanScanTargetHostnamePort) GetPort() *int {
-	if o == nil {
+func (t *TrackedScanScanTargetHostnamePort) GetPort() *int {
+	if t == nil {
 		return nil
 	}
-	return o.Port
+	return t.Port
 }

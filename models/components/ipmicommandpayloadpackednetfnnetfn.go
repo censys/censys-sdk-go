@@ -15,37 +15,37 @@ type IpmiCommandPayloadPackedNetFnNetFn struct {
 	Value *int `json:"value,omitempty"`
 }
 
-func (o *IpmiCommandPayloadPackedNetFnNetFn) GetIsRequest() *bool {
-	if o == nil {
+func (i *IpmiCommandPayloadPackedNetFnNetFn) GetIsRequest() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.IsRequest
+	return i.IsRequest
 }
 
-func (o *IpmiCommandPayloadPackedNetFnNetFn) GetIsResponse() *bool {
-	if o == nil {
+func (i *IpmiCommandPayloadPackedNetFnNetFn) GetIsResponse() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.IsResponse
+	return i.IsResponse
 }
 
-func (o *IpmiCommandPayloadPackedNetFnNetFn) GetName() *string {
-	if o == nil {
+func (i *IpmiCommandPayloadPackedNetFnNetFn) GetName() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *IpmiCommandPayloadPackedNetFnNetFn) GetRaw() *int {
-	if o == nil {
+func (i *IpmiCommandPayloadPackedNetFnNetFn) GetRaw() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }
 
-func (o *IpmiCommandPayloadPackedNetFnNetFn) GetValue() *int {
-	if o == nil {
+func (i *IpmiCommandPayloadPackedNetFnNetFn) GetValue() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Value
+	return i.Value
 }

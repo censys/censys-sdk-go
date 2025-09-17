@@ -10,37 +10,37 @@ type Minecraft struct {
 	ServerVersion   *string `json:"server_version,omitempty"`
 }
 
-func (o *Minecraft) GetMotd() *string {
-	if o == nil {
+func (m *Minecraft) GetMotd() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Motd
+	return m.Motd
 }
 
-func (o *Minecraft) GetPlayersMax() *int64 {
-	if o == nil {
+func (m *Minecraft) GetPlayersMax() *int64 {
+	if m == nil {
 		return nil
 	}
-	return o.PlayersMax
+	return m.PlayersMax
 }
 
-func (o *Minecraft) GetPlayersOnline() *int64 {
-	if o == nil {
+func (m *Minecraft) GetPlayersOnline() *int64 {
+	if m == nil {
 		return nil
 	}
-	return o.PlayersOnline
+	return m.PlayersOnline
 }
 
-func (o *Minecraft) GetProtocolVersion() *string {
-	if o == nil {
+func (m *Minecraft) GetProtocolVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ProtocolVersion
+	return m.ProtocolVersion
 }
 
-func (o *Minecraft) GetServerVersion() *string {
-	if o == nil {
+func (m *Minecraft) GetServerVersion() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ServerVersion
+	return m.ServerVersion
 }

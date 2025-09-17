@@ -46,16 +46,16 @@ type AlternativeQuery struct {
 	Targets []Targets `json:"targets"`
 }
 
-func (o *AlternativeQuery) GetQuery() string {
-	if o == nil {
+func (a *AlternativeQuery) GetQuery() string {
+	if a == nil {
 		return ""
 	}
-	return o.Query
+	return a.Query
 }
 
-func (o *AlternativeQuery) GetTargets() []Targets {
-	if o == nil {
+func (a *AlternativeQuery) GetTargets() []Targets {
+	if a == nil {
 		return nil
 	}
-	return o.Targets
+	return a.Targets
 }

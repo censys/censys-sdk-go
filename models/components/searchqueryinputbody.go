@@ -13,30 +13,30 @@ type SearchQueryInputBody struct {
 	Query string `json:"query"`
 }
 
-func (o *SearchQueryInputBody) GetFields() []string {
-	if o == nil {
+func (s *SearchQueryInputBody) GetFields() []string {
+	if s == nil {
 		return nil
 	}
-	return o.Fields
+	return s.Fields
 }
 
-func (o *SearchQueryInputBody) GetPageSize() *int64 {
-	if o == nil {
+func (s *SearchQueryInputBody) GetPageSize() *int64 {
+	if s == nil {
 		return nil
 	}
-	return o.PageSize
+	return s.PageSize
 }
 
-func (o *SearchQueryInputBody) GetPageToken() *string {
-	if o == nil {
+func (s *SearchQueryInputBody) GetPageToken() *string {
+	if s == nil {
 		return nil
 	}
-	return o.PageToken
+	return s.PageToken
 }
 
-func (o *SearchQueryInputBody) GetQuery() string {
-	if o == nil {
+func (s *SearchQueryInputBody) GetQuery() string {
+	if s == nil {
 		return ""
 	}
-	return o.Query
+	return s.Query
 }

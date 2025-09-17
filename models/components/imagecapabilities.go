@@ -6,9 +6,9 @@ type ImageCapabilities struct {
 	ImageStabilization *bool `json:"image_stabilization,omitempty"`
 }
 
-func (o *ImageCapabilities) GetImageStabilization() *bool {
-	if o == nil {
+func (i *ImageCapabilities) GetImageStabilization() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.ImageStabilization
+	return i.ImageStabilization
 }

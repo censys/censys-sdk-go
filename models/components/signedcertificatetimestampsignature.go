@@ -8,23 +8,23 @@ type SignedCertificateTimestampSignature struct {
 	SignatureAlgorithm *string `json:"signature_algorithm,omitempty"`
 }
 
-func (o *SignedCertificateTimestampSignature) GetHashAlgorithm() *string {
-	if o == nil {
+func (s *SignedCertificateTimestampSignature) GetHashAlgorithm() *string {
+	if s == nil {
 		return nil
 	}
-	return o.HashAlgorithm
+	return s.HashAlgorithm
 }
 
-func (o *SignedCertificateTimestampSignature) GetSignature() *string {
-	if o == nil {
+func (s *SignedCertificateTimestampSignature) GetSignature() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Signature
+	return s.Signature
 }
 
-func (o *SignedCertificateTimestampSignature) GetSignatureAlgorithm() *string {
-	if o == nil {
+func (s *SignedCertificateTimestampSignature) GetSignatureAlgorithm() *string {
+	if s == nil {
 		return nil
 	}
-	return o.SignatureAlgorithm
+	return s.SignatureAlgorithm
 }

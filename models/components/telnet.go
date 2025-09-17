@@ -9,30 +9,30 @@ type Telnet struct {
 	Wont map[string]*string `json:"wont,omitempty"`
 }
 
-func (o *Telnet) GetDo() map[string]*string {
-	if o == nil {
+func (t *Telnet) GetDo() map[string]*string {
+	if t == nil {
 		return nil
 	}
-	return o.Do
+	return t.Do
 }
 
-func (o *Telnet) GetDont() map[string]*string {
-	if o == nil {
+func (t *Telnet) GetDont() map[string]*string {
+	if t == nil {
 		return nil
 	}
-	return o.Dont
+	return t.Dont
 }
 
-func (o *Telnet) GetWill() map[string]*string {
-	if o == nil {
+func (t *Telnet) GetWill() map[string]*string {
+	if t == nil {
 		return nil
 	}
-	return o.Will
+	return t.Will
 }
 
-func (o *Telnet) GetWont() map[string]*string {
-	if o == nil {
+func (t *Telnet) GetWont() map[string]*string {
+	if t == nil {
 		return nil
 	}
-	return o.Wont
+	return t.Wont
 }

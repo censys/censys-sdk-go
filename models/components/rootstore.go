@@ -59,58 +59,58 @@ type RootStore struct {
 	Type *Type `json:"type,omitempty"`
 }
 
-func (o *RootStore) GetChains() []RootStoreChain {
-	if o == nil {
+func (r *RootStore) GetChains() []RootStoreChain {
+	if r == nil {
 		return nil
 	}
-	return o.Chains
+	return r.Chains
 }
 
-func (o *RootStore) GetEverValid() *bool {
-	if o == nil {
+func (r *RootStore) GetEverValid() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.EverValid
+	return r.EverValid
 }
 
-func (o *RootStore) GetHadTrustedPath() *bool {
-	if o == nil {
+func (r *RootStore) GetHadTrustedPath() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.HadTrustedPath
+	return r.HadTrustedPath
 }
 
-func (o *RootStore) GetHasTrustedPath() *bool {
-	if o == nil {
+func (r *RootStore) GetHasTrustedPath() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.HasTrustedPath
+	return r.HasTrustedPath
 }
 
-func (o *RootStore) GetInRevocationSet() *bool {
-	if o == nil {
+func (r *RootStore) GetInRevocationSet() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.InRevocationSet
+	return r.InRevocationSet
 }
 
-func (o *RootStore) GetIsValid() *bool {
-	if o == nil {
+func (r *RootStore) GetIsValid() *bool {
+	if r == nil {
 		return nil
 	}
-	return o.IsValid
+	return r.IsValid
 }
 
-func (o *RootStore) GetParents() []string {
-	if o == nil {
+func (r *RootStore) GetParents() []string {
+	if r == nil {
 		return nil
 	}
-	return o.Parents
+	return r.Parents
 }
 
-func (o *RootStore) GetType() *Type {
-	if o == nil {
+func (r *RootStore) GetType() *Type {
+	if r == nil {
 		return nil
 	}
-	return o.Type
+	return r.Type
 }

@@ -14,65 +14,65 @@ type ElasticSearchSystemInfoVer struct {
 	Number           *string `json:"number,omitempty"`
 }
 
-func (o *ElasticSearchSystemInfoVer) GetBuildDate() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetBuildDate() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BuildDate
+	return e.BuildDate
 }
 
-func (o *ElasticSearchSystemInfoVer) GetBuildFlavor() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetBuildFlavor() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BuildFlavor
+	return e.BuildFlavor
 }
 
-func (o *ElasticSearchSystemInfoVer) GetBuildHash() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetBuildHash() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BuildHash
+	return e.BuildHash
 }
 
-func (o *ElasticSearchSystemInfoVer) GetBuildSnapshot() *bool {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetBuildSnapshot() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.BuildSnapshot
+	return e.BuildSnapshot
 }
 
-func (o *ElasticSearchSystemInfoVer) GetBuildType() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetBuildType() *string {
+	if e == nil {
 		return nil
 	}
-	return o.BuildType
+	return e.BuildType
 }
 
-func (o *ElasticSearchSystemInfoVer) GetLuceneVersion() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetLuceneVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.LuceneVersion
+	return e.LuceneVersion
 }
 
-func (o *ElasticSearchSystemInfoVer) GetMinIdxCompatVer() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetMinIdxCompatVer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.MinIdxCompatVer
+	return e.MinIdxCompatVer
 }
 
-func (o *ElasticSearchSystemInfoVer) GetMinWireCompatVer() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetMinWireCompatVer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.MinWireCompatVer
+	return e.MinWireCompatVer
 }
 
-func (o *ElasticSearchSystemInfoVer) GetNumber() *string {
-	if o == nil {
+func (e *ElasticSearchSystemInfoVer) GetNumber() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Number
+	return e.Number
 }

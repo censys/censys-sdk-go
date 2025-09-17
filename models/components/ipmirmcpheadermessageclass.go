@@ -13,30 +13,30 @@ type IpmiRMCPHeaderMessageClass struct {
 	Raw *int `json:"raw,omitempty"`
 }
 
-func (o *IpmiRMCPHeaderMessageClass) GetClass() *int {
-	if o == nil {
+func (i *IpmiRMCPHeaderMessageClass) GetClass() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Class
+	return i.Class
 }
 
-func (o *IpmiRMCPHeaderMessageClass) GetIsAck() *bool {
-	if o == nil {
+func (i *IpmiRMCPHeaderMessageClass) GetIsAck() *bool {
+	if i == nil {
 		return nil
 	}
-	return o.IsAck
+	return i.IsAck
 }
 
-func (o *IpmiRMCPHeaderMessageClass) GetName() *string {
-	if o == nil {
+func (i *IpmiRMCPHeaderMessageClass) GetName() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *IpmiRMCPHeaderMessageClass) GetRaw() *int {
-	if o == nil {
+func (i *IpmiRMCPHeaderMessageClass) GetRaw() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }

@@ -63,23 +63,23 @@ type TLSVersionData struct {
 	Version *Version `json:"version,omitempty"`
 }
 
-func (o *TLSVersionData) GetJa3s() *string {
-	if o == nil {
+func (t *TLSVersionData) GetJa3s() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Ja3s
+	return t.Ja3s
 }
 
-func (o *TLSVersionData) GetJa4s() *string {
-	if o == nil {
+func (t *TLSVersionData) GetJa4s() *string {
+	if t == nil {
 		return nil
 	}
-	return o.Ja4s
+	return t.Ja4s
 }
 
-func (o *TLSVersionData) GetVersion() *Version {
-	if o == nil {
+func (t *TLSVersionData) GetVersion() *Version {
+	if t == nil {
 		return nil
 	}
-	return o.Version
+	return t.Version
 }

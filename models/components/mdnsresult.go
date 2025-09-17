@@ -12,51 +12,51 @@ type MdnsResult struct {
 	Weight    *int     `json:"weight,omitempty"`
 }
 
-func (o *MdnsResult) GetAddresses() []string {
-	if o == nil {
+func (m *MdnsResult) GetAddresses() []string {
+	if m == nil {
 		return nil
 	}
-	return o.Addresses
+	return m.Addresses
 }
 
-func (o *MdnsResult) GetFullName() *string {
-	if o == nil {
+func (m *MdnsResult) GetFullName() *string {
+	if m == nil {
 		return nil
 	}
-	return o.FullName
+	return m.FullName
 }
 
-func (o *MdnsResult) GetPort() *int {
-	if o == nil {
+func (m *MdnsResult) GetPort() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Port
+	return m.Port
 }
 
-func (o *MdnsResult) GetPriority() *int {
-	if o == nil {
+func (m *MdnsResult) GetPriority() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Priority
+	return m.Priority
 }
 
-func (o *MdnsResult) GetTarget() *string {
-	if o == nil {
+func (m *MdnsResult) GetTarget() *string {
+	if m == nil {
 		return nil
 	}
-	return o.Target
+	return m.Target
 }
 
-func (o *MdnsResult) GetTexts() []string {
-	if o == nil {
+func (m *MdnsResult) GetTexts() []string {
+	if m == nil {
 		return nil
 	}
-	return o.Texts
+	return m.Texts
 }
 
-func (o *MdnsResult) GetWeight() *int {
-	if o == nil {
+func (m *MdnsResult) GetWeight() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Weight
+	return m.Weight
 }

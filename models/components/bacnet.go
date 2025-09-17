@@ -14,65 +14,65 @@ type Bacnet struct {
 	VendorName                  *string `json:"vendor_name,omitempty"`
 }
 
-func (o *Bacnet) GetApplicationSoftwareRevision() *string {
-	if o == nil {
+func (b *Bacnet) GetApplicationSoftwareRevision() *string {
+	if b == nil {
 		return nil
 	}
-	return o.ApplicationSoftwareRevision
+	return b.ApplicationSoftwareRevision
 }
 
-func (o *Bacnet) GetDescription() *string {
-	if o == nil {
+func (b *Bacnet) GetDescription() *string {
+	if b == nil {
 		return nil
 	}
-	return o.Description
+	return b.Description
 }
 
-func (o *Bacnet) GetFirmwareRevision() *string {
-	if o == nil {
+func (b *Bacnet) GetFirmwareRevision() *string {
+	if b == nil {
 		return nil
 	}
-	return o.FirmwareRevision
+	return b.FirmwareRevision
 }
 
-func (o *Bacnet) GetInstanceNumber() *int {
-	if o == nil {
+func (b *Bacnet) GetInstanceNumber() *int {
+	if b == nil {
 		return nil
 	}
-	return o.InstanceNumber
+	return b.InstanceNumber
 }
 
-func (o *Bacnet) GetLocation() *string {
-	if o == nil {
+func (b *Bacnet) GetLocation() *string {
+	if b == nil {
 		return nil
 	}
-	return o.Location
+	return b.Location
 }
 
-func (o *Bacnet) GetModelName() *string {
-	if o == nil {
+func (b *Bacnet) GetModelName() *string {
+	if b == nil {
 		return nil
 	}
-	return o.ModelName
+	return b.ModelName
 }
 
-func (o *Bacnet) GetObjectName() *string {
-	if o == nil {
+func (b *Bacnet) GetObjectName() *string {
+	if b == nil {
 		return nil
 	}
-	return o.ObjectName
+	return b.ObjectName
 }
 
-func (o *Bacnet) GetVendorID() *int {
-	if o == nil {
+func (b *Bacnet) GetVendorID() *int {
+	if b == nil {
 		return nil
 	}
-	return o.VendorID
+	return b.VendorID
 }
 
-func (o *Bacnet) GetVendorName() *string {
-	if o == nil {
+func (b *Bacnet) GetVendorName() *string {
+	if b == nil {
 		return nil
 	}
-	return o.VendorName
+	return b.VendorName
 }

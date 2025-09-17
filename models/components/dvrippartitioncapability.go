@@ -7,16 +7,16 @@ type DvrIPPartitionCapability struct {
 	Supported          *bool `json:"supported,omitempty"`
 }
 
-func (o *DvrIPPartitionCapability) GetMaxPartitionNumber() *int {
-	if o == nil {
+func (d *DvrIPPartitionCapability) GetMaxPartitionNumber() *int {
+	if d == nil {
 		return nil
 	}
-	return o.MaxPartitionNumber
+	return d.MaxPartitionNumber
 }
 
-func (o *DvrIPPartitionCapability) GetSupported() *bool {
-	if o == nil {
+func (d *DvrIPPartitionCapability) GetSupported() *bool {
+	if d == nil {
 		return nil
 	}
-	return o.Supported
+	return d.Supported
 }

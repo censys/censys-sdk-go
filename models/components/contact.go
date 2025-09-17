@@ -8,23 +8,23 @@ type Contact struct {
 	Name   *string `json:"name,omitempty"`
 }
 
-func (o *Contact) GetEmail() *string {
-	if o == nil {
+func (c *Contact) GetEmail() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Email
+	return c.Email
 }
 
-func (o *Contact) GetHandle() *string {
-	if o == nil {
+func (c *Contact) GetHandle() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Handle
+	return c.Handle
 }
 
-func (o *Contact) GetName() *string {
-	if o == nil {
+func (c *Contact) GetName() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Name
+	return c.Name
 }

@@ -7,16 +7,16 @@ type EndpointScanned struct {
 	Scan *EndpointScan        `json:"scan,omitempty"`
 }
 
-func (o *EndpointScanned) GetDiff() map[string]FieldDiff {
-	if o == nil {
+func (e *EndpointScanned) GetDiff() map[string]FieldDiff {
+	if e == nil {
 		return nil
 	}
-	return o.Diff
+	return e.Diff
 }
 
-func (o *EndpointScanned) GetScan() *EndpointScan {
-	if o == nil {
+func (e *EndpointScanned) GetScan() *EndpointScan {
+	if e == nil {
 		return nil
 	}
-	return o.Scan
+	return e.Scan
 }

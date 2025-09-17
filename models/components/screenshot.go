@@ -8,23 +8,23 @@ type Screenshot struct {
 	Phash         *string `json:"phash,omitempty"`
 }
 
-func (o *Screenshot) GetExtractedText() *string {
-	if o == nil {
+func (s *Screenshot) GetExtractedText() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ExtractedText
+	return s.ExtractedText
 }
 
-func (o *Screenshot) GetHandle() *string {
-	if o == nil {
+func (s *Screenshot) GetHandle() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Handle
+	return s.Handle
 }
 
-func (o *Screenshot) GetPhash() *string {
-	if o == nil {
+func (s *Screenshot) GetPhash() *string {
+	if s == nil {
 		return nil
 	}
-	return o.Phash
+	return s.Phash
 }

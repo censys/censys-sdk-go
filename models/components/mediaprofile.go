@@ -6,9 +6,9 @@ type MediaProfile struct {
 	MaxProfileCount *int `json:"max_profile_count,omitempty"`
 }
 
-func (o *MediaProfile) GetMaxProfileCount() *int {
-	if o == nil {
+func (m *MediaProfile) GetMaxProfileCount() *int {
+	if m == nil {
 		return nil
 	}
-	return o.MaxProfileCount
+	return m.MaxProfileCount
 }

@@ -10,32 +10,32 @@ type V3CollectionsCrudGetGlobals struct {
 	OrganizationID *string `queryParam:"style=form,explode=true,name=organization_id"`
 }
 
-func (o *V3CollectionsCrudGetGlobals) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsCrudGetGlobals) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
 type V3CollectionsCrudGetRequest struct {
-	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-set-your-organization-id) for more information.
+	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The UID for the collection. Obtain the collection ID using the [list collections endpoint](https://docs.censys.com/reference/v3-collections-crud-list#/) or via the collection URL when using the web console.
 	CollectionUID string `pathParam:"style=simple,explode=false,name=collection_uid"`
 }
 
-func (o *V3CollectionsCrudGetRequest) GetOrganizationID() *string {
-	if o == nil {
+func (v *V3CollectionsCrudGetRequest) GetOrganizationID() *string {
+	if v == nil {
 		return nil
 	}
-	return o.OrganizationID
+	return v.OrganizationID
 }
 
-func (o *V3CollectionsCrudGetRequest) GetCollectionUID() string {
-	if o == nil {
+func (v *V3CollectionsCrudGetRequest) GetCollectionUID() string {
+	if v == nil {
 		return ""
 	}
-	return o.CollectionUID
+	return v.CollectionUID
 }
 
 type V3CollectionsCrudGetResponse struct {
@@ -45,23 +45,23 @@ type V3CollectionsCrudGetResponse struct {
 	Headers                    map[string][]string
 }
 
-func (o *V3CollectionsCrudGetResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (v *V3CollectionsCrudGetResponse) GetHTTPMeta() components.HTTPMetadata {
+	if v == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return v.HTTPMeta
 }
 
-func (o *V3CollectionsCrudGetResponse) GetResponseEnvelopeCollection() *components.ResponseEnvelopeCollection {
-	if o == nil {
+func (v *V3CollectionsCrudGetResponse) GetResponseEnvelopeCollection() *components.ResponseEnvelopeCollection {
+	if v == nil {
 		return nil
 	}
-	return o.ResponseEnvelopeCollection
+	return v.ResponseEnvelopeCollection
 }
 
-func (o *V3CollectionsCrudGetResponse) GetHeaders() map[string][]string {
-	if o == nil {
+func (v *V3CollectionsCrudGetResponse) GetHeaders() map[string][]string {
+	if v == nil {
 		return map[string][]string{}
 	}
-	return o.Headers
+	return v.Headers
 }

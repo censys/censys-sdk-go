@@ -9,30 +9,30 @@ type DsaPublicKey struct {
 	Y *string `json:"y,omitempty"`
 }
 
-func (o *DsaPublicKey) GetG() *string {
-	if o == nil {
+func (d *DsaPublicKey) GetG() *string {
+	if d == nil {
 		return nil
 	}
-	return o.G
+	return d.G
 }
 
-func (o *DsaPublicKey) GetP() *string {
-	if o == nil {
+func (d *DsaPublicKey) GetP() *string {
+	if d == nil {
 		return nil
 	}
-	return o.P
+	return d.P
 }
 
-func (o *DsaPublicKey) GetQ() *string {
-	if o == nil {
+func (d *DsaPublicKey) GetQ() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Q
+	return d.Q
 }
 
-func (o *DsaPublicKey) GetY() *string {
-	if o == nil {
+func (d *DsaPublicKey) GetY() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Y
+	return d.Y
 }

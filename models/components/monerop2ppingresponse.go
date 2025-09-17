@@ -7,16 +7,16 @@ type MoneroP2PPingResponse struct {
 	ResponseHeader *MoneroP2PResponseHeader `json:"response_header,omitempty"`
 }
 
-func (o *MoneroP2PPingResponse) GetPayload() *MoneroP2PPayload {
-	if o == nil {
+func (m *MoneroP2PPingResponse) GetPayload() *MoneroP2PPayload {
+	if m == nil {
 		return nil
 	}
-	return o.Payload
+	return m.Payload
 }
 
-func (o *MoneroP2PPingResponse) GetResponseHeader() *MoneroP2PResponseHeader {
-	if o == nil {
+func (m *MoneroP2PPingResponse) GetResponseHeader() *MoneroP2PResponseHeader {
+	if m == nil {
 		return nil
 	}
-	return o.ResponseHeader
+	return m.ResponseHeader
 }

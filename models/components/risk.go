@@ -119,72 +119,72 @@ type Risk struct {
 	Year       *int         `json:"year,omitempty"`
 }
 
-func (o *Risk) GetConfidence() *float64 {
-	if o == nil {
+func (r *Risk) GetConfidence() *float64 {
+	if r == nil {
 		return nil
 	}
-	return o.Confidence
+	return r.Confidence
 }
 
-func (o *Risk) GetCvss() *Cvss {
-	if o == nil {
+func (r *Risk) GetCvss() *Cvss {
+	if r == nil {
 		return nil
 	}
-	return o.Cvss
+	return r.Cvss
 }
 
-func (o *Risk) GetEvidence() []Evidence {
-	if o == nil {
+func (r *Risk) GetEvidence() []Evidence {
+	if r == nil {
 		return nil
 	}
-	return o.Evidence
+	return r.Evidence
 }
 
-func (o *Risk) GetID() *string {
-	if o == nil {
+func (r *Risk) GetID() *string {
+	if r == nil {
 		return nil
 	}
-	return o.ID
+	return r.ID
 }
 
-func (o *Risk) GetMetrics() *Metrics {
-	if o == nil {
+func (r *Risk) GetMetrics() *Metrics {
+	if r == nil {
 		return nil
 	}
-	return o.Metrics
+	return r.Metrics
 }
 
-func (o *Risk) GetName() *string {
-	if o == nil {
+func (r *Risk) GetName() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Name
+	return r.Name
 }
 
-func (o *Risk) GetRiskSource() *RiskSource {
-	if o == nil {
+func (r *Risk) GetRiskSource() *RiskSource {
+	if r == nil {
 		return nil
 	}
-	return o.RiskSource
+	return r.RiskSource
 }
 
-func (o *Risk) GetSeverity() *Severity {
-	if o == nil {
+func (r *Risk) GetSeverity() *Severity {
+	if r == nil {
 		return nil
 	}
-	return o.Severity
+	return r.Severity
 }
 
-func (o *Risk) GetSource() *RiskSource1 {
-	if o == nil {
+func (r *Risk) GetSource() *RiskSource1 {
+	if r == nil {
 		return nil
 	}
-	return o.Source
+	return r.Source
 }
 
-func (o *Risk) GetYear() *int {
-	if o == nil {
+func (r *Risk) GetYear() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Year
+	return r.Year
 }

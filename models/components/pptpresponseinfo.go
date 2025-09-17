@@ -7,16 +7,16 @@ type PptpResponseInfo struct {
 	Meaning *string `json:"meaning,omitempty"`
 }
 
-func (o *PptpResponseInfo) GetCode() *int {
-	if o == nil {
+func (p *PptpResponseInfo) GetCode() *int {
+	if p == nil {
 		return nil
 	}
-	return o.Code
+	return p.Code
 }
 
-func (o *PptpResponseInfo) GetMeaning() *string {
-	if o == nil {
+func (p *PptpResponseInfo) GetMeaning() *string {
+	if p == nil {
 		return nil
 	}
-	return o.Meaning
+	return p.Meaning
 }

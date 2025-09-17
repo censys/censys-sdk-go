@@ -7,16 +7,16 @@ type QcStatementsPdsLocation struct {
 	URL      *string `json:"url,omitempty"`
 }
 
-func (o *QcStatementsPdsLocation) GetLanguage() *string {
-	if o == nil {
+func (q *QcStatementsPdsLocation) GetLanguage() *string {
+	if q == nil {
 		return nil
 	}
-	return o.Language
+	return q.Language
 }
 
-func (o *QcStatementsPdsLocation) GetURL() *string {
-	if o == nil {
+func (q *QcStatementsPdsLocation) GetURL() *string {
+	if q == nil {
 		return nil
 	}
-	return o.URL
+	return q.URL
 }

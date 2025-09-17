@@ -11,23 +11,23 @@ type ErrorDetail struct {
 	Value any `json:"value,omitempty"`
 }
 
-func (o *ErrorDetail) GetLocation() *string {
-	if o == nil {
+func (e *ErrorDetail) GetLocation() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Location
+	return e.Location
 }
 
-func (o *ErrorDetail) GetMessage() *string {
-	if o == nil {
+func (e *ErrorDetail) GetMessage() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Message
+	return e.Message
 }
 
-func (o *ErrorDetail) GetValue() any {
-	if o == nil {
+func (e *ErrorDetail) GetValue() any {
+	if e == nil {
 		return nil
 	}
-	return o.Value
+	return e.Value
 }

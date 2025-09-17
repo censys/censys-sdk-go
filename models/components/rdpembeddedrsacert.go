@@ -12,51 +12,51 @@ type RdpEmbeddedRSACert struct {
 	Signature       *string `json:"signature,omitempty"`
 }
 
-func (o *RdpEmbeddedRSACert) GetKeyLength() *int {
-	if o == nil {
+func (r *RdpEmbeddedRSACert) GetKeyLength() *int {
+	if r == nil {
 		return nil
 	}
-	return o.KeyLength
+	return r.KeyLength
 }
 
-func (o *RdpEmbeddedRSACert) GetMagic() *int {
-	if o == nil {
+func (r *RdpEmbeddedRSACert) GetMagic() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Magic
+	return r.Magic
 }
 
-func (o *RdpEmbeddedRSACert) GetMaxBytesDatalen() *int {
-	if o == nil {
+func (r *RdpEmbeddedRSACert) GetMaxBytesDatalen() *int {
+	if r == nil {
 		return nil
 	}
-	return o.MaxBytesDatalen
+	return r.MaxBytesDatalen
 }
 
-func (o *RdpEmbeddedRSACert) GetModulus() *string {
-	if o == nil {
+func (r *RdpEmbeddedRSACert) GetModulus() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Modulus
+	return r.Modulus
 }
 
-func (o *RdpEmbeddedRSACert) GetModulusBitlen() *int {
-	if o == nil {
+func (r *RdpEmbeddedRSACert) GetModulusBitlen() *int {
+	if r == nil {
 		return nil
 	}
-	return o.ModulusBitlen
+	return r.ModulusBitlen
 }
 
-func (o *RdpEmbeddedRSACert) GetPublicExponent() *int {
-	if o == nil {
+func (r *RdpEmbeddedRSACert) GetPublicExponent() *int {
+	if r == nil {
 		return nil
 	}
-	return o.PublicExponent
+	return r.PublicExponent
 }
 
-func (o *RdpEmbeddedRSACert) GetSignature() *string {
-	if o == nil {
+func (r *RdpEmbeddedRSACert) GetSignature() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Signature
+	return r.Signature
 }

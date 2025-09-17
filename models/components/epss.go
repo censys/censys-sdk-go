@@ -7,16 +7,16 @@ type Epss struct {
 	Score      *float64 `json:"score,omitempty"`
 }
 
-func (o *Epss) GetPercentile() *float64 {
-	if o == nil {
+func (e *Epss) GetPercentile() *float64 {
+	if e == nil {
 		return nil
 	}
-	return o.Percentile
+	return e.Percentile
 }
 
-func (o *Epss) GetScore() *float64 {
-	if o == nil {
+func (e *Epss) GetScore() *float64 {
+	if e == nil {
 		return nil
 	}
-	return o.Score
+	return e.Score
 }

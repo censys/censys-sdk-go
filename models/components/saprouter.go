@@ -7,16 +7,16 @@ type SapRouter struct {
 	RouterVersionInfo *SapRouterRouterVersionInfo `json:"router_version_info,omitempty"`
 }
 
-func (o *SapRouter) GetRouterInfo() *SapRouterRouterInfo {
-	if o == nil {
+func (s *SapRouter) GetRouterInfo() *SapRouterRouterInfo {
+	if s == nil {
 		return nil
 	}
-	return o.RouterInfo
+	return s.RouterInfo
 }
 
-func (o *SapRouter) GetRouterVersionInfo() *SapRouterRouterVersionInfo {
-	if o == nil {
+func (s *SapRouter) GetRouterVersionInfo() *SapRouterRouterVersionInfo {
+	if s == nil {
 		return nil
 	}
-	return o.RouterVersionInfo
+	return s.RouterVersionInfo
 }

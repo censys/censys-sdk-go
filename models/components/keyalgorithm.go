@@ -8,16 +8,16 @@ type KeyAlgorithm struct {
 	Oid  *string `json:"oid,omitempty"`
 }
 
-func (o *KeyAlgorithm) GetName() *string {
-	if o == nil {
+func (k *KeyAlgorithm) GetName() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Name
+	return k.Name
 }
 
-func (o *KeyAlgorithm) GetOid() *string {
-	if o == nil {
+func (k *KeyAlgorithm) GetOid() *string {
+	if k == nil {
 		return nil
 	}
-	return o.Oid
+	return k.Oid
 }

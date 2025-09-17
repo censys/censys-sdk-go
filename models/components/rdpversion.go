@@ -9,23 +9,23 @@ type RdpVersion struct {
 	Raw *string `json:"raw,omitempty"`
 }
 
-func (o *RdpVersion) GetMajor() *int {
-	if o == nil {
+func (r *RdpVersion) GetMajor() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Major
+	return r.Major
 }
 
-func (o *RdpVersion) GetMinor() *int {
-	if o == nil {
+func (r *RdpVersion) GetMinor() *int {
+	if r == nil {
 		return nil
 	}
-	return o.Minor
+	return r.Minor
 }
 
-func (o *RdpVersion) GetRaw() *string {
-	if o == nil {
+func (r *RdpVersion) GetRaw() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Raw
+	return r.Raw
 }

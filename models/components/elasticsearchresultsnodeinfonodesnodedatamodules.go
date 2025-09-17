@@ -13,58 +13,58 @@ type ElasticSearchResultsNodeInfoNodesNodeDataModules struct {
 	Version        *string  `json:"version,omitempty"`
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetClassName() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetClassName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ClassName
+	return e.ClassName
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetDesc() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetDesc() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Desc
+	return e.Desc
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetElasticVersion() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetElasticVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.ElasticVersion
+	return e.ElasticVersion
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetExtPlugins() []string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetExtPlugins() []string {
+	if e == nil {
 		return nil
 	}
-	return o.ExtPlugins
+	return e.ExtPlugins
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetHasNativeCtrl() *bool {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetHasNativeCtrl() *bool {
+	if e == nil {
 		return nil
 	}
-	return o.HasNativeCtrl
+	return e.HasNativeCtrl
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetJavaVersion() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetJavaVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.JavaVersion
+	return e.JavaVersion
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetName() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetName() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetVersion() *string {
-	if o == nil {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataModules) GetVersion() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Version
+	return e.Version
 }

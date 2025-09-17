@@ -115,163 +115,163 @@ type Certificate struct {
 	Zlint           *ZLint           `json:"zlint,omitempty"`
 }
 
-func (o *Certificate) GetAddedAt() *string {
-	if o == nil {
+func (c *Certificate) GetAddedAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AddedAt
+	return c.AddedAt
 }
 
-func (o *Certificate) GetCt() *Ct {
-	if o == nil {
+func (c *Certificate) GetCt() *Ct {
+	if c == nil {
 		return nil
 	}
-	return o.Ct
+	return c.Ct
 }
 
-func (o *Certificate) GetEverSeenInScan() *bool {
-	if o == nil {
+func (c *Certificate) GetEverSeenInScan() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.EverSeenInScan
+	return c.EverSeenInScan
 }
 
-func (o *Certificate) GetFingerprintMd5() *string {
-	if o == nil {
+func (c *Certificate) GetFingerprintMd5() *string {
+	if c == nil {
 		return nil
 	}
-	return o.FingerprintMd5
+	return c.FingerprintMd5
 }
 
-func (o *Certificate) GetFingerprintSha1() *string {
-	if o == nil {
+func (c *Certificate) GetFingerprintSha1() *string {
+	if c == nil {
 		return nil
 	}
-	return o.FingerprintSha1
+	return c.FingerprintSha1
 }
 
-func (o *Certificate) GetFingerprintSha256() *string {
-	if o == nil {
+func (c *Certificate) GetFingerprintSha256() *string {
+	if c == nil {
 		return nil
 	}
-	return o.FingerprintSha256
+	return c.FingerprintSha256
 }
 
-func (o *Certificate) GetModifiedAt() *string {
-	if o == nil {
+func (c *Certificate) GetModifiedAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ModifiedAt
+	return c.ModifiedAt
 }
 
-func (o *Certificate) GetNames() []string {
-	if o == nil {
+func (c *Certificate) GetNames() []string {
+	if c == nil {
 		return nil
 	}
-	return o.Names
+	return c.Names
 }
 
-func (o *Certificate) GetParentSpkiFingerprintSha256() *string {
-	if o == nil {
+func (c *Certificate) GetParentSpkiFingerprintSha256() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ParentSpkiFingerprintSha256
+	return c.ParentSpkiFingerprintSha256
 }
 
-func (o *Certificate) GetParentSpkiSubjectFingerprintSha256() *string {
-	if o == nil {
+func (c *Certificate) GetParentSpkiSubjectFingerprintSha256() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ParentSpkiSubjectFingerprintSha256
+	return c.ParentSpkiSubjectFingerprintSha256
 }
 
-func (o *Certificate) GetParseStatus() *ParseStatus {
-	if o == nil {
+func (c *Certificate) GetParseStatus() *ParseStatus {
+	if c == nil {
 		return nil
 	}
-	return o.ParseStatus
+	return c.ParseStatus
 }
 
-func (o *Certificate) GetParsed() *CertificateParsed {
-	if o == nil {
+func (c *Certificate) GetParsed() *CertificateParsed {
+	if c == nil {
 		return nil
 	}
-	return o.Parsed
+	return c.Parsed
 }
 
-func (o *Certificate) GetPrecert() *bool {
-	if o == nil {
+func (c *Certificate) GetPrecert() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Precert
+	return c.Precert
 }
 
-func (o *Certificate) GetRevocation() *CertificateRevocation {
-	if o == nil {
+func (c *Certificate) GetRevocation() *CertificateRevocation {
+	if c == nil {
 		return nil
 	}
-	return o.Revocation
+	return c.Revocation
 }
 
-func (o *Certificate) GetRevoked() *bool {
-	if o == nil {
+func (c *Certificate) GetRevoked() *bool {
+	if c == nil {
 		return nil
 	}
-	return o.Revoked
+	return c.Revoked
 }
 
-func (o *Certificate) GetSpkiFingerprintSha256() *string {
-	if o == nil {
+func (c *Certificate) GetSpkiFingerprintSha256() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SpkiFingerprintSha256
+	return c.SpkiFingerprintSha256
 }
 
-func (o *Certificate) GetSpkiSubjectFingerprintSha256() *string {
-	if o == nil {
+func (c *Certificate) GetSpkiSubjectFingerprintSha256() *string {
+	if c == nil {
 		return nil
 	}
-	return o.SpkiSubjectFingerprintSha256
+	return c.SpkiSubjectFingerprintSha256
 }
 
-func (o *Certificate) GetTbsFingerprintSha256() *string {
-	if o == nil {
+func (c *Certificate) GetTbsFingerprintSha256() *string {
+	if c == nil {
 		return nil
 	}
-	return o.TbsFingerprintSha256
+	return c.TbsFingerprintSha256
 }
 
-func (o *Certificate) GetTbsNoCtFingerprintSha256() *string {
-	if o == nil {
+func (c *Certificate) GetTbsNoCtFingerprintSha256() *string {
+	if c == nil {
 		return nil
 	}
-	return o.TbsNoCtFingerprintSha256
+	return c.TbsNoCtFingerprintSha256
 }
 
-func (o *Certificate) GetValidatedAt() *string {
-	if o == nil {
+func (c *Certificate) GetValidatedAt() *string {
+	if c == nil {
 		return nil
 	}
-	return o.ValidatedAt
+	return c.ValidatedAt
 }
 
-func (o *Certificate) GetValidation() *Validation {
-	if o == nil {
+func (c *Certificate) GetValidation() *Validation {
+	if c == nil {
 		return nil
 	}
-	return o.Validation
+	return c.Validation
 }
 
-func (o *Certificate) GetValidationLevel() *ValidationLevel {
-	if o == nil {
+func (c *Certificate) GetValidationLevel() *ValidationLevel {
+	if c == nil {
 		return nil
 	}
-	return o.ValidationLevel
+	return c.ValidationLevel
 }
 
-func (o *Certificate) GetZlint() *ZLint {
-	if o == nil {
+func (c *Certificate) GetZlint() *ZLint {
+	if c == nil {
 		return nil
 	}
-	return o.Zlint
+	return c.Zlint
 }

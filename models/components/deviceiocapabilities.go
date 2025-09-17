@@ -12,51 +12,51 @@ type DeviceIOCapabilities struct {
 	VideoSource   *int `json:"video_source,omitempty"`
 }
 
-func (o *DeviceIOCapabilities) GetAudioOutputs() *int {
-	if o == nil {
+func (d *DeviceIOCapabilities) GetAudioOutputs() *int {
+	if d == nil {
 		return nil
 	}
-	return o.AudioOutputs
+	return d.AudioOutputs
 }
 
-func (o *DeviceIOCapabilities) GetAudioSources() *int {
-	if o == nil {
+func (d *DeviceIOCapabilities) GetAudioSources() *int {
+	if d == nil {
 		return nil
 	}
-	return o.AudioSources
+	return d.AudioSources
 }
 
-func (o *DeviceIOCapabilities) GetDigitalInputs() *int {
-	if o == nil {
+func (d *DeviceIOCapabilities) GetDigitalInputs() *int {
+	if d == nil {
 		return nil
 	}
-	return o.DigitalInputs
+	return d.DigitalInputs
 }
 
-func (o *DeviceIOCapabilities) GetRelayOutputs() *int {
-	if o == nil {
+func (d *DeviceIOCapabilities) GetRelayOutputs() *int {
+	if d == nil {
 		return nil
 	}
-	return o.RelayOutputs
+	return d.RelayOutputs
 }
 
-func (o *DeviceIOCapabilities) GetSerialPorts() *int {
-	if o == nil {
+func (d *DeviceIOCapabilities) GetSerialPorts() *int {
+	if d == nil {
 		return nil
 	}
-	return o.SerialPorts
+	return d.SerialPorts
 }
 
-func (o *DeviceIOCapabilities) GetVideoOutputs() *int {
-	if o == nil {
+func (d *DeviceIOCapabilities) GetVideoOutputs() *int {
+	if d == nil {
 		return nil
 	}
-	return o.VideoOutputs
+	return d.VideoOutputs
 }
 
-func (o *DeviceIOCapabilities) GetVideoSource() *int {
-	if o == nil {
+func (d *DeviceIOCapabilities) GetVideoSource() *int {
+	if d == nil {
 		return nil
 	}
-	return o.VideoSource
+	return d.VideoSource
 }

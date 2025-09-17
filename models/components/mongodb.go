@@ -7,16 +7,16 @@ type Mongodb struct {
 	IsMaster  *MongodbIsMaster  `json:"is_master,omitempty"`
 }
 
-func (o *Mongodb) GetBuildInfo() *MongodbBuildInfo {
-	if o == nil {
+func (m *Mongodb) GetBuildInfo() *MongodbBuildInfo {
+	if m == nil {
 		return nil
 	}
-	return o.BuildInfo
+	return m.BuildInfo
 }
 
-func (o *Mongodb) GetIsMaster() *MongodbIsMaster {
-	if o == nil {
+func (m *Mongodb) GetIsMaster() *MongodbIsMaster {
+	if m == nil {
 		return nil
 	}
-	return o.IsMaster
+	return m.IsMaster
 }

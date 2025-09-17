@@ -9,16 +9,16 @@ type MqttSubscriptionAckReturn struct {
 	ReturnValue *string `json:"return_value,omitempty"`
 }
 
-func (o *MqttSubscriptionAckReturn) GetRaw() *int {
-	if o == nil {
+func (m *MqttSubscriptionAckReturn) GetRaw() *int {
+	if m == nil {
 		return nil
 	}
-	return o.Raw
+	return m.Raw
 }
 
-func (o *MqttSubscriptionAckReturn) GetReturnValue() *string {
-	if o == nil {
+func (m *MqttSubscriptionAckReturn) GetReturnValue() *string {
+	if m == nil {
 		return nil
 	}
-	return o.ReturnValue
+	return m.ReturnValue
 }

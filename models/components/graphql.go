@@ -7,16 +7,16 @@ type Graphql struct {
 	SupportsIntrospection *bool   `json:"supports_introspection,omitempty"`
 }
 
-func (o *Graphql) GetResponse() *string {
-	if o == nil {
+func (g *Graphql) GetResponse() *string {
+	if g == nil {
 		return nil
 	}
-	return o.Response
+	return g.Response
 }
 
-func (o *Graphql) GetSupportsIntrospection() *bool {
-	if o == nil {
+func (g *Graphql) GetSupportsIntrospection() *bool {
+	if g == nil {
 		return nil
 	}
-	return o.SupportsIntrospection
+	return g.SupportsIntrospection
 }

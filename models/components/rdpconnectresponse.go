@@ -7,16 +7,16 @@ type RdpConnectResponse struct {
 	DomainParameters *RdpDomainParameters `json:"domain_parameters,omitempty"`
 }
 
-func (o *RdpConnectResponse) GetConnectID() *int {
-	if o == nil {
+func (r *RdpConnectResponse) GetConnectID() *int {
+	if r == nil {
 		return nil
 	}
-	return o.ConnectID
+	return r.ConnectID
 }
 
-func (o *RdpConnectResponse) GetDomainParameters() *RdpDomainParameters {
-	if o == nil {
+func (r *RdpConnectResponse) GetDomainParameters() *RdpDomainParameters {
+	if r == nil {
 		return nil
 	}
-	return o.DomainParameters
+	return r.DomainParameters
 }

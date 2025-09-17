@@ -8,23 +8,23 @@ type IvantiAvalanche struct {
 	Version    *string `json:"version,omitempty"`
 }
 
-func (o *IvantiAvalanche) GetBody() *string {
-	if o == nil {
+func (i *IvantiAvalanche) GetBody() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Body
+	return i.Body
 }
 
-func (o *IvantiAvalanche) GetStatusCode() *int {
-	if o == nil {
+func (i *IvantiAvalanche) GetStatusCode() *int {
+	if i == nil {
 		return nil
 	}
-	return o.StatusCode
+	return i.StatusCode
 }
 
-func (o *IvantiAvalanche) GetVersion() *string {
-	if o == nil {
+func (i *IvantiAvalanche) GetVersion() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Version
+	return i.Version
 }

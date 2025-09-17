@@ -6,9 +6,9 @@ type Rdate struct {
 	Date *string `json:"date,omitempty"`
 }
 
-func (o *Rdate) GetDate() *string {
-	if o == nil {
+func (r *Rdate) GetDate() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Date
+	return r.Date
 }

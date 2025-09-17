@@ -7,16 +7,16 @@ type VncKeyValue struct {
 	Value *int    `json:"value,omitempty"`
 }
 
-func (o *VncKeyValue) GetName() *string {
-	if o == nil {
+func (v *VncKeyValue) GetName() *string {
+	if v == nil {
 		return nil
 	}
-	return o.Name
+	return v.Name
 }
 
-func (o *VncKeyValue) GetValue() *int {
-	if o == nil {
+func (v *VncKeyValue) GetValue() *int {
+	if v == nil {
 		return nil
 	}
-	return o.Value
+	return v.Value
 }

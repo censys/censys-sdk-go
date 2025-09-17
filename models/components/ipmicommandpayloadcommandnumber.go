@@ -9,16 +9,16 @@ type IpmiCommandPayloadCommandNumber struct {
 	Raw *int `json:"raw,omitempty"`
 }
 
-func (o *IpmiCommandPayloadCommandNumber) GetName() *string {
-	if o == nil {
+func (i *IpmiCommandPayloadCommandNumber) GetName() *string {
+	if i == nil {
 		return nil
 	}
-	return o.Name
+	return i.Name
 }
 
-func (o *IpmiCommandPayloadCommandNumber) GetRaw() *int {
-	if o == nil {
+func (i *IpmiCommandPayloadCommandNumber) GetRaw() *int {
+	if i == nil {
 		return nil
 	}
-	return o.Raw
+	return i.Raw
 }

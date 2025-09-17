@@ -10,37 +10,37 @@ type ElfFile struct {
 	Type    *string `json:"type,omitempty"`
 }
 
-func (o *ElfFile) GetClass() *string {
-	if o == nil {
+func (e *ElfFile) GetClass() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Class
+	return e.Class
 }
 
-func (o *ElfFile) GetData() *string {
-	if o == nil {
+func (e *ElfFile) GetData() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Data
+	return e.Data
 }
 
-func (o *ElfFile) GetMachine() *string {
-	if o == nil {
+func (e *ElfFile) GetMachine() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Machine
+	return e.Machine
 }
 
-func (o *ElfFile) GetOsAbi() *string {
-	if o == nil {
+func (e *ElfFile) GetOsAbi() *string {
+	if e == nil {
 		return nil
 	}
-	return o.OsAbi
+	return e.OsAbi
 }
 
-func (o *ElfFile) GetType() *string {
-	if o == nil {
+func (e *ElfFile) GetType() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Type
+	return e.Type
 }

@@ -49,23 +49,23 @@ type DNSResourceRecord struct {
 	Type *DNSResourceRecordType `json:"type,omitempty"`
 }
 
-func (o *DNSResourceRecord) GetName() *string {
-	if o == nil {
+func (d *DNSResourceRecord) GetName() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Name
+	return d.Name
 }
 
-func (o *DNSResourceRecord) GetResponse() *string {
-	if o == nil {
+func (d *DNSResourceRecord) GetResponse() *string {
+	if d == nil {
 		return nil
 	}
-	return o.Response
+	return d.Response
 }
 
-func (o *DNSResourceRecord) GetType() *DNSResourceRecordType {
-	if o == nil {
+func (d *DNSResourceRecord) GetType() *DNSResourceRecordType {
+	if d == nil {
 		return nil
 	}
-	return o.Type
+	return d.Type
 }

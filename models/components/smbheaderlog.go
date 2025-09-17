@@ -10,37 +10,37 @@ type SmbHeaderLog struct {
 	Status     *int    `json:"status,omitempty"`
 }
 
-func (o *SmbHeaderLog) GetCommand() *int {
-	if o == nil {
+func (s *SmbHeaderLog) GetCommand() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Command
+	return s.Command
 }
 
-func (o *SmbHeaderLog) GetCredits() *int {
-	if o == nil {
+func (s *SmbHeaderLog) GetCredits() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Credits
+	return s.Credits
 }
 
-func (o *SmbHeaderLog) GetFlags() *int {
-	if o == nil {
+func (s *SmbHeaderLog) GetFlags() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Flags
+	return s.Flags
 }
 
-func (o *SmbHeaderLog) GetProtocolID() *string {
-	if o == nil {
+func (s *SmbHeaderLog) GetProtocolID() *string {
+	if s == nil {
 		return nil
 	}
-	return o.ProtocolID
+	return s.ProtocolID
 }
 
-func (o *SmbHeaderLog) GetStatus() *int {
-	if o == nil {
+func (s *SmbHeaderLog) GetStatus() *int {
+	if s == nil {
 		return nil
 	}
-	return o.Status
+	return s.Status
 }

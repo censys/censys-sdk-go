@@ -6,9 +6,9 @@ type DhcpdiscoverResponseParams struct {
 	DeviceInfo *DhcpdiscoverDeviceInfo `json:"device_info,omitempty"`
 }
 
-func (o *DhcpdiscoverResponseParams) GetDeviceInfo() *DhcpdiscoverDeviceInfo {
-	if o == nil {
+func (d *DhcpdiscoverResponseParams) GetDeviceInfo() *DhcpdiscoverDeviceInfo {
+	if d == nil {
 		return nil
 	}
-	return o.DeviceInfo
+	return d.DeviceInfo
 }
