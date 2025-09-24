@@ -6,7 +6,6 @@ sources:
         sourceBlobDigest: sha256:30f4d0ea4261607c3879de7fe41244cc7d2d801478f2bdb29209a23a1f6f4610
         tags:
             - latest
-            - speakeasy-sdk-regen-1758672849
             - 1.0.40
 targets:
     censys-sdk-go:
@@ -15,7 +14,7 @@ targets:
         sourceRevisionDigest: sha256:75737beaff8d8dcfbb24983f740a0ef476f37ff62e35c475bda37e5c0656b94e
         sourceBlobDigest: sha256:30f4d0ea4261607c3879de7fe41244cc7d2d801478f2bdb29209a23a1f6f4610
         codeSamplesNamespace: converge-source-go-code-samples
-        codeSamplesRevisionDigest: sha256:0b4b1e4cdc09485017f6b3b05d68dd9f613c1364572ccd18f854b3ce3e598aad
+        codeSamplesRevisionDigest: sha256:f1414e505effaa69dfe6c1ce45352f34eb738dc465d1186042e6313a1ad75fd4
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.40
   speakeasyVersion: 1.624.0
   generationVersion: 2.714.0
-  releaseVersion: 0.22.0
-  configChecksum: 6b764499877e946bc05bee07b605fb30
+  releaseVersion: 0.22.1
+  configChecksum: 1ef7b051cdd77783e69df78173810ce9
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
