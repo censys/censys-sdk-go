@@ -3,7 +3,7 @@
 package components
 
 type SearchQueryInputBody struct {
-	// specify fields to return in response and ignore others
+	// Specify fields to only return in the response. If you provide fields and omit `host.services.port`, `host.services.transport_protocol`, and `host.services.protocol`, then `matched_services` will not be returned in the response.
 	Fields []string `json:"fields,omitempty"`
 	// amount of results to return per page
 	PageSize *int64 `json:"page_size,omitempty"`

@@ -3,9 +3,9 @@
 package components
 
 type SearchQueryHit struct {
-	CertificateV1 *CertificateAsset `json:"certificate_v1,omitempty"`
-	HostV1        *HostAsset        `json:"host_v1,omitempty"`
-	WebpropertyV1 *WebpropertyAsset `json:"webproperty_v1,omitempty"`
+	CertificateV1 *CertificateAsset             `json:"certificate_v1,omitempty"`
+	HostV1        *HostAssetWithMatchedServices `json:"host_v1,omitempty"`
+	WebpropertyV1 *WebpropertyAsset             `json:"webproperty_v1,omitempty"`
 }
 
 func (s *SearchQueryHit) GetCertificateV1() *CertificateAsset {
@@ -15,7 +15,7 @@ func (s *SearchQueryHit) GetCertificateV1() *CertificateAsset {
 	return s.CertificateV1
 }
 
-func (s *SearchQueryHit) GetHostV1() *HostAsset {
+func (s *SearchQueryHit) GetHostV1() *HostAssetWithMatchedServices {
 	if s == nil {
 		return nil
 	}
