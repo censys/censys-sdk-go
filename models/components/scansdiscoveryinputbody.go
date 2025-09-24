@@ -126,8 +126,8 @@ const (
 )
 
 type ScansDiscoveryInputBodyTarget struct {
-	Target1 *Target1 `queryParam:"inline" name:"target"`
-	Target2 *Target2 `queryParam:"inline" name:"target"`
+	Target1 *Target1 `queryParam:"inline,name=target"`
+	Target2 *Target2 `queryParam:"inline,name=target"`
 
 	Type ScansDiscoveryInputBodyTargetType
 }

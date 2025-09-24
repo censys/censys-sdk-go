@@ -179,8 +179,8 @@ const (
 )
 
 type ScansRescanInputBodyTarget struct {
-	One *One `queryParam:"inline" name:"target"`
-	Two *Two `queryParam:"inline" name:"target"`
+	One *One `queryParam:"inline,name=target"`
+	Two *Two `queryParam:"inline,name=target"`
 
 	Type ScansRescanInputBodyTargetType
 }

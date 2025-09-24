@@ -1849,7 +1849,7 @@ func (s *Collections) Aggregate(ctx context.Context, request operations.V3Collec
 }
 
 // Search - Run a search query within a collection
-// Run a search query across a collection's assets. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax.
+// Run a search query across a collection's assets. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax. Host services that match your search criteria will be returned in a `matched_services` object.
 func (s *Collections) Search(ctx context.Context, request operations.V3CollectionsSearchQueryRequest, opts ...operations.Option) (*operations.V3CollectionsSearchQueryResponse, error) {
 	globals := operations.V3CollectionsSearchQueryGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

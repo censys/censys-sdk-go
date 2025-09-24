@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 0d9e79d490ce90706788c0fc59d2d386
-  docVersion: 1.0.39
-  speakeasyVersion: 1.617.1
-  generationVersion: 2.701.8
-  releaseVersion: 0.21.0
-  configChecksum: 881bf8a6d10a6f8a165d8317a8235d14
+  docChecksum: 77f50f47d7f3863989b099d1fae080bd
+  docVersion: 1.0.40
+  speakeasyVersion: 1.624.0
+  generationVersion: 2.714.0
+  releaseVersion: 0.22.0
+  configChecksum: 6b764499877e946bc05bee07b605fb30
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -14,7 +14,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.10.0
+    core: 3.11.1
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -190,6 +190,7 @@ generatedFiles:
   - /models/components/hikvisionplatformlibrary.go
   - /models/components/host.go
   - /models/components/hostasset.go
+  - /models/components/hostassetwithmatchedservices.go
   - /models/components/hostdns.go
   - /models/components/hostdnsforwardresolution.go
   - /models/components/hostdnsreverseresolution.go
@@ -257,6 +258,7 @@ generatedFiles:
   - /models/components/locationupdated.go
   - /models/components/lpd.go
   - /models/components/lpdmessage.go
+  - /models/components/matchedservice.go
   - /models/components/mdns.go
   - /models/components/mdnsresult.go
   - /models/components/mediacapabilities.go
@@ -697,6 +699,7 @@ generatedFiles:
   - docs/models/components/endpointscan.md
   - docs/models/components/endpointscanned.md
   - docs/models/components/endpointscanstate.md
+  - docs/models/components/endpointscanstatetransportprotocol.md
   - docs/models/components/endpointscantransportprotocol.md
   - docs/models/components/epmd.md
   - docs/models/components/epss.md
@@ -732,6 +735,7 @@ generatedFiles:
   - docs/models/components/hikvisionplatformlibrary.md
   - docs/models/components/host.md
   - docs/models/components/hostasset.md
+  - docs/models/components/hostassetwithmatchedservices.md
   - docs/models/components/hostdns.md
   - docs/models/components/hostdnsforwardresolution.md
   - docs/models/components/hostdnsreverseresolution.md
@@ -805,6 +809,7 @@ generatedFiles:
   - docs/models/components/locationupdated.md
   - docs/models/components/lpd.md
   - docs/models/components/lpdmessage.md
+  - docs/models/components/matchedservice.md
   - docs/models/components/mdns.md
   - docs/models/components/mdnsresult.md
   - docs/models/components/mediacapabilities.md

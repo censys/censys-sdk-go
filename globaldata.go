@@ -3410,7 +3410,7 @@ func (s *GlobalData) ConvertLegacySearchQueries(ctx context.Context, request ope
 }
 
 // Search - Run a search query
-// Run a search query across Censys data. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax.
+// Run a search query across Censys data. Reference the [documentation on Censys Query Language](https://docs.censys.com/docs/censys-query-language#/) for information about query syntax. Host services that match your search criteria will be returned in a `matched_services` object.
 func (s *GlobalData) Search(ctx context.Context, request operations.V3GlobaldataSearchQueryRequest, opts ...operations.Option) (*operations.V3GlobaldataSearchQueryResponse, error) {
 	globals := operations.V3GlobaldataSearchQueryGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

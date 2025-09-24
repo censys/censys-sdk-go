@@ -7,20 +7,20 @@ import (
 	"fmt"
 )
 
-type TransportProtocol string
+type EndpointScanStateTransportProtocol string
 
 const (
-	TransportProtocolUnknown TransportProtocol = ""
-	TransportProtocolTCP     TransportProtocol = "tcp"
-	TransportProtocolUDP     TransportProtocol = "udp"
-	TransportProtocolIcmp    TransportProtocol = "icmp"
-	TransportProtocolQuic    TransportProtocol = "quic"
+	EndpointScanStateTransportProtocolUnknown EndpointScanStateTransportProtocol = ""
+	EndpointScanStateTransportProtocolTCP     EndpointScanStateTransportProtocol = "tcp"
+	EndpointScanStateTransportProtocolUDP     EndpointScanStateTransportProtocol = "udp"
+	EndpointScanStateTransportProtocolIcmp    EndpointScanStateTransportProtocol = "icmp"
+	EndpointScanStateTransportProtocolQuic    EndpointScanStateTransportProtocol = "quic"
 )
 
-func (e TransportProtocol) ToPointer() *TransportProtocol {
+func (e EndpointScanStateTransportProtocol) ToPointer() *EndpointScanStateTransportProtocol {
 	return &e
 }
-func (e *TransportProtocol) UnmarshalJSON(data []byte) error {
+func (e *EndpointScanStateTransportProtocol) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -35,40 +35,40 @@ func (e *TransportProtocol) UnmarshalJSON(data []byte) error {
 	case "icmp":
 		fallthrough
 	case "quic":
-		*e = TransportProtocol(v)
+		*e = EndpointScanStateTransportProtocol(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransportProtocol: %v", v)
+		return fmt.Errorf("invalid value for EndpointScanStateTransportProtocol: %v", v)
 	}
 }
 
 type EndpointScanState struct {
-	Banner            *string            `json:"banner,omitempty"`
-	BannerHashSha256  *string            `json:"banner_hash_sha256,omitempty"`
-	ChromeDevtools    *ChromeDevtools    `json:"chrome_devtools,omitempty"`
-	CobaltStrike      *CobaltStrike      `json:"cobalt_strike,omitempty"`
-	Elasticsearch     *ElasticSearch     `json:"elasticsearch,omitempty"`
-	EndpointType      *string            `json:"endpoint_type,omitempty"`
-	Fortigate         *Fortigate         `json:"fortigate,omitempty"`
-	Graphql           *Graphql           `json:"graphql,omitempty"`
-	Hostname          *string            `json:"hostname,omitempty"`
-	HTTP              *HTTP              `json:"http,omitempty"`
-	IP                *string            `json:"ip,omitempty"`
-	IvantiAvalanche   *IvantiAvalanche   `json:"ivanti_avalanche,omitempty"`
-	Kubernetes        *Kubernetes        `json:"kubernetes,omitempty"`
-	Ollama            *Ollama            `json:"ollama,omitempty"`
-	OpenDirectory     *OpenDirectory     `json:"open_directory,omitempty"`
-	Path              *string            `json:"path,omitempty"`
-	PlexMediaServer   *PlexMediaServer   `json:"plex_media_server,omitempty"`
-	Port              *int               `json:"port,omitempty"`
-	Pprof             *Pprof             `json:"pprof,omitempty"`
-	Prometheus        *Prometheus        `json:"prometheus,omitempty"`
-	PrometheusTarget  *PrometheusTarget  `json:"prometheus_target,omitempty"`
-	RedlionWeb        *RedlionWeb        `json:"redlion_web,omitempty"`
-	ScadaView         *ScadaView         `json:"scada_view,omitempty"`
-	ScanTime          *string            `json:"scan_time,omitempty"`
-	Screenshots       []Screenshot       `json:"screenshots,omitempty"`
-	TransportProtocol *TransportProtocol `json:"transport_protocol,omitempty"`
+	Banner            *string                             `json:"banner,omitempty"`
+	BannerHashSha256  *string                             `json:"banner_hash_sha256,omitempty"`
+	ChromeDevtools    *ChromeDevtools                     `json:"chrome_devtools,omitempty"`
+	CobaltStrike      *CobaltStrike                       `json:"cobalt_strike,omitempty"`
+	Elasticsearch     *ElasticSearch                      `json:"elasticsearch,omitempty"`
+	EndpointType      *string                             `json:"endpoint_type,omitempty"`
+	Fortigate         *Fortigate                          `json:"fortigate,omitempty"`
+	Graphql           *Graphql                            `json:"graphql,omitempty"`
+	Hostname          *string                             `json:"hostname,omitempty"`
+	HTTP              *HTTP                               `json:"http,omitempty"`
+	IP                *string                             `json:"ip,omitempty"`
+	IvantiAvalanche   *IvantiAvalanche                    `json:"ivanti_avalanche,omitempty"`
+	Kubernetes        *Kubernetes                         `json:"kubernetes,omitempty"`
+	Ollama            *Ollama                             `json:"ollama,omitempty"`
+	OpenDirectory     *OpenDirectory                      `json:"open_directory,omitempty"`
+	Path              *string                             `json:"path,omitempty"`
+	PlexMediaServer   *PlexMediaServer                    `json:"plex_media_server,omitempty"`
+	Port              *int                                `json:"port,omitempty"`
+	Pprof             *Pprof                              `json:"pprof,omitempty"`
+	Prometheus        *Prometheus                         `json:"prometheus,omitempty"`
+	PrometheusTarget  *PrometheusTarget                   `json:"prometheus_target,omitempty"`
+	RedlionWeb        *RedlionWeb                         `json:"redlion_web,omitempty"`
+	ScadaView         *ScadaView                          `json:"scada_view,omitempty"`
+	ScanTime          *string                             `json:"scan_time,omitempty"`
+	Screenshots       []Screenshot                        `json:"screenshots,omitempty"`
+	TransportProtocol *EndpointScanStateTransportProtocol `json:"transport_protocol,omitempty"`
 }
 
 func (e *EndpointScanState) GetBanner() *string {
@@ -246,7 +246,7 @@ func (e *EndpointScanState) GetScreenshots() []Screenshot {
 	return e.Screenshots
 }
 
-func (e *EndpointScanState) GetTransportProtocol() *TransportProtocol {
+func (e *EndpointScanState) GetTransportProtocol() *EndpointScanStateTransportProtocol {
 	if e == nil {
 		return nil
 	}
