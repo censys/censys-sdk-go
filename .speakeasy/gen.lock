@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 77f50f47d7f3863989b099d1fae080bd
-  docVersion: 1.0.40
-  speakeasyVersion: 1.624.0
-  generationVersion: 2.714.0
-  releaseVersion: 0.22.1
-  configChecksum: 1ef7b051cdd77783e69df78173810ce9
+  docChecksum: ec8f426b67446b3938104a137fca5864
+  docVersion: 1.0.41
+  speakeasyVersion: 1.631.5
+  generationVersion: 2.716.16
+  releaseVersion: 0.22.2
+  configChecksum: 4589f6f21a7e4ece8111f50bf131a267
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -1242,7 +1242,6 @@ generatedFiles:
   - types/bigint.go
   - types/date.go
   - types/datetime.go
-  - types/decimal.go
   - types/pointers.go
 examples:
   v3-collections-crud-list:
@@ -1651,7 +1650,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"host_ids": ["8.8.8.8"]}
+        application/json: {"at_time": "2025-01-01T00:00:00Z", "host_ids": ["8.8.8.8"]}
       responses:
         "200":
           application/vnd.censys.api.v3.host.v1+json: {}
@@ -1666,7 +1665,7 @@ examples:
         query:
           organization_id: "<id>"
       requestBody:
-        application/json: {"webproperty_ids": ["platform.censys.io:80"]}
+        application/json: {"at_time": "2025-01-01T00:00:00Z", "webproperty_ids": ["platform.censys.io:80"]}
       responses:
         "200":
           application/vnd.censys.api.v3.webproperty.v1+json: {}
