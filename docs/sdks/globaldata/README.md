@@ -273,6 +273,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
 	"github.com/censys/censys-sdk-go/models/components"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
@@ -288,6 +289,7 @@ func main() {
 
     res, err := s.GlobalData.GetHosts(ctx, operations.V3GlobaldataAssetHostListPostRequest{
         AssetHostListInputBody: components.AssetHostListInputBody{
+            AtTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
             HostIds: []string{
                 "8.8.8.8",
             },
@@ -454,6 +456,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
 	"github.com/censys/censys-sdk-go/models/components"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
@@ -469,6 +472,7 @@ func main() {
 
     res, err := s.GlobalData.GetWebProperties(ctx, operations.V3GlobaldataAssetWebpropertyListPostRequest{
         AssetWebpropertyListInputBody: components.AssetWebpropertyListInputBody{
+            AtTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
             WebpropertyIds: []string{
                 "platform.censys.io:80",
             },
