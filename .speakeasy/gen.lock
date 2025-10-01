@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: ec8f426b67446b3938104a137fca5864
-  docVersion: 1.0.41
-  speakeasyVersion: 1.631.5
-  generationVersion: 2.716.16
-  releaseVersion: 0.22.2
-  configChecksum: 4589f6f21a7e4ece8111f50bf131a267
+  docChecksum: efceec64e31aeb701c3279f9e94b5899
+  docVersion: 1.0.42
+  speakeasyVersion: 1.633.1
+  generationVersion: 2.720.1
+  releaseVersion: 0.22.3
+  configChecksum: 093602ff7de507660b76dff01af4922e
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:

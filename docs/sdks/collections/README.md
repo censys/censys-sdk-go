@@ -435,7 +435,7 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 403, 404, 422                 | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Search
