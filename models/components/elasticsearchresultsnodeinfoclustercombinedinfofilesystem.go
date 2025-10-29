@@ -4,11 +4,11 @@ package components
 
 type ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem struct {
 	Available        *string `json:"available,omitempty"`
-	AvailableInBytes *int    `json:"available_in_bytes,omitempty"`
+	AvailableInBytes *int64  `json:"available_in_bytes,omitempty"`
 	Free             *string `json:"free,omitempty"`
-	FreeInBytes      *int    `json:"free_in_bytes,omitempty"`
+	FreeInBytes      *int64  `json:"free_in_bytes,omitempty"`
 	Total            *string `json:"total,omitempty"`
-	TotalInBytes     *int    `json:"total_in_bytes,omitempty"`
+	TotalInBytes     *int64  `json:"total_in_bytes,omitempty"`
 }
 
 func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetAvailable() *string {
@@ -18,7 +18,7 @@ func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetAvailable
 	return e.Available
 }
 
-func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetAvailableInBytes() *int {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetAvailableInBytes() *int64 {
 	if e == nil {
 		return nil
 	}
@@ -32,7 +32,7 @@ func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetFree() *s
 	return e.Free
 }
 
-func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetFreeInBytes() *int {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetFreeInBytes() *int64 {
 	if e == nil {
 		return nil
 	}
@@ -46,7 +46,7 @@ func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetTotal() *
 	return e.Total
 }
 
-func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetTotalInBytes() *int {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoFilesystem) GetTotalInBytes() *int64 {
 	if e == nil {
 		return nil
 	}

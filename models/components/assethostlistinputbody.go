@@ -19,7 +19,7 @@ func (a AssetHostListInputBody) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AssetHostListInputBody) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"host_ids"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
 		return err
 	}
 	return nil

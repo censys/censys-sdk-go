@@ -19,7 +19,7 @@ func (a AssetWebpropertyListInputBody) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AssetWebpropertyListInputBody) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"webproperty_ids"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, nil); err != nil {
 		return err
 	}
 	return nil

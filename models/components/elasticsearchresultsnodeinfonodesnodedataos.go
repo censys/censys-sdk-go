@@ -8,7 +8,7 @@ type ElasticSearchResultsNodeInfoNodesNodeDataOS struct {
 	AvailableProc     *int    `json:"available_proc,omitempty"`
 	Name              *string `json:"name,omitempty"`
 	PrettyName        *string `json:"pretty_name,omitempty"`
-	RefreshIntervalMs *int    `json:"refresh_interval_ms,omitempty"`
+	RefreshIntervalMs *int64  `json:"refresh_interval_ms,omitempty"`
 	Version           *string `json:"version,omitempty"`
 }
 
@@ -47,7 +47,7 @@ func (e *ElasticSearchResultsNodeInfoNodesNodeDataOS) GetPrettyName() *string {
 	return e.PrettyName
 }
 
-func (e *ElasticSearchResultsNodeInfoNodesNodeDataOS) GetRefreshIntervalMs() *int {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataOS) GetRefreshIntervalMs() *int64 {
 	if e == nil {
 		return nil
 	}

@@ -17,7 +17,7 @@ type ElasticSearchResultsNodeInfoNodesNodeData struct {
 	Roles               []string                                               `json:"roles,omitempty"`
 	Settings            *ElasticSearchResultsNodeInfoNodesNodeDataNodeSettings `json:"settings,omitempty"`
 	ThreadPoolList      []ElasticSearchResultsNodeInfoNodesNodeDataThreadPool  `json:"thread_pool_list,omitempty"`
-	TotalIndexingBuffer *int                                                   `json:"total_indexing_buffer,omitempty"`
+	TotalIndexingBuffer *int64                                                 `json:"total_indexing_buffer,omitempty"`
 	Version             *string                                                `json:"version,omitempty"`
 }
 
@@ -119,7 +119,7 @@ func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetThreadPoolList() []Elasti
 	return e.ThreadPoolList
 }
 
-func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetTotalIndexingBuffer() *int {
+func (e *ElasticSearchResultsNodeInfoNodesNodeData) GetTotalIndexingBuffer() *int64 {
 	if e == nil {
 		return nil
 	}

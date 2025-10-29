@@ -122,7 +122,6 @@ func main() {
 * [ConvertLegacySearchQueries](docs/sdks/globaldata/README.md#convertlegacysearchqueries) - Convert Legacy Search queries to Platform queries
 * [Search](docs/sdks/globaldata/README.md#search) - Run a search query
 
-
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
 * [GetHostObservationsWithCertificate](docs/sdks/threathunting/README.md#gethostobservationswithcertificate) - Get host history for a certificate

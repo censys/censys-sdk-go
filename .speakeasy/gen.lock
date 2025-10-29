@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: efceec64e31aeb701c3279f9e94b5899
-  docVersion: 1.0.42
-  speakeasyVersion: 1.633.1
-  generationVersion: 2.720.1
-  releaseVersion: 0.22.3
-  configChecksum: 093602ff7de507660b76dff01af4922e
+  docChecksum: 67a9f5069f046c1aed6b8d00da11b24c
+  docVersion: 1.0.46
+  speakeasyVersion: 1.642.2
+  generationVersion: 2.731.6
+  releaseVersion: 0.23.0
+  configChecksum: ffa1a577d36df5bde3fe450d26294ec2
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 features:
@@ -14,7 +14,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.11.1
+    core: 3.12.0
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -27,11 +27,11 @@ features:
     ignores: 2.81.1
     intellisenseMarkdownSupport: 0.1.0
     nameOverrides: 2.81.2
-    nullables: 0.2.0
+    nullables: 0.2.1
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.14
+    unions: 2.87.0
 generatedFiles:
   - .gitattributes
   - /models/components/activemq.go
@@ -1214,7 +1214,6 @@ generatedFiles:
   - docs/models/sdkerrors/errormodel.md
   - docs/sdks/collections/README.md
   - docs/sdks/globaldata/README.md
-  - docs/sdks/sdk/README.md
   - docs/sdks/threathunting/README.md
   - globaldata.go
   - go.mod
@@ -1543,6 +1542,9 @@ examples:
           application/json: {}
         "401":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "403":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
   v3-globaldata-scans-get:
     speakeasy-default-v3-globaldata-scans-get:
       parameters:
@@ -1554,6 +1556,9 @@ examples:
         "200":
           application/vnd.censys.api.v3.trackedscan.v1+json: {}
         "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "403":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
   v3-threathunting-scans-get:
     speakeasy-default-v3-threathunting-scans-get:
@@ -1567,6 +1572,9 @@ examples:
           application/vnd.censys.api.v3.trackedscan.v1+json: {}
         "401":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "403":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
   v3-threathunting-scans-discovery:
     speakeasy-default-v3-threathunting-scans-discovery:
       parameters:
@@ -1578,6 +1586,9 @@ examples:
         "200":
           application/json: {}
         "401":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "403":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
   v3-threathunting-get-host-observations-with-certificate:
     speakeasy-default-v3-threathunting-get-host-observations-with-certificate:

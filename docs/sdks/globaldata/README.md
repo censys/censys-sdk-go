@@ -24,7 +24,7 @@ Endpoints related to the Global Data product
 
 ## GetCertificates
 
-Retrieve information about multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
+Retrieve information about multiple certificates. You can retrieve up to 1,000 certificates per call. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 
 ### Example Usage
 
@@ -86,7 +86,7 @@ func main() {
 
 ## GetCertificatesRaw
 
-Retrieve the raw PEM-encoded format for multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
+Retrieve the raw PEM-encoded format for multiple certificates. You can retrieve up to 1,000 certificates per call. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ func main() {
 
 ## GetHosts
 
-Retrieve information about multiple hosts. A host ID is its IP address.
+Retrieve information about multiple hosts. You can retrieve up to 100 hosts per call. A host ID is its IP address.
 
 ### Example Usage
 
@@ -385,7 +385,7 @@ func main() {
 
 ## GetHostTimeline
 
-Retrieve event history for a host. A host ID is its IP address.<br><br>Note that when a service protocol changes after a new scan (for example, from `UNKNOWN` to `NETBIOS`), this information will only be reflected in the `scan` object. It will not be shown in the `service_scanned diff` object.
+Retrieve event history for a host. A host ID is its IP address.<br><br>Note that when a service protocol changes after a new scan (for example, from `UNKNOWN` to `NETBIOS`), this information will be reflected in the `scan` object.
 
 ### Example Usage
 
@@ -445,7 +445,7 @@ func main() {
 
 ## GetWebProperties
 
-Retrieve information about multiple web properties. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
+Retrieve information about multiple web properties. You can retrieve up to 100 web properties per call. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
 
 ### Example Usage
 
@@ -627,10 +627,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetTrackedScan
 
@@ -683,10 +684,11 @@ func main() {
 
 ### Errors
 
-| Error Type               | Status Code              | Content Type             |
-| ------------------------ | ------------------------ | ------------------------ |
-| sdkerrors.ErrorModel     | 401, 403                 | application/problem+json |
-| sdkerrors.SDKError       | 4XX, 5XX                 | \*/\*                    |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Aggregate
 

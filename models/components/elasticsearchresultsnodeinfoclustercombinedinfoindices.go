@@ -3,12 +3,12 @@
 package components
 
 type ElasticSearchResultsNodeInfoClusterCombinedInfoIndices struct {
-	Count *int                                                         `json:"count,omitempty"`
+	Count *int64                                                       `json:"count,omitempty"`
 	Docs  *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs  `json:"docs,omitempty"`
 	Store *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesStore `json:"store,omitempty"`
 }
 
-func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndices) GetCount() *int {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndices) GetCount() *int64 {
 	if e == nil {
 		return nil
 	}

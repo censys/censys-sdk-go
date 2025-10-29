@@ -33,7 +33,7 @@ func newGlobalData(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks
 }
 
 // GetCertificates - Retrieve multiple certificates
-// Retrieve information about multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
+// Retrieve information about multiple certificates. You can retrieve up to 1,000 certificates per call. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3GlobaldataAssetCertificateListPostRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetCertificateListPostResponse, error) {
 	globals := operations.V3GlobaldataAssetCertificateListPostGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -299,7 +299,7 @@ func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3G
 }
 
 // GetCertificatesRaw - Retrieve multiple certificates in PEM format
-// Retrieve the raw PEM-encoded format for multiple certificates. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
+// Retrieve the raw PEM-encoded format for multiple certificates. You can retrieve up to 1,000 certificates per call. A certificate ID is its SHA-256 fingerprint in the Censys dataset.
 func (s *GlobalData) GetCertificatesRaw(ctx context.Context, request operations.V3GlobaldataAssetCertificateListRawPostRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetCertificateListRawPostResponse, error) {
 	globals := operations.V3GlobaldataAssetCertificateListRawPostGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1075,7 +1075,7 @@ func (s *GlobalData) GetCertificateRaw(ctx context.Context, request operations.V
 }
 
 // GetHosts - Retrieve multiple hosts
-// Retrieve information about multiple hosts. A host ID is its IP address.
+// Retrieve information about multiple hosts. You can retrieve up to 100 hosts per call. A host ID is its IP address.
 func (s *GlobalData) GetHosts(ctx context.Context, request operations.V3GlobaldataAssetHostListPostRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetHostListPostResponse, error) {
 	globals := operations.V3GlobaldataAssetHostListPostGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1598,7 +1598,7 @@ func (s *GlobalData) GetHost(ctx context.Context, request operations.V3Globaldat
 }
 
 // GetHostTimeline - Get host event history
-// Retrieve event history for a host. A host ID is its IP address.<br><br>Note that when a service protocol changes after a new scan (for example, from `UNKNOWN` to `NETBIOS`), this information will only be reflected in the `scan` object. It will not be shown in the `service_scanned diff` object.
+// Retrieve event history for a host. A host ID is its IP address.<br><br>Note that when a service protocol changes after a new scan (for example, from `UNKNOWN` to `NETBIOS`), this information will be reflected in the `scan` object.
 func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3GlobaldataAssetHostTimelineRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetHostTimelineResponse, error) {
 	globals := operations.V3GlobaldataAssetHostTimelineGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1855,7 +1855,7 @@ func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3G
 }
 
 // GetWebProperties - Retrieve multiple web properties
-// Retrieve information about multiple web properties. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
+// Retrieve information about multiple web properties. You can retrieve up to 100 web properties per call. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.
 func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3GlobaldataAssetWebpropertyListPostRequest, opts ...operations.Option) (*operations.V3GlobaldataAssetWebpropertyListPostResponse, error) {
 	globals := operations.V3GlobaldataAssetWebpropertyListPostGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -2576,7 +2576,26 @@ func (s *GlobalData) CreateTrackedScan(ctx context.Context, request operations.V
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode == 401:
-		fallthrough
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			var out sdkerrors.AuthenticationError
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			return nil, &out
+		default:
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
 	case httpRes.StatusCode == 403:
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/problem+json`):
@@ -2767,7 +2786,7 @@ func (s *GlobalData) GetTrackedScan(ctx context.Context, request operations.V3Gl
 
 			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 			return nil, err
-		} else if utils.MatchStatusCodes([]string{"401", "403", "4XX", "5XX"}, httpRes.StatusCode) {
+		} else if utils.MatchStatusCodes([]string{"401", "403", "404", "4XX", "5XX"}, httpRes.StatusCode) {
 			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 			if err != nil {
 				return nil, err
@@ -2814,8 +2833,29 @@ func (s *GlobalData) GetTrackedScan(ctx context.Context, request operations.V3Gl
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
 		}
 	case httpRes.StatusCode == 401:
-		fallthrough
+		switch {
+		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+
+			var out sdkerrors.AuthenticationError
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
+				return nil, err
+			}
+
+			return nil, &out
+		default:
+			rawBody, err := utils.ConsumeRawBody(httpRes)
+			if err != nil {
+				return nil, err
+			}
+			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
+		}
 	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/problem+json`):
 			rawBody, err := utils.ConsumeRawBody(httpRes)
