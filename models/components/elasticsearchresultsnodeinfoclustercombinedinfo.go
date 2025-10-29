@@ -7,7 +7,7 @@ type ElasticSearchResultsNodeInfoClusterCombinedInfo struct {
 	Indices    *ElasticSearchResultsNodeInfoClusterCombinedInfoIndices    `json:"indices,omitempty"`
 	Name       *string                                                    `json:"name,omitempty"`
 	Status     *string                                                    `json:"status,omitempty"`
-	Timestamp  *int                                                       `json:"timestamp,omitempty"`
+	Timestamp  *int64                                                     `json:"timestamp,omitempty"`
 	UUID       *string                                                    `json:"uuid,omitempty"`
 }
 
@@ -39,7 +39,7 @@ func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetStatus() *string {
 	return e.Status
 }
 
-func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetTimestamp() *int {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfo) GetTimestamp() *int64 {
 	if e == nil {
 		return nil
 	}

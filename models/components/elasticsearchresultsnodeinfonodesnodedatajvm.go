@@ -7,7 +7,7 @@ type ElasticSearchResultsNodeInfoNodesNodeDataJVM struct {
 	InputArgs   []string `json:"input_args,omitempty"`
 	MemoryPools []string `json:"memory_pools,omitempty"`
 	StartTime   *string  `json:"start_time,omitempty"`
-	StartTimeMs *int     `json:"start_time_ms,omitempty"`
+	StartTimeMs *int64   `json:"start_time_ms,omitempty"`
 	Version     *string  `json:"version,omitempty"`
 	VMName      *string  `json:"vm_name,omitempty"`
 	VMVendor    *string  `json:"vm_vendor,omitempty"`
@@ -42,7 +42,7 @@ func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetStartTime() *string {
 	return e.StartTime
 }
 
-func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetStartTimeMs() *int {
+func (e *ElasticSearchResultsNodeInfoNodesNodeDataJVM) GetStartTimeMs() *int64 {
 	if e == nil {
 		return nil
 	}

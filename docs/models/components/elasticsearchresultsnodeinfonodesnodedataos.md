@@ -10,5 +10,5 @@
 | `AvailableProc`     | **int*              | :heavy_minus_sign:  | N/A                 |
 | `Name`              | **string*           | :heavy_minus_sign:  | N/A                 |
 | `PrettyName`        | **string*           | :heavy_minus_sign:  | N/A                 |
-| `RefreshIntervalMs` | **int*              | :heavy_minus_sign:  | N/A                 |
+| `RefreshIntervalMs` | **int64*            | :heavy_minus_sign:  | N/A                 |
 | `Version`           | **string*           | :heavy_minus_sign:  | N/A                 |

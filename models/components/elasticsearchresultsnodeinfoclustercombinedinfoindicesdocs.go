@@ -3,18 +3,18 @@
 package components
 
 type ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs struct {
-	Count   *int `json:"count,omitempty"`
-	Deleted *int `json:"deleted,omitempty"`
+	Count   *int64 `json:"count,omitempty"`
+	Deleted *int64 `json:"deleted,omitempty"`
 }
 
-func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetCount() *int {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetCount() *int64 {
 	if e == nil {
 		return nil
 	}
 	return e.Count
 }
 
-func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetDeleted() *int {
+func (e *ElasticSearchResultsNodeInfoClusterCombinedInfoIndicesDocs) GetDeleted() *int64 {
 	if e == nil {
 		return nil
 	}
