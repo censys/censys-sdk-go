@@ -1,0 +1,11 @@
+# CreditUsageReport
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `EndDate`                                                                          | [time.Time](https://pkg.go.dev/time#Time)                                          | :heavy_check_mark:                                                                 | The end date of the window for this report.                                        |
+| `SourceBreakdown`                                                                  | [components.SourceUsageBreakdown](../../models/components/sourceusagebreakdown.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `StartDate`                                                                        | [time.Time](https://pkg.go.dev/time#Time)                                          | :heavy_check_mark:                                                                 | The start date of the window for this report.                                      |
+| `TotalConsumed`                                                                    | *int64*                                                                            | :heavy_check_mark:                                                                 | The total amount of credits consumed during the report period.                     |

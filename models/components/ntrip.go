@@ -3,4 +3,28 @@
 package components
 
 type Ntrip struct {
+	DataStreams []NtripDataStream `json:"data_streams,omitempty"`
+	Server      *string           `json:"server,omitempty"`
+	Version     *string           `json:"version,omitempty"`
+}
+
+func (n *Ntrip) GetDataStreams() []NtripDataStream {
+	if n == nil {
+		return nil
+	}
+	return n.DataStreams
+}
+
+func (n *Ntrip) GetServer() *string {
+	if n == nil {
+		return nil
+	}
+	return n.Server
+}
+
+func (n *Ntrip) GetVersion() *string {
+	if n == nil {
+		return nil
+	}
+	return n.Version
 }

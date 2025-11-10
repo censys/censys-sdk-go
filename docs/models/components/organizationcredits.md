@@ -1,0 +1,11 @@
+# OrganizationCredits
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `AutoReplenishConfig`                                                            | [components.AutoReplenishConfig](../../models/components/autoreplenishconfig.md) | :heavy_check_mark:                                                               | N/A                                                                              |
+| `Balance`                                                                        | *int64*                                                                          | :heavy_check_mark:                                                               | The current credit balance for the organization.                                 |
+| `CreditExpirations`                                                              | [][components.CreditExpiration](../../models/components/creditexpiration.md)     | :heavy_check_mark:                                                               | The credit expirations for the organization.                                     |
+| `UID`                                                                            | *string*                                                                         | :heavy_check_mark:                                                               | The ID of a Censys organization.                                                 |

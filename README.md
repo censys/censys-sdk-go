@@ -94,6 +94,17 @@ func main() {
 <details open>
 <summary>Available methods</summary>
 
+### [AccountManagement](docs/sdks/accountmanagement/README.md)
+
+* [GetOrganizationDetails](docs/sdks/accountmanagement/README.md#getorganizationdetails) - Get organization details
+* [GetOrganizationCredits](docs/sdks/accountmanagement/README.md#getorganizationcredits) - Get organization credit statistics
+* [GetOrganizationCreditUsage](docs/sdks/accountmanagement/README.md#getorganizationcreditusage) - Get organization credit usage
+* [InviteUserToOrganization](docs/sdks/accountmanagement/README.md#inviteusertoorganization) - Invite user to organization
+* [ListOrganizationMembers](docs/sdks/accountmanagement/README.md#listorganizationmembers) - List organization members
+* [RemoveOrganizationMember](docs/sdks/accountmanagement/README.md#removeorganizationmember) - Remove member from organization
+* [UpdateOrganizationMember](docs/sdks/accountmanagement/README.md#updateorganizationmember) - Update a member's roles in an organization
+* [GetMemberCreditUsage](docs/sdks/accountmanagement/README.md#getmembercreditusage) - Get member credit usage
+
 ### [Collections](docs/sdks/collections/README.md)
 
 * [List](docs/sdks/collections/README.md#list) - List collections
@@ -137,7 +148,7 @@ func main() {
 
 A parameter is configured globally. This parameter may be set on the SDK client instance itself during initialization. When configured as an option during SDK initialization, This global value will be used as the default on the operations that use it. When such operations are called, there is a place in each to override the global value, if needed.
 
-For example, you can set `organization_id` to `"<id>"` at SDK initialization and then you do not have to pass the same value on calls to operations like `List`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
+For example, you can set `organization_id` to `"<id>"` at SDK initialization and then you do not have to pass the same value on calls to operations like `GetOrganizationDetails`. But if you want to do so you may, which will locally override the global setting. See the example code below for a demonstration.
 
 
 ### Available Globals
@@ -168,14 +179,13 @@ func main() {
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.Pointer("<next_page_token>"),
-		PageSize:  censyssdkgo.Pointer[int64](1),
+	res, err := s.AccountManagement.GetOrganizationDetails(ctx, operations.V3AccountmanagementOrgDetailsRequest{
+		OrganizationID: "11111111-2222-3333-4444-555555555555",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.ResponseEnvelopeListCollectionsResponseV1 != nil {
+	if res.ResponseEnvelopeOrganizationDetails != nil {
 		// handle response
 	}
 }
@@ -205,13 +215,11 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
-		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.Pointer("<next_page_token>"),
-		PageSize:  censyssdkgo.Pointer[int64](1),
+	res, err := s.AccountManagement.GetOrganizationDetails(ctx, operations.V3AccountmanagementOrgDetailsRequest{
+		OrganizationID: "11111111-2222-3333-4444-555555555555",
 	}, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
@@ -226,7 +234,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.ResponseEnvelopeListCollectionsResponseV1 != nil {
+	if res.ResponseEnvelopeOrganizationDetails != nil {
 		// handle response
 	}
 }
@@ -260,18 +268,16 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
-		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.Pointer("<next_page_token>"),
-		PageSize:  censyssdkgo.Pointer[int64](1),
+	res, err := s.AccountManagement.GetOrganizationDetails(ctx, operations.V3AccountmanagementOrgDetailsRequest{
+		OrganizationID: "11111111-2222-3333-4444-555555555555",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.ResponseEnvelopeListCollectionsResponseV1 != nil {
+	if res.ResponseEnvelopeOrganizationDetails != nil {
 		// handle response
 	}
 }
@@ -286,13 +292,13 @@ Handling errors in this SDK should largely match your expectations. All operatio
 
 By Default, an API error will return `sdkerrors.SDKError`. When custom error responses are specified for an operation, the SDK may also return their associated error. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation.
 
-For example, the `List` function may return the following errors:
+For example, the `GetOrganizationDetails` function may return the following errors:
 
-| Error Type                    | Status Code | Content Type             |
-| ----------------------------- | ----------- | ------------------------ |
-| sdkerrors.AuthenticationError | 401         | application/json         |
-| sdkerrors.ErrorModel          | 403         | application/problem+json |
-| sdkerrors.SDKError            | 4XX, 5XX    | \*/\*                    |
+| Error Type                    | Status Code   | Content Type             |
+| ----------------------------- | ------------- | ------------------------ |
+| sdkerrors.AuthenticationError | 401           | application/json         |
+| sdkerrors.ErrorModel          | 403, 404, 422 | application/problem+json |
+| sdkerrors.SDKError            | 4XX, 5XX      | \*/\*                    |
 
 ### Example
 
@@ -312,13 +318,11 @@ func main() {
 	ctx := context.Background()
 
 	s := censyssdkgo.New(
-		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.Pointer("<next_page_token>"),
-		PageSize:  censyssdkgo.Pointer[int64](1),
+	res, err := s.AccountManagement.GetOrganizationDetails(ctx, operations.V3AccountmanagementOrgDetailsRequest{
+		OrganizationID: "11111111-2222-3333-4444-555555555555",
 	})
 	if err != nil {
 
@@ -366,18 +370,16 @@ func main() {
 
 	s := censyssdkgo.New(
 		censyssdkgo.WithServerURL("https://api.platform.censys.io"),
-		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.Pointer("<next_page_token>"),
-		PageSize:  censyssdkgo.Pointer[int64](1),
+	res, err := s.AccountManagement.GetOrganizationDetails(ctx, operations.V3AccountmanagementOrgDetailsRequest{
+		OrganizationID: "11111111-2222-3333-4444-555555555555",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.ResponseEnvelopeListCollectionsResponseV1 != nil {
+	if res.ResponseEnvelopeOrganizationDetails != nil {
 		// handle response
 	}
 }
@@ -442,17 +444,15 @@ func main() {
 
 	s := censyssdkgo.New(
 		censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
-		censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
 	)
 
-	res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
-		PageToken: censyssdkgo.Pointer("<next_page_token>"),
-		PageSize:  censyssdkgo.Pointer[int64](1),
+	res, err := s.AccountManagement.GetOrganizationDetails(ctx, operations.V3AccountmanagementOrgDetailsRequest{
+		OrganizationID: "11111111-2222-3333-4444-555555555555",
 	})
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.ResponseEnvelopeListCollectionsResponseV1 != nil {
+	if res.ResponseEnvelopeOrganizationDetails != nil {
 		// handle response
 	}
 }
