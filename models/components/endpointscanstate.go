@@ -55,6 +55,7 @@ type EndpointScanState struct {
 	HTTP              *HTTP                               `json:"http,omitempty"`
 	IP                *string                             `json:"ip,omitempty"`
 	IvantiAvalanche   *IvantiAvalanche                    `json:"ivanti_avalanche,omitempty"`
+	Jenkins           *Jenkins                            `json:"jenkins,omitempty"`
 	Kubernetes        *Kubernetes                         `json:"kubernetes,omitempty"`
 	Ollama            *Ollama                             `json:"ollama,omitempty"`
 	OpenDirectory     *OpenDirectory                      `json:"open_directory,omitempty"`
@@ -153,6 +154,13 @@ func (e *EndpointScanState) GetIvantiAvalanche() *IvantiAvalanche {
 		return nil
 	}
 	return e.IvantiAvalanche
+}
+
+func (e *EndpointScanState) GetJenkins() *Jenkins {
+	if e == nil {
+		return nil
+	}
+	return e.Jenkins
 }
 
 func (e *EndpointScanState) GetKubernetes() *Kubernetes {
