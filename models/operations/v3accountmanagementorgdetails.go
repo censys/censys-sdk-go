@@ -19,7 +19,7 @@ func (v V3AccountmanagementOrgDetailsRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3AccountmanagementOrgDetailsRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"organization_id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

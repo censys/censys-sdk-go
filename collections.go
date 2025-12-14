@@ -89,7 +89,7 @@ func (s *Collections) List(ctx context.Context, request operations.V3Collections
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -353,7 +353,7 @@ func (s *Collections) Create(ctx context.Context, request operations.V3Collectio
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -616,7 +616,7 @@ func (s *Collections) Delete(ctx context.Context, request operations.V3Collectio
 
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -855,7 +855,7 @@ func (s *Collections) Get(ctx context.Context, request operations.V3CollectionsC
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1121,7 +1121,7 @@ func (s *Collections) Update(ctx context.Context, request operations.V3Collectio
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1380,7 +1380,7 @@ func (s *Collections) ListEvents(ctx context.Context, request operations.V3Colle
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1646,7 +1646,7 @@ func (s *Collections) Aggregate(ctx context.Context, request operations.V3Collec
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1914,7 +1914,7 @@ func (s *Collections) Search(ctx context.Context, request operations.V3Collectio
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 

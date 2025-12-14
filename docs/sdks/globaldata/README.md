@@ -1,5 +1,4 @@
 # GlobalData
-(*GlobalData*)
 
 ## Overview
 

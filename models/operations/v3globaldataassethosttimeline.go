@@ -35,7 +35,7 @@ func (v V3GlobaldataAssetHostTimelineRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3GlobaldataAssetHostTimelineRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"host_id", "start_time", "end_time"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

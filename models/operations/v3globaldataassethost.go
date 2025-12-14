@@ -33,7 +33,7 @@ func (v V3GlobaldataAssetHostRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (v *V3GlobaldataAssetHostRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &v, "", false, []string{"host_id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
 		return err
 	}
 	return nil

@@ -22,7 +22,7 @@ func (c CreditUsageReport) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreditUsageReport) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"end_date", "source_breakdown", "start_date", "total_consumed"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil

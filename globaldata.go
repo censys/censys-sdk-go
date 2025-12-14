@@ -96,7 +96,7 @@ func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3G
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -362,7 +362,7 @@ func (s *GlobalData) GetCertificatesRaw(ctx context.Context, request operations.
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -621,7 +621,7 @@ func (s *GlobalData) GetCertificate(ctx context.Context, request operations.V3Gl
 	req.Header.Set("Accept", "application/vnd.censys.api.v3.certificate.v1+json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -880,7 +880,7 @@ func (s *GlobalData) GetCertificateRaw(ctx context.Context, request operations.V
 	req.Header.Set("Accept", "application/x-pem-file")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1138,7 +1138,7 @@ func (s *GlobalData) GetHosts(ctx context.Context, request operations.V3Globalda
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1395,7 +1395,7 @@ func (s *GlobalData) GetHost(ctx context.Context, request operations.V3Globaldat
 	req.Header.Set("Accept", "application/vnd.censys.api.v3.host.v1+json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1654,7 +1654,7 @@ func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3G
 	req.Header.Set("Accept", "application/vnd.censys.api.v3.host_timeline_event.v1+json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -1918,7 +1918,7 @@ func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2175,7 +2175,7 @@ func (s *GlobalData) GetWebProperty(ctx context.Context, request operations.V3Gl
 	req.Header.Set("Accept", "application/vnd.censys.api.v3.webproperty.v1+json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2441,7 +2441,7 @@ func (s *GlobalData) CreateTrackedScan(ctx context.Context, request operations.V
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2698,7 +2698,7 @@ func (s *GlobalData) GetTrackedScan(ctx context.Context, request operations.V3Gl
 	req.Header.Set("Accept", "application/vnd.censys.api.v3.trackedscan.v1+json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -2964,7 +2964,7 @@ func (s *GlobalData) Aggregate(ctx context.Context, request operations.V3Globald
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3230,7 +3230,7 @@ func (s *GlobalData) ConvertLegacySearchQueries(ctx context.Context, request ope
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
@@ -3515,7 +3515,7 @@ func (s *GlobalData) Search(ctx context.Context, request operations.V3Globaldata
 		req.Header.Set("Content-Type", reqContentType)
 	}
 
-	if err := utils.PopulateQueryParams(ctx, req, request, globals); err != nil {
+	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
