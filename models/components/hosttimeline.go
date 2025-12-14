@@ -17,7 +17,7 @@ func (h HostTimeline) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HostTimeline) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"scanned_to"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
 		return err
 	}
 	return nil

@@ -21,7 +21,7 @@ func (h HostObservationRange) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HostObservationRange) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"end_time", "ip", "port", "start_time", "transport_protocol"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
 		return err
 	}
 	return nil

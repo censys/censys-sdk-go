@@ -46,7 +46,7 @@ func (e EventAssetChange) MarshalJSON() ([]byte, error) {
 }
 
 func (e *EventAssetChange) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &e, "", false, []string{"change_type", "event_time", "reason"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &e, "", false, nil); err != nil {
 		return err
 	}
 	return nil

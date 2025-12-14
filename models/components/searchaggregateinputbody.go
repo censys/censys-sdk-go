@@ -24,7 +24,7 @@ func (s SearchAggregateInputBody) MarshalJSON() ([]byte, error) {
 }
 
 func (s *SearchAggregateInputBody) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &s, "", false, []string{"field", "number_of_buckets", "query"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &s, "", false, nil); err != nil {
 		return err
 	}
 	return nil
