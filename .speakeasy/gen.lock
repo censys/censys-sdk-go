@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 064efc1daf6d344f589b076cf06fc4b9
-  docVersion: 1.0.49
-  speakeasyVersion: 1.676.1
-  generationVersion: 2.781.2
-  releaseVersion: 0.25.0
-  configChecksum: 22cd18210ab0e7b7fecc0387f93220e4
+  docChecksum: 7c9c30f8058276233b08fe81ccdc75d2
+  docVersion: 1.0.50
+  speakeasyVersion: 1.677.0
+  generationVersion: 2.785.0
+  releaseVersion: 0.25.1
+  configChecksum: 808ac428e830f36603640ec243500ea5
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: eff2df5e-18f8-483c-8b3d-6cc4104f9810
-  pristine_commit_hash: a6f9f10094ba0a0553005262b4242cd537f335fe
-  pristine_tree_hash: d2144925b951c8c71bcf7788bac4129c09a37cc2
+  generation_id: ba7774e6-af80-482f-97c1-970967dc8bb9
+  pristine_commit_hash: 727b88fb7539f2a21f6e5194113959c00aa6efdd
+  pristine_tree_hash: 1112750eee561535360245c43d06d607415cb78e
 features:
   go:
     acceptHeaders: 2.81.2
@@ -47,8 +47,8 @@ trackedFiles:
     pristine_git_object: dcfef540bc27ed3aa278449e9a72a08bb34ed3cd
   accountmanagement.go:
     id: 79764d5a71d2
-    last_write_checksum: sha1:8a77e5437eb36047133d204d53b703efce7704bf
-    pristine_git_object: b5b4d7555c9af24e6b99f5bbdfcd8a8d05b844b3
+    last_write_checksum: sha1:3659f2a43fa9fa7d80a84f8a9b04da005d9be2c1
+    pristine_git_object: a2e322afc051303444d1315df517add445b1d278
   collections.go:
     id: cb16c63710b4
     last_write_checksum: sha1:e03fed1c5f965e82e2f2ed6ae3946dc8353be2bc
@@ -255,8 +255,8 @@ trackedFiles:
     pristine_git_object: 54867f0d407b754cc4b186706c7fd5d71a11708e
   docs/models/components/cobaltstrikeconfig.md:
     id: 69476c144ac3
-    last_write_checksum: sha1:d01a2fea41531cfa5ba6659dbea9c09a1eff838d
-    pristine_git_object: 81b1db1e611ae26911368c0469c371d7bdf4d158
+    last_write_checksum: sha1:0c989750503eaf654e736cfb6035a450b3921393
+    pristine_git_object: afc4f550895665fff2b7f93ff2b717f22f6e2ce7
   docs/models/components/cobaltstrikehttpconfig.md:
     id: f8a77faca13b
     last_write_checksum: sha1:8e7874747b0c20d7d4b5c4687542908ffe653fe7
@@ -1729,10 +1729,18 @@ trackedFiles:
     id: 691baa2f1603
     last_write_checksum: sha1:5514cd388a5b5e440dc9f915253f77f435fba418
     pristine_git_object: 17cb56575d613ff33575b8bacf5d755844912fa7
+  docs/models/components/responseenvelopethreatslistresponse.md:
+    id: 8faeb62c8cd9
+    last_write_checksum: sha1:0c2e87c1bb4a98e55ab6631cfcbfa333879f5505
+    pristine_git_object: d5f8e306778a3d4d3202fece19b84bf7122fa6d3
   docs/models/components/responseenvelopetrackedscan.md:
     id: f4d999947182
     last_write_checksum: sha1:a421c243a8f8a05f580612621e84ee140c7134a3
     pristine_git_object: 354c5750785be8e656cd672aa26746c5b58a18a0
+  docs/models/components/responseenvelopeusercredits.md:
+    id: 7e5604b24eca
+    last_write_checksum: sha1:dba27249c424d9b1a74e74ef37e1faed024e456c
+    pristine_git_object: 8473148294f5bf33857b4c956e40ba3de4ebf9cc
   docs/models/components/responseenvelopevaluecountsresponse.md:
     id: 5a79d02b3d09
     last_write_checksum: sha1:87478d50e1a32853e79062f9188d77785415bb19
@@ -2185,10 +2193,22 @@ trackedFiles:
     id: fa2dd35dfdae
     last_write_checksum: sha1:5523b183dbbd814954c24160d17dfed2f5157a40
     pristine_git_object: 9e616eb965881fdf813583938ae831d1d7a2dfe1
+  docs/models/components/threatlistitem.md:
+    id: 8b0b82594864
+    last_write_checksum: sha1:8dd868a96e0c3dac24416e119aecedd6b17a5ff6
+    pristine_git_object: aa34968ffd27bdf4ed8d3857076c650789680567
   docs/models/components/threatmalware.md:
     id: 88088b959c1e
     last_write_checksum: sha1:35c5b76111515d6d5e873986bc9d2df5921243c3
     pristine_git_object: e18cf1260cff9c55296f80282339ae357d141e62
+  docs/models/components/threatreference.md:
+    id: 41279da9be4a
+    last_write_checksum: sha1:952b766b791e621a8fd3e5f73f39624bf3cf754b
+    pristine_git_object: 8b8282b1cd35d3a7a6771d019813202f388b0bef
+  docs/models/components/threatslistresponse.md:
+    id: 597da45de657
+    last_write_checksum: sha1:f4e2df7cc38aef92bb1f1b2e7e3a4ad5c7471977
+    pristine_git_object: 1b53f5e4931427fcd00e64bf2dcb50fe3435fba4
   docs/models/components/threatsource.md:
     id: 7525d4c44221
     last_write_checksum: sha1:498d180ccf7702416fdcb9eaf2f9ee2276461893
@@ -2285,6 +2305,10 @@ trackedFiles:
     id: 9615438c874c
     last_write_checksum: sha1:d169578454cdca2df201751f6f6a655eeabedac8
     pristine_git_object: 9c24e65914e606144e2813eca26336f1e5880105
+  docs/models/components/usercredits.md:
+    id: 92b1075a4170
+    last_write_checksum: sha1:4f9563798f504fec18cf38763e0bcd7dab913c64
+    pristine_git_object: 8406ced1d60ccabc914d23b2ecd9a4013c13adcc
   docs/models/components/userinteraction.md:
     id: 1e303f0d1956
     last_write_checksum: sha1:89f5b99aa5aaa0d00aa8d9ccbd6bce24a4629bad
@@ -2497,6 +2521,10 @@ trackedFiles:
     id: fb1549f89978
     last_write_checksum: sha1:96903f1d9dbdf880803f2a43f3cce3130533c4ec
     pristine_git_object: 380d3c8e65cb3e9dda49fbcdf56dbeeacb679197
+  docs/models/operations/v3accountmanagementusercreditsresponse.md:
+    id: 91c4961d3266
+    last_write_checksum: sha1:39acaabb270b2b37a15fbca6cfb217b71df15460
+    pristine_git_object: e4e32116b9177e9c0187f7e41553e5a644612c6f
   docs/models/operations/v3collectionscrudcreateglobals.md:
     id: 5208d465dd97
     last_write_checksum: sha1:3165115b654d6e7365742dd3880029d6632ee752
@@ -2797,6 +2825,18 @@ trackedFiles:
     id: ba439fe4a246
     last_write_checksum: sha1:6dc50e6cdd7815f66a667dc35e384956903fbe25
     pristine_git_object: 277b3755f2e88f12aaa075349be502d1e433e88e
+  docs/models/operations/v3threathuntingthreatslistglobals.md:
+    id: 6fff7053bb0c
+    last_write_checksum: sha1:509e92529ec8dcfb6aeda03af3364fb07ab52278
+    pristine_git_object: a661c0c1ccdc4795eb443d13d868115fe7df40f3
+  docs/models/operations/v3threathuntingthreatslistrequest.md:
+    id: b3b40eb41a50
+    last_write_checksum: sha1:ed5dbd316b71febaedade784b9ba04f89c73a2d4
+    pristine_git_object: 5763a0dc3f278345aca05ad93b1353e7997bf62a
+  docs/models/operations/v3threathuntingthreatslistresponse.md:
+    id: c9c569a4fe3a
+    last_write_checksum: sha1:1a2af9fa2b1b739b25bc84ab527e78c136f5dcbb
+    pristine_git_object: de62ea2f404398645addeeea28883090b0931447
   docs/models/operations/v3threathuntingvaluecountsglobals.md:
     id: 8489c3bd7a63
     last_write_checksum: sha1:9de90d9966f5a5d0ea06c032aac5919fef6c4a9f
@@ -2819,8 +2859,8 @@ trackedFiles:
     pristine_git_object: d6a804824c55a5ced0d332674cddec0b95989d8e
   docs/sdks/accountmanagement/README.md:
     id: 5ecc19ffd434
-    last_write_checksum: sha1:78db383f91d1ee172d1329a663236b0b34f07085
-    pristine_git_object: a1e70739ef6ada28127c7d3fc99651392740a0f0
+    last_write_checksum: sha1:5f825bf2e71643a9f59b846b1b5f939c1576655b
+    pristine_git_object: 3dc3c98e4fa9a9be88ceeaddcee3fb2039eaeb66
   docs/sdks/collections/README.md:
     id: 7985e64efccf
     last_write_checksum: sha1:df137e9de71d10dd594658b9f416e1ac6f531d73
@@ -2831,8 +2871,8 @@ trackedFiles:
     pristine_git_object: 8bd3ae4f84c16c3b9504042130477f179b8a7a84
   docs/sdks/threathunting/README.md:
     id: 9d697938ee45
-    last_write_checksum: sha1:7ab186c0df7a1600a285ef9fcd1767a78833c1a7
-    pristine_git_object: 397071d35a937d672f58225f95df1ac2e659eb30
+    last_write_checksum: sha1:f24eb88ce3330fac5ae87c0d693c18f6b794d75e
+    pristine_git_object: 9dfc2cfc43276c372de6e59765ea3d7203b73448
   globaldata.go:
     id: 38738078d830
     last_write_checksum: sha1:57527e8fd4e32fb59faee31852626d00c41861c3
@@ -3079,8 +3119,8 @@ trackedFiles:
     pristine_git_object: e68554a21c13637aee4c106462fcdea34c368239
   models/components/cobaltstrikeconfig.go:
     id: 128ac3dfb1de
-    last_write_checksum: sha1:c4e7b996f4e165d20dee9e9f081ce260b325a674
-    pristine_git_object: e2ed45daa7696ff0f6bd2897781ebbce85fc8cdb
+    last_write_checksum: sha1:51ae6392b5432e683cef68a937408be4310290ac
+    pristine_git_object: cd8b9f0b6df52a75eb18172f78a72d643c52e61b
   models/components/cobaltstrikehttpconfig.go:
     id: 3ba65320466c
     last_write_checksum: sha1:a97a889dccd974cf810dfe06a793187c72917090
@@ -4433,10 +4473,18 @@ trackedFiles:
     id: e7636847e8c3
     last_write_checksum: sha1:b1a3dfa68fcaeda41bc3c9fb149ed06a9687555b
     pristine_git_object: 5e9463a7975de1d7197d89963299b7b46a527d39
+  models/components/responseenvelopethreatslistresponse.go:
+    id: 5e2a241e6adb
+    last_write_checksum: sha1:14bd7bb8f94a31ce6f4cae1f7b23b1b2d8e25f86
+    pristine_git_object: 6f8f761af2a87ec747dff500cb3493e02cd54f4e
   models/components/responseenvelopetrackedscan.go:
     id: e5fa8178f4c0
     last_write_checksum: sha1:a985457fc2f6230d030903484e14bbc7b7eb6aaa
     pristine_git_object: 24ee859455660cecb351d537f5a62f7a85227598
+  models/components/responseenvelopeusercredits.go:
+    id: 547bb5a986a3
+    last_write_checksum: sha1:6eff502164333d817c2a290c822aa13d45acd991
+    pristine_git_object: 070a13593cecce95b28cc2119a5f18d2bf97b25f
   models/components/responseenvelopevaluecountsresponse.go:
     id: f879ff0f1ce7
     last_write_checksum: sha1:3e93e0f892032faebba34f281e1b2b520af0be41
@@ -4805,10 +4853,22 @@ trackedFiles:
     id: d0683eb2fd16
     last_write_checksum: sha1:757b8f583142577279425aea4f61092e7a51153d
     pristine_git_object: 3b52a4d5e736a0dba5362aaf6a283307c968e408
+  models/components/threatlistitem.go:
+    id: eede3431994b
+    last_write_checksum: sha1:eb7d830337b2d73e4a95e7d2bc8d2f0416a1b3b4
+    pristine_git_object: 5ebd109383fb941222f6dfcbc35acd6738f12ad5
   models/components/threatmalware.go:
     id: 58d124fe5ac5
     last_write_checksum: sha1:f3402e48763e46c61c3c232cfffe17f9ff767da3
     pristine_git_object: 427f4315d79676aadac1535972ec71a011d00ebf
+  models/components/threatreference.go:
+    id: 208b07b95f2a
+    last_write_checksum: sha1:e388af737490724ab33a376c3f9111bcd5df3bf7
+    pristine_git_object: f687b9b8d96cf8dcb93cb0b1757b3b43f4cb87d8
+  models/components/threatslistresponse.go:
+    id: c4da4fa8adac
+    last_write_checksum: sha1:ab383f9c4afa7599bcf772a4e9352a7c42e71415
+    pristine_git_object: 79f3b95499ed36b5d7489357f62f4ad50d6a6db6
   models/components/tibia.go:
     id: 1a5e0df970aa
     last_write_checksum: sha1:0564309e53b309481164f0039563846c3a34862a
@@ -4885,6 +4945,10 @@ trackedFiles:
     id: 972e0ca973c7
     last_write_checksum: sha1:6e71e8f806f4b98d593c53016ed6f552e7dad1ba
     pristine_git_object: ca7eae4168fc6553efec9b7492633dd54b29ee4b
+  models/components/usercredits.go:
+    id: f56dc2e0f5ea
+    last_write_checksum: sha1:e194a27aa8128a9fe7bce11d7e015a6d0495b42f
+    pristine_git_object: 8232f07424454db8772e8142cf9f48167b5b93a9
   models/components/usernotice.go:
     id: ea3e6eca459f
     last_write_checksum: sha1:cbc4aea2d844cc45f65d16f214e743043f1761e9
@@ -5017,6 +5081,10 @@ trackedFiles:
     id: 613caf9e406a
     last_write_checksum: sha1:6ee9de1419d5762fa94dec76837945f2ab2aa63b
     pristine_git_object: db5b12cbf9ee8864d14b15b1d34a0b2e95d2880c
+  models/operations/v3accountmanagementusercredits.go:
+    id: 23985d182656
+    last_write_checksum: sha1:73642add3cc7d656e5648083f840a904361a1e2e
+    pristine_git_object: 56b00d71049775d45b142887f6cd3b7e4629dd93
   models/operations/v3collectionscrudcreate.go:
     id: 8f36fc457077
     last_write_checksum: sha1:9a78de2190a2fa20ceff0849b004051cc142ff0a
@@ -5117,6 +5185,10 @@ trackedFiles:
     id: 86afc6ae6674
     last_write_checksum: sha1:7dceef9fc56ac7cbb615f83e534dd5672709d4f4
     pristine_git_object: de774ed7d04d32e2fa21e08515ff8060e820d51c
+  models/operations/v3threathuntingthreatslist.go:
+    id: 52620a60b5f3
+    last_write_checksum: sha1:cfe085b26f19741eb62272536d1b0ded9dba453f
+    pristine_git_object: e37186bc8711d8f9b653c600efb274065fb35701
   models/operations/v3threathuntingvaluecounts.go:
     id: 155b21ca5139
     last_write_checksum: sha1:961a28454a1ea5f1ab6a3bcd672bf4a025320bc8
@@ -5147,12 +5219,12 @@ trackedFiles:
     pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:ff57a4a77a36c465d5f3b5c91de9423a9a0f06bc
-    pristine_git_object: 24df946dcd1278e911f0968184a2bc4ac5e7c4cc
+    last_write_checksum: sha1:a8f33ded70bbfbe6f8ec2970fa3353fa400bbbfd
+    pristine_git_object: a600d88d82644d8cda87168db7921a1f34181a61
   threathunting.go:
     id: f45dc6b4d4a3
-    last_write_checksum: sha1:c70ea9202794e5fb4981051d0e64d5506aabe069
-    pristine_git_object: bc61db59d48847242bddc0dd65c57a55fc916fe1
+    last_write_checksum: sha1:314ca95833f0db0706f9ee48d910dc5e82cc035d
+    pristine_git_object: df25ca8ded4d66b98a6bd4c7611ac44bbefb48ca
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -5733,6 +5805,28 @@ examples:
         "401":
           application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
         "400":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-accountmanagement-user-credits:
+    speakeasy-default-v3-accountmanagement-user-credits:
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "404":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-threathunting-threats-list:
+    speakeasy-default-v3-threathunting-threats-list:
+      parameters:
+        query:
+          organization_id: "<id>"
+          query: "*"
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "403":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
 examplesVersion: 1.0.2
 generatedTests: {}

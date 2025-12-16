@@ -1,0 +1,15 @@
+# ThreatListItem
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `AddedAt`                                                                  | [*time.Time](https://pkg.go.dev/time#Time)                                 | :heavy_minus_sign:                                                         | The date and time when the threat was added.                               |
+| `Count`                                                                    | *int64*                                                                    | :heavy_check_mark:                                                         | Total count of assets affected by this threat.                             |
+| `Description`                                                              | **string*                                                                  | :heavy_minus_sign:                                                         | Detailed description of the threat.                                        |
+| `HostCount`                                                                | *int64*                                                                    | :heavy_check_mark:                                                         | Number of hosts affected by this threat.                                   |
+| `ID`                                                                       | *string*                                                                   | :heavy_check_mark:                                                         | Unique identifier of the threat.                                           |
+| `Name`                                                                     | **string*                                                                  | :heavy_minus_sign:                                                         | Human-readable name of the threat.                                         |
+| `References`                                                               | [][components.ThreatReference](../../models/components/threatreference.md) | :heavy_minus_sign:                                                         | External reference links for the threat.                                   |
+| `WebCount`                                                                 | *int64*                                                                    | :heavy_check_mark:                                                         | Number of web properties affected by this threat.                          |

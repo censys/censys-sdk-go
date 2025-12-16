@@ -97,13 +97,14 @@ func main() {
 ### [AccountManagement](docs/sdks/accountmanagement/README.md)
 
 * [GetOrganizationDetails](docs/sdks/accountmanagement/README.md#getorganizationdetails) - Get organization details
-* [GetOrganizationCredits](docs/sdks/accountmanagement/README.md#getorganizationcredits) - Get organization credit statistics
+* [GetOrganizationCredits](docs/sdks/accountmanagement/README.md#getorganizationcredits) - Get organization credit details
 * [GetOrganizationCreditUsage](docs/sdks/accountmanagement/README.md#getorganizationcreditusage) - Get organization credit usage
 * [InviteUserToOrganization](docs/sdks/accountmanagement/README.md#inviteusertoorganization) - Invite user to organization
 * [ListOrganizationMembers](docs/sdks/accountmanagement/README.md#listorganizationmembers) - List organization members
 * [RemoveOrganizationMember](docs/sdks/accountmanagement/README.md#removeorganizationmember) - Remove member from organization
 * [UpdateOrganizationMember](docs/sdks/accountmanagement/README.md#updateorganizationmember) - Update a member's roles in an organization
 * [GetMemberCreditUsage](docs/sdks/accountmanagement/README.md#getmembercreditusage) - Get member credit usage
+* [GetUserCredits](docs/sdks/accountmanagement/README.md#getusercredits) - Get Free user credit details
 
 ### [Collections](docs/sdks/collections/README.md)
 
@@ -138,6 +139,7 @@ func main() {
 * [GetHostObservationsWithCertificate](docs/sdks/threathunting/README.md#gethostobservationswithcertificate) - Get host history for a certificate
 * [CreateTrackedScan](docs/sdks/threathunting/README.md#createtrackedscan) - Live Discovery: Initiate a new scan
 * [GetTrackedScanThreatHunting](docs/sdks/threathunting/README.md#gettrackedscanthreathunting) - Get scan status
+* [ListThreats](docs/sdks/threathunting/README.md#listthreats) - List active threats
 * [ValueCounts](docs/sdks/threathunting/README.md#valuecounts) - CensEye: Retrieve value counts to discover pivots
 
 </details>

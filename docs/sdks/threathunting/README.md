@@ -9,6 +9,7 @@ Endpoints related to the Threat Hunting product
 * [GetHostObservationsWithCertificate](#gethostobservationswithcertificate) - Get host history for a certificate
 * [CreateTrackedScan](#createtrackedscan) - Live Discovery: Initiate a new scan
 * [GetTrackedScanThreatHunting](#gettrackedscanthreathunting) - Get scan status
+* [ListThreats](#listthreats) - List active threats
 * [ValueCounts](#valuecounts) - CensEye: Retrieve value counts to discover pivots
 
 ## GetHostObservationsWithCertificate
@@ -195,6 +196,63 @@ func main() {
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
 | sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## ListThreats
+
+Retrieve a list of active threats observed by Censys by aggregating threat IDs across hosts and web properties. Threats are active if their fingerprint has been identified on hosts or web properties by Censys scans. This information is also available on the [Explore Threats page in the Platform web UI](https://platform.censys.io/threats).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-threathunting-threats-list" method="get" path="/v3/threat-hunting/threats" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.ThreatHunting.ListThreats(ctx, operations.V3ThreathuntingThreatsListRequest{
+        Query: censyssdkgo.Pointer("*"),
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeThreatsListResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `request`                                                                                                    | [operations.V3ThreathuntingThreatsListRequest](../../models/operations/v3threathuntingthreatslistrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `opts`                                                                                                       | [][operations.Option](../../models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.V3ThreathuntingThreatsListResponse](../../models/operations/v3threathuntingthreatslistresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 422                      | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ValueCounts

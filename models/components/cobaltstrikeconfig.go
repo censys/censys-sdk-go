@@ -6,6 +6,7 @@ type CobaltStrikeConfig struct {
 	CookieBeacon *int                    `json:"cookie_beacon,omitempty"`
 	CryptoScheme *int                    `json:"crypto_scheme,omitempty"`
 	DNS          *bool                   `json:"dns,omitempty"`
+	HostHeader   *string                 `json:"host_header,omitempty"`
 	HTTPGet      *CobaltStrikeHTTPConfig `json:"http_get,omitempty"`
 	HTTPPost     *CobaltStrikeHTTPConfig `json:"http_post,omitempty"`
 	Jitter       *int                    `json:"jitter,omitempty"`
@@ -39,6 +40,13 @@ func (c *CobaltStrikeConfig) GetDNS() *bool {
 		return nil
 	}
 	return c.DNS
+}
+
+func (c *CobaltStrikeConfig) GetHostHeader() *string {
+	if c == nil {
+		return nil
+	}
+	return c.HostHeader
 }
 
 func (c *CobaltStrikeConfig) GetHTTPGet() *CobaltStrikeHTTPConfig {
