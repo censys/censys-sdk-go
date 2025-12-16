@@ -7,13 +7,14 @@ Endpoints related to the Account Management product
 ### Available Operations
 
 * [GetOrganizationDetails](#getorganizationdetails) - Get organization details
-* [GetOrganizationCredits](#getorganizationcredits) - Get organization credit statistics
+* [GetOrganizationCredits](#getorganizationcredits) - Get organization credit details
 * [GetOrganizationCreditUsage](#getorganizationcreditusage) - Get organization credit usage
 * [InviteUserToOrganization](#inviteusertoorganization) - Invite user to organization
 * [ListOrganizationMembers](#listorganizationmembers) - List organization members
 * [RemoveOrganizationMember](#removeorganizationmember) - Remove member from organization
 * [UpdateOrganizationMember](#updateorganizationmember) - Update a member's roles in an organization
 * [GetMemberCreditUsage](#getmembercreditusage) - Get member credit usage
+* [GetUserCredits](#getusercredits) - Get Free user credit details
 
 ## GetOrganizationDetails
 
@@ -474,4 +475,56 @@ func main() {
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
 | sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## GetUserCredits
+
+Retrieve your Free user account credit balance and refresh information. To retrieve the credit balance for a Starter or Enterprise account, use the [get organization credit details endpoint](https://docs.censys.com/reference/v3-accountmanagement-org-credits).<br><br>This endpoint does not cost any credits to execute.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-accountmanagement-user-credits" method="get" path="/v3/accounts/users/credits" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.AccountManagement.GetUserCredits(ctx)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeUserCredits != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.V3AccountmanagementUserCreditsResponse](../../models/operations/v3accountmanagementusercreditsresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 404                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
