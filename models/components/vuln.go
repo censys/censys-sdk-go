@@ -74,11 +74,12 @@ func (e *VulnSeverity) UnmarshalJSON(data []byte) error {
 type VulnSource string
 
 const (
-	VulnSourceUnknown    VulnSource = ""
-	VulnSourceCensys     VulnSource = "censys"
-	VulnSourceRecog      VulnSource = "recog"
-	VulnSourceWappalyzer VulnSource = "wappalyzer"
-	VulnSourceThirdParty VulnSource = "third_party"
+	VulnSourceUnknown           VulnSource = ""
+	VulnSourceCensys            VulnSource = "censys"
+	VulnSourceRecog             VulnSource = "recog"
+	VulnSourceWappalyzer        VulnSource = "wappalyzer"
+	VulnSourceThirdParty        VulnSource = "third_party"
+	VulnSourceHTMLMetaExtractor VulnSource = "html_meta_extractor"
 )
 
 func (e VulnSource) ToPointer() *VulnSource {
@@ -99,6 +100,8 @@ func (e *VulnSource) UnmarshalJSON(data []byte) error {
 	case "wappalyzer":
 		fallthrough
 	case "third_party":
+		fallthrough
+	case "html_meta_extractor":
 		*e = VulnSource(v)
 		return nil
 	default:
