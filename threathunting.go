@@ -813,7 +813,7 @@ func (s *ThreatHunting) GetTrackedScanThreatHunting(ctx context.Context, request
 }
 
 // ListThreats - List active threats
-// Retrieve a list of active threats observed by Censys by aggregating threat IDs across hosts and web properties. Threats are active if their fingerprint has been identified on hosts or web properties by Censys scans. This information is also available on the [Explore Threats page in the Platform web UI](https://platform.censys.io/threats).
+// Retrieve a list of active threats observed by Censys by aggregating threat IDs across hosts and web properties. Threats are active if their fingerprint has been identified on hosts or web properties by Censys scans. This information is also available on the [Explore Threats page in the Platform web UI](https://platform.censys.io/threats).<br><br>This endpoint is available to organizations that have access to the Threat Hunting module.
 func (s *ThreatHunting) ListThreats(ctx context.Context, request operations.V3ThreathuntingThreatsListRequest, opts ...operations.Option) (*operations.V3ThreathuntingThreatsListResponse, error) {
 	globals := operations.V3ThreathuntingThreatsListGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

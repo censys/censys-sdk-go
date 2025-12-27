@@ -74,11 +74,12 @@ func (e *Severity) UnmarshalJSON(data []byte) error {
 type RiskSource1 string
 
 const (
-	RiskSource1Unknown    RiskSource1 = ""
-	RiskSource1Censys     RiskSource1 = "censys"
-	RiskSource1Recog      RiskSource1 = "recog"
-	RiskSource1Wappalyzer RiskSource1 = "wappalyzer"
-	RiskSource1ThirdParty RiskSource1 = "third_party"
+	RiskSource1Unknown           RiskSource1 = ""
+	RiskSource1Censys            RiskSource1 = "censys"
+	RiskSource1Recog             RiskSource1 = "recog"
+	RiskSource1Wappalyzer        RiskSource1 = "wappalyzer"
+	RiskSource1ThirdParty        RiskSource1 = "third_party"
+	RiskSource1HTMLMetaExtractor RiskSource1 = "html_meta_extractor"
 )
 
 func (e RiskSource1) ToPointer() *RiskSource1 {
@@ -99,6 +100,8 @@ func (e *RiskSource1) UnmarshalJSON(data []byte) error {
 	case "wappalyzer":
 		fallthrough
 	case "third_party":
+		fallthrough
+	case "html_meta_extractor":
 		*e = RiskSource1(v)
 		return nil
 	default:
