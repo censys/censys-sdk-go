@@ -19,6 +19,8 @@ type HTTP struct {
 	HTMLTitle *string `json:"html_title,omitempty"`
 	// The protocol field of the response, which includes the claimed HTTP version number.
 	Protocol *string `json:"protocol,omitempty"`
+	// If the scan redirects, the list of followup scans performed
+	RedirectChain []HTTPRedirectChainLink `json:"redirect_chain,omitempty"`
 	// A 3-digit integer result code indicating the result of the services.http.request.
 	StatusCode *int `json:"status_code,omitempty"`
 	// A human-readable phrase describing the status code.
@@ -96,6 +98,13 @@ func (h *HTTP) GetProtocol() *string {
 		return nil
 	}
 	return h.Protocol
+}
+
+func (h *HTTP) GetRedirectChain() []HTTPRedirectChainLink {
+	if h == nil {
+		return nil
+	}
+	return h.RedirectChain
 }
 
 func (h *HTTP) GetStatusCode() *int {

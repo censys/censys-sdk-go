@@ -3,10 +3,11 @@
 
 ## Values
 
-| Name                    | Value                   |
-| ----------------------- | ----------------------- |
-| `LabelSourceUnknown`    |                         |
-| `LabelSourceCensys`     | censys                  |
-| `LabelSourceRecog`      | recog                   |
-| `LabelSourceWappalyzer` | wappalyzer              |
-| `LabelSourceThirdParty` | third_party             |
+| Name                           | Value                          |
+| ------------------------------ | ------------------------------ |
+| `LabelSourceUnknown`           |                                |
+| `LabelSourceCensys`            | censys                         |
+| `LabelSourceRecog`             | recog                          |
+| `LabelSourceWappalyzer`        | wappalyzer                     |
+| `LabelSourceThirdParty`        | third_party                    |
+| `LabelSourceHTMLMetaExtractor` | html_meta_extractor            |

@@ -5,7 +5,7 @@ package components
 type PaginationInfo struct {
 	// The token to use to retrieve the next page of results.
 	NextPageToken *string `json:"next_page_token,omitempty"`
-	// The number of members requested per page.
+	// The number of results requested per page.
 	PageSize int `json:"page_size"`
 }
 
