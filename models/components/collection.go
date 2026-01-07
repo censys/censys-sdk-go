@@ -86,8 +86,10 @@ func (e *StatusReason) UnmarshalJSON(data []byte) error {
 }
 
 type Collection struct {
-	AddedAssets24Hours   int64            `json:"added_assets_24_hours"`
-	CreateTime           time.Time        `json:"create_time"`
+	AddedAssets24Hours int64     `json:"added_assets_24_hours"`
+	CreateTime         time.Time `json:"create_time"`
+	// The ID of a Censys user who created the collection.
+	CreatedBy            *string          `json:"created_by,omitempty"`
 	Description          string           `json:"description"`
 	ID                   string           `json:"id"`
 	Name                 string           `json:"name"`
@@ -121,6 +123,13 @@ func (c *Collection) GetCreateTime() time.Time {
 		return time.Time{}
 	}
 	return c.CreateTime
+}
+
+func (c *Collection) GetCreatedBy() *string {
+	if c == nil {
+		return nil
+	}
+	return c.CreatedBy
 }
 
 func (c *Collection) GetDescription() string {

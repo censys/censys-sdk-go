@@ -10,11 +10,12 @@ import (
 type LabelSource string
 
 const (
-	LabelSourceUnknown    LabelSource = ""
-	LabelSourceCensys     LabelSource = "censys"
-	LabelSourceRecog      LabelSource = "recog"
-	LabelSourceWappalyzer LabelSource = "wappalyzer"
-	LabelSourceThirdParty LabelSource = "third_party"
+	LabelSourceUnknown           LabelSource = ""
+	LabelSourceCensys            LabelSource = "censys"
+	LabelSourceRecog             LabelSource = "recog"
+	LabelSourceWappalyzer        LabelSource = "wappalyzer"
+	LabelSourceThirdParty        LabelSource = "third_party"
+	LabelSourceHTMLMetaExtractor LabelSource = "html_meta_extractor"
 )
 
 func (e LabelSource) ToPointer() *LabelSource {
@@ -35,6 +36,8 @@ func (e *LabelSource) UnmarshalJSON(data []byte) error {
 	case "wappalyzer":
 		fallthrough
 	case "third_party":
+		fallthrough
+	case "html_meta_extractor":
 		*e = LabelSource(v)
 		return nil
 	default:

@@ -3,10 +3,11 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `ThreatSourceUnknown`    |                          |
-| `ThreatSourceCensys`     | censys                   |
-| `ThreatSourceRecog`      | recog                    |
-| `ThreatSourceWappalyzer` | wappalyzer               |
-| `ThreatSourceThirdParty` | third_party              |
+| Name                            | Value                           |
+| ------------------------------- | ------------------------------- |
+| `ThreatSourceUnknown`           |                                 |
+| `ThreatSourceCensys`            | censys                          |
+| `ThreatSourceRecog`             | recog                           |
+| `ThreatSourceWappalyzer`        | wappalyzer                      |
+| `ThreatSourceThirdParty`        | third_party                     |
+| `ThreatSourceHTMLMetaExtractor` | html_meta_extractor             |

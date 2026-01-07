@@ -49,6 +49,7 @@ type EndpointScanState struct {
 	CobaltStrike      *CobaltStrike                       `json:"cobalt_strike,omitempty"`
 	Elasticsearch     *ElasticSearch                      `json:"elasticsearch,omitempty"`
 	EndpointType      *string                             `json:"endpoint_type,omitempty"`
+	Extracted         *ExtractedEndpointData              `json:"extracted,omitempty"`
 	Fortigate         *Fortigate                          `json:"fortigate,omitempty"`
 	Graphql           *Graphql                            `json:"graphql,omitempty"`
 	Hostname          *string                             `json:"hostname,omitempty"`
@@ -112,6 +113,13 @@ func (e *EndpointScanState) GetEndpointType() *string {
 		return nil
 	}
 	return e.EndpointType
+}
+
+func (e *EndpointScanState) GetExtracted() *ExtractedEndpointData {
+	if e == nil {
+		return nil
+	}
+	return e.Extracted
 }
 
 func (e *EndpointScanState) GetFortigate() *Fortigate {
