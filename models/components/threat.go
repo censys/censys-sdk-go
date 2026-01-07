@@ -10,11 +10,12 @@ import (
 type ThreatSource string
 
 const (
-	ThreatSourceUnknown    ThreatSource = ""
-	ThreatSourceCensys     ThreatSource = "censys"
-	ThreatSourceRecog      ThreatSource = "recog"
-	ThreatSourceWappalyzer ThreatSource = "wappalyzer"
-	ThreatSourceThirdParty ThreatSource = "third_party"
+	ThreatSourceUnknown           ThreatSource = ""
+	ThreatSourceCensys            ThreatSource = "censys"
+	ThreatSourceRecog             ThreatSource = "recog"
+	ThreatSourceWappalyzer        ThreatSource = "wappalyzer"
+	ThreatSourceThirdParty        ThreatSource = "third_party"
+	ThreatSourceHTMLMetaExtractor ThreatSource = "html_meta_extractor"
 )
 
 func (e ThreatSource) ToPointer() *ThreatSource {
@@ -35,6 +36,8 @@ func (e *ThreatSource) UnmarshalJSON(data []byte) error {
 	case "wappalyzer":
 		fallthrough
 	case "third_party":
+		fallthrough
+	case "html_meta_extractor":
 		*e = ThreatSource(v)
 		return nil
 	default:

@@ -10,11 +10,12 @@ import (
 type Source string
 
 const (
-	SourceUnknown    Source = ""
-	SourceCensys     Source = "censys"
-	SourceRecog      Source = "recog"
-	SourceWappalyzer Source = "wappalyzer"
-	SourceThirdParty Source = "third_party"
+	SourceUnknown           Source = ""
+	SourceCensys            Source = "censys"
+	SourceRecog             Source = "recog"
+	SourceWappalyzer        Source = "wappalyzer"
+	SourceThirdParty        Source = "third_party"
+	SourceHTMLMetaExtractor Source = "html_meta_extractor"
 )
 
 func (e Source) ToPointer() *Source {
@@ -35,6 +36,8 @@ func (e *Source) UnmarshalJSON(data []byte) error {
 	case "wappalyzer":
 		fallthrough
 	case "third_party":
+		fallthrough
+	case "html_meta_extractor":
 		*e = Source(v)
 		return nil
 	default:

@@ -14,6 +14,8 @@ type CreditExpiration struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// The date and time the credit expiration will expire.
 	ExpiresAt *time.Time `json:"expires_at,omitempty"`
+	// The initial balance of the credit expiration (i.e. how much was purchased).
+	InitialBalance int64 `json:"initial_balance"`
 }
 
 func (c CreditExpiration) MarshalJSON() ([]byte, error) {
@@ -46,4 +48,11 @@ func (c *CreditExpiration) GetExpiresAt() *time.Time {
 		return nil
 	}
 	return c.ExpiresAt
+}
+
+func (c *CreditExpiration) GetInitialBalance() int64 {
+	if c == nil {
+		return 0
+	}
+	return c.InitialBalance
 }
