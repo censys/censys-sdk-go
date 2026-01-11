@@ -78,6 +78,7 @@ type Service struct {
 	Fox                      *Fox                      `json:"fox,omitempty"`
 	Ftp                      *Ftp                      `json:"ftp,omitempty"`
 	Gearman                  *Gearman                  `json:"gearman,omitempty"`
+	Hajime                   *Hajime                   `json:"hajime,omitempty"`
 	Hardware                 []Attribute               `json:"hardware,omitempty"`
 	HidVertx                 *HidVertx                 `json:"hid_vertx,omitempty"`
 	Hikvision                *Hikvision                `json:"hikvision,omitempty"`
@@ -424,6 +425,13 @@ func (s *Service) GetGearman() *Gearman {
 		return nil
 	}
 	return s.Gearman
+}
+
+func (s *Service) GetHajime() *Hajime {
+	if s == nil {
+		return nil
+	}
+	return s.Hajime
 }
 
 func (s *Service) GetHardware() []Attribute {
