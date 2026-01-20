@@ -3,14 +3,64 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
+	"github.com/censys/censys-sdk-go/internal/utils"
 	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/types"
 )
+
+// Granularity - Whether to break down credit usage on a daily or monthly basis.
+type Granularity string
+
+const (
+	GranularityDaily   Granularity = "daily"
+	GranularityMonthly Granularity = "monthly"
+)
+
+func (e Granularity) ToPointer() *Granularity {
+	return &e
+}
+func (e *Granularity) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "daily":
+		fallthrough
+	case "monthly":
+		*e = Granularity(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for Granularity: %v", v)
+	}
+}
 
 type V3AccountmanagementOrgCreditsUsageRequest struct {
 	// The ID of a Censys organization. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	// The date for the credit usage report in YYYY-MM-DD format (e.g., 2025-11-06).
-	Date string `queryParam:"style=form,explode=false,name=date"`
+	// The date for the credit usage report in YYYY-MM-DD format (e.g., 2025-11-06). This field is deprecated and will be removed in a future version. Use start_date and end_date instead. The date must be on or after 2025-01-01 (the earliest date available for credit usage reports).
+	Date *string `queryParam:"style=form,explode=false,name=date"`
+	// The start date for the credit usage report in YYYY-MM-DD format (e.g., 2025-11-01). Must be on or after 2025-01-01 (the earliest date available for credit usage reports).
+	StartDate *types.Date `queryParam:"style=form,explode=false,name=start_date"`
+	// The end date for the credit usage report in YYYY-MM-DD format (e.g., 2025-12-01). If omitted, will default to today's date. The date range (end_date - start_date) cannot exceed 365 days (1 year).
+	EndDate *types.Date `queryParam:"style=form,explode=false,name=end_date"`
+	// Whether to break down credit usage on a daily or monthly basis.
+	Granularity Granularity `default:"daily" queryParam:"style=form,explode=false,name=granularity"`
+	// Whether to include a breakdown of individual users' consumption in the credit usage report.
+	IncludeConsumerBreakdown *bool `default:"false" queryParam:"style=form,explode=false,name=include_consumer_breakdown"`
+}
+
+func (v V3AccountmanagementOrgCreditsUsageRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(v, "", false)
+}
+
+func (v *V3AccountmanagementOrgCreditsUsageRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (v *V3AccountmanagementOrgCreditsUsageRequest) GetOrganizationID() string {
@@ -20,11 +70,39 @@ func (v *V3AccountmanagementOrgCreditsUsageRequest) GetOrganizationID() string {
 	return v.OrganizationID
 }
 
-func (v *V3AccountmanagementOrgCreditsUsageRequest) GetDate() string {
+func (v *V3AccountmanagementOrgCreditsUsageRequest) GetDate() *string {
 	if v == nil {
-		return ""
+		return nil
 	}
 	return v.Date
+}
+
+func (v *V3AccountmanagementOrgCreditsUsageRequest) GetStartDate() *types.Date {
+	if v == nil {
+		return nil
+	}
+	return v.StartDate
+}
+
+func (v *V3AccountmanagementOrgCreditsUsageRequest) GetEndDate() *types.Date {
+	if v == nil {
+		return nil
+	}
+	return v.EndDate
+}
+
+func (v *V3AccountmanagementOrgCreditsUsageRequest) GetGranularity() Granularity {
+	if v == nil {
+		return Granularity("")
+	}
+	return v.Granularity
+}
+
+func (v *V3AccountmanagementOrgCreditsUsageRequest) GetIncludeConsumerBreakdown() *bool {
+	if v == nil {
+		return nil
+	}
+	return v.IncludeConsumerBreakdown
 }
 
 type V3AccountmanagementOrgCreditsUsageResponse struct {

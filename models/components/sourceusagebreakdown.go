@@ -3,8 +3,12 @@
 package components
 
 type SourceUsageBreakdown struct {
-	// The amount of credits consumed through the PlatformAPI.
+	// The amount of credits consumed through the Platform API.
 	API int64 `json:"api"`
+	// The amount of credits consumed through auto-replenishment.
+	AutoReplenishment int64 `json:"auto_replenishment"`
+	// The amount of credits consumed through other operations.
+	Other int64 `json:"other"`
 	// The amount of credits consumed through the Platform UI.
 	UI int64 `json:"ui"`
 }
@@ -14,6 +18,20 @@ func (s *SourceUsageBreakdown) GetAPI() int64 {
 		return 0
 	}
 	return s.API
+}
+
+func (s *SourceUsageBreakdown) GetAutoReplenishment() int64 {
+	if s == nil {
+		return 0
+	}
+	return s.AutoReplenishment
+}
+
+func (s *SourceUsageBreakdown) GetOther() int64 {
+	if s == nil {
+		return 0
+	}
+	return s.Other
 }
 
 func (s *SourceUsageBreakdown) GetUI() int64 {
