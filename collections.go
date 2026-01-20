@@ -33,7 +33,7 @@ func newCollections(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hook
 }
 
 // List collections
-// List all collections for an organization. Retrieved information includes collection ID, name, query, description, status, and asset count.
+// List all collections for an organization. Retrieved information includes collection ID, name, query, description, status, and asset count.<br><br>This endpoint does not cost credits to execute.
 func (s *Collections) List(ctx context.Context, request operations.V3CollectionsCrudListRequest, opts ...operations.Option) (*operations.V3CollectionsCrudListResponse, error) {
 	globals := operations.V3CollectionsCrudListGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -290,7 +290,7 @@ func (s *Collections) List(ctx context.Context, request operations.V3Collections
 }
 
 // Create a collection
-// Create a new collection.
+// Create a new collection.<br><br>This endpoint does not cost credits to execute.
 func (s *Collections) Create(ctx context.Context, request operations.V3CollectionsCrudCreateRequest, opts ...operations.Option) (*operations.V3CollectionsCrudCreateResponse, error) {
 	globals := operations.V3CollectionsCrudCreateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -554,7 +554,7 @@ func (s *Collections) Create(ctx context.Context, request operations.V3Collectio
 }
 
 // Delete a collection
-// Delete a collection.
+// Delete a collection.<br><br>This endpoint does not cost credits to execute.
 func (s *Collections) Delete(ctx context.Context, request operations.V3CollectionsCrudDeleteRequest, opts ...operations.Option) (*operations.V3CollectionsCrudDeleteResponse, error) {
 	globals := operations.V3CollectionsCrudDeleteGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -799,7 +799,7 @@ func (s *Collections) Delete(ctx context.Context, request operations.V3Collectio
 }
 
 // Get a collection
-// Retrieve information about a collection. Retrieved information includes its name, query, description, status, and asset count.
+// Retrieve information about a collection. Retrieved information includes its name, query, description, status, and asset count.<br><br>This endpoint does not cost credits to execute.
 func (s *Collections) Get(ctx context.Context, request operations.V3CollectionsCrudGetRequest, opts ...operations.Option) (*operations.V3CollectionsCrudGetResponse, error) {
 	globals := operations.V3CollectionsCrudGetGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1058,7 +1058,7 @@ func (s *Collections) Get(ctx context.Context, request operations.V3CollectionsC
 }
 
 // Update a collection
-// Update a collection's name, description, and/or query.
+// Update a collection's name, description, and/or query.<br><br>This endpoint does not cost credits to execute.
 func (s *Collections) Update(ctx context.Context, request operations.V3CollectionsCrudUpdateRequest, opts ...operations.Option) (*operations.V3CollectionsCrudUpdateResponse, error) {
 	globals := operations.V3CollectionsCrudUpdateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -1324,7 +1324,7 @@ func (s *Collections) Update(ctx context.Context, request operations.V3Collectio
 }
 
 // ListEvents - Get a collection's events
-// Retrieve the event history for a collection. This includes the addition or removal of assets as well as collection status changes.
+// Retrieve the event history for a collection. This includes the addition or removal of assets as well as collection status changes.<br><br>This endpoint does not cost credits to execute.
 func (s *Collections) ListEvents(ctx context.Context, request operations.V3CollectionsListEventsRequest, opts ...operations.Option) (*operations.V3CollectionsListEventsResponse, error) {
 	globals := operations.V3CollectionsListEventsGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

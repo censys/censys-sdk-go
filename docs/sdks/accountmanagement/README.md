@@ -7,14 +7,15 @@ Endpoints related to the Account Management product
 ### Available Operations
 
 * [GetOrganizationDetails](#getorganizationdetails) - Get organization details
-* [GetOrganizationCredits](#getorganizationcredits) - Get organization credit details
+* [GetOrganizationCredits](#getorganizationcredits) - Get organization credit balance
 * [GetOrganizationCreditUsage](#getorganizationcreditusage) - Get organization credit usage
 * [InviteUserToOrganization](#inviteusertoorganization) - Invite user to organization
 * [ListOrganizationMembers](#listorganizationmembers) - List organization members
 * [RemoveOrganizationMember](#removeorganizationmember) - Remove member from organization
 * [UpdateOrganizationMember](#updateorganizationmember) - Update a member's roles in an organization
-* [GetMemberCreditUsage](#getmembercreditusage) - Get member credit usage
-* [GetUserCredits](#getusercredits) - Get Free user credit details
+* [GetMemberCreditUsage](#getmembercreditusage) - Get organization member credit usage
+* [GetUserCredits](#getusercredits) - Get Free user credit balance
+* [GetUserCreditsUsage](#getusercreditsusage) - Get Free user credit usage
 
 ## GetOrganizationDetails
 
@@ -130,7 +131,7 @@ func main() {
 
 ## GetOrganizationCreditUsage
 
-Retrieve credit consumption information for an organization for a specific day.<br><br>Admins can obtain credit usage information for all users in their organization. Members may only retrieve usage information for their own account.<br><br>This endpoint does not cost any credits to execute.
+Retrieve credit information for an organization over a specific date range. You must include a start date in your request.<br><br>Admins can obtain credit usage information for all users in their organization. Members may only retrieve usage information for their own account.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -141,6 +142,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -154,7 +156,9 @@ func main() {
 
     res, err := s.AccountManagement.GetOrganizationCreditUsage(ctx, operations.V3AccountmanagementOrgCreditsUsageRequest{
         OrganizationID: "11111111-2222-3333-4444-555555555555",
-        Date: "2025-11-01",
+        Date: censyssdkgo.Pointer("2025-11-01"),
+        StartDate: types.MustNewDateFromString("2025-11-01"),
+        EndDate: types.MustNewDateFromString("2025-12-01"),
     })
     if err != nil {
         log.Fatal(err)
@@ -421,7 +425,7 @@ func main() {
 
 ## GetMemberCreditUsage
 
-Retrieve credit consumption information for an organization member for a specific day.<br><br>This endpoint does not cost any credits to execute.
+Retrieve credit consumption information for an organization member over a specific date range. You must include a start date in your request.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -432,6 +436,7 @@ package main
 import(
 	"context"
 	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
 	"github.com/censys/censys-sdk-go/models/operations"
 	"log"
 )
@@ -446,7 +451,9 @@ func main() {
     res, err := s.AccountManagement.GetMemberCreditUsage(ctx, operations.V3AccountmanagementMemberCreditsUsageRequest{
         OrganizationID: "11111111-2222-3333-4444-555555555555",
         UserID: "11111111-2222-3333-4444-555555555555",
-        Date: "2025-11-01",
+        Date: censyssdkgo.Pointer("2025-11-01"),
+        StartDate: types.MustNewDateFromString("2025-11-01"),
+        EndDate: types.MustNewDateFromString("2025-12-01"),
     })
     if err != nil {
         log.Fatal(err)
@@ -479,7 +486,7 @@ func main() {
 
 ## GetUserCredits
 
-Retrieve your Free user account credit balance and refresh information. To retrieve the credit balance for a Starter or Enterprise account, use the [get organization credit details endpoint](https://docs.censys.com/reference/v3-accountmanagement-org-credits).<br><br>This endpoint does not cost any credits to execute.
+Retrieve your Free user account credit balance and refresh information. To retrieve the credit balance for a Starter or Enterprise account, use the [get organization credit balance endpoint](https://docs.censys.com/reference/v3-accountmanagement-org-credits).<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -520,6 +527,65 @@ func main() {
 ### Response
 
 **[*operations.V3AccountmanagementUserCreditsResponse](../../models/operations/v3accountmanagementusercreditsresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 404                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## GetUserCreditsUsage
+
+Retrieve your Free user account credit consumption information over a specific date range. You must include a start date in your request.<br><br>This endpoint does not cost any credits to execute.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-accountmanagement-user-credits-usage" method="get" path="/v3/accounts/users/credits/usage" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.AccountManagement.GetUserCreditsUsage(ctx, operations.V3AccountmanagementUserCreditsUsageRequest{
+        Date: censyssdkgo.Pointer("2025-11-01"),
+        StartDate: types.MustNewDateFromString("2025-11-01"),
+        EndDate: types.MustNewDateFromString("2025-12-01"),
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeCreditUsageReport != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
+| `request`                                                                                                                      | [operations.V3AccountmanagementUserCreditsUsageRequest](../../models/operations/v3accountmanagementusercreditsusagerequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `opts`                                                                                                                         | [][operations.Option](../../models/operations/option.md)                                                                       | :heavy_minus_sign:                                                                                                             | The options for this request.                                                                                                  |
+
+### Response
+
+**[*operations.V3AccountmanagementUserCreditsUsageResponse](../../models/operations/v3accountmanagementusercreditsusageresponse.md), error**
 
 ### Errors
 

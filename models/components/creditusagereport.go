@@ -3,18 +3,59 @@
 package components
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/censys/censys-sdk-go/internal/utils"
 	"time"
 )
 
+// Granularity - The granularity of the report.
+type Granularity string
+
+const (
+	GranularityDaily   Granularity = "daily"
+	GranularityMonthly Granularity = "monthly"
+)
+
+func (e Granularity) ToPointer() *Granularity {
+	return &e
+}
+func (e *Granularity) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "daily":
+		fallthrough
+	case "monthly":
+		*e = Granularity(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for Granularity: %v", v)
+	}
+}
+
 type CreditUsageReport struct {
-	// The end date of the window for this report.
-	EndDate         time.Time            `json:"end_date"`
-	SourceBreakdown SourceUsageBreakdown `json:"source_breakdown"`
-	// The start date of the window for this report.
-	StartDate time.Time `json:"start_date"`
+	// The breakdown of credits consumed by consumer. This may not be present if the report is generated for a specific user.
+	CreditsConsumedByConsumer *string              `json:"credits_consumed_by_consumer,omitempty"`
+	CreditsConsumedBySource   SourceUsageBreakdown `json:"credits_consumed_by_source"`
+	// The end time of the window for this report.
+	EndTime time.Time `json:"end_time"`
+	// The granularity of the report.
+	Granularity *Granularity `default:"daily" json:"granularity"`
+	// The periods of the report (i.e. time buckets).
+	Periods []CreditUsageReportPeriod `json:"periods"`
+	// The start time of the window for this report.
+	StartTime time.Time `json:"start_time"`
+	// The total amount of credits added during the report period.
+	TotalAdded int64 `json:"total_added"`
 	// The total amount of credits consumed during the report period.
 	TotalConsumed int64 `json:"total_consumed"`
+	// The total amount of credits expired during the report period.
+	TotalExpired int64 `json:"total_expired"`
+	// The total number of transactions during the report period.
+	TransactionCount int64 `json:"transaction_count"`
 }
 
 func (c CreditUsageReport) MarshalJSON() ([]byte, error) {
@@ -28,25 +69,53 @@ func (c *CreditUsageReport) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (c *CreditUsageReport) GetEndDate() time.Time {
+func (c *CreditUsageReport) GetCreditsConsumedByConsumer() *string {
 	if c == nil {
-		return time.Time{}
+		return nil
 	}
-	return c.EndDate
+	return c.CreditsConsumedByConsumer
 }
 
-func (c *CreditUsageReport) GetSourceBreakdown() SourceUsageBreakdown {
+func (c *CreditUsageReport) GetCreditsConsumedBySource() SourceUsageBreakdown {
 	if c == nil {
 		return SourceUsageBreakdown{}
 	}
-	return c.SourceBreakdown
+	return c.CreditsConsumedBySource
 }
 
-func (c *CreditUsageReport) GetStartDate() time.Time {
+func (c *CreditUsageReport) GetEndTime() time.Time {
 	if c == nil {
 		return time.Time{}
 	}
-	return c.StartDate
+	return c.EndTime
+}
+
+func (c *CreditUsageReport) GetGranularity() *Granularity {
+	if c == nil {
+		return nil
+	}
+	return c.Granularity
+}
+
+func (c *CreditUsageReport) GetPeriods() []CreditUsageReportPeriod {
+	if c == nil {
+		return nil
+	}
+	return c.Periods
+}
+
+func (c *CreditUsageReport) GetStartTime() time.Time {
+	if c == nil {
+		return time.Time{}
+	}
+	return c.StartTime
+}
+
+func (c *CreditUsageReport) GetTotalAdded() int64 {
+	if c == nil {
+		return 0
+	}
+	return c.TotalAdded
 }
 
 func (c *CreditUsageReport) GetTotalConsumed() int64 {
@@ -54,4 +123,18 @@ func (c *CreditUsageReport) GetTotalConsumed() int64 {
 		return 0
 	}
 	return c.TotalConsumed
+}
+
+func (c *CreditUsageReport) GetTotalExpired() int64 {
+	if c == nil {
+		return 0
+	}
+	return c.TotalExpired
+}
+
+func (c *CreditUsageReport) GetTransactionCount() int64 {
+	if c == nil {
+		return 0
+	}
+	return c.TransactionCount
 }
