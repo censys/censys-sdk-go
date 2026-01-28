@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: b8c29f264ba460af0cb5f3afb366b24d
-  docVersion: 1.0.65
-  speakeasyVersion: 1.691.0
-  generationVersion: 2.797.1
-  releaseVersion: 0.25.3
-  configChecksum: f76fcf4d13c02dbda37eff57323ba144
+  docChecksum: 7221b6ceacbfc2cd8155c3d3ad8f4f53
+  docVersion: 1.0.69
+  speakeasyVersion: 1.700.1
+  generationVersion: 2.801.0
+  releaseVersion: 0.25.4
+  configChecksum: 8984b32b5b22768e42694b2947bc5033
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: 7689e2c3-e973-4d9d-8bd2-c18dbb8876a1
-  pristine_commit_hash: 809dd4963a2cebae73cf91fdf51c35694639d8b5
-  pristine_tree_hash: 33436dc399060fe83879637ccb3672e64106199f
+  generation_id: f281a697-4eb7-43e5-8fc8-6132b10e631e
+  pristine_commit_hash: ffa205fb902393b1be339fabbde74c77382aef09
+  pristine_tree_hash: b50bc6ca3c1d4ff98ee59ce29aadb70732d943a8
 features:
   go:
     acceptHeaders: 2.81.2
@@ -835,8 +835,8 @@ trackedFiles:
     pristine_git_object: 65c2d937edede793befca117bf5d4fe196e03874
   docs/models/components/http.md:
     id: 71fc6594256e
-    last_write_checksum: sha1:c1578dc4da74cbde5ada7db1fb5c785b0b0a49ea
-    pristine_git_object: 53e098f2ff26ab330f013789dc5f16c6b9f11c3f
+    last_write_checksum: sha1:9afecdf0fbb1835ea238d2e21a3fce1f8e12df26
+    pristine_git_object: f25e5b72b7b69dfa56e802581a0c56e2832b9c03
   docs/models/components/httpfavicon.md:
     id: e50d356ccfa1
     last_write_checksum: sha1:c4760399758d86844d219ac3dbbd8c29230bce07
@@ -1277,6 +1277,14 @@ trackedFiles:
     id: 18745554e870
     last_write_checksum: sha1:9909d7f3e661b54e74bbd90e88d3e18bc04693c5
     pristine_git_object: 2c1b56f2c4bc6205dce48b03956fc90554bf16b3
+  docs/models/components/networklog.md:
+    id: 156b9a4d9bd2
+    last_write_checksum: sha1:f343b1f80959569156bbc538c99ffec2fa5ee5c2
+    pristine_git_object: 3da8b363362986922db3a3011b0705b0fc80bccd
+  docs/models/components/networklogresourceinfo.md:
+    id: 9e756fdc7531
+    last_write_checksum: sha1:c02d3f33be19d642a6b95fb35631d0330dbf8064
+    pristine_git_object: 8b1012398a9ffdce4d0495ff64b26d98ad844417
   docs/models/components/newstatus.md:
     id: 81cce6e3c518
     last_write_checksum: sha1:ae87dc510ce6b7c6acd3a23acace13f28ceb16aa
@@ -3695,8 +3703,8 @@ trackedFiles:
     pristine_git_object: e453d64ad38d7153f3fbfe254209742d4d3e8c72
   models/components/http.go:
     id: ed9f806cce99
-    last_write_checksum: sha1:21de9368e61a926714f0868f19c7c93d754ca053
-    pristine_git_object: a429838a3357bcf6987bf77852aa316e666486dc
+    last_write_checksum: sha1:bded12b4f1a6ad1a793473fb6ad5beff5b0cacc7
+    pristine_git_object: e348502b73c73cd94863ab28c5360e8398ba426f
   models/components/httpfavicon.go:
     id: cbf545b2270c
     last_write_checksum: sha1:02ad3329e0cd64d650ba95546d8b977700842294
@@ -4117,6 +4125,14 @@ trackedFiles:
     id: 96203932870f
     last_write_checksum: sha1:b6541b879478ce3439da053e4d5185b0501ac6c0
     pristine_git_object: dae4dcec4b8fbd7f39de30e364c694e28e526bfd
+  models/components/networklog.go:
+    id: 7dea43cd9edb
+    last_write_checksum: sha1:23bd9694f3b5299abc635af0d91dffc8a38648b5
+    pristine_git_object: e21c29aa76bc7d5d7d249ac749093f9ff38a558d
+  models/components/networklogresourceinfo.go:
+    id: 3c1850e81afc
+    last_write_checksum: sha1:baa739e8445b71451ac8850d968124b07ff29fce
+    pristine_git_object: d68fddfeab6136fb4d302e8d76e6fee502c46e7e
   models/components/nfsmountd.go:
     id: 75be0e68b3bb
     last_write_checksum: sha1:640d091aafd689e3f79ff015bf96f7809eef731c
@@ -5303,8 +5319,8 @@ trackedFiles:
     pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:31b45d298aa2af1c8bfeeab56a6de209037aad55
-    pristine_git_object: c44870605dd5d47dfa5e70a8a7e99fed18e2a3a9
+    last_write_checksum: sha1:e32280802c759f0d0fb49b11b63a5c12ebdb325a
+    pristine_git_object: 659f13e4c49b237351af61a1808ffde948b5e02b
   threathunting.go:
     id: f45dc6b4d4a3
     last_write_checksum: sha1:a46a8183f45ae85f3e0e1e9306e68a3a42107f58

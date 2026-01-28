@@ -16,7 +16,8 @@ type HTTP struct {
 	// A list of the <title> and <meta> tags from services.http.response.body.
 	HTMLTags []string `json:"html_tags,omitempty"`
 	// The title of the HTML page: the inner contents of the <title> tag in the response body, if present.
-	HTMLTitle *string `json:"html_title,omitempty"`
+	HTMLTitle  *string     `json:"html_title,omitempty"`
+	NetworkLog *NetworkLog `json:"network_log,omitempty"`
 	// The protocol field of the response, which includes the claimed HTTP version number.
 	Protocol *string `json:"protocol,omitempty"`
 	// If the scan redirects, the list of followup scans performed
@@ -91,6 +92,13 @@ func (h *HTTP) GetHTMLTitle() *string {
 		return nil
 	}
 	return h.HTMLTitle
+}
+
+func (h *HTTP) GetNetworkLog() *NetworkLog {
+	if h == nil {
+		return nil
+	}
+	return h.NetworkLog
 }
 
 func (h *HTTP) GetProtocol() *string {
