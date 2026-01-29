@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // KEVSource - The source checked to determine whether the CVE is in the KEV catalog.
 type KEVSource string
 
@@ -19,22 +14,16 @@ const (
 func (e KEVSource) ToPointer() *KEVSource {
 	return &e
 }
-func (e *KEVSource) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *KEVSource) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "cisa", "third_party":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "cisa":
-		fallthrough
-	case "third_party":
-		*e = KEVSource(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for KEVSource: %v", v)
-	}
+	return false
 }
 
 type Kev struct {

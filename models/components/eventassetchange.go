@@ -3,8 +3,6 @@
 package components
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/censys/censys-sdk-go/internal/utils"
 	"time"
 )
@@ -19,20 +17,16 @@ const (
 func (e ChangeType) ToPointer() *ChangeType {
 	return &e
 }
-func (e *ChangeType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ChangeType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "added", "removed":
+			return true
+		}
 	}
-	switch v {
-	case "added":
-		fallthrough
-	case "removed":
-		*e = ChangeType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ChangeType: %v", v)
-	}
+	return false
 }
 
 type EventAssetChange struct {

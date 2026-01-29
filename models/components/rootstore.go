@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // Type - The certificate's type. Options include root, intermediate, or leaf.
 type Type string
 
@@ -20,24 +15,16 @@ const (
 func (e Type) ToPointer() *Type {
 	return &e
 }
-func (e *Type) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Type) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "root", "intermediate", "leaf":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "root":
-		fallthrough
-	case "intermediate":
-		fallthrough
-	case "leaf":
-		*e = Type(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Type: %v", v)
-	}
+	return false
 }
 
 type RootStore struct {

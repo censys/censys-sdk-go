@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // DNSResourceRecordType - An enumerated field indicating what type of data is in the "services.dns.additionals.response" field. For example, "A" signifies that the value in "services.dns.additionals.response" is an IPv4 address for the FQDN in "services.dns.additionals.name".
 type DNSResourceRecordType string
 
@@ -20,24 +15,16 @@ const (
 func (e DNSResourceRecordType) ToPointer() *DNSResourceRecordType {
 	return &e
 }
-func (e *DNSResourceRecordType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *DNSResourceRecordType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "a", "txt", "ns":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "a":
-		fallthrough
-	case "txt":
-		fallthrough
-	case "ns":
-		*e = DNSResourceRecordType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for DNSResourceRecordType: %v", v)
-	}
+	return false
 }
 
 type DNSResourceRecord struct {

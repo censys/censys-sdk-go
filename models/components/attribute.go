@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type Source string
 
 const (
@@ -21,28 +16,16 @@ const (
 func (e Source) ToPointer() *Source {
 	return &e
 }
-func (e *Source) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Source) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "censys", "recog", "wappalyzer", "third_party", "html_meta_extractor":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "censys":
-		fallthrough
-	case "recog":
-		fallthrough
-	case "wappalyzer":
-		fallthrough
-	case "third_party":
-		fallthrough
-	case "html_meta_extractor":
-		*e = Source(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Source: %v", v)
-	}
+	return false
 }
 
 type Attribute struct {

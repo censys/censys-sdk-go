@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // Reason - An enumerated value indicating the issuer-supplied reason for the revocation.
 type Reason string
 
@@ -27,38 +22,16 @@ const (
 func (e Reason) ToPointer() *Reason {
 	return &e
 }
-func (e *Reason) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Reason) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "unspecified", "key_compromise", "ca_compromise", "affiliation_changed", "superseded", "cessation_of_operation", "certificate_hold", "remove_from_crl", "privilege_withdrawn", "aa_compromise":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "unspecified":
-		fallthrough
-	case "key_compromise":
-		fallthrough
-	case "ca_compromise":
-		fallthrough
-	case "affiliation_changed":
-		fallthrough
-	case "superseded":
-		fallthrough
-	case "cessation_of_operation":
-		fallthrough
-	case "certificate_hold":
-		fallthrough
-	case "remove_from_crl":
-		fallthrough
-	case "privilege_withdrawn":
-		fallthrough
-	case "aa_compromise":
-		*e = Reason(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Reason: %v", v)
-	}
+	return false
 }
 
 type CertificateRevocationRevocationInfo struct {

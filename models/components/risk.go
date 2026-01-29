@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type RiskSource string
 
 const (
@@ -18,22 +13,16 @@ const (
 func (e RiskSource) ToPointer() *RiskSource {
 	return &e
 }
-func (e *RiskSource) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *RiskSource) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "censys", "cve":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "censys":
-		fallthrough
-	case "cve":
-		*e = RiskSource(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RiskSource: %v", v)
-	}
+	return false
 }
 
 type Severity string
@@ -49,26 +38,16 @@ const (
 func (e Severity) ToPointer() *Severity {
 	return &e
 }
-func (e *Severity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Severity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "low", "medium", "high", "critical":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "low":
-		fallthrough
-	case "medium":
-		fallthrough
-	case "high":
-		fallthrough
-	case "critical":
-		*e = Severity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Severity: %v", v)
-	}
+	return false
 }
 
 type RiskSource1 string
@@ -85,28 +64,16 @@ const (
 func (e RiskSource1) ToPointer() *RiskSource1 {
 	return &e
 }
-func (e *RiskSource1) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *RiskSource1) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "censys", "recog", "wappalyzer", "third_party", "html_meta_extractor":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "censys":
-		fallthrough
-	case "recog":
-		fallthrough
-	case "wappalyzer":
-		fallthrough
-	case "third_party":
-		fallthrough
-	case "html_meta_extractor":
-		*e = RiskSource1(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RiskSource1: %v", v)
-	}
+	return false
 }
 
 type Risk struct {

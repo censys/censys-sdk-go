@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type EndpointScanTransportProtocol string
 
 const (
@@ -20,26 +15,16 @@ const (
 func (e EndpointScanTransportProtocol) ToPointer() *EndpointScanTransportProtocol {
 	return &e
 }
-func (e *EndpointScanTransportProtocol) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *EndpointScanTransportProtocol) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "tcp", "udp", "icmp", "quic":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "tcp":
-		fallthrough
-	case "udp":
-		fallthrough
-	case "icmp":
-		fallthrough
-	case "quic":
-		*e = EndpointScanTransportProtocol(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for EndpointScanTransportProtocol: %v", v)
-	}
+	return false
 }
 
 type EndpointScan struct {

@@ -3,8 +3,6 @@
 package components
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/censys/censys-sdk-go/internal/utils"
 	"time"
 )
@@ -21,24 +19,16 @@ const (
 func (e NewStatus) ToPointer() *NewStatus {
 	return &e
 }
-func (e *NewStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *NewStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "active", "populating", "paused", "archived":
+			return true
+		}
 	}
-	switch v {
-	case "active":
-		fallthrough
-	case "populating":
-		fallthrough
-	case "paused":
-		fallthrough
-	case "archived":
-		*e = NewStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for NewStatus: %v", v)
-	}
+	return false
 }
 
 type OldStatus string
@@ -53,24 +43,16 @@ const (
 func (e OldStatus) ToPointer() *OldStatus {
 	return &e
 }
-func (e *OldStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *OldStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "active", "populating", "paused", "archived":
+			return true
+		}
 	}
-	switch v {
-	case "active":
-		fallthrough
-	case "populating":
-		fallthrough
-	case "paused":
-		fallthrough
-	case "archived":
-		*e = OldStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for OldStatus: %v", v)
-	}
+	return false
 }
 
 type EventStatusChange struct {
