@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type LabelSource string
 
 const (
@@ -21,28 +16,16 @@ const (
 func (e LabelSource) ToPointer() *LabelSource {
 	return &e
 }
-func (e *LabelSource) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *LabelSource) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "censys", "recog", "wappalyzer", "third_party", "html_meta_extractor":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "censys":
-		fallthrough
-	case "recog":
-		fallthrough
-	case "wappalyzer":
-		fallthrough
-	case "third_party":
-		fallthrough
-	case "html_meta_extractor":
-		*e = LabelSource(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for LabelSource: %v", v)
-	}
+	return false
 }
 
 type Label struct {

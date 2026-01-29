@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type Version string
 
 const (
@@ -25,36 +20,16 @@ const (
 func (e Version) ToPointer() *Version {
 	return &e
 }
-func (e *Version) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Version) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "ss_lv_2", "ss_lv_3", "tlsv1_0", "tlsv1_1", "tlsv1_2", "tlsv1_3", "dtlsv1_0", "dtlsv1_2", "dtlsv1_3":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "ss_lv_2":
-		fallthrough
-	case "ss_lv_3":
-		fallthrough
-	case "tlsv1_0":
-		fallthrough
-	case "tlsv1_1":
-		fallthrough
-	case "tlsv1_2":
-		fallthrough
-	case "tlsv1_3":
-		fallthrough
-	case "dtlsv1_0":
-		fallthrough
-	case "dtlsv1_2":
-		fallthrough
-	case "dtlsv1_3":
-		*e = Version(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Version: %v", v)
-	}
+	return false
 }
 
 type TLSVersionData struct {

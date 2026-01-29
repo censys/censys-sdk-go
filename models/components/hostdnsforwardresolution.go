@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type RecordType string
 
 const (
@@ -18,22 +13,16 @@ const (
 func (e RecordType) ToPointer() *RecordType {
 	return &e
 }
-func (e *RecordType) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *RecordType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "a", "aaaa":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "a":
-		fallthrough
-	case "aaaa":
-		*e = RecordType(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for RecordType: %v", v)
-	}
+	return false
 }
 
 type HostDNSForwardResolution struct {

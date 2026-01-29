@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type VulnRiskSource string
 
 const (
@@ -18,22 +13,16 @@ const (
 func (e VulnRiskSource) ToPointer() *VulnRiskSource {
 	return &e
 }
-func (e *VulnRiskSource) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VulnRiskSource) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "censys", "cve":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "censys":
-		fallthrough
-	case "cve":
-		*e = VulnRiskSource(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for VulnRiskSource: %v", v)
-	}
+	return false
 }
 
 type VulnSeverity string
@@ -49,26 +38,16 @@ const (
 func (e VulnSeverity) ToPointer() *VulnSeverity {
 	return &e
 }
-func (e *VulnSeverity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VulnSeverity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "low", "medium", "high", "critical":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "low":
-		fallthrough
-	case "medium":
-		fallthrough
-	case "high":
-		fallthrough
-	case "critical":
-		*e = VulnSeverity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for VulnSeverity: %v", v)
-	}
+	return false
 }
 
 type VulnSource string
@@ -85,28 +64,16 @@ const (
 func (e VulnSource) ToPointer() *VulnSource {
 	return &e
 }
-func (e *VulnSource) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VulnSource) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "censys", "recog", "wappalyzer", "third_party", "html_meta_extractor":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "censys":
-		fallthrough
-	case "recog":
-		fallthrough
-	case "wappalyzer":
-		fallthrough
-	case "third_party":
-		fallthrough
-	case "html_meta_extractor":
-		*e = VulnSource(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for VulnSource: %v", v)
-	}
+	return false
 }
 
 type Vuln struct {

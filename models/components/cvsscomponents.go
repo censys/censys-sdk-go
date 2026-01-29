@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // AttackComplexity - Indicates conditions beyond the attacker’s control that must exist in order to exploit the vulnerability. The Attack Complexity metric is scored as either Low or High. There are two possible values: Low (L) – There are no specific pre-conditions required for exploitation, High (H) – The attacker must complete some number of preparatory steps in order to get access.
 type AttackComplexity string
 
@@ -19,22 +14,16 @@ const (
 func (e AttackComplexity) ToPointer() *AttackComplexity {
 	return &e
 }
-func (e *AttackComplexity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AttackComplexity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = AttackComplexity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AttackComplexity: %v", v)
-	}
+	return false
 }
 
 // AttackVector - Indicates the level of access required for an attacker to exploit the vulnerability. The Attack Vector metric is scored in one of four levels: Network (N) – Vulnerabilities with this rating are remotely exploitable, from one or more hops away, up to, and including, remote exploitation over the Internet, Adjacent (A) – A vulnerability with this rating requires network adjacency for exploitation. The attack must be launched from the same physical or logical network, Local (L) – Vulnerabilities with this rating are not exploitable over a network, Physical (P) – An attacker must physically interact with the target system.
@@ -51,26 +40,16 @@ const (
 func (e AttackVector) ToPointer() *AttackVector {
 	return &e
 }
-func (e *AttackVector) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AttackVector) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "network", "adjacent", "local", "physical":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "network":
-		fallthrough
-	case "adjacent":
-		fallthrough
-	case "local":
-		fallthrough
-	case "physical":
-		*e = AttackVector(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AttackVector: %v", v)
-	}
+	return false
 }
 
 // Availability - If an attack renders information unavailable, such as when a system crashes or through a DDoS attack, availability is negatively impacted. Availability has three possible values: None (N) – There is no loss of availability, Low (L) – Availability might be intermittently limited, or performance might be negatively impacted, as a result of a successful attack, High (H) – There is a complete loss of availability of the impacted system or information.
@@ -86,24 +65,16 @@ const (
 func (e Availability) ToPointer() *Availability {
 	return &e
 }
-func (e *Availability) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Availability) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = Availability(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Availability: %v", v)
-	}
+	return false
 }
 
 // Confidentiality - Refers to the disclosure of sensitive information to authorized and unauthorized users, with the goal being that only authorized users are able to access the target data. Confidentiality has three potential values: High (H) – The attacker has full access to all resources in the impacted system, including highly sensitive information such as encryption keys, Low (L) – The attacker has partial access to information, with no control over what, specifically, they are able to access, None (N) – No data is accessible to unauthorized users as a result of the exploit.
@@ -119,24 +90,16 @@ const (
 func (e Confidentiality) ToPointer() *Confidentiality {
 	return &e
 }
-func (e *Confidentiality) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Confidentiality) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = Confidentiality(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Confidentiality: %v", v)
-	}
+	return false
 }
 
 // Integrity - Refers to whether the protected information has been tampered with or changed in any way. If there is no way for an attacker to alter the accuracy or completeness of the information, integrity has been maintained. Integrity has three values: None (N) – There is no loss of the integrity of any information, Low (L) – A limited amount of information might be tampered with or modified, but there is no serious impact on the protected system, High (H) – The attacker can modify any/all information on the target system, resulting in a complete loss of integrity.
@@ -152,24 +115,16 @@ const (
 func (e Integrity) ToPointer() *Integrity {
 	return &e
 }
-func (e *Integrity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Integrity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = Integrity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Integrity: %v", v)
-	}
+	return false
 }
 
 // PrivilegesRequired - Describes the level of privileges or access an attacker must have before successful exploitation. There are three possible values: None (N) – There is no privilege or special access required to conduct the attack, Low (L) – The attacker requires basic, “user” level privileges to leverage the exploit, High (H) – Administrative or similar access privileges are required for successful attack.
@@ -185,24 +140,16 @@ const (
 func (e PrivilegesRequired) ToPointer() *PrivilegesRequired {
 	return &e
 }
-func (e *PrivilegesRequired) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *PrivilegesRequired) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = PrivilegesRequired(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for PrivilegesRequired: %v", v)
-	}
+	return false
 }
 
 // Scope - Determines whether a vulnerability in one system or component can impact another system or component. If a vulnerability in a vulnerable component can affect a component which is in a different security scope than the vulnerable component, a scope change occurs. Scope has two possible ratings: Changed (C) – An exploited vulnerability can have a carry over impact on another system, Unchanged (U) – The exploited vulnerability is limited in damage to only the local security authority.
@@ -217,22 +164,16 @@ const (
 func (e Scope) ToPointer() *Scope {
 	return &e
 }
-func (e *Scope) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Scope) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "unchanged", "changed":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "unchanged":
-		fallthrough
-	case "changed":
-		*e = Scope(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Scope: %v", v)
-	}
+	return false
 }
 
 // UserInteraction - Describes whether a user, other than the attacker, is required to do anything or participate in exploitation of the vulnerability. User interaction has two possible values: None (N) – No user interaction is required, Required (R) – A user must complete some steps for the exploit to succeed. For example, a user might be required to install some software.
@@ -247,22 +188,16 @@ const (
 func (e UserInteraction) ToPointer() *UserInteraction {
 	return &e
 }
-func (e *UserInteraction) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *UserInteraction) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "required":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "required":
-		*e = UserInteraction(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for UserInteraction: %v", v)
-	}
+	return false
 }
 
 type CVSSComponents struct {

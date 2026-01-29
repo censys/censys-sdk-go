@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 // CVSSv4ComponentsAttackComplexity - Indicates conditions beyond the attacker’s control that must exist in order to exploit the vulnerability. The Attack Complexity metric is scored as either Low or High. There are two possible values: Low (L) – There are no specific pre-conditions required for exploitation, High (H) – The attacker must complete some number of preparatory steps in order to get access.
 type CVSSv4ComponentsAttackComplexity string
 
@@ -19,22 +14,16 @@ const (
 func (e CVSSv4ComponentsAttackComplexity) ToPointer() *CVSSv4ComponentsAttackComplexity {
 	return &e
 }
-func (e *CVSSv4ComponentsAttackComplexity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CVSSv4ComponentsAttackComplexity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = CVSSv4ComponentsAttackComplexity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CVSSv4ComponentsAttackComplexity: %v", v)
-	}
+	return false
 }
 
 type AttackRequirements string
@@ -48,22 +37,16 @@ const (
 func (e AttackRequirements) ToPointer() *AttackRequirements {
 	return &e
 }
-func (e *AttackRequirements) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *AttackRequirements) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "present":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "present":
-		*e = AttackRequirements(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AttackRequirements: %v", v)
-	}
+	return false
 }
 
 // CVSSv4ComponentsAttackVector - Indicates the level of access required for an attacker to exploit the vulnerability. The Attack Vector metric is scored in one of four levels: Network (N) – Vulnerabilities with this rating are remotely exploitable, from one or more hops away, up to, and including, remote exploitation over the Internet, Adjacent (A) – A vulnerability with this rating requires network adjacency for exploitation. The attack must be launched from the same physical or logical network, Local (L) – Vulnerabilities with this rating are not exploitable over a network, Physical (P) – An attacker must physically interact with the target system.
@@ -80,26 +63,16 @@ const (
 func (e CVSSv4ComponentsAttackVector) ToPointer() *CVSSv4ComponentsAttackVector {
 	return &e
 }
-func (e *CVSSv4ComponentsAttackVector) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CVSSv4ComponentsAttackVector) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "network", "adjacent", "local", "physical":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "network":
-		fallthrough
-	case "adjacent":
-		fallthrough
-	case "local":
-		fallthrough
-	case "physical":
-		*e = CVSSv4ComponentsAttackVector(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CVSSv4ComponentsAttackVector: %v", v)
-	}
+	return false
 }
 
 type Automatable string
@@ -113,22 +86,16 @@ const (
 func (e Automatable) ToPointer() *Automatable {
 	return &e
 }
-func (e *Automatable) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Automatable) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "no", "yes":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "no":
-		fallthrough
-	case "yes":
-		*e = Automatable(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Automatable: %v", v)
-	}
+	return false
 }
 
 // CVSSv4ComponentsAvailability - If an attack renders information unavailable, such as when a system crashes or through a DDoS attack, availability is negatively impacted. Availability has three possible values: None (N) – There is no loss of availability, Low (L) – Availability might be intermittently limited, or performance might be negatively impacted, as a result of a successful attack, High (H) – There is a complete loss of availability of the impacted system or information.
@@ -144,24 +111,16 @@ const (
 func (e CVSSv4ComponentsAvailability) ToPointer() *CVSSv4ComponentsAvailability {
 	return &e
 }
-func (e *CVSSv4ComponentsAvailability) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CVSSv4ComponentsAvailability) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = CVSSv4ComponentsAvailability(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CVSSv4ComponentsAvailability: %v", v)
-	}
+	return false
 }
 
 // CVSSv4ComponentsConfidentiality - Refers to the disclosure of sensitive information to authorized and unauthorized users, with the goal being that only authorized users are able to access the target data. Confidentiality has three potential values: High (H) – The attacker has full access to all resources in the impacted system, including highly sensitive information such as encryption keys, Low (L) – The attacker has partial access to information, with no control over what, specifically, they are able to access, None (N) – No data is accessible to unauthorized users as a result of the exploit.
@@ -177,24 +136,16 @@ const (
 func (e CVSSv4ComponentsConfidentiality) ToPointer() *CVSSv4ComponentsConfidentiality {
 	return &e
 }
-func (e *CVSSv4ComponentsConfidentiality) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CVSSv4ComponentsConfidentiality) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = CVSSv4ComponentsConfidentiality(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CVSSv4ComponentsConfidentiality: %v", v)
-	}
+	return false
 }
 
 // CVSSv4ComponentsIntegrity - Refers to whether the protected information has been tampered with or changed in any way. If there is no way for an attacker to alter the accuracy or completeness of the information, integrity has been maintained. Integrity has three values: None (N) – There is no loss of the integrity of any information, Low (L) – A limited amount of information might be tampered with or modified, but there is no serious impact on the protected system, High (H) – The attacker can modify any/all information on the target system, resulting in a complete loss of integrity.
@@ -210,24 +161,16 @@ const (
 func (e CVSSv4ComponentsIntegrity) ToPointer() *CVSSv4ComponentsIntegrity {
 	return &e
 }
-func (e *CVSSv4ComponentsIntegrity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CVSSv4ComponentsIntegrity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = CVSSv4ComponentsIntegrity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CVSSv4ComponentsIntegrity: %v", v)
-	}
+	return false
 }
 
 // CVSSv4ComponentsPrivilegesRequired - Describes the level of privileges or access an attacker must have before successful exploitation. There are three possible values: None (N) – There is no privilege or special access required to conduct the attack, Low (L) – The attacker requires basic, “user” level privileges to leverage the exploit, High (H) – Administrative or similar access privileges are required for successful attack.
@@ -243,24 +186,16 @@ const (
 func (e CVSSv4ComponentsPrivilegesRequired) ToPointer() *CVSSv4ComponentsPrivilegesRequired {
 	return &e
 }
-func (e *CVSSv4ComponentsPrivilegesRequired) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CVSSv4ComponentsPrivilegesRequired) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "low", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "low":
-		fallthrough
-	case "high":
-		*e = CVSSv4ComponentsPrivilegesRequired(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CVSSv4ComponentsPrivilegesRequired: %v", v)
-	}
+	return false
 }
 
 type ProviderUrgency string
@@ -276,26 +211,16 @@ const (
 func (e ProviderUrgency) ToPointer() *ProviderUrgency {
 	return &e
 }
-func (e *ProviderUrgency) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ProviderUrgency) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "clear", "green", "amber", "red":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "clear":
-		fallthrough
-	case "green":
-		fallthrough
-	case "amber":
-		fallthrough
-	case "red":
-		*e = ProviderUrgency(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ProviderUrgency: %v", v)
-	}
+	return false
 }
 
 type Recovery string
@@ -310,24 +235,16 @@ const (
 func (e Recovery) ToPointer() *Recovery {
 	return &e
 }
-func (e *Recovery) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Recovery) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "automatic", "user", "irrecoverable":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "automatic":
-		fallthrough
-	case "user":
-		fallthrough
-	case "irrecoverable":
-		*e = Recovery(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Recovery: %v", v)
-	}
+	return false
 }
 
 type Safety string
@@ -341,22 +258,16 @@ const (
 func (e Safety) ToPointer() *Safety {
 	return &e
 }
-func (e *Safety) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *Safety) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "negligible", "present":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "negligible":
-		fallthrough
-	case "present":
-		*e = Safety(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Safety: %v", v)
-	}
+	return false
 }
 
 // CVSSv4ComponentsUserInteraction - Describes whether a user, other than the attacker, is required to do anything or participate in exploitation of the vulnerability. User interaction has two possible values: None (N) – No user interaction is required, Required (R) – A user must complete some steps for the exploit to succeed. For example, a user might be required to install some software.
@@ -371,22 +282,16 @@ const (
 func (e CVSSv4ComponentsUserInteraction) ToPointer() *CVSSv4ComponentsUserInteraction {
 	return &e
 }
-func (e *CVSSv4ComponentsUserInteraction) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CVSSv4ComponentsUserInteraction) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "none", "required":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "none":
-		fallthrough
-	case "required":
-		*e = CVSSv4ComponentsUserInteraction(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CVSSv4ComponentsUserInteraction: %v", v)
-	}
+	return false
 }
 
 type ValueDensity string
@@ -400,22 +305,16 @@ const (
 func (e ValueDensity) ToPointer() *ValueDensity {
 	return &e
 }
-func (e *ValueDensity) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ValueDensity) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "diffuse", "concentrated":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "diffuse":
-		fallthrough
-	case "concentrated":
-		*e = ValueDensity(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ValueDensity: %v", v)
-	}
+	return false
 }
 
 type VulnerabilityResponseEffort string
@@ -430,24 +329,16 @@ const (
 func (e VulnerabilityResponseEffort) ToPointer() *VulnerabilityResponseEffort {
 	return &e
 }
-func (e *VulnerabilityResponseEffort) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *VulnerabilityResponseEffort) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "low", "moderate", "high":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "low":
-		fallthrough
-	case "moderate":
-		fallthrough
-	case "high":
-		*e = VulnerabilityResponseEffort(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for VulnerabilityResponseEffort: %v", v)
-	}
+	return false
 }
 
 type CVSSv4Components struct {

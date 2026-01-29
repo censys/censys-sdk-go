@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type TrackedScanTaskStatus string
 
 const (
@@ -22,30 +17,16 @@ const (
 func (e TrackedScanTaskStatus) ToPointer() *TrackedScanTaskStatus {
 	return &e
 }
-func (e *TrackedScanTaskStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *TrackedScanTaskStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "scanning", "scanned", "rejected", "timed_out", "completed", "ignored":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "scanning":
-		fallthrough
-	case "scanned":
-		fallthrough
-	case "rejected":
-		fallthrough
-	case "timed_out":
-		fallthrough
-	case "completed":
-		fallthrough
-	case "ignored":
-		*e = TrackedScanTaskStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for TrackedScanTaskStatus: %v", v)
-	}
+	return false
 }
 
 type TrackedScanTask struct {

@@ -3,8 +3,6 @@
 package components
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/censys/censys-sdk-go/internal/utils"
 	"time"
 )
@@ -22,26 +20,16 @@ const (
 func (e CollectionStatus) ToPointer() *CollectionStatus {
 	return &e
 }
-func (e *CollectionStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CollectionStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "unspecified", "populating", "active", "paused", "archived":
+			return true
+		}
 	}
-	switch v {
-	case "unspecified":
-		fallthrough
-	case "populating":
-		fallthrough
-	case "active":
-		fallthrough
-	case "paused":
-		fallthrough
-	case "archived":
-		*e = CollectionStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CollectionStatus: %v", v)
-	}
+	return false
 }
 
 type StatusReason string
@@ -59,30 +47,16 @@ const (
 func (e StatusReason) ToPointer() *StatusReason {
 	return &e
 }
-func (e *StatusReason) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *StatusReason) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "unspecified", "not_enough_credits", "not_entitled", "too_many_assets", "manual", "query_changed", "initial":
+			return true
+		}
 	}
-	switch v {
-	case "unspecified":
-		fallthrough
-	case "not_enough_credits":
-		fallthrough
-	case "not_entitled":
-		fallthrough
-	case "too_many_assets":
-		fallthrough
-	case "manual":
-		fallthrough
-	case "query_changed":
-		fallthrough
-	case "initial":
-		*e = StatusReason(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for StatusReason: %v", v)
-	}
+	return false
 }
 
 type Collection struct {

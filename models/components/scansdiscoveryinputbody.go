@@ -20,7 +20,7 @@ func (h HostnamePort) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HostnamePort) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"hostname", "port"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -50,7 +50,7 @@ func (t Target2) MarshalJSON() ([]byte, error) {
 }
 
 func (t *Target2) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"hostname_port"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -75,7 +75,7 @@ func (h HostPort) MarshalJSON() ([]byte, error) {
 }
 
 func (h *HostPort) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &h, "", false, []string{"ip", "port"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &h, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -105,7 +105,7 @@ func (t Target1) MarshalJSON() ([]byte, error) {
 }
 
 func (t *Target1) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"host_port"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -152,17 +152,43 @@ func CreateScansDiscoveryInputBodyTargetTarget2(target2 Target2) ScansDiscoveryI
 
 func (u *ScansDiscoveryInputBodyTarget) UnmarshalJSON(data []byte) error {
 
+	var candidates []utils.UnionCandidate
+
+	// Collect all valid candidates
 	var target1 Target1 = Target1{}
 	if err := utils.UnmarshalJSON(data, &target1, "", true, nil); err == nil {
-		u.Target1 = &target1
-		u.Type = ScansDiscoveryInputBodyTargetTypeTarget1
-		return nil
+		candidates = append(candidates, utils.UnionCandidate{
+			Type:  ScansDiscoveryInputBodyTargetTypeTarget1,
+			Value: &target1,
+		})
 	}
 
 	var target2 Target2 = Target2{}
 	if err := utils.UnmarshalJSON(data, &target2, "", true, nil); err == nil {
-		u.Target2 = &target2
-		u.Type = ScansDiscoveryInputBodyTargetTypeTarget2
+		candidates = append(candidates, utils.UnionCandidate{
+			Type:  ScansDiscoveryInputBodyTargetTypeTarget2,
+			Value: &target2,
+		})
+	}
+
+	if len(candidates) == 0 {
+		return fmt.Errorf("could not unmarshal `%s` into any supported union types for ScansDiscoveryInputBodyTarget", string(data))
+	}
+
+	// Pick the best candidate using multi-stage filtering
+	best := utils.PickBestUnionCandidate(candidates, data)
+	if best == nil {
+		return fmt.Errorf("could not unmarshal `%s` into any supported union types for ScansDiscoveryInputBodyTarget", string(data))
+	}
+
+	// Set the union type and value based on the best candidate
+	u.Type = best.Type.(ScansDiscoveryInputBodyTargetType)
+	switch best.Type {
+	case ScansDiscoveryInputBodyTargetTypeTarget1:
+		u.Target1 = best.Value.(*Target1)
+		return nil
+	case ScansDiscoveryInputBodyTargetTypeTarget2:
+		u.Target2 = best.Value.(*Target2)
 		return nil
 	}
 

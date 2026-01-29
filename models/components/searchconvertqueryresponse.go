@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type SearchConvertQueryResponseTargets string
 
 const (
@@ -19,24 +14,16 @@ const (
 func (e SearchConvertQueryResponseTargets) ToPointer() *SearchConvertQueryResponseTargets {
 	return &e
 }
-func (e *SearchConvertQueryResponseTargets) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *SearchConvertQueryResponseTargets) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "host", "web", "cert", "unknown":
+			return true
+		}
 	}
-	switch v {
-	case "host":
-		fallthrough
-	case "web":
-		fallthrough
-	case "cert":
-		fallthrough
-	case "unknown":
-		*e = SearchConvertQueryResponseTargets(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for SearchConvertQueryResponseTargets: %v", v)
-	}
+	return false
 }
 
 type SearchConvertQueryResponse struct {

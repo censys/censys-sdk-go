@@ -2,11 +2,6 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type ParseStatus string
 
 const (
@@ -19,24 +14,16 @@ const (
 func (e ParseStatus) ToPointer() *ParseStatus {
 	return &e
 }
-func (e *ParseStatus) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ParseStatus) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "success", "fail", "corrupted":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "success":
-		fallthrough
-	case "fail":
-		fallthrough
-	case "corrupted":
-		*e = ParseStatus(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ParseStatus: %v", v)
-	}
+	return false
 }
 
 // ValidationLevel - The extent to which the certificate's issuer validated the identity of the entity requesting the certificate. Options include Domain validated (DV), Organization Validated (OV), or Extended Validation (EV).
@@ -52,24 +39,16 @@ const (
 func (e ValidationLevel) ToPointer() *ValidationLevel {
 	return &e
 }
-func (e *ValidationLevel) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *ValidationLevel) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "", "dv", "ov", "ev":
+			return true
+		}
 	}
-	switch v {
-	case "":
-		fallthrough
-	case "dv":
-		fallthrough
-	case "ov":
-		fallthrough
-	case "ev":
-		*e = ValidationLevel(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ValidationLevel: %v", v)
-	}
+	return false
 }
 
 type Certificate struct {
