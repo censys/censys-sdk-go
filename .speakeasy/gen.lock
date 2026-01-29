@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 7221b6ceacbfc2cd8155c3d3ad8f4f53
-  docVersion: 1.0.69
-  speakeasyVersion: 1.700.1
-  generationVersion: 2.801.0
-  releaseVersion: 0.25.4
-  configChecksum: 8984b32b5b22768e42694b2947bc5033
+  docChecksum: 133adc6bd5fd663ffb80f3e0b4509d77
+  docVersion: 1.0.71
+  speakeasyVersion: 1.700.2
+  generationVersion: 2.801.2
+  releaseVersion: 0.25.5
+  configChecksum: c2e7cd8d04590496399bb9989fc4f149
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: f281a697-4eb7-43e5-8fc8-6132b10e631e
-  pristine_commit_hash: ffa205fb902393b1be339fabbde74c77382aef09
-  pristine_tree_hash: b50bc6ca3c1d4ff98ee59ce29aadb70732d943a8
+  generation_id: ee5de596-604c-4d9b-a807-d5cf12df8734
+  pristine_commit_hash: 324e79352d73c45f841398889d7ec21fc5afdd07
+  pristine_tree_hash: 6ecd287a595877f87cbc37d402d0ff8a9ea97325
 features:
   go:
     acceptHeaders: 2.81.2
@@ -5319,8 +5319,8 @@ trackedFiles:
     pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:e32280802c759f0d0fb49b11b63a5c12ebdb325a
-    pristine_git_object: 659f13e4c49b237351af61a1808ffde948b5e02b
+    last_write_checksum: sha1:d48d8b98cb84d89aca8ae21d2e4be576d7bee3bf
+    pristine_git_object: 613d06f33d3d8b7476981d6b6479c1d544bdefe6
   threathunting.go:
     id: f45dc6b4d4a3
     last_write_checksum: sha1:a46a8183f45ae85f3e0e1e9306e68a3a42107f58
