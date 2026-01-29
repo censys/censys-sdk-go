@@ -34,7 +34,7 @@ go:
   clientServerStatusCodesAsErrors: true
   defaultErrorName: SDKError
   flattenGlobalSecurity: true
-  forwardCompatibleEnumsByDefault: false
+  forwardCompatibleEnumsByDefault: true
   imports:
     option: openapi
     paths:
