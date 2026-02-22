@@ -60,9 +60,11 @@ type Service struct {
 	Etcd                     *Etcd                     `json:"etcd,omitempty"`
 	Ethereum                 *Ethereum                 `json:"ethereum,omitempty"`
 	Exposures                []Risk                    `json:"exposures,omitempty"`
+	FlashSocketPolicy        *FlashSocketPolicy        `json:"flash_socket_policy,omitempty"`
 	Fox                      *Fox                      `json:"fox,omitempty"`
 	Ftp                      *Ftp                      `json:"ftp,omitempty"`
 	Gearman                  *Gearman                  `json:"gearman,omitempty"`
+	Gemini                   *Gemini                   `json:"gemini,omitempty"`
 	Hajime                   *Hajime                   `json:"hajime,omitempty"`
 	Hardware                 []Attribute               `json:"hardware,omitempty"`
 	HidVertx                 *HidVertx                 `json:"hid_vertx,omitempty"`
@@ -82,7 +84,10 @@ type Service struct {
 	Labels                   []Label                   `json:"labels,omitempty"`
 	Ldap                     *Ldap                     `json:"ldap,omitempty"`
 	Lpd                      *Lpd                      `json:"lpd,omitempty"`
+	Mavlink                  *Mavlink                  `json:"mavlink,omitempty"`
 	Mdns                     *Mdns                     `json:"mdns,omitempty"`
+	Melsec                   *Melsec                   `json:"melsec,omitempty"`
+	Memberlist               *Memberlist               `json:"memberlist,omitempty"`
 	Memcached                *Memcached                `json:"memcached,omitempty"`
 	MikrotikWinbox           *MikrotikWinbox           `json:"mikrotik_winbox,omitempty"`
 	Minecraft                *Minecraft                `json:"minecraft,omitempty"`
@@ -128,7 +133,11 @@ type Service struct {
 	Ripple                   *Ripple                   `json:"ripple,omitempty"`
 	Rlogin                   *Rlogin                   `json:"rlogin,omitempty"`
 	Rocketmq                 *Rocketmq                 `json:"rocketmq,omitempty"`
+	RouterosAPI              *RouterosAPI              `json:"routeros_api,omitempty"`
 	Rtsp                     *Rtsp                     `json:"rtsp,omitempty"`
+	RustdeskHeartbeat        *RustdeskHeartbeat        `json:"rustdesk_heartbeat,omitempty"`
+	RustdeskRelay            *RustdeskRelay            `json:"rustdesk_relay,omitempty"`
+	RustdeskRendezvous       *RustdeskRendezvous       `json:"rustdesk_rendezvous,omitempty"`
 	S7                       *S7                       `json:"s7,omitempty"`
 	SapRouter                *SapRouter                `json:"sap_router,omitempty"`
 	ScanTime                 *string                   `json:"scan_time,omitempty"`
@@ -391,6 +400,13 @@ func (s *Service) GetExposures() []Risk {
 	return s.Exposures
 }
 
+func (s *Service) GetFlashSocketPolicy() *FlashSocketPolicy {
+	if s == nil {
+		return nil
+	}
+	return s.FlashSocketPolicy
+}
+
 func (s *Service) GetFox() *Fox {
 	if s == nil {
 		return nil
@@ -410,6 +426,13 @@ func (s *Service) GetGearman() *Gearman {
 		return nil
 	}
 	return s.Gearman
+}
+
+func (s *Service) GetGemini() *Gemini {
+	if s == nil {
+		return nil
+	}
+	return s.Gemini
 }
 
 func (s *Service) GetHajime() *Hajime {
@@ -545,11 +568,32 @@ func (s *Service) GetLpd() *Lpd {
 	return s.Lpd
 }
 
+func (s *Service) GetMavlink() *Mavlink {
+	if s == nil {
+		return nil
+	}
+	return s.Mavlink
+}
+
 func (s *Service) GetMdns() *Mdns {
 	if s == nil {
 		return nil
 	}
 	return s.Mdns
+}
+
+func (s *Service) GetMelsec() *Melsec {
+	if s == nil {
+		return nil
+	}
+	return s.Melsec
+}
+
+func (s *Service) GetMemberlist() *Memberlist {
+	if s == nil {
+		return nil
+	}
+	return s.Memberlist
 }
 
 func (s *Service) GetMemcached() *Memcached {
@@ -867,11 +911,39 @@ func (s *Service) GetRocketmq() *Rocketmq {
 	return s.Rocketmq
 }
 
+func (s *Service) GetRouterosAPI() *RouterosAPI {
+	if s == nil {
+		return nil
+	}
+	return s.RouterosAPI
+}
+
 func (s *Service) GetRtsp() *Rtsp {
 	if s == nil {
 		return nil
 	}
 	return s.Rtsp
+}
+
+func (s *Service) GetRustdeskHeartbeat() *RustdeskHeartbeat {
+	if s == nil {
+		return nil
+	}
+	return s.RustdeskHeartbeat
+}
+
+func (s *Service) GetRustdeskRelay() *RustdeskRelay {
+	if s == nil {
+		return nil
+	}
+	return s.RustdeskRelay
+}
+
+func (s *Service) GetRustdeskRendezvous() *RustdeskRendezvous {
+	if s == nil {
+		return nil
+	}
+	return s.RustdeskRendezvous
 }
 
 func (s *Service) GetS7() *S7 {

@@ -70,7 +70,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Create
@@ -132,7 +133,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 409, 412, 422       | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Delete
@@ -189,7 +191,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Get
@@ -246,7 +249,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Update
@@ -309,7 +313,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404, 412            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListEvents
@@ -371,7 +376,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Aggregate
@@ -434,7 +440,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404, 422                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Search
@@ -499,5 +506,6 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |

@@ -5,7 +5,7 @@ package components
 type SearchQueryInputBody struct {
 	// Specify fields to only return in the response. If you provide fields and omit `host.services.port`, `host.services.transport_protocol`, and `host.services.protocol`, then `matched_services` will not be returned in the response.
 	Fields []string `json:"fields,omitempty"`
-	// amount of results to return per page
+	// Number of results to return to per page. The default and maximum is 100.
 	PageSize *int64 `json:"page_size,omitempty"`
 	// page token for the requested page of search results
 	PageToken *string `json:"page_token,omitempty"`

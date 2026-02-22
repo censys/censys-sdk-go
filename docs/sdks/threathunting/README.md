@@ -71,7 +71,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## CreateTrackedScan
@@ -138,7 +139,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 422                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetTrackedScanThreatHunting
@@ -195,7 +197,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 404                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListThreats
@@ -252,7 +255,8 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403, 422                      | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 422                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ValueCounts
@@ -324,5 +328,6 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 403                           | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 422                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
