@@ -32,6 +32,7 @@ type HTTPRedirectChainLink struct {
 	Path              *string                                 `json:"path,omitempty"`
 	Port              *int                                    `json:"port,omitempty"`
 	Reason            *string                                 `json:"reason,omitempty"`
+	Scheme            *string                                 `json:"scheme,omitempty"`
 	TransportProtocol *HTTPRedirectChainLinkTransportProtocol `json:"transport_protocol,omitempty"`
 }
 
@@ -61,6 +62,13 @@ func (h *HTTPRedirectChainLink) GetReason() *string {
 		return nil
 	}
 	return h.Reason
+}
+
+func (h *HTTPRedirectChainLink) GetScheme() *string {
+	if h == nil {
+		return nil
+	}
+	return h.Scheme
 }
 
 func (h *HTTPRedirectChainLink) GetTransportProtocol() *HTTPRedirectChainLinkTransportProtocol {

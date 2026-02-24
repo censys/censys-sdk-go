@@ -1,0 +1,12 @@
+# Memberlist
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `Encrypted`                                                                     | **bool*                                                                         | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `EncryptedLen`                                                                  | **int*                                                                          | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `EncryptionVersion`                                                             | **int*                                                                          | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `ErrorMessage`                                                                  | **string*                                                                       | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `Node`                                                                          | [*components.MemberlistNodeInfo](../../models/components/memberlistnodeinfo.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
