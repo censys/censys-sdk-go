@@ -302,6 +302,7 @@ For example, the `GetOrganizationDetails` function may return the following erro
 | ----------------------------- | ------------- | ------------------------ |
 | sdkerrors.AuthenticationError | 401           | application/json         |
 | sdkerrors.ErrorModel          | 403, 404, 422 | application/problem+json |
+| sdkerrors.ErrorModel          | 500           | application/problem+json |
 | sdkerrors.SDKError            | 4XX, 5XX      | \*/\*                    |
 
 ### Example
@@ -331,6 +332,12 @@ func main() {
 	if err != nil {
 
 		var e *sdkerrors.AuthenticationError
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.ErrorModel
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())

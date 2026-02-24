@@ -56,9 +56,11 @@ type ServiceScan struct {
 	Epmd                     *Epmd                         `json:"epmd,omitempty"`
 	Etcd                     *Etcd                         `json:"etcd,omitempty"`
 	Ethereum                 *Ethereum                     `json:"ethereum,omitempty"`
+	FlashSocketPolicy        *FlashSocketPolicy            `json:"flash_socket_policy,omitempty"`
 	Fox                      *Fox                          `json:"fox,omitempty"`
 	Ftp                      *Ftp                          `json:"ftp,omitempty"`
 	Gearman                  *Gearman                      `json:"gearman,omitempty"`
+	Gemini                   *Gemini                       `json:"gemini,omitempty"`
 	Hajime                   *Hajime                       `json:"hajime,omitempty"`
 	HidVertx                 *HidVertx                     `json:"hid_vertx,omitempty"`
 	Hikvision                *Hikvision                    `json:"hikvision,omitempty"`
@@ -75,7 +77,10 @@ type ServiceScan struct {
 	L2tp                     *L2Tp                         `json:"l2tp,omitempty"`
 	Ldap                     *Ldap                         `json:"ldap,omitempty"`
 	Lpd                      *Lpd                          `json:"lpd,omitempty"`
+	Mavlink                  *Mavlink                      `json:"mavlink,omitempty"`
 	Mdns                     *Mdns                         `json:"mdns,omitempty"`
+	Melsec                   *Melsec                       `json:"melsec,omitempty"`
+	Memberlist               *Memberlist                   `json:"memberlist,omitempty"`
 	Memcached                *Memcached                    `json:"memcached,omitempty"`
 	MikrotikWinbox           *MikrotikWinbox               `json:"mikrotik_winbox,omitempty"`
 	Minecraft                *Minecraft                    `json:"minecraft,omitempty"`
@@ -119,7 +124,11 @@ type ServiceScan struct {
 	Ripple                   *Ripple                       `json:"ripple,omitempty"`
 	Rlogin                   *Rlogin                       `json:"rlogin,omitempty"`
 	Rocketmq                 *Rocketmq                     `json:"rocketmq,omitempty"`
+	RouterosAPI              *RouterosAPI                  `json:"routeros_api,omitempty"`
 	Rtsp                     *Rtsp                         `json:"rtsp,omitempty"`
+	RustdeskHeartbeat        *RustdeskHeartbeat            `json:"rustdesk_heartbeat,omitempty"`
+	RustdeskRelay            *RustdeskRelay                `json:"rustdesk_relay,omitempty"`
+	RustdeskRendezvous       *RustdeskRendezvous           `json:"rustdesk_rendezvous,omitempty"`
 	S7                       *S7                           `json:"s7,omitempty"`
 	SapRouter                *SapRouter                    `json:"sap_router,omitempty"`
 	ScanTime                 *string                       `json:"scan_time,omitempty"`
@@ -351,6 +360,13 @@ func (s *ServiceScan) GetEthereum() *Ethereum {
 	return s.Ethereum
 }
 
+func (s *ServiceScan) GetFlashSocketPolicy() *FlashSocketPolicy {
+	if s == nil {
+		return nil
+	}
+	return s.FlashSocketPolicy
+}
+
 func (s *ServiceScan) GetFox() *Fox {
 	if s == nil {
 		return nil
@@ -370,6 +386,13 @@ func (s *ServiceScan) GetGearman() *Gearman {
 		return nil
 	}
 	return s.Gearman
+}
+
+func (s *ServiceScan) GetGemini() *Gemini {
+	if s == nil {
+		return nil
+	}
+	return s.Gemini
 }
 
 func (s *ServiceScan) GetHajime() *Hajime {
@@ -484,11 +507,32 @@ func (s *ServiceScan) GetLpd() *Lpd {
 	return s.Lpd
 }
 
+func (s *ServiceScan) GetMavlink() *Mavlink {
+	if s == nil {
+		return nil
+	}
+	return s.Mavlink
+}
+
 func (s *ServiceScan) GetMdns() *Mdns {
 	if s == nil {
 		return nil
 	}
 	return s.Mdns
+}
+
+func (s *ServiceScan) GetMelsec() *Melsec {
+	if s == nil {
+		return nil
+	}
+	return s.Melsec
+}
+
+func (s *ServiceScan) GetMemberlist() *Memberlist {
+	if s == nil {
+		return nil
+	}
+	return s.Memberlist
 }
 
 func (s *ServiceScan) GetMemcached() *Memcached {
@@ -792,11 +836,39 @@ func (s *ServiceScan) GetRocketmq() *Rocketmq {
 	return s.Rocketmq
 }
 
+func (s *ServiceScan) GetRouterosAPI() *RouterosAPI {
+	if s == nil {
+		return nil
+	}
+	return s.RouterosAPI
+}
+
 func (s *ServiceScan) GetRtsp() *Rtsp {
 	if s == nil {
 		return nil
 	}
 	return s.Rtsp
+}
+
+func (s *ServiceScan) GetRustdeskHeartbeat() *RustdeskHeartbeat {
+	if s == nil {
+		return nil
+	}
+	return s.RustdeskHeartbeat
+}
+
+func (s *ServiceScan) GetRustdeskRelay() *RustdeskRelay {
+	if s == nil {
+		return nil
+	}
+	return s.RustdeskRelay
+}
+
+func (s *ServiceScan) GetRustdeskRendezvous() *RustdeskRendezvous {
+	if s == nil {
+		return nil
+	}
+	return s.RustdeskRendezvous
 }
 
 func (s *ServiceScan) GetS7() *S7 {

@@ -5,6 +5,7 @@ package components
 type Host struct {
 	AutonomousSystem *Routing   `json:"autonomous_system,omitempty"`
 	DNS              *HostDNS   `json:"dns,omitempty"`
+	Greynoise        *Greynoise `json:"greynoise,omitempty"`
 	Hardware         *Attribute `json:"hardware,omitempty"`
 	IP               *string    `json:"ip,omitempty"`
 	Labels           []Label    `json:"labels,omitempty"`
@@ -27,6 +28,13 @@ func (h *Host) GetDNS() *HostDNS {
 		return nil
 	}
 	return h.DNS
+}
+
+func (h *Host) GetGreynoise() *Greynoise {
+	if h == nil {
+		return nil
+	}
+	return h.Greynoise
 }
 
 func (h *Host) GetHardware() *Attribute {
