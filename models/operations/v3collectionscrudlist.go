@@ -3,6 +3,8 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/censys/censys-sdk-go/models/components"
 )
 
@@ -17,6 +19,38 @@ func (v *V3CollectionsCrudListGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+type CollectionStatuses string
+
+const (
+	CollectionStatusesPopulating CollectionStatuses = "populating"
+	CollectionStatusesActive     CollectionStatuses = "active"
+	CollectionStatusesPaused     CollectionStatuses = "paused"
+	CollectionStatusesArchived   CollectionStatuses = "archived"
+)
+
+func (e CollectionStatuses) ToPointer() *CollectionStatuses {
+	return &e
+}
+func (e *CollectionStatuses) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "populating":
+		fallthrough
+	case "active":
+		fallthrough
+	case "paused":
+		fallthrough
+	case "archived":
+		*e = CollectionStatuses(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CollectionStatuses: %v", v)
+	}
+}
+
 type V3CollectionsCrudListRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
@@ -24,6 +58,8 @@ type V3CollectionsCrudListRequest struct {
 	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`
 	// amount of results to return per page
 	PageSize *int64 `queryParam:"style=form,explode=false,name=page_size"`
+	// statuses of collection for results to be filtered on.
+	CollectionStatuses []CollectionStatuses `queryParam:"style=form,explode=false,name=collection_statuses"`
 }
 
 func (v *V3CollectionsCrudListRequest) GetOrganizationID() *string {
@@ -45,6 +81,13 @@ func (v *V3CollectionsCrudListRequest) GetPageSize() *int64 {
 		return nil
 	}
 	return v.PageSize
+}
+
+func (v *V3CollectionsCrudListRequest) GetCollectionStatuses() []CollectionStatuses {
+	if v == nil {
+		return nil
+	}
+	return v.CollectionStatuses
 }
 
 type V3CollectionsCrudListResponse struct {
