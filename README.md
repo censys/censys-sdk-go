@@ -127,6 +127,7 @@ func main() {
 * [GetCertificateRaw](docs/sdks/globaldata/README.md#getcertificateraw) - Get a certificate in PEM format
 * [GetHosts](docs/sdks/globaldata/README.md#gethosts) - Retrieve multiple hosts
 * [GetHost](docs/sdks/globaldata/README.md#gethost) - Get a host
+* [ListServicesOnHost](docs/sdks/globaldata/README.md#listservicesonhost) - Get service history for a host
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
 * [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](docs/sdks/globaldata/README.md#getwebproperty) - Get a web property

@@ -12,6 +12,7 @@ Endpoints related to the Global Data product
 * [GetCertificateRaw](#getcertificateraw) - Get a certificate in PEM format
 * [GetHosts](#gethosts) - Retrieve multiple hosts
 * [GetHost](#gethost) - Get a host
+* [ListServicesOnHost](#listservicesonhost) - Get service history for a host
 * [GetHostTimeline](#gethosttimeline) - Get host event history
 * [GetWebProperties](#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](#getwebproperty) - Get a web property
@@ -385,6 +386,70 @@ func main() {
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
 | sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## ListServicesOnHost
+
+Retrieve historical service observations for a host. This endpoint returns time ranges during which services were detected on the host.<br><br>You can define a specific time frame of interest. If you do not specify a time frame, this endpoint will search the historical dataset that is available to your account.<br><br>You can filter by port number, protocol, and transport protocol.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-service-on-host" method="get" path="/v3/global/asset/host/{host_id}/observations/services" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.ListServicesOnHost(ctx, operations.V3GlobaldataServiceOnHostRequest{
+        StartTime: censyssdkgo.Pointer("2024-01-01T00:00:00Z"),
+        EndTime: censyssdkgo.Pointer("2024-01-31T23:59:59Z"),
+        PageSize: censyssdkgo.Pointer[int](50),
+        Port: censyssdkgo.Pointer[int](443),
+        Protocol: censyssdkgo.Pointer("HTTP"),
+        TransportProtocol: operations.TransportProtocolTCP.ToPointer(),
+        HostID: "8.8.8.8",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeServicesOnHostResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                      | :heavy_check_mark:                                                                                         | The context to use for the request.                                                                        |
+| `request`                                                                                                  | [operations.V3GlobaldataServiceOnHostRequest](../../models/operations/v3globaldataserviceonhostrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `opts`                                                                                                     | [][operations.Option](../../models/operations/option.md)                                                   | :heavy_minus_sign:                                                                                         | The options for this request.                                                                              |
+
+### Response
+
+**[*operations.V3GlobaldataServiceOnHostResponse](../../models/operations/v3globaldataserviceonhostresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404, 409            | application/problem+json      |
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 

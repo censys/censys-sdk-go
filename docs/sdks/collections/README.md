@@ -43,6 +43,10 @@ func main() {
     res, err := s.Collections.List(ctx, operations.V3CollectionsCrudListRequest{
         PageToken: censyssdkgo.Pointer("<next_page_token>"),
         PageSize: censyssdkgo.Pointer[int64](1),
+        CollectionStatuses: []operations.CollectionStatuses{
+            operations.CollectionStatusesPopulating,
+            operations.CollectionStatusesActive,
+        },
     })
     if err != nil {
         log.Fatal(err)

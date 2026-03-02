@@ -30,6 +30,7 @@ func (e *ServiceTransportProtocol) IsExact() bool {
 type Service struct {
 	Activemq                 *Activemq                 `json:"activemq,omitempty"`
 	Amqp                     *Amqp                     `json:"amqp,omitempty"`
+	AnermaCfForth            *AnermaCfForth            `json:"anerma_cf_forth,omitempty"`
 	AnyConnect               *AnyConnect               `json:"any_connect,omitempty"`
 	AsteriskManagerInterface *AsteriskManagerInterface `json:"asterisk_manager_interface,omitempty"`
 	Bacnet                   *Bacnet                   `json:"bacnet,omitempty"`
@@ -44,6 +45,7 @@ type Service struct {
 	Coap                     *Coap                     `json:"coap,omitempty"`
 	CrestronCp3              *CrestronCp3              `json:"crestron_cp3,omitempty"`
 	CrestronDinAp2           *CrestronDinAp2           `json:"crestron_din_ap2,omitempty"`
+	CursorOnTarget           *CursorOnTarget           `json:"cursor_on_target,omitempty"`
 	Cwmp                     *Cwmp                     `json:"cwmp,omitempty"`
 	Darkcomet                *Darkcomet                `json:"darkcomet,omitempty"`
 	Darkgate                 *Darkgate                 `json:"darkgate,omitempty"`
@@ -62,6 +64,7 @@ type Service struct {
 	Exposures                []Risk                    `json:"exposures,omitempty"`
 	FlashSocketPolicy        *FlashSocketPolicy        `json:"flash_socket_policy,omitempty"`
 	Fox                      *Fox                      `json:"fox,omitempty"`
+	Frps                     *Frps                     `json:"frps,omitempty"`
 	Ftp                      *Ftp                      `json:"ftp,omitempty"`
 	Gearman                  *Gearman                  `json:"gearman,omitempty"`
 	Gemini                   *Gemini                   `json:"gemini,omitempty"`
@@ -70,6 +73,7 @@ type Service struct {
 	HidVertx                 *HidVertx                 `json:"hid_vertx,omitempty"`
 	Hikvision                *Hikvision                `json:"hikvision,omitempty"`
 	Ibmnje                   *Ibmnje                   `json:"ibmnje,omitempty"`
+	Icap                     *Icap                     `json:"icap,omitempty"`
 	Ike                      *Ike                      `json:"ike,omitempty"`
 	Imap                     *Imap                     `json:"imap,omitempty"`
 	Iota                     *Iota                     `json:"iota,omitempty"`
@@ -156,6 +160,7 @@ type Service struct {
 	Ssdp                     *Ssdp                     `json:"ssdp,omitempty"`
 	SSH                      *SSH                      `json:"ssh,omitempty"`
 	Steam                    *Steam                    `json:"steam,omitempty"`
+	Stun                     *Stun                     `json:"stun,omitempty"`
 	TacacsPlus               *TacacsPlus               `json:"tacacs_plus,omitempty"`
 	TeamViewer               *TeamViewer               `json:"team_viewer,omitempty"`
 	Telnet                   *Telnet                   `json:"telnet,omitempty"`
@@ -188,6 +193,13 @@ func (s *Service) GetAmqp() *Amqp {
 		return nil
 	}
 	return s.Amqp
+}
+
+func (s *Service) GetAnermaCfForth() *AnermaCfForth {
+	if s == nil {
+		return nil
+	}
+	return s.AnermaCfForth
 }
 
 func (s *Service) GetAnyConnect() *AnyConnect {
@@ -286,6 +298,13 @@ func (s *Service) GetCrestronDinAp2() *CrestronDinAp2 {
 		return nil
 	}
 	return s.CrestronDinAp2
+}
+
+func (s *Service) GetCursorOnTarget() *CursorOnTarget {
+	if s == nil {
+		return nil
+	}
+	return s.CursorOnTarget
 }
 
 func (s *Service) GetCwmp() *Cwmp {
@@ -414,6 +433,13 @@ func (s *Service) GetFox() *Fox {
 	return s.Fox
 }
 
+func (s *Service) GetFrps() *Frps {
+	if s == nil {
+		return nil
+	}
+	return s.Frps
+}
+
 func (s *Service) GetFtp() *Ftp {
 	if s == nil {
 		return nil
@@ -468,6 +494,13 @@ func (s *Service) GetIbmnje() *Ibmnje {
 		return nil
 	}
 	return s.Ibmnje
+}
+
+func (s *Service) GetIcap() *Icap {
+	if s == nil {
+		return nil
+	}
+	return s.Icap
 }
 
 func (s *Service) GetIke() *Ike {
@@ -1070,6 +1103,13 @@ func (s *Service) GetSteam() *Steam {
 		return nil
 	}
 	return s.Steam
+}
+
+func (s *Service) GetStun() *Stun {
+	if s == nil {
+		return nil
+	}
+	return s.Stun
 }
 
 func (s *Service) GetTacacsPlus() *TacacsPlus {
