@@ -2,7 +2,7 @@
 
 package censyssdkgo
 
-// Generated from OpenAPI doc version 1.0.77 and generator version 2.836.5
+// Generated from OpenAPI doc version 1.0.80 and generator version 2.845.15
 
 import (
 	"context"
@@ -66,7 +66,7 @@ type SDK struct {
 
 type SDKOption func(*SDK)
 
-// WithServerURL allows the overriding of the default server URL
+// WithServerURL allows providing an alternative server URL
 func WithServerURL(serverURL string) SDKOption {
 	return func(sdk *SDK) {
 		sdk.sdkConfiguration.ServerURL = serverURL
@@ -142,9 +142,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.25.6",
+		SDKVersion: "0.25.7",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.25.6 2.836.5 1.0.77 github.com/censys/censys-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 0.25.7 2.845.15 1.0.80 github.com/censys/censys-sdk-go",
 			Globals:    globals.Globals{},
 			ServerList: ServerList,
 		},
