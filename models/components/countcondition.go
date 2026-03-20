@@ -3,7 +3,7 @@
 package components
 
 type CountCondition struct {
-	// Field-value pairs to count matches for. Must target fields from the same nested object.
+	// Field-value pairs to count matches for. Must target fields from the same nested object and may contain at most 5 pairs per group.
 	FieldValuePairs []FieldValuePair `json:"field_value_pairs"`
 }
 
