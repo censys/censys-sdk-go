@@ -2,6 +2,19 @@
 
 Certificate version v1(0), v2(1), v3(2).
 
+## Example Usage
+
+```go
+import (
+	"github.com/censys/censys-sdk-go/models/components"
+)
+
+value := components.VersionSelectedUnknown
+
+// Open enum: custom values can be created with a direct type cast
+custom := components.VersionSelected("custom_value")
+```
+
 
 ## Values
 

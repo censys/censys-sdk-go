@@ -33,3 +33,6 @@ func (v *V3AccountmanagementUserCreditsResponse) GetHeaders() map[string][]strin
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementusercreditsresponse
+// #endregion class-body-v3accountmanagementusercreditsresponse

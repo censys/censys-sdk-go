@@ -92,3 +92,6 @@ func (l *L2TpAttributeValues) GetWindowSize() *int {
 	}
 	return l.WindowSize
 }
+
+// #region class-body-l2tpattributevalues
+// #endregion class-body-l2tpattributevalues

@@ -462,3 +462,6 @@ func (c *CVSSv4Components) GetVulnerabilityResponseEffort() *VulnerabilityRespon
 	}
 	return c.VulnerabilityResponseEffort
 }
+
+// #region class-body-cvssv4components
+// #endregion class-body-cvssv4components

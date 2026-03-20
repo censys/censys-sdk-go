@@ -28,3 +28,6 @@ func (e *EtcdV2) GetTotalKeys() *int {
 	}
 	return e.TotalKeys
 }
+
+// #region class-body-etcdv2
+// #endregion class-body-etcdv2

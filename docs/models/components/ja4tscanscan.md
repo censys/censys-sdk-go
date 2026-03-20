@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Fingerprint`      | **string*          | :heavy_minus_sign: | N/A                |
-| `ScanTime`         | **string*          | :heavy_minus_sign: | N/A                |
+| `Fingerprint`      | `*string`          | :heavy_minus_sign: | N/A                |
+| `ScanTime`         | `*string`          | :heavy_minus_sign: | N/A                |

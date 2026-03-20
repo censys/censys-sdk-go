@@ -105,6 +105,9 @@ func (v *V3AccountmanagementMemberCreditsUsageRequest) GetGranularity() QueryPar
 	return v.Granularity
 }
 
+// #region class-body-v3accountmanagementmembercreditsusagerequest
+// #endregion class-body-v3accountmanagementmembercreditsusagerequest
+
 type V3AccountmanagementMemberCreditsUsageResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -132,3 +135,6 @@ func (v *V3AccountmanagementMemberCreditsUsageResponse) GetHeaders() map[string]
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementmembercreditsusageresponse
+// #endregion class-body-v3accountmanagementmembercreditsusageresponse

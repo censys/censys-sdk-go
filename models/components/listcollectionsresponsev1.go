@@ -20,3 +20,6 @@ func (l *ListCollectionsResponseV1) GetNextPageToken() string {
 	}
 	return l.NextPageToken
 }
+
+// #region class-body-listcollectionsresponsev1
+// #endregion class-body-listcollectionsresponsev1

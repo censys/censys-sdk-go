@@ -12,3 +12,6 @@ func (m *MoneroP2P) GetPingResponse() *MoneroP2PPingResponse {
 	}
 	return m.PingResponse
 }
+
+// #region class-body-monerop2p
+// #endregion class-body-monerop2p

@@ -144,6 +144,7 @@ type Service struct {
 	RustdeskRendezvous       *RustdeskRendezvous       `json:"rustdesk_rendezvous,omitempty"`
 	S7                       *S7                       `json:"s7,omitempty"`
 	SapRouter                *SapRouter                `json:"sap_router,omitempty"`
+	Sapient                  *Sapient                  `json:"sapient,omitempty"`
 	ScanTime                 *string                   `json:"scan_time,omitempty"`
 	Scpi                     *Scpi                     `json:"scpi,omitempty"`
 	Screenshots              []Screenshot              `json:"screenshots,omitempty"`
@@ -991,6 +992,13 @@ func (s *Service) GetSapRouter() *SapRouter {
 		return nil
 	}
 	return s.SapRouter
+}
+
+func (s *Service) GetSapient() *Sapient {
+	if s == nil {
+		return nil
+	}
+	return s.Sapient
 }
 
 func (s *Service) GetScanTime() *string {

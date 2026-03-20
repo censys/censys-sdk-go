@@ -19,6 +19,9 @@ func (v *V3CollectionsCrudListGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3collectionscrudlistglobals
+// #endregion class-body-v3collectionscrudlistglobals
+
 type CollectionStatuses string
 
 const (
@@ -90,6 +93,9 @@ func (v *V3CollectionsCrudListRequest) GetCollectionStatuses() []CollectionStatu
 	return v.CollectionStatuses
 }
 
+// #region class-body-v3collectionscrudlistrequest
+// #endregion class-body-v3collectionscrudlistrequest
+
 type V3CollectionsCrudListResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -117,3 +123,6 @@ func (v *V3CollectionsCrudListResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3collectionscrudlistresponse
+// #endregion class-body-v3collectionscrudlistresponse

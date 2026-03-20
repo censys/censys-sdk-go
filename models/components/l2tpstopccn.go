@@ -12,3 +12,6 @@ func (l *L2TpStopCcn) GetAttributeValues() *L2TpAttributeValues {
 	}
 	return l.AttributeValues
 }
+
+// #region class-body-l2tpstopccn
+// #endregion class-body-l2tpstopccn

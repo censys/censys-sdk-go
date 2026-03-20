@@ -12,3 +12,6 @@ func (l *L2TpSccrp) GetAttributeValues() *L2TpAttributeValues {
 	}
 	return l.AttributeValues
 }
+
+// #region class-body-l2tpsccrp
+// #endregion class-body-l2tpsccrp

@@ -87,6 +87,9 @@ func (v *V3AccountmanagementUserCreditsUsageRequest) GetGranularity() V3Accountm
 	return v.Granularity
 }
 
+// #region class-body-v3accountmanagementusercreditsusagerequest
+// #endregion class-body-v3accountmanagementusercreditsusagerequest
+
 type V3AccountmanagementUserCreditsUsageResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -114,3 +117,6 @@ func (v *V3AccountmanagementUserCreditsUsageResponse) GetHeaders() map[string][]
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementusercreditsusageresponse
+// #endregion class-body-v3accountmanagementusercreditsusageresponse

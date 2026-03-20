@@ -6,11 +6,195 @@ Endpoints related to the Threat Hunting product
 
 ### Available Operations
 
+* [CreateCenseyeJob](#createcenseyejob) - CensEye: Create a pivot analysis job
+* [GetCenseyeJob](#getcenseyejob) - CensEye: Get job status
+* [GetCenseyeJobResults](#getcenseyejobresults) - CensEye: Get job results
 * [GetHostObservationsWithCertificate](#gethostobservationswithcertificate) - Get host history for a certificate
 * [CreateTrackedScan](#createtrackedscan) - Live Discovery: Initiate a new scan
 * [GetTrackedScanThreatHunting](#gettrackedscanthreathunting) - Get scan status
 * [ListThreats](#listthreats) - List active threats
 * [ValueCounts](#valuecounts) - CensEye: Retrieve value counts to discover pivots
+
+## CreateCenseyeJob
+
+Create an asynchronous CensEye pivot analysis job for a host, web property, or certificate. The job extracts default pivot fields from the target asset and counts matching documents for each field-value pair. Poll the job status endpoint to track progress, then retrieve results when complete.<br><br>To use this endpoint, your organization must have access to the Threat Hunting Module.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-threathunting-censeye-jobs-create" method="post" path="/v3/threat-hunting/censeye/jobs" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/components"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.ThreatHunting.CreateCenseyeJob(ctx, operations.V3ThreathuntingCenseyeJobsCreateRequest{
+        CreateCenseyeJobInputBody: components.CreateCenseyeJobInputBody{
+            Target: components.CenseyeTarget{
+                CertificateID: censyssdkgo.Pointer("3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf"),
+                HostID: censyssdkgo.Pointer("8.8.8.8"),
+                WebpropertyID: censyssdkgo.Pointer("example.com:443"),
+            },
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeCenseyeJob != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
+| `request`                                                                                                                | [operations.V3ThreathuntingCenseyeJobsCreateRequest](../../models/operations/v3threathuntingcenseyejobscreaterequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `opts`                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                 | :heavy_minus_sign:                                                                                                       | The options for this request.                                                                                            |
+
+### Response
+
+**[*operations.V3ThreathuntingCenseyeJobsCreateResponse](../../models/operations/v3threathuntingcenseyejobscreateresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 422                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## GetCenseyeJob
+
+Retrieve the current status of a CensEye pivot analysis job. Use this to poll for completion before fetching results.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-threathunting-censeye-jobs-get" method="get" path="/v3/threat-hunting/censeye/jobs/{job_id}" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.ThreatHunting.GetCenseyeJob(ctx, operations.V3ThreathuntingCenseyeJobsGetRequest{
+        JobID: "3c47b971-5db6-4a9e-8d59-14fc0486172b",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeCenseyeJob != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                              | [context.Context](https://pkg.go.dev/context#Context)                                                              | :heavy_check_mark:                                                                                                 | The context to use for the request.                                                                                |
+| `request`                                                                                                          | [operations.V3ThreathuntingCenseyeJobsGetRequest](../../models/operations/v3threathuntingcenseyejobsgetrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `opts`                                                                                                             | [][operations.Option](../../models/operations/option.md)                                                           | :heavy_minus_sign:                                                                                                 | The options for this request.                                                                                      |
+
+### Response
+
+**[*operations.V3ThreathuntingCenseyeJobsGetResponse](../../models/operations/v3threathuntingcenseyejobsgetresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## GetCenseyeJobResults
+
+Retrieve the results of a completed CensEye pivot analysis job. Each result contains a count and the field-value pairs that were analyzed. Results may be empty if the job is still running.<br><br>Results are paginated. Use the `next_page_token` from the response to fetch subsequent pages.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-threathunting-censeye-job-results" method="get" path="/v3/threat-hunting/censeye/jobs/{job_id}/results" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.ThreatHunting.GetCenseyeJobResults(ctx, operations.V3ThreathuntingCenseyeJobResultsRequest{
+        JobID: "e58e9a0e-e104-42cf-9d0e-fe88713bc6e3",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeCenseyeResultsResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
+| `request`                                                                                                                | [operations.V3ThreathuntingCenseyeJobResultsRequest](../../models/operations/v3threathuntingcenseyejobresultsrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `opts`                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                 | :heavy_minus_sign:                                                                                                       | The options for this request.                                                                                            |
+
+### Response
+
+**[*operations.V3ThreathuntingCenseyeJobResultsResponse](../../models/operations/v3threathuntingcenseyejobresultsresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetHostObservationsWithCertificate
 

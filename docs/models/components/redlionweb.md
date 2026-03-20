@@ -5,6 +5,6 @@
 
 | Field               | Type                | Required            | Description         |
 | ------------------- | ------------------- | ------------------- | ------------------- |
-| `EnhancedWebServer` | **bool*             | :heavy_minus_sign:  | N/A                 |
-| `LogNames`          | []*string*          | :heavy_minus_sign:  | N/A                 |
-| `Title`             | **string*           | :heavy_minus_sign:  | N/A                 |
+| `EnhancedWebServer` | `*bool`             | :heavy_minus_sign:  | N/A                 |
+| `LogNames`          | []`string`          | :heavy_minus_sign:  | N/A                 |
+| `Title`             | `*string`           | :heavy_minus_sign:  | N/A                 |

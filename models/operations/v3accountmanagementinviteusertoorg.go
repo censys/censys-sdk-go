@@ -26,6 +26,9 @@ func (v *V3AccountmanagementInviteUserToOrgRequest) GetInviteMemberInputBody() c
 	return v.InviteMemberInputBody
 }
 
+// #region class-body-v3accountmanagementinviteusertoorgrequest
+// #endregion class-body-v3accountmanagementinviteusertoorgrequest
+
 type V3AccountmanagementInviteUserToOrgResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	Headers  map[string][]string
@@ -44,3 +47,6 @@ func (v *V3AccountmanagementInviteUserToOrgResponse) GetHeaders() map[string][]s
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementinviteusertoorgresponse
+// #endregion class-body-v3accountmanagementinviteusertoorgresponse

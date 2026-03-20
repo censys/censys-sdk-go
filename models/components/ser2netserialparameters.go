@@ -36,3 +36,6 @@ func (s *Ser2NetSerialParameters) GetStopBits() *string {
 	}
 	return s.StopBits
 }
+
+// #region class-body-ser2netserialparameters
+// #endregion class-body-ser2netserialparameters

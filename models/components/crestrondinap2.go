@@ -12,3 +12,6 @@ func (c *CrestronDinAp2) GetVersionString() *string {
 	}
 	return c.VersionString
 }
+
+// #region class-body-crestrondinap2
+// #endregion class-body-crestrondinap2

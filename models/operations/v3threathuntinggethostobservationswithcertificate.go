@@ -17,6 +17,9 @@ func (v *V3ThreathuntingGetHostObservationsWithCertificateGlobals) GetOrganizati
 	return v.OrganizationID
 }
 
+// #region class-body-v3threathuntinggethostobservationswithcertificateglobals
+// #endregion class-body-v3threathuntinggethostobservationswithcertificateglobals
+
 type V3ThreathuntingGetHostObservationsWithCertificateRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
@@ -92,6 +95,9 @@ func (v *V3ThreathuntingGetHostObservationsWithCertificateRequest) GetPageSize()
 	return v.PageSize
 }
 
+// #region class-body-v3threathuntinggethostobservationswithcertificaterequest
+// #endregion class-body-v3threathuntinggethostobservationswithcertificaterequest
+
 type V3ThreathuntingGetHostObservationsWithCertificateResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// A list of host observations for the certificate
@@ -119,3 +125,6 @@ func (v *V3ThreathuntingGetHostObservationsWithCertificateResponse) GetHeaders()
 	}
 	return v.Headers
 }
+
+// #region class-body-v3threathuntinggethostobservationswithcertificateresponse
+// #endregion class-body-v3threathuntinggethostobservationswithcertificateresponse

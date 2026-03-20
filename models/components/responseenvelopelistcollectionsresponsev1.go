@@ -12,3 +12,6 @@ func (r *ResponseEnvelopeListCollectionsResponseV1) GetResult() *ListCollections
 	}
 	return r.Result
 }
+
+// #region class-body-responseenvelopelistcollectionsresponsev1
+// #endregion class-body-responseenvelopelistcollectionsresponsev1

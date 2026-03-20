@@ -36,3 +36,6 @@ func (x *X11) GetVersion() *string {
 	}
 	return x.Version
 }
+
+// #region class-body-x11
+// #endregion class-body-x11

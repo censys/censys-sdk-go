@@ -1,5 +1,15 @@
 # TargetTransportProtocol
 
+## Example Usage
+
+```go
+import (
+	"github.com/censys/censys-sdk-go/models/components"
+)
+
+value := components.TargetTransportProtocolUnknown
+```
+
 
 ## Values
 

@@ -17,6 +17,9 @@ func (v *V3ThreathuntingScansDiscoveryGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3threathuntingscansdiscoveryglobals
+// #endregion class-body-v3threathuntingscansdiscoveryglobals
+
 type V3ThreathuntingScansDiscoveryRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID          *string                            `queryParam:"style=form,explode=false,name=organization_id"`
@@ -36,6 +39,9 @@ func (v *V3ThreathuntingScansDiscoveryRequest) GetScansDiscoveryInputBody() comp
 	}
 	return v.ScansDiscoveryInputBody
 }
+
+// #region class-body-v3threathuntingscansdiscoveryrequest
+// #endregion class-body-v3threathuntingscansdiscoveryrequest
 
 type V3ThreathuntingScansDiscoveryResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
@@ -64,3 +70,6 @@ func (v *V3ThreathuntingScansDiscoveryResponse) GetHeaders() map[string][]string
 	}
 	return v.Headers
 }
+
+// #region class-body-v3threathuntingscansdiscoveryresponse
+// #endregion class-body-v3threathuntingscansdiscoveryresponse

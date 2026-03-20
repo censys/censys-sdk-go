@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `PingResponseID`   | **string*          | :heavy_minus_sign: | N/A                |
+| `PingResponseID`   | `*string`          | :heavy_minus_sign: | N/A                |

@@ -1,0 +1,11 @@
+# Reputation
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `Evidence`                                                                       | [][components.ReputationEvidence](../../models/components/reputationevidence.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `ModelVersion`                                                                   | `*string`                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `Score`                                                                          | `*float32`                                                                       | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `ScoreLevel`                                                                     | [*components.ScoreLevel](../../models/components/scorelevel.md)                  | :heavy_minus_sign:                                                               | N/A                                                                              |

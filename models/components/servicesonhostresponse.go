@@ -3,8 +3,10 @@
 package components
 
 type ServicesOnHostResponse struct {
-	NextPageToken string               `json:"NextPageToken"`
-	Ranges        []ServiceOnHostRange `json:"Ranges"`
+	// A token that can be used to retrieve the next page of ranges.
+	NextPageToken string `json:"next_page_token"`
+	// The list of requested services.
+	Ranges []ServiceOnHostRange `json:"ranges"`
 }
 
 func (s *ServicesOnHostResponse) GetNextPageToken() string {

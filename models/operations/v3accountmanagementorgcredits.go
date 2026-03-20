@@ -18,6 +18,9 @@ func (v *V3AccountmanagementOrgCreditsRequest) GetOrganizationID() string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3accountmanagementorgcreditsrequest
+// #endregion class-body-v3accountmanagementorgcreditsrequest
+
 type V3AccountmanagementOrgCreditsResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -45,3 +48,6 @@ func (v *V3AccountmanagementOrgCreditsResponse) GetHeaders() map[string][]string
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementorgcreditsresponse
+// #endregion class-body-v3accountmanagementorgcreditsresponse

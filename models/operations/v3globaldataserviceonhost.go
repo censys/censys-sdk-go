@@ -20,6 +20,9 @@ func (v *V3GlobaldataServiceOnHostGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3globaldataserviceonhostglobals
+// #endregion class-body-v3globaldataserviceonhostglobals
+
 // TransportProtocol - Filter by transport protocol
 type TransportProtocol string
 
@@ -192,6 +195,9 @@ func (v *V3GlobaldataServiceOnHostRequest) GetOrderBy() []OrderBy {
 	return v.OrderBy
 }
 
+// #region class-body-v3globaldataserviceonhostrequest
+// #endregion class-body-v3globaldataserviceonhostrequest
+
 type V3GlobaldataServiceOnHostResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// A list of service observation ranges
@@ -219,3 +225,6 @@ func (v *V3GlobaldataServiceOnHostResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3globaldataserviceonhostresponse
+// #endregion class-body-v3globaldataserviceonhostresponse

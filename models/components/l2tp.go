@@ -76,3 +76,6 @@ func (l *L2Tp) GetZlbReceived() *bool {
 	}
 	return l.ZlbReceived
 }
+
+// #region class-body-l2tp
+// #endregion class-body-l2tp

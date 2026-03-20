@@ -28,3 +28,6 @@ func (w *WeblogicT3) GetWeblogicVersion() *string {
 	}
 	return w.WeblogicVersion
 }
+
+// #region class-body-weblogict3
+// #endregion class-body-weblogict3

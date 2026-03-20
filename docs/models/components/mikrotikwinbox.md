@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Components`       | []*string*         | :heavy_minus_sign: | N/A                |
-| `Version`          | **string*          | :heavy_minus_sign: | N/A                |
+| `Components`       | []`string`         | :heavy_minus_sign: | N/A                |
+| `Version`          | `*string`          | :heavy_minus_sign: | N/A                |

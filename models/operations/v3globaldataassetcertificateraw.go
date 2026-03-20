@@ -18,6 +18,9 @@ func (v *V3GlobaldataAssetCertificateRawGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3globaldataassetcertificaterawglobals
+// #endregion class-body-v3globaldataassetcertificaterawglobals
+
 type V3GlobaldataAssetCertificateRawRequest struct {
 	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
@@ -38,6 +41,9 @@ func (v *V3GlobaldataAssetCertificateRawRequest) GetCertificateID() string {
 	}
 	return v.CertificateID
 }
+
+// #region class-body-v3globaldataassetcertificaterawrequest
+// #endregion class-body-v3globaldataassetcertificaterawrequest
 
 type V3GlobaldataAssetCertificateRawResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
@@ -67,3 +73,6 @@ func (v *V3GlobaldataAssetCertificateRawResponse) GetHeaders() map[string][]stri
 	}
 	return v.Headers
 }
+
+// #region class-body-v3globaldataassetcertificaterawresponse
+// #endregion class-body-v3globaldataassetcertificaterawresponse

@@ -29,12 +29,14 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 go:
-  version: 0.25.7
+  version: 0.25.8
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SDKBaseError
   clientServerStatusCodesAsErrors: true
   defaultErrorName: SDKError
+  enableCustomCodeRegions: false
+  enableSkipDeserialization: false
   flattenGlobalSecurity: true
   forwardCompatibleEnumsByDefault: true
   forwardCompatibleUnionsByDefault: "false"

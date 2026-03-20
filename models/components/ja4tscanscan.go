@@ -20,3 +20,6 @@ func (j *Ja4TScanScan) GetScanTime() *string {
 	}
 	return j.ScanTime
 }
+
+// #region class-body-ja4tscanscan
+// #endregion class-body-ja4tscanscan
