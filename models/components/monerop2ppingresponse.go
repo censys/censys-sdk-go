@@ -20,3 +20,6 @@ func (m *MoneroP2PPingResponse) GetResponseHeader() *MoneroP2PResponseHeader {
 	}
 	return m.ResponseHeader
 }
+
+// #region class-body-monerop2ppingresponse
+// #endregion class-body-monerop2ppingresponse

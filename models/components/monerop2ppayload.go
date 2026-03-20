@@ -12,3 +12,6 @@ func (m *MoneroP2PPayload) GetEntries() []MoneroP2PEntry {
 	}
 	return m.Entries
 }
+
+// #region class-body-monerop2ppayload
+// #endregion class-body-monerop2ppayload

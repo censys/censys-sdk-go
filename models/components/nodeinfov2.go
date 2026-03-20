@@ -124,3 +124,6 @@ func (n *NodeInfoV2) GetVersion() *string {
 	}
 	return n.Version
 }
+
+// #region class-body-nodeinfov2
+// #endregion class-body-nodeinfov2

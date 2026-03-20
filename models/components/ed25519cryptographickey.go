@@ -12,3 +12,6 @@ func (e *Ed25519CryptographicKey) GetPublicBytes() *string {
 	}
 	return e.PublicBytes
 }
+
+// #region class-body-ed25519cryptographickey
+// #endregion class-body-ed25519cryptographickey

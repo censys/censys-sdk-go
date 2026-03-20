@@ -17,6 +17,9 @@ func (v *V3GlobaldataScansRescanGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3globaldatascansrescanglobals
+// #endregion class-body-v3globaldatascansrescanglobals
+
 type V3GlobaldataScansRescanRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID       *string                         `queryParam:"style=form,explode=false,name=organization_id"`
@@ -36,6 +39,9 @@ func (v *V3GlobaldataScansRescanRequest) GetScansRescanInputBody() components.Sc
 	}
 	return v.ScansRescanInputBody
 }
+
+// #region class-body-v3globaldatascansrescanrequest
+// #endregion class-body-v3globaldatascansrescanrequest
 
 type V3GlobaldataScansRescanResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
@@ -64,3 +70,6 @@ func (v *V3GlobaldataScansRescanResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3globaldatascansrescanresponse
+// #endregion class-body-v3globaldatascansrescanresponse

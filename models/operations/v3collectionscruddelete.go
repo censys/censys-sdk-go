@@ -17,6 +17,9 @@ func (v *V3CollectionsCrudDeleteGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3collectionscruddeleteglobals
+// #endregion class-body-v3collectionscruddeleteglobals
+
 type V3CollectionsCrudDeleteRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
@@ -38,6 +41,9 @@ func (v *V3CollectionsCrudDeleteRequest) GetCollectionUID() string {
 	return v.CollectionUID
 }
 
+// #region class-body-v3collectionscruddeleterequest
+// #endregion class-body-v3collectionscruddeleterequest
+
 type V3CollectionsCrudDeleteResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	Headers  map[string][]string
@@ -56,3 +62,6 @@ func (v *V3CollectionsCrudDeleteResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3collectionscruddeleteresponse
+// #endregion class-body-v3collectionscruddeleteresponse

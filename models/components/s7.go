@@ -116,3 +116,6 @@ func (s *S7) GetSystem() *string {
 	}
 	return s.System
 }
+
+// #region class-body-s7
+// #endregion class-body-s7

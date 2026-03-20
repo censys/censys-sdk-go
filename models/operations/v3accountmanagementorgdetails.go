@@ -39,6 +39,9 @@ func (v *V3AccountmanagementOrgDetailsRequest) GetIncludeMemberCounts() *bool {
 	return v.IncludeMemberCounts
 }
 
+// #region class-body-v3accountmanagementorgdetailsrequest
+// #endregion class-body-v3accountmanagementorgdetailsrequest
+
 type V3AccountmanagementOrgDetailsResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -66,3 +69,6 @@ func (v *V3AccountmanagementOrgDetailsResponse) GetHeaders() map[string][]string
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementorgdetailsresponse
+// #endregion class-body-v3accountmanagementorgdetailsresponse

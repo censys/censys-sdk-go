@@ -35,6 +35,9 @@ func (v *V3AccountmanagementUpdateOrgMemberRequest) GetUpdateMemberRoleInputBody
 	return v.UpdateMemberRoleInputBody
 }
 
+// #region class-body-v3accountmanagementupdateorgmemberrequest
+// #endregion class-body-v3accountmanagementupdateorgmemberrequest
+
 type V3AccountmanagementUpdateOrgMemberResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	Headers  map[string][]string
@@ -53,3 +56,6 @@ func (v *V3AccountmanagementUpdateOrgMemberResponse) GetHeaders() map[string][]s
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementupdateorgmemberresponse
+// #endregion class-body-v3accountmanagementupdateorgmemberresponse

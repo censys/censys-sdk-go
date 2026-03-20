@@ -781,6 +781,7 @@ func (s *Collections) Delete(ctx context.Context, request operations.V3Collectio
 	switch {
 	case httpRes.StatusCode == 204:
 		res.Headers = httpRes.Header
+
 		utils.DrainBody(httpRes)
 	case httpRes.StatusCode == 401:
 		switch {

@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Version`          | **string*          | :heavy_minus_sign: | N/A                |
+| `Version`          | `*string`          | :heavy_minus_sign: | N/A                |

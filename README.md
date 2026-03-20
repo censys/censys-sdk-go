@@ -139,6 +139,9 @@ func main() {
 
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
+* [CreateCenseyeJob](docs/sdks/threathunting/README.md#createcenseyejob) - CensEye: Create a pivot analysis job
+* [GetCenseyeJob](docs/sdks/threathunting/README.md#getcenseyejob) - CensEye: Get job status
+* [GetCenseyeJobResults](docs/sdks/threathunting/README.md#getcenseyejobresults) - CensEye: Get job results
 * [GetHostObservationsWithCertificate](docs/sdks/threathunting/README.md#gethostobservationswithcertificate) - Get host history for a certificate
 * [CreateTrackedScan](docs/sdks/threathunting/README.md#createtrackedscan) - Live Discovery: Initiate a new scan
 * [GetTrackedScanThreatHunting](docs/sdks/threathunting/README.md#gettrackedscanthreathunting) - Get scan status

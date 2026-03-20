@@ -48,6 +48,9 @@ func (v *V3AccountmanagementListOrgMembersRequest) GetPageToken() *string {
 	return v.PageToken
 }
 
+// #region class-body-v3accountmanagementlistorgmembersrequest
+// #endregion class-body-v3accountmanagementlistorgmembersrequest
+
 type V3AccountmanagementListOrgMembersResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -75,3 +78,6 @@ func (v *V3AccountmanagementListOrgMembersResponse) GetHeaders() map[string][]st
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementlistorgmembersresponse
+// #endregion class-body-v3accountmanagementlistorgmembersresponse

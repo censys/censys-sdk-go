@@ -31,3 +31,6 @@ func (i *IkeV1) GetVendorIds() []string {
 	}
 	return i.VendorIds
 }
+
+// #region class-body-ikev1
+// #endregion class-body-ikev1

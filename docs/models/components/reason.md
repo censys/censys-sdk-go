@@ -2,6 +2,19 @@
 
 An enumerated value indicating the issuer-supplied reason for the revocation.
 
+## Example Usage
+
+```go
+import (
+	"github.com/censys/censys-sdk-go/models/components"
+)
+
+value := components.ReasonUnknown
+
+// Open enum: custom values can be created with a direct type cast
+custom := components.Reason("custom_value")
+```
+
 
 ## Values
 

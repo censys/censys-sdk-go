@@ -60,3 +60,6 @@ func (m *MoneroP2PResponseHeader) GetVersion() *int {
 	}
 	return m.Version
 }
+
+// #region class-body-monerop2presponseheader
+// #endregion class-body-monerop2presponseheader

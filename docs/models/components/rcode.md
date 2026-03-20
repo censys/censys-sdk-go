@@ -2,6 +2,19 @@
 
 A enumerated field indicating the result of the request. The most common values are defined in RFC 1035.
 
+## Example Usage
+
+```go
+import (
+	"github.com/censys/censys-sdk-go/models/components"
+)
+
+value := components.RCodeUnknown
+
+// Open enum: custom values can be created with a direct type cast
+custom := components.RCode("custom_value")
+```
+
 
 ## Values
 

@@ -5,4 +5,4 @@
 
 | Field                | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `ImageStabilization` | **bool*              | :heavy_minus_sign:   | N/A                  |
+| `ImageStabilization` | `*bool`              | :heavy_minus_sign:   | N/A                  |

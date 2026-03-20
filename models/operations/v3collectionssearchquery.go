@@ -17,6 +17,9 @@ func (v *V3CollectionsSearchQueryGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3collectionssearchqueryglobals
+// #endregion class-body-v3collectionssearchqueryglobals
+
 type V3CollectionsSearchQueryRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
@@ -46,6 +49,9 @@ func (v *V3CollectionsSearchQueryRequest) GetSearchQueryInputBody() components.S
 	return v.SearchQueryInputBody
 }
 
+// #region class-body-v3collectionssearchqueryrequest
+// #endregion class-body-v3collectionssearchqueryrequest
+
 type V3CollectionsSearchQueryResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -73,3 +79,6 @@ func (v *V3CollectionsSearchQueryResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3collectionssearchqueryresponse
+// #endregion class-body-v3collectionssearchqueryresponse

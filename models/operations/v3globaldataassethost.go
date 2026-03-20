@@ -19,6 +19,9 @@ func (v *V3GlobaldataAssetHostGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3globaldataassethostglobals
+// #endregion class-body-v3globaldataassethostglobals
+
 type V3GlobaldataAssetHostRequest struct {
 	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
@@ -60,6 +63,9 @@ func (v *V3GlobaldataAssetHostRequest) GetAtTime() *time.Time {
 	return v.AtTime
 }
 
+// #region class-body-v3globaldataassethostrequest
+// #endregion class-body-v3globaldataassethostrequest
+
 type V3GlobaldataAssetHostResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -87,3 +93,6 @@ func (v *V3GlobaldataAssetHostResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3globaldataassethostresponse
+// #endregion class-body-v3globaldataassethostresponse

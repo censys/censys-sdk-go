@@ -30,3 +30,6 @@ func (c *CVSSv4) GetVector() *string {
 	}
 	return c.Vector
 }
+
+// #region class-body-cvssv4
+// #endregion class-body-cvssv4

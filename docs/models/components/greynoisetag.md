@@ -5,4 +5,4 @@
 
 | Field                | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `Name`               | **string*            | :heavy_minus_sign:   | The name of the tag. |
+| `Name`               | `*string`            | :heavy_minus_sign:   | The name of the tag. |

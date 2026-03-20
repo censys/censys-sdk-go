@@ -20,3 +20,6 @@ func (m *MoneroP2PEntry) GetName() *string {
 	}
 	return m.Name
 }
+
+// #region class-body-monerop2pentry
+// #endregion class-body-monerop2pentry

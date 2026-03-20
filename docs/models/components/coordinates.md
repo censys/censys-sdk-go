@@ -5,5 +5,5 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Latitude`         | **float64*         | :heavy_minus_sign: | N/A                |
-| `Longitude`        | **float64*         | :heavy_minus_sign: | N/A                |
+| `Latitude`         | `*float64`         | :heavy_minus_sign: | N/A                |
+| `Longitude`        | `*float64`         | :heavy_minus_sign: | N/A                |

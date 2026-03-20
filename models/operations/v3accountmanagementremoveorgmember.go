@@ -27,6 +27,9 @@ func (v *V3AccountmanagementRemoveOrgMemberRequest) GetUserID() string {
 	return v.UserID
 }
 
+// #region class-body-v3accountmanagementremoveorgmemberrequest
+// #endregion class-body-v3accountmanagementremoveorgmemberrequest
+
 type V3AccountmanagementRemoveOrgMemberResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	Headers  map[string][]string
@@ -45,3 +48,6 @@ func (v *V3AccountmanagementRemoveOrgMemberResponse) GetHeaders() map[string][]s
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementremoveorgmemberresponse
+// #endregion class-body-v3accountmanagementremoveorgmemberresponse

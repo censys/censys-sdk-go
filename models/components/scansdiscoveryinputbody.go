@@ -63,6 +63,9 @@ func (t *Target2) GetHostnamePort() HostnamePort {
 	return t.HostnamePort
 }
 
+// #region class-body-target2
+// #endregion class-body-target2
+
 type HostPort struct {
 	// IP address to scan
 	IP string `json:"ip"`
@@ -117,6 +120,9 @@ func (t *Target1) GetHostPort() HostPort {
 	}
 	return t.HostPort
 }
+
+// #region class-body-target1
+// #endregion class-body-target1
 
 type ScansDiscoveryInputBodyTargetType string
 

@@ -52,3 +52,6 @@ func (p *PortmapV3Entry) GetVersion() *int {
 	}
 	return p.Version
 }
+
+// #region class-body-portmapv3entry
+// #endregion class-body-portmapv3entry

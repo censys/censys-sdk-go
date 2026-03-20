@@ -4,3 +4,6 @@ package components
 
 type Dnp3 struct {
 }
+
+// #region class-body-dnp3
+// #endregion class-body-dnp3

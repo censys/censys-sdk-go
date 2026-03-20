@@ -21,6 +21,9 @@ func (v *V3CollectionsListEventsGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3collectionslisteventsglobals
+// #endregion class-body-v3collectionslisteventsglobals
+
 type ChangeTypes string
 
 const (
@@ -200,6 +203,9 @@ func (v *V3CollectionsListEventsRequest) GetEndTime() *time.Time {
 	return v.EndTime
 }
 
+// #region class-body-v3collectionslisteventsrequest
+// #endregion class-body-v3collectionslisteventsrequest
+
 type V3CollectionsListEventsResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -227,3 +233,6 @@ func (v *V3CollectionsListEventsResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3collectionslisteventsresponse
+// #endregion class-body-v3collectionslisteventsresponse

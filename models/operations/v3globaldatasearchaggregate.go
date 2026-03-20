@@ -17,6 +17,9 @@ func (v *V3GlobaldataSearchAggregateGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3globaldatasearchaggregateglobals
+// #endregion class-body-v3globaldatasearchaggregateglobals
+
 type V3GlobaldataSearchAggregateRequest struct {
 	// The ID of a Censys organization to associate the request with. If omitted, the request will be processed using the authenticated user's free wallet where applicable. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID           *string                             `queryParam:"style=form,explode=false,name=organization_id"`
@@ -36,6 +39,9 @@ func (v *V3GlobaldataSearchAggregateRequest) GetSearchAggregateInputBody() compo
 	}
 	return v.SearchAggregateInputBody
 }
+
+// #region class-body-v3globaldatasearchaggregaterequest
+// #endregion class-body-v3globaldatasearchaggregaterequest
 
 type V3GlobaldataSearchAggregateResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
@@ -64,3 +70,6 @@ func (v *V3GlobaldataSearchAggregateResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3globaldatasearchaggregateresponse
+// #endregion class-body-v3globaldatasearchaggregateresponse

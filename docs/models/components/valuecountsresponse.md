@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `AndCountResults`  | []*float64*        | :heavy_check_mark: | N/A                |
+| `AndCountResults`  | []`float64`        | :heavy_check_mark: | N/A                |

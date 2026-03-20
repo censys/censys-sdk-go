@@ -12,3 +12,6 @@ func (c *CrestronCp3) GetVersionString() *string {
 	}
 	return c.VersionString
 }
+
+// #region class-body-crestroncp3
+// #endregion class-body-crestroncp3

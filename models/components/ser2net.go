@@ -44,3 +44,6 @@ func (s *Ser2Net) GetSoftwareVersion() *string {
 	}
 	return s.SoftwareVersion
 }
+
+// #region class-body-ser2net
+// #endregion class-body-ser2net

@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `Sha256fp`         | []*string*         | :heavy_minus_sign: | N/A                |
+| `Sha256fp`         | []`string`         | :heavy_minus_sign: | N/A                |

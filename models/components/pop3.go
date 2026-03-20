@@ -13,3 +13,6 @@ func (p *Pop3) GetStartTLS() *string {
 	}
 	return p.StartTLS
 }
+
+// #region class-body-pop3
+// #endregion class-body-pop3

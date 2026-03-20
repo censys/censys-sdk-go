@@ -1,0 +1,11 @@
+# Sapient
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `Error`                                                                                 | [*components.SapientError](../../models/components/sapienterror.md)                     | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `Payload`                                                                               | `*string`                                                                               | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `RegistrationAck`                                                                       | [*components.SapientRegistrationAck](../../models/components/sapientregistrationack.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `Unknown`                                                                               | `*string`                                                                               | :heavy_minus_sign:                                                                      | N/A                                                                                     |

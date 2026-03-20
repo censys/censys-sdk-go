@@ -17,6 +17,9 @@ func (v *V3CollectionsCrudCreateGlobals) GetOrganizationID() *string {
 	return v.OrganizationID
 }
 
+// #region class-body-v3collectionscrudcreateglobals
+// #endregion class-body-v3collectionscrudcreateglobals
+
 type V3CollectionsCrudCreateRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID      *string                         `queryParam:"style=form,explode=false,name=organization_id"`
@@ -36,6 +39,9 @@ func (v *V3CollectionsCrudCreateRequest) GetCrudCreateInputBody() *components.Cr
 	}
 	return v.CrudCreateInputBody
 }
+
+// #region class-body-v3collectionscrudcreaterequest
+// #endregion class-body-v3collectionscrudcreaterequest
 
 type V3CollectionsCrudCreateResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
@@ -64,3 +70,6 @@ func (v *V3CollectionsCrudCreateResponse) GetHeaders() map[string][]string {
 	}
 	return v.Headers
 }
+
+// #region class-body-v3collectionscrudcreateresponse
+// #endregion class-body-v3collectionscrudcreateresponse

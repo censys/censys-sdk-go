@@ -105,6 +105,9 @@ func (v *V3AccountmanagementOrgCreditsUsageRequest) GetIncludeConsumerBreakdown(
 	return v.IncludeConsumerBreakdown
 }
 
+// #region class-body-v3accountmanagementorgcreditsusagerequest
+// #endregion class-body-v3accountmanagementorgcreditsusagerequest
+
 type V3AccountmanagementOrgCreditsUsageResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// OK
@@ -132,3 +135,6 @@ func (v *V3AccountmanagementOrgCreditsUsageResponse) GetHeaders() map[string][]s
 	}
 	return v.Headers
 }
+
+// #region class-body-v3accountmanagementorgcreditsusageresponse
+// #endregion class-body-v3accountmanagementorgcreditsusageresponse
