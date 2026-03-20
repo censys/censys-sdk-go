@@ -415,11 +415,11 @@ func (s *SDKTestSuite) TestAccountManagement_GetUserCreditsUsage() {
 }
 
 // ---------------------------------------------------------------------------
-// Threat Hunting
+// Adversary Investigations
 // ---------------------------------------------------------------------------
 
-func (s *SDKTestSuite) TestThreatHunting_ValueCounts() {
-	res, err := s.client.ThreatHunting.ValueCounts(s.ctx, operations.V3ThreathuntingValueCountsRequest{
+func (s *SDKTestSuite) TestAdversaryInvestigations_ValueCounts() {
+	res, err := s.client.AdversaryInvestigations.ValueCounts(s.ctx, operations.V3ThreathuntingValueCountsRequest{
 		SearchValueCountsInputBody: components.SearchValueCountsInputBody{
 			AndCountConditions: []components.CountCondition{
 				{
@@ -434,22 +434,22 @@ func (s *SDKTestSuite) TestThreatHunting_ValueCounts() {
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestThreatHunting_GetHostObservationsWithCertificate() {
-	res, err := s.client.ThreatHunting.GetHostObservationsWithCertificate(s.ctx, operations.V3ThreathuntingGetHostObservationsWithCertificateRequest{
+func (s *SDKTestSuite) TestAdversaryInvestigations_GetHostObservationsWithCertificate() {
+	res, err := s.client.AdversaryInvestigations.GetHostObservationsWithCertificate(s.ctx, operations.V3ThreathuntingGetHostObservationsWithCertificateRequest{
 		CertificateID: testCertIDs[0],
 	})
 	require.NoError(s.T(), err)
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestThreatHunting_ListThreats() {
-	res, err := s.client.ThreatHunting.ListThreats(s.ctx, operations.V3ThreathuntingThreatsListRequest{})
+func (s *SDKTestSuite) TestAdversaryInvestigations_ListThreats() {
+	res, err := s.client.AdversaryInvestigations.ListThreats(s.ctx, operations.V3ThreathuntingThreatsListRequest{})
 	require.NoError(s.T(), err)
 	require.NotNil(s.T(), res)
 }
 
-func (s *SDKTestSuite) TestThreatHunting_TrackedScans() {
-	createRes, err := s.client.ThreatHunting.CreateTrackedScan(s.ctx, operations.V3ThreathuntingScansDiscoveryRequest{
+func (s *SDKTestSuite) TestAdversaryInvestigations_TrackedScans() {
+	createRes, err := s.client.AdversaryInvestigations.CreateTrackedScan(s.ctx, operations.V3ThreathuntingScansDiscoveryRequest{
 		ScansDiscoveryInputBody: components.ScansDiscoveryInputBody{
 			Target: components.CreateScansDiscoveryInputBodyTargetTarget1(components.Target1{
 				HostPort: components.HostPort{
@@ -465,7 +465,7 @@ func (s *SDKTestSuite) TestThreatHunting_TrackedScans() {
 	scanID := createRes.GetResponseEnvelopeTrackedScan().GetResult().GetTrackedScanID()
 	require.NotNil(s.T(), scanID)
 
-	getRes, err := s.client.ThreatHunting.GetTrackedScanThreatHunting(s.ctx, operations.V3ThreathuntingScansGetRequest{
+	getRes, err := s.client.GlobalData.GetTrackedScan(s.ctx, operations.V3GlobaldataScansGetRequest{
 		ScanID: *scanID,
 	})
 	require.NoError(s.T(), err)
