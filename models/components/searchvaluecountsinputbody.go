@@ -3,7 +3,7 @@
 package components
 
 type SearchValueCountsInputBody struct {
-	// Groups of field-value pairs to count matches for.
+	// Groups of field-value pairs to count matches for. Each group may contain up to 5 field-value pairs.
 	AndCountConditions []CountCondition `json:"and_count_conditions"`
 	// CenQL query string to filter documents
 	Query *string `json:"query,omitempty"`
