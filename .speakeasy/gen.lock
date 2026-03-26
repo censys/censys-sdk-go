@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: b60de1b4c29847bc70498b1f9f1727a0
-  docVersion: 1.0.85
-  speakeasyVersion: 1.758.0
-  generationVersion: 2.866.2
-  releaseVersion: 0.25.9
-  configChecksum: 996eac46af8752b62844b4bbb18cb065
+  docChecksum: 3e1ee0d04d400c49b97d8b79799cfadd
+  docVersion: 1.0.87
+  speakeasyVersion: 1.759.3
+  generationVersion: 2.869.25
+  releaseVersion: 0.25.10
+  configChecksum: e5a595c0fb1cb3cba689875143965007
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: a691444f-9b33-48fa-8127-b0daca6c3392
-  pristine_commit_hash: e13a99be405b022ef5dd56c9e64448fd061c47e6
-  pristine_tree_hash: 619f0259696585fbd2091af8caf932c483bfd2ac
+  generation_id: a4c76fb8-7f3d-4c35-b6f9-34ab26da7b1a
+  pristine_commit_hash: e6ede472bf1eb68305f8b2af93fc7f65c88e103b
+  pristine_tree_hash: b8b2d7c85124e275f652c3fed293327ba97e46cb
 features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.14
-    core: 3.13.36
+    core: 3.13.40
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -851,8 +851,8 @@ trackedFiles:
     pristine_git_object: c005b73a479bd5345c6bf0a5a6601c9d9bd1a1e0
   docs/models/components/host.md:
     id: f36f9e39f813
-    last_write_checksum: sha1:dc36ea65121903735eac6c7627ac115a385532a2
-    pristine_git_object: 8385cb3e2ca4a04b332bbded881ce53feac4a964
+    last_write_checksum: sha1:a9f4180884d43a8cda079d5c1679e4835e89805b
+    pristine_git_object: 4a50dd47e113a6614d76a64d8389f853c91bc2c5
   docs/models/components/hostasset.md:
     id: "219902301470"
     last_write_checksum: sha1:2c06561c7d48c016c12e1596e5b7593b67ca6fc8
@@ -1373,6 +1373,10 @@ trackedFiles:
     id: 18745554e870
     last_write_checksum: sha1:bcd5ce1727f1a7e16ccabef103eb111ed43dcc1c
     pristine_git_object: a95191a3f921f16451cd826d1c66ea21d428a9f5
+  docs/models/components/networkclassification.md:
+    id: a312ebf5a137
+    last_write_checksum: sha1:48d615a8d2a080558b4c15b7818cebb7ba5e3dca
+    pristine_git_object: 930b0043c1975713fd30014f2492ee6fff16c47f
   docs/models/components/networklog.md:
     id: 156b9a4d9bd2
     last_write_checksum: sha1:897223484a3d6be1ea82e1aab9b1f9bcbf01b6b7
@@ -1381,6 +1385,10 @@ trackedFiles:
     id: 9e756fdc7531
     last_write_checksum: sha1:943fec667dba0db652f667fb897f406a01b5727d
     pristine_git_object: b3941059e2dec4741bb8e84fc2aa8ad2295d7d0b
+  docs/models/components/networkmobileinfo.md:
+    id: 6599b4338750
+    last_write_checksum: sha1:1cffc29deaccc7cc4871c7bb9dd2cab8f50b4be5
+    pristine_git_object: 947567243033323708dba6268771bc2a71576cf5
   docs/models/components/newstatus.md:
     id: 81cce6e3c518
     last_write_checksum: sha1:be641f2b3a73c31777207114092f9f4b5f21cc9f
@@ -1617,6 +1625,22 @@ trackedFiles:
     id: 207854e76716
     last_write_checksum: sha1:2fabe157f46f037954f2ac89df9629be2f3b7e20
     pristine_git_object: bfa28fdba37777fc50c19abe50997107a2a94b34
+  docs/models/components/privacy.md:
+    id: 8fe29ca35520
+    last_write_checksum: sha1:9c39ed811e530c96dd40ae974323591b8ab00b6d
+    pristine_git_object: c0c5b4a1a311cb67c1c2bf8fa79c16590a803cf5
+  docs/models/components/privacytorinfo.md:
+    id: a905d7180ef4
+    last_write_checksum: sha1:89c2820c0a197917c5aa2ffa3a0459eeca086fc6
+    pristine_git_object: 96d6996a07740368ea7f7a8ca191a6cd6ac624c3
+  docs/models/components/privacytorinforelay.md:
+    id: 3f3631f92917
+    last_write_checksum: sha1:7c059c827f45935aaf5c6e72ca6407c64918a0bb
+    pristine_git_object: b045418fa5686b6827d513e610947070d5a01db1
+  docs/models/components/privacytorinforelayexitpolicysummary.md:
+    id: 6c48cc180045
+    last_write_checksum: sha1:3c5baa0a01fa5953cf792ec73476406ff9e6185a
+    pristine_git_object: 07d55cf2b7cd9bb20d7508052fe765eb937b0f17
   docs/models/components/privilegesrequired.md:
     id: cabeee87547e
     last_write_checksum: sha1:1d3f1a5a28cfd81c1d1719245b996aaaad411892
@@ -3211,8 +3235,8 @@ trackedFiles:
     pristine_git_object: 30d68c137a5af80c11ebc2416d78b61c4cfa60fa
   docs/sdks/threathunting/README.md:
     id: 9d697938ee45
-    last_write_checksum: sha1:9061492d5e804e48e1ae27cf94764d2bdc5f93c5
-    pristine_git_object: fd4c74b5006fbd9a8d0cb26ad40bcafe25852ef1
+    last_write_checksum: sha1:453f84f0fef317563194657e5d2f4784ec273708
+    pristine_git_object: 4b644712905561951c6e0addd01c74d73eddd02f
   docs/types/date.md:
     id: 3a10eb495943
     last_write_checksum: sha1:45ab0675ea1c52ce29e9b5c70c4ef5c0ae29f2bf
@@ -4007,8 +4031,8 @@ trackedFiles:
     pristine_git_object: 7c9e58efa6d9da6eea108a82a93eb77463e9ac3e
   models/components/host.go:
     id: 09eff80498b1
-    last_write_checksum: sha1:8929e0308220dc0405717c2edd0c566051ad3860
-    pristine_git_object: e71d6247975402024813cf3b9f7cca8cf4af24ac
+    last_write_checksum: sha1:c6e02e0b64bae609699131a2255ae6ae73730151
+    pristine_git_object: aa7661a36b596cdfc0be0218a3d55b08c2943a95
   models/components/hostasset.go:
     id: ea22fef0f42d
     last_write_checksum: sha1:8de81175f9adb0a0697f40b9908e516aa1834af3
@@ -4501,6 +4525,10 @@ trackedFiles:
     id: 96203932870f
     last_write_checksum: sha1:b6541b879478ce3439da053e4d5185b0501ac6c0
     pristine_git_object: dae4dcec4b8fbd7f39de30e364c694e28e526bfd
+  models/components/networkclassification.go:
+    id: e5de59c10bb1
+    last_write_checksum: sha1:852ed2ebfe2524653203f35b24d2b97f4d347da8
+    pristine_git_object: ee484e64d64a1d7c4b84bb0b8225cde530cd2be4
   models/components/networklog.go:
     id: 7dea43cd9edb
     last_write_checksum: sha1:23bd9694f3b5299abc635af0d91dffc8a38648b5
@@ -4509,6 +4537,10 @@ trackedFiles:
     id: 3c1850e81afc
     last_write_checksum: sha1:baa739e8445b71451ac8850d968124b07ff29fce
     pristine_git_object: d68fddfeab6136fb4d302e8d76e6fee502c46e7e
+  models/components/networkmobileinfo.go:
+    id: 9cd7b6752cb8
+    last_write_checksum: sha1:1990aac4506fdc08d24ad928725e1b2e82f9e933
+    pristine_git_object: 036521f02af96a4793352ba2439205cabe5860ee
   models/components/nfsmountd.go:
     id: 75be0e68b3bb
     last_write_checksum: sha1:640d091aafd689e3f79ff015bf96f7809eef731c
@@ -4729,6 +4761,22 @@ trackedFiles:
     id: fa480de2ac78
     last_write_checksum: sha1:5a011eac7d3ae44529941bc6013391484900a462
     pristine_git_object: a5e35b411b2b70ea8a3f64be54e70a9fd642eaff
+  models/components/privacy.go:
+    id: ed43459b6afe
+    last_write_checksum: sha1:432149a0de44276d2066a68c19bbc3543f3de7ab
+    pristine_git_object: 014378343c9ab0f706c09f9e9cb1c83609c2e956
+  models/components/privacytorinfo.go:
+    id: c074b09f155f
+    last_write_checksum: sha1:98ba4e11d2064a2632153d183d36d37d2d5c1363
+    pristine_git_object: 7b84926bf5992f42e0225ba5808bf3dce6e42d2b
+  models/components/privacytorinforelay.go:
+    id: 131595d80078
+    last_write_checksum: sha1:011231c193281e2daa6c38190efa268994a07fc3
+    pristine_git_object: 284f18fb1467220f3b8d9cb7b97f3135b213f430
+  models/components/privacytorinforelayexitpolicysummary.go:
+    id: 6b0e9a4ab870
+    last_write_checksum: sha1:439c8e5fa4c69afcb2726af525431c57e506c6e7
+    pristine_git_object: 055fdba83a9bed1aa9919afe1cb7ed65b26a0ac2
   models/components/profinetcm.go:
     id: 8e1b0b6bd28c
     last_write_checksum: sha1:5c5b282a3cab98b6bc2c41e8e115b2487e6dd0ef
@@ -5823,12 +5871,12 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:c6b43c147b578da03347cddbde2d6c454bcdd070
-    pristine_git_object: 04f740e7c4a62bfd2ed1e39d2df79d06e81d3523
+    last_write_checksum: sha1:4e3e63d8819b4b7a0de9b64c19a5f05c05ba01ed
+    pristine_git_object: 444a6d3380d1fe6475d32d2af7595a12303e88fc
   threathunting.go:
     id: f45dc6b4d4a3
-    last_write_checksum: sha1:1f692837160e1fa38d3415451af35bb8449239e3
-    pristine_git_object: ceef39188d576a790d283e4f05dcc9a3e44d82b5
+    last_write_checksum: sha1:44345224a1bc78cf7edde38433bec2c8a086edd6
+    pristine_git_object: 4c48f87b2e92cf37b4a6ce8d44aad7aee652a531
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
