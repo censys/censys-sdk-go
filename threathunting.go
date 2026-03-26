@@ -33,7 +33,7 @@ func newThreatHunting(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *ho
 }
 
 // CreateCenseyeJob - CensEye: Create a pivot analysis job
-// Create an asynchronous CensEye pivot analysis job for a host, web property, or certificate. The job extracts default pivot fields from the target asset and counts matching documents for each field-value pair. Poll the job status endpoint to track progress, then retrieve results when complete.<br><br>To use this endpoint, your organization must have access to the Threat Hunting Module.
+// Create an asynchronous CensEye pivot analysis job for a host, web property, or certificate. The job extracts [default pivot fields](https://docs.censys.com/docs/platform-threat-hunting-use-censeye-to-build-detections#default-pivot-fields) from the target asset and counts matching documents for each field-value pair. Poll the job status endpoint to track progress, then retrieve results when complete.<br><br>To use this endpoint, your organization must have access to the Threat Hunting module.<br><br>This endpoint costs 44 credits to execute for a host, 28 credits to execute for a web property, and 7 credits to execute for a certificate.
 func (s *ThreatHunting) CreateCenseyeJob(ctx context.Context, request operations.V3ThreathuntingCenseyeJobsCreateRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobsCreateResponse, error) {
 	globals := operations.V3ThreathuntingCenseyeJobsCreateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -322,7 +322,7 @@ func (s *ThreatHunting) CreateCenseyeJob(ctx context.Context, request operations
 }
 
 // GetCenseyeJob - CensEye: Get job status
-// Retrieve the current status of a CensEye pivot analysis job. Use this to poll for completion before fetching results.
+// Retrieve the current status of a CensEye pivot analysis job. Use this to poll for completion before fetching results.<br><br>To use this endpoint, your organization must have access to the Threat Hunting module.
 func (s *ThreatHunting) GetCenseyeJob(ctx context.Context, request operations.V3ThreathuntingCenseyeJobsGetRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobsGetResponse, error) {
 	globals := operations.V3ThreathuntingCenseyeJobsGetGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
@@ -604,7 +604,7 @@ func (s *ThreatHunting) GetCenseyeJob(ctx context.Context, request operations.V3
 }
 
 // GetCenseyeJobResults - CensEye: Get job results
-// Retrieve the results of a completed CensEye pivot analysis job. Each result contains a count and the field-value pairs that were analyzed. Results may be empty if the job is still running.<br><br>Results are paginated. Use the `next_page_token` from the response to fetch subsequent pages.
+// Retrieve the results of a completed CensEye pivot analysis job. Each result contains a count and the field-value pairs that were analyzed. Results may be empty if the job is still running.<br><br>Results are paginated. Use the `next_page_token` from the response to fetch subsequent pages.<br><br>To use this endpoint, your organization must have access to the Threat Hunting module.
 func (s *ThreatHunting) GetCenseyeJobResults(ctx context.Context, request operations.V3ThreathuntingCenseyeJobResultsRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobResultsResponse, error) {
 	globals := operations.V3ThreathuntingCenseyeJobResultsGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

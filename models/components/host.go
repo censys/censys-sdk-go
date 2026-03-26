@@ -3,18 +3,22 @@
 package components
 
 type Host struct {
-	AutonomousSystem *Routing    `json:"autonomous_system,omitempty"`
-	DNS              *HostDNS    `json:"dns,omitempty"`
-	Greynoise        *Greynoise  `json:"greynoise,omitempty"`
-	Hardware         *Attribute  `json:"hardware,omitempty"`
-	IP               *string     `json:"ip,omitempty"`
-	Labels           []Label     `json:"labels,omitempty"`
-	Location         *Location   `json:"location,omitempty"`
-	OperatingSystem  *Attribute  `json:"operating_system,omitempty"`
-	Reputation       *Reputation `json:"reputation,omitempty"`
-	ServiceCount     *int        `json:"service_count,omitempty"`
-	Services         []Service   `json:"services,omitempty"`
-	Whois            *Whois      `json:"whois,omitempty"`
+	AutonomousSystem *Routing   `json:"autonomous_system,omitempty"`
+	DNS              *HostDNS   `json:"dns,omitempty"`
+	Greynoise        *Greynoise `json:"greynoise,omitempty"`
+	Hardware         *Attribute `json:"hardware,omitempty"`
+	IP               *string    `json:"ip,omitempty"`
+	Labels           []Label    `json:"labels,omitempty"`
+	Location         *Location  `json:"location,omitempty"`
+	// Information about what type of network the host belongs to.
+	Network         []NetworkClassification `json:"network,omitempty"`
+	OperatingSystem *Attribute              `json:"operating_system,omitempty"`
+	// Information about privacy services used by the IP, such as VPNs, Proxies, or Tor.
+	Privacy      []Privacy   `json:"privacy,omitempty"`
+	Reputation   *Reputation `json:"reputation,omitempty"`
+	ServiceCount *int        `json:"service_count,omitempty"`
+	Services     []Service   `json:"services,omitempty"`
+	Whois        *Whois      `json:"whois,omitempty"`
 }
 
 func (h *Host) GetAutonomousSystem() *Routing {
@@ -66,11 +70,25 @@ func (h *Host) GetLocation() *Location {
 	return h.Location
 }
 
+func (h *Host) GetNetwork() []NetworkClassification {
+	if h == nil {
+		return nil
+	}
+	return h.Network
+}
+
 func (h *Host) GetOperatingSystem() *Attribute {
 	if h == nil {
 		return nil
 	}
 	return h.OperatingSystem
+}
+
+func (h *Host) GetPrivacy() []Privacy {
+	if h == nil {
+		return nil
+	}
+	return h.Privacy
 }
 
 func (h *Host) GetReputation() *Reputation {

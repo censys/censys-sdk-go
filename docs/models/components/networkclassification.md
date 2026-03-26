@@ -1,0 +1,12 @@
+# NetworkClassification
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `Hosting`                                                                     | `*bool`                                                                       | :heavy_minus_sign:                                                            | Whether the host belongs to an Internet hosting service provider.             |
+| `Mobile`                                                                      | `*bool`                                                                       | :heavy_minus_sign:                                                            | Whether the host belongs to a mobile network.                                 |
+| `MobileInfo`                                                                  | [*components.NetworkMobileInfo](../../models/components/networkmobileinfo.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Satellite`                                                                   | `*bool`                                                                       | :heavy_minus_sign:                                                            | Whether the host belongs to a statellite network.                             |
+| `Source`                                                                      | `*string`                                                                     | :heavy_minus_sign:                                                            | The source of the data.                                                       |
