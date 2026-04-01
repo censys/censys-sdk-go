@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 3e1ee0d04d400c49b97d8b79799cfadd
-  docVersion: 1.0.87
-  speakeasyVersion: 1.759.3
-  generationVersion: 2.869.25
-  releaseVersion: 0.25.10
-  configChecksum: e5a595c0fb1cb3cba689875143965007
+  docChecksum: 75e289c62b5c116d278be94c442b86f5
+  docVersion: 1.0.88
+  speakeasyVersion: 1.761.0
+  generationVersion: 2.879.1
+  releaseVersion: 0.25.11
+  configChecksum: b96036483765a842a4efc0c92e89c10b
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: a4c76fb8-7f3d-4c35-b6f9-34ab26da7b1a
-  pristine_commit_hash: e6ede472bf1eb68305f8b2af93fc7f65c88e103b
-  pristine_tree_hash: b8b2d7c85124e275f652c3fed293327ba97e46cb
+  generation_id: dd3b98ab-c0c6-4e85-81f9-4c7c7b0be54b
+  pristine_commit_hash: 19002937353ccc0506afd84f085ff0ff941dd99a
+  pristine_tree_hash: 7345661b60900f198d84f5c94946a4e57afaa94e
 features:
   go:
     acceptHeaders: 2.81.2
@@ -23,7 +23,7 @@ features:
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
     examples: 2.81.6
-    globalSecurity: 2.82.13
+    globalSecurity: 2.82.15
     globalSecurityCallbacks: 0.1.0
     globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.83.1
@@ -2323,8 +2323,8 @@ trackedFiles:
     pristine_git_object: 3aa54a576c058d74a314ddbfdb678a0beb049567
   docs/models/components/socks.md:
     id: 47e001ac199a
-    last_write_checksum: sha1:8e014c79de304965dc1fe7b96973249e4781a2fe
-    pristine_git_object: cc8e9d99946aa2ad1c7a04f663a45b205938ea86
+    last_write_checksum: sha1:5e8dd05f718ece7ae6a13129ed99a6b0bb2efe97
+    pristine_git_object: 46eaf9bc00e77916584e30de90252f129b2e340a
   docs/models/components/source.md:
     id: 11d9227b9692
     last_write_checksum: sha1:7ec88a946d4b4f25f5af834bade4bed1b21de92d
@@ -3279,8 +3279,8 @@ trackedFiles:
     pristine_git_object: 3877efdb505fa2f60aa8b89ad6c819792d39c022
   internal/utils/json.go:
     id: ad03e3c502d8
-    last_write_checksum: sha1:cf18a43fa3a3b1228b44631f650620618d1cc4d6
-    pristine_git_object: db2d6093fa0921c79b73c6e003e52f2caaa56fee
+    last_write_checksum: sha1:244d5f37480712f3827b5af6c0d491e7caa02b09
+    pristine_git_object: e4be32d5fef78890a8dde3703f2048f794883239
   internal/utils/pathparams.go:
     id: 1f3e0c30fd90
     last_write_checksum: sha1:48c4c2736bd21ea2adae83d5419e5ad99ad48830
@@ -3299,8 +3299,8 @@ trackedFiles:
     pristine_git_object: 5bd42635e272a1b21af8d59c9205c50a33e6f1cb
   internal/utils/security.go:
     id: eeb54c55241b
-    last_write_checksum: sha1:573140faaff017cb3bd31e579c6b3949f3d8365b
-    pristine_git_object: 77566aa2c1127569d9de4a1782b58f852d926d0a
+    last_write_checksum: sha1:49fee4e9252239953611e6de36f4682851499ab5
+    pristine_git_object: a2332ee8de013a2121880e4b7be332d3385c6f41
   internal/utils/union.go:
     id: db86c85746b6
     last_write_checksum: sha1:a1fbe42ddfa1405fa0e9cf3613036f562774ae9c
@@ -5371,8 +5371,8 @@ trackedFiles:
     pristine_git_object: 4367aea4372472c1708b390bc570a7e93ab17626
   models/components/socks.go:
     id: 0cf687387a8d
-    last_write_checksum: sha1:7c93b1ade7ec1f83654f4340aa1716472f7dc0d6
-    pristine_git_object: c9bcdfbe013224738f2c557f6feb43a0c24c13bb
+    last_write_checksum: sha1:262ebe2fccf850bc7dc26d501257fba7e6221351
+    pristine_git_object: 6b84e0c0338dc9b7c08111a7778e13be9b7808db
   models/components/sourceusagebreakdown.go:
     id: c76db9c99ce1
     last_write_checksum: sha1:d9326f8159d3cff6a55da1e241b8e653748341a4
@@ -5871,8 +5871,8 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:4e3e63d8819b4b7a0de9b64c19a5f05c05ba01ed
-    pristine_git_object: 444a6d3380d1fe6475d32d2af7595a12303e88fc
+    last_write_checksum: sha1:81a8db549c9808b116014d0c6922cbd49dd7e3ab
+    pristine_git_object: 781769d7dab2cd2f31880cd06a0c4206682de6eb
   threathunting.go:
     id: f45dc6b4d4a3
     last_write_checksum: sha1:44345224a1bc78cf7edde38433bec2c8a086edd6
