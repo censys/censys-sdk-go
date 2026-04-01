@@ -17,15 +17,15 @@ import (
 	"net/url"
 )
 
-// ThreatHunting - Endpoints related to the Adversary Investigation product
-type ThreatHunting struct {
+// AdversaryInvestigation - Endpoints related to the Adversary Investigation product
+type AdversaryInvestigation struct {
 	rootSDK          *SDK
 	sdkConfiguration config.SDKConfiguration
 	hooks            *hooks.Hooks
 }
 
-func newThreatHunting(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.Hooks) *ThreatHunting {
-	return &ThreatHunting{
+func newAdversaryInvestigation(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.Hooks) *AdversaryInvestigation {
+	return &AdversaryInvestigation{
 		rootSDK:          rootSDK,
 		sdkConfiguration: sdkConfig,
 		hooks:            hooks,
@@ -34,7 +34,7 @@ func newThreatHunting(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *ho
 
 // CreateCenseyeJob - CensEye: Create a pivot analysis job
 // Create an asynchronous CensEye pivot analysis job for a host, web property, or certificate. The job extracts default pivot fields from the target asset and counts matching documents for each field-value pair. Poll the job status endpoint to track progress, then retrieve results when complete.<br><br>To use this endpoint, your organization must have access to the Adversary Investigation module.
-func (s *ThreatHunting) CreateCenseyeJob(ctx context.Context, request operations.V3ThreathuntingCenseyeJobsCreateRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobsCreateResponse, error) {
+func (s *AdversaryInvestigation) CreateCenseyeJob(ctx context.Context, request operations.V3ThreathuntingCenseyeJobsCreateRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobsCreateResponse, error) {
 	globals := operations.V3ThreathuntingCenseyeJobsCreateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
 	}
@@ -323,7 +323,7 @@ func (s *ThreatHunting) CreateCenseyeJob(ctx context.Context, request operations
 
 // GetCenseyeJob - CensEye: Get job status
 // Retrieve the current status of a CensEye pivot analysis job. Use this to poll for completion before fetching results.<br><br>To use this endpoint, your organization must have access to the Adversary Investigation module.
-func (s *ThreatHunting) GetCenseyeJob(ctx context.Context, request operations.V3ThreathuntingCenseyeJobsGetRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobsGetResponse, error) {
+func (s *AdversaryInvestigation) GetCenseyeJob(ctx context.Context, request operations.V3ThreathuntingCenseyeJobsGetRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobsGetResponse, error) {
 	globals := operations.V3ThreathuntingCenseyeJobsGetGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
 	}
@@ -605,7 +605,7 @@ func (s *ThreatHunting) GetCenseyeJob(ctx context.Context, request operations.V3
 
 // GetCenseyeJobResults - CensEye: Get job results
 // Retrieve the results of a completed CensEye pivot analysis job. Each result contains a count and the field-value pairs that were analyzed. Results may be empty if the job is still running.<br><br>Results are paginated. Use the `next_page_token` from the response to fetch subsequent pages.<br><br>To use this endpoint, your organization must have access to the Adversary Investigation module.
-func (s *ThreatHunting) GetCenseyeJobResults(ctx context.Context, request operations.V3ThreathuntingCenseyeJobResultsRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobResultsResponse, error) {
+func (s *AdversaryInvestigation) GetCenseyeJobResults(ctx context.Context, request operations.V3ThreathuntingCenseyeJobResultsRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobResultsResponse, error) {
 	globals := operations.V3ThreathuntingCenseyeJobResultsGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
 	}
@@ -887,7 +887,7 @@ func (s *ThreatHunting) GetCenseyeJobResults(ctx context.Context, request operat
 
 // GetHostObservationsWithCertificate - Get host history for a certificate
 // Retrieve the historical observations of hosts associated with a certificate. This is useful for threat hunting, detection engineering, and timeline generation. Certificate history is also visible to Adversary Investigation users in the Platform UI on the [certificate timeline](https://docs.censys.com/docs/platform-threat-hunting-use-cert-history-to-build-better-detections#/).<br><br>You can define a specific time frame of interest. If you do not specify a time frame, this endpoint will search the historical dataset that is available to your account. You may also filter results by port and transport protocol.<br><br>This endpoint is available to organizations that have access to the Adversary Investigation module. It costs 5 credits per page of results.
-func (s *ThreatHunting) GetHostObservationsWithCertificate(ctx context.Context, request operations.V3ThreathuntingGetHostObservationsWithCertificateRequest, opts ...operations.Option) (*operations.V3ThreathuntingGetHostObservationsWithCertificateResponse, error) {
+func (s *AdversaryInvestigation) GetHostObservationsWithCertificate(ctx context.Context, request operations.V3ThreathuntingGetHostObservationsWithCertificateRequest, opts ...operations.Option) (*operations.V3ThreathuntingGetHostObservationsWithCertificateResponse, error) {
 	globals := operations.V3ThreathuntingGetHostObservationsWithCertificateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
 	}
@@ -1169,7 +1169,7 @@ func (s *ThreatHunting) GetHostObservationsWithCertificate(ctx context.Context, 
 
 // CreateTrackedScan - Live Discovery: Initiate a new scan
 // Initiate a scan to look for a currently unobserved service at a specific IP and port (`ip:port`) or hostname and port (`hostname:port`). This is equivalent to the [Live Discovery](https://docs.censys.com/docs/platform-threat-hunting-use-live-scan-and-rescan-to-validate-infrastructure#/) feature available in the UI, but you can also target web properties in addition to hosts.<br><br>The scan may take several minutes to complete. The response will contain a scan ID that you can use to [monitor the scan's status](https://docs.censys.com/reference/v3-threathunting-scans-get#/). After the scan completes, perform a lookup on the target asset to retrieve detailed scan information.<br><br>This endpoint is available to organizations that have access to the Adversary Investigation module. It costs 15 credits to execute this endpoint.
-func (s *ThreatHunting) CreateTrackedScan(ctx context.Context, request operations.V3ThreathuntingScansDiscoveryRequest, opts ...operations.Option) (*operations.V3ThreathuntingScansDiscoveryResponse, error) {
+func (s *AdversaryInvestigation) CreateTrackedScan(ctx context.Context, request operations.V3ThreathuntingScansDiscoveryRequest, opts ...operations.Option) (*operations.V3ThreathuntingScansDiscoveryResponse, error) {
 	globals := operations.V3ThreathuntingScansDiscoveryGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
 	}
@@ -1456,291 +1456,9 @@ func (s *ThreatHunting) CreateTrackedScan(ctx context.Context, request operation
 
 }
 
-// GetTrackedScanThreatHunting - Get scan status
-// Retrieve the current status of a scan by its ID. This endpoint works for both [Live Discovery scans](https://docs.censys.com/reference/v3-threathunting-scans-discovery#/) and [Live Rescans](https://docs.censys.com/reference/v3-globaldata-scans-rescan#/).<br><br>If the scan was successful, perform a lookup on the target asset to retrieve detailed scan information.<br><br>This endpoint is available to all Enterprise customers. This endpoint does not cost any credits to execute.
-func (s *ThreatHunting) GetTrackedScanThreatHunting(ctx context.Context, request operations.V3ThreathuntingScansGetRequest, opts ...operations.Option) (*operations.V3ThreathuntingScansGetResponse, error) {
-	globals := operations.V3ThreathuntingScansGetGlobals{
-		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
-	}
-
-	o := operations.Options{}
-	supportedOptions := []string{
-		operations.SupportedOptionRetries,
-		operations.SupportedOptionTimeout,
-	}
-
-	for _, opt := range opts {
-		if err := opt(&o, supportedOptions...); err != nil {
-			return nil, fmt.Errorf("error applying option: %w", err)
-		}
-	}
-
-	var baseURL string
-	if o.ServerURL == nil {
-		baseURL = utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	} else {
-		baseURL = *o.ServerURL
-	}
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v3/threat-hunting/scans/{scan_id}", request, globals)
-	if err != nil {
-		return nil, fmt.Errorf("error generating URL: %w", err)
-	}
-
-	hookCtx := hooks.HookContext{
-		SDK:              s.rootSDK,
-		SDKConfiguration: s.sdkConfiguration,
-		BaseURL:          baseURL,
-		Context:          ctx,
-		OperationID:      "v3-threathunting-scans-get",
-		SecuritySource:   s.sdkConfiguration.Security,
-	}
-
-	timeout := o.Timeout
-	if timeout == nil {
-		timeout = s.sdkConfiguration.Timeout
-	}
-
-	if timeout != nil {
-		var cancel context.CancelFunc
-		ctx, cancel = context.WithTimeout(ctx, *timeout)
-		defer cancel()
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-	req.Header.Set("Accept", "application/vnd.censys.api.v3.trackedscan.v1+json")
-	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, globals, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
-		return nil, err
-	}
-
-	for k, v := range o.SetHeaders {
-		req.Header.Set(k, v)
-	}
-
-	globalRetryConfig := s.sdkConfiguration.RetryConfig
-	retryConfig := o.Retries
-	if retryConfig == nil {
-		if globalRetryConfig != nil {
-			retryConfig = globalRetryConfig
-		}
-	}
-
-	var httpRes *http.Response
-	if retryConfig != nil {
-		httpRes, err = utils.Retry(ctx, utils.Retries{
-			Config: retryConfig,
-			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
-			},
-		}, func() (*http.Response, error) {
-			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
-				copyBody, err := req.GetBody()
-
-				if err != nil {
-					return nil, err
-				}
-
-				req.Body = copyBody
-			}
-
-			req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
-			if err != nil {
-				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
-					return nil, err
-				}
-
-				return nil, retry.Permanent(err)
-			}
-
-			httpRes, err := s.sdkConfiguration.Client.Do(req)
-			if err != nil || httpRes == nil {
-				if err != nil {
-					err = fmt.Errorf("error sending request: %w", err)
-				} else {
-					err = fmt.Errorf("error sending request: no response")
-				}
-
-				_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
-			}
-			return httpRes, err
-		})
-
-		if err != nil {
-			return nil, err
-		} else {
-			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
-			if err != nil {
-				return nil, err
-			}
-		}
-	} else {
-		req, err = s.hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
-		if err != nil {
-			return nil, err
-		}
-
-		httpRes, err = s.sdkConfiguration.Client.Do(req)
-		if err != nil || httpRes == nil {
-			if err != nil {
-				err = fmt.Errorf("error sending request: %w", err)
-			} else {
-				err = fmt.Errorf("error sending request: no response")
-			}
-
-			_, err = s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
-			return nil, err
-		} else if utils.MatchStatusCodes([]string{"400", "401", "403", "404", "4XX", "500", "5XX"}, httpRes.StatusCode) {
-			_httpRes, err := s.hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
-			if err != nil {
-				return nil, err
-			} else if _httpRes != nil {
-				httpRes = _httpRes
-			}
-		} else {
-			httpRes, err = s.hooks.AfterSuccess(hooks.AfterSuccessContext{HookContext: hookCtx}, httpRes)
-			if err != nil {
-				return nil, err
-			}
-		}
-	}
-
-	res := &operations.V3ThreathuntingScansGetResponse{
-		HTTPMeta: components.HTTPMetadata{
-			Request:  req,
-			Response: httpRes,
-		},
-	}
-
-	switch {
-	case httpRes.StatusCode == 200:
-		res.Headers = httpRes.Header
-
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/vnd.censys.api.v3.trackedscan.v1+json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out components.ResponseEnvelopeTrackedScan
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			res.ResponseEnvelopeTrackedScan = &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out sdkerrors.AuthenticationError
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/problem+json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out sdkerrors.ErrorModel
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode == 500:
-		switch {
-		case utils.MatchContentType(httpRes.Header.Get("Content-Type"), `application/problem+json`):
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-
-			var out sdkerrors.ErrorModel
-			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
-			}
-
-			return nil, &out
-		default:
-			rawBody, err := utils.ConsumeRawBody(httpRes)
-			if err != nil {
-				return nil, err
-			}
-			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", httpRes.Header.Get("Content-Type")), httpRes.StatusCode, string(rawBody), httpRes)
-		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("API error occurred", httpRes.StatusCode, string(rawBody), httpRes)
-	default:
-		rawBody, err := utils.ConsumeRawBody(httpRes)
-		if err != nil {
-			return nil, err
-		}
-		return nil, sdkerrors.NewSDKError("unknown status code returned", httpRes.StatusCode, string(rawBody), httpRes)
-	}
-
-	return res, nil
-
-}
-
 // ListThreats - List active threats
 // Retrieve a list of active threats observed by Censys by aggregating threat IDs across hosts and web properties. Threats are active if their fingerprint has been identified on hosts or web properties by Censys scans. This information is also available on the [Explore Threats page in the Platform web UI](https://platform.censys.io/threats).<br><br>This endpoint is available to organizations that have access to the Adversary Investigation module.
-func (s *ThreatHunting) ListThreats(ctx context.Context, request operations.V3ThreathuntingThreatsListRequest, opts ...operations.Option) (*operations.V3ThreathuntingThreatsListResponse, error) {
+func (s *AdversaryInvestigation) ListThreats(ctx context.Context, request operations.V3ThreathuntingThreatsListRequest, opts ...operations.Option) (*operations.V3ThreathuntingThreatsListResponse, error) {
 	globals := operations.V3ThreathuntingThreatsListGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
 	}
@@ -2022,7 +1740,7 @@ func (s *ThreatHunting) ListThreats(ctx context.Context, request operations.V3Th
 
 // ValueCounts - CensEye: Retrieve value counts to discover pivots
 // Get counts of web assets for specific field-value pairs and combinations of field-value pairs. This is similar to the [CensEye functionality](https://docs.censys.com/docs/platform-threat-hunting-use-censeye-to-build-detections#/) available in the Platform web UI, but it allows you to define specific fields of interest rather than the [default fields](https://docs.censys.com/docs/platform-threat-hunting-use-censeye-to-build-detections#default-pivot-fields) leveraged by the tool in the UI.<br><br>Each array can only target fields within the same nested object and may contain at most 5 field-value pairs. For example, you can combine `host.services.port=80` and `host.services.protocol=SSH` in the same array, but you cannot combine `host.services.port=80` and `host.location.country="United States"` in the same array. You can input multiple arrays of objects in each API call.<br><br>To use this endpoint, your organization must have access to the Adversary Investigation module. This endpoint costs 1 credit per count condition (array of objects) included in the API call.
-func (s *ThreatHunting) ValueCounts(ctx context.Context, request operations.V3ThreathuntingValueCountsRequest, opts ...operations.Option) (*operations.V3ThreathuntingValueCountsResponse, error) {
+func (s *AdversaryInvestigation) ValueCounts(ctx context.Context, request operations.V3ThreathuntingValueCountsRequest, opts ...operations.Option) (*operations.V3ThreathuntingValueCountsResponse, error) {
 	globals := operations.V3ThreathuntingValueCountsGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
 	}
