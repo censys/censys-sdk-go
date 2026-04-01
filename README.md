@@ -108,6 +108,16 @@ func main() {
 * [GetUserCredits](docs/sdks/accountmanagement/README.md#getusercredits) - Get Free user credit balance
 * [GetUserCreditsUsage](docs/sdks/accountmanagement/README.md#getusercreditsusage) - Get Free user credit usage
 
+### [AdversaryInvestigation](docs/sdks/adversaryinvestigation/README.md)
+
+* [CreateCenseyeJob](docs/sdks/adversaryinvestigation/README.md#createcenseyejob) - CensEye: Create a pivot analysis job
+* [GetCenseyeJob](docs/sdks/adversaryinvestigation/README.md#getcenseyejob) - CensEye: Get job status
+* [GetCenseyeJobResults](docs/sdks/adversaryinvestigation/README.md#getcenseyejobresults) - CensEye: Get job results
+* [GetHostObservationsWithCertificate](docs/sdks/adversaryinvestigation/README.md#gethostobservationswithcertificate) - Get host history for a certificate
+* [CreateTrackedScan](docs/sdks/adversaryinvestigation/README.md#createtrackedscan) - Live Discovery: Initiate a new scan
+* [ListThreats](docs/sdks/adversaryinvestigation/README.md#listthreats) - List active threats
+* [ValueCounts](docs/sdks/adversaryinvestigation/README.md#valuecounts) - CensEye: Retrieve value counts to discover pivots
+
 ### [Collections](docs/sdks/collections/README.md)
 
 * [List](docs/sdks/collections/README.md#list) - List collections

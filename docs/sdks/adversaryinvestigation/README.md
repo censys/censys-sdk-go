@@ -1,4 +1,4 @@
-# ThreatHunting
+# AdversaryInvestigation
 
 ## Overview
 
@@ -11,7 +11,6 @@ Endpoints related to the Adversary Investigation product
 * [GetCenseyeJobResults](#getcenseyejobresults) - CensEye: Get job results
 * [GetHostObservationsWithCertificate](#gethostobservationswithcertificate) - Get host history for a certificate
 * [CreateTrackedScan](#createtrackedscan) - Live Discovery: Initiate a new scan
-* [GetTrackedScanThreatHunting](#gettrackedscanthreathunting) - Get scan status
 * [ListThreats](#listthreats) - List active threats
 * [ValueCounts](#valuecounts) - CensEye: Retrieve value counts to discover pivots
 
@@ -41,7 +40,7 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.ThreatHunting.CreateCenseyeJob(ctx, operations.V3ThreathuntingCenseyeJobsCreateRequest{
+    res, err := s.AdversaryInvestigation.CreateCenseyeJob(ctx, operations.V3ThreathuntingCenseyeJobsCreateRequest{
         CreateCenseyeJobInputBody: components.CreateCenseyeJobInputBody{
             Target: components.CenseyeTarget{
                 CertificateID: censyssdkgo.Pointer("3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf"),
@@ -105,7 +104,7 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.ThreatHunting.GetCenseyeJob(ctx, operations.V3ThreathuntingCenseyeJobsGetRequest{
+    res, err := s.AdversaryInvestigation.GetCenseyeJob(ctx, operations.V3ThreathuntingCenseyeJobsGetRequest{
         JobID: "3c47b971-5db6-4a9e-8d59-14fc0486172b",
     })
     if err != nil {
@@ -163,7 +162,7 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.ThreatHunting.GetCenseyeJobResults(ctx, operations.V3ThreathuntingCenseyeJobResultsRequest{
+    res, err := s.AdversaryInvestigation.GetCenseyeJobResults(ctx, operations.V3ThreathuntingCenseyeJobResultsRequest{
         JobID: "e58e9a0e-e104-42cf-9d0e-fe88713bc6e3",
     })
     if err != nil {
@@ -221,7 +220,7 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.ThreatHunting.GetHostObservationsWithCertificate(ctx, operations.V3ThreathuntingGetHostObservationsWithCertificateRequest{
+    res, err := s.AdversaryInvestigation.GetHostObservationsWithCertificate(ctx, operations.V3ThreathuntingGetHostObservationsWithCertificateRequest{
         CertificateID: "55af8a301eb51abdaf7c31bec951638fe5a99d5d92117eca2be493026613fa46",
         StartTime: censyssdkgo.Pointer("2023-01-01T00:00:00Z"),
         EndTime: censyssdkgo.Pointer("2023-12-31T23:59:59Z"),
@@ -285,7 +284,7 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.ThreatHunting.CreateTrackedScan(ctx, operations.V3ThreathuntingScansDiscoveryRequest{
+    res, err := s.AdversaryInvestigation.CreateTrackedScan(ctx, operations.V3ThreathuntingScansDiscoveryRequest{
         ScansDiscoveryInputBody: components.ScansDiscoveryInputBody{
             Target: components.CreateScansDiscoveryInputBodyTargetTarget2(
                 components.Target2{
@@ -327,64 +326,6 @@ func main() {
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
-## GetTrackedScanThreatHunting
-
-Retrieve the current status of a scan by its ID. This endpoint works for both [Live Discovery scans](https://docs.censys.com/reference/v3-threathunting-scans-discovery#/) and [Live Rescans](https://docs.censys.com/reference/v3-globaldata-scans-rescan#/).<br><br>If the scan was successful, perform a lookup on the target asset to retrieve detailed scan information.<br><br>This endpoint is available to all Enterprise customers. This endpoint does not cost any credits to execute.
-
-### Example Usage
-
-<!-- UsageSnippet language="go" operationID="v3-threathunting-scans-get" method="get" path="/v3/threat-hunting/scans/{scan_id}" -->
-```go
-package main
-
-import(
-	"context"
-	censyssdkgo "github.com/censys/censys-sdk-go"
-	"github.com/censys/censys-sdk-go/models/operations"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
-        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
-    )
-
-    res, err := s.ThreatHunting.GetTrackedScanThreatHunting(ctx, operations.V3ThreathuntingScansGetRequest{
-        ScanID: "cd62e794-9f12-4c2f-b5b3-153853aaf8d9",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ResponseEnvelopeTrackedScan != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
-| `request`                                                                                              | [operations.V3ThreathuntingScansGetRequest](../../models/operations/v3threathuntingscansgetrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `opts`                                                                                                 | [][operations.Option](../../models/operations/option.md)                                               | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
-
-### Response
-
-**[*operations.V3ThreathuntingScansGetResponse](../../models/operations/v3threathuntingscansgetresponse.md), error**
-
-### Errors
-
-| Error Type                    | Status Code                   | Content Type                  |
-| ----------------------------- | ----------------------------- | ----------------------------- |
-| sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
-| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
-| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
-
 ## ListThreats
 
 Retrieve a list of active threats observed by Censys by aggregating threat IDs across hosts and web properties. Threats are active if their fingerprint has been identified on hosts or web properties by Censys scans. This information is also available on the [Explore Threats page in the Platform web UI](https://platform.censys.io/threats).<br><br>This endpoint is available to organizations that have access to the Adversary Investigation module.
@@ -410,7 +351,7 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.ThreatHunting.ListThreats(ctx, operations.V3ThreathuntingThreatsListRequest{
+    res, err := s.AdversaryInvestigation.ListThreats(ctx, operations.V3ThreathuntingThreatsListRequest{
         Query: censyssdkgo.Pointer("*"),
     })
     if err != nil {
@@ -469,7 +410,7 @@ func main() {
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
-    res, err := s.ThreatHunting.ValueCounts(ctx, operations.V3ThreathuntingValueCountsRequest{
+    res, err := s.AdversaryInvestigation.ValueCounts(ctx, operations.V3ThreathuntingValueCountsRequest{
         SearchValueCountsInputBody: components.SearchValueCountsInputBody{
             AndCountConditions: []components.CountCondition{
                 components.CountCondition{
