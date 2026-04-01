@@ -7,6 +7,7 @@ type Socks struct {
 	PreferredAuthentication      *string `json:"preferred_authentication,omitempty"`
 	PreferredAuthenticationValue *int    `json:"preferred_authentication_value,omitempty"`
 	SocksVersion                 *int64  `json:"socks_version,omitempty"`
+	SupportedVersions            []int64 `json:"supported_versions,omitempty"`
 }
 
 func (s *Socks) GetNoAuthenticationRequired() *bool {
@@ -35,4 +36,11 @@ func (s *Socks) GetSocksVersion() *int64 {
 		return nil
 	}
 	return s.SocksVersion
+}
+
+func (s *Socks) GetSupportedVersions() []int64 {
+	if s == nil {
+		return nil
+	}
+	return s.SupportedVersions
 }

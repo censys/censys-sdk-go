@@ -9,3 +9,4 @@
 | `PreferredAuthentication`      | `*string`                      | :heavy_minus_sign:             | N/A                            |
 | `PreferredAuthenticationValue` | `*int`                         | :heavy_minus_sign:             | N/A                            |
 | `SocksVersion`                 | `*int64`                       | :heavy_minus_sign:             | N/A                            |
+| `SupportedVersions`            | []`int64`                      | :heavy_minus_sign:             | N/A                            |
