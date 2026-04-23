@@ -7,6 +7,8 @@ type Greynoise struct {
 	Actor *string `json:"actor,omitempty"`
 	// The classification of the IP address.
 	Classification *string `json:"classification,omitempty"`
+	// The last time the IP address was observed.
+	LastObservedTime *string `json:"last_observed_time,omitempty"`
 	// The tags associated with the IP address.
 	Tags []GreynoiseTag `json:"tags,omitempty"`
 }
@@ -23,6 +25,13 @@ func (g *Greynoise) GetClassification() *string {
 		return nil
 	}
 	return g.Classification
+}
+
+func (g *Greynoise) GetLastObservedTime() *string {
+	if g == nil {
+		return nil
+	}
+	return g.LastObservedTime
 }
 
 func (g *Greynoise) GetTags() []GreynoiseTag {

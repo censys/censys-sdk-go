@@ -43,6 +43,7 @@ type EndpointScanState struct {
 	IvantiAvalanche   *IvantiAvalanche                    `json:"ivanti_avalanche,omitempty"`
 	Jenkins           *Jenkins                            `json:"jenkins,omitempty"`
 	Kubernetes        *Kubernetes                         `json:"kubernetes,omitempty"`
+	Mcp               *Mcp                                `json:"mcp,omitempty"`
 	Ollama            *Ollama                             `json:"ollama,omitempty"`
 	OpenDirectory     *OpenDirectory                      `json:"open_directory,omitempty"`
 	Path              *string                             `json:"path,omitempty"`
@@ -161,6 +162,13 @@ func (e *EndpointScanState) GetKubernetes() *Kubernetes {
 		return nil
 	}
 	return e.Kubernetes
+}
+
+func (e *EndpointScanState) GetMcp() *Mcp {
+	if e == nil {
+		return nil
+	}
+	return e.Mcp
 }
 
 func (e *EndpointScanState) GetOllama() *Ollama {
