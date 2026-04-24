@@ -149,6 +149,7 @@ func main() {
 
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
+* [ListCenseyeJobs](docs/sdks/threathunting/README.md#listcenseyejobs) - CensEye: List jobs
 * [CreateCenseyeJob](docs/sdks/threathunting/README.md#createcenseyejob) - CensEye: Create a pivot analysis job
 * [GetCenseyeJob](docs/sdks/threathunting/README.md#getcenseyejob) - CensEye: Get job status
 * [GetCenseyeJobResults](docs/sdks/threathunting/README.md#getcenseyejobresults) - CensEye: Get job results

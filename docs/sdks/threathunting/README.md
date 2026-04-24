@@ -6,6 +6,7 @@ Endpoints related to the Adversary Investigation product
 
 ### Available Operations
 
+* [ListCenseyeJobs](#listcenseyejobs) - CensEye: List jobs
 * [CreateCenseyeJob](#createcenseyejob) - CensEye: Create a pivot analysis job
 * [GetCenseyeJob](#getcenseyejob) - CensEye: Get job status
 * [GetCenseyeJobResults](#getcenseyejobresults) - CensEye: Get job results
@@ -14,6 +15,66 @@ Endpoints related to the Adversary Investigation product
 * [GetTrackedScanThreatHunting](#gettrackedscanthreathunting) - Get scan status
 * [ListThreats](#listthreats) - List active threats
 * [ValueCounts](#valuecounts) - CensEye: Retrieve value counts to discover pivots
+
+## ListCenseyeJobs
+
+List CensEye pivot analysis jobs for the current organization. Results are paginated. Optionally filter by asset (host, web property, or certificate).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-threathunting-censeye-jobs-list" method="get" path="/v3/threat-hunting/censeye/jobs" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.ThreatHunting.ListCenseyeJobs(ctx, operations.V3ThreathuntingCenseyeJobsListRequest{
+        HostID: censyssdkgo.Pointer("8.8.8.8"),
+        WebpropertyID: censyssdkgo.Pointer("example.com:443"),
+        CertificateID: censyssdkgo.Pointer("3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf"),
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeCenseyeJobsListResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                                                | :heavy_check_mark:                                                                                                   | The context to use for the request.                                                                                  |
+| `request`                                                                                                            | [operations.V3ThreathuntingCenseyeJobsListRequest](../../models/operations/v3threathuntingcenseyejobslistrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `opts`                                                                                                               | [][operations.Option](../../models/operations/option.md)                                                             | :heavy_minus_sign:                                                                                                   | The options for this request.                                                                                        |
+
+### Response
+
+**[*operations.V3ThreathuntingCenseyeJobsListResponse](../../models/operations/v3threathuntingcenseyejobslistresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 409                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## CreateCenseyeJob
 
