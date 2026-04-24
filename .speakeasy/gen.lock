@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 0127779e46a5244e4987fb6d6811f0b5
-  docVersion: 1.0.91
+  docChecksum: fad163e9b43b9acbd52fff842b07194d
+  docVersion: 1.0.92
   speakeasyVersion: 1.761.9
   generationVersion: 2.881.4
-  releaseVersion: 0.25.13
-  configChecksum: 9f9ebd8f1a0fcc170edc0e4d09ced02c
+  releaseVersion: 0.25.14
+  configChecksum: a3a769a2a0680358dbf6f616cf7e61dd
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: a41c1f72-9bce-4e19-8b08-e49f2f20e858
-  pristine_commit_hash: 2a94d4ae2a019a19b9135ace99c224cfd8364d15
-  pristine_tree_hash: dd9a3594b0285dbc83d5fdf6ea59de734dfed7ad
+  generation_id: 1f31fa86-8b6f-4d1c-9831-90159f3f73e7
+  pristine_commit_hash: bebd64ab0bd2e505d4c131d7c3e775a08e2946e8
+  pristine_tree_hash: e76cb4bd5ac6b8bfddd0bc6886be5ff742693b93
 features:
   go:
     acceptHeaders: 2.81.2
@@ -173,6 +173,10 @@ trackedFiles:
     id: 64bcc1ac2628
     last_write_checksum: sha1:9aaff15fe5b2c0d3aac93273b17c92c807603a67
     pristine_git_object: aa37aa6e85906a8475bdc0feca82e3a9bc301726
+  docs/models/components/censeyejobslistresponse.md:
+    id: 5fdc8ffe25ff
+    last_write_checksum: sha1:cfd971c6c060f494c5d6e8d1f4d1145f44a5e20e
+    pristine_git_object: de1804af0b0dc383597898007ed8f46153417527
   docs/models/components/censeyeresult.md:
     id: f84834f12759
     last_write_checksum: sha1:6b20839b67fe8107e59d3404c17446b532c9c268
@@ -1861,6 +1865,10 @@ trackedFiles:
     id: b24083f1c7ff
     last_write_checksum: sha1:1cc134fd3627468bb134f52009c702310b3a9f39
     pristine_git_object: d9bbc5f45d7fc454d0f0f82ee7c1e2cc7f65b4da
+  docs/models/components/responseenvelopecenseyejobslistresponse.md:
+    id: 309b4789af8c
+    last_write_checksum: sha1:3218f949bc84824f7eefdb92856946fa2c1196fd
+    pristine_git_object: 03fedd65a332d209ad3acafc649011835e8e6520
   docs/models/components/responseenvelopecenseyeresultsresponse.md:
     id: ad3c4200c00a
     last_write_checksum: sha1:8196930bd4e9823164fc2a1c022b681ab8a0ebff
@@ -3173,6 +3181,18 @@ trackedFiles:
     id: 0cb232c72404
     last_write_checksum: sha1:3322822fcf38c72ee328b92d9f92c205c2e4c050
     pristine_git_object: c6f9641295aecdffa545bbb75091775a162bdaca
+  docs/models/operations/v3threathuntingcenseyejobslistglobals.md:
+    id: ac7a66c50d8d
+    last_write_checksum: sha1:1e40b3e634fccf3479df6c668c55146da1672a6e
+    pristine_git_object: 5fd534f27b16cd3bae5e653954405384a9796fba
+  docs/models/operations/v3threathuntingcenseyejobslistrequest.md:
+    id: 12f5380dc649
+    last_write_checksum: sha1:eeed0b14998c54e55e85f96d72a67f4882fd3cc4
+    pristine_git_object: f82677178308be64f7897f07be3e31d6721babb5
+  docs/models/operations/v3threathuntingcenseyejobslistresponse.md:
+    id: 8e9208b76ea4
+    last_write_checksum: sha1:f0ea63397ca68c00cb3ccb1ae9cfd97ef9ba1b4e
+    pristine_git_object: a11940255b9d1c1330d085b3883ecde0c2b5ff12
   docs/models/operations/v3threathuntinggethostobservationswithcertificateglobals.md:
     id: 4fd6c1906e58
     last_write_checksum: sha1:fea0c49feb4b6f0216c30c51ee35dc2689e0098f
@@ -3259,8 +3279,8 @@ trackedFiles:
     pristine_git_object: 30d68c137a5af80c11ebc2416d78b61c4cfa60fa
   docs/sdks/threathunting/README.md:
     id: 9d697938ee45
-    last_write_checksum: sha1:b011732bad862c0663c4d4e25104338ef789c98d
-    pristine_git_object: 20838cf011da5ed697fc13b07a9ea27e7ed6176c
+    last_write_checksum: sha1:78e27d05b29d125249cf529a968968fcb79246b8
+    pristine_git_object: 49fe7e799a5a10a30f18eeff9c46ba564b348e02
   docs/types/date.md:
     id: 3a10eb495943
     last_write_checksum: sha1:45ab0675ea1c52ce29e9b5c70c4ef5c0ae29f2bf
@@ -3429,6 +3449,10 @@ trackedFiles:
     id: 46ca3a4e0b7c
     last_write_checksum: sha1:36b8ce7103bd244ac8db7231a93c8e996409a0e1
     pristine_git_object: 812a9a54c4ab2b4ea277430f3a0172015d3abead
+  models/components/censeyejobslistresponse.go:
+    id: dcb547f9863c
+    last_write_checksum: sha1:a759bffc03b0c46a669980920f1260f91f5a93b7
+    pristine_git_object: 8fd585d61d99178cf9210fb73600ebefb5a6418e
   models/components/censeyeresult.go:
     id: 63c175a64cae
     last_write_checksum: sha1:2ed4baef358194280f302ac1762e5b10728a237e
@@ -4985,6 +5009,10 @@ trackedFiles:
     id: 47a8684c1cb7
     last_write_checksum: sha1:b9adfefe70702d546f608b239d99f45db2edcb58
     pristine_git_object: e40da744dd290d3f6a02d2a6d554c3879c801098
+  models/components/responseenvelopecenseyejobslistresponse.go:
+    id: e386fce8145d
+    last_write_checksum: sha1:52d2f4466d78eb9cedd65ea0c449959c6d9178f7
+    pristine_git_object: 7445c29d5321e4dc38b1249091910e18346b15de
   models/components/responseenvelopecenseyeresultsresponse.go:
     id: d3eef93d0013
     last_write_checksum: sha1:baa5ac8aa8bcf2784705898df281cf4f1ed193f9
@@ -5865,6 +5893,10 @@ trackedFiles:
     id: 41f5192b3ae0
     last_write_checksum: sha1:0114080a07e8b989fc13b95d1463a7ec5b49b9c7
     pristine_git_object: 54e5d9c7cbabd6e9d400dc7afe500e3c6c2f45e8
+  models/operations/v3threathuntingcenseyejobslist.go:
+    id: 3d88c78ebae9
+    last_write_checksum: sha1:aae77fcd2d7ed832acab7152401b99e748d40c13
+    pristine_git_object: f87791a634029792bb46f50f1153a9f35ab06dc2
   models/operations/v3threathuntinggethostobservationswithcertificate.go:
     id: 5e08cad3a153
     last_write_checksum: sha1:b3e5fb3e709d6cd51c1ff7efdf050eafc34624c5
@@ -5911,12 +5943,12 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:f24a66841dd69657b6745fb0757c8c1e44a752ea
-    pristine_git_object: e6ccba5228c3bfeb5757ae05728fed4100596d19
+    last_write_checksum: sha1:09fd9a19e895f6d5b99f387ecb58951940eefa78
+    pristine_git_object: 2dee3f821c298da7ce26291f814760423d79df8c
   threathunting.go:
     id: f45dc6b4d4a3
-    last_write_checksum: sha1:99fc77f8dec553ad343db3705018794317dba977
-    pristine_git_object: 03e92f953bc1908d778639e6bf1c1937c263a5a7
+    last_write_checksum: sha1:d03ad167a151380b479c19d947cc5f58e429283b
+    pristine_git_object: ebc3f844039464ef288bb5c141e3091ce5507997
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -6736,6 +6768,24 @@ examples:
       responses:
         "200":
           application/json: {"result": {"results": []}}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "400":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+        "500":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-threathunting-censeye-jobs-list:
+    speakeasy-default-v3-threathunting-censeye-jobs-list:
+      parameters:
+        query:
+          organization_id: "<id>"
+          page_size: 100
+          host_id: "8.8.8.8"
+          webproperty_id: "example.com:443"
+          certificate_id: "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf"
+      responses:
+        "200":
+          application/json: {"result": {"jobs": [{"job_id": "550e8400-e29b-41d4-a716-446655440000", "result_count": 42, "state": "completed", "target": {"certificate_id": "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf", "host_id": "8.8.8.8", "webproperty_id": "example.com:443"}}]}}
         "401":
           application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
         "400":
