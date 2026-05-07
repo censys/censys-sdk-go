@@ -1,0 +1,10 @@
+# V3TagsListTagsResponse
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                          | :heavy_check_mark:                                                                          | N/A                                                                                         |
+| `ResponseEnvelopeTagsList`                                                                  | [*components.ResponseEnvelopeTagsList](../../models/components/responseenvelopetagslist.md) | :heavy_minus_sign:                                                                          | Tags retrieved successfully                                                                 |
+| `Headers`                                                                                   | map[string][]`string`                                                                       | :heavy_check_mark:                                                                          | N/A                                                                                         |
