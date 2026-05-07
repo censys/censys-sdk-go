@@ -315,7 +315,7 @@ func (s *ThreatHunting) ListCenseyeJobs(ctx context.Context, request operations.
 }
 
 // CreateCenseyeJob - CensEye: Create a pivot analysis job
-// Create an asynchronous CensEye pivot analysis job for a host, web property, or certificate. The job extracts default pivot fields from the target asset and counts matching documents for each field-value pair. Poll the job status endpoint to track progress, then retrieve results when complete.<br><br>To use this endpoint, your organization must have access to the Adversary Investigation module.<br><br>This endpoint costs 44 credits to execute for a host, 28 credits to execute for a web property, and 7 credits to execute for a certificate.
+// Create an asynchronous CensEye pivot analysis job for a host, web property, or certificate. The job extracts [default pivot fields](https://docs.censys.com/docs/platform-threat-hunting-use-censeye-to-build-detections#default-pivot-fields) from the target asset and counts matching documents for each field-value pair. Poll the job status endpoint to track progress, then retrieve results when complete.<br><br>To use this endpoint, your organization must have access to the Adversary Investigation module.<br><br>This endpoint costs 44 credits to execute for a host, 28 credits to execute for a web property, and 7 credits to execute for a certificate.
 func (s *ThreatHunting) CreateCenseyeJob(ctx context.Context, request operations.V3ThreathuntingCenseyeJobsCreateRequest, opts ...operations.Option) (*operations.V3ThreathuntingCenseyeJobsCreateResponse, error) {
 	globals := operations.V3ThreathuntingCenseyeJobsCreateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,

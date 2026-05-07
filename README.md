@@ -147,6 +147,17 @@ func main() {
 * [ConvertLegacySearchQueries](docs/sdks/globaldata/README.md#convertlegacysearchqueries) - Convert Legacy Search queries to Platform queries
 * [Search](docs/sdks/globaldata/README.md#search) - Run a search query
 
+### [TagsAndComments](docs/sdks/tagsandcomments/README.md)
+
+* [ListTags](docs/sdks/tagsandcomments/README.md#listtags) - List tags
+* [CreateTag](docs/sdks/tagsandcomments/README.md#createtag) - Create a tag
+* [DeleteTag](docs/sdks/tagsandcomments/README.md#deletetag) - Delete a tag
+* [GetTag](docs/sdks/tagsandcomments/README.md#gettag) - Get a tag
+* [UpdateTag](docs/sdks/tagsandcomments/README.md#updatetag) - Update a tag
+* [ListTagAssignments](docs/sdks/tagsandcomments/README.md#listtagassignments) - List tag assignments
+* [CreateTagAssignment](docs/sdks/tagsandcomments/README.md#createtagassignment) - Create a tag assignment
+* [DeleteTagAssignment](docs/sdks/tagsandcomments/README.md#deletetagassignment) - Delete a tag assignment
+
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 
 * [ListCenseyeJobs](docs/sdks/threathunting/README.md#listcenseyejobs) - CensEye: List jobs

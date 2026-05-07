@@ -1,0 +1,10 @@
+# V3TagsCreateAssignmentResponse
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                    | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `ResponseEnvelopeTagAssignment`                                                                       | [*components.ResponseEnvelopeTagAssignment](../../models/components/responseenvelopetagassignment.md) | :heavy_minus_sign:                                                                                    | Tag assignment created successfully                                                                   |
+| `Headers`                                                                                             | map[string][]`string`                                                                                 | :heavy_check_mark:                                                                                    | N/A                                                                                                   |

@@ -2,7 +2,7 @@
 
 package censyssdkgo
 
-// Generated from OpenAPI doc version 1.0.92 and generator version 2.881.4
+// Generated from OpenAPI doc version 1.0.99 and generator version 2.882.0
 
 import (
 	"context"
@@ -57,6 +57,8 @@ type SDK struct {
 	Collections *Collections
 	// Endpoints related to the Global Data product
 	GlobalData *GlobalData
+	// Endpoints related to asset tagging and commenting
+	TagsAndComments *TagsAndComments
 	// Endpoints related to the Adversary Investigation product
 	ThreatHunting *ThreatHunting
 	// Endpoints related to the Adversary Investigation product
@@ -144,9 +146,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.25.14",
+		SDKVersion: "0.25.15",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.25.14 2.881.4 1.0.92 github.com/censys/censys-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 0.25.15 2.882.0 1.0.99 github.com/censys/censys-sdk-go",
 			Globals:    globals.Globals{},
 			ServerList: ServerList,
 		},
@@ -171,6 +173,7 @@ func New(opts ...SDKOption) *SDK {
 	sdk.AccountManagement = newAccountManagement(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Collections = newCollections(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.GlobalData = newGlobalData(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.TagsAndComments = newTagsAndComments(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.ThreatHunting = newThreatHunting(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.AdversaryInvestigation = newAdversaryInvestigation(sdk, sdk.sdkConfiguration, sdk.hooks)
 
