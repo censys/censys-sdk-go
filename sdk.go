@@ -2,7 +2,7 @@
 
 package censyssdkgo
 
-// Generated from OpenAPI doc version 1.0.100 and generator version 2.882.0
+// Generated from OpenAPI doc version 1.0.101 and generator version 2.884.4
 
 import (
 	"context"
@@ -146,9 +146,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.25.16",
+		SDKVersion: "0.25.17",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.25.16 2.882.0 1.0.100 github.com/censys/censys-sdk-go",
+			UserAgent:  "speakeasy-sdk/go 0.25.17 2.884.4 1.0.101 github.com/censys/censys-sdk-go",
 			Globals:    globals.Globals{},
 			ServerList: ServerList,
 		},
