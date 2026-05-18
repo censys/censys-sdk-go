@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 8b5b5812db5f05a9cf51ce74fad49d41
-  docVersion: 1.0.100
-  speakeasyVersion: 1.762.0
-  generationVersion: 2.882.0
-  releaseVersion: 0.25.16
-  configChecksum: c6b2079b4aa907efbc27a62f40a686fe
+  docChecksum: ae0f03b6de5fb5075151e83fd7a36e3f
+  docVersion: 1.0.101
+  speakeasyVersion: 1.763.1
+  generationVersion: 2.884.4
+  releaseVersion: 0.25.17
+  configChecksum: 91bf16dcd6f9d62e2ce53f90ff805aeb
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: 9ec20c13-1ce7-41b7-9ac0-1eb7807d0e26
-  pristine_commit_hash: da1c70715c4754b31cdc3202d6bf3c205deddbb5
-  pristine_tree_hash: 79379e9c8b2ea0c8f627999c0bf9c3f263b6cb2c
+  generation_id: 7d5ad5e7-3456-405c-b48d-7d3efb69bb93
+  pristine_commit_hash: 2f8fb5488201eface7bf4477e3495d73ed3a4424
+  pristine_tree_hash: 16f3dac7341073476f81bd5156006ed9bf7545ea
 features:
   go:
     acceptHeaders: 2.81.2
@@ -35,7 +35,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.3.0
-    unions: 2.87.6
+    unions: 2.87.7
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -3523,12 +3523,12 @@ trackedFiles:
     pristine_git_object: a2332ee8de013a2121880e4b7be332d3385c6f41
   internal/utils/union.go:
     id: db86c85746b6
-    last_write_checksum: sha1:a1fbe42ddfa1405fa0e9cf3613036f562774ae9c
-    pristine_git_object: bcf64f75376e0f2dae851e50791856ad76b737ef
+    last_write_checksum: sha1:f45d882d764b09479e5474c53d4b104e35c0fc9f
+    pristine_git_object: ad6d6ea5365545abe7ab3314f493803a51445f39
   internal/utils/union_test.go:
     id: 4b56247171bd
-    last_write_checksum: sha1:83ac73c1901de4c6db90f65cf5879163f3d47a00
-    pristine_git_object: f66814c73ace94d8e71d785fd6161fb405745754
+    last_write_checksum: sha1:bd5c7506e1d6238117c1ac4e340314a5a41401b5
+    pristine_git_object: 138f7e2a066b10dffd0a9957ecfcab9e00dd26fe
   internal/utils/utils.go:
     id: 1133b2a27019
     last_write_checksum: sha1:c03378176a107205b8938606faef3fd8fb8f91a0
@@ -6199,8 +6199,8 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:a727119fc1ab7cce3f3c3fa35d483cc132e8e5fa
-    pristine_git_object: 25783b82cdb96672838a2285107747c8e5d96a01
+    last_write_checksum: sha1:d5967871494a5e32a68e62310e50ebd6fa5ae717
+    pristine_git_object: a504a72bb271c5ce9dab9ccf2e8c011ac6bf77f7
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:756af73e6330ebb946cf28e9684b85581dcfda35
