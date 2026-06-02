@@ -16,6 +16,10 @@ Endpoints related to the Global Data product
 * [GetHostTimeline](#gethosttimeline) - Get host event history
 * [GetWebProperties](#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](#getwebproperty) - Get a web property
+* [ListDNSIPResolutionBounds](#listdnsipresolutionbounds) - Get latest DNS names that resolved to an IP
+* [ListDNSIPResolutionRanges](#listdnsipresolutionranges) - Get DNS names that resolved to an IP within a time window
+* [ListDNSNameResolutionBounds](#listdnsnameresolutionbounds) - Get latest DNS resolution records for a name
+* [ListDNSNameResolutionRanges](#listdnsnameresolutionranges) - Get historical DNS resolution ranges for a name
 * [CreateTrackedScan](#createtrackedscan) - Live Rescan: Initiate a new rescan
 * [GetTrackedScan](#gettrackedscan) - Get scan status
 * [Aggregate](#aggregate) - Aggregate results for a search query
@@ -636,6 +640,263 @@ func main() {
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
 | sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## ListDNSIPResolutionBounds
+
+Retrieve the latest domain names that resolved to the IP you provide (A and AAAA). You can narrow results with `record_types` (A or AAAA).<br><br>[Learn more about Censys Active DNS Resolution](https://docs.censys.com/docs/platform-active-dns).<br><br>This endpoint is in beta and is only available to Censys Enterprise users.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-dns-ip-resolution-bound" method="get" path="/v3/global/dns/resolutions/ip/{ip}/bounds" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.ListDNSIPResolutionBounds(ctx, operations.V3GlobaldataDNSIPResolutionBoundRequest{
+        StartTime: censyssdkgo.Pointer("2024-01-01T00:00:00Z"),
+        EndTime: censyssdkgo.Pointer("2024-01-31T23:59:59Z"),
+        PageSize: censyssdkgo.Pointer[int](50),
+        RecordTypes: []operations.RecordTypes{
+            operations.RecordTypesA,
+        },
+        IP: "8.8.8.8",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeDNSIPResolutionBoundResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                                                    | :heavy_check_mark:                                                                                                       | The context to use for the request.                                                                                      |
+| `request`                                                                                                                | [operations.V3GlobaldataDNSIPResolutionBoundRequest](../../models/operations/v3globaldatadnsipresolutionboundrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `opts`                                                                                                                   | [][operations.Option](../../models/operations/option.md)                                                                 | :heavy_minus_sign:                                                                                                       | The options for this request.                                                                                            |
+
+### Response
+
+**[*operations.V3GlobaldataDNSIPResolutionBoundResponse](../../models/operations/v3globaldatadnsipresolutionboundresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404, 409            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## ListDNSIPResolutionRanges
+
+Retrieve domain names that resolved to the IP you provide (A and AAAA) within the requested time window.<br><br>[Learn more about Censys Active DNS Resolution](https://docs.censys.com/docs/platform-active-dns).<br><br>This endpoint is in beta and is only available to Censys Enterprise users.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-dns-ip-resolution-ranges" method="get" path="/v3/global/dns/resolutions/ip/{ip}/ranges" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.ListDNSIPResolutionRanges(ctx, operations.V3GlobaldataDNSIPResolutionRangesRequest{
+        StartTime: censyssdkgo.Pointer("2024-01-01T00:00:00Z"),
+        EndTime: censyssdkgo.Pointer("2024-01-31T23:59:59Z"),
+        PageSize: censyssdkgo.Pointer[int](50),
+        RecordTypes: []operations.QueryParamRecordTypes{
+            operations.QueryParamRecordTypesA,
+        },
+        Domain: censyssdkgo.Pointer("platform.censys.io"),
+        IP: "8.8.8.8",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeDNSIPResolutionRangeResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                      | [context.Context](https://pkg.go.dev/context#Context)                                                                      | :heavy_check_mark:                                                                                                         | The context to use for the request.                                                                                        |
+| `request`                                                                                                                  | [operations.V3GlobaldataDNSIPResolutionRangesRequest](../../models/operations/v3globaldatadnsipresolutionrangesrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `opts`                                                                                                                     | [][operations.Option](../../models/operations/option.md)                                                                   | :heavy_minus_sign:                                                                                                         | The options for this request.                                                                                              |
+
+### Response
+
+**[*operations.V3GlobaldataDNSIPResolutionRangesResponse](../../models/operations/v3globaldatadnsipresolutionrangesresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404, 409            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## ListDNSNameResolutionBounds
+
+Retrieve the latest DNS resolution records for a name. This endpoint returns the latest observed A, AAAA, MX, NS, SOA, and TXT records for the name you provide. You can filter by one or more record types using `record_types`.<br><br>[Learn more about Censys Active DNS Resolution](https://docs.censys.com/docs/platform-active-dns).<br><br>This endpoint is in beta and is only available to Censys Enterprise users.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-dns-name-resolution-bound" method="get" path="/v3/global/dns/resolutions/{name}/bounds" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.ListDNSNameResolutionBounds(ctx, operations.V3GlobaldataDNSNameResolutionBoundRequest{
+        StartTime: censyssdkgo.Pointer("2024-01-01T00:00:00Z"),
+        EndTime: censyssdkgo.Pointer("2024-01-31T23:59:59Z"),
+        PageSize: censyssdkgo.Pointer[int](50),
+        RecordTypes: []operations.V3GlobaldataDNSNameResolutionBoundQueryParamRecordTypes{
+            operations.V3GlobaldataDNSNameResolutionBoundQueryParamRecordTypesMx,
+        },
+        Name: "platform.censys.io",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeDNSNameResolutionBoundResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                                        | :heavy_check_mark:                                                                                                           | The context to use for the request.                                                                                          |
+| `request`                                                                                                                    | [operations.V3GlobaldataDNSNameResolutionBoundRequest](../../models/operations/v3globaldatadnsnameresolutionboundrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `opts`                                                                                                                       | [][operations.Option](../../models/operations/option.md)                                                                     | :heavy_minus_sign:                                                                                                           | The options for this request.                                                                                                |
+
+### Response
+
+**[*operations.V3GlobaldataDNSNameResolutionBoundResponse](../../models/operations/v3globaldatadnsnameresolutionboundresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404, 409            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## ListDNSNameResolutionRanges
+
+Retrieve historical DNS resolution observations for a name. Each item is one window during which a record value was observed by Censys.<br><br>[Learn more about Censys Active DNS Resolution](https://docs.censys.com/docs/platform-active-dns).<br><br>This endpoint is in beta and is only available to Censys Enterprise users.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-dns-name-resolution-ranges" method="get" path="/v3/global/dns/resolutions/{name}/ranges" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.ListDNSNameResolutionRanges(ctx, operations.V3GlobaldataDNSNameResolutionRangesRequest{
+        StartTime: censyssdkgo.Pointer("2024-01-01T00:00:00Z"),
+        EndTime: censyssdkgo.Pointer("2024-01-31T23:59:59Z"),
+        PageSize: censyssdkgo.Pointer[int](50),
+        RecordTypes: []operations.V3GlobaldataDNSNameResolutionRangesQueryParamRecordTypes{
+            operations.V3GlobaldataDNSNameResolutionRangesQueryParamRecordTypesMx,
+        },
+        Name: "platform.censys.io",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeDNSNameResolutionRangeResponse != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                          | :heavy_check_mark:                                                                                                             | The context to use for the request.                                                                                            |
+| `request`                                                                                                                      | [operations.V3GlobaldataDNSNameResolutionRangesRequest](../../models/operations/v3globaldatadnsnameresolutionrangesrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `opts`                                                                                                                         | [][operations.Option](../../models/operations/option.md)                                                                       | :heavy_minus_sign:                                                                                                             | The options for this request.                                                                                                  |
+
+### Response
+
+**[*operations.V3GlobaldataDNSNameResolutionRangesResponse](../../models/operations/v3globaldatadnsnameresolutionrangesresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404, 409            | application/problem+json      |
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
