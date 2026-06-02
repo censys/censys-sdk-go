@@ -1,0 +1,11 @@
+# DNSIPResolutionBoundResponse
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `IP`                                                                                   | `string`                                                                               | :heavy_check_mark:                                                                     | The IP address that was queried.                                                       |
+| `NextPageToken`                                                                        | `string`                                                                               | :heavy_check_mark:                                                                     | A token that can be used to retrieve the next page of records.                         |
+| `Records`                                                                              | [][components.DNSIPResolutionRecord](../../models/components/dnsipresolutionrecord.md) | :heavy_check_mark:                                                                     | The list of domain names that resolved to this IP.                                     |
+| `TotalRecords`                                                                         | `int64`                                                                                | :heavy_check_mark:                                                                     | The number of records that exist in total across all pages.                            |

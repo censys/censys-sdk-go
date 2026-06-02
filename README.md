@@ -141,6 +141,10 @@ func main() {
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
 * [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](docs/sdks/globaldata/README.md#getwebproperty) - Get a web property
+* [ListDNSIPResolutionBounds](docs/sdks/globaldata/README.md#listdnsipresolutionbounds) - Get latest DNS names that resolved to an IP
+* [ListDNSIPResolutionRanges](docs/sdks/globaldata/README.md#listdnsipresolutionranges) - Get DNS names that resolved to an IP within a time window
+* [ListDNSNameResolutionBounds](docs/sdks/globaldata/README.md#listdnsnameresolutionbounds) - Get latest DNS resolution records for a name
+* [ListDNSNameResolutionRanges](docs/sdks/globaldata/README.md#listdnsnameresolutionranges) - Get historical DNS resolution ranges for a name
 * [CreateTrackedScan](docs/sdks/globaldata/README.md#createtrackedscan) - Live Rescan: Initiate a new rescan
 * [GetTrackedScan](docs/sdks/globaldata/README.md#gettrackedscan) - Get scan status
 * [Aggregate](docs/sdks/globaldata/README.md#aggregate) - Aggregate results for a search query

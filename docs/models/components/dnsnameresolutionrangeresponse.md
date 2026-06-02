@@ -1,0 +1,11 @@
+# DNSNameResolutionRangeResponse
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `Name`                                                                                       | `string`                                                                                     | :heavy_check_mark:                                                                           | The domain name that was queried.                                                            |
+| `NextPageToken`                                                                              | `string`                                                                                     | :heavy_check_mark:                                                                           | A token that can be used to retrieve the next page of records.                               |
+| `Records`                                                                                    | [][components.DNSResolutionRangeRecord](../../models/components/dnsresolutionrangerecord.md) | :heavy_check_mark:                                                                           | The list of DNS observation windows.                                                         |
+| `TotalRecords`                                                                               | `int64`                                                                                      | :heavy_check_mark:                                                                           | The number of records that exist in total across all pages.                                  |

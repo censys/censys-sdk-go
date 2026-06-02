@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 269986e028193a25443c5b9e34f232c6
-  docVersion: 1.0.103
-  speakeasyVersion: 1.769.2
-  generationVersion: 2.892.5
-  releaseVersion: 0.25.18
-  configChecksum: e81cef563eeadf0fc85a3d8e39d22619
+  docChecksum: 11ec2d40127d4f56fd992bac8552c93e
+  docVersion: 1.0.104
+  speakeasyVersion: 1.770.0
+  generationVersion: 2.893.0
+  releaseVersion: 0.25.19
+  configChecksum: 5c0e84852fc7b91d5cb02c9245e35864
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: e9a6a8f5-80d2-432b-90ee-5ed78458908c
-  pristine_commit_hash: 22d21b95e7b41735a46fb786f2c64d1a88177882
-  pristine_tree_hash: 79f15098969e51553dffa436d656af42a81586f7
+  generation_id: 8161412a-c42b-4083-8b48-364fd3151e9a
+  pristine_commit_hash: 12a2bafceb06af9ae0cbdfcbd67eb39de8880a51
+  pristine_tree_hash: 3aaa9290fc351c3f682a8a904b298798c3d2d6d8
 features:
   go:
     acceptHeaders: 2.81.2
@@ -549,6 +549,54 @@ trackedFiles:
     id: 9d75222a5174
     last_write_checksum: sha1:d720a63f2e4827ad88c3a6c585cc5b08ad41cc1c
     pristine_git_object: 08e6ab88ba1fd809985d738a4aea6ccdaf98e683
+  docs/models/components/dnsipresolutionboundresponse.md:
+    id: c9a5dcf0d54e
+    last_write_checksum: sha1:b403ce662c83891e6757eab51d1b8d5905c16e12
+    pristine_git_object: b05530a41b8ec0fa36da81e6613839dd089098d1
+  docs/models/components/dnsipresolutionrangerecord.md:
+    id: ca1635220f7e
+    last_write_checksum: sha1:faab883095180f38b5414b264fe4f895b0bb0d18
+    pristine_git_object: 805f1d64937021b4c6e8263fc42f791f8395fa1a
+  docs/models/components/dnsipresolutionrangerecordrecordtype.md:
+    id: f0b14f191c22
+    last_write_checksum: sha1:1c884409c7be6eef120110b7d2737e9cf4800798
+    pristine_git_object: a3645657c74d651dfc09fa438a854a909cd9288a
+  docs/models/components/dnsipresolutionrangeresponse.md:
+    id: b018582f5d23
+    last_write_checksum: sha1:b832858d9966c06c391532291afd04fb8a3676e9
+    pristine_git_object: e33981b24f023fa0f4fa035b395a722ded622b0a
+  docs/models/components/dnsipresolutionrecord.md:
+    id: 6e94b8b38813
+    last_write_checksum: sha1:d8d3503d4e0f177e064ec847759865fb817a72e5
+    pristine_git_object: 118a0bfa1b2e90833eba7844c0253c0cd9249f00
+  docs/models/components/dnsipresolutionrecordrecordtype.md:
+    id: 80ceeee08a24
+    last_write_checksum: sha1:10cd04866eda2b660bb6b038802938961ae459e0
+    pristine_git_object: 6edc5a55a68b48d023b80e6ac8f646c72c0dc9bd
+  docs/models/components/dnsnameresolutionboundresponse.md:
+    id: ca8e95b90a5d
+    last_write_checksum: sha1:c0fa5fc0bee0f99c738af6b6321b01b94b1ed0bd
+    pristine_git_object: 223934a73aa6e196d366cd2dd2abace655fcea39
+  docs/models/components/dnsnameresolutionrangeresponse.md:
+    id: 03c3095ca591
+    last_write_checksum: sha1:c2b4329c35585573e6843fea0f1e2e7b4cee29eb
+    pristine_git_object: ff4bc91c5ee364f7885a958d5694b6c8181792f1
+  docs/models/components/dnsresolutionrangerecord.md:
+    id: 74a7355fa780
+    last_write_checksum: sha1:62154ff8b21bfc76d5edc761e046e834e6bedcb3
+    pristine_git_object: a915fc28949d4d320fb1880460eced279460674e
+  docs/models/components/dnsresolutionrangerecordrecordtype.md:
+    id: 8bead8dcd831
+    last_write_checksum: sha1:365f7b024b159fda0ac33738a0f376e451cd83c9
+    pristine_git_object: 4f05a26818ea98e03d63beb49f630f771eb7d6cf
+  docs/models/components/dnsresolutionrecord.md:
+    id: 6138b2d4c3ab
+    last_write_checksum: sha1:5ab071789b1a200e9224e84e46956806baa27e3e
+    pristine_git_object: 763714980b744ccd2f3124d5714cb767ef8c42d3
+  docs/models/components/dnsresolutionrecordrecordtype.md:
+    id: edf88e882d1c
+    last_write_checksum: sha1:8de85301684870e6cda93862b3bfb55bed711187
+    pristine_git_object: d9fc9a8f16d7482d2be9e8c8ddeff6f676554f50
   docs/models/components/dnsresourcerecord.md:
     id: 24e974ee63e9
     last_write_checksum: sha1:2a0d895a2ba52380af4987f86909dead9516b236
@@ -1925,6 +1973,22 @@ trackedFiles:
     id: 52606b512840
     last_write_checksum: sha1:19f5833423eb3070b0d2b7dc168b0f9999171052
     pristine_git_object: 26dfadcbccc077f3691deffe0b19e646946b0859
+  docs/models/components/responseenvelopednsipresolutionboundresponse.md:
+    id: 8f9044a58007
+    last_write_checksum: sha1:6d81bea9deca653914644c06b5a648c10072dac0
+    pristine_git_object: 9608f873b1394a454c84cd2fdc4f15fea1b86619
+  docs/models/components/responseenvelopednsipresolutionrangeresponse.md:
+    id: 91da115200b6
+    last_write_checksum: sha1:9712a3e3edffd934b6a8989ac4df5b15d338a78b
+    pristine_git_object: 45b85d6a8cf00f2d650f96bab606097c3c0d37c6
+  docs/models/components/responseenvelopednsnameresolutionboundresponse.md:
+    id: 789a5e3c4d37
+    last_write_checksum: sha1:ee3dae829838c9451667b61066d2d94717afffc5
+    pristine_git_object: 7197eafa62585482e710e39db5db08f0dfb34eec
+  docs/models/components/responseenvelopednsnameresolutionrangeresponse.md:
+    id: 2252a41075c9
+    last_write_checksum: sha1:da24a43de4cb9ba7f92e4689e649fa61b32ea6c7
+    pristine_git_object: 63bc3e7c957dd5c2beacc0cdc6ebfa3288ec7dfb
   docs/models/components/responseenvelopehostasset.md:
     id: 9dce10c125bb
     last_write_checksum: sha1:69fa6caa79e79fb30b7d962856045431d0fa265a
@@ -2881,6 +2945,14 @@ trackedFiles:
     id: 471a79a4006b
     last_write_checksum: sha1:710330ee8797d3558ba28c267a5c3573b19aa746
     pristine_git_object: 2f732a4e38c1c6c795903e2b535b4570b62317b7
+  docs/models/operations/queryparamrecordtypes.md:
+    id: 48546fb64dca
+    last_write_checksum: sha1:4f98858e0ab1649db027ec61818a8de67406ad60
+    pristine_git_object: a5a8118ab79258c4101e887070104b95364ebb72
+  docs/models/operations/recordtypes.md:
+    id: 752c91c9ef49
+    last_write_checksum: sha1:fbf063c08222b0cf4f40aed5d391df85aded399a
+    pristine_git_object: 4dcc7653d4bb1008b2fcb100363981cd6b625226
   docs/models/operations/statuschangetypes.md:
     id: d1468a59237a
     last_write_checksum: sha1:2d992d088866cc0a81e60acea28adaeb5300e121
@@ -3221,6 +3293,62 @@ trackedFiles:
     id: 1c82e45bd023
     last_write_checksum: sha1:47547c398435064bf1fae76f7459ada635c630ff
     pristine_git_object: 4d6980837a0618483a60f9d7d35751f151f9de2b
+  docs/models/operations/v3globaldatadnsipresolutionboundglobals.md:
+    id: ad64b3fdc367
+    last_write_checksum: sha1:8064f5b0891bec4ae313a6b3d37a1e85e79991ac
+    pristine_git_object: 3411fe8b9976285c1d97210e356b45e174e6f20f
+  docs/models/operations/v3globaldatadnsipresolutionboundrequest.md:
+    id: 792ab9d45e0c
+    last_write_checksum: sha1:581fad3259dc0bdcdb1f28f2b9919f2eecd6417f
+    pristine_git_object: 5672eeedf12d900d1ab9a424bcc0880298433422
+  docs/models/operations/v3globaldatadnsipresolutionboundresponse.md:
+    id: 21c1fe083d25
+    last_write_checksum: sha1:c7acddee4e2a81146012d0faddfc2597fccfd19a
+    pristine_git_object: 61fcb2da99c8549f6d24629321d110578fbfeac0
+  docs/models/operations/v3globaldatadnsipresolutionrangesglobals.md:
+    id: 89941a38c6c6
+    last_write_checksum: sha1:a8e6562ed14f089f7046185bc870b36ca018db6e
+    pristine_git_object: d136f7d2b9ee70155e103d00bdf5197ca82a6f4e
+  docs/models/operations/v3globaldatadnsipresolutionrangesrequest.md:
+    id: 57f098f94588
+    last_write_checksum: sha1:15076973a67052bb2ab7c52cb9d85cc4a5537090
+    pristine_git_object: b3d4c2be727dac311cded2d24cc2787010c44e9f
+  docs/models/operations/v3globaldatadnsipresolutionrangesresponse.md:
+    id: 5e923b5e3638
+    last_write_checksum: sha1:dacc61c71f2e6702adeada26e8a45e849bdd4fb6
+    pristine_git_object: c82484867947e8c1967fd544b9e4710af05befe4
+  docs/models/operations/v3globaldatadnsnameresolutionboundglobals.md:
+    id: ea8dfc0b2e4a
+    last_write_checksum: sha1:0aa22e3e50d6c9d5918e5d1ccfde472dac3484e3
+    pristine_git_object: 697155413540dc3496ded7b60cab59ad71f1795d
+  docs/models/operations/v3globaldatadnsnameresolutionboundqueryparamrecordtypes.md:
+    id: 8c9a683a4f36
+    last_write_checksum: sha1:ccba14006fab6d9dda4778eaf00e7b59f2c1ee2b
+    pristine_git_object: e6128910c29136d5ba920a2cd84d2d4fcb0d8f5c
+  docs/models/operations/v3globaldatadnsnameresolutionboundrequest.md:
+    id: 3faafd0577ab
+    last_write_checksum: sha1:ed7d0ce0053f2cf928ef3cd07a9ff36e2b978834
+    pristine_git_object: 5feeeeb99cc7d0bd75ce8a0d934936c4ae24b21c
+  docs/models/operations/v3globaldatadnsnameresolutionboundresponse.md:
+    id: 0a7272a48f78
+    last_write_checksum: sha1:60c18e91e4452baf657996935c8cca9b03780d31
+    pristine_git_object: 38158b902dc16e8b443210d9d18981400f95fcf3
+  docs/models/operations/v3globaldatadnsnameresolutionrangesglobals.md:
+    id: 28ce7b30c44c
+    last_write_checksum: sha1:a77c4f7d820b907ee07ebca802b810a3323926bd
+    pristine_git_object: cb87cade90f8d02fdd00646948721a3e5c4c4191
+  docs/models/operations/v3globaldatadnsnameresolutionrangesqueryparamrecordtypes.md:
+    id: ff44e79d4259
+    last_write_checksum: sha1:b9156ca42f77656ab20ce75dbc350d342b0d9404
+    pristine_git_object: 85f1cbba3cb1e59371857b3df99eb079f973dfd5
+  docs/models/operations/v3globaldatadnsnameresolutionrangesrequest.md:
+    id: e00196cb054a
+    last_write_checksum: sha1:5a0face3bf55b00751e34bd8a534251b41b5d978
+    pristine_git_object: bdace37bf1d18198ea6127c44d4a07e3d13085f8
+  docs/models/operations/v3globaldatadnsnameresolutionrangesresponse.md:
+    id: 985d5c8810e8
+    last_write_checksum: sha1:74eebfd8d4cd760b28aa9d525ec61bcfe514e592
+    pristine_git_object: adacbc97da18f5d2615354da5b7523c6a9353fa9
   docs/models/operations/v3globaldatascansgetglobals.md:
     id: b3bad3432c8c
     last_write_checksum: sha1:8e4e7f36999d83c4869ed80a341211a38235ccaa
@@ -3527,8 +3655,8 @@ trackedFiles:
     pristine_git_object: de4d10eae2763ac9e231934f3a5f1f6c18ae8c1b
   docs/sdks/globaldata/README.md:
     id: 0c68886632e6
-    last_write_checksum: sha1:3d087e2d9f7ae950545c3ca66c5837cdd54d1177
-    pristine_git_object: 30d68c137a5af80c11ebc2416d78b61c4cfa60fa
+    last_write_checksum: sha1:354c10b8ddc75c826d912b525be9666dae2a5470
+    pristine_git_object: 3f9f5be415930a1bd001c949f5476419a5967c9b
   docs/sdks/tagsandcomments/README.md:
     id: 092d693513d0
     last_write_checksum: sha1:a6040e2d6a7b6b1a5560ce51f176d79b01cd24b5
@@ -3543,8 +3671,8 @@ trackedFiles:
     pristine_git_object: 3d83ed2f48ff36968042694693ec08d892ef94fe
   globaldata.go:
     id: 38738078d830
-    last_write_checksum: sha1:74120777d292c4b146dafd6e6d8d3c83c0265e5c
-    pristine_git_object: cccea4112f072db122c31e9787817f6ac595dea2
+    last_write_checksum: sha1:03571c99ce891b722df93704cca71bbc35927e93
+    pristine_git_object: 71f36d53f1919291c099e587b75588687b79ba9f
   go.mod:
     id: c47645c391ad
     last_write_checksum: sha1:cb7ecae19a1588d0840bd55b12a54f2150c79ae9
@@ -4033,6 +4161,38 @@ trackedFiles:
     id: 20e946786610
     last_write_checksum: sha1:7093778e2a2474e014a62fdc91bf901d37a36573
     pristine_git_object: 347b238373dfc745b687ef177cc84c8d0d27e0d2
+  models/components/dnsipresolutionboundresponse.go:
+    id: f3a6154a002a
+    last_write_checksum: sha1:3dfa5e68adb6c2d2c22cf4a5881a5d44dd9e358e
+    pristine_git_object: 615afe11891fbaeff96e5ef45d4721f97cffeb92
+  models/components/dnsipresolutionrangerecord.go:
+    id: 3e25e64400f9
+    last_write_checksum: sha1:f615ee8772034c15878bbefbadfe5f9c2e44d37a
+    pristine_git_object: 0088aa1d40f278ff7fe85dbfb52c84c6ce8e338f
+  models/components/dnsipresolutionrangeresponse.go:
+    id: 7fbbc1627ec4
+    last_write_checksum: sha1:4e53ec48b68613538bf884eabac8c0cd771bb8c2
+    pristine_git_object: 54fc43b399c5dcd742df989cc9dc65dc1c96bae6
+  models/components/dnsipresolutionrecord.go:
+    id: 0396af9237d5
+    last_write_checksum: sha1:8c81433f5cb5e06f6dd312cb40de8de7e6c64482
+    pristine_git_object: e7a8b3182a2093110afad3b0ab5efca479985ec1
+  models/components/dnsnameresolutionboundresponse.go:
+    id: 335df63a2e88
+    last_write_checksum: sha1:e2e84ba2067192f75ebb47baf26d373a8f9f3c77
+    pristine_git_object: d97335b05fe145bd84efd6ed3cbec2fe72d0a1dd
+  models/components/dnsnameresolutionrangeresponse.go:
+    id: cad81b890114
+    last_write_checksum: sha1:f4dce124ed17170f3b4de0b0038ee7e889256c79
+    pristine_git_object: 7b1acae797a1b76372429e12fcfabd5d65d45843
+  models/components/dnsresolutionrangerecord.go:
+    id: 74aec52eb346
+    last_write_checksum: sha1:0beb22c5edab412c64576aa9a9e93e30060c7a56
+    pristine_git_object: 669f398a443bb2d0cf26e3a386acf130309f2868
+  models/components/dnsresolutionrecord.go:
+    id: 6aaf2f3958d9
+    last_write_checksum: sha1:d59c5bd0455dbbc75eab4b541436c9d3675346d9
+    pristine_git_object: fb0323131e695595be4425f2dfb996be42f4002c
   models/components/dnsresourcerecord.go:
     id: 35cb7a8f2331
     last_write_checksum: sha1:38f0a36b87b24b69ff84bfd7adbeb826fe31fb65
@@ -5317,6 +5477,22 @@ trackedFiles:
     id: 90fc6dc22b93
     last_write_checksum: sha1:bb801cbab3b33c766e31c48d692704aa5355bd60
     pristine_git_object: ae31b42887ac5914d5ffe6cbd24e306340cde3bf
+  models/components/responseenvelopednsipresolutionboundresponse.go:
+    id: 5ddd3e19c521
+    last_write_checksum: sha1:92efc3ee9f1d96a47e9e8746bc02fba58143c7ae
+    pristine_git_object: abfe61628eb419c212a8fd7dbc2ce0931a7551cf
+  models/components/responseenvelopednsipresolutionrangeresponse.go:
+    id: 0ca1be967592
+    last_write_checksum: sha1:e8066f6cd188f4fd9dc117f58be07e5e62d0dec4
+    pristine_git_object: f87c84a47f8369120410e17b27e7d6eaf0563786
+  models/components/responseenvelopednsnameresolutionboundresponse.go:
+    id: 5700a733f544
+    last_write_checksum: sha1:3db926b79390cf9ae6277cd711677adb1db594ae
+    pristine_git_object: f21a108366460dfc7d2e5e96dbd5afb903e9d9a8
+  models/components/responseenvelopednsnameresolutionrangeresponse.go:
+    id: c036f82b3d12
+    last_write_checksum: sha1:5626e80f2d95eb56bca638cf55c67e3a959fddf0
+    pristine_git_object: 8e54f1de30a6661916f87b9db66a922340901023
   models/components/responseenvelopehostasset.go:
     id: 46534e1129fb
     last_write_checksum: sha1:f6f727a05fb2a5f6130e487174618b94ae1b866f
@@ -6201,6 +6377,22 @@ trackedFiles:
     id: d4d689376f6b
     last_write_checksum: sha1:edcbe5574b7c5477a653bc171fcdb66eb49bf720
     pristine_git_object: 6793bfd6baf9b9d2bb2cf0fe44e1b53ee0f8abd1
+  models/operations/v3globaldatadnsipresolutionbound.go:
+    id: 65ac5621b97b
+    last_write_checksum: sha1:66e1574a8b52e52270a477095393de004740facc
+    pristine_git_object: d8cd606c8e809af84c9e5b8e0a87f46b98a424b3
+  models/operations/v3globaldatadnsipresolutionranges.go:
+    id: 258a4a9db0a5
+    last_write_checksum: sha1:fb22939096505b41b6ff8461535beab0a87bb8ee
+    pristine_git_object: aff99bc18c35300f66e5dfd990146a8f6c3c04cf
+  models/operations/v3globaldatadnsnameresolutionbound.go:
+    id: 0134a1b3ef6c
+    last_write_checksum: sha1:20c351023a92e0e3eb779828303d99aac8bebf60
+    pristine_git_object: f77f245ad12c02709bedf2d0e8d0921ab221863d
+  models/operations/v3globaldatadnsnameresolutionranges.go:
+    id: 29c74cfb89c1
+    last_write_checksum: sha1:a86128b0bcb25f6b400da387c4f4e99286d25bda
+    pristine_git_object: b18bffbb7565b54cfc0cd09ced933ffe918dc750
   models/operations/v3globaldatascansget.go:
     id: b8e4eac1652b
     last_write_checksum: sha1:f33f59ca6dab318030b1f0205ce5733f75e576cb
@@ -6319,8 +6511,8 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:85cf77baf012552fce1b6080667c05c9277a963c
-    pristine_git_object: 89a95d30a86885df11f98b9ab920e0980f979624
+    last_write_checksum: sha1:a41a3a311b535cbdfe7e0be437fc136a15e84560
+    pristine_git_object: fb25fedcfb8a553a617f670bdc72fcd1e1d6c34d
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:189223c6fafe6164c63dddd5bde406f7b18b1323
@@ -7365,6 +7557,87 @@ examples:
         "401":
           application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
         "403":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+        "500":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-dns-ip-resolution-bound:
+    speakeasy-default-v3-globaldata-dns-ip-resolution-bound:
+      parameters:
+        path:
+          ip: "8.8.8.8"
+        query:
+          organization_id: "<id>"
+          start_time: "2024-01-01T00:00:00Z"
+          end_time: "2024-01-31T23:59:59Z"
+          page_size: 50
+          record_types: ["A"]
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "400":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+        "500":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-dns-ip-resolution-ranges:
+    speakeasy-default-v3-globaldata-dns-ip-resolution-ranges:
+      parameters:
+        path:
+          ip: "8.8.8.8"
+        query:
+          organization_id: "<id>"
+          start_time: "2024-01-01T00:00:00Z"
+          end_time: "2024-01-31T23:59:59Z"
+          page_size: 50
+          record_types: ["A"]
+          domain: "platform.censys.io"
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "400":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+        "500":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-dns-name-resolution-bound:
+    speakeasy-default-v3-globaldata-dns-name-resolution-bound:
+      parameters:
+        path:
+          name: "platform.censys.io"
+        query:
+          organization_id: "<id>"
+          start_time: "2024-01-01T00:00:00Z"
+          end_time: "2024-01-31T23:59:59Z"
+          page_size: 50
+          record_types: ["MX"]
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "400":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+        "500":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+  v3-globaldata-dns-name-resolution-ranges:
+    speakeasy-default-v3-globaldata-dns-name-resolution-ranges:
+      parameters:
+        path:
+          name: "platform.censys.io"
+        query:
+          organization_id: "<id>"
+          start_time: "2024-01-01T00:00:00Z"
+          end_time: "2024-01-31T23:59:59Z"
+          page_size: 50
+          record_types: ["MX"]
+      responses:
+        "200":
+          application/json: {}
+        "401":
+          application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
+        "400":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
         "500":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
