@@ -149,6 +149,10 @@ func main() {
 
 ### [TagsAndComments](docs/sdks/tagsandcomments/README.md)
 
+* [ListComments](docs/sdks/tagsandcomments/README.md#listcomments) - List comments
+* [CreateComment](docs/sdks/tagsandcomments/README.md#createcomment) - Create a comment
+* [DeleteComment](docs/sdks/tagsandcomments/README.md#deletecomment) - Delete a comment
+* [UpdateComment](docs/sdks/tagsandcomments/README.md#updatecomment) - Update a comment
 * [ListTags](docs/sdks/tagsandcomments/README.md#listtags) - List tags
 * [CreateTag](docs/sdks/tagsandcomments/README.md#createtag) - Create a tag
 * [DeleteTag](docs/sdks/tagsandcomments/README.md#deletetag) - Delete a tag

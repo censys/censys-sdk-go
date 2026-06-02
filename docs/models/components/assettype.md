@@ -23,3 +23,4 @@ custom := components.AssetType("custom_value")
 | `AssetTypeHost`        | host                   |
 | `AssetTypeCertificate` | certificate            |
 | `AssetTypeWebProperty` | web_property           |
+| `AssetTypeUnknown`     | unknown                |
