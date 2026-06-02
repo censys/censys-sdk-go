@@ -53,21 +53,21 @@ func (e *TransportProtocol) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type OrderBy string
+type QueryParamOrderBy string
 
 const (
-	OrderByPortAsc               OrderBy = "port ASC"
-	OrderByPortDesc              OrderBy = "port DESC"
-	OrderByProtocolAsc           OrderBy = "protocol ASC"
-	OrderByProtocolDesc          OrderBy = "protocol DESC"
-	OrderByTransportProtocolAsc  OrderBy = "transport_protocol ASC"
-	OrderByTransportProtocolDesc OrderBy = "transport_protocol DESC"
+	QueryParamOrderByPortAsc               QueryParamOrderBy = "port ASC"
+	QueryParamOrderByPortDesc              QueryParamOrderBy = "port DESC"
+	QueryParamOrderByProtocolAsc           QueryParamOrderBy = "protocol ASC"
+	QueryParamOrderByProtocolDesc          QueryParamOrderBy = "protocol DESC"
+	QueryParamOrderByTransportProtocolAsc  QueryParamOrderBy = "transport_protocol ASC"
+	QueryParamOrderByTransportProtocolDesc QueryParamOrderBy = "transport_protocol DESC"
 )
 
-func (e OrderBy) ToPointer() *OrderBy {
+func (e QueryParamOrderBy) ToPointer() *QueryParamOrderBy {
 	return &e
 }
-func (e *OrderBy) UnmarshalJSON(data []byte) error {
+func (e *QueryParamOrderBy) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -84,10 +84,10 @@ func (e *OrderBy) UnmarshalJSON(data []byte) error {
 	case "transport_protocol ASC":
 		fallthrough
 	case "transport_protocol DESC":
-		*e = OrderBy(v)
+		*e = QueryParamOrderBy(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderBy: %v", v)
+		return fmt.Errorf("invalid value for QueryParamOrderBy: %v", v)
 	}
 }
 
@@ -111,7 +111,7 @@ type V3GlobaldataServiceOnHostRequest struct {
 	// The IP address of a host.
 	HostID string `pathParam:"style=simple,explode=false,name=host_id"`
 	// Order observations by these fields. Multiple values can be provided to sort by multiple fields (e.g., ['port DESC', 'protocol ASC']).
-	OrderBy []OrderBy `queryParam:"style=form,explode=false,name=order_by"`
+	OrderBy []QueryParamOrderBy `queryParam:"style=form,explode=false,name=order_by"`
 }
 
 func (v V3GlobaldataServiceOnHostRequest) MarshalJSON() ([]byte, error) {
@@ -188,7 +188,7 @@ func (v *V3GlobaldataServiceOnHostRequest) GetHostID() string {
 	return v.HostID
 }
 
-func (v *V3GlobaldataServiceOnHostRequest) GetOrderBy() []OrderBy {
+func (v *V3GlobaldataServiceOnHostRequest) GetOrderBy() []QueryParamOrderBy {
 	if v == nil {
 		return nil
 	}

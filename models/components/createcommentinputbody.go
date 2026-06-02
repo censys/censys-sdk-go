@@ -2,14 +2,23 @@
 
 package components
 
-type CreateTagAssignmentInputBody struct {
+type CreateCommentInputBody struct {
 	// The identifier of the asset (host IP, certificate SHA-256 fingerprint, or web property hostname:port).
 	AssetID string `json:"asset_id"`
+	// The comment body text.
+	Body string `json:"body"`
 }
 
-func (c *CreateTagAssignmentInputBody) GetAssetID() string {
+func (c *CreateCommentInputBody) GetAssetID() string {
 	if c == nil {
 		return ""
 	}
 	return c.AssetID
+}
+
+func (c *CreateCommentInputBody) GetBody() string {
+	if c == nil {
+		return ""
+	}
+	return c.Body
 }

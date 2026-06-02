@@ -1,0 +1,10 @@
+# V3CommentsUpdateCommentResponse
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                        | :heavy_check_mark:                                                                        | N/A                                                                                       |
+| `ResponseEnvelopeComment`                                                                 | [*components.ResponseEnvelopeComment](../../models/components/responseenvelopecomment.md) | :heavy_minus_sign:                                                                        | Comment updated successfully                                                              |
+| `Headers`                                                                                 | map[string][]`string`                                                                     | :heavy_check_mark:                                                                        | N/A                                                                                       |

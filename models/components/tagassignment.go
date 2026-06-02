@@ -7,24 +7,25 @@ import (
 	"time"
 )
 
-// AssetType - The inferred type of the asset.
-type AssetType string
+// TagAssignmentAssetType - The inferred type of the asset.
+type TagAssignmentAssetType string
 
 const (
-	AssetTypeHost        AssetType = "host"
-	AssetTypeCertificate AssetType = "certificate"
-	AssetTypeWebProperty AssetType = "web_property"
+	TagAssignmentAssetTypeHost        TagAssignmentAssetType = "host"
+	TagAssignmentAssetTypeCertificate TagAssignmentAssetType = "certificate"
+	TagAssignmentAssetTypeWebProperty TagAssignmentAssetType = "web_property"
+	TagAssignmentAssetTypeUnknown     TagAssignmentAssetType = "unknown"
 )
 
-func (e AssetType) ToPointer() *AssetType {
+func (e TagAssignmentAssetType) ToPointer() *TagAssignmentAssetType {
 	return &e
 }
 
 // IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *AssetType) IsExact() bool {
+func (e *TagAssignmentAssetType) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case "host", "certificate", "web_property":
+		case "host", "certificate", "web_property", "unknown":
 			return true
 		}
 	}
@@ -35,7 +36,7 @@ type TagAssignment struct {
 	// The identifier of the tagged asset (host IP, certificate SHA-256 fingerprint, or web property domain/IP:port).
 	AssetID string `json:"asset_id"`
 	// The inferred type of the asset.
-	AssetType AssetType `json:"asset_type"`
+	AssetType TagAssignmentAssetType `json:"asset_type"`
 	// RFC3339 timestamp when the assignment was created.
 	CreatedAt time.Time `json:"created_at"`
 	// The user ID of the user who created the assignment.
@@ -66,9 +67,9 @@ func (t *TagAssignment) GetAssetID() string {
 	return t.AssetID
 }
 
-func (t *TagAssignment) GetAssetType() AssetType {
+func (t *TagAssignment) GetAssetType() TagAssignmentAssetType {
 	if t == nil {
-		return AssetType("")
+		return TagAssignmentAssetType("")
 	}
 	return t.AssetType
 }

@@ -62,7 +62,7 @@ type V3TagsListAssignmentsRequest struct {
 	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`
 	// Sort order. Supported values: create_time_asc, create_time_desc.
 	OrderBy *V3TagsListAssignmentsQueryParamOrderBy `default:"create_time_desc" queryParam:"style=form,explode=false,name=order_by"`
-	// The identifier of the asset to tag (host IP, certificate SHA-256 fingerprint, or web property hostname:port).
+	// The identifier of the asset (host IP, certificate SHA-256 fingerprint, or web property hostname:port).
 	AssetID *string `queryParam:"style=form,explode=false,name=asset_id"`
 	// RFC3339 timestamp. Only return assignments created before this time.
 	CreatedBefore *time.Time `queryParam:"style=form,explode=false,name=created_before"`

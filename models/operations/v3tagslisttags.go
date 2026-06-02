@@ -23,22 +23,22 @@ func (v *V3TagsListTagsGlobals) GetOrganizationID() *string {
 // #region class-body-v3tagslisttagsglobals
 // #endregion class-body-v3tagslisttagsglobals
 
-// QueryParamOrderBy - Sort order. Supported values: name_asc, name_desc, created_at_asc, created_at_desc, updated_at_asc, updated_at_desc.
-type QueryParamOrderBy string
+// V3TagsListTagsQueryParamOrderBy - Sort order. Supported values: name_asc, name_desc, created_at_asc, created_at_desc, updated_at_asc, updated_at_desc.
+type V3TagsListTagsQueryParamOrderBy string
 
 const (
-	QueryParamOrderByNameAsc       QueryParamOrderBy = "name_asc"
-	QueryParamOrderByNameDesc      QueryParamOrderBy = "name_desc"
-	QueryParamOrderByCreatedAtAsc  QueryParamOrderBy = "created_at_asc"
-	QueryParamOrderByCreatedAtDesc QueryParamOrderBy = "created_at_desc"
-	QueryParamOrderByUpdatedAtAsc  QueryParamOrderBy = "updated_at_asc"
-	QueryParamOrderByUpdatedAtDesc QueryParamOrderBy = "updated_at_desc"
+	V3TagsListTagsQueryParamOrderByNameAsc       V3TagsListTagsQueryParamOrderBy = "name_asc"
+	V3TagsListTagsQueryParamOrderByNameDesc      V3TagsListTagsQueryParamOrderBy = "name_desc"
+	V3TagsListTagsQueryParamOrderByCreatedAtAsc  V3TagsListTagsQueryParamOrderBy = "created_at_asc"
+	V3TagsListTagsQueryParamOrderByCreatedAtDesc V3TagsListTagsQueryParamOrderBy = "created_at_desc"
+	V3TagsListTagsQueryParamOrderByUpdatedAtAsc  V3TagsListTagsQueryParamOrderBy = "updated_at_asc"
+	V3TagsListTagsQueryParamOrderByUpdatedAtDesc V3TagsListTagsQueryParamOrderBy = "updated_at_desc"
 )
 
-func (e QueryParamOrderBy) ToPointer() *QueryParamOrderBy {
+func (e V3TagsListTagsQueryParamOrderBy) ToPointer() *V3TagsListTagsQueryParamOrderBy {
 	return &e
 }
-func (e *QueryParamOrderBy) UnmarshalJSON(data []byte) error {
+func (e *V3TagsListTagsQueryParamOrderBy) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -55,10 +55,10 @@ func (e *QueryParamOrderBy) UnmarshalJSON(data []byte) error {
 	case "updated_at_asc":
 		fallthrough
 	case "updated_at_desc":
-		*e = QueryParamOrderBy(v)
+		*e = V3TagsListTagsQueryParamOrderBy(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryParamOrderBy: %v", v)
+		return fmt.Errorf("invalid value for V3TagsListTagsQueryParamOrderBy: %v", v)
 	}
 }
 
@@ -97,7 +97,7 @@ type V3TagsListTagsRequest struct {
 	// Pagination token from a previous response to retrieve the next page of results.
 	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`
 	// Sort order. Supported values: name_asc, name_desc, created_at_asc, created_at_desc, updated_at_asc, updated_at_desc.
-	OrderBy *QueryParamOrderBy `default:"name_asc" queryParam:"style=form,explode=false,name=order_by"`
+	OrderBy *V3TagsListTagsQueryParamOrderBy `default:"name_asc" queryParam:"style=form,explode=false,name=order_by"`
 	// Filter tags by name (exact match).
 	Name *string `queryParam:"style=form,explode=false,name=name"`
 	// Filter tags by the user ID of the user who created the tag.
@@ -138,7 +138,7 @@ func (v *V3TagsListTagsRequest) GetPageToken() *string {
 	return v.PageToken
 }
 
-func (v *V3TagsListTagsRequest) GetOrderBy() *QueryParamOrderBy {
+func (v *V3TagsListTagsRequest) GetOrderBy() *V3TagsListTagsQueryParamOrderBy {
 	if v == nil {
 		return nil
 	}
