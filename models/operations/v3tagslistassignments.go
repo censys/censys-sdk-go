@@ -51,6 +51,36 @@ func (e *V3TagsListAssignmentsQueryParamOrderBy) UnmarshalJSON(data []byte) erro
 	}
 }
 
+// AssetType - Filter assignments by asset type.
+type AssetType string
+
+const (
+	AssetTypeHost        AssetType = "host"
+	AssetTypeWebProperty AssetType = "web_property"
+	AssetTypeCertificate AssetType = "certificate"
+)
+
+func (e AssetType) ToPointer() *AssetType {
+	return &e
+}
+func (e *AssetType) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "host":
+		fallthrough
+	case "web_property":
+		fallthrough
+	case "certificate":
+		*e = AssetType(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AssetType: %v", v)
+	}
+}
+
 type V3TagsListAssignmentsRequest struct {
 	// The ID of a Censys organization to associate the request with. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
@@ -64,6 +94,8 @@ type V3TagsListAssignmentsRequest struct {
 	OrderBy *V3TagsListAssignmentsQueryParamOrderBy `default:"create_time_desc" queryParam:"style=form,explode=false,name=order_by"`
 	// The identifier of the asset (host IP, certificate SHA-256 fingerprint, or web property hostname:port).
 	AssetID *string `queryParam:"style=form,explode=false,name=asset_id"`
+	// Filter assignments by asset type.
+	AssetType *AssetType `queryParam:"style=form,explode=false,name=asset_type"`
 	// RFC3339 timestamp. Only return assignments created before this time.
 	CreatedBefore *time.Time `queryParam:"style=form,explode=false,name=created_before"`
 	// RFC3339 timestamp. Only return assignments created after this time.
@@ -123,6 +155,13 @@ func (v *V3TagsListAssignmentsRequest) GetAssetID() *string {
 		return nil
 	}
 	return v.AssetID
+}
+
+func (v *V3TagsListAssignmentsRequest) GetAssetType() *AssetType {
+	if v == nil {
+		return nil
+	}
+	return v.AssetType
 }
 
 func (v *V3TagsListAssignmentsRequest) GetCreatedBefore() *time.Time {

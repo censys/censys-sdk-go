@@ -43,6 +43,7 @@ type Service struct {
 	CiscoIpsla               *CiscoIpsla               `json:"cisco_ipsla,omitempty"`
 	Cmore                    *Cmore                    `json:"cmore,omitempty"`
 	Coap                     *Coap                     `json:"coap,omitempty"`
+	Compromises              []Risk                    `json:"compromises,omitempty"`
 	CrestronCp3              *CrestronCp3              `json:"crestron_cp3,omitempty"`
 	CrestronDinAp2           *CrestronDinAp2           `json:"crestron_din_ap2,omitempty"`
 	CursorOnTarget           *CursorOnTarget           `json:"cursor_on_target,omitempty"`
@@ -285,6 +286,13 @@ func (s *Service) GetCoap() *Coap {
 		return nil
 	}
 	return s.Coap
+}
+
+func (s *Service) GetCompromises() []Risk {
+	if s == nil {
+		return nil
+	}
+	return s.Compromises
 }
 
 func (s *Service) GetCrestronCp3() *CrestronCp3 {

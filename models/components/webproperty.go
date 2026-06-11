@@ -4,6 +4,7 @@ package components
 
 type Webproperty struct {
 	Cert             *Certificate        `json:"cert,omitempty"`
+	Compromises      []Risk              `json:"compromises,omitempty"`
 	Endpoints        []EndpointScanState `json:"endpoints,omitempty"`
 	Exposures        []Risk              `json:"exposures,omitempty"`
 	Hardware         []Attribute         `json:"hardware,omitempty"`
@@ -25,6 +26,13 @@ func (w *Webproperty) GetCert() *Certificate {
 		return nil
 	}
 	return w.Cert
+}
+
+func (w *Webproperty) GetCompromises() []Risk {
+	if w == nil {
+		return nil
+	}
+	return w.Compromises
 }
 
 func (w *Webproperty) GetEndpoints() []EndpointScanState {

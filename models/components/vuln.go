@@ -87,6 +87,7 @@ type Vuln struct {
 	RiskSource *VulnRiskSource `json:"risk_source,omitempty"`
 	Severity   *VulnSeverity   `json:"severity,omitempty"`
 	Source     *VulnSource     `json:"source,omitempty"`
+	Type       []string        `json:"type,omitempty"`
 	Year       *int            `json:"year,omitempty"`
 }
 
@@ -158,6 +159,13 @@ func (v *Vuln) GetSource() *VulnSource {
 		return nil
 	}
 	return v.Source
+}
+
+func (v *Vuln) GetType() []string {
+	if v == nil {
+		return nil
+	}
+	return v.Type
 }
 
 func (v *Vuln) GetYear() *int {

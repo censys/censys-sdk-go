@@ -32,7 +32,7 @@ func (e *Granularity) IsExact() bool {
 
 type CreditUsageReport struct {
 	// The breakdown of credits consumed by consumer. This may not be present if the report is generated for a specific user.
-	CreditsConsumedByConsumer *string              `json:"credits_consumed_by_consumer,omitempty"`
+	CreditsConsumedByConsumer map[string]int64     `json:"credits_consumed_by_consumer,omitempty"`
 	CreditsConsumedBySource   SourceUsageBreakdown `json:"credits_consumed_by_source"`
 	// The end time of the window for this report.
 	EndTime time.Time `json:"end_time"`
@@ -63,7 +63,7 @@ func (c *CreditUsageReport) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (c *CreditUsageReport) GetCreditsConsumedByConsumer() *string {
+func (c *CreditUsageReport) GetCreditsConsumedByConsumer() map[string]int64 {
 	if c == nil {
 		return nil
 	}
