@@ -86,6 +86,7 @@ type Risk struct {
 	RiskSource *RiskSource  `json:"risk_source,omitempty"`
 	Severity   *Severity    `json:"severity,omitempty"`
 	Source     *RiskSource1 `json:"source,omitempty"`
+	Type       []string     `json:"type,omitempty"`
 	Year       *int         `json:"year,omitempty"`
 }
 
@@ -150,6 +151,13 @@ func (r *Risk) GetSource() *RiskSource1 {
 		return nil
 	}
 	return r.Source
+}
+
+func (r *Risk) GetType() []string {
+	if r == nil {
+		return nil
+	}
+	return r.Type
 }
 
 func (r *Risk) GetYear() *int {

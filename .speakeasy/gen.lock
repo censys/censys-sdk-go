@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 11ec2d40127d4f56fd992bac8552c93e
-  docVersion: 1.0.104
-  speakeasyVersion: 1.770.0
-  generationVersion: 2.893.0
-  releaseVersion: 0.25.19
-  configChecksum: 5c0e84852fc7b91d5cb02c9245e35864
+  docChecksum: d6a5aa81dd7b887528be46ee0bf93613
+  docVersion: 1.0.107
+  speakeasyVersion: 1.776.0
+  generationVersion: 2.900.1
+  releaseVersion: 0.25.20
+  configChecksum: 41d1472bbf1f1dcc28b534439061dec9
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: 8161412a-c42b-4083-8b48-364fd3151e9a
-  pristine_commit_hash: 12a2bafceb06af9ae0cbdfcbd67eb39de8880a51
-  pristine_tree_hash: 3aaa9290fc351c3f682a8a904b298798c3d2d6d8
+  generation_id: fa924283-06c8-480b-8e33-da0ddadbbe02
+  pristine_commit_hash: 13c4bf2c28e4ec5c345b40e0e114463a176e5505
+  pristine_tree_hash: f2d5efc1a564c5506233bc3fc452365f10851e9e
 features:
   go:
     acceptHeaders: 2.81.2
@@ -379,8 +379,8 @@ trackedFiles:
     pristine_git_object: 3511451311e38e249fbd06a9f4259470bc5aa8f4
   docs/models/components/creditusagereport.md:
     id: 8c27d1801db1
-    last_write_checksum: sha1:09eea171de75e6a1c2a22224f61db9df54397644
-    pristine_git_object: 7f5413d1200901e957bc8b90a6d29752a1ecc67e
+    last_write_checksum: sha1:333b3130d8c344edd6f88a3cee4370e5233e4ad6
+    pristine_git_object: f756b4bf1720eae930ca4a1744773c7a09efddcf
   docs/models/components/creditusagereportperiod.md:
     id: e39a4410678e
     last_write_checksum: sha1:e4d0f0b8ee2f3f8c7f400fe9ccaa5846bf1f8344
@@ -2111,8 +2111,8 @@ trackedFiles:
     pristine_git_object: b51006b45b600d74348e2533cb92aee6c833f596
   docs/models/components/risk.md:
     id: edf5056b464a
-    last_write_checksum: sha1:6fe757790d7b138d69ea9c551ab33eae6dd44450
-    pristine_git_object: 506c51a1929273609d75c62aa055da4fccae88dd
+    last_write_checksum: sha1:34272c88b7d586faf76754c82d103cd1b5dae2ba
+    pristine_git_object: 32498d8e15d65bca82b5e25e6844ff557a7fcbdc
   docs/models/components/risksource.md:
     id: 8c5f56d90aa6
     last_write_checksum: sha1:43e3abe7464157f1a352dc21505c0b4be3916915
@@ -2355,8 +2355,8 @@ trackedFiles:
     pristine_git_object: 3db044bd2e74d34179aa6dd787003979f73edc45
   docs/models/components/service.md:
     id: 4385ff500f60
-    last_write_checksum: sha1:20509cc66a7c6932deccab2d99ce5782e210c660
-    pristine_git_object: 9cb4f0e1516881b244ca9725f997968e3b8170ee
+    last_write_checksum: sha1:7437d6fbdd4368ef551227fcb3039d9f9493814a
+    pristine_git_object: 158e851cab6987be3d12cb2612c9daa3ee5eec6a
   docs/models/components/serviceid.md:
     id: 8edf7925b5ab
     last_write_checksum: sha1:f1762b79555ca2cf3359dd9ba64e06d4e96e2255
@@ -2835,8 +2835,8 @@ trackedFiles:
     pristine_git_object: 6710402d8d1754362b6b23c79b42d2edb8dc907e
   docs/models/components/vuln.md:
     id: 0d8f89ccc585
-    last_write_checksum: sha1:bad2b751c8dab36eb9853123ed6085355fff0433
-    pristine_git_object: 2a4e5ba37af0ddf06db2383876e3f3b5b91285e8
+    last_write_checksum: sha1:d235a05df14c8e7c7e8d9769bbe9a787eee5727c
+    pristine_git_object: fb3bae20165f824b90339ab12170ac9f688d7e98
   docs/models/components/vulnerabilityresponseeffort.md:
     id: 2e8c7f21d049
     last_write_checksum: sha1:bd57d0a1ffd0989909fb3a19b02897904d66894a
@@ -2863,8 +2863,8 @@ trackedFiles:
     pristine_git_object: f11631a4d5fee6c0679add953b0cf7a614cde4d0
   docs/models/components/webproperty.md:
     id: 3e126d1506ad
-    last_write_checksum: sha1:1c853111c31729f4d6551e11dc178e61bab4163d
-    pristine_git_object: 72d41a59e55a2118d3571180dbe62fcf9aeca5d6
+    last_write_checksum: sha1:57cc45cb7301d629dda0105cf5d09ac5e2f124e7
+    pristine_git_object: 376fc7797534eeca95b917015fcd3f2f7a1578a9
   docs/models/components/webpropertyasset.md:
     id: a6324fe0c4bb
     last_write_checksum: sha1:39a926373470504ea81be517c536c1dce46b5287
@@ -2913,6 +2913,10 @@ trackedFiles:
     id: 8cd1f78360ee
     last_write_checksum: sha1:0d44bf556e51b0c085ec0405e4d2c6d329a5df0b
     pristine_git_object: f3e55bb2b3de48bc6ab7adb6f5450433387778a5
+  docs/models/operations/assettype.md:
+    id: 8285f6a1f65b
+    last_write_checksum: sha1:60fb030a69d5384de7bdda11af32741b5cd46141
+    pristine_git_object: 625caf4e4f30fd01a6d8b0e5cb057fd300ccf631
   docs/models/operations/changetypes.md:
     id: 3558ac9f8bdf
     last_write_checksum: sha1:51fc7bf05a379901cfd86e0da26834096ab7fcbb
@@ -3491,8 +3495,8 @@ trackedFiles:
     pristine_git_object: c3555f3d57ac3104436892cbe65e9ed70a5b8332
   docs/models/operations/v3tagslistassignmentsrequest.md:
     id: b8b50f791d96
-    last_write_checksum: sha1:795c02cb1b6f30a1e82799aded37877f0282ca87
-    pristine_git_object: 1e575d7b94c614cf7b2f007dbc893ff2a71f8e69
+    last_write_checksum: sha1:adaad0f399b2b3d1eaeb5477348ce6fb718e9ccd
+    pristine_git_object: 62de4e691e6772312a4a3166090303a6b56d0cce
   docs/models/operations/v3tagslistassignmentsresponse.md:
     id: 4b9d1a1f47a0
     last_write_checksum: sha1:319769e745dcdd16a9f33bac951e1a2fa9adf38c
@@ -4019,8 +4023,8 @@ trackedFiles:
     pristine_git_object: cf9dcc796ce695937538a752f0cafcb68f542954
   models/components/creditusagereport.go:
     id: ade553aaa2fa
-    last_write_checksum: sha1:cd713900f43cf3a5c94201bd1a4102e58032e9ba
-    pristine_git_object: 270497ca883ffcb73be6eebbcae13e6c0901a34a
+    last_write_checksum: sha1:f37cf6d66e328959dd7733e80932d23fb4e5d4ea
+    pristine_git_object: b55a4660c6151e66843916ede8b56ea21ccb168f
   models/components/creditusagereportperiod.go:
     id: 236a94ab8f4a
     last_write_checksum: sha1:d91cd21f27e0d226d0ebc55c4a5118f255ba1f39
@@ -5615,8 +5619,8 @@ trackedFiles:
     pristine_git_object: 9ae1f5d30a3723c21c93c686affbc60254060f9c
   models/components/risk.go:
     id: f03c49195a45
-    last_write_checksum: sha1:6d5a407dcfb60261f7046f27d64e0924488b797f
-    pristine_git_object: 06d3be19e6c69c8c52f37743009fe97c500529a0
+    last_write_checksum: sha1:5c1f2ca06c9390f65712276254293ddcd91d858f
+    pristine_git_object: 65e05a478e2c71a51fb04f1beeb2cdcfca15df40
   models/components/rlogin.go:
     id: cf4c3809c025
     last_write_checksum: sha1:41fa856b1f2013395779274ecafe6919ba46b336
@@ -5819,8 +5823,8 @@ trackedFiles:
     pristine_git_object: 0c91bf4290387d00350eb3db091ccc8111099899
   models/components/service.go:
     id: 5cac453f281c
-    last_write_checksum: sha1:7ffabdf8fce001116b04545afc7bdf125d8c34b7
-    pristine_git_object: 237933947cabbd1cfaa3cf79edbf3b5c0cc85c8d
+    last_write_checksum: sha1:89e9f647d76b77d725662cbf335ce5747587e8f0
+    pristine_git_object: b69a6fb1ec39c7d880727dfe49be872e75f77a55
   models/components/serviceid.go:
     id: dee0b042b33e
     last_write_checksum: sha1:bb71e30ff9407f9b75b72c70733f6657d15b5541
@@ -6191,8 +6195,8 @@ trackedFiles:
     pristine_git_object: fad805cd065f18203335754bdff1c1f9528bb48a
   models/components/vuln.go:
     id: db24232a7f06
-    last_write_checksum: sha1:40a48d7e6c4a3fbff2008c2d40a62f445ad4c1ae
-    pristine_git_object: 85dfed7d99cdce54246a1a070ecaaceab7161070
+    last_write_checksum: sha1:e90868462a13492d8847491e3c47315a96ff019a
+    pristine_git_object: 5d79522cf552b118fddeb069a4a778dd65786140
   models/components/weblogict3.go:
     id: a4aad0344628
     last_write_checksum: sha1:c51ca0063287fba8f1dee516cbaf3b1ba0c903a1
@@ -6203,8 +6207,8 @@ trackedFiles:
     pristine_git_object: fe21c95b6a2df5e52766aa7be47f8841ab0cc018
   models/components/webproperty.go:
     id: 8d19a43c8ae5
-    last_write_checksum: sha1:abe555899b2f136412f87bf1a596a226c76802a5
-    pristine_git_object: 55c2ed8fd399c0ffb465e7e225598af5857e86a6
+    last_write_checksum: sha1:e8b3cb0f3ad2b739f26f42fa5f9bede86c7695d5
+    pristine_git_object: b14853ece199d6d15cc400fa9f7b23d9701f93a0
   models/components/webpropertyasset.go:
     id: b3b52d89f0b2
     last_write_checksum: sha1:48c4bf744b8fef59995e8a41fb485abc0ac850e9
@@ -6439,8 +6443,8 @@ trackedFiles:
     pristine_git_object: c637cbe551d499e3fe66dd4ea77255a86fde821a
   models/operations/v3tagslistassignments.go:
     id: 426ae7536a50
-    last_write_checksum: sha1:ee1e062d77238c3d67e56a51aebf633b4a4f28c9
-    pristine_git_object: 5315300ef62da4ebf09ad5d54ab13e0777e9df55
+    last_write_checksum: sha1:91ab40c8bd79506c8d10ef0e2059d770aa0dc525
+    pristine_git_object: 1d65a6ec7a092b3ce626623176f35284438851f8
   models/operations/v3tagslisttags.go:
     id: 22c9b505df15
     last_write_checksum: sha1:6900c9b7e786dfc004bff4478e2baf63de511e15
@@ -6511,8 +6515,8 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:a41a3a311b535cbdfe7e0be437fc136a15e84560
-    pristine_git_object: fb25fedcfb8a553a617f670bdc72fcd1e1d6c34d
+    last_write_checksum: sha1:fed827c39689ed0fce04c214cd81fa84e06750a9
+    pristine_git_object: b1753a70864686fe7b24b62ce70d6c208258cdf2
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:189223c6fafe6164c63dddd5bde406f7b18b1323
@@ -7143,7 +7147,7 @@ examples:
           include_consumer_breakdown: false
       responses:
         "200":
-          application/json: {"result": {"credits_consumed_by_source": {"api": 527007, "ui": 30140}, "end_time": "2026-02-24T20:39:40.987Z", "granularity": "daily", "periods": [], "start_time": "2026-08-31T05:06:39.123Z", "total_added": 532855, "total_consumed": 794965, "total_expired": 868832, "transaction_count": 833735}}
+          application/json: {"result": {"credits_consumed_by_consumer": {"user@example.com": 3000}, "credits_consumed_by_source": {"api": 527007, "ui": 30140}, "end_time": "2026-02-24T20:39:40.987Z", "granularity": "daily", "periods": [], "start_time": "2026-08-31T05:06:39.123Z", "total_added": 532855, "total_consumed": 794965, "total_expired": 868832, "transaction_count": 833735}}
         "401":
           application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
         "400":
@@ -7221,7 +7225,7 @@ examples:
           granularity: "daily"
       responses:
         "200":
-          application/json: {"result": {"credits_consumed_by_source": {"api": 135676, "ui": 62358}, "end_time": "2025-11-05T11:52:42.728Z", "granularity": "daily", "periods": [], "start_time": "2025-12-18T14:05:05.185Z", "total_added": 853045, "total_consumed": 419835, "total_expired": 916558, "transaction_count": 881742}}
+          application/json: {"result": {"credits_consumed_by_consumer": {"user@example.com": 3000}, "credits_consumed_by_source": {"api": 135676, "ui": 62358}, "end_time": "2025-11-05T11:52:42.728Z", "granularity": "daily", "periods": [], "start_time": "2025-12-18T14:05:05.185Z", "total_added": 853045, "total_consumed": 419835, "total_expired": 916558, "transaction_count": 881742}}
         "401":
           application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
         "400":
@@ -7266,7 +7270,7 @@ examples:
           granularity: "daily"
       responses:
         "200":
-          application/json: {"result": {"credits_consumed_by_source": {"api": 950767, "ui": 255777}, "end_time": "2024-04-27T13:57:59.211Z", "granularity": "daily", "periods": null, "start_time": "2024-12-31T17:45:46.745Z", "total_added": 709804, "total_consumed": 277201, "total_expired": 64971, "transaction_count": 82629}}
+          application/json: {"result": {"credits_consumed_by_consumer": {"user@example.com": 3000}, "credits_consumed_by_source": {"api": 950767, "ui": 255777}, "end_time": "2024-04-27T13:57:59.211Z", "granularity": "daily", "periods": null, "start_time": "2024-12-31T17:45:46.745Z", "total_added": 709804, "total_consumed": 277201, "total_expired": 64971, "transaction_count": 82629}}
         "401":
           application/json: {"error": {"code": 401, "message": "Access credentials are invalid", "reason": "Access token is not active", "status": "Unauthorized"}}
         "404":
