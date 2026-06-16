@@ -41,6 +41,7 @@ type Service struct {
 	CheckpointTopology       *CheckpointTopology       `json:"checkpoint_topology,omitempty"`
 	Chromecast               *Chromecast               `json:"chromecast,omitempty"`
 	CiscoIpsla               *CiscoIpsla               `json:"cisco_ipsla,omitempty"`
+	ClickhouseNative         *ClickHouseNative         `json:"clickhouse_native,omitempty"`
 	Cmore                    *Cmore                    `json:"cmore,omitempty"`
 	Coap                     *Coap                     `json:"coap,omitempty"`
 	Compromises              []Risk                    `json:"compromises,omitempty"`
@@ -69,6 +70,7 @@ type Service struct {
 	Ftp                      *Ftp                      `json:"ftp,omitempty"`
 	Gearman                  *Gearman                  `json:"gearman,omitempty"`
 	Gemini                   *Gemini                   `json:"gemini,omitempty"`
+	Gopher                   *Gopher                   `json:"gopher,omitempty"`
 	Hajime                   *Hajime                   `json:"hajime,omitempty"`
 	Hardware                 []Attribute               `json:"hardware,omitempty"`
 	HidVertx                 *HidVertx                 `json:"hid_vertx,omitempty"`
@@ -114,6 +116,7 @@ type Service struct {
 	Onc                      *Onc                      `json:"onc,omitempty"`
 	Onvif                    *Onvif                    `json:"onvif,omitempty"`
 	OpcUa                    *OpcUa                    `json:"opc_ua,omitempty"`
+	Openflow                 *Openflow                 `json:"openflow,omitempty"`
 	Openvpn                  *Openvpn                  `json:"openvpn,omitempty"`
 	OpenvpnMgmt              *OpenvpnMgmt              `json:"openvpn_mgmt,omitempty"`
 	OperatingSystems         []Attribute               `json:"operating_systems,omitempty"`
@@ -133,12 +136,14 @@ type Service struct {
 	Redis                    *Redis                    `json:"redis,omitempty"`
 	Redline                  *Redline                  `json:"redline,omitempty"`
 	RedlionCrimson           *RedlionCrimson           `json:"redlion_crimson,omitempty"`
+	ReolinkBaichuan          *ReolinkBaichuan          `json:"reolink_baichuan,omitempty"`
 	RepresentativeInfo       *RepresentativeInfo       `json:"representative_info,omitempty"`
 	Rifatron                 *Rifatron                 `json:"rifatron,omitempty"`
 	Ripple                   *Ripple                   `json:"ripple,omitempty"`
 	Rlogin                   *Rlogin                   `json:"rlogin,omitempty"`
 	Rocketmq                 *Rocketmq                 `json:"rocketmq,omitempty"`
 	RouterosAPI              *RouterosAPI              `json:"routeros_api,omitempty"`
+	Rtmp                     *Rtmp                     `json:"rtmp,omitempty"`
 	Rtsp                     *Rtsp                     `json:"rtsp,omitempty"`
 	RustdeskHeartbeat        *RustdeskHeartbeat        `json:"rustdesk_heartbeat,omitempty"`
 	RustdeskRelay            *RustdeskRelay            `json:"rustdesk_relay,omitempty"`
@@ -163,6 +168,7 @@ type Service struct {
 	SSH                      *SSH                      `json:"ssh,omitempty"`
 	Steam                    *Steam                    `json:"steam,omitempty"`
 	Stun                     *Stun                     `json:"stun,omitempty"`
+	Synergy                  *Synergy                  `json:"synergy,omitempty"`
 	TacacsPlus               *TacacsPlus               `json:"tacacs_plus,omitempty"`
 	TeamViewer               *TeamViewer               `json:"team_viewer,omitempty"`
 	Telnet                   *Telnet                   `json:"telnet,omitempty"`
@@ -177,6 +183,7 @@ type Service struct {
 	Vnc                      *Vnc                      `json:"vnc,omitempty"`
 	Vulns                    []Vuln                    `json:"vulns,omitempty"`
 	WeblogicT3               *WeblogicT3               `json:"weblogic_t3,omitempty"`
+	WinceCerdisp             *WinceCerdisp             `json:"wince_cerdisp,omitempty"`
 	Winrm                    *Winrm                    `json:"winrm,omitempty"`
 	WsDiscovery              *WsDiscovery              `json:"ws_discovery,omitempty"`
 	X11                      *X11                      `json:"x11,omitempty"`
@@ -272,6 +279,13 @@ func (s *Service) GetCiscoIpsla() *CiscoIpsla {
 		return nil
 	}
 	return s.CiscoIpsla
+}
+
+func (s *Service) GetClickhouseNative() *ClickHouseNative {
+	if s == nil {
+		return nil
+	}
+	return s.ClickhouseNative
 }
 
 func (s *Service) GetCmore() *Cmore {
@@ -468,6 +482,13 @@ func (s *Service) GetGemini() *Gemini {
 		return nil
 	}
 	return s.Gemini
+}
+
+func (s *Service) GetGopher() *Gopher {
+	if s == nil {
+		return nil
+	}
+	return s.Gopher
 }
 
 func (s *Service) GetHajime() *Hajime {
@@ -785,6 +806,13 @@ func (s *Service) GetOpcUa() *OpcUa {
 	return s.OpcUa
 }
 
+func (s *Service) GetOpenflow() *Openflow {
+	if s == nil {
+		return nil
+	}
+	return s.Openflow
+}
+
 func (s *Service) GetOpenvpn() *Openvpn {
 	if s == nil {
 		return nil
@@ -918,6 +946,13 @@ func (s *Service) GetRedlionCrimson() *RedlionCrimson {
 	return s.RedlionCrimson
 }
 
+func (s *Service) GetReolinkBaichuan() *ReolinkBaichuan {
+	if s == nil {
+		return nil
+	}
+	return s.ReolinkBaichuan
+}
+
 func (s *Service) GetRepresentativeInfo() *RepresentativeInfo {
 	if s == nil {
 		return nil
@@ -958,6 +993,13 @@ func (s *Service) GetRouterosAPI() *RouterosAPI {
 		return nil
 	}
 	return s.RouterosAPI
+}
+
+func (s *Service) GetRtmp() *Rtmp {
+	if s == nil {
+		return nil
+	}
+	return s.Rtmp
 }
 
 func (s *Service) GetRtsp() *Rtsp {
@@ -1128,6 +1170,13 @@ func (s *Service) GetStun() *Stun {
 	return s.Stun
 }
 
+func (s *Service) GetSynergy() *Synergy {
+	if s == nil {
+		return nil
+	}
+	return s.Synergy
+}
+
 func (s *Service) GetTacacsPlus() *TacacsPlus {
 	if s == nil {
 		return nil
@@ -1224,6 +1273,13 @@ func (s *Service) GetWeblogicT3() *WeblogicT3 {
 		return nil
 	}
 	return s.WeblogicT3
+}
+
+func (s *Service) GetWinceCerdisp() *WinceCerdisp {
+	if s == nil {
+		return nil
+	}
+	return s.WinceCerdisp
 }
 
 func (s *Service) GetWinrm() *Winrm {

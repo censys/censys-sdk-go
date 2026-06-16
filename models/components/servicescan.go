@@ -39,6 +39,7 @@ type ServiceScan struct {
 	CheckpointTopology       *CheckpointTopology           `json:"checkpoint_topology,omitempty"`
 	Chromecast               *Chromecast                   `json:"chromecast,omitempty"`
 	CiscoIpsla               *CiscoIpsla                   `json:"cisco_ipsla,omitempty"`
+	ClickhouseNative         *ClickHouseNative             `json:"clickhouse_native,omitempty"`
 	Cmore                    *Cmore                        `json:"cmore,omitempty"`
 	Coap                     *Coap                         `json:"coap,omitempty"`
 	CrestronCp3              *CrestronCp3                  `json:"crestron_cp3,omitempty"`
@@ -64,6 +65,7 @@ type ServiceScan struct {
 	Ftp                      *Ftp                          `json:"ftp,omitempty"`
 	Gearman                  *Gearman                      `json:"gearman,omitempty"`
 	Gemini                   *Gemini                       `json:"gemini,omitempty"`
+	Gopher                   *Gopher                       `json:"gopher,omitempty"`
 	Hajime                   *Hajime                       `json:"hajime,omitempty"`
 	HidVertx                 *HidVertx                     `json:"hid_vertx,omitempty"`
 	Hikvision                *Hikvision                    `json:"hikvision,omitempty"`
@@ -105,6 +107,7 @@ type ServiceScan struct {
 	Onc                      *Onc                          `json:"onc,omitempty"`
 	Onvif                    *Onvif                        `json:"onvif,omitempty"`
 	OpcUa                    *OpcUa                        `json:"opc_ua,omitempty"`
+	Openflow                 *Openflow                     `json:"openflow,omitempty"`
 	Openvpn                  *Openvpn                      `json:"openvpn,omitempty"`
 	OpenvpnMgmt              *OpenvpnMgmt                  `json:"openvpn_mgmt,omitempty"`
 	Oracle                   *Oracle                       `json:"oracle,omitempty"`
@@ -123,12 +126,14 @@ type ServiceScan struct {
 	Redis                    *Redis                        `json:"redis,omitempty"`
 	Redline                  *Redline                      `json:"redline,omitempty"`
 	RedlionCrimson           *RedlionCrimson               `json:"redlion_crimson,omitempty"`
+	ReolinkBaichuan          *ReolinkBaichuan              `json:"reolink_baichuan,omitempty"`
 	RepresentativeInfo       *RepresentativeInfo           `json:"representative_info,omitempty"`
 	Rifatron                 *Rifatron                     `json:"rifatron,omitempty"`
 	Ripple                   *Ripple                       `json:"ripple,omitempty"`
 	Rlogin                   *Rlogin                       `json:"rlogin,omitempty"`
 	Rocketmq                 *Rocketmq                     `json:"rocketmq,omitempty"`
 	RouterosAPI              *RouterosAPI                  `json:"routeros_api,omitempty"`
+	Rtmp                     *Rtmp                         `json:"rtmp,omitempty"`
 	Rtsp                     *Rtsp                         `json:"rtsp,omitempty"`
 	RustdeskHeartbeat        *RustdeskHeartbeat            `json:"rustdesk_heartbeat,omitempty"`
 	RustdeskRelay            *RustdeskRelay                `json:"rustdesk_relay,omitempty"`
@@ -152,6 +157,7 @@ type ServiceScan struct {
 	SSH                      *SSH                          `json:"ssh,omitempty"`
 	Steam                    *Steam                        `json:"steam,omitempty"`
 	Stun                     *Stun                         `json:"stun,omitempty"`
+	Synergy                  *Synergy                      `json:"synergy,omitempty"`
 	TacacsPlus               *TacacsPlus                   `json:"tacacs_plus,omitempty"`
 	TeamViewer               *TeamViewer                   `json:"team_viewer,omitempty"`
 	Telnet                   *Telnet                       `json:"telnet,omitempty"`
@@ -164,6 +170,7 @@ type ServiceScan struct {
 	Ventrilo                 *Ventrilo                     `json:"ventrilo,omitempty"`
 	Vnc                      *Vnc                          `json:"vnc,omitempty"`
 	WeblogicT3               *WeblogicT3                   `json:"weblogic_t3,omitempty"`
+	WinceCerdisp             *WinceCerdisp                 `json:"wince_cerdisp,omitempty"`
 	Winrm                    *Winrm                        `json:"winrm,omitempty"`
 	WsDiscovery              *WsDiscovery                  `json:"ws_discovery,omitempty"`
 	X11                      *X11                          `json:"x11,omitempty"`
@@ -245,6 +252,13 @@ func (s *ServiceScan) GetCiscoIpsla() *CiscoIpsla {
 		return nil
 	}
 	return s.CiscoIpsla
+}
+
+func (s *ServiceScan) GetClickhouseNative() *ClickHouseNative {
+	if s == nil {
+		return nil
+	}
+	return s.ClickhouseNative
 }
 
 func (s *ServiceScan) GetCmore() *Cmore {
@@ -420,6 +434,13 @@ func (s *ServiceScan) GetGemini() *Gemini {
 		return nil
 	}
 	return s.Gemini
+}
+
+func (s *ServiceScan) GetGopher() *Gopher {
+	if s == nil {
+		return nil
+	}
+	return s.Gopher
 }
 
 func (s *ServiceScan) GetHajime() *Hajime {
@@ -709,6 +730,13 @@ func (s *ServiceScan) GetOpcUa() *OpcUa {
 	return s.OpcUa
 }
 
+func (s *ServiceScan) GetOpenflow() *Openflow {
+	if s == nil {
+		return nil
+	}
+	return s.Openflow
+}
+
 func (s *ServiceScan) GetOpenvpn() *Openvpn {
 	if s == nil {
 		return nil
@@ -835,6 +863,13 @@ func (s *ServiceScan) GetRedlionCrimson() *RedlionCrimson {
 	return s.RedlionCrimson
 }
 
+func (s *ServiceScan) GetReolinkBaichuan() *ReolinkBaichuan {
+	if s == nil {
+		return nil
+	}
+	return s.ReolinkBaichuan
+}
+
 func (s *ServiceScan) GetRepresentativeInfo() *RepresentativeInfo {
 	if s == nil {
 		return nil
@@ -875,6 +910,13 @@ func (s *ServiceScan) GetRouterosAPI() *RouterosAPI {
 		return nil
 	}
 	return s.RouterosAPI
+}
+
+func (s *ServiceScan) GetRtmp() *Rtmp {
+	if s == nil {
+		return nil
+	}
+	return s.Rtmp
 }
 
 func (s *ServiceScan) GetRtsp() *Rtsp {
@@ -1038,6 +1080,13 @@ func (s *ServiceScan) GetStun() *Stun {
 	return s.Stun
 }
 
+func (s *ServiceScan) GetSynergy() *Synergy {
+	if s == nil {
+		return nil
+	}
+	return s.Synergy
+}
+
 func (s *ServiceScan) GetTacacsPlus() *TacacsPlus {
 	if s == nil {
 		return nil
@@ -1120,6 +1169,13 @@ func (s *ServiceScan) GetWeblogicT3() *WeblogicT3 {
 		return nil
 	}
 	return s.WeblogicT3
+}
+
+func (s *ServiceScan) GetWinceCerdisp() *WinceCerdisp {
+	if s == nil {
+		return nil
+	}
+	return s.WinceCerdisp
 }
 
 func (s *ServiceScan) GetWinrm() *Winrm {

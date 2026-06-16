@@ -1,0 +1,13 @@
+# ClickHouseHTTP
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `Databases`                                                                       | []`string`                                                                        | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `DatabasesExposed`                                                                | `*bool`                                                                           | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `DisplayName`                                                                     | `*string`                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Error`                                                                           | [*components.ClickHouseHTTPError](../../models/components/clickhousehttperror.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Timezone`                                                                        | `*string`                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Version`                                                                         | `*string`                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |

@@ -10,6 +10,7 @@ Endpoints related to the Global Data product
 * [GetCertificatesRaw](#getcertificatesraw) - Retrieve multiple certificates in PEM format
 * [GetCertificate](#getcertificate) - Get a certificate
 * [GetCertificateRaw](#getcertificateraw) - Get a certificate in PEM format
+* [GetHostEnrichment](#gethostenrichment) - Get host enrichment
 * [GetHosts](#gethosts) - Retrieve multiple hosts
 * [GetHost](#gethost) - Get a host
 * [ListServicesOnHost](#listservicesonhost) - Get service history for a host
@@ -265,6 +266,64 @@ func main() {
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
 | sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## GetHostEnrichment
+
+Retrieve enrichment data for a single host, optimized for high-volume SOC enrichment use cases. A host IP is its IP address.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-host-enrichment" method="get" path="/v3/global/asset/enrichment/host/{host_ip}" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.GetHostEnrichment(ctx, operations.V3GlobaldataAssetHostEnrichmentRequest{
+        HostIP: "8.8.8.8",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeHostEnrichmentAsset != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                                  | :heavy_check_mark:                                                                                                     | The context to use for the request.                                                                                    |
+| `request`                                                                                                              | [operations.V3GlobaldataAssetHostEnrichmentRequest](../../models/operations/v3globaldataassethostenrichmentrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `opts`                                                                                                                 | [][operations.Option](../../models/operations/option.md)                                                               | :heavy_minus_sign:                                                                                                     | The options for this request.                                                                                          |
+
+### Response
+
+**[*operations.V3GlobaldataAssetHostEnrichmentResponse](../../models/operations/v3globaldataassethostenrichmentresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404, 409, 429       | application/problem+json      |
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
