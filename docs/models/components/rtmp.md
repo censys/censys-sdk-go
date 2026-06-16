@@ -1,0 +1,14 @@
+# Rtmp
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `Capabilities`                                                                | `*int`                                                                        | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Mode`                                                                        | `*int`                                                                        | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `PeerBandwidth`                                                               | `*int`                                                                        | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `ProtocolVersion`                                                             | `*int`                                                                        | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `ServerSoftware`                                                              | `*string`                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `Status`                                                                      | [*components.RtmpConnectStatus](../../models/components/rtmpconnectstatus.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `WindowAcknowledgementSize`                                                   | `*int`                                                                        | :heavy_minus_sign:                                                            | N/A                                                                           |

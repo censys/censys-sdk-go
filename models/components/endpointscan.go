@@ -31,6 +31,7 @@ type EndpointScan struct {
 	Banner            *string                        `json:"banner,omitempty"`
 	BannerHashSha256  *string                        `json:"banner_hash_sha256,omitempty"`
 	ChromeDevtools    *ChromeDevtools                `json:"chrome_devtools,omitempty"`
+	ClickhouseHTTP    *ClickHouseHTTP                `json:"clickhouse_http,omitempty"`
 	CobaltStrike      *CobaltStrike                  `json:"cobalt_strike,omitempty"`
 	Elasticsearch     *ElasticSearch                 `json:"elasticsearch,omitempty"`
 	EndpointType      *string                        `json:"endpoint_type,omitempty"`
@@ -58,6 +59,7 @@ type EndpointScan struct {
 	Screenshots       []Screenshot                   `json:"screenshots,omitempty"`
 	TLS               *TLS                           `json:"tls,omitempty"`
 	TransportProtocol *EndpointScanTransportProtocol `json:"transport_protocol,omitempty"`
+	Wordpress         *Wordpress                     `json:"wordpress,omitempty"`
 }
 
 func (e *EndpointScan) GetBanner() *string {
@@ -79,6 +81,13 @@ func (e *EndpointScan) GetChromeDevtools() *ChromeDevtools {
 		return nil
 	}
 	return e.ChromeDevtools
+}
+
+func (e *EndpointScan) GetClickhouseHTTP() *ClickHouseHTTP {
+	if e == nil {
+		return nil
+	}
+	return e.ClickhouseHTTP
 }
 
 func (e *EndpointScan) GetCobaltStrike() *CobaltStrike {
@@ -268,4 +277,11 @@ func (e *EndpointScan) GetTransportProtocol() *EndpointScanTransportProtocol {
 		return nil
 	}
 	return e.TransportProtocol
+}
+
+func (e *EndpointScan) GetWordpress() *Wordpress {
+	if e == nil {
+		return nil
+	}
+	return e.Wordpress
 }
