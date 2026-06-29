@@ -165,7 +165,11 @@ func main() {
 * [UpdateTag](docs/sdks/tagsandcomments/README.md#updatetag) - Update a tag
 * [ListTagAssignments](docs/sdks/tagsandcomments/README.md#listtagassignments) - List tag assignments
 * [CreateTagAssignment](docs/sdks/tagsandcomments/README.md#createtagassignment) - Create a tag assignment
+* [BulkCreateTagAssignments](docs/sdks/tagsandcomments/README.md#bulkcreatetagassignments) - Bulk create tag assignments
+* [BulkDeleteTagAssignments](docs/sdks/tagsandcomments/README.md#bulkdeletetagassignments) - Bulk delete tag assignments
 * [DeleteTagAssignment](docs/sdks/tagsandcomments/README.md#deletetagassignment) - Delete a tag assignment
+* [ListTagOperations](docs/sdks/tagsandcomments/README.md#listtagoperations) - List tag operations
+* [CancelTagOperation](docs/sdks/tagsandcomments/README.md#canceltagoperation) - Cancel a tag operation
 
 ### [ThreatHunting](docs/sdks/threathunting/README.md)
 

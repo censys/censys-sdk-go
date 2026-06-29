@@ -29,6 +29,7 @@ func (e *HTTPRedirectChainLinkTransportProtocol) IsExact() bool {
 
 type HTTPRedirectChainLink struct {
 	Hostname          *string                                 `json:"hostname,omitempty"`
+	HTTPStatus        *HTTPRedirectChainLinkHTTPStatus        `json:"http_status,omitempty"`
 	Path              *string                                 `json:"path,omitempty"`
 	Port              *int                                    `json:"port,omitempty"`
 	Reason            *string                                 `json:"reason,omitempty"`
@@ -41,6 +42,13 @@ func (h *HTTPRedirectChainLink) GetHostname() *string {
 		return nil
 	}
 	return h.Hostname
+}
+
+func (h *HTTPRedirectChainLink) GetHTTPStatus() *HTTPRedirectChainLinkHTTPStatus {
+	if h == nil {
+		return nil
+	}
+	return h.HTTPStatus
 }
 
 func (h *HTTPRedirectChainLink) GetPath() *string {
