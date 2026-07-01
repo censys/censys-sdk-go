@@ -6,6 +6,7 @@ type HostEnrichmentService struct {
 	Labels   []Label  `json:"labels,omitempty"`
 	Port     *int     `json:"port,omitempty"`
 	Protocol *string  `json:"protocol,omitempty"`
+	ScanTime *string  `json:"scan_time,omitempty"`
 	Threats  []Threat `json:"threats,omitempty"`
 }
 
@@ -28,6 +29,13 @@ func (h *HostEnrichmentService) GetProtocol() *string {
 		return nil
 	}
 	return h.Protocol
+}
+
+func (h *HostEnrichmentService) GetScanTime() *string {
+	if h == nil {
+		return nil
+	}
+	return h.ScanTime
 }
 
 func (h *HostEnrichmentService) GetThreats() []Threat {

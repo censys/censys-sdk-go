@@ -40,11 +40,15 @@ type EndpointScanState struct {
 	Graphql           *Graphql                            `json:"graphql,omitempty"`
 	Hostname          *string                             `json:"hostname,omitempty"`
 	HTTP              *HTTP                               `json:"http,omitempty"`
+	Influxdb          *Influxdb                           `json:"influxdb,omitempty"`
 	IP                *string                             `json:"ip,omitempty"`
 	IvantiAvalanche   *IvantiAvalanche                    `json:"ivanti_avalanche,omitempty"`
 	Jenkins           *Jenkins                            `json:"jenkins,omitempty"`
+	Jupyter           *Jupyter                            `json:"jupyter,omitempty"`
+	Keycloak          *Keycloak                           `json:"keycloak,omitempty"`
 	Kubernetes        *Kubernetes                         `json:"kubernetes,omitempty"`
 	Mcp               *Mcp                                `json:"mcp,omitempty"`
+	NginxProxyManager *NginxProxyManager                  `json:"nginx_proxy_manager,omitempty"`
 	Ollama            *Ollama                             `json:"ollama,omitempty"`
 	OpenDirectory     *OpenDirectory                      `json:"open_directory,omitempty"`
 	Path              *string                             `json:"path,omitempty"`
@@ -53,11 +57,14 @@ type EndpointScanState struct {
 	Pprof             *Pprof                              `json:"pprof,omitempty"`
 	Prometheus        *Prometheus                         `json:"prometheus,omitempty"`
 	PrometheusTarget  *PrometheusTarget                   `json:"prometheus_target,omitempty"`
+	ProxmoxVe         *ProxmoxVe                          `json:"proxmox_ve,omitempty"`
 	RedlionWeb        *RedlionWeb                         `json:"redlion_web,omitempty"`
 	ScadaView         *ScadaView                          `json:"scada_view,omitempty"`
 	ScanTime          *string                             `json:"scan_time,omitempty"`
 	Screenshots       []Screenshot                        `json:"screenshots,omitempty"`
+	SynologyDsm       *SynologyDsm                        `json:"synology_dsm,omitempty"`
 	TransportProtocol *EndpointScanStateTransportProtocol `json:"transport_protocol,omitempty"`
+	Vault             *Vault                              `json:"vault,omitempty"`
 	Wordpress         *Wordpress                          `json:"wordpress,omitempty"`
 }
 
@@ -145,6 +152,13 @@ func (e *EndpointScanState) GetHTTP() *HTTP {
 	return e.HTTP
 }
 
+func (e *EndpointScanState) GetInfluxdb() *Influxdb {
+	if e == nil {
+		return nil
+	}
+	return e.Influxdb
+}
+
 func (e *EndpointScanState) GetIP() *string {
 	if e == nil {
 		return nil
@@ -166,6 +180,20 @@ func (e *EndpointScanState) GetJenkins() *Jenkins {
 	return e.Jenkins
 }
 
+func (e *EndpointScanState) GetJupyter() *Jupyter {
+	if e == nil {
+		return nil
+	}
+	return e.Jupyter
+}
+
+func (e *EndpointScanState) GetKeycloak() *Keycloak {
+	if e == nil {
+		return nil
+	}
+	return e.Keycloak
+}
+
 func (e *EndpointScanState) GetKubernetes() *Kubernetes {
 	if e == nil {
 		return nil
@@ -178,6 +206,13 @@ func (e *EndpointScanState) GetMcp() *Mcp {
 		return nil
 	}
 	return e.Mcp
+}
+
+func (e *EndpointScanState) GetNginxProxyManager() *NginxProxyManager {
+	if e == nil {
+		return nil
+	}
+	return e.NginxProxyManager
 }
 
 func (e *EndpointScanState) GetOllama() *Ollama {
@@ -236,6 +271,13 @@ func (e *EndpointScanState) GetPrometheusTarget() *PrometheusTarget {
 	return e.PrometheusTarget
 }
 
+func (e *EndpointScanState) GetProxmoxVe() *ProxmoxVe {
+	if e == nil {
+		return nil
+	}
+	return e.ProxmoxVe
+}
+
 func (e *EndpointScanState) GetRedlionWeb() *RedlionWeb {
 	if e == nil {
 		return nil
@@ -264,11 +306,25 @@ func (e *EndpointScanState) GetScreenshots() []Screenshot {
 	return e.Screenshots
 }
 
+func (e *EndpointScanState) GetSynologyDsm() *SynologyDsm {
+	if e == nil {
+		return nil
+	}
+	return e.SynologyDsm
+}
+
 func (e *EndpointScanState) GetTransportProtocol() *EndpointScanStateTransportProtocol {
 	if e == nil {
 		return nil
 	}
 	return e.TransportProtocol
+}
+
+func (e *EndpointScanState) GetVault() *Vault {
+	if e == nil {
+		return nil
+	}
+	return e.Vault
 }
 
 func (e *EndpointScanState) GetWordpress() *Wordpress {
