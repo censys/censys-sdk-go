@@ -53,6 +53,7 @@ type Service struct {
 	Darkgate                 *Darkgate                 `json:"darkgate,omitempty"`
 	Dcerpc                   *Dcerpc                   `json:"dcerpc,omitempty"`
 	Dhcpdiscover             *Dhcpdiscover             `json:"dhcpdiscover,omitempty"`
+	Dicom                    *Dicom                    `json:"dicom,omitempty"`
 	Dnp3                     *Dnp3                     `json:"dnp3,omitempty"`
 	DNS                      *DNS                      `json:"dns,omitempty"`
 	Dtls                     *Dtls                     `json:"dtls,omitempty"`
@@ -64,6 +65,7 @@ type Service struct {
 	Etcd                     *Etcd                     `json:"etcd,omitempty"`
 	Ethereum                 *Ethereum                 `json:"ethereum,omitempty"`
 	Exposures                []Risk                    `json:"exposures,omitempty"`
+	Fins                     *Fins                     `json:"fins,omitempty"`
 	FlashSocketPolicy        *FlashSocketPolicy        `json:"flash_socket_policy,omitempty"`
 	Fox                      *Fox                      `json:"fox,omitempty"`
 	Frps                     *Frps                     `json:"frps,omitempty"`
@@ -77,6 +79,7 @@ type Service struct {
 	Hikvision                *Hikvision                `json:"hikvision,omitempty"`
 	Ibmnje                   *Ibmnje                   `json:"ibmnje,omitempty"`
 	Icap                     *Icap                     `json:"icap,omitempty"`
+	Iec608705104             *Iec608705104             `json:"iec60870_5_104,omitempty"`
 	Ike                      *Ike                      `json:"ike,omitempty"`
 	Imap                     *Imap                     `json:"imap,omitempty"`
 	Iota                     *Iota                     `json:"iota,omitempty"`
@@ -86,6 +89,7 @@ type Service struct {
 	Iscsi                    *Iscsi                    `json:"iscsi,omitempty"`
 	Ja4tscan                 *Ja4TScanScan             `json:"ja4tscan,omitempty"`
 	Jarm                     *JarmScan                 `json:"jarm,omitempty"`
+	JavaRmi                  *JavaRmi                  `json:"java_rmi,omitempty"`
 	Krpc                     *Krpc                     `json:"krpc,omitempty"`
 	L2tp                     *L2Tp                     `json:"l2tp,omitempty"`
 	Labels                   []Label                   `json:"labels,omitempty"`
@@ -170,6 +174,7 @@ type Service struct {
 	Stun                     *Stun                     `json:"stun,omitempty"`
 	Synergy                  *Synergy                  `json:"synergy,omitempty"`
 	TacacsPlus               *TacacsPlus               `json:"tacacs_plus,omitempty"`
+	Tarantool                *Tarantool                `json:"tarantool,omitempty"`
 	TeamViewer               *TeamViewer               `json:"team_viewer,omitempty"`
 	Telnet                   *Telnet                   `json:"telnet,omitempty"`
 	Threats                  []Threat                  `json:"threats,omitempty"`
@@ -365,6 +370,13 @@ func (s *Service) GetDhcpdiscover() *Dhcpdiscover {
 	return s.Dhcpdiscover
 }
 
+func (s *Service) GetDicom() *Dicom {
+	if s == nil {
+		return nil
+	}
+	return s.Dicom
+}
+
 func (s *Service) GetDnp3() *Dnp3 {
 	if s == nil {
 		return nil
@@ -440,6 +452,13 @@ func (s *Service) GetExposures() []Risk {
 		return nil
 	}
 	return s.Exposures
+}
+
+func (s *Service) GetFins() *Fins {
+	if s == nil {
+		return nil
+	}
+	return s.Fins
 }
 
 func (s *Service) GetFlashSocketPolicy() *FlashSocketPolicy {
@@ -533,6 +552,13 @@ func (s *Service) GetIcap() *Icap {
 	return s.Icap
 }
 
+func (s *Service) GetIec608705104() *Iec608705104 {
+	if s == nil {
+		return nil
+	}
+	return s.Iec608705104
+}
+
 func (s *Service) GetIke() *Ike {
 	if s == nil {
 		return nil
@@ -594,6 +620,13 @@ func (s *Service) GetJarm() *JarmScan {
 		return nil
 	}
 	return s.Jarm
+}
+
+func (s *Service) GetJavaRmi() *JavaRmi {
+	if s == nil {
+		return nil
+	}
+	return s.JavaRmi
 }
 
 func (s *Service) GetKrpc() *Krpc {
@@ -1182,6 +1215,13 @@ func (s *Service) GetTacacsPlus() *TacacsPlus {
 		return nil
 	}
 	return s.TacacsPlus
+}
+
+func (s *Service) GetTarantool() *Tarantool {
+	if s == nil {
+		return nil
+	}
+	return s.Tarantool
 }
 
 func (s *Service) GetTeamViewer() *TeamViewer {

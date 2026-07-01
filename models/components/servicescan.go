@@ -50,6 +50,7 @@ type ServiceScan struct {
 	Darkgate                 *Darkgate                     `json:"darkgate,omitempty"`
 	Dcerpc                   *Dcerpc                       `json:"dcerpc,omitempty"`
 	Dhcpdiscover             *Dhcpdiscover                 `json:"dhcpdiscover,omitempty"`
+	Dicom                    *Dicom                        `json:"dicom,omitempty"`
 	Dnp3                     *Dnp3                         `json:"dnp3,omitempty"`
 	DNS                      *DNS                          `json:"dns,omitempty"`
 	Dtls                     *Dtls                         `json:"dtls,omitempty"`
@@ -59,6 +60,7 @@ type ServiceScan struct {
 	Epmd                     *Epmd                         `json:"epmd,omitempty"`
 	Etcd                     *Etcd                         `json:"etcd,omitempty"`
 	Ethereum                 *Ethereum                     `json:"ethereum,omitempty"`
+	Fins                     *Fins                         `json:"fins,omitempty"`
 	FlashSocketPolicy        *FlashSocketPolicy            `json:"flash_socket_policy,omitempty"`
 	Fox                      *Fox                          `json:"fox,omitempty"`
 	Frps                     *Frps                         `json:"frps,omitempty"`
@@ -71,6 +73,7 @@ type ServiceScan struct {
 	Hikvision                *Hikvision                    `json:"hikvision,omitempty"`
 	Ibmnje                   *Ibmnje                       `json:"ibmnje,omitempty"`
 	Icap                     *Icap                         `json:"icap,omitempty"`
+	Iec608705104             *Iec608705104                 `json:"iec60870_5_104,omitempty"`
 	Ike                      *Ike                          `json:"ike,omitempty"`
 	Imap                     *Imap                         `json:"imap,omitempty"`
 	Iota                     *Iota                         `json:"iota,omitempty"`
@@ -79,6 +82,7 @@ type ServiceScan struct {
 	Ipp                      *Ipp                          `json:"ipp,omitempty"`
 	IsSuccess                *bool                         `json:"is_success,omitempty"`
 	Iscsi                    *Iscsi                        `json:"iscsi,omitempty"`
+	JavaRmi                  *JavaRmi                      `json:"java_rmi,omitempty"`
 	Krpc                     *Krpc                         `json:"krpc,omitempty"`
 	L2tp                     *L2Tp                         `json:"l2tp,omitempty"`
 	Ldap                     *Ldap                         `json:"ldap,omitempty"`
@@ -159,6 +163,7 @@ type ServiceScan struct {
 	Stun                     *Stun                         `json:"stun,omitempty"`
 	Synergy                  *Synergy                      `json:"synergy,omitempty"`
 	TacacsPlus               *TacacsPlus                   `json:"tacacs_plus,omitempty"`
+	Tarantool                *Tarantool                    `json:"tarantool,omitempty"`
 	TeamViewer               *TeamViewer                   `json:"team_viewer,omitempty"`
 	Telnet                   *Telnet                       `json:"telnet,omitempty"`
 	Tibia                    *Tibia                        `json:"tibia,omitempty"`
@@ -331,6 +336,13 @@ func (s *ServiceScan) GetDhcpdiscover() *Dhcpdiscover {
 	return s.Dhcpdiscover
 }
 
+func (s *ServiceScan) GetDicom() *Dicom {
+	if s == nil {
+		return nil
+	}
+	return s.Dicom
+}
+
 func (s *ServiceScan) GetDnp3() *Dnp3 {
 	if s == nil {
 		return nil
@@ -392,6 +404,13 @@ func (s *ServiceScan) GetEthereum() *Ethereum {
 		return nil
 	}
 	return s.Ethereum
+}
+
+func (s *ServiceScan) GetFins() *Fins {
+	if s == nil {
+		return nil
+	}
+	return s.Fins
 }
 
 func (s *ServiceScan) GetFlashSocketPolicy() *FlashSocketPolicy {
@@ -478,6 +497,13 @@ func (s *ServiceScan) GetIcap() *Icap {
 	return s.Icap
 }
 
+func (s *ServiceScan) GetIec608705104() *Iec608705104 {
+	if s == nil {
+		return nil
+	}
+	return s.Iec608705104
+}
+
 func (s *ServiceScan) GetIke() *Ike {
 	if s == nil {
 		return nil
@@ -532,6 +558,13 @@ func (s *ServiceScan) GetIscsi() *Iscsi {
 		return nil
 	}
 	return s.Iscsi
+}
+
+func (s *ServiceScan) GetJavaRmi() *JavaRmi {
+	if s == nil {
+		return nil
+	}
+	return s.JavaRmi
 }
 
 func (s *ServiceScan) GetKrpc() *Krpc {
@@ -1092,6 +1125,13 @@ func (s *ServiceScan) GetTacacsPlus() *TacacsPlus {
 		return nil
 	}
 	return s.TacacsPlus
+}
+
+func (s *ServiceScan) GetTarantool() *Tarantool {
+	if s == nil {
+		return nil
+	}
+	return s.Tarantool
 }
 
 func (s *ServiceScan) GetTeamViewer() *TeamViewer {
