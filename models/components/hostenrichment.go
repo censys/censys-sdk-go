@@ -3,11 +3,12 @@
 package components
 
 type HostEnrichment struct {
-	AutonomousSystem *Routing  `json:"autonomous_system,omitempty"`
-	DNS              *HostDNS  `json:"dns,omitempty"`
-	IP               *string   `json:"ip,omitempty"`
-	Labels           []Label   `json:"labels,omitempty"`
-	Location         *Location `json:"location,omitempty"`
+	AutonomousSystem *Routing                 `json:"autonomous_system,omitempty"`
+	DNS              *HostDNS                 `json:"dns,omitempty"`
+	Greynoise        *HostEnrichmentGreynoise `json:"greynoise,omitempty"`
+	IP               *string                  `json:"ip,omitempty"`
+	Labels           []Label                  `json:"labels,omitempty"`
+	Location         *Location                `json:"location,omitempty"`
 	// Information about what type of network the host belongs to.
 	Network []NetworkClassification `json:"network,omitempty"`
 	// Information about privacy services used by the IP, such as VPNs, Proxies, or Tor.
@@ -31,6 +32,13 @@ func (h *HostEnrichment) GetDNS() *HostDNS {
 		return nil
 	}
 	return h.DNS
+}
+
+func (h *HostEnrichment) GetGreynoise() *HostEnrichmentGreynoise {
+	if h == nil {
+		return nil
+	}
+	return h.Greynoise
 }
 
 func (h *HostEnrichment) GetIP() *string {

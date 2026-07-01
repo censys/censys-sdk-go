@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 7071e0a8267fbc3a003f778098de9754
-  docVersion: 1.0.113
+  docChecksum: f6ae0f61affe5a7c38091ba27a08e3e9
+  docVersion: 1.0.114
   speakeasyVersion: 1.787.0
   generationVersion: 2.914.0
-  releaseVersion: 0.25.23
-  configChecksum: 84fad368c72c53bbcc845d4edb817f7a
+  releaseVersion: 0.25.24
+  configChecksum: c41f917492812b6d6018713ec33e0d1b
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: f84bf196-39bf-4ea4-9861-9137c17a5849
-  pristine_commit_hash: 1d60af893d9f7246f6b4e784f4e0158b12edbf5f
-  pristine_tree_hash: 1c8001495e0b39880968248187c1ed8c9da3054f
+  generation_id: 6183f681-79c8-4e29-8cbd-339325a6a812
+  pristine_commit_hash: 7b597b70ca6d866c6b8a6c2283f50cb7eb6f48d3
+  pristine_tree_hash: 089ea34072927c8c6dabbd2add5fda8a5d0fc214
 features:
   go:
     acceptHeaders: 2.81.2
@@ -1011,12 +1011,16 @@ trackedFiles:
     pristine_git_object: aca84d35063714520cc3aea1f1699ae5c6ae1114
   docs/models/components/hostenrichment.md:
     id: 6fb6117ff95c
-    last_write_checksum: sha1:1942774d6993d093e40c301d988b8557593a83d3
-    pristine_git_object: 9b7f95d3fcd9d8c2f6780116d708e8e5cf4f6971
+    last_write_checksum: sha1:09f235ad0b66fe8f2ce7bcf6449fc7c636d22237
+    pristine_git_object: e17eb20f324daf52296e9307c7c3c04f5658e9a0
   docs/models/components/hostenrichmentasset.md:
     id: 37686b5ea9f8
     last_write_checksum: sha1:d121480370f2fde92622d4ec6d5e25eb60f066a0
     pristine_git_object: 30c1a2ec1df8041d073032fa0605bf9794da9e5f
+  docs/models/components/hostenrichmentgreynoise.md:
+    id: 8eab7f792c1f
+    last_write_checksum: sha1:b2d9f59a657b109c8c074f1368c1e3873b3cfbc1
+    pristine_git_object: 1463c456b09c6026578f18e46dd4b3e5142ed4f3
   docs/models/components/hostenrichmentservice.md:
     id: c6fe01276b9b
     last_write_checksum: sha1:b5eb60ec588157a4bc7277df25f1dcffe674dbff
@@ -4879,12 +4883,16 @@ trackedFiles:
     pristine_git_object: 5a194a60fa231bb1c51728f1bff31a772b817b21
   models/components/hostenrichment.go:
     id: 8008f401dcae
-    last_write_checksum: sha1:3cf4593b58c97fdca10b18962ecefc40482edc15
-    pristine_git_object: c408a2d6e80afe6f0e067f2336cbb7f65825dcc2
+    last_write_checksum: sha1:fca5cab876de12c0d7d6ae7adfa1deeb0d84dcbb
+    pristine_git_object: d1efc8b3f75d4e01a19da3c7fa8861b301ecd8e0
   models/components/hostenrichmentasset.go:
     id: 9325b5f126bd
     last_write_checksum: sha1:7d760287bc09ac601b4df468d4b33e4e25b34e55
     pristine_git_object: f0d37b0c3770ca69f7ec7b2857a2a7b28f67fae2
+  models/components/hostenrichmentgreynoise.go:
+    id: ea05e0a1c8e2
+    last_write_checksum: sha1:eb6498a5a0a5776e223793c4f990d41317dec83f
+    pristine_git_object: 6700c4202f2e3cae12b0cdf1fd83704f3a41da5f
   models/components/hostenrichmentservice.go:
     id: d2a67ca333fd
     last_write_checksum: sha1:3d688c8d9d79ad72497813157a78973aa3b7e368
@@ -7023,8 +7031,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:999b23fa92425cff3295782cfe138ad951883248
-    pristine_git_object: f9e05b1944ff0e17f779086a7fe94c6fda97ff10
+    last_write_checksum: sha1:fc4dab6e31d2b508338822eb28f260df9856cedd
+    pristine_git_object: 117c862d8b137f8c6ebb642dcf6b24f1ab2d2355
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:68f0b3444704d764377b1887d00afe2c0ea37cfe
