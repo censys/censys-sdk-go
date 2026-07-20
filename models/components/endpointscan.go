@@ -28,6 +28,7 @@ func (e *EndpointScanTransportProtocol) IsExact() bool {
 }
 
 type EndpointScan struct {
+	Argocd            *Argocd                        `json:"argocd,omitempty"`
 	Banner            *string                        `json:"banner,omitempty"`
 	BannerHashSha256  *string                        `json:"banner_hash_sha256,omitempty"`
 	ChromeDevtools    *ChromeDevtools                `json:"chrome_devtools,omitempty"`
@@ -67,6 +68,13 @@ type EndpointScan struct {
 	TransportProtocol *EndpointScanTransportProtocol `json:"transport_protocol,omitempty"`
 	Vault             *Vault                         `json:"vault,omitempty"`
 	Wordpress         *Wordpress                     `json:"wordpress,omitempty"`
+}
+
+func (e *EndpointScan) GetArgocd() *Argocd {
+	if e == nil {
+		return nil
+	}
+	return e.Argocd
 }
 
 func (e *EndpointScan) GetBanner() *string {
