@@ -1,0 +1,10 @@
+# Argocd
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `AnonymousExposure`                                                                       | [*components.ArgocdAnonymousExposure](../../models/components/argocdanonymousexposure.md) | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Settings`                                                                                | [*components.ArgocdSettings](../../models/components/argocdsettings.md)                   | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `Version`                                                                                 | `*string`                                                                                 | :heavy_minus_sign:                                                                        | N/A                                                                                       |
