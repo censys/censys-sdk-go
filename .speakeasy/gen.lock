@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: f6ae0f61affe5a7c38091ba27a08e3e9
-  docVersion: 1.0.114
-  speakeasyVersion: 1.787.0
-  generationVersion: 2.914.0
-  releaseVersion: 0.25.24
-  configChecksum: c41f917492812b6d6018713ec33e0d1b
+  docChecksum: 4b161c058218b143babf1eac48e80b04
+  docVersion: 1.0.122
+  speakeasyVersion: 1.790.3
+  generationVersion: 2.918.4
+  releaseVersion: 0.25.25
+  configChecksum: 76177bc12fc6867abb12f6cdaf29b584
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: 6183f681-79c8-4e29-8cbd-339325a6a812
-  pristine_commit_hash: 7b597b70ca6d866c6b8a6c2283f50cb7eb6f48d3
-  pristine_tree_hash: 089ea34072927c8c6dabbd2add5fda8a5d0fc214
+  generation_id: 3fc58cd1-fa14-4952-af8d-3ed482ae3931
+  pristine_commit_hash: 181f7b8bc175645e2ef5212369c6ea82c26cd6d1
+  pristine_tree_hash: 5adeb087720c2b36a420c0f192581b4131e97ecf
 features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.14
-    core: 3.13.46
+    core: 3.13.47
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -89,6 +89,22 @@ trackedFiles:
     id: c379a3260d9c
     last_write_checksum: sha1:3e1e3cda31654bcf6fc9c1192af08391d26d3683
     pristine_git_object: a28678621f03049e6244ed06c38e182ee80ddfcd
+  docs/models/components/argocd.md:
+    id: "342563238380"
+    last_write_checksum: sha1:09c5102fd6133c665cc0639c44db1d3c1732a44d
+    pristine_git_object: 5a9b7b2b8819d9f7a75fbc4b2a7632c42cd47463
+  docs/models/components/argocdanonymousexposure.md:
+    id: f0eaf46a7bf0
+    last_write_checksum: sha1:dd85fba9f4df250ad668891dcd4bbcdb38e700ad
+    pristine_git_object: f52d63ecde16d53f947cd852c6dcd72ea9698023
+  docs/models/components/argocdsettings.md:
+    id: bc08d59cd99b
+    last_write_checksum: sha1:13643bd3cff8bc076a3d61688b2954e0371fb99f
+    pristine_git_object: 3ae3baf479b6e9e57230207031e115246d295179
+  docs/models/components/argocdsettingsoidcconfig.md:
+    id: adf8512088f5
+    last_write_checksum: sha1:acf268a4adf3c118947a193dd501b6d1fdae8189
+    pristine_git_object: d9a6db1fdafc836c7055362e88efc0b683e11ee9
   docs/models/components/assetcertificatelistinputbody.md:
     id: 714e892ebd79
     last_write_checksum: sha1:72cf53a0d4eac83ea50b34c9f365468846c4f925
@@ -783,16 +799,16 @@ trackedFiles:
     pristine_git_object: 0ca6f86338344ae36348c97cc83247957f04426b
   docs/models/components/endpointscan.md:
     id: e3135a15e37c
-    last_write_checksum: sha1:b1f51efc905366b363c4196d83c3c0bd30b1687f
-    pristine_git_object: d8198a5da80cd833727b4182d1356b15852da9ae
+    last_write_checksum: sha1:29660b7abac586b8561df2bfcde685e00109b089
+    pristine_git_object: e3fd1b947f074b47f840d0ca318b43b3725e0133
   docs/models/components/endpointscanned.md:
     id: ba3048835780
     last_write_checksum: sha1:2a45fa61adf0fbff6769ac14fa61102eeebbb6a8
     pristine_git_object: aaccffac7f582c9df04f93d05a7a82a840996d8c
   docs/models/components/endpointscanstate.md:
     id: 87edb025fe52
-    last_write_checksum: sha1:2e23b5331baac4f3db3956b9f52ca636e0f960f0
-    pristine_git_object: 6da95ecf795ff0df4f839595319e55f7ec009be9
+    last_write_checksum: sha1:7802003095b08bd615f0fa2f32770e7ffba03751
+    pristine_git_object: 26256309532a2d3c37853ac7c3be3ec256ab07f1
   docs/models/components/endpointscanstatetransportprotocol.md:
     id: 66c87333c836
     last_write_checksum: sha1:3b280d66bcdea9366663ee2e334e9a8794e143e6
@@ -3947,8 +3963,8 @@ trackedFiles:
     pristine_git_object: de4d10eae2763ac9e231934f3a5f1f6c18ae8c1b
   docs/sdks/globaldata/README.md:
     id: 0c68886632e6
-    last_write_checksum: sha1:b687f9665a2a37bcad44ef22043bc7663c725d90
-    pristine_git_object: cbaeefe8ebb1a0a45081c88c8d4efa027675113b
+    last_write_checksum: sha1:15cbd5af1ff8d354f5e5998002cc53552f662f47
+    pristine_git_object: 2dd58b566e84bacb9212ffdd493ddd4143138a2d
   docs/sdks/tagsandcomments/README.md:
     id: 092d693513d0
     last_write_checksum: sha1:e2cae975c129ea926cb082c8e0c47a7f9e71ca48
@@ -3963,8 +3979,8 @@ trackedFiles:
     pristine_git_object: 3d83ed2f48ff36968042694693ec08d892ef94fe
   globaldata.go:
     id: 38738078d830
-    last_write_checksum: sha1:bc49cd27959e059827218f2f2cbd7e3043888a2d
-    pristine_git_object: df5bdfb057609b8a92d59e4f1c3cbd4f28fb0c0b
+    last_write_checksum: sha1:03ee2d7aa44f9bd2076cdda53ea9d7e13f216f5c
+    pristine_git_object: 42a5273e537e75de6a7cdc6cf1b257a4741c0096
   go.mod:
     id: c47645c391ad
     last_write_checksum: sha1:cb7ecae19a1588d0840bd55b12a54f2150c79ae9
@@ -4065,6 +4081,22 @@ trackedFiles:
     id: f47358c7e10e
     last_write_checksum: sha1:1796010f4f08ef85942c233fa45ebcc3e5f47f55
     pristine_git_object: 32a1826597a4a6a2911aa0f08000b36cf123da74
+  models/components/argocd.go:
+    id: dbd7c81868b2
+    last_write_checksum: sha1:28b33adab979e2c3f9f56eec3133ab6cbac828b6
+    pristine_git_object: f80dc14a76dbf7d7eb42a96151cd8d0088f79ac6
+  models/components/argocdanonymousexposure.go:
+    id: b4bdbb649e8d
+    last_write_checksum: sha1:3ffa208595c3b0ee011d5375f307c261b82176fb
+    pristine_git_object: d162f2d8d7372aa654a24e85429f64e1fdfe5446
+  models/components/argocdsettings.go:
+    id: 510139af447f
+    last_write_checksum: sha1:218be26c932cfab6937f1c6dd15cc1789b70ab3c
+    pristine_git_object: f14e45c3ef5de7fc279e4048bceea038d79109ac
+  models/components/argocdsettingsoidcconfig.go:
+    id: ee463d7b9046
+    last_write_checksum: sha1:64729f437eed581a7f57ed4752affa86afe8eb1b
+    pristine_git_object: db799b77d83387e7af62370aa68ca1bb32750c06
   models/components/assetcertificatelistinputbody.go:
     id: d557f6852645
     last_write_checksum: sha1:32e3700d5971f098a33b05690b484d8d1907b2a8
@@ -4667,16 +4699,16 @@ trackedFiles:
     pristine_git_object: 8b06d3d2bf849bc8cd049ddb79f05c2f533be8c1
   models/components/endpointscan.go:
     id: bbd8593602ce
-    last_write_checksum: sha1:080beb3bb276ee4f9cdc5515f94017661368a86d
-    pristine_git_object: 1fcaed2c628444dfee36cb43087acdefb0bb5f21
+    last_write_checksum: sha1:79b4f27f9a7fd98e174eabd9c0a4798bb959585e
+    pristine_git_object: ee971386c39b3372e2fa58b3959ebe5c6047ae01
   models/components/endpointscanned.go:
     id: da1056cda1c2
     last_write_checksum: sha1:e779aefe58661ad24c46277a1d07d966743ba59e
     pristine_git_object: 518194a48f71137b5dadd88735378e04f6eaf98e
   models/components/endpointscanstate.go:
     id: 71d59822242e
-    last_write_checksum: sha1:0268040350cd21d5fd85df9d7621a55db49a3c85
-    pristine_git_object: 441ca67a8107ca48c863ab11db87f8227b4336c1
+    last_write_checksum: sha1:aac819cb1b6a36c2aad461de6e1b3fc2c6c5e5bb
+    pristine_git_object: d3152a4ceb9b26b7c9e6f8fdaa85e2cb2312fdbd
   models/components/epmd.go:
     id: 1162956ada73
     last_write_checksum: sha1:b9efebec78c5d969c606896d255f6e15e7df3863
@@ -7031,8 +7063,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:fc4dab6e31d2b508338822eb28f260df9856cedd
-    pristine_git_object: 117c862d8b137f8c6ebb642dcf6b24f1ab2d2355
+    last_write_checksum: sha1:7fbb1bdea5738c87c818384420bc8b161b4caa58
+    pristine_git_object: cd3f61db29f227e1666d837c44fe073be89061c9
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:68f0b3444704d764377b1887d00afe2c0ea37cfe
@@ -8176,6 +8208,8 @@ examples:
         "400":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
         "500":
+          application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
+        "429":
           application/problem+json: {"detail": "Property foo is required but is missing.", "instance": "https://example.com/error-log/abc123", "status": 400, "title": "Bad Request", "type": "https://example.com/errors/example"}
   v3-tags-bulk-create-assignments:
     speakeasy-default-v3-tags-bulk-create-assignments:
