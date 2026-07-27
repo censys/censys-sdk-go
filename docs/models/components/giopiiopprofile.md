@@ -1,0 +1,12 @@
+# GiopIiopProfile
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `Host`                                                                             | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `ObjectKeyHex`                                                                     | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Port`                                                                             | `*int`                                                                             | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `TaggedComponents`                                                                 | [][components.GiopTaggedComponent](../../models/components/gioptaggedcomponent.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `Version`                                                                          | `*string`                                                                          | :heavy_minus_sign:                                                                 | N/A                                                                                |
