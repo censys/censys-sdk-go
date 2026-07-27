@@ -21,6 +21,7 @@ Endpoints related to asset tagging and commenting
 * [BulkDeleteTagAssignments](#bulkdeletetagassignments) - Bulk delete tag assignments
 * [DeleteTagAssignment](#deletetagassignment) - Delete a tag assignment
 * [ListTagOperations](#listtagoperations) - List tag operations
+* [GetTagOperation](#gettagoperation) - Get a tag operation
 * [CancelTagOperation](#canceltagoperation) - Cancel a tag operation
 
 ## ListComments
@@ -912,6 +913,65 @@ func main() {
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
 | sdkerrors.ErrorModel          | 403, 409, 422                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## GetTagOperation
+
+Retrieve a single bulk tag operation by ID, including its current status and progress counts. Use this to poll the status of an operation started by the bulk-create or bulk-delete endpoints.<br><br>This endpoint does not cost any credits to execute.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-tags-get-operation" method="get" path="/v3/tags/{tag_id}/operations/{operation_id}" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.TagsAndComments.GetTagOperation(ctx, operations.V3TagsGetOperationRequest{
+        TagID: "7fd3732a-0f74-46ae-9b99-cf8d471365c7",
+        OperationID: "1d645480-2c36-4fbe-b3ee-eabcaa515ece",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeTagOperation != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
+| `request`                                                                                    | [operations.V3TagsGetOperationRequest](../../models/operations/v3tagsgetoperationrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+| `opts`                                                                                       | [][operations.Option](../../models/operations/option.md)                                     | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
+
+### Response
+
+**[*operations.V3TagsGetOperationResponse](../../models/operations/v3tagsgetoperationresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 403, 404, 409, 422            | application/problem+json      |
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 

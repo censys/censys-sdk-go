@@ -42,6 +42,7 @@ type ServiceScan struct {
 	ClickhouseNative         *ClickHouseNative             `json:"clickhouse_native,omitempty"`
 	Cmore                    *Cmore                        `json:"cmore,omitempty"`
 	Coap                     *Coap                         `json:"coap,omitempty"`
+	CortexXdrP2p             *CortexXdrP2P                 `json:"cortex_xdr_p2p,omitempty"`
 	CrestronCp3              *CrestronCp3                  `json:"crestron_cp3,omitempty"`
 	CrestronDinAp2           *CrestronDinAp2               `json:"crestron_din_ap2,omitempty"`
 	CursorOnTarget           *CursorOnTarget               `json:"cursor_on_target,omitempty"`
@@ -49,13 +50,16 @@ type ServiceScan struct {
 	Darkcomet                *Darkcomet                    `json:"darkcomet,omitempty"`
 	Darkgate                 *Darkgate                     `json:"darkgate,omitempty"`
 	Dcerpc                   *Dcerpc                       `json:"dcerpc,omitempty"`
+	DenonHeos                *DenonHeos                    `json:"denon_heos,omitempty"`
 	Dhcpdiscover             *Dhcpdiscover                 `json:"dhcpdiscover,omitempty"`
 	Dicom                    *Dicom                        `json:"dicom,omitempty"`
 	Dnp3                     *Dnp3                         `json:"dnp3,omitempty"`
 	DNS                      *DNS                          `json:"dns,omitempty"`
+	DotnetNegotiateStream    *DotnetNegotiateStream        `json:"dotnet_negotiate_stream,omitempty"`
 	Dtls                     *Dtls                         `json:"dtls,omitempty"`
 	DvrIP                    *DvrIP                        `json:"dvr_ip,omitempty"`
 	Eip                      *Eip                          `json:"eip,omitempty"`
+	ElasticsearchTransport   *ElasticsearchTransport       `json:"elasticsearch_transport,omitempty"`
 	ElfFile                  *ElfFile                      `json:"elf_file,omitempty"`
 	Epmd                     *Epmd                         `json:"epmd,omitempty"`
 	Etcd                     *Etcd                         `json:"etcd,omitempty"`
@@ -67,6 +71,7 @@ type ServiceScan struct {
 	Ftp                      *Ftp                          `json:"ftp,omitempty"`
 	Gearman                  *Gearman                      `json:"gearman,omitempty"`
 	Gemini                   *Gemini                       `json:"gemini,omitempty"`
+	Giop                     *Giop                         `json:"giop,omitempty"`
 	Gopher                   *Gopher                       `json:"gopher,omitempty"`
 	Hajime                   *Hajime                       `json:"hajime,omitempty"`
 	HidVertx                 *HidVertx                     `json:"hid_vertx,omitempty"`
@@ -81,8 +86,10 @@ type ServiceScan struct {
 	Ipmi                     *Ipmi                         `json:"ipmi,omitempty"`
 	Ipp                      *Ipp                          `json:"ipp,omitempty"`
 	IsSuccess                *bool                         `json:"is_success,omitempty"`
+	IscDhcpOmapi             *IscDhcpOmapi                 `json:"isc_dhcp_omapi,omitempty"`
 	Iscsi                    *Iscsi                        `json:"iscsi,omitempty"`
 	JavaRmi                  *JavaRmi                      `json:"java_rmi,omitempty"`
+	KcodesNetusb             *KcodesNetusb                 `json:"kcodes_netusb,omitempty"`
 	Krpc                     *Krpc                         `json:"krpc,omitempty"`
 	L2tp                     *L2Tp                         `json:"l2tp,omitempty"`
 	Ldap                     *Ldap                         `json:"ldap,omitempty"`
@@ -102,6 +109,7 @@ type ServiceScan struct {
 	Mssql                    *Mssql                        `json:"mssql,omitempty"`
 	Murmur                   *Murmur                       `json:"murmur,omitempty"`
 	Mysql                    *Mysql                        `json:"mysql,omitempty"`
+	Mysqlx                   *Mysqlx                       `json:"mysqlx,omitempty"`
 	NatsIo                   *NatsIo                       `json:"nats_io,omitempty"`
 	Nbd                      *Nbd                          `json:"nbd,omitempty"`
 	NfsMountd                *NfsMountd                    `json:"nfs_mountd,omitempty"`
@@ -116,6 +124,7 @@ type ServiceScan struct {
 	OpenvpnMgmt              *OpenvpnMgmt                  `json:"openvpn_mgmt,omitempty"`
 	Oracle                   *Oracle                       `json:"oracle,omitempty"`
 	PcAnywhere               *PcAnywhere                   `json:"pc_anywhere,omitempty"`
+	PerforceP4d              *PerforceP4D                  `json:"perforce_p4d,omitempty"`
 	Pgbouncer                *Pgbouncer                    `json:"pgbouncer,omitempty"`
 	Pop3                     *Pop3                         `json:"pop3,omitempty"`
 	Port                     *int                          `json:"port,omitempty"`
@@ -124,6 +133,8 @@ type ServiceScan struct {
 	Pptp                     *Pptp                         `json:"pptp,omitempty"`
 	ProfinetCm               *ProfinetCm                   `json:"profinet_cm,omitempty"`
 	Protocol                 *string                       `json:"protocol,omitempty"`
+	QdrantGrpc               *QdrantGrpc                   `json:"qdrant_grpc,omitempty"`
+	R1softBuagent            *R1SoftBuagent                `json:"r1soft_buagent,omitempty"`
 	Rdate                    *Rdate                        `json:"rdate,omitempty"`
 	Rdp                      *Rdp                          `json:"rdp,omitempty"`
 	Realport                 *Realport                     `json:"realport,omitempty"`
@@ -161,15 +172,18 @@ type ServiceScan struct {
 	SSH                      *SSH                          `json:"ssh,omitempty"`
 	Steam                    *Steam                        `json:"steam,omitempty"`
 	Stun                     *Stun                         `json:"stun,omitempty"`
+	SyncthingBep             *SyncthingBep                 `json:"syncthing_bep,omitempty"`
 	Synergy                  *Synergy                      `json:"synergy,omitempty"`
 	TacacsPlus               *TacacsPlus                   `json:"tacacs_plus,omitempty"`
 	Tarantool                *Tarantool                    `json:"tarantool,omitempty"`
 	TeamViewer               *TeamViewer                   `json:"team_viewer,omitempty"`
+	TelexperTlxp             *TelexperTlxp                 `json:"telexper_tlxp,omitempty"`
 	Telnet                   *Telnet                       `json:"telnet,omitempty"`
 	Tibia                    *Tibia                        `json:"tibia,omitempty"`
 	TLS                      *TLS                          `json:"tls,omitempty"`
 	TplinkKasa               *TplinkKasa                   `json:"tplink_kasa,omitempty"`
 	TransportProtocol        *ServiceScanTransportProtocol `json:"transport_protocol,omitempty"`
+	TwampControl             *TwampControl                 `json:"twamp_control,omitempty"`
 	UnitronicsPcom           *UnitronicsPcom               `json:"unitronics_pcom,omitempty"`
 	Upnp                     *Upnp                         `json:"upnp,omitempty"`
 	Ventrilo                 *Ventrilo                     `json:"ventrilo,omitempty"`
@@ -280,6 +294,13 @@ func (s *ServiceScan) GetCoap() *Coap {
 	return s.Coap
 }
 
+func (s *ServiceScan) GetCortexXdrP2p() *CortexXdrP2P {
+	if s == nil {
+		return nil
+	}
+	return s.CortexXdrP2p
+}
+
 func (s *ServiceScan) GetCrestronCp3() *CrestronCp3 {
 	if s == nil {
 		return nil
@@ -329,6 +350,13 @@ func (s *ServiceScan) GetDcerpc() *Dcerpc {
 	return s.Dcerpc
 }
 
+func (s *ServiceScan) GetDenonHeos() *DenonHeos {
+	if s == nil {
+		return nil
+	}
+	return s.DenonHeos
+}
+
 func (s *ServiceScan) GetDhcpdiscover() *Dhcpdiscover {
 	if s == nil {
 		return nil
@@ -357,6 +385,13 @@ func (s *ServiceScan) GetDNS() *DNS {
 	return s.DNS
 }
 
+func (s *ServiceScan) GetDotnetNegotiateStream() *DotnetNegotiateStream {
+	if s == nil {
+		return nil
+	}
+	return s.DotnetNegotiateStream
+}
+
 func (s *ServiceScan) GetDtls() *Dtls {
 	if s == nil {
 		return nil
@@ -376,6 +411,13 @@ func (s *ServiceScan) GetEip() *Eip {
 		return nil
 	}
 	return s.Eip
+}
+
+func (s *ServiceScan) GetElasticsearchTransport() *ElasticsearchTransport {
+	if s == nil {
+		return nil
+	}
+	return s.ElasticsearchTransport
 }
 
 func (s *ServiceScan) GetElfFile() *ElfFile {
@@ -453,6 +495,13 @@ func (s *ServiceScan) GetGemini() *Gemini {
 		return nil
 	}
 	return s.Gemini
+}
+
+func (s *ServiceScan) GetGiop() *Giop {
+	if s == nil {
+		return nil
+	}
+	return s.Giop
 }
 
 func (s *ServiceScan) GetGopher() *Gopher {
@@ -553,6 +602,13 @@ func (s *ServiceScan) GetIsSuccess() *bool {
 	return s.IsSuccess
 }
 
+func (s *ServiceScan) GetIscDhcpOmapi() *IscDhcpOmapi {
+	if s == nil {
+		return nil
+	}
+	return s.IscDhcpOmapi
+}
+
 func (s *ServiceScan) GetIscsi() *Iscsi {
 	if s == nil {
 		return nil
@@ -565,6 +621,13 @@ func (s *ServiceScan) GetJavaRmi() *JavaRmi {
 		return nil
 	}
 	return s.JavaRmi
+}
+
+func (s *ServiceScan) GetKcodesNetusb() *KcodesNetusb {
+	if s == nil {
+		return nil
+	}
+	return s.KcodesNetusb
 }
 
 func (s *ServiceScan) GetKrpc() *Krpc {
@@ -700,6 +763,13 @@ func (s *ServiceScan) GetMysql() *Mysql {
 	return s.Mysql
 }
 
+func (s *ServiceScan) GetMysqlx() *Mysqlx {
+	if s == nil {
+		return nil
+	}
+	return s.Mysqlx
+}
+
 func (s *ServiceScan) GetNatsIo() *NatsIo {
 	if s == nil {
 		return nil
@@ -798,6 +868,13 @@ func (s *ServiceScan) GetPcAnywhere() *PcAnywhere {
 	return s.PcAnywhere
 }
 
+func (s *ServiceScan) GetPerforceP4d() *PerforceP4D {
+	if s == nil {
+		return nil
+	}
+	return s.PerforceP4d
+}
+
 func (s *ServiceScan) GetPgbouncer() *Pgbouncer {
 	if s == nil {
 		return nil
@@ -852,6 +929,20 @@ func (s *ServiceScan) GetProtocol() *string {
 		return nil
 	}
 	return s.Protocol
+}
+
+func (s *ServiceScan) GetQdrantGrpc() *QdrantGrpc {
+	if s == nil {
+		return nil
+	}
+	return s.QdrantGrpc
+}
+
+func (s *ServiceScan) GetR1softBuagent() *R1SoftBuagent {
+	if s == nil {
+		return nil
+	}
+	return s.R1softBuagent
 }
 
 func (s *ServiceScan) GetRdate() *Rdate {
@@ -1113,6 +1204,13 @@ func (s *ServiceScan) GetStun() *Stun {
 	return s.Stun
 }
 
+func (s *ServiceScan) GetSyncthingBep() *SyncthingBep {
+	if s == nil {
+		return nil
+	}
+	return s.SyncthingBep
+}
+
 func (s *ServiceScan) GetSynergy() *Synergy {
 	if s == nil {
 		return nil
@@ -1139,6 +1237,13 @@ func (s *ServiceScan) GetTeamViewer() *TeamViewer {
 		return nil
 	}
 	return s.TeamViewer
+}
+
+func (s *ServiceScan) GetTelexperTlxp() *TelexperTlxp {
+	if s == nil {
+		return nil
+	}
+	return s.TelexperTlxp
 }
 
 func (s *ServiceScan) GetTelnet() *Telnet {
@@ -1174,6 +1279,13 @@ func (s *ServiceScan) GetTransportProtocol() *ServiceScanTransportProtocol {
 		return nil
 	}
 	return s.TransportProtocol
+}
+
+func (s *ServiceScan) GetTwampControl() *TwampControl {
+	if s == nil {
+		return nil
+	}
+	return s.TwampControl
 }
 
 func (s *ServiceScan) GetUnitronicsPcom() *UnitronicsPcom {

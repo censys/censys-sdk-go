@@ -29,7 +29,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 go:
-  version: 0.25.25
+  version: 0.25.26
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SDKBaseError
@@ -40,6 +40,7 @@ go:
   flattenGlobalSecurity: true
   forwardCompatibleEnumsByDefault: true
   forwardCompatibleUnionsByDefault: "false"
+  idiomaticMethodCollisionNames: false
   imports:
     option: openapi
     paths:
@@ -56,10 +57,12 @@ go:
   modulePath: ""
   multipartArrayFormat: legacy
   nullableOptionalWrapper: false
+  optionalMethodArguments: pointers
   outputModelSuffix: output
   packageName: github.com/censys/censys-sdk-go
   respectRequiredFields: false
   respectTitlesForPrimitiveUnionMembers: false
   responseFormat: envelope-http
   sdkPackageName: ""
+  unionGenerics: false
   unionStrategy: populated-fields

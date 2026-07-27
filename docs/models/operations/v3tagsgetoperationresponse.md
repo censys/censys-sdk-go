@@ -1,0 +1,10 @@
+# V3TagsGetOperationResponse
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                  | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `ResponseEnvelopeTagOperation`                                                                      | [*components.ResponseEnvelopeTagOperation](../../models/components/responseenvelopetagoperation.md) | :heavy_minus_sign:                                                                                  | Tag operation retrieved successfully                                                                |
+| `Headers`                                                                                           | map[string][]`string`                                                                               | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
