@@ -142,6 +142,7 @@ func main() {
 * [GetHostTimeline](docs/sdks/globaldata/README.md#gethosttimeline) - Get host event history
 * [GetWebProperties](docs/sdks/globaldata/README.md#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](docs/sdks/globaldata/README.md#getwebproperty) - Get a web property
+* [GetWebPropertyTimeline](docs/sdks/globaldata/README.md#getwebpropertytimeline) - Get web property event history
 * [ListDNSIPResolutionBounds](docs/sdks/globaldata/README.md#listdnsipresolutionbounds) - Get DNS names that resolved to an IP (aggregated bounds)
 * [ListDNSIPResolutionRanges](docs/sdks/globaldata/README.md#listdnsipresolutionranges) - Get DNS names that resolved to an IP (ranges)
 * [ListDNSNameResolutionBounds](docs/sdks/globaldata/README.md#listdnsnameresolutionbounds) - Get DNS resolution records for a name (aggregated bounds)
