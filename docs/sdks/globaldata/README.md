@@ -17,6 +17,7 @@ Endpoints related to the Global Data product
 * [GetHostTimeline](#gethosttimeline) - Get host event history
 * [GetWebProperties](#getwebproperties) - Retrieve multiple web properties
 * [GetWebProperty](#getwebproperty) - Get a web property
+* [GetWebPropertyTimeline](#getwebpropertytimeline) - Get web property event history
 * [ListDNSIPResolutionBounds](#listdnsipresolutionbounds) - Get DNS names that resolved to an IP (aggregated bounds)
 * [ListDNSIPResolutionRanges](#listdnsipresolutionranges) - Get DNS names that resolved to an IP (ranges)
 * [ListDNSNameResolutionBounds](#listdnsnameresolutionbounds) - Get DNS resolution records for a name (aggregated bounds)
@@ -693,6 +694,67 @@ func main() {
 ### Response
 
 **[*operations.V3GlobaldataAssetWebpropertyResponse](../../models/operations/v3globaldataassetwebpropertyresponse.md), error**
+
+### Errors
+
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.AuthenticationError | 401                           | application/json              |
+| sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
+| sdkerrors.ErrorModel          | 500                           | application/problem+json      |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
+
+## GetWebPropertyTimeline
+
+Retrieve event history for a web property. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`. URL-encode the colon when used in the path (e.g. `platform.censys.io%3A80`).
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="v3-globaldata-asset-webproperty-timeline" method="get" path="/v3/global/asset/webproperty/{webproperty_id}/timeline" -->
+```go
+package main
+
+import(
+	"context"
+	censyssdkgo "github.com/censys/censys-sdk-go"
+	"github.com/censys/censys-sdk-go/types"
+	"github.com/censys/censys-sdk-go/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := censyssdkgo.New(
+        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
+    )
+
+    res, err := s.GlobalData.GetWebPropertyTimeline(ctx, operations.V3GlobaldataAssetWebpropertyTimelineRequest{
+        WebpropertyID: "platform.censys.io:80",
+        StartTime: types.MustTimeFromString("2025-01-02T00:00:00Z"),
+        EndTime: types.MustTimeFromString("2025-01-01T00:00:00Z"),
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ResponseEnvelopeWebpropertyTimeline != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                                                            | :heavy_check_mark:                                                                                                               | The context to use for the request.                                                                                              |
+| `request`                                                                                                                        | [operations.V3GlobaldataAssetWebpropertyTimelineRequest](../../models/operations/v3globaldataassetwebpropertytimelinerequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `opts`                                                                                                                           | [][operations.Option](../../models/operations/option.md)                                                                         | :heavy_minus_sign:                                                                                                               | The options for this request.                                                                                                    |
+
+### Response
+
+**[*operations.V3GlobaldataAssetWebpropertyTimelineResponse](../../models/operations/v3globaldataassetwebpropertytimelineresponse.md), error**
 
 ### Errors
 
