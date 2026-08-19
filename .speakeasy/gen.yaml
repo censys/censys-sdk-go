@@ -29,7 +29,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 go:
-  version: 0.25.27
+  version: 0.25.28
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: SDKBaseError
