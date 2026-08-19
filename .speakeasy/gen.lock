@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 675728091831dc0dbf72fdee4fb1bb47
-  docVersion: 1.0.124
-  speakeasyVersion: 1.791.1
-  generationVersion: 2.926.2
-  releaseVersion: 0.25.27
-  configChecksum: 8e32233cd40099bc2e2c16fbfb26b007
+  docChecksum: 0cd005eeb36ea8cdb1968793fd654c0b
+  docVersion: 1.0.125
+  speakeasyVersion: 1.795.0
+  generationVersion: 2.931.0
+  releaseVersion: 0.25.28
+  configChecksum: 0c0f100c229675e38fb3cedad580769e
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: 1056c3d1-632c-49ec-87ba-4b0a92c4d7d6
-  pristine_commit_hash: 3061bfd42f90350e42e49b2a67543f3078bca669
-  pristine_tree_hash: f2a66b01fe0f4db8e22be09d288260d25bf2d33e
+  generation_id: 414ac8a3-ba8b-464a-beb0-b54d814bc06b
+  pristine_commit_hash: 5d52e37d6ea77835d908fed725fe2ac85c1b506c
+  pristine_tree_hash: df7eb6f8cb718ff536de7f55ba09015e50aa030a
 features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.14
-    core: 3.13.47
+    core: 3.13.48
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.2
     envVarSecurityUsage: 0.3.2
@@ -35,7 +35,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.3
     sdkHooks: 0.3.0
-    unions: 2.87.8
+    unions: 2.87.9
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -4103,8 +4103,8 @@ trackedFiles:
     pristine_git_object: 7838b88dd4ba0ec8f94ec7efe30a540e8fb97c77
   go.mod:
     id: c47645c391ad
-    last_write_checksum: sha1:cb7ecae19a1588d0840bd55b12a54f2150c79ae9
-    pristine_git_object: e5601e6eacf8a8fb284b5e94b7b558172d4b4fb9
+    last_write_checksum: sha1:69bca1b265a309290c0b78b3781054c47e01036a
+    pristine_git_object: 5123016535e2c5f5895437e245dc3d93dd5bd7f7
   internal/config/sdkconfiguration.go:
     id: 33b8bfac5265
     last_write_checksum: sha1:af80bb9e2deb41dbff7e1e519bf2e309dc15c6a0
@@ -7287,8 +7287,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:f5c2eac3d20a31abd1e3f9372dc085b8cf5465a9
-    pristine_git_object: b637d60b93d685e902fabd09698aafe1c9febc93
+    last_write_checksum: sha1:5dce6ae3e6c68f8599643da427b3257e0fa707a9
+    pristine_git_object: 7b3d44289df41fe2e1a356a62d8496645fa62f54
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:79a5cda5434426df9246a0a2bb96b7a258b4e1f4
