@@ -64,6 +64,7 @@ type EndpointScan struct {
 	ScanTime          *string                        `json:"scan_time,omitempty"`
 	Screenshots       []Screenshot                   `json:"screenshots,omitempty"`
 	SynologyDsm       *SynologyDsm                   `json:"synology_dsm,omitempty"`
+	TailscaleDerp     *TailscaleDerp                 `json:"tailscale_derp,omitempty"`
 	TLS               *TLS                           `json:"tls,omitempty"`
 	TransportProtocol *EndpointScanTransportProtocol `json:"transport_protocol,omitempty"`
 	Vault             *Vault                         `json:"vault,omitempty"`
@@ -320,6 +321,13 @@ func (e *EndpointScan) GetSynologyDsm() *SynologyDsm {
 		return nil
 	}
 	return e.SynologyDsm
+}
+
+func (e *EndpointScan) GetTailscaleDerp() *TailscaleDerp {
+	if e == nil {
+		return nil
+	}
+	return e.TailscaleDerp
 }
 
 func (e *EndpointScan) GetTLS() *TLS {

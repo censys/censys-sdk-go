@@ -39,7 +39,7 @@ type TagAssignment struct {
 	AssetType TagAssignmentAssetType `json:"asset_type"`
 	// RFC3339 timestamp when the assignment was created.
 	CreatedAt time.Time `json:"created_at"`
-	// The user ID of the user who created the assignment.
+	// The ID of the user or service account that created the assignment.
 	CreatedBy string `json:"created_by"`
 	// The unique ID of the assignment.
 	ID string `json:"id"`

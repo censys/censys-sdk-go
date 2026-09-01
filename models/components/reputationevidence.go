@@ -7,6 +7,7 @@ type ReputationEvidence struct {
 	Category         *string                            `json:"category,omitempty"`
 	EvidenceScore    *float32                           `json:"evidence_score,omitempty"`
 	ExternalSignals  []ReputationEvidenceExternalSignal `json:"external_signals,omitempty"`
+	Feature          *ReputationEvidenceFeature         `json:"feature,omitempty"`
 	Threats          []ReputationEvidenceThreat         `json:"threats,omitempty"`
 }
 
@@ -36,6 +37,13 @@ func (r *ReputationEvidence) GetExternalSignals() []ReputationEvidenceExternalSi
 		return nil
 	}
 	return r.ExternalSignals
+}
+
+func (r *ReputationEvidence) GetFeature() *ReputationEvidenceFeature {
+	if r == nil {
+		return nil
+	}
+	return r.Feature
 }
 
 func (r *ReputationEvidence) GetThreats() []ReputationEvidenceThreat {

@@ -29,10 +29,20 @@ func (e *ScoreLevel) IsExact() bool {
 }
 
 type Reputation struct {
-	Evidence     []ReputationEvidence `json:"evidence,omitempty"`
-	ModelVersion *string              `json:"model_version,omitempty"`
-	Score        *float32             `json:"score,omitempty"`
-	ScoreLevel   *ScoreLevel          `json:"score_level,omitempty"`
+	ClassProbabilities []ReputationClassProbability `json:"class_probabilities,omitempty"`
+	Evidence           []ReputationEvidence         `json:"evidence,omitempty"`
+	Label              *string                      `json:"label,omitempty"`
+	ModelVersion       *string                      `json:"model_version,omitempty"`
+	Score              *float32                     `json:"score,omitempty"`
+	ScoreLevel         *ScoreLevel                  `json:"score_level,omitempty"`
+	ScoreSuppressed    *bool                        `json:"score_suppressed,omitempty"`
+}
+
+func (r *Reputation) GetClassProbabilities() []ReputationClassProbability {
+	if r == nil {
+		return nil
+	}
+	return r.ClassProbabilities
 }
 
 func (r *Reputation) GetEvidence() []ReputationEvidence {
@@ -40,6 +50,13 @@ func (r *Reputation) GetEvidence() []ReputationEvidence {
 		return nil
 	}
 	return r.Evidence
+}
+
+func (r *Reputation) GetLabel() *string {
+	if r == nil {
+		return nil
+	}
+	return r.Label
 }
 
 func (r *Reputation) GetModelVersion() *string {
@@ -61,4 +78,11 @@ func (r *Reputation) GetScoreLevel() *ScoreLevel {
 		return nil
 	}
 	return r.ScoreLevel
+}
+
+func (r *Reputation) GetScoreSuppressed() *bool {
+	if r == nil {
+		return nil
+	}
+	return r.ScoreSuppressed
 }

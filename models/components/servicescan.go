@@ -42,6 +42,7 @@ type ServiceScan struct {
 	ClickhouseNative         *ClickHouseNative             `json:"clickhouse_native,omitempty"`
 	Cmore                    *Cmore                        `json:"cmore,omitempty"`
 	Coap                     *Coap                         `json:"coap,omitempty"`
+	ComelitIcona             *ComelitIcona                 `json:"comelit_icona,omitempty"`
 	CortexXdrP2p             *CortexXdrP2P                 `json:"cortex_xdr_p2p,omitempty"`
 	CrestronCp3              *CrestronCp3                  `json:"crestron_cp3,omitempty"`
 	CrestronDinAp2           *CrestronDinAp2               `json:"crestron_din_ap2,omitempty"`
@@ -53,10 +54,12 @@ type ServiceScan struct {
 	DenonHeos                *DenonHeos                    `json:"denon_heos,omitempty"`
 	Dhcpdiscover             *Dhcpdiscover                 `json:"dhcpdiscover,omitempty"`
 	Dicom                    *Dicom                        `json:"dicom,omitempty"`
+	Dlt                      *Dlt                          `json:"dlt,omitempty"`
 	Dnp3                     *Dnp3                         `json:"dnp3,omitempty"`
 	DNS                      *DNS                          `json:"dns,omitempty"`
 	DotnetNegotiateStream    *DotnetNegotiateStream        `json:"dotnet_negotiate_stream,omitempty"`
 	Dtls                     *Dtls                         `json:"dtls,omitempty"`
+	Dubbo                    *Dubbo                        `json:"dubbo,omitempty"`
 	DvrIP                    *DvrIP                        `json:"dvr_ip,omitempty"`
 	Eip                      *Eip                          `json:"eip,omitempty"`
 	ElasticsearchTransport   *ElasticsearchTransport       `json:"elasticsearch_transport,omitempty"`
@@ -66,6 +69,7 @@ type ServiceScan struct {
 	Ethereum                 *Ethereum                     `json:"ethereum,omitempty"`
 	Fins                     *Fins                         `json:"fins,omitempty"`
 	FlashSocketPolicy        *FlashSocketPolicy            `json:"flash_socket_policy,omitempty"`
+	FourdServer              *FourdServer                  `json:"fourd_server,omitempty"`
 	Fox                      *Fox                          `json:"fox,omitempty"`
 	Frps                     *Frps                         `json:"frps,omitempty"`
 	Ftp                      *Ftp                          `json:"ftp,omitempty"`
@@ -76,6 +80,7 @@ type ServiceScan struct {
 	Hajime                   *Hajime                       `json:"hajime,omitempty"`
 	HidVertx                 *HidVertx                     `json:"hid_vertx,omitempty"`
 	Hikvision                *Hikvision                    `json:"hikvision,omitempty"`
+	HoosatHtndGrpc           *HoosatHtndGrpc               `json:"hoosat_htnd_grpc,omitempty"`
 	Ibmnje                   *Ibmnje                       `json:"ibmnje,omitempty"`
 	Icap                     *Icap                         `json:"icap,omitempty"`
 	Iec608705104             *Iec608705104                 `json:"iec60870_5_104,omitempty"`
@@ -83,6 +88,7 @@ type ServiceScan struct {
 	Imap                     *Imap                         `json:"imap,omitempty"`
 	Iota                     *Iota                         `json:"iota,omitempty"`
 	IP                       *string                       `json:"ip,omitempty"`
+	Iperf3                   *Iperf3                       `json:"iperf3,omitempty"`
 	Ipmi                     *Ipmi                         `json:"ipmi,omitempty"`
 	Ipp                      *Ipp                          `json:"ipp,omitempty"`
 	IsSuccess                *bool                         `json:"is_success,omitempty"`
@@ -90,10 +96,12 @@ type ServiceScan struct {
 	Iscsi                    *Iscsi                        `json:"iscsi,omitempty"`
 	JavaRmi                  *JavaRmi                      `json:"java_rmi,omitempty"`
 	KcodesNetusb             *KcodesNetusb                 `json:"kcodes_netusb,omitempty"`
+	Knxip                    *Knxip                        `json:"knxip,omitempty"`
 	Krpc                     *Krpc                         `json:"krpc,omitempty"`
 	L2tp                     *L2Tp                         `json:"l2tp,omitempty"`
 	Ldap                     *Ldap                         `json:"ldap,omitempty"`
 	Lpd                      *Lpd                          `json:"lpd,omitempty"`
+	ManticoreSphinxapi       *ManticoreSphinxapi           `json:"manticore_sphinxapi,omitempty"`
 	Mavlink                  *Mavlink                      `json:"mavlink,omitempty"`
 	Mdns                     *Mdns                         `json:"mdns,omitempty"`
 	Melsec                   *Melsec                       `json:"melsec,omitempty"`
@@ -105,6 +113,7 @@ type ServiceScan struct {
 	Modbus                   *Modbus                       `json:"modbus,omitempty"`
 	MoneroP2p                *MoneroP2P                    `json:"monero_p2p,omitempty"`
 	Mongodb                  *Mongodb                      `json:"mongodb,omitempty"`
+	MplsLdp                  *MplsLdp                      `json:"mpls_ldp,omitempty"`
 	Mqtt                     *Mqtt                         `json:"mqtt,omitempty"`
 	Mssql                    *Mssql                        `json:"mssql,omitempty"`
 	Murmur                   *Murmur                       `json:"murmur,omitempty"`
@@ -114,6 +123,7 @@ type ServiceScan struct {
 	Nbd                      *Nbd                          `json:"nbd,omitempty"`
 	NfsMountd                *NfsMountd                    `json:"nfs_mountd,omitempty"`
 	Nmea                     *Nmea                         `json:"nmea,omitempty"`
+	Nrpe                     *Nrpe                         `json:"nrpe,omitempty"`
 	Ntp                      *Ntp                          `json:"ntp,omitempty"`
 	Ntrip                    *Ntrip                        `json:"ntrip,omitempty"`
 	Onc                      *Onc                          `json:"onc,omitempty"`
@@ -141,6 +151,7 @@ type ServiceScan struct {
 	Redis                    *Redis                        `json:"redis,omitempty"`
 	Redline                  *Redline                      `json:"redline,omitempty"`
 	RedlionCrimson           *RedlionCrimson               `json:"redlion_crimson,omitempty"`
+	Redshift                 *Redshift                     `json:"redshift,omitempty"`
 	ReolinkBaichuan          *ReolinkBaichuan              `json:"reolink_baichuan,omitempty"`
 	RepresentativeInfo       *RepresentativeInfo           `json:"representative_info,omitempty"`
 	Rifatron                 *Rifatron                     `json:"rifatron,omitempty"`
@@ -165,6 +176,7 @@ type ServiceScan struct {
 	Skinny                   *Skinny                       `json:"skinny,omitempty"`
 	Smb                      *Smb                          `json:"smb,omitempty"`
 	SMTP                     *SMTP                         `json:"smtp,omitempty"`
+	Smux                     *Smux                         `json:"smux,omitempty"`
 	Snmp                     *Snmp                         `json:"snmp,omitempty"`
 	Socks                    *Socks                        `json:"socks,omitempty"`
 	Spice                    *Spice                        `json:"spice,omitempty"`
@@ -183,6 +195,7 @@ type ServiceScan struct {
 	TLS                      *TLS                          `json:"tls,omitempty"`
 	TplinkKasa               *TplinkKasa                   `json:"tplink_kasa,omitempty"`
 	TransportProtocol        *ServiceScanTransportProtocol `json:"transport_protocol,omitempty"`
+	TvtControl               *TvtControl                   `json:"tvt_control,omitempty"`
 	TwampControl             *TwampControl                 `json:"twamp_control,omitempty"`
 	UnitronicsPcom           *UnitronicsPcom               `json:"unitronics_pcom,omitempty"`
 	Upnp                     *Upnp                         `json:"upnp,omitempty"`
@@ -294,6 +307,13 @@ func (s *ServiceScan) GetCoap() *Coap {
 	return s.Coap
 }
 
+func (s *ServiceScan) GetComelitIcona() *ComelitIcona {
+	if s == nil {
+		return nil
+	}
+	return s.ComelitIcona
+}
+
 func (s *ServiceScan) GetCortexXdrP2p() *CortexXdrP2P {
 	if s == nil {
 		return nil
@@ -371,6 +391,13 @@ func (s *ServiceScan) GetDicom() *Dicom {
 	return s.Dicom
 }
 
+func (s *ServiceScan) GetDlt() *Dlt {
+	if s == nil {
+		return nil
+	}
+	return s.Dlt
+}
+
 func (s *ServiceScan) GetDnp3() *Dnp3 {
 	if s == nil {
 		return nil
@@ -397,6 +424,13 @@ func (s *ServiceScan) GetDtls() *Dtls {
 		return nil
 	}
 	return s.Dtls
+}
+
+func (s *ServiceScan) GetDubbo() *Dubbo {
+	if s == nil {
+		return nil
+	}
+	return s.Dubbo
 }
 
 func (s *ServiceScan) GetDvrIP() *DvrIP {
@@ -460,6 +494,13 @@ func (s *ServiceScan) GetFlashSocketPolicy() *FlashSocketPolicy {
 		return nil
 	}
 	return s.FlashSocketPolicy
+}
+
+func (s *ServiceScan) GetFourdServer() *FourdServer {
+	if s == nil {
+		return nil
+	}
+	return s.FourdServer
 }
 
 func (s *ServiceScan) GetFox() *Fox {
@@ -532,6 +573,13 @@ func (s *ServiceScan) GetHikvision() *Hikvision {
 	return s.Hikvision
 }
 
+func (s *ServiceScan) GetHoosatHtndGrpc() *HoosatHtndGrpc {
+	if s == nil {
+		return nil
+	}
+	return s.HoosatHtndGrpc
+}
+
 func (s *ServiceScan) GetIbmnje() *Ibmnje {
 	if s == nil {
 		return nil
@@ -579,6 +627,13 @@ func (s *ServiceScan) GetIP() *string {
 		return nil
 	}
 	return s.IP
+}
+
+func (s *ServiceScan) GetIperf3() *Iperf3 {
+	if s == nil {
+		return nil
+	}
+	return s.Iperf3
 }
 
 func (s *ServiceScan) GetIpmi() *Ipmi {
@@ -630,6 +685,13 @@ func (s *ServiceScan) GetKcodesNetusb() *KcodesNetusb {
 	return s.KcodesNetusb
 }
 
+func (s *ServiceScan) GetKnxip() *Knxip {
+	if s == nil {
+		return nil
+	}
+	return s.Knxip
+}
+
 func (s *ServiceScan) GetKrpc() *Krpc {
 	if s == nil {
 		return nil
@@ -656,6 +718,13 @@ func (s *ServiceScan) GetLpd() *Lpd {
 		return nil
 	}
 	return s.Lpd
+}
+
+func (s *ServiceScan) GetManticoreSphinxapi() *ManticoreSphinxapi {
+	if s == nil {
+		return nil
+	}
+	return s.ManticoreSphinxapi
 }
 
 func (s *ServiceScan) GetMavlink() *Mavlink {
@@ -735,6 +804,13 @@ func (s *ServiceScan) GetMongodb() *Mongodb {
 	return s.Mongodb
 }
 
+func (s *ServiceScan) GetMplsLdp() *MplsLdp {
+	if s == nil {
+		return nil
+	}
+	return s.MplsLdp
+}
+
 func (s *ServiceScan) GetMqtt() *Mqtt {
 	if s == nil {
 		return nil
@@ -796,6 +872,13 @@ func (s *ServiceScan) GetNmea() *Nmea {
 		return nil
 	}
 	return s.Nmea
+}
+
+func (s *ServiceScan) GetNrpe() *Nrpe {
+	if s == nil {
+		return nil
+	}
+	return s.Nrpe
 }
 
 func (s *ServiceScan) GetNtp() *Ntp {
@@ -987,6 +1070,13 @@ func (s *ServiceScan) GetRedlionCrimson() *RedlionCrimson {
 	return s.RedlionCrimson
 }
 
+func (s *ServiceScan) GetRedshift() *Redshift {
+	if s == nil {
+		return nil
+	}
+	return s.Redshift
+}
+
 func (s *ServiceScan) GetReolinkBaichuan() *ReolinkBaichuan {
 	if s == nil {
 		return nil
@@ -1155,6 +1245,13 @@ func (s *ServiceScan) GetSMTP() *SMTP {
 	return s.SMTP
 }
 
+func (s *ServiceScan) GetSmux() *Smux {
+	if s == nil {
+		return nil
+	}
+	return s.Smux
+}
+
 func (s *ServiceScan) GetSnmp() *Snmp {
 	if s == nil {
 		return nil
@@ -1279,6 +1376,13 @@ func (s *ServiceScan) GetTransportProtocol() *ServiceScanTransportProtocol {
 		return nil
 	}
 	return s.TransportProtocol
+}
+
+func (s *ServiceScan) GetTvtControl() *TvtControl {
+	if s == nil {
+		return nil
+	}
+	return s.TvtControl
 }
 
 func (s *ServiceScan) GetTwampControl() *TwampControl {
