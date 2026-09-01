@@ -33,7 +33,7 @@ func (e *TagPrivacy) IsExact() bool {
 type Tag struct {
 	// RFC3339 timestamp when the tag was created.
 	CreatedAt time.Time `json:"created_at"`
-	// The user ID of the user who created the tag.
+	// The ID of the user or service account that created the tag.
 	CreatedBy string `json:"created_by"`
 	// A human-readable description of the tag.
 	Description *string `json:"description,omitempty"`

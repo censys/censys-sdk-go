@@ -1,0 +1,8 @@
+# ComelitIcona
+
+
+## Fields
+
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `MessageTypeName`  | `*string`          | :heavy_minus_sign: | N/A                |

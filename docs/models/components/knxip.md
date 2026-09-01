@@ -1,0 +1,11 @@
+# Knxip
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `DeviceInfo`                                                                     | [*components.KnxipDeviceInfo](../../models/components/knxipdeviceinfo.md)        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `ProtocolVersion`                                                                | `*string`                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `ResponseType`                                                                   | `*string`                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `SupportedServiceFamilies`                                                       | [][components.KnxipServiceFamily](../../models/components/knxipservicefamily.md) | :heavy_minus_sign:                                                               | N/A                                                                              |

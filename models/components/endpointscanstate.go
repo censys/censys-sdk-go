@@ -64,6 +64,7 @@ type EndpointScanState struct {
 	ScanTime          *string                             `json:"scan_time,omitempty"`
 	Screenshots       []Screenshot                        `json:"screenshots,omitempty"`
 	SynologyDsm       *SynologyDsm                        `json:"synology_dsm,omitempty"`
+	TailscaleDerp     *TailscaleDerp                      `json:"tailscale_derp,omitempty"`
 	TransportProtocol *EndpointScanStateTransportProtocol `json:"transport_protocol,omitempty"`
 	Vault             *Vault                              `json:"vault,omitempty"`
 	Wordpress         *Wordpress                          `json:"wordpress,omitempty"`
@@ -319,6 +320,13 @@ func (e *EndpointScanState) GetSynologyDsm() *SynologyDsm {
 		return nil
 	}
 	return e.SynologyDsm
+}
+
+func (e *EndpointScanState) GetTailscaleDerp() *TailscaleDerp {
+	if e == nil {
+		return nil
+	}
+	return e.TailscaleDerp
 }
 
 func (e *EndpointScanState) GetTransportProtocol() *EndpointScanStateTransportProtocol {

@@ -1,0 +1,10 @@
+# ManticoreSphinxapi
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ReleaseBand`                                                                                          | `*string`                                                                                              | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `Status`                                                                                               | [][components.ManticoreSphinxapiStatusEntry](../../models/components/manticoresphinxapistatusentry.md) | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `StatusRowCount`                                                                                       | `*int`                                                                                                 | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
