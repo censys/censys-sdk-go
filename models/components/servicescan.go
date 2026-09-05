@@ -36,11 +36,15 @@ type ServiceScan struct {
 	Bacnet                   *Bacnet                       `json:"bacnet,omitempty"`
 	Banner                   *string                       `json:"banner,omitempty"`
 	BannerHashSha256         *string                       `json:"banner_hash_sha256,omitempty"`
+	BluemaxNuttcp            *BluemaxNuttcp                `json:"bluemax_nuttcp,omitempty"`
 	CheckpointTopology       *CheckpointTopology           `json:"checkpoint_topology,omitempty"`
 	Chromecast               *Chromecast                   `json:"chromecast,omitempty"`
 	CiscoIpsla               *CiscoIpsla                   `json:"cisco_ipsla,omitempty"`
+	CiscoSdwanVdaemon        *CiscoSdwanVdaemon            `json:"cisco_sdwan_vdaemon,omitempty"`
+	Clamav                   *Clamav                       `json:"clamav,omitempty"`
 	ClickhouseNative         *ClickHouseNative             `json:"clickhouse_native,omitempty"`
 	Cmore                    *Cmore                        `json:"cmore,omitempty"`
+	CnordSecurityCenter      *CnordSecurityCenter          `json:"cnord_security_center,omitempty"`
 	Coap                     *Coap                         `json:"coap,omitempty"`
 	ComelitIcona             *ComelitIcona                 `json:"comelit_icona,omitempty"`
 	CortexXdrP2p             *CortexXdrP2P                 `json:"cortex_xdr_p2p,omitempty"`
@@ -75,8 +79,10 @@ type ServiceScan struct {
 	Ftp                      *Ftp                          `json:"ftp,omitempty"`
 	Gearman                  *Gearman                      `json:"gearman,omitempty"`
 	Gemini                   *Gemini                       `json:"gemini,omitempty"`
+	GeovisionAudio           *GeovisionAudio               `json:"geovision_audio,omitempty"`
 	Giop                     *Giop                         `json:"giop,omitempty"`
 	Gopher                   *Gopher                       `json:"gopher,omitempty"`
+	GrilConsole              *GrilConsole                  `json:"gril_console,omitempty"`
 	Hajime                   *Hajime                       `json:"hajime,omitempty"`
 	HidVertx                 *HidVertx                     `json:"hid_vertx,omitempty"`
 	Hikvision                *Hikvision                    `json:"hikvision,omitempty"`
@@ -100,7 +106,9 @@ type ServiceScan struct {
 	Krpc                     *Krpc                         `json:"krpc,omitempty"`
 	L2tp                     *L2Tp                         `json:"l2tp,omitempty"`
 	Ldap                     *Ldap                         `json:"ldap,omitempty"`
+	Libp2p                   *Libp2P                       `json:"libp2p,omitempty"`
 	Lpd                      *Lpd                          `json:"lpd,omitempty"`
+	Managesieve              *Managesieve                  `json:"managesieve,omitempty"`
 	ManticoreSphinxapi       *ManticoreSphinxapi           `json:"manticore_sphinxapi,omitempty"`
 	Mavlink                  *Mavlink                      `json:"mavlink,omitempty"`
 	Mdns                     *Mdns                         `json:"mdns,omitempty"`
@@ -132,10 +140,14 @@ type ServiceScan struct {
 	Openflow                 *Openflow                     `json:"openflow,omitempty"`
 	Openvpn                  *Openvpn                      `json:"openvpn,omitempty"`
 	OpenvpnMgmt              *OpenvpnMgmt                  `json:"openvpn_mgmt,omitempty"`
+	OpwFsc3000               *OpwFsc3000                   `json:"opw_fsc3000,omitempty"`
 	Oracle                   *Oracle                       `json:"oracle,omitempty"`
+	OrencoAtrtu              *OrencoAtrtu                  `json:"orenco_atrtu,omitempty"`
+	OtlpGrpc                 *OtlpGrpc                     `json:"otlp_grpc,omitempty"`
 	PcAnywhere               *PcAnywhere                   `json:"pc_anywhere,omitempty"`
 	PerforceP4d              *PerforceP4D                  `json:"perforce_p4d,omitempty"`
 	Pgbouncer                *Pgbouncer                    `json:"pgbouncer,omitempty"`
+	Pigeonhole               *Pigeonhole                   `json:"pigeonhole,omitempty"`
 	Pop3                     *Pop3                         `json:"pop3,omitempty"`
 	Port                     *int                          `json:"port,omitempty"`
 	Portmap                  *Portmap                      `json:"portmap,omitempty"`
@@ -180,17 +192,21 @@ type ServiceScan struct {
 	Snmp                     *Snmp                         `json:"snmp,omitempty"`
 	Socks                    *Socks                        `json:"socks,omitempty"`
 	Spice                    *Spice                        `json:"spice,omitempty"`
+	SpotifyConnect           *SpotifyConnect               `json:"spotify_connect,omitempty"`
 	Ssdp                     *Ssdp                         `json:"ssdp,omitempty"`
 	SSH                      *SSH                          `json:"ssh,omitempty"`
 	Steam                    *Steam                        `json:"steam,omitempty"`
+	Stomp                    *Stomp                        `json:"stomp,omitempty"`
 	Stun                     *Stun                         `json:"stun,omitempty"`
 	SyncthingBep             *SyncthingBep                 `json:"syncthing_bep,omitempty"`
 	Synergy                  *Synergy                      `json:"synergy,omitempty"`
 	TacacsPlus               *TacacsPlus                   `json:"tacacs_plus,omitempty"`
 	Tarantool                *Tarantool                    `json:"tarantool,omitempty"`
+	TaurusStb                *TaurusStb                    `json:"taurus_stb,omitempty"`
 	TeamViewer               *TeamViewer                   `json:"team_viewer,omitempty"`
 	TelexperTlxp             *TelexperTlxp                 `json:"telexper_tlxp,omitempty"`
 	Telnet                   *Telnet                       `json:"telnet,omitempty"`
+	Thrulay                  *Thrulay                      `json:"thrulay,omitempty"`
 	Tibia                    *Tibia                        `json:"tibia,omitempty"`
 	TLS                      *TLS                          `json:"tls,omitempty"`
 	TplinkKasa               *TplinkKasa                   `json:"tplink_kasa,omitempty"`
@@ -199,11 +215,15 @@ type ServiceScan struct {
 	TwampControl             *TwampControl                 `json:"twamp_control,omitempty"`
 	UnitronicsPcom           *UnitronicsPcom               `json:"unitronics_pcom,omitempty"`
 	Upnp                     *Upnp                         `json:"upnp,omitempty"`
+	UtilinetLpp              *UtilinetLpp                  `json:"utilinet_lpp,omitempty"`
+	VantageInfusion          *VantageInfusion              `json:"vantage_infusion,omitempty"`
 	Ventrilo                 *Ventrilo                     `json:"ventrilo,omitempty"`
+	VisionhitechIpcam        *VisionhitechIpcam            `json:"visionhitech_ipcam,omitempty"`
 	Vnc                      *Vnc                          `json:"vnc,omitempty"`
 	WeblogicT3               *WeblogicT3                   `json:"weblogic_t3,omitempty"`
 	WinceCerdisp             *WinceCerdisp                 `json:"wince_cerdisp,omitempty"`
 	Winrm                    *Winrm                        `json:"winrm,omitempty"`
+	WowRealmd                *WowRealmd                    `json:"wow_realmd,omitempty"`
 	WsDiscovery              *WsDiscovery                  `json:"ws_discovery,omitempty"`
 	X11                      *X11                          `json:"x11,omitempty"`
 	Zeromq                   *Zeromq                       `json:"zeromq,omitempty"`
@@ -265,6 +285,13 @@ func (s *ServiceScan) GetBannerHashSha256() *string {
 	return s.BannerHashSha256
 }
 
+func (s *ServiceScan) GetBluemaxNuttcp() *BluemaxNuttcp {
+	if s == nil {
+		return nil
+	}
+	return s.BluemaxNuttcp
+}
+
 func (s *ServiceScan) GetCheckpointTopology() *CheckpointTopology {
 	if s == nil {
 		return nil
@@ -286,6 +313,20 @@ func (s *ServiceScan) GetCiscoIpsla() *CiscoIpsla {
 	return s.CiscoIpsla
 }
 
+func (s *ServiceScan) GetCiscoSdwanVdaemon() *CiscoSdwanVdaemon {
+	if s == nil {
+		return nil
+	}
+	return s.CiscoSdwanVdaemon
+}
+
+func (s *ServiceScan) GetClamav() *Clamav {
+	if s == nil {
+		return nil
+	}
+	return s.Clamav
+}
+
 func (s *ServiceScan) GetClickhouseNative() *ClickHouseNative {
 	if s == nil {
 		return nil
@@ -298,6 +339,13 @@ func (s *ServiceScan) GetCmore() *Cmore {
 		return nil
 	}
 	return s.Cmore
+}
+
+func (s *ServiceScan) GetCnordSecurityCenter() *CnordSecurityCenter {
+	if s == nil {
+		return nil
+	}
+	return s.CnordSecurityCenter
 }
 
 func (s *ServiceScan) GetCoap() *Coap {
@@ -538,6 +586,13 @@ func (s *ServiceScan) GetGemini() *Gemini {
 	return s.Gemini
 }
 
+func (s *ServiceScan) GetGeovisionAudio() *GeovisionAudio {
+	if s == nil {
+		return nil
+	}
+	return s.GeovisionAudio
+}
+
 func (s *ServiceScan) GetGiop() *Giop {
 	if s == nil {
 		return nil
@@ -550,6 +605,13 @@ func (s *ServiceScan) GetGopher() *Gopher {
 		return nil
 	}
 	return s.Gopher
+}
+
+func (s *ServiceScan) GetGrilConsole() *GrilConsole {
+	if s == nil {
+		return nil
+	}
+	return s.GrilConsole
 }
 
 func (s *ServiceScan) GetHajime() *Hajime {
@@ -713,11 +775,25 @@ func (s *ServiceScan) GetLdap() *Ldap {
 	return s.Ldap
 }
 
+func (s *ServiceScan) GetLibp2p() *Libp2P {
+	if s == nil {
+		return nil
+	}
+	return s.Libp2p
+}
+
 func (s *ServiceScan) GetLpd() *Lpd {
 	if s == nil {
 		return nil
 	}
 	return s.Lpd
+}
+
+func (s *ServiceScan) GetManagesieve() *Managesieve {
+	if s == nil {
+		return nil
+	}
+	return s.Managesieve
 }
 
 func (s *ServiceScan) GetManticoreSphinxapi() *ManticoreSphinxapi {
@@ -937,11 +1013,32 @@ func (s *ServiceScan) GetOpenvpnMgmt() *OpenvpnMgmt {
 	return s.OpenvpnMgmt
 }
 
+func (s *ServiceScan) GetOpwFsc3000() *OpwFsc3000 {
+	if s == nil {
+		return nil
+	}
+	return s.OpwFsc3000
+}
+
 func (s *ServiceScan) GetOracle() *Oracle {
 	if s == nil {
 		return nil
 	}
 	return s.Oracle
+}
+
+func (s *ServiceScan) GetOrencoAtrtu() *OrencoAtrtu {
+	if s == nil {
+		return nil
+	}
+	return s.OrencoAtrtu
+}
+
+func (s *ServiceScan) GetOtlpGrpc() *OtlpGrpc {
+	if s == nil {
+		return nil
+	}
+	return s.OtlpGrpc
 }
 
 func (s *ServiceScan) GetPcAnywhere() *PcAnywhere {
@@ -963,6 +1060,13 @@ func (s *ServiceScan) GetPgbouncer() *Pgbouncer {
 		return nil
 	}
 	return s.Pgbouncer
+}
+
+func (s *ServiceScan) GetPigeonhole() *Pigeonhole {
+	if s == nil {
+		return nil
+	}
+	return s.Pigeonhole
 }
 
 func (s *ServiceScan) GetPop3() *Pop3 {
@@ -1273,6 +1377,13 @@ func (s *ServiceScan) GetSpice() *Spice {
 	return s.Spice
 }
 
+func (s *ServiceScan) GetSpotifyConnect() *SpotifyConnect {
+	if s == nil {
+		return nil
+	}
+	return s.SpotifyConnect
+}
+
 func (s *ServiceScan) GetSsdp() *Ssdp {
 	if s == nil {
 		return nil
@@ -1292,6 +1403,13 @@ func (s *ServiceScan) GetSteam() *Steam {
 		return nil
 	}
 	return s.Steam
+}
+
+func (s *ServiceScan) GetStomp() *Stomp {
+	if s == nil {
+		return nil
+	}
+	return s.Stomp
 }
 
 func (s *ServiceScan) GetStun() *Stun {
@@ -1329,6 +1447,13 @@ func (s *ServiceScan) GetTarantool() *Tarantool {
 	return s.Tarantool
 }
 
+func (s *ServiceScan) GetTaurusStb() *TaurusStb {
+	if s == nil {
+		return nil
+	}
+	return s.TaurusStb
+}
+
 func (s *ServiceScan) GetTeamViewer() *TeamViewer {
 	if s == nil {
 		return nil
@@ -1348,6 +1473,13 @@ func (s *ServiceScan) GetTelnet() *Telnet {
 		return nil
 	}
 	return s.Telnet
+}
+
+func (s *ServiceScan) GetThrulay() *Thrulay {
+	if s == nil {
+		return nil
+	}
+	return s.Thrulay
 }
 
 func (s *ServiceScan) GetTibia() *Tibia {
@@ -1406,11 +1538,32 @@ func (s *ServiceScan) GetUpnp() *Upnp {
 	return s.Upnp
 }
 
+func (s *ServiceScan) GetUtilinetLpp() *UtilinetLpp {
+	if s == nil {
+		return nil
+	}
+	return s.UtilinetLpp
+}
+
+func (s *ServiceScan) GetVantageInfusion() *VantageInfusion {
+	if s == nil {
+		return nil
+	}
+	return s.VantageInfusion
+}
+
 func (s *ServiceScan) GetVentrilo() *Ventrilo {
 	if s == nil {
 		return nil
 	}
 	return s.Ventrilo
+}
+
+func (s *ServiceScan) GetVisionhitechIpcam() *VisionhitechIpcam {
+	if s == nil {
+		return nil
+	}
+	return s.VisionhitechIpcam
 }
 
 func (s *ServiceScan) GetVnc() *Vnc {
@@ -1439,6 +1592,13 @@ func (s *ServiceScan) GetWinrm() *Winrm {
 		return nil
 	}
 	return s.Winrm
+}
+
+func (s *ServiceScan) GetWowRealmd() *WowRealmd {
+	if s == nil {
+		return nil
+	}
+	return s.WowRealmd
 }
 
 func (s *ServiceScan) GetWsDiscovery() *WsDiscovery {
