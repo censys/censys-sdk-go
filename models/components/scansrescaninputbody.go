@@ -203,7 +203,14 @@ func CreateScansRescanInputBodyTargetTwo(two Two) ScansRescanInputBodyTarget {
 	}
 }
 
-func (u *ScansRescanInputBodyTarget) UnmarshalJSON(data []byte) error {
+func (u *ScansRescanInputBodyTarget) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = ScansRescanInputBodyTarget{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var candidates []utils.UnionCandidate
 
