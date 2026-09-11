@@ -49,6 +49,7 @@ type EndpointScan struct {
 	Keycloak          *Keycloak                      `json:"keycloak,omitempty"`
 	Kubernetes        *Kubernetes                    `json:"kubernetes,omitempty"`
 	Mcp               *Mcp                           `json:"mcp,omitempty"`
+	NetflixNrdp       *NetflixNrdp                   `json:"netflix_nrdp,omitempty"`
 	NginxProxyManager *NginxProxyManager             `json:"nginx_proxy_manager,omitempty"`
 	Ollama            *Ollama                        `json:"ollama,omitempty"`
 	OpenDirectory     *OpenDirectory                 `json:"open_directory,omitempty"`
@@ -216,6 +217,13 @@ func (e *EndpointScan) GetMcp() *Mcp {
 		return nil
 	}
 	return e.Mcp
+}
+
+func (e *EndpointScan) GetNetflixNrdp() *NetflixNrdp {
+	if e == nil {
+		return nil
+	}
+	return e.NetflixNrdp
 }
 
 func (e *EndpointScan) GetNginxProxyManager() *NginxProxyManager {
