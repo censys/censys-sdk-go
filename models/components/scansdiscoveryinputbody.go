@@ -156,7 +156,14 @@ func CreateScansDiscoveryInputBodyTargetTarget2(target2 Target2) ScansDiscoveryI
 	}
 }
 
-func (u *ScansDiscoveryInputBodyTarget) UnmarshalJSON(data []byte) error {
+func (u *ScansDiscoveryInputBodyTarget) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = ScansDiscoveryInputBodyTarget{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var candidates []utils.UnionCandidate
 
