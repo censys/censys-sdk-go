@@ -15,6 +15,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/censys/censys-sdk-go/optionalnullable"
 )
 
 const (
@@ -248,6 +250,35 @@ func isNil(typ reflect.Type, val reflect.Value) bool {
 	}
 
 	return false
+}
+
+func unwrapOptionalNullable(val reflect.Value) (reflect.Value, bool) {
+	if val.Kind() == reflect.Map && val.IsNil() && val.CanInterface() {
+		if _, isWrapper := val.Interface().(optionalnullable.OptionalNullableInterface); isWrapper {
+			return val, false
+		}
+	}
+
+	nullableValue, ok := optionalnullable.AsOptionalNullable(val)
+	if !ok {
+		return val, true
+	}
+
+	inner, isSet := nullableValue.GetUntyped()
+	if !isSet || inner == nil {
+		return val, false
+	}
+
+	val = reflect.ValueOf(inner)
+	if isNil(val.Type(), val) {
+		return val, false
+	}
+
+	if val.Kind() == reflect.Pointer {
+		val = val.Elem()
+	}
+
+	return val, true
 }
 
 func isEmptyContainer(typ reflect.Type, val reflect.Value) bool {
