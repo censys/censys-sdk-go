@@ -240,7 +240,7 @@ func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3G
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -265,7 +265,7 @@ func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3G
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -286,7 +286,7 @@ func (s *GlobalData) GetCertificates(ctx context.Context, request operations.V3G
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -529,7 +529,7 @@ func (s *GlobalData) GetCertificatesRaw(ctx context.Context, request operations.
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -554,7 +554,7 @@ func (s *GlobalData) GetCertificatesRaw(ctx context.Context, request operations.
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -575,7 +575,7 @@ func (s *GlobalData) GetCertificatesRaw(ctx context.Context, request operations.
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -811,7 +811,7 @@ func (s *GlobalData) GetCertificate(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -836,7 +836,7 @@ func (s *GlobalData) GetCertificate(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -857,7 +857,7 @@ func (s *GlobalData) GetCertificate(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1094,7 +1094,7 @@ func (s *GlobalData) GetCertificateRaw(ctx context.Context, request operations.V
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1119,7 +1119,7 @@ func (s *GlobalData) GetCertificateRaw(ctx context.Context, request operations.V
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1140,7 +1140,7 @@ func (s *GlobalData) GetCertificateRaw(ctx context.Context, request operations.V
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1376,7 +1376,7 @@ func (s *GlobalData) GetHostEnrichment(ctx context.Context, request operations.V
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1403,7 +1403,7 @@ func (s *GlobalData) GetHostEnrichment(ctx context.Context, request operations.V
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1426,7 +1426,7 @@ func (s *GlobalData) GetHostEnrichment(ctx context.Context, request operations.V
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1447,7 +1447,7 @@ func (s *GlobalData) GetHostEnrichment(ctx context.Context, request operations.V
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1690,7 +1690,7 @@ func (s *GlobalData) GetHosts(ctx context.Context, request operations.V3Globalda
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1715,7 +1715,7 @@ func (s *GlobalData) GetHosts(ctx context.Context, request operations.V3Globalda
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1736,7 +1736,7 @@ func (s *GlobalData) GetHosts(ctx context.Context, request operations.V3Globalda
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1972,7 +1972,7 @@ func (s *GlobalData) GetHost(ctx context.Context, request operations.V3Globaldat
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -1997,7 +1997,7 @@ func (s *GlobalData) GetHost(ctx context.Context, request operations.V3Globaldat
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2018,7 +2018,7 @@ func (s *GlobalData) GetHost(ctx context.Context, request operations.V3Globaldat
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2254,7 +2254,7 @@ func (s *GlobalData) ListServicesOnHost(ctx context.Context, request operations.
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2281,7 +2281,7 @@ func (s *GlobalData) ListServicesOnHost(ctx context.Context, request operations.
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2302,7 +2302,7 @@ func (s *GlobalData) ListServicesOnHost(ctx context.Context, request operations.
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2538,7 +2538,7 @@ func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3G
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2563,7 +2563,7 @@ func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3G
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2584,7 +2584,7 @@ func (s *GlobalData) GetHostTimeline(ctx context.Context, request operations.V3G
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2827,7 +2827,7 @@ func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2852,7 +2852,7 @@ func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -2873,7 +2873,7 @@ func (s *GlobalData) GetWebProperties(ctx context.Context, request operations.V3
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3109,7 +3109,7 @@ func (s *GlobalData) GetWebProperty(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3136,7 +3136,7 @@ func (s *GlobalData) GetWebProperty(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3157,7 +3157,7 @@ func (s *GlobalData) GetWebProperty(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3393,7 +3393,7 @@ func (s *GlobalData) GetWebPropertyTimeline(ctx context.Context, request operati
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3420,7 +3420,7 @@ func (s *GlobalData) GetWebPropertyTimeline(ctx context.Context, request operati
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3441,7 +3441,7 @@ func (s *GlobalData) GetWebPropertyTimeline(ctx context.Context, request operati
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3677,7 +3677,7 @@ func (s *GlobalData) ListDNSIPResolutionBounds(ctx context.Context, request oper
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3704,7 +3704,7 @@ func (s *GlobalData) ListDNSIPResolutionBounds(ctx context.Context, request oper
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3725,7 +3725,7 @@ func (s *GlobalData) ListDNSIPResolutionBounds(ctx context.Context, request oper
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3961,7 +3961,7 @@ func (s *GlobalData) ListDNSIPResolutionRanges(ctx context.Context, request oper
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -3988,7 +3988,7 @@ func (s *GlobalData) ListDNSIPResolutionRanges(ctx context.Context, request oper
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4009,7 +4009,7 @@ func (s *GlobalData) ListDNSIPResolutionRanges(ctx context.Context, request oper
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4245,7 +4245,7 @@ func (s *GlobalData) ListDNSNameResolutionBounds(ctx context.Context, request op
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4272,7 +4272,7 @@ func (s *GlobalData) ListDNSNameResolutionBounds(ctx context.Context, request op
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4293,7 +4293,7 @@ func (s *GlobalData) ListDNSNameResolutionBounds(ctx context.Context, request op
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4529,7 +4529,7 @@ func (s *GlobalData) ListDNSNameResolutionRanges(ctx context.Context, request op
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4556,7 +4556,7 @@ func (s *GlobalData) ListDNSNameResolutionRanges(ctx context.Context, request op
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4577,7 +4577,7 @@ func (s *GlobalData) ListDNSNameResolutionRanges(ctx context.Context, request op
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4820,7 +4820,7 @@ func (s *GlobalData) CreateTrackedScan(ctx context.Context, request operations.V
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4845,7 +4845,7 @@ func (s *GlobalData) CreateTrackedScan(ctx context.Context, request operations.V
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -4866,7 +4866,7 @@ func (s *GlobalData) CreateTrackedScan(ctx context.Context, request operations.V
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5102,7 +5102,7 @@ func (s *GlobalData) GetTrackedScan(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5127,7 +5127,7 @@ func (s *GlobalData) GetTrackedScan(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5148,7 +5148,7 @@ func (s *GlobalData) GetTrackedScan(ctx context.Context, request operations.V3Gl
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5391,7 +5391,7 @@ func (s *GlobalData) Aggregate(ctx context.Context, request operations.V3Globald
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5416,7 +5416,7 @@ func (s *GlobalData) Aggregate(ctx context.Context, request operations.V3Globald
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5437,7 +5437,7 @@ func (s *GlobalData) Aggregate(ctx context.Context, request operations.V3Globald
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5680,7 +5680,7 @@ func (s *GlobalData) ConvertLegacySearchQueries(ctx context.Context, request ope
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5703,7 +5703,7 @@ func (s *GlobalData) ConvertLegacySearchQueries(ctx context.Context, request ope
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5724,7 +5724,7 @@ func (s *GlobalData) ConvertLegacySearchQueries(ctx context.Context, request ope
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5967,7 +5967,7 @@ func (s *GlobalData) Search(ctx context.Context, request operations.V3Globaldata
 
 			var out sdkerrors.AuthenticationError
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -5992,7 +5992,7 @@ func (s *GlobalData) Search(ctx context.Context, request operations.V3Globaldata
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
@@ -6013,7 +6013,7 @@ func (s *GlobalData) Search(ctx context.Context, request operations.V3Globaldata
 
 			var out sdkerrors.ErrorModel
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, sdkerrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			return nil, &out
