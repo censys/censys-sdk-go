@@ -36,7 +36,7 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
@@ -100,7 +100,7 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
@@ -158,7 +158,7 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
@@ -216,7 +216,7 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
@@ -280,7 +280,7 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
@@ -347,7 +347,7 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
@@ -406,7 +406,7 @@ func main() {
     ctx := context.Background()
 
     s := censyssdkgo.New(
-        censyssdkgo.WithOrganizationID("11111111-2222-3333-4444-555555555555"),
+        censyssdkgo.WithOrganizationID("<id>"),
         censyssdkgo.WithSecurity("<YOUR_BEARER_TOKEN_HERE>"),
     )
 
