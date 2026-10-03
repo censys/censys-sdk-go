@@ -10,7 +10,7 @@ import (
 type V3AccountmanagementOrgDetailsRequest struct {
 	// The ID of a Censys organization. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	// Whether to include how many members are in this organization, split by role.
+	// Whether to include how many users are in this organization, split by Platform-wide role.
 	IncludeMemberCounts *bool `default:"false" queryParam:"style=form,explode=false,name=include_member_counts"`
 }
 

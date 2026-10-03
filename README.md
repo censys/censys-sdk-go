@@ -101,10 +101,10 @@ func main() {
 * [GetOrganizationCredits](docs/sdks/accountmanagement/README.md#getorganizationcredits) - Get organization credit balance
 * [GetOrganizationCreditUsage](docs/sdks/accountmanagement/README.md#getorganizationcreditusage) - Get organization credit usage
 * [InviteUserToOrganization](docs/sdks/accountmanagement/README.md#inviteusertoorganization) - Invite user to organization
-* [ListOrganizationMembers](docs/sdks/accountmanagement/README.md#listorganizationmembers) - List organization members
-* [RemoveOrganizationMember](docs/sdks/accountmanagement/README.md#removeorganizationmember) - Remove member from organization
-* [UpdateOrganizationMember](docs/sdks/accountmanagement/README.md#updateorganizationmember) - Update a member's roles in an organization
-* [GetMemberCreditUsage](docs/sdks/accountmanagement/README.md#getmembercreditusage) - Get organization member credit usage
+* [ListOrganizationMembers](docs/sdks/accountmanagement/README.md#listorganizationmembers) - List organization users
+* [RemoveOrganizationMember](docs/sdks/accountmanagement/README.md#removeorganizationmember) - Remove user from organization
+* [UpdateOrganizationMember](docs/sdks/accountmanagement/README.md#updateorganizationmember) - Update a user's Platform-wide roles in an organization
+* [GetMemberCreditUsage](docs/sdks/accountmanagement/README.md#getmembercreditusage) - Get organization user credit usage
 * [GetUserCredits](docs/sdks/accountmanagement/README.md#getusercredits) - Get Free user credit balance
 * [GetUserCreditsUsage](docs/sdks/accountmanagement/README.md#getusercreditsusage) - Get Free user credit usage
 
