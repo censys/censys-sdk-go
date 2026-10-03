@@ -3,7 +3,7 @@
 package components
 
 type OrganizationMembersList struct {
-	// The list of members in the organization.
+	// The list of users in the organization.
 	Members    []OrganizationMember `json:"members"`
 	Pagination PaginationInfo       `json:"pagination"`
 }

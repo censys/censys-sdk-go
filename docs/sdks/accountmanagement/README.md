@@ -10,16 +10,16 @@ Endpoints related to the Account Management product
 * [GetOrganizationCredits](#getorganizationcredits) - Get organization credit balance
 * [GetOrganizationCreditUsage](#getorganizationcreditusage) - Get organization credit usage
 * [InviteUserToOrganization](#inviteusertoorganization) - Invite user to organization
-* [ListOrganizationMembers](#listorganizationmembers) - List organization members
-* [RemoveOrganizationMember](#removeorganizationmember) - Remove member from organization
-* [UpdateOrganizationMember](#updateorganizationmember) - Update a member's roles in an organization
-* [GetMemberCreditUsage](#getmembercreditusage) - Get organization member credit usage
+* [ListOrganizationMembers](#listorganizationmembers) - List organization users
+* [RemoveOrganizationMember](#removeorganizationmember) - Remove user from organization
+* [UpdateOrganizationMember](#updateorganizationmember) - Update a user's Platform-wide roles in an organization
+* [GetMemberCreditUsage](#getmembercreditusage) - Get organization user credit usage
 * [GetUserCredits](#getusercredits) - Get Free user credit balance
 * [GetUserCreditsUsage](#getusercreditsusage) - Get Free user credit usage
 
 ## GetOrganizationDetails
 
-Retrieve an organization's details, including the count of organization members broken down by role and organization settings such as AI training and MFA requirements.<br><br>This endpoint does not cost any credits to execute.
+Retrieve an organization's details, including the count of users broken down by [Platform-wide role](https://docs.censys.com/docs/role-based-access-control#platform-wide-roles) and organization settings such as AI training and MFA requirements.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ func main() {
 
 ## GetOrganizationCreditUsage
 
-Retrieve credit information for an organization over a specific date range. You must include a start date in your request.<br><br>Admins can obtain credit usage information for all users in their organization. Members may only retrieve usage information for their own account.<br><br>This endpoint does not cost any credits to execute.
+Retrieve credit information for an organization over a specific date range. You must include a start date in your request.<br><br>Users with the Platform Admin role can obtain credit usage information for all users in their organization. Other users may only retrieve usage information for their own account.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -194,7 +194,7 @@ func main() {
 
 ## InviteUserToOrganization
 
-Invite a user to an organization. The user will receive an email to join the organization. This is equivalent to [adding a new member via the UI](https://docs.censys.com/docs/platform-org-management#invite-members).<br><br>Only users with the Admin role in the provided organization can perform this operation.<br><br>This endpoint does not cost any credits to execute.
+Invite a user to an organization. The user will receive an email to join the organization. This is equivalent to [adding a new user via the UI](https://docs.censys.com/docs/platform-org-management#invite-members).<br><br>Only users with the Platform Admin role in the provided organization can perform this operation.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ func main() {
 
 ## ListOrganizationMembers
 
-Retrieve a paginated list of an organization's members and their user details, including their user ID, email, name, creation time, and roles.<br><br>This endpoint does not cost any credits to execute.
+Retrieve a paginated list of an organization's users and their details, including their user ID, email, name, creation time, and [Platform-wide roles](https://docs.censys.com/docs/role-based-access-control#platform-wide-roles).<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ func main() {
 
 ## RemoveOrganizationMember
 
-Remove a user from an organization. This is equivalent to [removing a member via the UI](https://docs.censys.com/docs/platform-org-management#remove-members).<br><br>Only users with the Admin role in the provided organization can perform this operation.<br><br>This endpoint does not cost any credits to execute.
+Remove a user from an organization. This is equivalent to [removing a user via the UI](https://docs.censys.com/docs/platform-org-management#remove-members).<br><br>Only users with the Platform Admin role in the provided organization can perform this operation.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -370,7 +370,7 @@ func main() {
 
 ## UpdateOrganizationMember
 
-Update the roles assigned to an organization member. This operation replaces a member's roles with the list provided in the request body. To remove all roles from a member, provide an empty list. To completely remove a member from an organization, use the [remove member endpoint](https://docs.censys.com/reference/v3-accountmanagement-remove-org-member).<br><br>Only users with the Admin role in the provided organization can perform this operation.<br><br>This endpoint does not cost any credits to execute.
+Update the [Platform-wide roles](https://docs.censys.com/docs/role-based-access-control#platform-wide-roles) assigned to a user in an organization. This operation replaces a user's Platform-wide roles with the list provided in the request body. To remove all assigned Platform-wide roles from a user, provide an empty list. To completely remove a user from an organization, use the [remove user endpoint](https://docs.censys.com/reference/v3-accountmanagement-remove-org-member).<br><br>Only users with the Platform Admin role in the provided organization can perform this operation.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 
@@ -432,7 +432,7 @@ func main() {
 
 ## GetMemberCreditUsage
 
-Retrieve credit consumption information for an organization member over a specific date range. You must include a start date in your request.<br><br>This endpoint does not cost any credits to execute.
+Retrieve credit consumption information for a user in an organization over a specific date range. You must include a start date in your request.<br><br>This endpoint does not cost any credits to execute.
 
 ### Example Usage
 

@@ -40,7 +40,7 @@ func (e *QueryParamGranularity) UnmarshalJSON(data []byte) error {
 type V3AccountmanagementMemberCreditsUsageRequest struct {
 	// The ID of a Censys organization. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	// The ID of a Censys user. You can obtain a user's ID by listing members of an organization.
+	// The ID of a Censys user. You can obtain a user's ID by listing users in an organization.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 	// The date for the credit usage report in YYYY-MM-DD format (e.g., 2025-11-06). This field is deprecated and will be removed in a future version. Use start_date and end_date instead. The date must be on or after 2025-01-01 (the earliest date available for credit usage reports).
 	Date *string `queryParam:"style=form,explode=false,name=date"`

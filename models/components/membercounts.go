@@ -2,7 +2,7 @@
 
 package components
 
-// ByRole - The number of members users in the organization, split by role.
+// ByRole - The number of users in the organization, split by Platform-wide role.
 type ByRole struct {
 	// The number of users with the admin role.
 	Admin *int64 `json:"admin,omitempty"`
@@ -25,9 +25,9 @@ func (b *ByRole) GetAPIAccess() *int64 {
 }
 
 type MemberCounts struct {
-	// The number of members users in the organization, split by role.
+	// The number of users in the organization, split by Platform-wide role.
 	ByRole ByRole `json:"by_role"`
-	// The total number of members users in the organization.
+	// The total number of users in the organization.
 	Total int64 `json:"total"`
 }
 

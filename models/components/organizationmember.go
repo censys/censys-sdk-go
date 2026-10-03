@@ -20,7 +20,7 @@ type OrganizationMember struct {
 	LastName string `json:"last_name"`
 	// The date and time the user last logged in.
 	LatestLoginTime *time.Time `json:"latest_login_time,omitempty"`
-	// The roles this member has in the organization.
+	// The Platform-wide roles the user has in the organization.
 	Roles []string `json:"roles"`
 	// The ID of a Censys user.
 	UID string `json:"uid"`
