@@ -9,7 +9,7 @@ import (
 type V3AccountmanagementRemoveOrgMemberRequest struct {
 	// The ID of a Censys organization. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	// The ID of a Censys user. You can obtain a user's ID by listing members of an organization.
+	// The ID of a Censys user. You can obtain a user's ID by listing users in an organization.
 	UserID string `pathParam:"style=simple,explode=false,name=user_id"`
 }
 

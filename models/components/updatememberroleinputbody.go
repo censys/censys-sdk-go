@@ -34,7 +34,7 @@ func (e *Roles) UnmarshalJSON(data []byte) error {
 }
 
 type UpdateMemberRoleInputBody struct {
-	// Array of role identifiers to assign to the user
+	// The Platform-wide roles to assign to the user.
 	Roles []Roles `json:"roles"`
 }
 

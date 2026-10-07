@@ -10,7 +10,9 @@ import (
 type V3AccountmanagementOrgDetailsRequest struct {
 	// The ID of a Censys organization. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	// Whether to include how many members are in this organization, split by role.
+	// Whether to include the organization's entitled modules, available roles, and seat capacity.
+	IncludeModules *bool `default:"false" queryParam:"style=form,explode=false,name=include_modules"`
+	// Whether to include how many users are in this organization, split by Platform-wide role.
 	IncludeMemberCounts *bool `default:"false" queryParam:"style=form,explode=false,name=include_member_counts"`
 }
 
@@ -30,6 +32,13 @@ func (v *V3AccountmanagementOrgDetailsRequest) GetOrganizationID() string {
 		return ""
 	}
 	return v.OrganizationID
+}
+
+func (v *V3AccountmanagementOrgDetailsRequest) GetIncludeModules() *bool {
+	if v == nil {
+		return nil
+	}
+	return v.IncludeModules
 }
 
 func (v *V3AccountmanagementOrgDetailsRequest) GetIncludeMemberCounts() *bool {

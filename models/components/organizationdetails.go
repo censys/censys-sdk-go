@@ -11,6 +11,8 @@ type OrganizationDetails struct {
 	// The date and time the organization was created.
 	CreatedAt    *time.Time    `json:"created_at,omitempty"`
 	MemberCounts *MemberCounts `json:"member_counts,omitempty"`
+	// The modules this organization is entitled to. Only present when include_modules is true; empty when the organization has none.
+	Modules []OrganizationModule `json:"modules,omitempty"`
 	// The name of the organization.
 	Name        string                   `json:"name"`
 	Preferences *OrganizationPreferences `json:"preferences,omitempty"`
@@ -41,6 +43,13 @@ func (o *OrganizationDetails) GetMemberCounts() *MemberCounts {
 		return nil
 	}
 	return o.MemberCounts
+}
+
+func (o *OrganizationDetails) GetModules() []OrganizationModule {
+	if o == nil {
+		return nil
+	}
+	return o.Modules
 }
 
 func (o *OrganizationDetails) GetName() string {

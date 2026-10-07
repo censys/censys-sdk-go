@@ -20,7 +20,9 @@ type OrganizationMember struct {
 	LastName string `json:"last_name"`
 	// The date and time the user last logged in.
 	LatestLoginTime *time.Time `json:"latest_login_time,omitempty"`
-	// The roles this member has in the organization.
+	// The module roles this user holds. Empty when the user holds no module roles; absent when module roles could not be retrieved. A role in a module also grants access to the modules included with it; see included_with on the organization's modules.
+	ModuleRoles []MemberModuleRole `json:"module_roles,omitempty"`
+	// The Platform-wide roles the user has in the organization.
 	Roles []string `json:"roles"`
 	// The ID of a Censys user.
 	UID string `json:"uid"`
@@ -77,6 +79,13 @@ func (o *OrganizationMember) GetLatestLoginTime() *time.Time {
 		return nil
 	}
 	return o.LatestLoginTime
+}
+
+func (o *OrganizationMember) GetModuleRoles() []MemberModuleRole {
+	if o == nil {
+		return nil
+	}
+	return o.ModuleRoles
 }
 
 func (o *OrganizationMember) GetRoles() []string {
