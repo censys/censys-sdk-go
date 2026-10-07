@@ -10,7 +10,7 @@ import (
 type V3AccountmanagementListOrgMembersRequest struct {
 	// The ID of a Censys organization. See the [Getting Started docs](https://docs.censys.com/reference/get-started#step-3-find-and-use-your-organization-id-optional) for more information.
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
-	// Number of members to return per page
+	// Number of users to return per page
 	PageSize *int `default:"10" queryParam:"style=form,explode=false,name=page_size"`
 	// Pagination token for retrieving the next page of results
 	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`
