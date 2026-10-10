@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 2ed4cb55595db3955dcd2c4483c4ad7d
-  docVersion: 1.0.146
-  speakeasyVersion: 1.800.1
-  generationVersion: 2.943.0
-  releaseVersion: 0.26.1
-  configChecksum: 9478fdce80a12c8fd03ede93a5fd3cf1
+  docChecksum: 7af733d1ffaeaf2bca251844d352b4c2
+  docVersion: 1.0.150
+  speakeasyVersion: 1.801.0
+  generationVersion: 2.946.0
+  releaseVersion: 0.26.2
+  configChecksum: 6de7718ce008d113dcad2eb8ce0b4f28
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: 16f92308-c0b3-43ea-93aa-f6532161aae1
-  pristine_commit_hash: 4292e2e14ed49693991cb7129918b66e3aba371b
-  pristine_tree_hash: 7e7d63f84e98332c4526c0d0c5ed8a0eb5b1e85c
+  generation_id: f24b2eb8-6fd3-4d93-869f-6be09724bd5e
+  pristine_commit_hash: 093dbad4904c17360f3fdad4252bcecf3c30c47e
+  pristine_tree_hash: f15fdf312329350472e66b0d38a8b33364a17e7a
 features:
   go:
     acceptHeaders: 2.81.2
@@ -33,7 +33,7 @@ features:
     nameOverrides: 2.81.4
     nullables: 0.2.2
     responseFormat: 0.1.2
-    retries: 2.84.5
+    retries: 2.84.6
     sdkHooks: 0.3.1
     unions: 2.87.12
 trackedFiles:
@@ -3207,8 +3207,8 @@ trackedFiles:
     pristine_git_object: 70682b5694c44c0c81893bc0db81b917e5eb5449
   docs/models/components/tls.md:
     id: f5383ff05cf7
-    last_write_checksum: sha1:7b1267ea58411b510a006d212c523f7126b843b6
-    pristine_git_object: 928b38aefce743e2bce53e7e5c912e2aab0705c1
+    last_write_checksum: sha1:aa627517438fbaa4f1bf6507faf53c2ded44519f
+    pristine_git_object: 076d4ee456d82a5678fd450904896ebe0858aaa2
   docs/models/components/tlschain.md:
     id: c35ac2dac15d
     last_write_checksum: sha1:061f164237f847be2f4ec02dc117900974a363a4
@@ -4279,8 +4279,8 @@ trackedFiles:
     pristine_git_object: f6c08bce43c64b9b221e74bc95db1de7a4fe420f
   docs/models/operations/v3threathuntinggethostobservationswithcertificaterequest.md:
     id: 9ad192c41015
-    last_write_checksum: sha1:70bbba4ddce38197f66d3d6fc89c61fc6f81531a
-    pristine_git_object: 39fbf77573c96dba0f07a7c90085d78aa4cff0aa
+    last_write_checksum: sha1:f9fd5c06d4978ecef5acd7bcd3ab9c139106f65e
+    pristine_git_object: c766f6c50323028a36b5e5de93571486725cd20a
   docs/models/operations/v3threathuntinggethostobservationswithcertificateresponse.md:
     id: 63f0bec11048
     last_write_checksum: sha1:d4a78538872d691244c097b61973fc83bf8123eb
@@ -4495,8 +4495,8 @@ trackedFiles:
     pristine_git_object: dcfdd9de1849d95e456ed6b9ffd18589c15506bf
   internal/utils/retries.go:
     id: b5e011d15c2d
-    last_write_checksum: sha1:3f72c7d48af6943dae6392ae412d04bc1439a9b9
-    pristine_git_object: bf1389cf217ae8b5a504265c2afbb40422e571fd
+    last_write_checksum: sha1:0f3bbb4121afdfc33377a01b6b08d429f06200e4
+    pristine_git_object: d6ed73d82e77852d42d2989402f1501f6c42cb34
   internal/utils/security.go:
     id: eeb54c55241b
     last_write_checksum: sha1:49fee4e9252239953611e6de36f4682851499ab5
@@ -7355,8 +7355,8 @@ trackedFiles:
     pristine_git_object: eacda18eb2a2a44b9a06cf4a0464ffc6a8f84dd2
   models/components/tls.go:
     id: 0e6e98e8eeff
-    last_write_checksum: sha1:c6c9ceedb0bfa0ee47ba13308dd72e758498abc7
-    pristine_git_object: 9a09b97528b01496ba06bf1f2fa4014b989d83b0
+    last_write_checksum: sha1:a29434a8b7258686e9e0f5eba150b3f43a69fd73
+    pristine_git_object: d65aedd6546c3aa0f46cabece34c84b121dec6ee
   models/components/tlschain.go:
     id: 66c1457329a3
     last_write_checksum: sha1:9619d5a682895624b2ce82d1a1891c0d9d0a1a87
@@ -7839,8 +7839,8 @@ trackedFiles:
     pristine_git_object: f87791a634029792bb46f50f1153a9f35ab06dc2
   models/operations/v3threathuntinggethostobservationswithcertificate.go:
     id: 5e08cad3a153
-    last_write_checksum: sha1:b3e5fb3e709d6cd51c1ff7efdf050eafc34624c5
-    pristine_git_object: c195c123976c20c458870e990363d83b5a01e63f
+    last_write_checksum: sha1:ff940acb01755325837407a33c1ec411a54c8a02
+    pristine_git_object: 63442a7a5f8c24bfa147b8362e67d7c612753608
   models/operations/v3threathuntinginvestigationsfilescreate.go:
     id: ac78a46ce3cd
     last_write_checksum: sha1:01c48a65a85037879e28baec8cb63cc9b2131b96
@@ -7911,8 +7911,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:02ac3918b1d4e1a3df920b0e94962ff3b02b509d
-    pristine_git_object: ee12f676b1889dfac4609129713fb9bab976ddd8
+    last_write_checksum: sha1:3cb759af3714692aa96887646ac87540d94bc90b
+    pristine_git_object: 06d93b6fe5f6b0c969c3e449f5d0a88c745d9fbb
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:d5c424ed5388b1c6bd21db66f1b26f81620d8c1b

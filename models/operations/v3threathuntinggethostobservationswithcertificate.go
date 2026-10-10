@@ -31,7 +31,7 @@ type V3ThreathuntingGetHostObservationsWithCertificateRequest struct {
 	EndTime *string `queryParam:"style=form,explode=false,name=end_time"`
 	// The port to filter by
 	Port *int `queryParam:"style=form,explode=false,name=port"`
-	// The transport protocol to filter by
+	// The application protocol to filter by
 	Protocol *string `queryParam:"style=form,explode=false,name=protocol"`
 	// Pagination token from previous response to retrieve next page of results
 	PageToken *string `queryParam:"style=form,explode=false,name=page_token"`
