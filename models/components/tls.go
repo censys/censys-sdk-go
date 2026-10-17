@@ -41,6 +41,10 @@ type TLS struct {
 	// The JA3S fingerprint for this service.
 	Ja3s *string `json:"ja3s,omitempty"`
 	Ja4s *string `json:"ja4s,omitempty"`
+	// Key exchange group selected by the server: the TLS 1.3 key_share group or the TLS 1.2 ECDHE curve, e.g. X25519MLKEM768.
+	KeyExchangeGroup *string `json:"key_exchange_group,omitempty"`
+	// Post-quantum TLS 1.3 key exchange groups the server accepts, e.g. X25519MLKEM768.
+	PqcGroups []string `json:"pqc_groups,omitempty"`
 	// Certificate chain information.
 	PresentedChain []TLSChain `json:"presented_chain,omitempty"`
 	// Certificate version v1(0), v2(1), v3(2).
@@ -74,6 +78,20 @@ func (t *TLS) GetJa4s() *string {
 		return nil
 	}
 	return t.Ja4s
+}
+
+func (t *TLS) GetKeyExchangeGroup() *string {
+	if t == nil {
+		return nil
+	}
+	return t.KeyExchangeGroup
+}
+
+func (t *TLS) GetPqcGroups() []string {
+	if t == nil {
+		return nil
+	}
+	return t.PqcGroups
 }
 
 func (t *TLS) GetPresentedChain() []TLSChain {
