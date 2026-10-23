@@ -539,3 +539,13 @@ Based on:
 - [go v0.26.1] .
 ### Releases
 - [Go v0.26.1] https://github.com/censys/censys-sdk-go/releases/tag/v0.26.1 - .
+
+## 2026-10-23 00:21:44
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.803.1 (2.950.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.27.0] .
+### Releases
+- [Go v0.27.0] https://github.com/censys/censys-sdk-go/releases/tag/v0.27.0 - .
