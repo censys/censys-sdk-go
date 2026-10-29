@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 1cbbb48cd9181b1790848ec0a44729d1
-  docVersion: 1.0.156
-  speakeasyVersion: 1.803.2
-  generationVersion: 2.950.13
-  releaseVersion: 0.27.1
-  configChecksum: 6d47ef6a2e2b575cc05b81fa2c45f1f2
+  docChecksum: 3ffa85fab1635a9c117c051258bad813
+  docVersion: 1.0.157
+  speakeasyVersion: 1.805.0
+  generationVersion: 2.954.8
+  releaseVersion: 0.27.2
+  configChecksum: 3a5e92179ce1feb7baf930189d70d06e
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: 1f99af89-4073-4b96-9c2f-331cc8304532
-  pristine_commit_hash: 32d641f5ef13331d11323158c93471d6a338a21f
-  pristine_tree_hash: fb4ab8a0f5d02938a8a8d8885daae3d74968b6ef
+  generation_id: be18f9ff-bc23-491c-841e-0313c9cb6e89
+  pristine_commit_hash: 06379ee65f80a3cdb3961e072f9e596f010ae485
+  pristine_tree_hash: d9921c11455c90781d9894da9320413da8951dbd
 features:
   go:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.14
-    core: 3.16.3
+    constsAndDefaults: 0.1.15
+    core: 3.16.4
     defaultEnabledRetries: 0.2.0
     downloadStreams: 0.1.3
     envVarSecurityUsage: 0.3.2
@@ -7911,8 +7911,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:9c12579b051fdf6f883ae602b37d73281f1fbdf1
-    pristine_git_object: 6c7f92c1f1a3728289293178081cf08088629e2d
+    last_write_checksum: sha1:db26e15c9396a852ff0afc893210e601dffe49d8
+    pristine_git_object: 75d304f4e478f46eb0a64d65889474800e941e5d
   tagsandcomments.go:
     id: 704f0d5567ec
     last_write_checksum: sha1:d5c424ed5388b1c6bd21db66f1b26f81620d8c1b
