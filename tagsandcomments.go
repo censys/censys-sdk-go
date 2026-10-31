@@ -2278,7 +2278,7 @@ func (s *TagsAndComments) GetTag(ctx context.Context, request operations.V3TagsG
 }
 
 // UpdateTag - Update a tag
-// Update an existing tag in your organization. Only the fields provided in the request body will be updated; omitted fields are left unchanged.<br><br>Only the tag's creator or an organization admin can update a `private` tag. Tags with the `shared` setting can be updated by any organization member.<br><br>This endpoint does not cost any credits to execute.
+// Update an existing tag in your organization. Only the fields provided in the request body will be updated; omitted fields are left unchanged.<br><br>Only the tag's creator or an organization admin can update a `private` tag. Tags with the `shared` setting can be updated by any organization member. A `shared` tag cannot be made `private`.<br><br>This endpoint does not cost any credits to execute.
 func (s *TagsAndComments) UpdateTag(ctx context.Context, request operations.V3TagsUpdateTagRequest, opts ...operations.Option) (*operations.V3TagsUpdateTagResponse, error) {
 	globals := operations.V3TagsUpdateTagGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
