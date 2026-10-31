@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: dd356d71-a925-4f66-b592-b02d88cf4bdc
 management:
-  docChecksum: 3ffa85fab1635a9c117c051258bad813
-  docVersion: 1.0.157
+  docChecksum: d5982843a031c32022c2f407f5b5e40a
+  docVersion: 1.0.159
   speakeasyVersion: 1.805.0
   generationVersion: 2.954.8
-  releaseVersion: 0.27.2
-  configChecksum: 3a5e92179ce1feb7baf930189d70d06e
+  releaseVersion: 0.27.3
+  configChecksum: 89b673c8803de5b69d3aeec824da8e5b
   repoURL: https://github.com/censys/censys-sdk-go.git
   installationURL: https://github.com/censys/censys-sdk-go
 persistentEdits:
-  generation_id: be18f9ff-bc23-491c-841e-0313c9cb6e89
-  pristine_commit_hash: 06379ee65f80a3cdb3961e072f9e596f010ae485
-  pristine_tree_hash: d9921c11455c90781d9894da9320413da8951dbd
+  generation_id: 917c3a6e-8f0b-44b5-b927-1f8080507753
+  pristine_commit_hash: c657668a9234bff1eea87a6c235ed4e0a87b0938
+  pristine_tree_hash: ccfb6f35dfe0eba308bbbf442de6b0028f48bfd2
 features:
   go:
     acceptHeaders: 2.81.2
@@ -4431,8 +4431,8 @@ trackedFiles:
     pristine_git_object: 667800fca4a11e64a2ce787b8bc71c6d129361f4
   docs/sdks/tagsandcomments/README.md:
     id: 092d693513d0
-    last_write_checksum: sha1:0872b3abe606c959227cfa70c1fd161dc93c6847
-    pristine_git_object: ce126ecefb7ac702b4eaaa01649c37a261ed8163
+    last_write_checksum: sha1:fcd4ec748009fed1a0c0797bf27e3b6f9f099efa
+    pristine_git_object: 7c4ddf140fc16ca7cd6ead73790027f50916c7f9
   docs/sdks/threathunting/README.md:
     id: 9d697938ee45
     last_write_checksum: sha1:db83019cba95369d3d10d760d07e0c50bd0f25a2
@@ -7911,12 +7911,12 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:db26e15c9396a852ff0afc893210e601dffe49d8
-    pristine_git_object: 75d304f4e478f46eb0a64d65889474800e941e5d
+    last_write_checksum: sha1:3ff1943300398344b2868406a9f423feab6bfbad
+    pristine_git_object: 145fa34e099d85b8f1b1aa91846bcc1cc5f2d4c3
   tagsandcomments.go:
     id: 704f0d5567ec
-    last_write_checksum: sha1:d5c424ed5388b1c6bd21db66f1b26f81620d8c1b
-    pristine_git_object: 6202cbf5c35c1de729ea641808ff4f7f286400c2
+    last_write_checksum: sha1:29b5349ead305050433030b30876e0741a058b00
+    pristine_git_object: d12d0e1f4eade590d5475a49378bbebb31b472b9
   threathunting.go:
     id: f45dc6b4d4a3
     last_write_checksum: sha1:1290aee370526ec27c5301543c97bbd2dceee4f1
