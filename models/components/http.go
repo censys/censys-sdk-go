@@ -9,8 +9,11 @@ type HTTP struct {
 	BodyHashSha256 *string `json:"body_hash_sha256,omitempty"`
 	BodyHashTlsh   *string `json:"body_hash_tlsh,omitempty"`
 	// The length, in bytes, of services.http.response.body; at most, 64KB.
-	BodySize *int          `json:"body_size,omitempty"`
-	Favicons []HTTPFavicon `json:"favicons,omitempty"`
+	BodySize *int `json:"body_size,omitempty"`
+	// Copyright notices declared by or found in the page, the one most likely to be the site's own first.
+	Copyrights             []HTTPCopyright `json:"copyrights,omitempty"`
+	Favicons               []HTTPFavicon   `json:"favicons,omitempty"`
+	GoogleSiteVerification []string        `json:"google_site_verification,omitempty"`
 	// The key-value header pairs included in the response.
 	Headers map[string]HTTPRepeatedHeaders `json:"headers,omitempty"`
 	// A list of the <title> and <meta> tags from services.http.response.body.
@@ -66,11 +69,25 @@ func (h *HTTP) GetBodySize() *int {
 	return h.BodySize
 }
 
+func (h *HTTP) GetCopyrights() []HTTPCopyright {
+	if h == nil {
+		return nil
+	}
+	return h.Copyrights
+}
+
 func (h *HTTP) GetFavicons() []HTTPFavicon {
 	if h == nil {
 		return nil
 	}
 	return h.Favicons
+}
+
+func (h *HTTP) GetGoogleSiteVerification() []string {
+	if h == nil {
+		return nil
+	}
+	return h.GoogleSiteVerification
 }
 
 func (h *HTTP) GetHeaders() map[string]HTTPRepeatedHeaders {

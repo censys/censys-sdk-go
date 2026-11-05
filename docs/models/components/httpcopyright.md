@@ -1,0 +1,9 @@
+# HTTPCopyright
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `Source`                                                                                                             | `*string`                                                                                                            | :heavy_minus_sign:                                                                                                   | Where in the response the notice was found: meta (a copyright meta tag) or body (text matched in the response body). |
+| `Text`                                                                                                               | `*string`                                                                                                            | :heavy_minus_sign:                                                                                                   | The copyright notice as it appears in the response.                                                                  |
