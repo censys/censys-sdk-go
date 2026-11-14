@@ -14,6 +14,14 @@ type AuthenticationError struct {
 var _ error = &AuthenticationError{}
 
 func (e *AuthenticationError) Error() string {
+	if e != nil {
+		if v0 := e.Error_; v0 != nil {
+			if v0.Message != nil {
+				return *v0.Message
+			}
+		}
+	}
+
 	data, _ := json.Marshal(e)
 	return string(data)
 }

@@ -29,6 +29,10 @@ type V3GlobaldataAssetWebpropertyRequest struct {
 	WebpropertyID string `pathParam:"style=simple,explode=false,name=webproperty_id"`
 	// RFC3339 Timestamp to view a webproperty at a specific point in time. Must be a valid RFC3339 string. Ensure that you suffix the date with T00:00:00Z or a specific time
 	AtTime *time.Time `queryParam:"style=form,explode=false,name=at_time"`
+	// Comma-separated list of fields to include in the response, in dot notation (for example `services.port`). Repeated fields are filtered per element. Omit the parameter or pass `*` to return every field. Unknown fields are rejected.
+	Fields *string `queryParam:"style=form,explode=false,name=fields"`
+	// Comma-separated list of fields to exclude from the response, in dot notation (for example `services.banner`). Repeated fields are filtered per element. Unknown fields are rejected. Cannot be used together with `fields`.
+	ExcludeFields *string `queryParam:"style=form,explode=false,name=exclude_fields"`
 }
 
 func (v V3GlobaldataAssetWebpropertyRequest) MarshalJSON() ([]byte, error) {
@@ -61,6 +65,20 @@ func (v *V3GlobaldataAssetWebpropertyRequest) GetAtTime() *time.Time {
 		return nil
 	}
 	return v.AtTime
+}
+
+func (v *V3GlobaldataAssetWebpropertyRequest) GetFields() *string {
+	if v == nil {
+		return nil
+	}
+	return v.Fields
+}
+
+func (v *V3GlobaldataAssetWebpropertyRequest) GetExcludeFields() *string {
+	if v == nil {
+		return nil
+	}
+	return v.ExcludeFields
 }
 
 // #region class-body-v3globaldataassetwebpropertyrequest
