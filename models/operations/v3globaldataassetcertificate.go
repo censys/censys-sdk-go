@@ -25,6 +25,10 @@ type V3GlobaldataAssetCertificateRequest struct {
 	OrganizationID *string `queryParam:"style=form,explode=false,name=organization_id"`
 	// The SHA-256 certificate fingerprint.
 	CertificateID string `pathParam:"style=simple,explode=false,name=certificate_id"`
+	// Comma-separated list of fields to include in the response, in dot notation (for example `services.port`). Repeated fields are filtered per element. Omit the parameter or pass `*` to return every field. Unknown fields are rejected.
+	Fields *string `queryParam:"style=form,explode=false,name=fields"`
+	// Comma-separated list of fields to exclude from the response, in dot notation (for example `services.banner`). Repeated fields are filtered per element. Unknown fields are rejected. Cannot be used together with `fields`.
+	ExcludeFields *string `queryParam:"style=form,explode=false,name=exclude_fields"`
 }
 
 func (v *V3GlobaldataAssetCertificateRequest) GetOrganizationID() *string {
@@ -39,6 +43,20 @@ func (v *V3GlobaldataAssetCertificateRequest) GetCertificateID() string {
 		return ""
 	}
 	return v.CertificateID
+}
+
+func (v *V3GlobaldataAssetCertificateRequest) GetFields() *string {
+	if v == nil {
+		return nil
+	}
+	return v.Fields
+}
+
+func (v *V3GlobaldataAssetCertificateRequest) GetExcludeFields() *string {
+	if v == nil {
+		return nil
+	}
+	return v.ExcludeFields
 }
 
 // #region class-body-v3globaldataassetcertificaterequest

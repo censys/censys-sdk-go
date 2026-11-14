@@ -2,13 +2,59 @@
 
 package components
 
+import (
+	"encoding/json"
+	"fmt"
+	"github.com/censys/censys-sdk-go/internal/utils"
+)
+
+// CrudCreateInputBodyPrivacy - Collection visibility. `private` collections are visible to their creator and organization admins. `shared` collections are also visible to all organization members. Only the creator and organization admins can edit a collection.
+type CrudCreateInputBodyPrivacy string
+
+const (
+	CrudCreateInputBodyPrivacyPrivate CrudCreateInputBodyPrivacy = "private"
+	CrudCreateInputBodyPrivacyShared  CrudCreateInputBodyPrivacy = "shared"
+)
+
+func (e CrudCreateInputBodyPrivacy) ToPointer() *CrudCreateInputBodyPrivacy {
+	return &e
+}
+func (e *CrudCreateInputBodyPrivacy) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "private":
+		fallthrough
+	case "shared":
+		*e = CrudCreateInputBodyPrivacy(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CrudCreateInputBodyPrivacy: %v", v)
+	}
+}
+
 type CrudCreateInputBody struct {
 	// description of the collection
 	Description *string `json:"description,omitempty"`
 	// name of the collection
 	Name string `json:"name"`
+	// Collection visibility. `private` collections are visible to their creator and organization admins. `shared` collections are also visible to all organization members. Only the creator and organization admins can edit a collection.
+	Privacy *CrudCreateInputBodyPrivacy `default:"private" json:"privacy"`
 	// query string to search upon to build the collection
 	Query string `json:"query"`
+}
+
+func (c CrudCreateInputBody) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CrudCreateInputBody) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (c *CrudCreateInputBody) GetDescription() *string {
@@ -23,6 +69,13 @@ func (c *CrudCreateInputBody) GetName() string {
 		return ""
 	}
 	return c.Name
+}
+
+func (c *CrudCreateInputBody) GetPrivacy() *CrudCreateInputBodyPrivacy {
+	if c == nil {
+		return nil
+	}
+	return c.Privacy
 }
 
 func (c *CrudCreateInputBody) GetQuery() string {

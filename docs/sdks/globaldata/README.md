@@ -181,6 +181,8 @@ func main() {
 
     res, err := s.GlobalData.GetCertificate(ctx, operations.V3GlobaldataAssetCertificateRequest{
         CertificateID: "3daf2843a77b6f4e6af43cd9b6f6746053b8c928e056e8a724808db8905a94cf",
+        Fields: censyssdkgo.Pointer("fingerprint_sha256,parsed.subject_dn"),
+        ExcludeFields: censyssdkgo.Pointer("names,fingerprint_sha1"),
     })
     if err != nil {
         log.Fatal(err)
@@ -208,7 +210,7 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
@@ -297,6 +299,8 @@ func main() {
 
     res, err := s.GlobalData.GetHostEnrichment(ctx, operations.V3GlobaldataAssetHostEnrichmentRequest{
         HostIP: "8.8.8.8",
+        Fields: censyssdkgo.Pointer("ip,greynoise.classification,third_party.mallory"),
+        ExcludeFields: censyssdkgo.Pointer("whois,services"),
     })
     if err != nil {
         log.Fatal(err)
@@ -324,7 +328,7 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 400, 403, 404, 409            | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404, 409, 422       | application/problem+json      |
 | sdkerrors.ErrorModel          | 429                           | application/problem+json      |
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
@@ -423,6 +427,8 @@ func main() {
     res, err := s.GlobalData.GetHost(ctx, operations.V3GlobaldataAssetHostRequest{
         HostID: "8.8.8.8",
         AtTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
+        Fields: censyssdkgo.Pointer("ip,services.port,services.protocol"),
+        ExcludeFields: censyssdkgo.Pointer("services.banner,services.cert"),
     })
     if err != nil {
         log.Fatal(err)
@@ -450,7 +456,7 @@ func main() {
 | Error Type                    | Status Code                   | Content Type                  |
 | ----------------------------- | ----------------------------- | ----------------------------- |
 | sdkerrors.AuthenticationError | 401                           | application/json              |
-| sdkerrors.ErrorModel          | 400, 403, 404                 | application/problem+json      |
+| sdkerrors.ErrorModel          | 400, 403, 404, 422            | application/problem+json      |
 | sdkerrors.ErrorModel          | 500                           | application/problem+json      |
 | sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
@@ -673,6 +679,8 @@ func main() {
     res, err := s.GlobalData.GetWebProperty(ctx, operations.V3GlobaldataAssetWebpropertyRequest{
         WebpropertyID: "platform.censys.io:80",
         AtTime: types.MustNewTimeFromString("2025-01-01T00:00:00Z"),
+        Fields: censyssdkgo.Pointer("hostname,port,tls.cipher_selected"),
+        ExcludeFields: censyssdkgo.Pointer("cert,endpoints.http.body"),
     })
     if err != nil {
         log.Fatal(err)
