@@ -7,6 +7,29 @@ import (
 	"time"
 )
 
+// CollectionPrivacy - Collection visibility. `private` collections are visible to their creator and organization admins. `shared` collections are also visible to all organization members. Only the creator and organization admins can edit a collection.
+type CollectionPrivacy string
+
+const (
+	CollectionPrivacyPrivate CollectionPrivacy = "private"
+	CollectionPrivacyShared  CollectionPrivacy = "shared"
+)
+
+func (e CollectionPrivacy) ToPointer() *CollectionPrivacy {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *CollectionPrivacy) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "private", "shared":
+			return true
+		}
+	}
+	return false
+}
+
 type CollectionStatus string
 
 const (
@@ -62,16 +85,18 @@ func (e *StatusReason) IsExact() bool {
 type Collection struct {
 	AddedAssets24Hours int64     `json:"added_assets_24_hours"`
 	CreateTime         time.Time `json:"create_time"`
-	// The ID of a Censys user who created the collection.
-	CreatedBy            *string          `json:"created_by,omitempty"`
-	Description          string           `json:"description"`
-	ID                   string           `json:"id"`
-	Name                 string           `json:"name"`
-	Query                string           `json:"query"`
-	RemovedAssets24Hours int64            `json:"removed_assets_24_hours"`
-	Status               CollectionStatus `json:"status"`
-	StatusReason         *StatusReason    `json:"status_reason"`
-	TotalAssets          int64            `json:"total_assets"`
+	// The ID of the user or service account that created the collection.
+	CreatedBy   *string `json:"created_by,omitempty"`
+	Description string  `json:"description"`
+	ID          string  `json:"id"`
+	Name        string  `json:"name"`
+	// Collection visibility. `private` collections are visible to their creator and organization admins. `shared` collections are also visible to all organization members. Only the creator and organization admins can edit a collection.
+	Privacy              CollectionPrivacy `json:"privacy"`
+	Query                string            `json:"query"`
+	RemovedAssets24Hours int64             `json:"removed_assets_24_hours"`
+	Status               CollectionStatus  `json:"status"`
+	StatusReason         *StatusReason     `json:"status_reason"`
+	TotalAssets          int64             `json:"total_assets"`
 }
 
 func (c Collection) MarshalJSON() ([]byte, error) {
@@ -125,6 +150,13 @@ func (c *Collection) GetName() string {
 		return ""
 	}
 	return c.Name
+}
+
+func (c *Collection) GetPrivacy() CollectionPrivacy {
+	if c == nil {
+		return CollectionPrivacy("")
+	}
+	return c.Privacy
 }
 
 func (c *Collection) GetQuery() string {

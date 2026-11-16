@@ -2,11 +2,45 @@
 
 package components
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// CrudUpdateInputBodyPrivacy - Collection visibility. `private` collections are visible to their creator and organization admins. `shared` collections are also visible to all organization members. Only the creator and organization admins can edit a collection.
+type CrudUpdateInputBodyPrivacy string
+
+const (
+	CrudUpdateInputBodyPrivacyPrivate CrudUpdateInputBodyPrivacy = "private"
+	CrudUpdateInputBodyPrivacyShared  CrudUpdateInputBodyPrivacy = "shared"
+)
+
+func (e CrudUpdateInputBodyPrivacy) ToPointer() *CrudUpdateInputBodyPrivacy {
+	return &e
+}
+func (e *CrudUpdateInputBodyPrivacy) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "private":
+		fallthrough
+	case "shared":
+		*e = CrudUpdateInputBodyPrivacy(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CrudUpdateInputBodyPrivacy: %v", v)
+	}
+}
+
 type CrudUpdateInputBody struct {
 	// description of the collection
 	Description *string `json:"description,omitempty"`
 	// name of the collection
 	Name string `json:"name"`
+	// Collection visibility. `private` collections are visible to their creator and organization admins. `shared` collections are also visible to all organization members. Only the creator and organization admins can edit a collection.
+	Privacy *CrudUpdateInputBodyPrivacy `json:"privacy,omitempty"`
 	// query string to search upon to build the collection
 	Query string `json:"query"`
 }
@@ -23,6 +57,13 @@ func (c *CrudUpdateInputBody) GetName() string {
 		return ""
 	}
 	return c.Name
+}
+
+func (c *CrudUpdateInputBody) GetPrivacy() *CrudUpdateInputBodyPrivacy {
+	if c == nil {
+		return nil
+	}
+	return c.Privacy
 }
 
 func (c *CrudUpdateInputBody) GetQuery() string {
