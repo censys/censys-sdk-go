@@ -1157,7 +1157,7 @@ func (s *Collections) Get(ctx context.Context, request operations.V3CollectionsC
 }
 
 // Update a collection
-// Update a collection's name, description, and/or query.<br><br>This endpoint does not cost credits to execute.
+// Update a collection's name, description, query, and/or privacy.<br><br>This endpoint does not cost credits to execute.
 func (s *Collections) Update(ctx context.Context, request operations.V3CollectionsCrudUpdateRequest, opts ...operations.Option) (*operations.V3CollectionsCrudUpdateResponse, error) {
 	globals := operations.V3CollectionsCrudUpdateGlobals{
 		OrganizationID: s.sdkConfiguration.Globals.OrganizationID,
