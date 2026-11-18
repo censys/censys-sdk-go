@@ -156,7 +156,7 @@ func main() {
 
 ## GetCertificate
 
-Retrieve information about a single certificate. A certificate ID is its SHA-256 fingerprint.<br><br>In a SOC environment, use this endpoint to look up a certificate by SHA-256 fingerprint to see its subject, issuer, and validity, so you can vet certs seen in TLS logs or alerts.
+Retrieve information about a single certificate. A certificate ID is its SHA-256 fingerprint. Use `fields` to include specific fields in the response. Use `exclude_fields` to omit specific fields from the response.<br><br>In a SOC environment, use this endpoint to look up a certificate by SHA-256 fingerprint to see its subject, issuer, and validity, so you can vet certs seen in TLS logs or alerts.
 
 ### Example Usage
 
@@ -274,7 +274,7 @@ func main() {
 
 ## GetHostEnrichment
 
-Retrieve enrichment data for a single host. This endpoint is optimized for high-volume SOC enrichment use cases.<br><br>Use this endpoint to add Censys context (location, ASN, labels, reputation, and more) to IPs in your SIEM or SOAR at high volume, without spending standard credits.<br><br>This endpoint does not consume standard Censys credits. Core organizations may perform up to 20,000 enrichment calls per day. Core + Unlimited Enrichment organizations may perform an unlimited amount of enrichment calls per day.<br><br>[Learn more about the enrichment API here](https://docs.censys.com/docs/host-enrichment).
+Retrieve enrichment data for a single host. This endpoint is optimized for high-volume SOC enrichment use cases.<br><br>Use this endpoint to add Censys context (location, ASN, labels, reputation, and more) to IPs in your SIEM or SOAR at high volume, without spending standard credits.<br><br>Use `fields` to include specific fields in the response. Use `exclude_fields` to omit specific fields from the response.<br><br>This endpoint does not consume standard Censys credits. Core organizations may perform up to 20,000 enrichment calls per day. Core + Unlimited Enrichment organizations may perform an unlimited amount of enrichment calls per day.<br><br>[Learn more about the enrichment API here](https://docs.censys.com/docs/host-enrichment).
 
 ### Example Usage
 
@@ -400,7 +400,7 @@ func main() {
 
 ## GetHost
 
-Retrieve information about a single host. A host ID is its IP address.<br><br>In a SOC environment, use this endpoint to pull the current services, software, certificates, and labels on an IP from an alert, so you can quickly judge whether it is malicious or benign.
+Retrieve information about a single host. A host ID is its IP address. Use `fields` to include specific fields in the response. Use `exclude_fields` to omit specific fields from the response.<br><br>In a SOC environment, use this endpoint to pull the current services, software, certificates, and labels on an IP from an alert, so you can quickly judge whether it is malicious or benign.
 
 ### Example Usage
 
@@ -652,7 +652,7 @@ func main() {
 
 ## GetWebProperty
 
-Retrieve information about a single web property. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`.<br><br>In a SOC environment, use this endpoint to inspect the current content, technologies, and certificate for a hostname and port from a phishing or C2 alert.
+Retrieve information about a single web property. Web properties are identified using a combination of a hostname and port joined with a colon, such as `platform.censys.io:80`. Use `fields` to include specific fields in the response. Use `exclude_fields` to omit specific fields from the response.<br><br>In a SOC environment, use this endpoint to inspect the current content, technologies, and certificate for a hostname and port from a phishing or C2 alert.
 
 ### Example Usage
 
