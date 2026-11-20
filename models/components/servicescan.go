@@ -81,6 +81,7 @@ type ServiceScan struct {
 	Gemini                   *Gemini                       `json:"gemini,omitempty"`
 	GeovisionAudio           *GeovisionAudio               `json:"geovision_audio,omitempty"`
 	Giop                     *Giop                         `json:"giop,omitempty"`
+	Gluster                  *Gluster                      `json:"gluster,omitempty"`
 	Gopher                   *Gopher                       `json:"gopher,omitempty"`
 	GrilConsole              *GrilConsole                  `json:"gril_console,omitempty"`
 	Hajime                   *Hajime                       `json:"hajime,omitempty"`
@@ -598,6 +599,13 @@ func (s *ServiceScan) GetGiop() *Giop {
 		return nil
 	}
 	return s.Giop
+}
+
+func (s *ServiceScan) GetGluster() *Gluster {
+	if s == nil {
+		return nil
+	}
+	return s.Gluster
 }
 
 func (s *ServiceScan) GetGopher() *Gopher {
